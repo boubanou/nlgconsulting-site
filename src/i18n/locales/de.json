@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "book": "Termin buchen",
+    "login": "Anmelden",
+    "admin": "Admin",
+    "logout": "Abmelden"
+  },
+  "home": {
+    "hero_title": "Lagern Sie Ihre B2B-Akquise aus. Konzentrieren Sie sich auf den Abschluss.",
+    "hero_subtitle": "NLG Consulting liefert 15–20 qualifizierte Termine pro Monat durch mehrkanalige Ansprache (LinkedIn, E-Mail, Telefon).",
+    "cta_book": "15-min Gespräch buchen",
+    "cta_consultation": "Kostenlose Beratung erhalten",
+    "how_it_works_title": "Wie es funktioniert",
+    "step1_title": "Definieren Sie Ihr ICP",
+    "step1_desc": "Wir arbeiten mit Ihnen zusammen, um Ihr ideales Kundenprofil und Ihren Zielmarkt zu identifizieren.",
+    "step2_title": "Mehrkanalige Ansprache starten",
+    "step2_desc": "Unser Team führt personalisierte Kampagnen über LinkedIn, E-Mail und Telefon durch.",
+    "step3_title": "Qualifizierte Termine erhalten",
+    "step3_desc": "Erhalten Sie 15–20 qualifizierte Termine pro Monat, bereit für Ihr Vertriebsteam zum Abschluss.",
+    "trust_title": "Vertraut von europäischen Unternehmen",
+    "testimonial1": "NLG Consulting hat unsere Lead-Generierung transformiert. Wir haben jetzt eine konstante Pipeline qualifizierter Termine.",
+    "testimonial1_author": "Vertriebsleiter, Tech-Unternehmen"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Umfassende B2B-Lead-Generierung und Terminvereinbarung",
+    "linkedin_title": "LinkedIn-Ansprache",
+    "linkedin_desc": "Personalisierte Verbindungssequenzen mit sicheren Engagement-Limits zum Schutz Ihres Rufs.",
+    "email_title": "Gezielte Cold-E-Mails",
+    "email_desc": "Professionelles Aufwärmen, Domain-Health-Management und intelligente Sequenzierung für maximale Zustellbarkeit.",
+    "calling_title": "SDR-Folge-Anrufe",
+    "calling_desc": "Professionelle Terminvereinbarung mit geschulten SDRs, die Ihr Wertversprechen verstehen.",
+    "copywriting_title": "Vertriebs-Copywriting",
+    "copywriting_desc": "Messaging-Strategie und überzeugende Texte, die bei Ihrer Zielgruppe ankommen.",
+    "b2c_note": "Obwohl wir auf B2B-Lead-Generierung spezialisiert sind, kann unser Team auch leistungsstarke B2C-Kampagnen mit Fokus auf Conversion und ROI entwerfen und durchführen."
+  },
+  "about": {
+    "title": "Über NLG Consulting",
+    "subtitle": "Europäische B2B-Vertriebsoutsourcing-Expertise",
+    "bio_title": "Lernen Sie Gregory Brenig kennen",
+    "bio_text": "Unternehmer mit umfassender Expertise in Geschäftsentwicklung und SaaS-B2B-Vertrieb. Spezialisiert auf FR/BE/CH/CA-Märkte mit EU-weiten Lieferfähigkeiten.",
+    "mission_title": "Unsere Mission",
+    "mission_text": "Europäischen Unternehmen beim Skalieren ihres Vertriebs zu helfen, indem wir qualifizierte Termine durch bewährte mehrkanalige Akquisestrategien bereitstellen.",
+    "method_title": "Unsere Methodik",
+    "method_text": "Wir kombinieren datengesteuertes Targeting, personalisierte Nachrichten und persistente Nachverfolgung über LinkedIn, E-Mail und Telefon für konsistente Ergebnisse."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie uns, um Ihre Vertriebs-Outsourcing-Bedürfnisse zu besprechen",
+    "form_name": "Vollständiger Name",
+    "form_company": "Unternehmen",
+    "form_email": "E-Mail-Adresse",
+    "form_phone": "Telefonnummer",
+    "form_message": "Ihre Nachricht",
+    "form_urgent": "Dringenden Rückruf anfordern",
+    "form_consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten zum Zweck der Beantwortung meiner Anfrage zu, wie in der Datenschutzerklärung beschrieben.",
+    "form_submit": "Nachricht senden",
+    "form_submitting": "Wird gesendet...",
+    "success_title": "Vielen Dank!",
+    "success_message": "Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+    "success_cta": "Jetzt Termin buchen"
+  },
+  "book": {
+    "title": "Buchen Sie Ihre kostenlose Beratung",
+    "subtitle": "Vereinbaren Sie ein 15-minütiges Gespräch, um zu besprechen, wie wir Ihnen helfen können, qualifizierte B2B-Termine zu generieren"
+  },
+  "auth": {
+    "title": "Admin-Anmeldung",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "login": "Anmelden",
+    "logging_in": "Anmeldung läuft...",
+    "login_success": "Erfolgreich angemeldet",
+    "login_error": "Ungültige Anmeldedaten"
+  },
+  "admin": {
+    "title": "Admin-Dashboard",
+    "leads_title": "Leads",
+    "meetings_title": "Termine",
+    "callbacks_title": "Rückrufe",
+    "status_new": "Neu",
+    "status_in_review": "In Prüfung",
+    "status_qualified": "Qualifiziert",
+    "status_lost": "Verloren",
+    "status_won": "Gewonnen",
+    "priority_normal": "Normal",
+    "priority_high": "Hoch",
+    "callback_new": "Neu",
+    "callback_attempted": "Versucht",
+    "callback_reached": "Erreicht",
+    "callback_closed": "Geschlossen",
+    "export_csv": "CSV exportieren",
+    "no_data": "Keine Daten verfügbar"
+  },
+  "footer": {
+    "tagline": "Europäisches B2B-Vertriebsoutsourcing",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

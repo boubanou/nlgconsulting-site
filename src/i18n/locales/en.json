@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Book Call",
+    "login": "Login",
+    "admin": "Admin",
+    "logout": "Logout"
+  },
+  "home": {
+    "hero_title": "Outsource your B2B prospecting. Focus on closing.",
+    "hero_subtitle": "NLG Consulting delivers 15–20 qualified meetings per month via multichannel outreach (LinkedIn, email, phone).",
+    "cta_book": "Book a 15-min call",
+    "cta_consultation": "Get a free consultation",
+    "how_it_works_title": "How It Works",
+    "step1_title": "Define Your ICP",
+    "step1_desc": "We work with you to identify your ideal customer profile and target market.",
+    "step2_title": "Launch Multichannel Outreach",
+    "step2_desc": "Our team executes personalized campaigns across LinkedIn, email, and phone.",
+    "step3_title": "Receive Qualified Meetings",
+    "step3_desc": "Get 15–20 qualified appointments per month, ready for your sales team to close.",
+    "trust_title": "Trusted by European Businesses",
+    "testimonial1": "NLG Consulting transformed our lead generation. We now have a consistent pipeline of qualified meetings.",
+    "testimonial1_author": "Sales Director, Tech Company"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive B2B lead generation and appointment setting solutions",
+    "linkedin_title": "LinkedIn Outreach",
+    "linkedin_desc": "Personalized connection sequences with safe engagement limits to protect your reputation.",
+    "email_title": "Targeted Cold Email",
+    "email_desc": "Professional warm-up, domain health management, and smart sequencing for maximum deliverability.",
+    "calling_title": "SDR Follow-Up Calling",
+    "calling_desc": "Professional appointment setting with trained SDRs who understand your value proposition.",
+    "copywriting_title": "Sales Copywriting",
+    "copywriting_desc": "Messaging strategy and compelling copy that resonates with your target audience.",
+    "b2c_note": "While we specialize in B2B lead generation, our team can also design and run high-performance B2C campaigns focused on conversion and ROI."
+  },
+  "about": {
+    "title": "About NLG Consulting",
+    "subtitle": "European B2B sales outsourcing expertise",
+    "bio_title": "Meet Gregory Brenig",
+    "bio_text": "Entrepreneur with deep expertise in business development and SaaS B2B sales. Specialized in FR/BE/CH/CA markets with EU-wide delivery capabilities.",
+    "mission_title": "Our Mission",
+    "mission_text": "To help European businesses scale their sales by providing qualified meetings through proven multichannel prospecting strategies.",
+    "method_title": "Our Methodology",
+    "method_text": "We combine data-driven targeting, personalized messaging, and persistent follow-up across LinkedIn, email, and phone to deliver consistent results."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch to discuss your sales outsourcing needs",
+    "form_name": "Full Name",
+    "form_company": "Company",
+    "form_email": "Email Address",
+    "form_phone": "Phone Number",
+    "form_message": "Your Message",
+    "form_urgent": "Request urgent callback",
+    "form_consent": "I consent to processing of my personal data for the purpose of responding to my inquiry, as described in the Privacy Policy.",
+    "form_submit": "Send Message",
+    "form_submitting": "Sending...",
+    "success_title": "Thank You!",
+    "success_message": "We've received your message and will get back to you within 24 hours.",
+    "success_cta": "Book a Call Now"
+  },
+  "book": {
+    "title": "Book Your Free Consultation",
+    "subtitle": "Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings"
+  },
+  "auth": {
+    "title": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "login": "Log In",
+    "logging_in": "Logging in...",
+    "login_success": "Successfully logged in",
+    "login_error": "Invalid credentials"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "leads_title": "Leads",
+    "meetings_title": "Meetings",
+    "callbacks_title": "Callbacks",
+    "status_new": "New",
+    "status_in_review": "In Review",
+    "status_qualified": "Qualified",
+    "status_lost": "Lost",
+    "status_won": "Won",
+    "priority_normal": "Normal",
+    "priority_high": "High",
+    "callback_new": "New",
+    "callback_attempted": "Attempted",
+    "callback_reached": "Reached",
+    "callback_closed": "Closed",
+    "export_csv": "Export CSV",
+    "no_data": "No data available"
+  },
+  "footer": {
+    "tagline": "European B2B Sales Outsourcing",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved."
+  }
+}

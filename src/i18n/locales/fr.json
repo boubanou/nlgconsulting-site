@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact",
+    "book": "Réserver",
+    "login": "Connexion",
+    "admin": "Admin",
+    "logout": "Déconnexion"
+  },
+  "home": {
+    "hero_title": "Externalisez votre prospection B2B. Concentrez-vous sur la conclusion.",
+    "hero_subtitle": "NLG Consulting génère 15 à 20 rendez-vous qualifiés par mois via une approche multicanal (LinkedIn, email, téléphone).",
+    "cta_book": "Réserver un appel de 15 min",
+    "cta_consultation": "Obtenir une consultation gratuite",
+    "how_it_works_title": "Comment Ça Marche",
+    "step1_title": "Définir Votre ICP",
+    "step1_desc": "Nous travaillons avec vous pour identifier votre profil client idéal et votre marché cible.",
+    "step2_title": "Lancer l'Approche Multicanal",
+    "step2_desc": "Notre équipe exécute des campagnes personnalisées sur LinkedIn, par email et par téléphone.",
+    "step3_title": "Recevoir des Rendez-vous Qualifiés",
+    "step3_desc": "Obtenez 15 à 20 rendez-vous qualifiés par mois, prêts pour votre équipe commerciale.",
+    "trust_title": "Approuvé par les Entreprises Européennes",
+    "testimonial1": "NLG Consulting a transformé notre génération de leads. Nous avons maintenant un pipeline constant de rendez-vous qualifiés.",
+    "testimonial1_author": "Directeur Commercial, Entreprise Tech"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions complètes de génération de leads B2B et de prise de rendez-vous",
+    "linkedin_title": "Prospection LinkedIn",
+    "linkedin_desc": "Séquences de connexion personnalisées avec des limites d'engagement sûres pour protéger votre réputation.",
+    "email_title": "Cold Email Ciblé",
+    "email_desc": "Réchauffement professionnel, gestion de la santé du domaine et séquençage intelligent pour une délivrabilité maximale.",
+    "calling_title": "Appels de Suivi SDR",
+    "calling_desc": "Prise de rendez-vous professionnelle avec des SDR formés qui comprennent votre proposition de valeur.",
+    "copywriting_title": "Rédaction Commerciale",
+    "copywriting_desc": "Stratégie de messagerie et textes convaincants qui résonnent avec votre public cible.",
+    "b2c_note": "Bien que nous soyons spécialisés dans la génération de leads B2B, notre équipe peut également concevoir et exécuter des campagnes B2C performantes axées sur la conversion et le ROI."
+  },
+  "about": {
+    "title": "À Propos de NLG Consulting",
+    "subtitle": "Expertise en externalisation commerciale B2B européenne",
+    "bio_title": "Rencontrez Gregory Brenig",
+    "bio_text": "Entrepreneur avec une expertise approfondie en développement commercial et ventes B2B SaaS. Spécialisé dans les marchés FR/BE/CH/CA avec des capacités de livraison dans toute l'UE.",
+    "mission_title": "Notre Mission",
+    "mission_text": "Aider les entreprises européennes à développer leurs ventes en fournissant des rendez-vous qualifiés grâce à des stratégies de prospection multicanal éprouvées.",
+    "method_title": "Notre Méthodologie",
+    "method_text": "Nous combinons ciblage basé sur les données, messagerie personnalisée et suivi persistant sur LinkedIn, email et téléphone pour des résultats cohérents."
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Contactez-nous pour discuter de vos besoins en externalisation commerciale",
+    "form_name": "Nom Complet",
+    "form_company": "Entreprise",
+    "form_email": "Adresse Email",
+    "form_phone": "Numéro de Téléphone",
+    "form_message": "Votre Message",
+    "form_urgent": "Demander un rappel urgent",
+    "form_consent": "Je consens au traitement de mes données personnelles dans le but de répondre à ma demande, tel que décrit dans la Politique de Confidentialité.",
+    "form_submit": "Envoyer",
+    "form_submitting": "Envoi en cours...",
+    "success_title": "Merci !",
+    "success_message": "Nous avons reçu votre message et vous répondrons dans les 24 heures.",
+    "success_cta": "Réserver Maintenant"
+  },
+  "book": {
+    "title": "Réservez Votre Consultation Gratuite",
+    "subtitle": "Planifiez un appel de 15 minutes pour discuter de la façon dont nous pouvons vous aider à générer des rendez-vous B2B qualifiés"
+  },
+  "auth": {
+    "title": "Connexion Admin",
+    "email": "Email",
+    "password": "Mot de passe",
+    "login": "Se Connecter",
+    "logging_in": "Connexion...",
+    "login_success": "Connexion réussie",
+    "login_error": "Identifiants invalides"
+  },
+  "admin": {
+    "title": "Tableau de Bord Admin",
+    "leads_title": "Prospects",
+    "meetings_title": "Rendez-vous",
+    "callbacks_title": "Rappels",
+    "status_new": "Nouveau",
+    "status_in_review": "En Révision",
+    "status_qualified": "Qualifié",
+    "status_lost": "Perdu",
+    "status_won": "Gagné",
+    "priority_normal": "Normal",
+    "priority_high": "Élevé",
+    "callback_new": "Nouveau",
+    "callback_attempted": "Tenté",
+    "callback_reached": "Joint",
+    "callback_closed": "Fermé",
+    "export_csv": "Exporter CSV",
+    "no_data": "Aucune donnée disponible"
+  },
+  "footer": {
+    "tagline": "Externalisation Commerciale B2B Européenne",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "rights": "Tous droits réservés."
+  }
+}
