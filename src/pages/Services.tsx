@@ -1,12 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Linkedin, Mail, Phone, Pencil } from "lucide-react";
+import { Linkedin, Mail, Phone, Pencil, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Services = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   const services = [
     {
@@ -36,6 +39,8 @@ const Services = () => {
       <Helmet>
         <title>{t("services.title")} - NLG Consulting</title>
         <meta name="description" content={t("services.subtitle")} />
+        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/services" />
+        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/services" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -67,6 +72,14 @@ const Services = () => {
                 <p className="text-muted-foreground">{t("services.b2c_note")}</p>
               </CardContent>
             </Card>
+
+            <div className="text-center mt-12">
+              <Button asChild size="lg">
+                <Link to="/book">
+                  {t("home.cta_book")} <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </main>
 

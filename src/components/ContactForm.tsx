@@ -24,7 +24,7 @@ const contactSchema = z.object({
   email: z.string().email("Invalid email address"),
   company: z.string().optional(),
   phone: z.string().optional(),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  message: z.string().max(2000).optional().or(z.literal("")),
   urgent: z.boolean().default(false),
   consent: z.boolean().refine((val) => val === true, "You must accept the privacy policy"),
 });
@@ -56,7 +56,7 @@ const ContactForm = () => {
         email: data.email,
         company: data.company || null,
         phone: data.phone || null,
-        message: data.message,
+        message: data.message || null,
         consent: data.consent,
         locale: i18n.language,
         source: "contact_form",

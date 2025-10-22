@@ -2,27 +2,18 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import CalendarEmbed from "@/components/CalendarEmbed";
 
 const Book = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <>
       <Helmet>
         <title>{t("book.title")} - NLG Consulting</title>
         <meta name="description" content={t("book.subtitle")} />
+        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/book" />
+        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/book" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -35,11 +26,7 @@ const Book = () => {
               <p className="text-xl text-muted-foreground">{t("book.subtitle")}</p>
             </div>
 
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/your-link"
-              style={{ minWidth: "320px", height: "700px" }}
-            />
+            <CalendarEmbed />
           </div>
         </main>
 

@@ -5,13 +5,16 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   return (
     <>
       <Helmet>
         <title>{t("contact.title")} - NLG Consulting</title>
         <meta name="description" content={t("contact.subtitle")} />
+        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/contact" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

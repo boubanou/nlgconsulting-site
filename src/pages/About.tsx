@@ -1,18 +1,23 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Users, TrendingUp } from "lucide-react";
+import { Target, TrendingUp, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   return (
     <>
       <Helmet>
         <title>{t("about.title")} - NLG Consulting</title>
         <meta name="description" content={t("about.subtitle")} />
+        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/about" />
+        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/about" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -54,6 +59,14 @@ const About = () => {
                   <p className="text-muted-foreground">{t("about.method_text")}</p>
                 </CardContent>
               </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <Button asChild size="lg">
+                <Link to="/book">
+                  {t("home.cta_book")} <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </main>
