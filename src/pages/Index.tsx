@@ -161,26 +161,108 @@ const Index = () => {
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-secondary/5">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl font-bold text-center mb-12">{t("home.testimonials_title")}</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">{t("testimonials.title")}</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="text-muted-foreground italic mb-4">"{t("home.testimonial1")}"</p>
-                  <p className="font-semibold text-foreground text-sm">{t("home.testimonial1_author")}</p>
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="rounded-2xl shadow-sm border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                        {t(`testimonials.item${i}_name`).charAt(0)}
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground text-sm">{t(`testimonials.item${i}_name`)}</p>
+                        <p className="text-xs text-muted-foreground">{t(`testimonials.item${i}_role`)}</p>
+                        <p className="text-xs text-muted-foreground">{t(`testimonials.item${i}_company`)}</p>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground italic">"{t(`testimonials.item${i}_quote`)}"</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Plans Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("plans.title")}</h2>
+              <p className="text-muted-foreground">{t("plans.subtitle")}</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card className="rounded-2xl border shadow-sm">
+                <CardContent className="p-6">
+                  <Badge className="mb-4">{t("plans.starter_name")}</Badge>
+                  <h3 className="text-xl font-bold mb-2">{t("plans.starter_meetings")}</h3>
+                  <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
+                    {t("plans.starter_features").split("|").map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-primary mt-1">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild variant="outline" className="w-full">
+                    <Link to="/contact">{t("plans.starter_cta")}</Link>
+                  </Button>
                 </CardContent>
               </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="text-muted-foreground italic mb-4">"{t("home.testimonial2")}"</p>
-                  <p className="font-semibold text-foreground text-sm">{t("home.testimonial2_author")}</p>
+              <Card className="rounded-2xl border-2 border-primary shadow-lg relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <Badge className="bg-primary">Popular</Badge>
+                </div>
+                <CardContent className="p-6">
+                  <Badge className="mb-4">{t("plans.growth_name")}</Badge>
+                  <h3 className="text-xl font-bold mb-2">{t("plans.growth_meetings")}</h3>
+                  <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
+                    {t("plans.growth_features").split("|").map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-primary mt-1">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="w-full">
+                    <Link to="/book">{t("plans.growth_cta")}</Link>
+                  </Button>
                 </CardContent>
               </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="text-muted-foreground italic mb-4">"{t("home.testimonial3")}"</p>
-                  <p className="font-semibold text-foreground text-sm">{t("home.testimonial3_author")}</p>
+              <Card className="rounded-2xl border shadow-sm">
+                <CardContent className="p-6">
+                  <Badge className="mb-4">{t("plans.enterprise_name")}</Badge>
+                  <h3 className="text-xl font-bold mb-2">{t("plans.enterprise_meetings")}</h3>
+                  <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
+                    {t("plans.enterprise_features").split("|").map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-primary mt-1">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild variant="outline" className="w-full">
+                    <Link to="/contact">{t("plans.enterprise_cta")}</Link>
+                  </Button>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 px-4 bg-secondary/5">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center mb-12">{t("faq.title")}</h2>
+            <div className="space-y-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
+                <Card key={i} className="rounded-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold mb-2">{t(`faq.q${i}`)}</h3>
+                    <p className="text-muted-foreground text-sm">{t(`faq.a${i}`)}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

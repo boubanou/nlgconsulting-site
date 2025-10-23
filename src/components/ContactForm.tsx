@@ -51,24 +51,27 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from("leads").insert({
-        name: data.name,
-        email: data.email,
-        company: data.company || null,
-        phone: data.phone || null,
-        message: data.message || null,
-        consent: data.consent,
-        locale: i18n.language,
-        source: "contact_form",
+      // Call edge function instead of direct DB insert
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/leads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          company: data.company || null,
+          phone: data.phone || null,
+          message: data.message || null,
+          locale: i18n.language,
+          urgent: data.urgent || false,
+        }),
       });
 
-      if (error) throw error;
-
-      if (data.urgent && data.phone) {
-        await supabase.from("callbacks").insert({
-          phone: data.phone,
-          note: `Urgent callback requested from ${data.name} (${data.email})`,
-        });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to submit form");
       }
 
       toast.success(t("contact.success_title"), {

@@ -1,1 +1,7 @@
 project_id = "jexrdkvrclqwdwnxboyn"
+
+[functions.leads]
+verify_jwt = false
+
+[functions.callbacks]
+verify_jwt = false
