@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Linkedin, Mail, Phone, Pencil, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Linkedin, Mail, Phone, Pencil, ArrowRight, Target, TrendingUp, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -34,6 +35,19 @@ const Services = () => {
     },
   ];
 
+  const howItWorks = [
+    { step: "1", title: t("services.how_step1") },
+    { step: "2", title: t("services.how_step2") },
+    { step: "3", title: t("services.how_step3") },
+  ];
+
+  const faqs = [
+    { q: t("services.faq_q1"), a: t("services.faq_a1") },
+    { q: t("services.faq_q2"), a: t("services.faq_a2") },
+    { q: t("services.faq_q3"), a: t("services.faq_a3") },
+    { q: t("services.faq_q4"), a: t("services.faq_a4") },
+  ];
+
   return (
     <>
       <Helmet>
@@ -48,12 +62,39 @@ const Services = () => {
 
         <main className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-6xl">
+            {/* Hero Section */}
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("services.title")}</h1>
-              <p className="text-xl text-muted-foreground">{t("services.subtitle")}</p>
+              <p className="text-xl text-muted-foreground mb-8">{t("services.subtitle")}</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg">
+                  <Link to="/book">
+                    {t("services.hero_cta")} <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* B2B & B2C Focus */}
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              <Card className="border-primary/20">
+                <CardContent className="pt-6">
+                  <Target className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="text-lg font-semibold mb-2">B2B</h3>
+                  <p className="text-sm text-muted-foreground">{t("services.b2b_focus")}</p>
+                </CardContent>
+              </Card>
+              <Card className="border-primary/20">
+                <CardContent className="pt-6">
+                  <Users className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="text-lg font-semibold mb-2">B2C</h3>
+                  <p className="text-sm text-muted-foreground">{t("services.b2c_focus")}</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
               {services.map((service, index) => (
                 <Card key={index}>
                   <CardHeader>
@@ -67,16 +108,80 @@ const Services = () => {
               ))}
             </div>
 
-            <Card className="bg-secondary/5">
-              <CardContent className="pt-6">
-                <p className="text-muted-foreground">{t("services.b2c_note")}</p>
-              </CardContent>
-            </Card>
+            {/* How It Works */}
+            <section className="mb-16 py-12 px-6 bg-secondary/5 rounded-3xl">
+              <h2 className="text-3xl font-bold text-center mb-12">{t("services.how_it_works_title")}</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {howItWorks.map((item) => (
+                  <div key={item.step} className="text-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl font-bold text-primary">{item.step}</span>
+                    </div>
+                    <p className="font-semibold">{item.title}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-            <div className="text-center mt-12">
-              <Button asChild size="lg">
+            {/* Mid-Page Banner */}
+            <div className="text-center py-12 mb-16">
+              <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
+                <CardContent className="pt-8 pb-8">
+                  <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">{t("services.mid_banner")}</h3>
+                  <Button asChild size="lg">
+                    <Link to="/book">
+                      {t("home.cta_book")} <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Social Proof - Testimonials Snippet */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-center mb-8">{t("testimonials.title")}</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[1, 2, 3].map((i) => (
+                  <Card key={i} className="rounded-2xl">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+                          {t(`testimonials.item${i}_name`).charAt(0)}
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm">{t(`testimonials.item${i}_name`)}</p>
+                          <p className="text-xs text-muted-foreground">{t(`testimonials.item${i}_role`)}</p>
+                        </div>
+                      </div>
+                      <p className="text-sm text-muted-foreground italic">"{t(`testimonials.item${i}_quote`)}"</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12">{t("services.faq_title")}</h2>
+              <div className="space-y-4 max-w-3xl mx-auto">
+                {faqs.map((faq, index) => (
+                  <Card key={index} className="rounded-lg">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2">{faq.q}</h3>
+                      <p className="text-muted-foreground text-sm">{faq.a}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </section>
+
+            {/* Final CTA */}
+            <div className="text-center py-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("services.final_cta")}</h2>
+              <Button asChild size="lg" className="text-lg px-8">
                 <Link to="/book">
-                  {t("home.cta_book")} <ArrowRight className="ml-2 w-4 h-4" />
+                  {t("home.cta_book")} <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
             </div>

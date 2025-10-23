@@ -80,7 +80,7 @@ serve(async (req: Request) => {
       });
     }
 
-    // Send notification email
+    // Send notification email to internal team
     try {
       await resend.emails.send({
         from: "NLG Consulting <onboarding@resend.dev>",
@@ -95,13 +95,55 @@ serve(async (req: Request) => {
           ${body.company ? `<p><strong>Company:</strong> ${body.company}</p>` : ""}
           ${normalizedPhone ? `<p><strong>Phone:</strong> ${normalizedPhone}</p>` : ""}
           ${body.message ? `<p><strong>Message:</strong> ${body.message}</p>` : ""}
-          <p><strong>Locale:</strong> ${body.locale}</p>
+          <p><strong>Language:</strong> ${body.locale}</p>
           <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
         `,
       });
     } catch (emailError) {
-      console.error("Email error:", emailError);
+      console.error("Internal notification email error:", emailError);
       // Don't fail the request if email fails
+    }
+
+    // Send confirmation email to user
+    const confirmationMessages: Record<string, { subject: string; body: string }> = {
+      en: {
+        subject: "We've received your message!",
+        body: `Hello ${body.name}, thank you for contacting NLG Consulting. Our team will get back to you shortly.`
+      },
+      fr: {
+        subject: "Nous avons bien reçu votre message !",
+        body: `Bonjour ${body.name}, merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.`
+      },
+      es: {
+        subject: "¡Hemos recibido tu mensaje!",
+        body: `Hola ${body.name}, gracias por contactarnos. Nuestro equipo te responderá en breve.`
+      },
+      de: {
+        subject: "Wir haben Ihre Nachricht erhalten!",
+        body: `Hallo ${body.name}, danke für Ihre Nachricht. Unser Team wird sich bald bei Ihnen melden.`
+      }
+    };
+
+    const locale = body.locale || "en";
+    const confirmation = confirmationMessages[locale] || confirmationMessages.en;
+
+    try {
+      await resend.emails.send({
+        from: "NLG Consulting <onboarding@resend.dev>",
+        to: [body.email],
+        subject: confirmation.subject,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #333;">${confirmation.subject}</h2>
+            <p style="color: #666; line-height: 1.6;">${confirmation.body}</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+            <p style="color: #999; font-size: 12px;">NLG Consulting</p>
+          </div>
+        `,
+      });
+    } catch (emailError) {
+      console.error("Confirmation email error:", emailError);
+      // Don't fail the request if confirmation email fails
     }
 
     return new Response(

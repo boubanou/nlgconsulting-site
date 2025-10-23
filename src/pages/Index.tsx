@@ -126,13 +126,21 @@ const Index = () => {
               </Badge>
             </div>
 
-            {/* Logo Placeholders */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 opacity-50">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-20 bg-muted rounded-lg flex items-center justify-center">
-                  <span className="text-muted-foreground text-xs">Logo {i}</span>
-                </div>
-              ))}
+            {/* Brand Logos */}
+            <div className="mb-12">
+              <h3 className="text-xl font-semibold text-center mb-8">{t("logos.title")}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {[
+                  { src: "/brands/nordesk.svg", altKey: "logos.nordesk" },
+                  { src: "/brands/helixops.svg", altKey: "logos.helixops" },
+                  { src: "/brands/quantify.svg", altKey: "logos.quantify" },
+                  { src: "/brands/atlasworks.svg", altKey: "logos.atlasworks" },
+                ].map((logo, i) => (
+                  <div key={i} className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center hover:shadow-md transition-shadow">
+                    <img src={logo.src} alt={t(logo.altKey)} loading="lazy" width="160" height="48" className="w-full h-auto" />
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Track Record KPIs */}
