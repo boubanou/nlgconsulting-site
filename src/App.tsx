@@ -10,6 +10,10 @@ import Contact from "./pages/Contact";
 import Book from "./pages/Book";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminLeads from "./pages/AdminLeads";
+import AdminMeetings from "./pages/AdminMeetings";
+import AdminCallbacks from "./pages/AdminCallbacks";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +29,10 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Book />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/leads" element={<AdminLeads />} />
+        <Route path="/admin/meetings" element={<AdminMeetings />} />
+        <Route path="/admin/callbacks" element={<AdminCallbacks />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

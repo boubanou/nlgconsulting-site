@@ -82,26 +82,33 @@ serve(async (req: Request) => {
 
     // Send notification email to internal team
     try {
-      await resend.emails.send({
+      console.log("Sending internal notification to:", alertEmail);
+      const internalEmailResult = await resend.emails.send({
         from: "NLG Consulting <onboarding@resend.dev>",
         to: [alertEmail],
         subject: body.urgent
           ? `🔴 URGENT - New Lead: ${body.name}`
           : `New Lead: ${body.name}`,
         html: `
-          <h2>${body.urgent ? "🔴 URGENT CALLBACK REQUESTED" : "New Lead Received"}</h2>
-          <p><strong>Name:</strong> ${body.name}</p>
-          <p><strong>Email:</strong> ${body.email}</p>
-          ${body.company ? `<p><strong>Company:</strong> ${body.company}</p>` : ""}
-          ${normalizedPhone ? `<p><strong>Phone:</strong> ${normalizedPhone}</p>` : ""}
-          ${body.message ? `<p><strong>Message:</strong> ${body.message}</p>` : ""}
-          <p><strong>Language:</strong> ${body.locale}</p>
-          <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #0F172A;">${body.urgent ? "🔴 URGENT CALLBACK REQUESTED" : "New Lead Received"}</h2>
+            <div style="background: #f8f9fa; border-left: 4px solid #FACC15; padding: 15px; margin: 20px 0;">
+              <p style="margin: 5px 0;"><strong>Name:</strong> ${body.name}</p>
+              <p style="margin: 5px 0;"><strong>Email:</strong> ${body.email}</p>
+              ${body.company ? `<p style="margin: 5px 0;"><strong>Company:</strong> ${body.company}</p>` : ""}
+              ${normalizedPhone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${normalizedPhone}</p>` : ""}
+              ${body.message ? `<p style="margin: 5px 0;"><strong>Message:</strong> ${body.message}</p>` : ""}
+              <p style="margin: 5px 0;"><strong>Language:</strong> ${body.locale.toUpperCase()}</p>
+              <p style="margin: 5px 0;"><strong>Timestamp:</strong> ${new Date().toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' })}</p>
+            </div>
+            <p style="color: #666; font-size: 12px; margin-top: 20px;">View this lead in the <a href="${Deno.env.get('SITE_URL') || 'https://nlg-consulting.lovable.app'}/admin" style="color: #0F172A;">admin dashboard</a></p>
+          </div>
         `,
       });
+      console.log("Internal notification sent successfully:", internalEmailResult);
     } catch (emailError) {
       console.error("Internal notification email error:", emailError);
-      // Don't fail the request if email fails
+      // Don't fail the request if email fails, but log it prominently
     }
 
     // Send confirmation email to user
@@ -128,19 +135,30 @@ serve(async (req: Request) => {
     const confirmation = confirmationMessages[locale] || confirmationMessages.en;
 
     try {
-      await resend.emails.send({
+      console.log("Sending confirmation email to:", body.email);
+      const confirmationResult = await resend.emails.send({
         from: "NLG Consulting <onboarding@resend.dev>",
         to: [body.email],
         subject: confirmation.subject,
         html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #333;">${confirmation.subject}</h2>
-            <p style="color: #666; line-height: 1.6;">${confirmation.body}</p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-            <p style="color: #999; font-size: 12px;">NLG Consulting</p>
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #ffffff;">
+            <div style="background: linear-gradient(135deg, #0F172A 0%, #1e293b 100%); padding: 30px; border-radius: 8px 8px 0 0;">
+              <h2 style="color: #FACC15; margin: 0;">${confirmation.subject}</h2>
+            </div>
+            <div style="padding: 30px; background: #f8f9fa; border-radius: 0 0 8px 8px;">
+              <p style="color: #333; line-height: 1.6; font-size: 16px;">${confirmation.body}</p>
+              <div style="margin: 25px 0; padding: 15px; background: white; border-left: 3px solid #FACC15; border-radius: 4px;">
+                <p style="margin: 0; color: #666; font-size: 14px;"><strong>Next steps:</strong> Our team will review your request and reach out within 24 hours.</p>
+              </div>
+            </div>
+            <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
+              <p style="margin: 5px 0;">© ${new Date().getFullYear()} NLG Consulting</p>
+              <p style="margin: 5px 0;">European Sales Development Experts</p>
+            </div>
           </div>
         `,
       });
+      console.log("Confirmation email sent successfully:", confirmationResult);
     } catch (emailError) {
       console.error("Confirmation email error:", emailError);
       // Don't fail the request if confirmation email fails
