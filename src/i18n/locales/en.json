@@ -9,6 +9,9 @@
     "admin": "Admin",
     "logout": "Logout"
   },
+  "brand": {
+    "nlgConsulting": "NLG Consulting"
+  },
   "home": {
     "hero_title": "Outsource B2B prospecting. Focus on closing.",
     "hero_subtitle": "We deliver 15–20 qualified meetings/month through multichannel outreach (LinkedIn, email, phone).",
@@ -115,7 +118,11 @@
     "login": "Log In",
     "logging_in": "Logging in...",
     "login_success": "Successfully logged in",
-    "login_error": "Invalid credentials"
+    "login_error": "Invalid credentials",
+    "access_denied": "Access Denied",
+    "access_denied_message": "You don't have permission to access the admin area. Please contact your administrator to request access.",
+    "back_home": "Back to Home",
+    "contact_admin": "Contact Admin"
   },
   "admin": {
     "title": "Admin Dashboard",

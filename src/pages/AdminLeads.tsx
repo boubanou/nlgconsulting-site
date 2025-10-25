@@ -20,7 +20,7 @@ const AdminLeads = () => {
         return;
       }
       if (!isLoading && !hasAccess) {
-        navigate("/");
+        navigate("/access-denied");
       }
     };
 

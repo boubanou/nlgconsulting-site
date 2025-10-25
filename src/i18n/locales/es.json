@@ -9,6 +9,9 @@
     "admin": "Admin",
     "logout": "Cerrar sesión"
   },
+  "brand": {
+    "nlgConsulting": "NLG Consulting"
+  },
   "home": {
     "hero_title": "Externaliza la prospección B2B. Enfócate en cerrar.",
     "hero_subtitle": "Entregamos 15–20 reuniones calificadas/mes a través de alcance multicanal (LinkedIn, email, teléfono).",
@@ -115,7 +118,11 @@
     "login": "Iniciar sesión",
     "logging_in": "Iniciando sesión...",
     "login_success": "Sesión iniciada exitosamente",
-    "login_error": "Credenciales inválidas"
+    "login_error": "Credenciales inválidas",
+    "access_denied": "Acceso Denegado",
+    "access_denied_message": "No tienes permiso para acceder al área de administración. Por favor contacta a tu administrador para solicitar acceso.",
+    "back_home": "Volver al Inicio",
+    "contact_admin": "Contactar Admin"
   },
   "admin": {
     "title": "Panel de Administración",

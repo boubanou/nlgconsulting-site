@@ -9,6 +9,9 @@
     "admin": "Admin",
     "logout": "Abmelden"
   },
+  "brand": {
+    "nlgConsulting": "NLG Consulting"
+  },
   "home": {
     "hero_title": "B2B-Akquise auslagern. Fokus auf Abschluss.",
     "hero_subtitle": "Wir liefern 15–20 qualifizierte Termine/Monat durch Multichannel-Outreach (LinkedIn, E-Mail, Telefon).",
@@ -115,7 +118,11 @@
     "login": "Anmelden",
     "logging_in": "Anmeldung läuft...",
     "login_success": "Erfolgreich angemeldet",
-    "login_error": "Ungültige Anmeldedaten"
+    "login_error": "Ungültige Anmeldedaten",
+    "access_denied": "Zugriff verweigert",
+    "access_denied_message": "Sie haben keine Berechtigung für den Admin-Bereich. Bitte kontaktieren Sie Ihren Administrator, um Zugriff anzufordern.",
+    "back_home": "Zurück zur Startseite",
+    "contact_admin": "Admin kontaktieren"
   },
   "admin": {
     "title": "Admin-Dashboard",

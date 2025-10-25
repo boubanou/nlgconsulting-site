@@ -13,8 +13,8 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.svg" alt="NLG Consulting" className="h-8 w-auto" />
+          <Link to="/" className="flex items-center">
+            <img src="/logo.svg" alt={t("brand.nlgConsulting")} className="h-7 sm:h-8 w-auto" loading="eager" decoding="async" />
           </Link>
 
           {/* Desktop Navigation */}

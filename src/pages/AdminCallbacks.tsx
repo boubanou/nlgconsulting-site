@@ -20,7 +20,7 @@ const AdminCallbacks = () => {
         return;
       }
       if (!isLoading && !hasAccess) {
-        navigate("/");
+        navigate("/access-denied");
       }
     };
 

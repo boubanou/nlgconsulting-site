@@ -20,7 +20,7 @@ const AdminMeetings = () => {
         return;
       }
       if (!isLoading && !hasAccess) {
-        navigate("/");
+        navigate("/access-denied");
       }
     };
 

@@ -14,6 +14,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminLeads from "./pages/AdminLeads";
 import AdminMeetings from "./pages/AdminMeetings";
 import AdminCallbacks from "./pages/AdminCallbacks";
+import AccessDenied from "./pages/AccessDenied";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Book />} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/access-denied" element={<AccessDenied />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/leads" element={<AdminLeads />} />
         <Route path="/admin/meetings" element={<AdminMeetings />} />

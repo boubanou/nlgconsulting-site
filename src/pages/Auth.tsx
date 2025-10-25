@@ -51,7 +51,9 @@ const Auth = () => {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
-      if (session) navigate("/admin");
+      if (event === "SIGNED_IN" && session) {
+        navigate("/admin");
+      }
     });
 
     return () => subscription.unsubscribe();

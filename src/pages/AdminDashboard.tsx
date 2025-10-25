@@ -20,7 +20,7 @@ const AdminDashboard = () => {
         return;
       }
       if (!isLoading && !hasAccess) {
-        navigate("/");
+        navigate("/access-denied");
       }
     };
 

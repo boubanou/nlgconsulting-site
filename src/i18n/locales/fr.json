@@ -9,6 +9,9 @@
     "admin": "Admin",
     "logout": "Déconnexion"
   },
+  "brand": {
+    "nlgConsulting": "NLG Consulting"
+  },
   "home": {
     "hero_title": "Externalisez votre prospection B2B. Concentrez-vous sur la conclusion.",
     "hero_subtitle": "NLG Consulting génère 15 à 20 rendez-vous qualifiés/mois via une approche multicanale (LinkedIn, email, téléphone).",
@@ -115,7 +118,11 @@
     "login": "Se Connecter",
     "logging_in": "Connexion...",
     "login_success": "Connexion réussie",
-    "login_error": "Identifiants invalides"
+    "login_error": "Identifiants invalides",
+    "access_denied": "Accès Refusé",
+    "access_denied_message": "Vous n'avez pas la permission d'accéder à l'espace admin. Veuillez contacter votre administrateur pour demander l'accès.",
+    "back_home": "Retour à l'Accueil",
+    "contact_admin": "Contacter l'Admin"
   },
   "admin": {
     "title": "Tableau de bord Admin",
