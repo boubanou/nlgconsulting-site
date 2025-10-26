@@ -10,7 +10,8 @@ import {
   Phone, 
   Menu, 
   LogOut, 
-  User 
+  User,
+  Users as UsersIcon
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useUserRole } from "@/hooks/useUserRole";
@@ -24,7 +25,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-  const { role, isLoading } = useUserRole();
+  const { role, isLoading, isOwner } = useUserRole();
   const [open, setOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -38,6 +39,10 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     { path: "/admin/meetings", label: t("admin.meetings_title"), icon: Calendar },
     { path: "/admin/callbacks", label: t("admin.callbacks_title"), icon: Phone },
   ];
+
+  if (isOwner) {
+    navItems.push({ path: "/admin/users", label: t("admin.users_title"), icon: UsersIcon });
+  }
 
   const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
     <nav className="flex flex-col gap-2">
