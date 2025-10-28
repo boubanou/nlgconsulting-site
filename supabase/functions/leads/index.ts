@@ -13,7 +13,7 @@ const leadSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
   email: z.string().email("Invalid email address").max(255, "Email must be less than 255 characters"),
   company: z.string().max(100, "Company name must be less than 100 characters").optional(),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, "Invalid phone number format").optional().or(z.literal('')),
+  phone: z.string().trim().max(50, "Phone number too long").optional().or(z.literal('')).nullable(),
   message: z.string().max(2000, "Message must be less than 2000 characters").optional(),
   locale: z.string().length(2, "Locale must be 2 characters"),
   urgent: z.boolean().optional()
@@ -68,9 +68,12 @@ serve(async (req: Request) => {
     const body = validationResult.data;
 
     // Normalize phone to E.164 if provided
-    let normalizedPhone = body.phone;
-    if (normalizedPhone && !normalizedPhone.startsWith("+")) {
-      normalizedPhone = "+" + normalizedPhone.replace(/\D/g, "");
+    let normalizedPhone: string | null = null;
+    if (body.phone && body.phone.trim() !== '') {
+      // Remove all non-digit characters except leading +
+      const cleaned = body.phone.replace(/[^\d+]/g, '');
+      // Add + if missing and number starts with a digit
+      normalizedPhone = cleaned.startsWith('+') ? cleaned : (cleaned ? '+' + cleaned : null);
     }
 
     // Insert lead into database
