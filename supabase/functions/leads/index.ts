@@ -1,21 +1,40 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.76.1";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface LeadRequest {
-  name: string;
-  email: string;
-  company?: string;
-  phone?: string;
-  message?: string;
-  locale: string;
-  urgent?: boolean;
-}
+// Server-side validation schema
+const leadSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  email: z.string().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  company: z.string().max(100, "Company name must be less than 100 characters").optional(),
+  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, "Invalid phone number format").optional().or(z.literal('')),
+  message: z.string().max(2000, "Message must be less than 2000 characters").optional(),
+  locale: z.string().length(2, "Locale must be 2 characters"),
+  urgent: z.boolean().optional()
+});
+
+type LeadRequest = z.infer<typeof leadSchema>;
+
+// Escape HTML to prevent XSS in email templates
+const escapeHtml = (str: string): string => {
+  if (!str) return '';
+  return str.replace(/[&<>"']/g, (char) => {
+    const escapeMap: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    };
+    return escapeMap[char] || char;
+  });
+};
 
 serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
@@ -31,15 +50,22 @@ serve(async (req: Request) => {
     const supabase = createClient(supabaseUrl, supabaseKey);
     const resend = new Resend(resendApiKey);
 
-    const body: LeadRequest = await req.json();
-
-    // Validate required fields
-    if (!body.name || !body.email) {
+    // Parse and validate request body
+    const rawBody = await req.json();
+    const validationResult = leadSchema.safeParse(rawBody);
+    
+    if (!validationResult.success) {
+      console.error("Validation error:", validationResult.error.format());
       return new Response(
-        JSON.stringify({ error: "Name and email are required" }),
+        JSON.stringify({ 
+          error: "Invalid input data",
+          details: validationResult.error.errors.map(e => e.message)
+        }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    const body = validationResult.data;
 
     // Normalize phone to E.164 if provided
     let normalizedPhone = body.phone;
@@ -93,11 +119,11 @@ serve(async (req: Request) => {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h2 style="color: #0F172A;">${body.urgent ? "🔴 URGENT CALLBACK REQUESTED" : "New Lead Received"}</h2>
             <div style="background: #f8f9fa; border-left: 4px solid #FACC15; padding: 15px; margin: 20px 0;">
-              <p style="margin: 5px 0;"><strong>Name:</strong> ${body.name}</p>
-              <p style="margin: 5px 0;"><strong>Email:</strong> ${body.email}</p>
-              ${body.company ? `<p style="margin: 5px 0;"><strong>Company:</strong> ${body.company}</p>` : ""}
-              ${normalizedPhone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${normalizedPhone}</p>` : ""}
-              ${body.message ? `<p style="margin: 5px 0;"><strong>Message:</strong> ${body.message}</p>` : ""}
+              <p style="margin: 5px 0;"><strong>Name:</strong> ${escapeHtml(body.name)}</p>
+              <p style="margin: 5px 0;"><strong>Email:</strong> ${escapeHtml(body.email)}</p>
+              ${body.company ? `<p style="margin: 5px 0;"><strong>Company:</strong> ${escapeHtml(body.company)}</p>` : ""}
+              ${normalizedPhone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${escapeHtml(normalizedPhone)}</p>` : ""}
+              ${body.message ? `<p style="margin: 5px 0;"><strong>Message:</strong> ${escapeHtml(body.message)}</p>` : ""}
               <p style="margin: 5px 0;"><strong>Language:</strong> ${body.locale.toUpperCase()}</p>
               <p style="margin: 5px 0;"><strong>Timestamp:</strong> ${new Date().toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' })}</p>
             </div>
@@ -115,19 +141,19 @@ serve(async (req: Request) => {
     const confirmationMessages: Record<string, { subject: string; body: string }> = {
       en: {
         subject: "We've received your message!",
-        body: `Hello ${body.name}, thank you for contacting NLG Consulting. Our team will get back to you shortly.`
+        body: `Hello ${escapeHtml(body.name)}, thank you for contacting NLG Consulting. Our team will get back to you shortly.`
       },
       fr: {
         subject: "Nous avons bien reçu votre message !",
-        body: `Bonjour ${body.name}, merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.`
+        body: `Bonjour ${escapeHtml(body.name)}, merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.`
       },
       es: {
         subject: "¡Hemos recibido tu mensaje!",
-        body: `Hola ${body.name}, gracias por contactarnos. Nuestro equipo te responderá en breve.`
+        body: `Hola ${escapeHtml(body.name)}, gracias por contactarnos. Nuestro equipo te responderá en breve.`
       },
       de: {
         subject: "Wir haben Ihre Nachricht erhalten!",
-        body: `Hallo ${body.name}, danke für Ihre Nachricht. Unser Team wird sich bald bei Ihnen melden.`
+        body: `Hallo ${escapeHtml(body.name)}, danke für Ihre Nachricht. Unser Team wird sich bald bei Ihnen melden.`
       }
     };
 
@@ -170,8 +196,14 @@ serve(async (req: Request) => {
     );
   } catch (error: any) {
     console.error("Error in leads function:", error);
+    
+    // Return safe error message to client
+    const clientMessage = error instanceof z.ZodError 
+      ? "Invalid input data"
+      : "An error occurred processing your request";
+    
     return new Response(
-      JSON.stringify({ error: error?.message || "Internal server error" }),
+      JSON.stringify({ error: clientMessage }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
