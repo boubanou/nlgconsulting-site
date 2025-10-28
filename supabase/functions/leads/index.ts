@@ -16,7 +16,8 @@ const leadSchema = z.object({
   phone: z.string().trim().max(50, "Phone number too long").optional().or(z.literal('')).nullable(),
   message: z.string().max(2000, "Message must be less than 2000 characters").optional(),
   locale: z.string().length(2, "Locale must be 2 characters"),
-  urgent: z.boolean().optional()
+  urgent: z.boolean().optional(),
+  recaptchaToken: z.string().min(1, "reCAPTCHA token is required")
 });
 
 type LeadRequest = z.infer<typeof leadSchema>;
@@ -46,6 +47,7 @@ serve(async (req: Request) => {
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const resendApiKey = Deno.env.get("RESEND_API_KEY")!;
     const alertEmail = Deno.env.get("ALERT_TO_EMAIL")!;
+    const recaptchaSecret = Deno.env.get("RECAPTCHA_SECRET_KEY")!;
 
     const supabase = createClient(supabaseUrl, supabaseKey);
     const resend = new Resend(resendApiKey);
@@ -65,16 +67,28 @@ serve(async (req: Request) => {
       );
     }
 
-    const body = validationResult.data;
+    const { recaptchaToken, ...body } = validationResult.data;
 
-    // Normalize phone to E.164 if provided
-    let normalizedPhone: string | null = null;
-    if (body.phone && body.phone.trim() !== '') {
-      // Remove all non-digit characters except leading +
-      const cleaned = body.phone.replace(/[^\d+]/g, '');
-      // Add + if missing and number starts with a digit
-      normalizedPhone = cleaned.startsWith('+') ? cleaned : (cleaned ? '+' + cleaned : null);
+    // Verify reCAPTCHA token
+    console.log("Verifying reCAPTCHA token");
+    const recaptchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${recaptchaSecret}&response=${recaptchaToken}`,
+    });
+
+    const recaptchaResult = await recaptchaResponse.json();
+    console.log("reCAPTCHA verification result:", { success: recaptchaResult.success, score: recaptchaResult.score });
+
+    if (!recaptchaResult.success || recaptchaResult.score < 0.5) {
+      console.error("reCAPTCHA verification failed:", recaptchaResult);
+      return new Response(
+        JSON.stringify({ error: "reCAPTCHA verification failed" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     }
+
+    // No phone validation - store as-is with country code
 
     // Insert lead into database
     const { data: lead, error: dbError } = await supabase
@@ -83,7 +97,7 @@ serve(async (req: Request) => {
         name: body.name,
         email: body.email,
         company: body.company || null,
-        phone: normalizedPhone || null,
+        phone: body.phone || null,
         message: body.message || null,
         locale: body.locale || "en",
         consent: true,
@@ -101,9 +115,9 @@ serve(async (req: Request) => {
     }
 
     // If urgent, create callback record
-    if (body.urgent && normalizedPhone) {
+    if (body.urgent && body.phone) {
       await supabase.from("callbacks").insert({
-        phone: normalizedPhone,
+        phone: body.phone,
         note: `Urgent callback requested by ${body.name} (${body.email})`,
         status: "New",
       });
@@ -125,7 +139,7 @@ serve(async (req: Request) => {
               <p style="margin: 5px 0;"><strong>Name:</strong> ${escapeHtml(body.name)}</p>
               <p style="margin: 5px 0;"><strong>Email:</strong> ${escapeHtml(body.email)}</p>
               ${body.company ? `<p style="margin: 5px 0;"><strong>Company:</strong> ${escapeHtml(body.company)}</p>` : ""}
-              ${normalizedPhone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${escapeHtml(normalizedPhone)}</p>` : ""}
+              ${body.phone ? `<p style="margin: 5px 0;"><strong>Phone:</strong> ${escapeHtml(body.phone)}</p>` : ""}
               ${body.message ? `<p style="margin: 5px 0;"><strong>Message:</strong> ${escapeHtml(body.message)}</p>` : ""}
               <p style="margin: 5px 0;"><strong>Language:</strong> ${body.locale.toUpperCase()}</p>
               <p style="margin: 5px 0;"><strong>Timestamp:</strong> ${new Date().toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' })}</p>

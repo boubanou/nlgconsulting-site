@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import {
   Form,
   FormControl,
@@ -51,7 +53,17 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      // Call edge function instead of direct DB insert
+      // Generate reCAPTCHA token
+      const recaptchaToken = await new Promise<string>((resolve, reject) => {
+        (window as any).grecaptcha.ready(() => {
+          (window as any).grecaptcha
+            .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: "submit" })
+            .then(resolve)
+            .catch(reject);
+        });
+      });
+
+      // Call edge function with CAPTCHA token
       const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/leads`, {
         method: "POST",
         headers: {
@@ -66,6 +78,7 @@ const ContactForm = () => {
           message: data.message || null,
           locale: i18n.language,
           urgent: data.urgent || false,
+          recaptchaToken,
         }),
       });
 
@@ -143,7 +156,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel>{t("contact.form_phone")}</FormLabel>
                   <FormControl>
-                    <Input {...field} />
+                    <PhoneInput
+                      {...field}
+                      international
+                      defaultCountry="FR"
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
