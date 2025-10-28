@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 export type UserRole = "owner" | "agent" | null;
 
 export const useUserRole = () => {
-  const { data: session } = useQuery({
+  const { data: session, isLoading: sessionLoading } = useQuery({
     queryKey: ["session"],
     queryFn: async () => {
       const { data: { session } } = await supabase.auth.getSession();
@@ -12,7 +12,7 @@ export const useUserRole = () => {
     },
   });
 
-  const { data: role, isLoading } = useQuery({
+  const { data: role, isLoading: roleLoading } = useQuery({
     queryKey: ["userRole", session?.user?.id],
     queryFn: async () => {
       if (!session?.user?.id) return null;
@@ -32,6 +32,9 @@ export const useUserRole = () => {
     },
     enabled: !!session?.user?.id,
   });
+
+  // Consider loading if either query is loading OR if session exists but role hasn't loaded yet
+  const isLoading = sessionLoading || (!!session?.user?.id && roleLoading);
 
   return {
     role,
