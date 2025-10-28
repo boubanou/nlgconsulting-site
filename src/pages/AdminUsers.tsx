@@ -19,12 +19,16 @@ const AdminUsers = () => {
         navigate("/auth");
         return;
       }
+      // Wait for the role to be loaded before checking access
       if (!isLoading && !isOwner) {
         navigate("/access-denied");
       }
     };
 
-    checkAuth();
+    // Only check auth when not loading
+    if (!isLoading) {
+      checkAuth();
+    }
   }, [navigate, isOwner, isLoading]);
 
   if (isLoading) {

@@ -19,12 +19,16 @@ const AdminMeetings = () => {
         navigate("/auth");
         return;
       }
+      // Wait for the role to be loaded before checking access
       if (!isLoading && !hasAccess) {
         navigate("/access-denied");
       }
     };
 
-    checkAuth();
+    // Only check auth when not loading
+    if (!isLoading) {
+      checkAuth();
+    }
   }, [navigate, hasAccess, isLoading]);
 
   if (isLoading) {
