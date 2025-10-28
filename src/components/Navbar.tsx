@@ -4,10 +4,12 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useUserRole } from "@/hooks/useUserRole";
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const { hasAccess } = useUserRole();
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -31,9 +33,11 @@ const Navbar = () => {
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               {t("nav.contact")}
             </Link>
-            <Link to="/admin" className="text-foreground hover:text-primary transition-colors">
-              BackOffice
-            </Link>
+            {hasAccess && (
+              <Link to="/admin" className="text-foreground hover:text-primary transition-colors">
+                BackOffice
+              </Link>
+            )}
             <LanguageSwitcher />
             <Button asChild>
               <Link to="/book">{t("nav.book")}</Link>
@@ -80,13 +84,15 @@ const Navbar = () => {
             >
               {t("nav.contact")}
             </Link>
-            <Link
-              to="/admin"
-              className="block text-foreground hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              BackOffice
-            </Link>
+            {hasAccess && (
+              <Link
+                to="/admin"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                BackOffice
+              </Link>
+            )}
             <Button asChild className="w-full">
               <Link to="/book" onClick={() => setIsOpen(false)}>
                 {t("nav.book")}
