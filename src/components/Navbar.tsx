@@ -31,6 +31,9 @@ const Navbar = () => {
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               {t("nav.contact")}
             </Link>
+            <Link to="/admin" className="text-foreground hover:text-primary transition-colors">
+              BackOffice
+            </Link>
             <LanguageSwitcher />
             <Button asChild>
               <Link to="/book">{t("nav.book")}</Link>
@@ -76,6 +79,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               {t("nav.contact")}
+            </Link>
+            <Link
+              to="/admin"
+              className="block text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              BackOffice
             </Link>
             <Button asChild className="w-full">
               <Link to="/book" onClick={() => setIsOpen(false)}>
