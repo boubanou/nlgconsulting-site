@@ -12,6 +12,66 @@ const Index = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "NLG Consulting",
+        "url": "https://nlgconsulting.co",
+        "logo": "https://nlgconsulting.co/logo.svg",
+        "description": currentLang === 'fr' 
+          ? "Expert en génération de leads B2B et prise de rendez-vous qualifiés"
+          : "B2B Lead Generation & Appointment Setting Expert",
+        "founder": {
+          "@type": "Person",
+          "name": "Gregory Brenig"
+        },
+        "areaServed": ["FR", "BE", "CH", "CA", "IL"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "greg@nlgconsulting.co",
+          "contactType": "Sales"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "B2B Lead Generation",
+        "provider": {
+          "@type": "Organization",
+          "name": "NLG Consulting"
+        },
+        "areaServed": ["FR", "BE", "CH", "CA", "IL"],
+        "offers": {
+          "@type": "Offer",
+          "description": "15-20 qualified meetings per month"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": t("faq.q1"),
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": t("faq.a1")
+            }
+          },
+          {
+            "@type": "Question",
+            "name": t("faq.q2"),
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": t("faq.a2")
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -26,11 +86,30 @@ const Index = () => {
           content={
             currentLang === 'fr'
               ? 'Externalisez votre prospection B2B. 15–20 rendez-vous qualifiés par mois via LinkedIn, email et appels. Réservez un appel de 15 min.'
-              : '15–20 qualified meetings/month with LinkedIn, email and phone outreach. Book a 15-min call.'
+              : 'Professional B2B lead generation delivering 15-20 qualified meetings per month through multichannel outreach. LinkedIn, email, and phone campaigns.'
           }
         />
-        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en" />
-        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr" />
+        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}`} />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}`} />
+        <meta property="og:title" content={currentLang === 'fr' ? 'Prospection B2B & Génération de leads – NLG Consulting' : 'B2B Lead Generation & Appointment Setting – NLG Consulting'} />
+        <meta property="og:description" content={currentLang === 'fr' ? 'Externalisez votre prospection B2B. 15–20 rendez-vous qualifiés par mois.' : 'Professional B2B lead generation delivering 15-20 qualified meetings per month.'} />
+        <meta property="og:image" content="https://nlgconsulting.co/logo.svg" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={currentLang === 'fr' ? 'Prospection B2B & Génération de leads – NLG Consulting' : 'B2B Lead Generation & Appointment Setting – NLG Consulting'} />
+        <meta name="twitter:description" content={currentLang === 'fr' ? 'Externalisez votre prospection B2B. 15–20 rendez-vous qualifiés par mois.' : 'Professional B2B lead generation delivering 15-20 qualified meetings per month.'} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

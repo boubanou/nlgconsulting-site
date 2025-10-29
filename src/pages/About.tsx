@@ -32,21 +32,26 @@ const About = () => {
   // Structured Data for SEO
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NLG Consulting",
-    "founder": {
-      "@type": "Person",
-      "name": "Gregory Brenig"
-    },
-    "areaServed": [
-      { "@type": "Country", "name": "France" },
-      { "@type": "Country", "name": "Belgium" },
-      { "@type": "Country", "name": "Switzerland" },
-      { "@type": "Country", "name": "Canada" },
-      { "@type": "Country", "name": "Israel" }
-    ],
-    "description": t("about.subtitle"),
-    "url": "https://yourdomain.com"
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "NLG Consulting",
+      "url": "https://nlgconsulting.co",
+      "founder": {
+        "@type": "Person",
+        "name": "Gregory Brenig",
+        "jobTitle": "Founder & Lead Generation Specialist"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Country", "name": "Belgium" },
+        { "@type": "Country", "name": "Switzerland" },
+        { "@type": "Country", "name": "Canada" },
+        { "@type": "Country", "name": "Israel" }
+      ],
+      "description": t("about.subtitle"),
+      "knowsAbout": ["B2B Lead Generation", "Sales Development", "Appointment Setting", "Multichannel Outreach"]
+    }
   };
 
   return (
@@ -54,8 +59,18 @@ const About = () => {
       <Helmet>
         <title>{t("about.title")} - NLG Consulting</title>
         <meta name="description" content={t("about.subtitle")} />
-        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/about" />
-        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/about" />
+        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/about`} />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/about" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/about" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/about`} />
+        <meta property="og:title" content={`${t("about.title")} - NLG Consulting`} />
+        <meta property="og:description" content={t("about.subtitle")} />
+        
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

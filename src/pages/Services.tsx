@@ -48,13 +48,61 @@ const Services = () => {
     { q: t("services.faq_q4"), a: t("services.faq_a4") },
   ];
 
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "B2B Lead Generation Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "NLG Consulting",
+      "url": "https://nlgconsulting.co"
+    },
+    "description": t("services.subtitle"),
+    "areaServed": ["FR", "BE", "CH", "CA", "IL"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Lead Generation Services",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "LinkedIn Outreach",
+          "description": t("services.linkedin_desc")
+        },
+        {
+          "@type": "Service",
+          "name": "Email Campaigns",
+          "description": t("services.email_desc")
+        },
+        {
+          "@type": "Service",
+          "name": "Cold Calling",
+          "description": t("services.calling_desc")
+        }
+      ]
+    }
+  };
+
   return (
     <>
       <Helmet>
         <title>{t("services.title")} - NLG Consulting</title>
         <meta name="description" content={t("services.subtitle")} />
-        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/services" />
-        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/services" />
+        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/services`} />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/services" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/services" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/services`} />
+        <meta property="og:title" content={`${t("services.title")} - NLG Consulting`} />
+        <meta property="og:description" content={t("services.subtitle")} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

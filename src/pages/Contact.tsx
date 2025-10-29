@@ -9,13 +9,44 @@ const Contact = () => {
   const currentLang = i18n.language;
   const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "NLG Consulting",
+      "url": "https://nlgconsulting.co",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "greg@nlgconsulting.co",
+        "contactType": "Sales",
+        "areaServed": ["FR", "BE", "CH", "CA", "IL"]
+      }
+    }
+  };
+
   return (
     <>
       <Helmet>
         <title>{t("contact.title")} - NLG Consulting</title>
         <meta name="description" content={t("contact.subtitle")} />
-        <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/contact" />
-        <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/contact" />
+        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/contact`} />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/contact" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/contact`} />
+        <meta property="og:title" content={`${t("contact.title")} - NLG Consulting`} />
+        <meta property="og:description" content={t("contact.subtitle")} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        
         {siteKey && siteKey !== "YOUR_RECAPTCHA_SITE_KEY_HERE" && (
           <script src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`} async defer></script>
         )}

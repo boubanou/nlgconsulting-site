@@ -1,14 +1,11 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# NLG Consulting - B2B Lead Generation
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://nlgconsulting.co/sitemap.xml
+
+# Block admin pages
+Disallow: /admin
+Disallow: /auth
+Disallow: /access-denied
