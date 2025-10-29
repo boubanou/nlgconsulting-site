@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img src="/logo.svg" alt={t("brand.nlgConsulting")} className="h-6 w-auto mb-4 opacity-90" loading="lazy" />
+            <img src="/logo.svg" alt={t("brand.nlgConsulting")} className="h-6 w-auto mb-4 opacity-90" width="132" height="24" loading="lazy" />
             <p className="text-muted-foreground">{t("footer.tagline")}</p>
           </div>
           <div>
