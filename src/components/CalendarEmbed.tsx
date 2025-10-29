@@ -19,7 +19,7 @@ export default function CalendarEmbed() {
     >
       <iframe
         title="Book a 15-min call"
-        src="https://calendly.com/brenig-g/15min?hide_gdpr_banner=1"
+        src="https://calendly.com/greg-nlgconsulting/15min?hide_gdpr_banner=1"
         className="w-full h-[900px] border-0"
       />
     </div>
