@@ -145,7 +145,7 @@ serve(async (req: Request) => {
     try {
       console.log("Sending internal notification to:", alertEmail);
       const internalEmailResult = await resend.emails.send({
-        from: "NLG Consulting <onboarding@resend.dev>",
+        from: "NLG Consulting <greg@nlgconsulting.co>",
         to: [alertEmail],
         subject: body.urgent
           ? `🔴 URGENT - New Lead: ${body.name}`
@@ -198,7 +198,7 @@ serve(async (req: Request) => {
     try {
       console.log("Sending confirmation email to:", body.email);
       const confirmationResult = await resend.emails.send({
-        from: "NLG Consulting <onboarding@resend.dev>",
+        from: "NLG Consulting <greg@nlgconsulting.co>",
         to: [body.email],
         subject: confirmation.subject,
         html: `
