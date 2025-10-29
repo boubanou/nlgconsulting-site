@@ -7,6 +7,7 @@ import ContactForm from "@/components/ContactForm";
 const Contact = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
   return (
     <>
@@ -15,7 +16,9 @@ const Contact = () => {
         <meta name="description" content={t("contact.subtitle")} />
         <link rel="alternate" hrefLang="en" href="https://yourdomain.com/en/contact" />
         <link rel="alternate" hrefLang="fr" href="https://yourdomain.com/fr/contact" />
-        <script src={`https://www.google.com/recaptcha/api.js?render=${import.meta.env.VITE_RECAPTCHA_SITE_KEY}`} async defer></script>
+        {siteKey && siteKey !== "YOUR_RECAPTCHA_SITE_KEY_HERE" && (
+          <script src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`} async defer></script>
+        )}
       </Helmet>
 
       <div className="min-h-screen bg-background">
