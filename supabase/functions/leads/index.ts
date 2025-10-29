@@ -70,7 +70,9 @@ serve(async (req: Request) => {
     const { recaptchaToken, ...body } = validationResult.data;
 
     // Verify reCAPTCHA token
-    console.log("Verifying reCAPTCHA token");
+    console.log("Verifying reCAPTCHA token with secret:", recaptchaSecret ? "present" : "MISSING");
+    console.log("reCAPTCHA token received:", recaptchaToken ? `${recaptchaToken.substring(0, 20)}...` : "MISSING");
+    
     const recaptchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -78,12 +80,25 @@ serve(async (req: Request) => {
     });
 
     const recaptchaResult = await recaptchaResponse.json();
-    console.log("reCAPTCHA verification result:", { success: recaptchaResult.success, score: recaptchaResult.score });
+    console.log("reCAPTCHA verification full result:", JSON.stringify(recaptchaResult, null, 2));
 
-    if (!recaptchaResult.success || recaptchaResult.score < 0.5) {
+    if (!recaptchaResult.success) {
       console.error("reCAPTCHA verification failed:", recaptchaResult);
+      console.error("Error codes:", recaptchaResult["error-codes"]);
       return new Response(
-        JSON.stringify({ error: "reCAPTCHA verification failed" }),
+        JSON.stringify({ 
+          error: "reCAPTCHA verification failed",
+          details: recaptchaResult["error-codes"] 
+        }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Check score only for v3 (v2 doesn't have score)
+    if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5) {
+      console.error("reCAPTCHA score too low:", recaptchaResult.score);
+      return new Response(
+        JSON.stringify({ error: "reCAPTCHA verification failed", score: recaptchaResult.score }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
