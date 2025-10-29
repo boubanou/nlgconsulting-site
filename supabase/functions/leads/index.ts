@@ -69,12 +69,30 @@ serve(async (req: Request) => {
 
     const { recaptchaToken, ...body } = validationResult.data;
 
-    // reCAPTCHA verification DISABLED temporarily
-    console.log("⚠️ reCAPTCHA verification BYPASSED - token received but not verified");
-    
-    /* DISABLED - Enable after configuring reCAPTCHA domains
-    console.log("Verifying reCAPTCHA token with secret:", recaptchaSecret ? "present" : "MISSING");
-    console.log("reCAPTCHA token received:", recaptchaToken ? `${recaptchaToken.substring(0, 20)}...` : "MISSING");
+    // Get client IP for rate limiting
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0] || 
+                     req.headers.get("x-real-ip") || 
+                     "unknown";
+
+    // Rate limiting: Check submissions from this IP in the last hour
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    const { count: recentSubmissions } = await supabase
+      .from("leads")
+      .select("*", { count: "exact", head: true })
+      .gte("created_at", oneHourAgo)
+      .eq("source", "website_contact_form");
+
+    // Allow 5 submissions per hour per IP (soft limit without IP tracking table)
+    if (recentSubmissions && recentSubmissions >= 5) {
+      console.warn(`Rate limit exceeded for IP: ${clientIP}`);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // reCAPTCHA verification
+    console.log("Verifying reCAPTCHA token");
     
     const recaptchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",
@@ -83,14 +101,13 @@ serve(async (req: Request) => {
     });
 
     const recaptchaResult = await recaptchaResponse.json();
-    console.log("reCAPTCHA verification full result:", JSON.stringify(recaptchaResult, null, 2));
+    console.log("reCAPTCHA verification result:", recaptchaResult.success);
 
     if (!recaptchaResult.success) {
-      console.error("reCAPTCHA verification failed:", recaptchaResult);
-      console.error("Error codes:", recaptchaResult["error-codes"]);
+      console.error("reCAPTCHA verification failed:", recaptchaResult["error-codes"]);
       return new Response(
         JSON.stringify({ 
-          error: "reCAPTCHA verification failed",
+          error: "reCAPTCHA verification failed. Please try again.",
           details: recaptchaResult["error-codes"] 
         }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -100,11 +117,10 @@ serve(async (req: Request) => {
     if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5) {
       console.error("reCAPTCHA score too low:", recaptchaResult.score);
       return new Response(
-        JSON.stringify({ error: "reCAPTCHA verification failed", score: recaptchaResult.score }),
+        JSON.stringify({ error: "Security verification failed. Please try again." }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
-    */
 
     // No phone validation - store as-is with country code
 

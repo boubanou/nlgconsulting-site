@@ -63,6 +63,27 @@ serve(async (req: Request) => {
 
     const body = validationResult.data;
 
+    // Get client IP for rate limiting
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0] || 
+                     req.headers.get("x-real-ip") || 
+                     "unknown";
+
+    // Rate limiting: Check callback requests in the last hour
+    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    const { count: recentCallbacks } = await supabase
+      .from("callbacks")
+      .select("*", { count: "exact", head: true })
+      .gte("created_at", oneHourAgo);
+
+    // Allow 3 callback requests per hour (stricter limit for urgent callbacks)
+    if (recentCallbacks && recentCallbacks >= 3) {
+      console.warn(`Rate limit exceeded for callback requests from IP: ${clientIP}`);
+      return new Response(
+        JSON.stringify({ error: "Too many callback requests. Please try again later." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     // Normalize phone to E.164
     let normalizedPhone = body.phone;
     if (!normalizedPhone.startsWith("+")) {
