@@ -52,47 +52,10 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY as string;
-    if (!siteKey || siteKey === "YOUR_RECAPTCHA_SITE_KEY_HERE") {
-      toast.error("reCAPTCHA error", {
-        description: "La protection reCAPTCHA n'est pas configurée. Réessayez plus tard.",
-      });
-      setIsSubmitting(false);
-      return;
-    }
+    
     try {
-      // Generate reCAPTCHA token with timeout and safety checks
-      const recaptchaToken = await Promise.race<string>([
-        new Promise<string>((resolve, reject) => {
-          const grecaptcha = (window as any).grecaptcha;
-          if (!grecaptcha || !grecaptcha.ready) {
-            reject(new Error("reCAPTCHA not loaded"));
-            return;
-          }
-          try {
-            grecaptcha.ready(() => {
-              grecaptcha
-                .execute(siteKey, { action: "submit" })
-                .then(resolve)
-                .catch(reject);
-            });
-          } catch (e) {
-            reject(e as Error);
-          }
-        }),
-        new Promise<string>((_, reject) =>
-          setTimeout(() => reject(new Error("reCAPTCHA timeout")), 10000)
-        ),
-      ]);
-
-      // Call edge function with CAPTCHA token
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/leads`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-        },
-        body: JSON.stringify({
+      const { error } = await supabase.functions.invoke("leads", {
+        body: {
           name: data.name,
           email: data.email,
           company: data.company || null,
@@ -100,13 +63,11 @@ const ContactForm = () => {
           message: data.message || null,
           locale: i18n.language,
           urgent: data.urgent || false,
-          recaptchaToken,
-        }),
+        },
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to submit form");
+      if (error) {
+        throw new Error(error.message || "Failed to submit form");
       }
 
       toast.success(t("contact.success_title"), {

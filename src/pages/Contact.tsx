@@ -7,7 +7,6 @@ import ContactForm from "@/components/ContactForm";
 const Contact = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
   // Structured Data for SEO
   const structuredData = {
@@ -46,10 +45,6 @@ const Contact = () => {
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-        
-        {siteKey && siteKey !== "YOUR_RECAPTCHA_SITE_KEY_HERE" && (
-          <script src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`} async defer></script>
-        )}
       </Helmet>
 
       <div className="min-h-screen bg-background">

@@ -17,7 +17,6 @@ const leadSchema = z.object({
   message: z.string().max(2000, "Message must be less than 2000 characters").optional(),
   locale: z.string().length(2, "Locale must be 2 characters"),
   urgent: z.boolean().optional(),
-  recaptchaToken: z.string().min(1, "reCAPTCHA token is required")
 });
 
 type LeadRequest = z.infer<typeof leadSchema>;
@@ -47,7 +46,6 @@ serve(async (req: Request) => {
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const resendApiKey = Deno.env.get("RESEND_API_KEY")!;
     const alertEmail = Deno.env.get("ALERT_TO_EMAIL")!;
-    const recaptchaSecret = Deno.env.get("RECAPTCHA_SECRET_KEY")!;
 
     const supabase = createClient(supabaseUrl, supabaseKey);
     const resend = new Resend(resendApiKey);
@@ -67,7 +65,7 @@ serve(async (req: Request) => {
       );
     }
 
-    const { recaptchaToken, ...body } = validationResult.data;
+    const body = validationResult.data;
 
     // Get client IP for rate limiting
     const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0] || 
@@ -82,7 +80,7 @@ serve(async (req: Request) => {
       .gte("created_at", oneHourAgo)
       .eq("source", "website_contact_form");
 
-    // Allow 5 submissions per hour per IP (soft limit without IP tracking table)
+    // Allow 5 submissions per hour (soft limit)
     if (recentSubmissions && recentSubmissions >= 5) {
       console.warn(`Rate limit exceeded for IP: ${clientIP}`);
       return new Response(
@@ -91,38 +89,7 @@ serve(async (req: Request) => {
       );
     }
 
-    // reCAPTCHA verification
-    console.log("Verifying reCAPTCHA token");
-    
-    const recaptchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=${recaptchaSecret}&response=${recaptchaToken}`,
-    });
-
-    const recaptchaResult = await recaptchaResponse.json();
-    console.log("reCAPTCHA verification result:", recaptchaResult.success);
-
-    if (!recaptchaResult.success) {
-      console.error("reCAPTCHA verification failed:", recaptchaResult["error-codes"]);
-      return new Response(
-        JSON.stringify({ 
-          error: "reCAPTCHA verification failed. Please try again.",
-          details: recaptchaResult["error-codes"] 
-        }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    if (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5) {
-      console.error("reCAPTCHA score too low:", recaptchaResult.score);
-      return new Response(
-        JSON.stringify({ error: "Security verification failed. Please try again." }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    // No phone validation - store as-is with country code
+    console.log("Rate limit check passed");
 
     // Insert lead into database
     const { data: lead, error: dbError } = await supabase
