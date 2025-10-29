@@ -68,11 +68,12 @@ serve(async (req: Request) => {
                      req.headers.get("x-real-ip") || 
                      "unknown";
 
-    // Rate limiting: Check callback requests in the last hour
+    // Rate limiting: Check callback requests from this IP in the last hour
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
     const { count: recentCallbacks } = await supabase
       .from("callbacks")
       .select("*", { count: "exact", head: true })
+      .eq("ip_address", clientIP)
       .gte("created_at", oneHourAgo);
 
     // Allow 3 callback requests per hour (stricter limit for urgent callbacks)
@@ -90,7 +91,7 @@ serve(async (req: Request) => {
       normalizedPhone = "+" + normalizedPhone.replace(/\D/g, "");
     }
 
-    // Insert callback into database
+    // Insert callback into database with IP address
     const { data: callback, error: dbError } = await supabase
       .from("callbacks")
       .insert({
@@ -98,6 +99,7 @@ serve(async (req: Request) => {
         note: body.note || null,
         timezone: body.timezone || null,
         status: "New",
+        ip_address: clientIP,
       })
       .select()
       .single();

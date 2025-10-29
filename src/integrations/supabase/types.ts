@@ -19,6 +19,7 @@ export type Database = {
           assigned_to: string | null
           created_at: string
           id: string
+          ip_address: string | null
           note: string | null
           phone: string
           status: Database["public"]["Enums"]["callback_status"]
@@ -29,6 +30,7 @@ export type Database = {
           assigned_to?: string | null
           created_at?: string
           id?: string
+          ip_address?: string | null
           note?: string | null
           phone: string
           status?: Database["public"]["Enums"]["callback_status"]
@@ -39,6 +41,7 @@ export type Database = {
           assigned_to?: string | null
           created_at?: string
           id?: string
+          ip_address?: string | null
           note?: string | null
           phone?: string
           status?: Database["public"]["Enums"]["callback_status"]
@@ -55,6 +58,7 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          ip_address: string | null
           locale: string
           message: string | null
           name: string
@@ -75,6 +79,7 @@ export type Database = {
           created_at?: string
           email: string
           id?: string
+          ip_address?: string | null
           locale?: string
           message?: string | null
           name: string
@@ -95,6 +100,7 @@ export type Database = {
           created_at?: string
           email?: string
           id?: string
+          ip_address?: string | null
           locale?: string
           message?: string | null
           name?: string

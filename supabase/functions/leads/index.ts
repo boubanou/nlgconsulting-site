@@ -77,8 +77,8 @@ serve(async (req: Request) => {
     const { count: recentSubmissions } = await supabase
       .from("leads")
       .select("*", { count: "exact", head: true })
-      .gte("created_at", oneHourAgo)
-      .eq("source", "website_contact_form");
+      .eq("ip_address", clientIP)
+      .gte("created_at", oneHourAgo);
 
     // Allow 5 submissions per hour (soft limit)
     if (recentSubmissions && recentSubmissions >= 5) {
@@ -91,7 +91,7 @@ serve(async (req: Request) => {
 
     console.log("Rate limit check passed");
 
-    // Insert lead into database
+    // Insert lead into database with IP address
     const { data: lead, error: dbError } = await supabase
       .from("leads")
       .insert({
@@ -103,6 +103,7 @@ serve(async (req: Request) => {
         locale: body.locale || "en",
         consent: true,
         source: "website_contact_form",
+        ip_address: clientIP,
       })
       .select()
       .single();
@@ -121,6 +122,7 @@ serve(async (req: Request) => {
         phone: body.phone,
         note: `Urgent callback requested by ${body.name} (${body.email})`,
         status: "New",
+        ip_address: clientIP,
       });
     }
 
