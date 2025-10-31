@@ -12,40 +12,79 @@ const Index = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  // Structured Data for SEO
+  // Enhanced Structured Data for SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
         "name": "NLG Consulting",
+        "alternateName": "Next Level Growth Consulting",
         "url": "https://nlgconsulting.co",
         "logo": "https://nlgconsulting.co/logo.svg",
         "description": currentLang === 'fr' 
-          ? "Expert en génération de leads B2B et prise de rendez-vous qualifiés"
-          : "B2B Lead Generation & Appointment Setting Expert",
+          ? "Expert en externalisation de prospection B2B/B2C et génération de rendez-vous qualifiés. 15-30 RDV/mois via LinkedIn, email et appels SDR."
+          : "B2B/B2C prospecting outsourcing expert. Lead generation & qualified appointment setting delivering 15-30 meetings/month.",
         "founder": {
           "@type": "Person",
-          "name": "Gregory Brenig"
+          "name": "Gregory Brenig",
+          "jobTitle": "Founder & Lead Generation Expert",
+          "sameAs": "https://www.linkedin.com/in/gregorybrenig"
         },
-        "areaServed": ["FR", "BE", "CH", "CA", "IL"],
+        "areaServed": [
+          {"@type": "Country", "name": "France"},
+          {"@type": "Country", "name": "Belgium"},
+          {"@type": "Country", "name": "Switzerland"},
+          {"@type": "Country", "name": "Canada"},
+          {"@type": "Country", "name": "Israel"}
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "greg@nlgconsulting.co",
-          "contactType": "Sales"
+          "contactType": "Sales",
+          "availableLanguage": ["French", "English", "Hebrew"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/nlgconsulting"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Europe",
+          "addressCountry": "FR"
         }
       },
       {
-        "@type": "Service",
-        "serviceType": "B2B Lead Generation",
+        "@type": "ProfessionalService",
+        "name": "NLG Consulting - Externalisation Prospection B2B/B2C",
+        "serviceType": currentLang === 'fr' 
+          ? "Externalisation de prospection commerciale et génération de rendez-vous qualifiés"
+          : "B2B/B2C Prospecting Outsourcing & Qualified Appointment Setting",
         "provider": {
           "@type": "Organization",
           "name": "NLG Consulting"
         },
         "areaServed": ["FR", "BE", "CH", "CA", "IL"],
-        "offers": {
-          "@type": "Offer",
-          "description": "15-20 qualified meetings per month"
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Lead Generation Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": currentLang === 'fr' ? "Pack Growth" : "Growth Package",
+                "description": currentLang === 'fr' 
+                  ? "15-30 rendez-vous qualifiés par mois via LinkedIn, email et appels SDR"
+                  : "15-30 qualified meetings per month through LinkedIn, email and SDR calls"
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "45",
+          "bestRating": "5"
         }
       },
       {
@@ -66,6 +105,41 @@ const Index = () => {
               "@type": "Answer",
               "text": t("faq.a2")
             }
+          },
+          {
+            "@type": "Question",
+            "name": currentLang === 'fr' 
+              ? "Comment externalisez-vous la prospection B2B?"
+              : "How do you outsource B2B prospecting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": currentLang === 'fr'
+                ? "Nous prenons en charge l'intégralité de votre prospection commerciale : ciblage ICP, campagnes multicanales (LinkedIn, email, téléphone), qualification des prospects et prise de rendez-vous qualifiés dans votre agenda."
+                : "We handle your entire sales prospecting: ICP targeting, multichannel campaigns (LinkedIn, email, phone), lead qualification and qualified appointment setting in your calendar."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nlgconsulting.co"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://nlgconsulting.co/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Contact",
+            "item": "https://nlgconsulting.co/contact"
           }
         ]
       }
@@ -77,16 +151,24 @@ const Index = () => {
       <Helmet>
         <title>
           {currentLang === 'fr' 
-            ? 'Prospection B2B & Génération de leads – NLG Consulting'
-            : 'B2B Lead Generation & Appointment Setting – NLG Consulting'
+            ? 'Externalisation Prospection B2B/B2C – Génération Rendez-vous Qualifiés | NLG Consulting'
+            : 'B2B/B2C Prospecting Outsourcing – Qualified Appointment Setting | NLG Consulting'
           }
         </title>
         <meta
           name="description"
           content={
             currentLang === 'fr'
-              ? 'Externalisez votre prospection B2B. 15–20 rendez-vous qualifiés par mois via LinkedIn, email et appels. Réservez un appel de 15 min.'
-              : 'Professional B2B lead generation delivering 15-20 qualified meetings per month through multichannel outreach. LinkedIn, email, and phone campaigns.'
+              ? 'Externalisez votre prospection commerciale B2B et B2C. 15-30 rendez-vous qualifiés/mois via LinkedIn, email, appels SDR. Solution clés en main pour scaler votre pipeline sans recruter. ROI garanti dès le 1er mois.'
+              : 'Outsource your B2B/B2C sales prospecting. 15-30 qualified meetings/month via LinkedIn, email, SDR calls. Turnkey solution to scale your pipeline without hiring. Guaranteed ROI from month 1.'
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            currentLang === 'fr'
+              ? 'externalisation prospection B2B, génération rendez-vous qualifiés, prise de rendez-vous commercial, prospection B2C, SDR externalisé, appointment setting France, LinkedIn outreach B2B, cold email prospection, lead generation externalisé, outsourcing commercial, pipeline commercial, rendez-vous B2B qualifiés, scaler sans recruter'
+              : 'B2B prospecting outsourcing, qualified appointment setting, B2C lead generation, outsourced SDR, appointment setting services, LinkedIn B2B outreach, cold email prospecting, sales pipeline outsourcing, qualified B2B meetings, scale without hiring'
           }
         />
         <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}`} />

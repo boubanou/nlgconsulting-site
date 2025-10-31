@@ -1,39 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Home Page - All Languages -->
   <url>
     <loc>https://nlgconsulting.co/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nlgconsulting.co/de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nlgconsulting.co/es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://nlgconsulting.co/it"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nlgconsulting.co/nl"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl"/>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Services Page -->
   <url>
     <loc>https://nlgconsulting.co/services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/en/services"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/services"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nlgconsulting.co/de/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nlgconsulting.co/es/services"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://nlgconsulting.co/it/services"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nlgconsulting.co/nl/services"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt/services"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl/services"/>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- About Page -->
   <url>
     <loc>https://nlgconsulting.co/about</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/en/about"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nlgconsulting.co/de/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nlgconsulting.co/es/about"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://nlgconsulting.co/it/about"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nlgconsulting.co/nl/about"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl/about"/>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Contact Page -->
   <url>
     <loc>https://nlgconsulting.co/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/en/contact"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nlgconsulting.co/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nlgconsulting.co/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://nlgconsulting.co/it/contact"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nlgconsulting.co/nl/contact"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt/contact"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl/contact"/>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Book Call Page - High Priority Conversion Page -->
   <url>
     <loc>https://nlgconsulting.co/book</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/en/book"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/book"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nlgconsulting.co/de/book"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nlgconsulting.co/es/book"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://nlgconsulting.co/it/book"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nlgconsulting.co/nl/book"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt/book"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl/book"/>
+    <lastmod>2025-10-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
 </urlset>
