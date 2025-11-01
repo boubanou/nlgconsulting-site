@@ -40,6 +40,11 @@ const Footer = () => {
                   {t("nav.book")}
                 </Link>
               </li>
+              <li>
+                <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t("footer.privacy")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
