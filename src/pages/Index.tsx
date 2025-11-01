@@ -198,7 +198,7 @@ const Index = () => {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4">
+        <section className="pt-32 md:pt-40 pb-12 sm:pb-20 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4 sm:space-y-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight px-2">
