@@ -8,21 +8,42 @@ const Contact = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  // Structured Data for SEO
+  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "NLG Consulting",
-      "url": "https://nlgconsulting.co",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "greg@nlgconsulting.co",
-        "contactType": "Sales",
-        "areaServed": ["FR", "BE", "CH", "CA", "IL"]
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "NLG Consulting",
+          "url": "https://nlgconsulting.co",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "greg@nlgconsulting.co",
+            "contactType": "Sales",
+            "areaServed": ["FR", "BE", "CH", "CA", "IL"]
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nlgconsulting.co"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://nlgconsulting.co/contact"
+          }
+        ]
       }
-    }
+    ]
   };
 
   return (

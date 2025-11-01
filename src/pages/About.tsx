@@ -29,29 +29,50 @@ const About = () => {
     },
   ];
 
-  // Structured Data for SEO
+  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "NLG Consulting",
-      "url": "https://nlgconsulting.co",
-      "founder": {
-        "@type": "Person",
-        "name": "Gregory Brenig",
-        "jobTitle": "Founder & Lead Generation Specialist"
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "NLG Consulting",
+          "url": "https://nlgconsulting.co",
+          "founder": {
+            "@type": "Person",
+            "name": "Gregory Brenig",
+            "jobTitle": "Founder & Lead Generation Specialist"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "France" },
+            { "@type": "Country", "name": "Belgium" },
+            { "@type": "Country", "name": "Switzerland" },
+            { "@type": "Country", "name": "Canada" },
+            { "@type": "Country", "name": "Israel" }
+          ],
+          "description": t("about.subtitle"),
+          "knowsAbout": ["B2B Lead Generation", "Sales Development", "Appointment Setting", "Multichannel Outreach"]
+        }
       },
-      "areaServed": [
-        { "@type": "Country", "name": "France" },
-        { "@type": "Country", "name": "Belgium" },
-        { "@type": "Country", "name": "Switzerland" },
-        { "@type": "Country", "name": "Canada" },
-        { "@type": "Country", "name": "Israel" }
-      ],
-      "description": t("about.subtitle"),
-      "knowsAbout": ["B2B Lead Generation", "Sales Development", "Appointment Setting", "Multichannel Outreach"]
-    }
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nlgconsulting.co"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://nlgconsulting.co/about"
+          }
+        ]
+      }
+    ]
   };
 
   return (

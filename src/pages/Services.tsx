@@ -48,39 +48,60 @@ const Services = () => {
     { q: t("services.faq_q4"), a: t("services.faq_a4") },
   ];
 
-  // Structured Data for SEO
+  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "B2B Lead Generation Services",
-    "provider": {
-      "@type": "Organization",
-      "name": "NLG Consulting",
-      "url": "https://nlgconsulting.co"
-    },
-    "description": t("services.subtitle"),
-    "areaServed": ["FR", "BE", "CH", "CA", "IL"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Lead Generation Services",
-      "itemListElement": [
-        {
-          "@type": "Service",
-          "name": "LinkedIn Outreach",
-          "description": t("services.linkedin_desc")
+    "@graph": [
+      {
+        "@type": "Service",
+        "serviceType": "B2B Lead Generation Services",
+        "provider": {
+          "@type": "Organization",
+          "name": "NLG Consulting",
+          "url": "https://nlgconsulting.co"
         },
-        {
-          "@type": "Service",
-          "name": "Email Campaigns",
-          "description": t("services.email_desc")
-        },
-        {
-          "@type": "Service",
-          "name": "Cold Calling",
-          "description": t("services.calling_desc")
+        "description": t("services.subtitle"),
+        "areaServed": ["FR", "BE", "CH", "CA", "IL"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Lead Generation Services",
+          "itemListElement": [
+            {
+              "@type": "Service",
+              "name": "LinkedIn Outreach",
+              "description": t("services.linkedin_desc")
+            },
+            {
+              "@type": "Service",
+              "name": "Email Campaigns",
+              "description": t("services.email_desc")
+            },
+            {
+              "@type": "Service",
+              "name": "Cold Calling",
+              "description": t("services.calling_desc")
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nlgconsulting.co"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://nlgconsulting.co/services"
+          }
+        ]
+      }
+    ]
   };
 
   return (

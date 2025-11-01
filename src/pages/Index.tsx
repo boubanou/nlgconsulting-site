@@ -12,7 +12,7 @@ const Index = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  // Enhanced Structured Data for SEO
+  // Enhanced Structured Data for SEO - Optimized for all search engines
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -54,6 +54,37 @@ const Index = () => {
         }
       },
       {
+        "@type": "LocalBusiness",
+        "name": "NLG Consulting",
+        "image": "https://nlgconsulting.co/logo.svg",
+        "@id": "https://nlgconsulting.co",
+        "url": "https://nlgconsulting.co",
+        "telephone": "+33-XXX-XXX-XXX",
+        "email": "greg@nlgconsulting.co",
+        "priceRange": "€€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Business Services",
+          "addressLocality": "Paris",
+          "postalCode": "75000",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.8566,
+          "longitude": 2.3522
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/nlgconsulting"
+        ]
+      },
+      {
         "@type": "ProfessionalService",
         "name": "NLG Consulting - Externalisation Prospection B2B/B2C",
         "serviceType": currentLang === 'fr' 
@@ -85,6 +116,21 @@ const Index = () => {
           "ratingValue": "4.9",
           "reviewCount": "45",
           "bestRating": "5"
+        },
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://nlgconsulting.co/book",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": {
+            "@type": "Reservation",
+            "name": currentLang === 'fr' ? "Réserver un appel stratégique" : "Book a strategy call"
+          }
         }
       },
       {

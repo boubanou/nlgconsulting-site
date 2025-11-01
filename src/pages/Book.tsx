@@ -7,21 +7,42 @@ import CalendarEmbed from "@/components/CalendarEmbed";
 const Book = () => {
   const { t, i18n } = useTranslation();
 
-  // Structured Data for SEO
+  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": t("book.title"),
-    "description": t("book.subtitle"),
-    "url": "https://nlgconsulting.co/book",
-    "potentialAction": {
-      "@type": "ReserveAction",
-      "target": "https://nlgconsulting.co/book",
-      "result": {
-        "@type": "Reservation",
-        "name": "15-Minute Strategy Call"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": t("book.title"),
+        "description": t("book.subtitle"),
+        "url": "https://nlgconsulting.co/book",
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": "https://nlgconsulting.co/book",
+          "result": {
+            "@type": "Reservation",
+            "name": "15-Minute Strategy Call"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nlgconsulting.co"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Book a Call",
+            "item": "https://nlgconsulting.co/book"
+          }
+        ]
       }
-    }
+    ]
   };
 
   return (
