@@ -27,9 +27,9 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <Toaster />
     <Sonner />
-    <CookieConsent />
-    <LeadPopup />
     <BrowserRouter>
+      <CookieConsent />
+      <LeadPopup />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
