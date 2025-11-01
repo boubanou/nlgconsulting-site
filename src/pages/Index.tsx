@@ -204,7 +204,7 @@ const Index = () => {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight px-2">
                 {t("home.hero_title")}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto px-2 leading-relaxed">
                 {t("home.hero_subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4 px-4">
