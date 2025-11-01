@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { X, Phone } from "lucide-react";
+import { X, Phone as PhoneIcon } from "lucide-react";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -17,7 +19,7 @@ const POPUP_DELAY_MS = 30000; // 30 seconds
 const leadSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100),
   email: z.string().email("Invalid email address").max(255),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, "Invalid phone number"),
+  phone: z.string().min(1, "Phone number is required"),
 });
 
 type LeadFormValues = z.infer<typeof leadSchema>;
@@ -36,10 +38,16 @@ export const LeadPopup = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
     reset,
   } = useForm<LeadFormValues>({
     resolver: zodResolver(leadSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+    },
   });
 
   useEffect(() => {
@@ -131,12 +139,12 @@ export const LeadPopup = () => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-start gap-4">
-          <div className="flex items-center gap-2">
-            <Phone className="h-6 w-6 text-primary" />
-            <h2 id="lead-popup-title" className="text-xl font-bold">
-              {t("leadPopup.title")}
-            </h2>
-          </div>
+        <div className="flex items-center gap-2">
+          <PhoneIcon className="h-6 w-6 text-primary" />
+          <h2 id="lead-popup-title" className="text-xl font-bold">
+            {t("leadPopup.title")}
+          </h2>
+        </div>
           <Button
             variant="ghost"
             size="icon"
@@ -180,12 +188,20 @@ export const LeadPopup = () => {
 
           <div className="space-y-2">
             <Label htmlFor="popup-phone">{t("leadPopup.phoneLabel")}</Label>
-            <Input
-              id="popup-phone"
-              type="tel"
-              {...register("phone")}
-              placeholder={t("leadPopup.phonePlaceholder")}
-              className={errors.phone ? "border-destructive" : ""}
+            <Controller
+              name="phone"
+              control={control}
+              render={({ field }) => (
+                <PhoneInput
+                  {...field}
+                  international
+                  defaultCountry="FR"
+                  placeholder={t("leadPopup.phonePlaceholder")}
+                  className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
+                    errors.phone ? "border-destructive" : "border-input"
+                  }`}
+                />
+              )}
             />
             {errors.phone && (
               <p className="text-sm text-destructive">{errors.phone.message}</p>
