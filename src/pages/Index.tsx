@@ -298,7 +298,15 @@ const Index = () => {
                   { src: "/brands/atlasworks.svg", altKey: "logos.atlasworks" },
                 ].map((logo, i) => (
                   <div key={i} className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center hover:shadow-md transition-shadow">
-                    <img src={logo.src} alt={t(logo.altKey)} loading="lazy" width="160" height="48" className="w-full h-auto" />
+                    <img 
+                      src={logo.src} 
+                      alt={t(logo.altKey)} 
+                      loading="lazy" 
+                      decoding="async"
+                      width="160" 
+                      height="48" 
+                      className="w-full h-auto" 
+                    />
                   </div>
                 ))}
               </div>
