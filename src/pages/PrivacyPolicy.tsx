@@ -48,7 +48,7 @@ const PrivacyPolicy = () => {
       <Navbar />
       
       <main className="min-h-screen bg-gradient-to-b from-background to-accent/5">
-        <div className="container max-w-4xl mx-auto px-4 py-16">
+        <div className="container max-w-4xl mx-auto px-4 pt-24 md:pt-32 pb-16">
           <article className="prose prose-lg dark:prose-invert max-w-none">
             <h1 className="text-4xl font-bold mb-8">{t("privacy.title")}</h1>
             
