@@ -58,13 +58,24 @@
     <link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt" />
     <link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl" />
     
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Consent Mode v2 + GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV1CDQJ1HB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Set default consent to denied (GDPR compliant)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_personalization': 'denied',
+        'ad_user_data': 'denied',
+        'wait_for_update': 500
+      });
+      
       gtag('js', new Date());
-      gtag('config', 'G-GV1CDQJ1HB', { anonymize_ip: true });
+      // Config will be called after user consent in CookieConsent component
+      
+      console.log('✅ Lead popup + GDPR Consent (G-GV1CDQJ1HB) active on nlgconsulting.co');
     </script>
 </head>
 

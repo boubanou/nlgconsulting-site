@@ -17,6 +17,9 @@ import AdminMeetings from "./pages/AdminMeetings";
 import AdminCallbacks from "./pages/AdminCallbacks";
 import AdminUsers from "./pages/AdminUsers";
 import AccessDenied from "./pages/AccessDenied";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { CookieConsent } from "./components/CookieConsent";
+import { LeadPopup } from "./components/LeadPopup";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +27,8 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <Toaster />
     <Sonner />
+    <CookieConsent />
+    <LeadPopup />
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
@@ -32,6 +37,7 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Book />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/access-denied" element={<AccessDenied />} />
         <Route path="/admin" element={<AdminDashboard />} />

@@ -82,4 +82,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
+
+  <!-- Privacy Policy Page - Legal Requirement -->
+  <url>
+    <loc>https://nlgconsulting.co/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nlgconsulting.co/de/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nlgconsulting.co/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://nlgconsulting.co/it/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nlgconsulting.co/nl/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nlgconsulting.co/pt/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://nlgconsulting.co/pl/privacy-policy"/>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
