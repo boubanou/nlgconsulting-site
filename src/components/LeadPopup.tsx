@@ -128,20 +128,20 @@ export const LeadPopup = () => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
       onClick={handleClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="lead-popup-title"
     >
       <Card
-        className="w-full max-w-md p-6 space-y-4 bg-background shadow-2xl animate-scale-in"
+        className="w-full max-w-md p-4 sm:p-6 space-y-3 sm:space-y-4 bg-background shadow-2xl animate-scale-in max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-start gap-4">
+        <div className="flex justify-between items-start gap-2 sm:gap-4">
         <div className="flex items-center gap-2">
-          <PhoneIcon className="h-6 w-6 text-primary" />
-          <h2 id="lead-popup-title" className="text-xl font-bold">
+          <PhoneIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary shrink-0" />
+          <h2 id="lead-popup-title" className="text-lg sm:text-xl font-bold">
             {t("leadPopup.title")}
           </h2>
         </div>
@@ -150,16 +150,17 @@ export const LeadPopup = () => {
             size="icon"
             onClick={handleClose}
             aria-label={t("leadPopup.close")}
+            className="shrink-0"
           >
-            <X className="h-5 w-5" />
+            <X className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
 
-        <p className="text-sm text-muted-foreground">{t("leadPopup.message")}</p>
+        <p className="text-xs sm:text-sm text-muted-foreground">{t("leadPopup.message")}</p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="popup-name">{t("leadPopup.nameLabel")}</Label>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
+          <div className="space-y-1.5 sm:space-y-2">
+            <Label htmlFor="popup-name" className="text-sm">{t("leadPopup.nameLabel")}</Label>
             <Input
               id="popup-name"
               {...register("name")}
@@ -168,12 +169,12 @@ export const LeadPopup = () => {
               autoFocus
             />
             {errors.name && (
-              <p className="text-sm text-destructive">{errors.name.message}</p>
+              <p className="text-xs sm:text-sm text-destructive">{errors.name.message}</p>
             )}
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="popup-email">{t("leadPopup.emailLabel")}</Label>
+          <div className="space-y-1.5 sm:space-y-2">
+            <Label htmlFor="popup-email" className="text-sm">{t("leadPopup.emailLabel")}</Label>
             <Input
               id="popup-email"
               type="email"
@@ -182,12 +183,12 @@ export const LeadPopup = () => {
               className={errors.email ? "border-destructive" : ""}
             />
             {errors.email && (
-              <p className="text-sm text-destructive">{errors.email.message}</p>
+              <p className="text-xs sm:text-sm text-destructive">{errors.email.message}</p>
             )}
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="popup-phone">{t("leadPopup.phoneLabel")}</Label>
+          <div className="space-y-1.5 sm:space-y-2">
+            <Label htmlFor="popup-phone" className="text-sm">{t("leadPopup.phoneLabel")}</Label>
             <Controller
               name="phone"
               control={control}
@@ -204,15 +205,15 @@ export const LeadPopup = () => {
               )}
             />
             {errors.phone && (
-              <p className="text-sm text-destructive">{errors.phone.message}</p>
+              <p className="text-xs sm:text-sm text-destructive">{errors.phone.message}</p>
             )}
           </div>
 
-          <div className="flex gap-3 pt-2">
-            <Button type="submit" disabled={isSubmitting} className="flex-1">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
+            <Button type="submit" disabled={isSubmitting} className="w-full sm:flex-1 text-sm">
               {isSubmitting ? t("leadPopup.submitting") : t("leadPopup.submitButton")}
             </Button>
-            <Button type="button" variant="outline" onClick={handleClose} className="flex-1">
+            <Button type="button" variant="outline" onClick={handleClose} className="w-full sm:flex-1 text-sm">
               {t("leadPopup.laterButton")}
             </Button>
           </div>

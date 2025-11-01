@@ -198,26 +198,26 @@ const Index = () => {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4">
+        <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+            <div className="text-center space-y-4 sm:space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight px-2">
                 {t("home.hero_title")}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
                 {t("home.hero_subtitle")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button asChild size="lg">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4 px-4">
+                <Button asChild size="lg" className="w-full sm:w-auto">
                   <Link to="/book">
                     {t("home.cta_book")} <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
                   <Link to="/contact">{t("home.cta_consultation")}</Link>
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground pt-4">
+              <p className="text-xs sm:text-sm text-muted-foreground pt-2 sm:pt-4 px-2">
                 {t("home.proof_line")}
               </p>
             </div>
@@ -225,19 +225,19 @@ const Index = () => {
         </section>
 
         {/* How It Works Section */}
-        <section className="py-20 px-4 bg-secondary/5">
+        <section className="py-12 sm:py-20 px-4 bg-secondary/5">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 px-2">
               {t("home.how_it_works_title")}
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
               <Card>
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <span className="text-2xl font-bold text-primary">1</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{t("home.step1_title")}</h3>
-                  <p className="text-muted-foreground">{t("home.step1_desc")}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">{t("home.step1_title")}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{t("home.step1_desc")}</p>
                 </CardContent>
               </Card>
               <Card>
@@ -245,8 +245,8 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <span className="text-2xl font-bold text-primary">2</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{t("home.step2_title")}</h3>
-                  <p className="text-muted-foreground">{t("home.step2_desc")}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">{t("home.step2_title")}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{t("home.step2_desc")}</p>
                 </CardContent>
               </Card>
               <Card>
@@ -254,8 +254,8 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <span className="text-2xl font-bold text-primary">3</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{t("home.step3_title")}</h3>
-                  <p className="text-muted-foreground">{t("home.step3_desc")}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3">{t("home.step3_title")}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{t("home.step3_desc")}</p>
                 </CardContent>
               </Card>
             </div>
@@ -263,26 +263,26 @@ const Index = () => {
         </section>
 
         {/* Trust & Compliance Section */}
-        <section className="py-20 px-4">
+        <section className="py-12 sm:py-20 px-4">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl font-bold text-center mb-12">{t("home.trust_title")}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 px-2">{t("home.trust_title")}</h2>
             
             {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                <Shield className="w-4 h-4 mr-2" />
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2">
+              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t("home.trust_gdpr")}
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                <Globe className="w-4 h-4 mr-2" />
+              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
+                <Globe className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t("home.trust_eu")}
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                <Users className="w-4 h-4 mr-2" />
+              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
+                <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t("home.trust_multichannel")}
               </Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                <TrendingUp className="w-4 h-4 mr-2" />
+              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
+                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                 {t("home.trust_meetings")}
               </Badge>
             </div>

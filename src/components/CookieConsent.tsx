@@ -98,14 +98,14 @@ export const CookieConsent = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center p-4 pointer-events-none">
-      <Card className="w-full max-w-2xl p-6 space-y-4 pointer-events-auto animate-fade-in bg-background/95 backdrop-blur-sm border-2 shadow-xl">
+    <div className="fixed inset-0 z-50 flex items-end justify-center p-2 sm:p-4 pointer-events-none">
+      <Card className="w-full max-w-2xl p-4 sm:p-6 space-y-3 sm:space-y-4 pointer-events-auto animate-fade-in bg-background/95 backdrop-blur-sm border-2 shadow-xl">
         {!showCustomize ? (
           <>
-            <div className="flex justify-between items-start gap-4">
+            <div className="flex justify-between items-start gap-2 sm:gap-4">
               <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2">{t("cookie.title")}</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <h3 className="text-base sm:text-lg font-semibold mb-2">{t("cookie.title")}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
                   {t("cookie.description")}{" "}
                   <Link to="/privacy-policy" className="underline hover:text-primary">
                     {t("cookie.policyLink")}
@@ -117,27 +117,28 @@ export const CookieConsent = () => {
                 size="icon"
                 onClick={handleDecline}
                 aria-label={t("cookie.close")}
+                className="shrink-0"
               >
                 <X className="h-4 w-4" />
               </Button>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <Button onClick={handleAcceptAll} className="flex-1 min-w-[120px]">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <Button onClick={handleAcceptAll} className="w-full sm:flex-1 text-sm">
                 {t("cookie.acceptAll")}
               </Button>
-              <Button onClick={handleDecline} variant="outline" className="flex-1 min-w-[120px]">
+              <Button onClick={handleDecline} variant="outline" className="w-full sm:flex-1 text-sm">
                 {t("cookie.decline")}
               </Button>
-              <Button onClick={handleCustomize} variant="secondary" className="flex-1 min-w-[120px]">
+              <Button onClick={handleCustomize} variant="secondary" className="w-full sm:flex-1 text-sm">
                 {t("cookie.customize")}
               </Button>
             </div>
           </>
         ) : (
           <>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div className="flex justify-between items-start">
-                <h3 className="text-lg font-semibold">{t("cookie.customizeTitle")}</h3>
+                <h3 className="text-base sm:text-lg font-semibold">{t("cookie.customizeTitle")}</h3>
                 <Button
                   variant="ghost"
                   size="icon"
@@ -149,35 +150,35 @@ export const CookieConsent = () => {
               </div>
               
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 border rounded-lg">
-                  <div>
-                    <p className="font-medium">{t("cookie.essential")}</p>
-                    <p className="text-sm text-muted-foreground">{t("cookie.essentialDesc")}</p>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 border rounded-lg gap-2">
+                  <div className="flex-1">
+                    <p className="font-medium text-sm">{t("cookie.essential")}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{t("cookie.essentialDesc")}</p>
                   </div>
-                  <div className="text-sm font-semibold text-primary">{t("cookie.required")}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-primary whitespace-nowrap">{t("cookie.required")}</div>
                 </div>
                 
-                <div className="flex items-center justify-between p-3 border rounded-lg">
-                  <div>
-                    <p className="font-medium">{t("cookie.analytics")}</p>
-                    <p className="text-sm text-muted-foreground">{t("cookie.analyticsDesc")}</p>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 border rounded-lg gap-2">
+                  <div className="flex-1">
+                    <p className="font-medium text-sm">{t("cookie.analytics")}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{t("cookie.analyticsDesc")}</p>
                   </div>
                   <input
                     type="checkbox"
                     checked={analyticsConsent}
                     onChange={(e) => setAnalyticsConsent(e.target.checked)}
-                    className="w-5 h-5 accent-primary cursor-pointer"
+                    className="w-5 h-5 accent-primary cursor-pointer shrink-0"
                     aria-label={t("cookie.analytics")}
                   />
                 </div>
               </div>
             </div>
             
-            <div className="flex gap-3">
-              <Button onClick={handleSaveCustom} className="flex-1">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <Button onClick={handleSaveCustom} className="w-full sm:flex-1 text-sm">
                 {t("cookie.savePreferences")}
               </Button>
-              <Button onClick={() => setShowCustomize(false)} variant="outline" className="flex-1">
+              <Button onClick={() => setShowCustomize(false)} variant="outline" className="w-full sm:flex-1 text-sm">
                 {t("cookie.back")}
               </Button>
             </div>
