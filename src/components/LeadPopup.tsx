@@ -31,7 +31,7 @@ declare global {
 }
 
 export const LeadPopup = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showPopup, setShowPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -92,12 +92,15 @@ export const LeadPopup = () => {
     setIsSubmitting(true);
 
     try {
-      // Send to callbacks edge function
-      const { error } = await supabase.functions.invoke("callbacks", {
+      // Send to leads edge function with urgent flag for callback
+      const { error } = await supabase.functions.invoke("leads", {
         body: {
+          name: data.name,
+          email: data.email,
           phone: data.phone,
-          note: `Name: ${data.name}, Email: ${data.email}`,
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          locale: i18n.language,
+          urgent: true, // Creates callback automatically
+          message: t("leadPopup.message"),
         },
       });
 
