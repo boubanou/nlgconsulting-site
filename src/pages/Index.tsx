@@ -217,7 +217,8 @@ const Index = () => {
               : 'B2B prospecting outsourcing, qualified appointment setting, B2C lead generation, outsourced SDR, appointment setting services, LinkedIn B2B outreach, cold email prospecting, sales pipeline outsourcing, qualified B2B meetings, scale without hiring'
           }
         />
-        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}`} />
+        <link rel="canonical" href="https://nlgconsulting.co/" />
+        <meta name="robots" content="index, follow" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co" />

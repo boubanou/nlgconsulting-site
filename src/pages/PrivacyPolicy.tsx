@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
         <title>{t("privacy.metaTitle")}</title>
         <meta name="description" content={t("privacy.metaDescription")} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang}/privacy-policy`} />
+        <link rel="canonical" href="https://nlgconsulting.co/privacy-policy" />
         
         {locales.map((locale) => (
           <link

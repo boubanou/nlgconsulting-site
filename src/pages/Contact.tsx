@@ -51,7 +51,8 @@ const Contact = () => {
       <Helmet>
         <title>{t("contact.title")} - NLG Consulting</title>
         <meta name="description" content={t("contact.subtitle")} />
-        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/contact`} />
+        <link rel="canonical" href="https://nlgconsulting.co/contact" />
+        <meta name="robots" content="index, follow" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/contact" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/contact" />

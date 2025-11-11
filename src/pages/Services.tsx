@@ -109,7 +109,8 @@ const Services = () => {
       <Helmet>
         <title>{t("services.title")} - NLG Consulting</title>
         <meta name="description" content={t("services.subtitle")} />
-        <link rel="canonical" href={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/services`} />
+        <link rel="canonical" href="https://nlgconsulting.co/services" />
+        <meta name="robots" content="index, follow" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/services" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/services" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/services" />

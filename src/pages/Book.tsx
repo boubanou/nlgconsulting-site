@@ -50,7 +50,8 @@ const Book = () => {
       <Helmet>
         <title>{t("book.title")} - NLG Consulting</title>
         <meta name="description" content={t("book.subtitle")} />
-        <link rel="canonical" href={`https://nlgconsulting.co/${i18n.language === 'fr' ? 'fr' : 'en'}/book`} />
+        <link rel="canonical" href="https://nlgconsulting.co/book" />
+        <meta name="robots" content="index, follow" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/book" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/book" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/book" />
