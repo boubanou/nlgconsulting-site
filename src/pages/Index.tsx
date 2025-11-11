@@ -330,7 +330,7 @@ const Index = () => {
                 { src: "/brands/revolut.png", altKey: "trustedBy.revolut" },
                 { src: "/brands/qonto.png", altKey: "trustedBy.qonto" },
                 { src: "/brands/wise.png", altKey: "trustedBy.wise" },
-                { src: "/brands/doctolib.png", altKey: "trustedBy.doctolib" },
+                { src: "/brands/businesslegend.png", altKey: "trustedBy.businesslegend" },
                 { src: "/brands/alan.png", altKey: "trustedBy.alan" },
                 { src: "/brands/blocktech.png", altKey: "trustedBy.blocktech" },
                 { src: "/brands/nordesk.svg", altKey: "logos.nordesk" },
