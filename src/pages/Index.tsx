@@ -323,15 +323,13 @@ const Index = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-8">
               {[
                 { src: "/brands/hubspot.svg", altKey: "trustedBy.hubspot" },
-                { src: "/brands/notion.svg", altKey: "trustedBy.notion" },
+                { src: "/brands/nordesk.svg", altKey: "logos.nordesk" },
                 { src: "/brands/aircall.svg", altKey: "trustedBy.aircall" },
-                { src: "/brands/deel.svg", altKey: "trustedBy.deel" },
-                { src: "/brands/payfit.svg", altKey: "trustedBy.payfit" },
+                { src: "/brands/helixops.svg", altKey: "logos.helixops" },
+                { src: "/brands/quantify.svg", altKey: "logos.quantify" },
                 { src: "/brands/revolut.svg", altKey: "trustedBy.revolut" },
-                { src: "/brands/qonto.svg", altKey: "trustedBy.qonto" },
+                { src: "/brands/atlasworks.svg", altKey: "logos.atlasworks" },
                 { src: "/brands/wise.svg", altKey: "trustedBy.wise" },
-                { src: "/brands/doctolib.svg", altKey: "trustedBy.doctolib" },
-                { src: "/brands/alan.svg", altKey: "trustedBy.alan" },
               ].map((logo, i) => (
                 <div key={i} className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center hover:shadow-md transition-shadow">
                   <img 
@@ -340,7 +338,7 @@ const Index = () => {
                     loading="lazy" 
                     decoding="async"
                     width="160" 
-                    height="160" 
+                    height="48" 
                     className="w-full h-auto max-w-[120px] object-contain" 
                   />
                 </div>
