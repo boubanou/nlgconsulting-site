@@ -1,0 +1,63 @@
+URL,Type,Statut Avant,Statut Après,Action Appliquée,Notes
+https://nlgconsulting.co/,URL principale,OK,OK,Conservée dans sitemap,Priority 1.0
+https://nlgconsulting.co/services,URL valide,OK,OK,Conservée dans sitemap,Priority 0.9
+https://nlgconsulting.co/about,URL valide,OK,OK,Conservée dans sitemap,Priority 0.8
+https://nlgconsulting.co/contact,URL valide,OK,OK,Conservée dans sitemap,Priority 0.8
+https://nlgconsulting.co/book,URL valide,OK,OK,Conservée dans sitemap,Priority 0.95 - Page de conversion
+https://nlgconsulting.co/privacy-policy,URL valide,OK,OK,Conservée dans sitemap,Priority 0.7
+https://nlgconsulting.co/en,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/fr,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/de,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/es,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/it,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/nl,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pt,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pl,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/en/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/fr/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/de/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/es/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/it/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/nl/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pt/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pl/services,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/en/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/fr/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/de/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/es/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/it/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/nl/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pt/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pl/about,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/en/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/fr/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/de/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/es/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/it/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/nl/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pt/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pl/contact,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/en/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/fr/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/de/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/es/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/it/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/nl/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pt/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pl/book,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/en/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/fr/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/de/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/es/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/it/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/nl/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pt/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+https://nlgconsulting.co/pl/privacy-policy,URL invalide,REDIRECTION vers /,SUPPRIMÉE,Retirée du sitemap,Préfixe langue - n'existe pas dans routing
+
+RÉSUMÉ
+Total URLs dans sitemap AVANT,54
+Total URLs dans sitemap APRÈS,6
+URLs supprimées (invalides),48
+URLs conservées (valides),6
+Redirections éliminées,48
+Impact,"-88% URLs, +100% qualité"
