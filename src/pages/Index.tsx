@@ -356,18 +356,16 @@ const Index = () => {
                   { src: "/brands/etoro.svg", altKey: "trustedBy.etoro" },
                   { src: "/brands/rapyd.svg", altKey: "trustedBy.rapyd" },
                   { src: "/brands/linkedin.svg", altKey: "trustedBy.linkedin" },
-                ].map((logo, i) => (
+                 ].map((logo, i) => (
                   <CarouselItem key={i} className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                     <div className="group">
-                      <div className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 group-hover:bg-white dark:group-hover:bg-white/10">
+                      <div className="rounded-2xl border bg-white/50 dark:bg-white/5 p-8 flex items-center justify-center h-28 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 group-hover:bg-white dark:group-hover:bg-white/10">
                         <img 
                           src={logo.src} 
                           alt={t(logo.altKey)} 
                           loading="lazy" 
                           decoding="async"
-                          width="160" 
-                          height="48" 
-                          className="w-full h-auto max-w-[120px] object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                          className="h-10 w-auto max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
                         />
                       </div>
                     </div>
