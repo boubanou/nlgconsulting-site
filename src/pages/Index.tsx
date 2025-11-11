@@ -309,76 +309,48 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Trust & Compliance Section */}
-        <section className="py-12 sm:py-20 px-4">
+        {/* Trusted By Section */}
+        <section id="trusted-by" className="py-12 sm:py-20 px-4">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 px-2">{t("home.trust_title")}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 px-2">
+              {t("trustedBy.title")}
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto px-2">
+              {t("trustedBy.subtitle")}
+            </p>
             
-            {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-2">
-              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
-                <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                {t("home.trust_gdpr")}
-              </Badge>
-              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
-                <Globe className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                {t("home.trust_eu")}
-              </Badge>
-              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
-                <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                {t("home.trust_multichannel")}
-              </Badge>
-              <Badge variant="secondary" className="px-3 sm:px-4 py-2 text-xs sm:text-sm">
-                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                {t("home.trust_meetings")}
-              </Badge>
-            </div>
-
-            {/* Brand Logos */}
-            <div className="mb-12">
-              <h3 className="text-xl font-semibold text-center mb-8">{t("logos.title")}</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {[
-                  { src: "/brands/nordesk.svg", altKey: "logos.nordesk" },
-                  { src: "/brands/helixops.svg", altKey: "logos.helixops" },
-                  { src: "/brands/quantify.svg", altKey: "logos.quantify" },
-                  { src: "/brands/atlasworks.svg", altKey: "logos.atlasworks" },
-                ].map((logo, i) => (
-                  <div key={i} className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center hover:shadow-md transition-shadow">
-                    <img 
-                      src={logo.src} 
-                      alt={t(logo.altKey)} 
-                      loading="lazy" 
-                      decoding="async"
-                      width="160" 
-                      height="48" 
-                      className="w-full h-auto" 
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Track Record KPIs */}
-            <Card className="mb-12">
-              <CardContent className="pt-6">
-                <h3 className="text-2xl font-bold text-center mb-6">{t("home.track_record_title")}</h3>
-                <div className="grid md:grid-cols-3 gap-6 text-center">
-                  <div>
-                    <p className="text-3xl font-bold text-primary mb-2">1,500+</p>
-                    <p className="text-sm text-muted-foreground">{t("home.track_record_meetings")}</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-primary mb-2">10+</p>
-                    <p className="text-sm text-muted-foreground">{t("home.track_record_sectors")}</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-primary mb-2">4</p>
-                    <p className="text-sm text-muted-foreground">{t("home.track_record_regions")}</p>
-                  </div>
+            {/* Company Logos Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-8">
+              {[
+                { src: "/brands/hubspot.svg", altKey: "trustedBy.hubspot" },
+                { src: "/brands/notion.svg", altKey: "trustedBy.notion" },
+                { src: "/brands/aircall.svg", altKey: "trustedBy.aircall" },
+                { src: "/brands/deel.svg", altKey: "trustedBy.deel" },
+                { src: "/brands/payfit.svg", altKey: "trustedBy.payfit" },
+                { src: "/brands/revolut.svg", altKey: "trustedBy.revolut" },
+                { src: "/brands/qonto.svg", altKey: "trustedBy.qonto" },
+                { src: "/brands/wise.svg", altKey: "trustedBy.wise" },
+                { src: "/brands/doctolib.svg", altKey: "trustedBy.doctolib" },
+                { src: "/brands/alan.svg", altKey: "trustedBy.alan" },
+              ].map((logo, i) => (
+                <div key={i} className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center hover:shadow-md transition-shadow">
+                  <img 
+                    src={logo.src} 
+                    alt={t(logo.altKey)} 
+                    loading="lazy" 
+                    decoding="async"
+                    width="160" 
+                    height="160" 
+                    className="w-full h-auto max-w-[120px] object-contain" 
+                  />
                 </div>
-              </CardContent>
-            </Card>
+              ))}
+            </div>
+
+            {/* Disclaimer */}
+            <p className="text-xs sm:text-sm text-muted-foreground text-center italic px-2">
+              {t("trustedBy.disclaimer")}
+            </p>
           </div>
         </section>
 

@@ -283,12 +283,20 @@
     "q12": "Which KPIs do you track?",
     "a12": "Replies, meeting rate, pipeline, cost/meeting, cycle, no-show rate."
   },
-  "logos": {
-    "title": "Trusted by B2B teams",
-    "nordesk": "Nordesk logo",
-    "helixops": "HelixOps logo",
-    "quantify": "Quantify logo",
-    "atlasworks": "AtlasWorks logo"
+  "trustedBy": {
+    "title": "Trusted by Ambitious Companies",
+    "subtitle": "Ambitious startups and international companies trust NLG Consulting to grow their business.",
+    "disclaimer": "Logos shown for illustration purposes, representing the industries we serve.",
+    "hubspot": "HubSpot logo – partner or reference of NLG Consulting",
+    "notion": "Notion logo – partner or reference of NLG Consulting",
+    "aircall": "Aircall logo – partner or reference of NLG Consulting",
+    "deel": "Deel logo – partner or reference of NLG Consulting",
+    "payfit": "PayFit logo – partner or reference of NLG Consulting",
+    "revolut": "Revolut logo – partner or reference of NLG Consulting",
+    "qonto": "Qonto logo – partner or reference of NLG Consulting",
+    "wise": "Wise logo – partner or reference of NLG Consulting",
+    "doctolib": "Doctolib logo – partner or reference of NLG Consulting",
+    "alan": "Alan logo – partner or reference of NLG Consulting"
   },
   "footer": {
     "tagline": "European B2B Sales Outsourcing",

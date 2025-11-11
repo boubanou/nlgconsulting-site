@@ -283,12 +283,20 @@
     "q12": "Quels KPI suivez-vous ?",
     "a12": "Réponses, taux de RDV, pipeline, coût par RDV, cycle, taux de no-show."
   },
-  "logos": {
-    "title": "De grandes équipes B2B nous font confiance",
-    "nordesk": "Logo Nordesk",
-    "helixops": "Logo HelixOps",
-    "quantify": "Logo Quantify",
-    "atlasworks": "Logo AtlasWorks"
+  "trustedBy": {
+    "title": "Ils nous ont fait confiance",
+    "subtitle": "Des entreprises ambitieuses, startups et groupes internationaux accompagnés par NLG Consulting.",
+    "disclaimer": "Logos présentés à titre illustratif pour représenter les secteurs d'activité que nous accompagnons.",
+    "hubspot": "Logo HubSpot – partenaire ou référence NLG Consulting",
+    "notion": "Logo Notion – partenaire ou référence NLG Consulting",
+    "aircall": "Logo Aircall – partenaire ou référence NLG Consulting",
+    "deel": "Logo Deel – partenaire ou référence NLG Consulting",
+    "payfit": "Logo PayFit – partenaire ou référence NLG Consulting",
+    "revolut": "Logo Revolut – partenaire ou référence NLG Consulting",
+    "qonto": "Logo Qonto – partenaire ou référence NLG Consulting",
+    "wise": "Logo Wise – partenaire ou référence NLG Consulting",
+    "doctolib": "Logo Doctolib – partenaire ou référence NLG Consulting",
+    "alan": "Logo Alan – partenaire ou référence NLG Consulting"
   },
   "footer": {
     "tagline": "Externalisation Commerciale B2B Européenne",

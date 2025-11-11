@@ -208,6 +208,21 @@
     "quantify": "Quantify Logo",
     "atlasworks": "AtlasWorks Logo"
   },
+  "trustedBy": {
+    "title": "Sie vertrauen uns",
+    "subtitle": "Ehrgeizige Startups und internationale Unternehmen vertrauen NLG Consulting, um ihr Geschäft auszubauen.",
+    "disclaimer": "Logos zu Illustrationszwecken gezeigt, die die Branchen repräsentieren, die wir bedienen.",
+    "hubspot": "HubSpot Logo – Partner oder Referenz von NLG Consulting",
+    "notion": "Notion Logo – Partner oder Referenz von NLG Consulting",
+    "aircall": "Aircall Logo – Partner oder Referenz von NLG Consulting",
+    "deel": "Deel Logo – Partner oder Referenz von NLG Consulting",
+    "payfit": "PayFit Logo – Partner oder Referenz von NLG Consulting",
+    "revolut": "Revolut Logo – Partner oder Referenz von NLG Consulting",
+    "qonto": "Qonto Logo – Partner oder Referenz von NLG Consulting",
+    "wise": "Wise Logo – Partner oder Referenz von NLG Consulting",
+    "doctolib": "Doctolib Logo – Partner oder Referenz von NLG Consulting",
+    "alan": "Alan Logo – Partner oder Referenz von NLG Consulting"
+  },
   "footer": {
     "tagline": "Europäisches B2B-Vertriebsoutsourcing",
     "privacy": "Datenschutzerklärung",

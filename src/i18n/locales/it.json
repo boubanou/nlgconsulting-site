@@ -8,6 +8,21 @@
   "book": {"title": "Prenota la tua consulenza gratuita", "subtitle": "Programma una chiamata di 15 minuti per discutere come possiamo aiutarti a generare riunioni B2B qualificate"},
   "auth": {"title": "Accesso amministratore", "email": "Email", "password": "Password", "login": "Accedi", "logging_in": "Accesso in corso...", "login_success": "Accesso riuscito", "login_error": "Credenziali non valide"},
   "admin": {"title": "Dashboard amministratore", "leads_title": "Lead", "meetings_title": "Riunioni", "callbacks_title": "Richiamate", "status_new": "Nuovo", "status_in_review": "In revisione", "status_qualified": "Qualificato", "status_lost": "Perso", "status_won": "Vinto", "priority_normal": "Normale", "priority_high": "Alta", "callback_new": "Nuovo", "callback_attempted": "Tentato", "callback_reached": "Raggiunto", "callback_closed": "Chiuso", "export_csv": "Esporta CSV", "no_data": "Nessun dato disponibile"},
+  "trustedBy": {
+    "title": "Si fidano di noi aziende ambiziose",
+    "subtitle": "Startup ambiziose e aziende internazionali si affidano a NLG Consulting per far crescere il proprio business.",
+    "disclaimer": "Loghi mostrati a scopo illustrativo, rappresentano i settori che serviamo.",
+    "hubspot": "Logo HubSpot – partner o riferimento di NLG Consulting",
+    "notion": "Logo Notion – partner o riferimento di NLG Consulting",
+    "aircall": "Logo Aircall – partner o riferimento di NLG Consulting",
+    "deel": "Logo Deel – partner o riferimento di NLG Consulting",
+    "payfit": "Logo PayFit – partner o riferimento di NLG Consulting",
+    "revolut": "Logo Revolut – partner o riferimento di NLG Consulting",
+    "qonto": "Logo Qonto – partner o riferimento di NLG Consulting",
+    "wise": "Logo Wise – partner o riferimento di NLG Consulting",
+    "doctolib": "Logo Doctolib – partner o riferimento di NLG Consulting",
+    "alan": "Logo Alan – partner o riferimento di NLG Consulting"
+  },
   "footer": {"tagline": "Outsourcing vendite B2B europeo", "privacy": "Informativa sulla privacy", "terms": "Termini di servizio", "rights": "Tutti i diritti riservati."},
   "cookie": {
     "title": "🍪 Utilizziamo i cookie",
