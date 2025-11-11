@@ -7,6 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Shield, Globe, Users, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -319,35 +325,56 @@ const Index = () => {
               {t("trustedBy.subtitle")}
             </p>
             
-            {/* Company Logos Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-8">
-              {[
-                { src: "/brands/hubspot.png", altKey: "trustedBy.hubspot" },
-                { src: "/brands/notion.png", altKey: "trustedBy.notion" },
-                { src: "/brands/aircall.png", altKey: "trustedBy.aircall" },
-                { src: "/brands/deel.png", altKey: "trustedBy.deel" },
-                { src: "/brands/payfit.png", altKey: "trustedBy.payfit" },
-                { src: "/brands/revolut.png", altKey: "trustedBy.revolut" },
-                { src: "/brands/qonto.png", altKey: "trustedBy.qonto" },
-                { src: "/brands/wise.png", altKey: "trustedBy.wise" },
-                { src: "/brands/businesslegend.png", altKey: "trustedBy.businesslegend" },
-                { src: "/brands/alan.png", altKey: "trustedBy.alan" },
-                { src: "/brands/blocktech.png", altKey: "trustedBy.blocktech" },
-                { src: "/brands/nordesk.svg", altKey: "logos.nordesk" },
-              ].map((logo, i) => (
-                <div key={i} className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center hover:shadow-md transition-shadow">
-                  <img 
-                    src={logo.src} 
-                    alt={t(logo.altKey)} 
-                    loading="lazy" 
-                    decoding="async"
-                    width="160" 
-                    height="48" 
-                    className="w-full h-auto max-w-[120px] object-contain" 
-                  />
-                </div>
-              ))}
-            </div>
+            {/* Company Logos Carousel */}
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                  stopOnInteraction: true,
+                }),
+              ]}
+              className="w-full mb-8"
+            >
+              <CarouselContent className="-ml-4">
+                {[
+                  { src: "/brands/hubspot.png", altKey: "trustedBy.hubspot" },
+                  { src: "/brands/notion.png", altKey: "trustedBy.notion" },
+                  { src: "/brands/aircall.png", altKey: "trustedBy.aircall" },
+                  { src: "/brands/deel.png", altKey: "trustedBy.deel" },
+                  { src: "/brands/payfit.png", altKey: "trustedBy.payfit" },
+                  { src: "/brands/revolut.png", altKey: "trustedBy.revolut" },
+                  { src: "/brands/qonto.png", altKey: "trustedBy.qonto" },
+                  { src: "/brands/wise.png", altKey: "trustedBy.wise" },
+                  { src: "/brands/businesslegend.png", altKey: "trustedBy.businesslegend" },
+                  { src: "/brands/alan.png", altKey: "trustedBy.alan" },
+                  { src: "/brands/blocktech.png", altKey: "trustedBy.blocktech" },
+                  { src: "/brands/nordesk.svg", altKey: "logos.nordesk" },
+                  { src: "/brands/etoro.svg", altKey: "trustedBy.etoro" },
+                  { src: "/brands/rapyd.svg", altKey: "trustedBy.rapyd" },
+                  { src: "/brands/linkedin.svg", altKey: "trustedBy.linkedin" },
+                ].map((logo, i) => (
+                  <CarouselItem key={i} className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                    <div className="group">
+                      <div className="rounded-2xl border bg-white/50 dark:bg-white/5 p-6 flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 group-hover:bg-white dark:group-hover:bg-white/10">
+                        <img 
+                          src={logo.src} 
+                          alt={t(logo.altKey)} 
+                          loading="lazy" 
+                          decoding="async"
+                          width="160" 
+                          height="48" 
+                          className="w-full h-auto max-w-[120px] object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
 
             {/* Disclaimer */}
             <p className="text-xs sm:text-sm text-muted-foreground text-center italic px-2">
