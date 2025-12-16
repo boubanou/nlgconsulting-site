@@ -23,6 +23,11 @@ const AdminUsers = lazy(() => import("./pages/AdminUsers"));
 const AccessDenied = lazy(() => import("./pages/AccessDenied"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Web Landing Pages (web.nlgconsulting.co)
+const WebLanding = lazy(() => import("./pages/WebLanding"));
+const WebTerms = lazy(() => import("./pages/WebTerms"));
+const WebThankYou = lazy(() => import("./pages/WebThankYou"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -62,6 +67,12 @@ const App = () => (
           <Route path="/admin/meetings" element={<AdminMeetings />} />
           <Route path="/admin/callbacks" element={<AdminCallbacks />} />
           <Route path="/admin/users" element={<AdminUsers />} />
+          
+          {/* Web Landing Pages (web.nlgconsulting.co) */}
+          <Route path="/web" element={<WebLanding />} />
+          <Route path="/web/terms" element={<WebTerms />} />
+          <Route path="/web/thank-you" element={<WebThankYou />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
