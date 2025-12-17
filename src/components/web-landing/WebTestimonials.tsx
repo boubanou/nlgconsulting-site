@@ -8,6 +8,7 @@ const WebTestimonials = () => {
       content: "Site livré très rapidement, travail sérieux et efficace. Paiement simple et sécurisé.",
       rating: 5,
       highlight: "Très rapidement",
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
     },
     {
       name: "Thomas R.",
@@ -15,6 +16,7 @@ const WebTestimonials = () => {
       content: "Une équipe professionnelle et réactive. Le site était en ligne en moins de 48h.",
       rating: 5,
       highlight: "Moins de 48h",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
     },
     {
       name: "Marie L.",
@@ -22,6 +24,7 @@ const WebTestimonials = () => {
       content: "Rarement vu une telle rapidité avec un tel niveau de qualité. Code source fourni, tout est clair.",
       rating: 5,
       highlight: "Qualité exceptionnelle",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
     },
     {
       name: "Pierre D.",
@@ -29,6 +32,7 @@ const WebTestimonials = () => {
       content: "Process transparent du début à la fin. Le site correspond exactement à mes attentes.",
       rating: 5,
       highlight: "Process transparent",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
     },
   ];
 
@@ -39,7 +43,7 @@ const WebTestimonials = () => {
       <div className="absolute top-20 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
+        <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Star className="w-4 h-4 fill-secondary text-secondary" />
             <span>Avis vérifiés</span>
@@ -47,17 +51,16 @@ const WebTestimonials = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Avis clients
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Ils nous ont fait confiance pour la création de leur site internet
+          <p className="text-base md:text-lg text-muted-foreground">
+            Ils nous ont fait confiance pour la création de leur site internet professionnel
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <article 
               key={index} 
-              className="relative bg-card border border-border rounded-2xl p-6 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="relative bg-card border border-border rounded-2xl p-5 md:p-6 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
             >
               {/* Quote icon */}
               <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-lg">
@@ -71,29 +74,41 @@ const WebTestimonials = () => {
 
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
+                  <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-secondary text-secondary" />
                 ))}
               </div>
               
-              <p className="text-foreground mb-6 text-sm leading-relaxed">
+              <p className="text-foreground mb-5 text-sm leading-relaxed">
                 "{testimonial.content}"
               </p>
               
-              <div className="pt-4 border-t border-border">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-              </div>
-            </div>
+              <footer className="pt-4 border-t border-border flex items-center gap-3">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={`Photo de ${testimonial.name}`}
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-primary/20"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="font-semibold text-foreground text-sm md:text-base">{testimonial.name}</p>
+                  <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                </div>
+              </footer>
+            </article>
           ))}
         </div>
 
         {/* Trust indicator */}
         <div className="flex items-center justify-center gap-2 mt-10 text-muted-foreground">
           <div className="flex -space-x-2">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-background flex items-center justify-center text-xs text-primary-foreground font-bold">
-                {["S", "T", "M", "P"][i]}
-              </div>
+            {testimonials.map((t, i) => (
+              <img 
+                key={i} 
+                src={t.avatar} 
+                alt=""
+                className="w-8 h-8 rounded-full border-2 border-background object-cover"
+                loading="lazy"
+              />
             ))}
           </div>
           <span className="text-sm ml-2">+ de 50 clients satisfaits</span>

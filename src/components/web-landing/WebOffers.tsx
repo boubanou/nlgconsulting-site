@@ -1,4 +1,4 @@
-import { Check, Calendar, ExternalLink, Sparkles, Zap } from "lucide-react";
+import { Check, Calendar, ExternalLink, Sparkles, Zap, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WebOffers = () => {
@@ -13,10 +13,10 @@ const WebOffers = () => {
         "Site internet 3 à 4 pages",
         "Formulaire de contact intégré",
         "Structure SEO optimisée",
-        "Meta title et meta description uniques par page",
+        "Meta title et meta description",
         "Indexation Google",
-        "Paramétrage du domaine et des DNS",
-        "Code source fourni à la livraison",
+        "Paramétrage domaine et DNS",
+        "Code source fourni",
       ],
       cta: "Valider l'acompte – Pack Starter",
       link: "https://payment.fractionalpropertyhub.com/b/3cI7sMcTrdbOgDWeI31ck03",
@@ -36,7 +36,7 @@ const WebOffers = () => {
         "SEO avancé + meta tags",
         "Indexation Google",
         "Paramétrage domaine et DNS",
-        "Code source fourni à la livraison",
+        "Code source fourni",
       ],
       cta: "Valider l'acompte – Pack Intermédiaire",
       link: "https://payment.fractionalpropertyhub.com/b/14AaEY06FdbObjCgQb1ck04",
@@ -50,11 +50,14 @@ const WebOffers = () => {
       deposit: null,
       deliveryTime: "Selon projet",
       features: [
-        "E-commerce",
+        "E-commerce complet",
         "Développement sur mesure",
-        "Applications et logiciels",
+        "Applications web & logiciels",
         "Automatisations avancées",
+        "Intégrations API tierces",
+        "Support technique dédié",
       ],
+      description: "Pour les projets complexes nécessitant une approche personnalisée. Discutons de vos besoins spécifiques lors d'un appel découverte gratuit.",
       cta: "Prendre rendez-vous",
       link: "https://calendly.com/greg-nlgconsulting/15min",
       popular: false,
@@ -71,7 +74,7 @@ const WebOffers = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
+        <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Zap className="w-4 h-4 text-secondary" />
             <span>Offres exclusives</span>
@@ -79,24 +82,24 @@ const WebOffers = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Des sites performants, optimisés pour Google
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Choisissez l'offre adaptée à vos besoins. Paiement sécurisé, livraison rapide, code source fourni.
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {offers.map((offer, index) => (
             <div 
               key={index} 
-              className={`relative bg-card border rounded-2xl p-6 lg:p-8 transition-all duration-500 hover:shadow-2xl group ${
+              className={`relative bg-card border rounded-2xl p-5 md:p-6 lg:p-8 transition-all duration-500 hover:shadow-2xl group flex flex-col ${
                 offer.popular 
-                  ? "border-primary shadow-xl shadow-primary/10 scale-105 z-10" 
-                  : "border-border hover:border-primary/30 hover:-translate-y-2"
+                  ? "border-primary shadow-xl shadow-primary/10 md:scale-105 z-20" 
+                  : "border-border hover:border-primary/30 hover:-translate-y-2 z-10"
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
+              {/* Popular badge - Fixed z-index and positioning */}
               {offer.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-sm font-semibold px-4 py-1.5 rounded-full shadow-lg flex items-center gap-2">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-30 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-sm font-bold px-5 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
                   <Sparkles className="w-4 h-4" />
                   Populaire
                 </div>
@@ -105,15 +108,15 @@ const WebOffers = () => {
               {/* Header gradient bar */}
               <div className={`absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-gradient-to-r ${offer.gradient}`} />
 
-              <div className="text-center mb-6 pt-2">
-                <h3 className="text-xl font-bold text-foreground mb-3">{offer.name}</h3>
+              <div className="text-center mb-5 md:mb-6 pt-2">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">{offer.name}</h3>
                 
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <span className={`text-4xl font-bold ${offer.popular ? "text-primary" : "text-foreground"}`}>
+                  <span className={`text-3xl md:text-4xl font-bold ${offer.popular ? "text-primary" : "text-foreground"}`}>
                     {offer.price}
                   </span>
                   {offer.originalPrice && (
-                    <span className="text-lg text-muted-foreground line-through">{offer.originalPrice}</span>
+                    <span className="text-base md:text-lg text-muted-foreground line-through">{offer.originalPrice}</span>
                   )}
                 </div>
                 
@@ -133,41 +136,57 @@ const WebOffers = () => {
                 </p>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              {/* Custom description for Pack Pro */}
+              {offer.description && (
+                <p className="text-sm text-muted-foreground text-center mb-4 px-2 leading-relaxed">
+                  {offer.description}
+                </p>
+              )}
+
+              <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
                 {offer.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  <li key={idx} className="flex items-start gap-2 md:gap-3 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                     <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
                       offer.popular ? "bg-primary/10" : "bg-muted"
                     }`}>
                       <Check className={`w-3 h-3 ${offer.popular ? "text-primary" : "text-foreground"}`} />
                     </div>
-                    {feature}
+                    <span className="leading-snug">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <Button 
-                className={`w-full gap-2 transition-all duration-300 ${
-                  offer.popular 
-                    ? "bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-xl" 
-                    : ""
-                }`}
-                variant={offer.popular ? "default" : "outline"}
-                size="lg"
-                onClick={() => window.open(offer.link, "_blank")}
-              >
-                {offer.isCustom ? <Calendar className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
-                {offer.cta}
-              </Button>
+              <div className="mt-auto">
+                <Button 
+                  className={`w-full gap-2 transition-all duration-300 ${
+                    offer.popular 
+                      ? "bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-xl" 
+                      : ""
+                  }`}
+                  variant={offer.popular ? "default" : "outline"}
+                  size="lg"
+                  onClick={() => window.open(offer.link, "_blank")}
+                >
+                  {offer.isCustom ? <Calendar className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
+                  <span className="text-sm md:text-base">{offer.cta}</span>
+                </Button>
 
-              {!offer.isCustom && (
-                <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-green-500" />
-                  Paiement sécurisé
-                  <span className="w-1 h-1 rounded-full bg-green-500" />
-                  Facture incluse
-                </p>
-              )}
+                {!offer.isCustom && (
+                  <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-2">
+                    <span className="w-1 h-1 rounded-full bg-green-500" />
+                    Paiement sécurisé
+                    <span className="w-1 h-1 rounded-full bg-green-500" />
+                    Facture incluse
+                  </p>
+                )}
+
+                {offer.isCustom && (
+                  <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-2">
+                    <Briefcase className="w-3 h-3" />
+                    Appel découverte gratuit de 15 min
+                  </p>
+                )}
+              </div>
             </div>
           ))}
         </div>

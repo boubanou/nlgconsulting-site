@@ -41,16 +41,15 @@ const WebHeader = () => {
         ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border" 
         : "bg-transparent"
     }`}>
-      <div className="container mx-auto px-4">
+      <nav className="container mx-auto px-4" aria-label="Navigation principale">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/web" className="flex items-center gap-2 group">
-            <img src="/logo.svg" alt="NLG Consulting" className="h-8 w-auto group-hover:scale-105 transition-transform" />
-            <span className="font-bold text-foreground hidden sm:inline">NLG Consulting</span>
+          {/* Logo only - removed redundant text */}
+          <Link to="/web" className="flex items-center group" aria-label="NLG Consulting - Accueil">
+            <img src="/logo.svg" alt="NLG Consulting" className="h-10 w-auto group-hover:scale-105 transition-transform" />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               link.external ? (
                 <a
@@ -72,7 +71,7 @@ const WebHeader = () => {
                 </button>
               )
             ))}
-          </nav>
+          </div>
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
@@ -98,7 +97,8 @@ const WebHeader = () => {
           <button
             className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Menu"
+            aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -107,7 +107,7 @@ const WebHeader = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
-            <nav className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 link.external ? (
                   <a
@@ -151,10 +151,10 @@ const WebHeader = () => {
                   Valider l'acompte
                 </Button>
               </div>
-            </nav>
+            </div>
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
 };

@@ -1,13 +1,14 @@
-import { Shield, Lock, Code, Zap, CheckCircle, ArrowRight, Sparkles } from "lucide-react";
+import { Shield, Lock, Code, Zap, CheckCircle, ArrowRight, Sparkles, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WebHero = () => {
   const reassurancePoints = [
     { icon: Shield, text: "Paiement sécurisé par Stripe" },
-    { icon: Lock, text: "Connexion HTTPS & certificats SSL" },
-    { icon: Code, text: "Code source du site fourni systématiquement" },
-    { icon: CheckCircle, text: "Aucun abonnement, aucun engagement caché" },
-    { icon: Zap, text: "Livraison rapide (souvent en moins de 7 jours, parfois 48h)" },
+    { icon: Lock, text: "Connexion HTTPS & SSL" },
+    { icon: Code, text: "Code source fourni" },
+    { icon: CheckCircle, text: "Aucun abonnement caché" },
+    { icon: Zap, text: "Livraison en 48h à 7 jours" },
+    { icon: Search, text: "SEO optimisé Google" },
   ];
 
   const scrollToOffers = () => {
@@ -34,7 +35,7 @@ const WebHero = () => {
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Votre site internet professionnel,{" "}
-            <span className="text-gradient bg-gradient-to-r from-primary to-primary/70">rapide, sécurisé</span>{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">rapide, sécurisé</span>{" "}
             et clé en main
           </h1>
           
@@ -43,18 +44,18 @@ const WebHero = () => {
             pensés pour générer des clients, avec un paiement en ligne 100 % sécurisé.
           </p>
 
-          {/* Reassurance Points */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
+          {/* Reassurance Points - 6 items in 2x3 grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 mb-10 max-w-3xl mx-auto">
             {reassurancePoints.map((point, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-4 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 animate-fade-in group"
+                className="flex items-center gap-2 md:gap-3 bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl p-3 md:p-4 text-left shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 animate-fade-in group"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <point.icon className="w-5 h-5 text-primary-foreground" />
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <point.icon className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
                 </div>
-                <span className="text-sm text-foreground font-medium">{point.text}</span>
+                <span className="text-xs md:text-sm text-foreground font-medium leading-tight">{point.text}</span>
               </div>
             ))}
           </div>
@@ -80,14 +81,14 @@ const WebHero = () => {
           </div>
 
           {/* Micro-copy */}
-          <div className="flex items-center justify-center gap-4 mt-6 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: "0.9s" }}>
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-6 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: "0.9s" }}>
             <span className="flex items-center gap-1">
               <Shield className="w-4 h-4 text-primary" />
               Paiement sécurisé
             </span>
-            <span className="w-1 h-1 rounded-full bg-muted-foreground" />
+            <span className="w-1 h-1 rounded-full bg-muted-foreground hidden sm:block" />
             <span>Facture incluse</span>
-            <span className="w-1 h-1 rounded-full bg-muted-foreground" />
+            <span className="w-1 h-1 rounded-full bg-muted-foreground hidden sm:block" />
             <span>Code source fourni</span>
           </div>
         </div>
