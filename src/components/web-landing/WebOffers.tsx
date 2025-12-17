@@ -158,7 +158,7 @@ const WebOffers = () => {
 
               <div className="mt-auto">
                 <Button 
-                  className={`w-full gap-2 transition-all duration-300 ${
+                  className={`w-full gap-2 transition-all duration-300 h-auto min-h-[44px] py-3 px-4 whitespace-normal leading-snug ${
                     offer.popular 
                       ? "bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-xl" 
                       : ""
@@ -167,8 +167,8 @@ const WebOffers = () => {
                   size="lg"
                   onClick={() => window.open(offer.link, "_blank")}
                 >
-                  {offer.isCustom ? <Calendar className="w-4 h-4" /> : <ExternalLink className="w-4 h-4" />}
-                  <span className="text-sm md:text-base">{offer.cta}</span>
+                  {offer.isCustom ? <Calendar className="w-4 h-4 flex-shrink-0" /> : <ExternalLink className="w-4 h-4 flex-shrink-0" />}
+                  <span className="text-sm md:text-base text-center">{offer.cta}</span>
                 </Button>
 
                 {!offer.isCustom && (

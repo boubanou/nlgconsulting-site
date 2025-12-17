@@ -64,11 +64,13 @@ const WebHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.8s" }}>
             <Button 
               size="lg" 
-              className="w-full sm:w-auto text-base px-8 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 group"
+              className="w-full sm:w-auto text-sm sm:text-base px-4 sm:px-8 h-auto min-h-[48px] py-3 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 group whitespace-normal text-center leading-snug"
               onClick={scrollToOffers}
             >
-              Valider l'acompte (50 % – paiement sécurisé)
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <span className="flex items-center justify-center gap-2">
+                Valider l'acompte (50 % – paiement sécurisé)
+                <ArrowRight className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Button>
             <Button 
               variant="outline" 
