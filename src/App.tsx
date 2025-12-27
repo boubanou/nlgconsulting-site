@@ -8,10 +8,12 @@ import { CookieConsent } from "./components/CookieConsent";
 import { LeadPopup } from "./components/LeadPopup";
 
 // Lazy load pages for code splitting and better performance
-const Index = lazy(() => import("./pages/Index"));
-const Services = lazy(() => import("./pages/Services"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
+const Home = lazy(() => import("./pages/Home"));
+const AboutNLG = lazy(() => import("./pages/AboutNLG"));
+const Ventures = lazy(() => import("./pages/Ventures"));
+const Sales = lazy(() => import("./pages/Sales"));
+const Advisory = lazy(() => import("./pages/Advisory"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 const Book = lazy(() => import("./pages/Book"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Auth = lazy(() => import("./pages/Auth"));
@@ -23,7 +25,7 @@ const AdminUsers = lazy(() => import("./pages/AdminUsers"));
 const AccessDenied = lazy(() => import("./pages/AccessDenied"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Web Landing Pages (web.nlgconsulting.co)
+// Web Landing Pages (Studio)
 const WebLanding = lazy(() => import("./pages/WebLanding"));
 const WebTerms = lazy(() => import("./pages/WebTerms"));
 const WebThankYou = lazy(() => import("./pages/WebThankYou"));
@@ -54,10 +56,12 @@ const App = () => (
       <ScrollToTop />
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutNLG />} />
+          <Route path="/ventures" element={<Ventures />} />
+          <Route path="/sales" element={<Sales />} />
+          <Route path="/advisory" element={<Advisory />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/book" element={<Book />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/auth" element={<Auth />} />
