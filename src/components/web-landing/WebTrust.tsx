@@ -2,20 +2,20 @@ import { Shield, Lock, CreditCard, FileText, Users, ClipboardCheck, CheckCircle 
 
 const WebTrust = () => {
   const trustPoints = [
-    { icon: CreditCard, text: "Paiement traité exclusivement par Stripe (leader mondial du paiement en ligne)" },
-    { icon: Lock, text: "Données bancaires cryptées (normes PCI-DSS)" },
-    { icon: Shield, text: "Connexion sécurisée HTTPS / SSL" },
-    { icon: Shield, text: "Aucune donnée bancaire stockée sur nos serveurs" },
-    { icon: FileText, text: "Facture automatique fournie après paiement" },
-    { icon: Users, text: "Entreprise identifiable et joignable à tout moment" },
-    { icon: ClipboardCheck, text: "Process clair : acompte pour démarrer, solde à la livraison" },
+    { icon: CreditCard, text: "Payment processed exclusively by Stripe (world leader in online payments)" },
+    { icon: Lock, text: "Encrypted banking data (PCI-DSS standards)" },
+    { icon: Shield, text: "Secure HTTPS / SSL connection" },
+    { icon: Shield, text: "No banking data stored on our servers" },
+    { icon: FileText, text: "Automatic invoice provided after payment" },
+    { icon: Users, text: "Identifiable company, reachable at any time" },
+    { icon: ClipboardCheck, text: "Clear process: deposit to start, balance upon delivery" },
   ];
 
   const badges = [
-    { icon: CreditCard, label: "Stripe", sublabel: "Paiement sécurisé" },
-    { icon: Lock, label: "SSL / HTTPS", sublabel: "Connexion cryptée" },
-    { icon: Shield, label: "PCI-DSS", sublabel: "Norme bancaire" },
-    { icon: CheckCircle, label: "100%", sublabel: "Sécurisé" },
+    { icon: CreditCard, label: "Stripe", sublabel: "Secure payment" },
+    { icon: Lock, label: "SSL / HTTPS", sublabel: "Encrypted connection" },
+    { icon: Shield, label: "PCI-DSS", sublabel: "Banking standard" },
+    { icon: CheckCircle, label: "100%", sublabel: "Secure" },
   ];
 
   return (
@@ -29,13 +29,13 @@ const WebTrust = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Shield className="w-4 h-4" />
-              <span>Sécurité maximale</span>
+              <span>Maximum Security</span>
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Paiement en ligne 100 % sécurisé
+              100% Secure Online Payment
             </h2>
             <p className="text-lg text-muted-foreground">
-              Paiement sécurisé, équipe sérieuse, zéro risque
+              Secure payment, serious team, zero risk
             </p>
           </div>
 

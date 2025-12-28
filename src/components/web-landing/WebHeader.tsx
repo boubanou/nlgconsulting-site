@@ -16,10 +16,10 @@ const WebHeader = () => {
   }, []);
 
   const navLinks = [
-    { label: "Nos offres", href: "#offres" },
-    { label: "Notre méthode", href: "#methode" },
-    { label: "Sécurité", href: "#securite" },
-    { label: "Avis clients", href: "#avis" },
+    { label: "Our Offers", href: "#offres" },
+    { label: "Our Process", href: "#methode" },
+    { label: "Security", href: "#securite" },
+    { label: "Reviews", href: "#avis" },
     { label: "FAQ", href: "#faq" },
   ];
 
@@ -77,7 +77,7 @@ const WebHeader = () => {
               onClick={() => window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank")}
             >
               <Phone className="w-4 h-4" />
-              Réserver un appel
+              Book a call
             </Button>
             <Button 
               size="sm"
@@ -85,7 +85,7 @@ const WebHeader = () => {
               onClick={() => scrollToSection("#offres")}
             >
               <Zap className="w-4 h-4" />
-              Payer maintenant
+              Pay now
             </Button>
           </div>
 
@@ -93,7 +93,7 @@ const WebHeader = () => {
           <button
             className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -110,7 +110,7 @@ const WebHeader = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <ArrowLeft className="w-4 h-4" />
-                Retour à NLG Consulting
+                Back to NLG Consulting
               </Link>
               {navLinks.map((link) => (
                 <button
@@ -132,7 +132,7 @@ const WebHeader = () => {
                   }}
                 >
                   <Phone className="w-4 h-4" />
-                  Réserver un appel
+                  Book a call
                 </Button>
                 <Button 
                   size="sm"
@@ -140,7 +140,7 @@ const WebHeader = () => {
                   onClick={() => scrollToSection("#offres")}
                 >
                   <Zap className="w-4 h-4" />
-                  Payer maintenant
+                  Pay now
                 </Button>
               </div>
             </div>

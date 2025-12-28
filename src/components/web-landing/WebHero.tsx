@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 
 const WebHero = () => {
   const reassurancePoints = [
-    { icon: Shield, text: "Paiement sécurisé par Stripe" },
-    { icon: Lock, text: "Connexion HTTPS & SSL" },
-    { icon: Code, text: "Code source fourni" },
-    { icon: CheckCircle, text: "Aucun abonnement caché" },
-    { icon: Zap, text: "Livraison en 48h à 7 jours" },
-    { icon: Search, text: "SEO optimisé Google" },
+    { icon: Shield, text: "Secure Stripe payment" },
+    { icon: Lock, text: "HTTPS & SSL connection" },
+    { icon: Code, text: "Source code provided" },
+    { icon: CheckCircle, text: "No hidden subscriptions" },
+    { icon: Zap, text: "Delivery in 48h to 7 days" },
+    { icon: Search, text: "Google SEO optimized" },
   ];
 
   const scrollToOffers = () => {
@@ -30,18 +30,18 @@ const WebHero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Sparkles className="w-4 h-4" />
-            <span>Sites livrés en moins de 72 heures</span>
+            <span>Websites delivered in under 72 hours</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Lancez votre site internet{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">générateur de revenus</span>{" "}
-            en moins de 72h
+            Launch your{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">revenue-ready website</span>{" "}
+            in under 72 hours
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Sites professionnels, optimisés pour la conversion, avec UX/UI design, copywriting, 
-            SEO, CRM, automatisations, Stripe, Calendly et analytics inclus.
+            Professional websites optimized for conversion, with UX/UI design, copywriting, 
+            SEO, CRM, automation, Stripe, Calendly, and analytics included.
           </p>
 
           {/* Reassurance Points - 6 items in 2x3 grid */}
@@ -68,7 +68,7 @@ const WebHero = () => {
               onClick={scrollToOffers}
             >
               <span className="flex items-center justify-center gap-2">
-                Payer maintenant (Stripe sécurisé)
+                Pay now (Secure Stripe)
                 <ArrowRight className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
@@ -79,7 +79,7 @@ const WebHero = () => {
               onClick={() => window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank")}
             >
               <Phone className="w-4 h-4" />
-              Réserver un appel
+              Book a call
             </Button>
           </div>
 
@@ -87,12 +87,12 @@ const WebHero = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-6 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: "0.9s" }}>
             <span className="flex items-center gap-1">
               <Shield className="w-4 h-4 text-primary" />
-              Paiement sécurisé Stripe
+              Secure Stripe payment
             </span>
             <span className="w-1 h-1 rounded-full bg-muted-foreground hidden sm:block" />
-            <span>Facture incluse</span>
+            <span>Invoice included</span>
             <span className="w-1 h-1 rounded-full bg-muted-foreground hidden sm:block" />
-            <span>NLG propriétaire 100% du code source</span>
+            <span>NLG owns 100% of the source code</span>
           </div>
         </div>
       </div>

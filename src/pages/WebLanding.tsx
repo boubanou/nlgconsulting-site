@@ -13,10 +13,10 @@ const WebLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Site Internet en 72h | NLG Studio by NLG Consulting</title>
+        <title>Website in 72h | NLG Studio by NLG Consulting</title>
         <meta 
           name="description" 
-          content="Lancez votre site internet générateur de revenus en moins de 72h. UX/UI, copywriting, SEO, CRM, automatisations, Stripe inclus. Paiement sécurisé, code source fourni." 
+          content="Launch your revenue-ready website in under 72 hours. UX/UI, copywriting, SEO, CRM, automations, Stripe included. Secure payment, source code provided." 
         />
         <link rel="canonical" href="https://nlgconsulting.co/web" />
       </Helmet>

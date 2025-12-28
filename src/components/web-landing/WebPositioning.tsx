@@ -2,21 +2,21 @@ import { Award, Zap, Shield, Code, Sparkles, Palette, FileText, BarChart3, Setti
 
 const WebPositioning = () => {
   const highlights = [
-    { icon: Zap, title: "Livraison 72h", description: "Sites livrés en quelques jours", color: "from-yellow-500 to-orange-500" },
-    { icon: Palette, title: "UX/UI Design", description: "Interfaces modernes et performantes", color: "from-purple-500 to-pink-500" },
-    { icon: FileText, title: "Copywriting", description: "Textes optimisés conversion", color: "from-blue-500 to-cyan-500" },
-    { icon: Code, title: "Code source fourni", description: "Propriétaire à 100 %", color: "from-emerald-500 to-teal-500" },
+    { icon: Zap, title: "72h Delivery", description: "Websites delivered in days", color: "from-yellow-500 to-orange-500" },
+    { icon: Palette, title: "UX/UI Design", description: "Modern, high-performance interfaces", color: "from-purple-500 to-pink-500" },
+    { icon: FileText, title: "Copywriting", description: "Conversion-optimized text", color: "from-blue-500 to-cyan-500" },
+    { icon: Code, title: "Source Code Provided", description: "100% ownership", color: "from-emerald-500 to-teal-500" },
   ];
 
   const services = [
-    "UX/UI Design professionnel",
-    "Copywriting orienté conversion",
-    "Fondations SEO optimisées",
-    "Intégration CRM & automations",
-    "Stripe, Calendly, formulaires",
-    "Workflows IA intégrés",
+    "Professional UX/UI Design",
+    "Conversion-focused copywriting",
+    "Optimized SEO foundations",
+    "CRM & automation integration",
+    "Stripe, Calendly, forms",
+    "Integrated AI workflows",
     "Analytics & tracking",
-    "Support technique inclus",
+    "Technical support included",
   ];
 
   return (
@@ -33,7 +33,7 @@ const WebPositioning = () => {
               <span>NLG Studio</span>
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              Sites internet professionnels, prêts à générer des revenus
+              Professional websites, ready to generate revenue
             </h2>
           </header>
           
@@ -42,12 +42,12 @@ const WebPositioning = () => {
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl" />
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed relative z-10">
-              <strong className="text-foreground text-lg md:text-xl">NLG Studio</strong> est la division web de NLG Consulting, 
-              spécialisée dans la création de sites internet à haute performance commerciale.
+              <strong className="text-foreground text-lg md:text-xl">NLG Studio</strong> is the web division of NLG Consulting, 
+              specialized in creating high commercial performance websites.
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4 relative z-10">
-              Nous livrons des sites <span className="text-primary font-semibold">clé en main en moins de 72 heures</span>, 
-              avec UX/UI design, copywriting, SEO, CRM, automatisations et analytics intégrés.
+              We deliver <span className="text-primary font-semibold">turnkey websites in under 72 hours</span>, 
+              with UX/UI design, copywriting, SEO, CRM, automations, and integrated analytics.
             </p>
             
             {/* Services grid */}
@@ -61,8 +61,8 @@ const WebPositioning = () => {
             </div>
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-6 relative z-10">
-              <strong className="text-foreground">NLG conserve 100% du code source</strong> et vous le fournit à la livraison. 
-              Aucune dépendance, aucun abonnement caché.
+              <strong className="text-foreground">NLG retains 100% of the source code</strong> and provides it to you upon delivery. 
+              No dependencies, no hidden subscriptions.
             </p>
           </article>
 
