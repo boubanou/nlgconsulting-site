@@ -9,24 +9,24 @@ import {
 const WebFAQ = () => {
   const faqs = [
     {
-      question: "Le paiement est-il sécurisé ?",
-      answer: "Oui, tous les paiements sont traités par Stripe, le leader mondial du paiement en ligne. Vos données bancaires sont cryptées selon les normes PCI-DSS et ne sont jamais stockées sur nos serveurs. Vous recevez automatiquement une facture après chaque paiement.",
+      question: "Is the payment secure?",
+      answer: "Yes, all payments are processed by Stripe, the world leader in online payments. Your banking data is encrypted according to PCI-DSS standards and is never stored on our servers. You automatically receive an invoice after each payment.",
     },
     {
-      question: "Que se passe-t-il après l'acompte ?",
-      answer: "Dès réception de votre acompte, nous vous contactons sous 24h pour organiser un brief de 30 minutes. Ensuite, nous commençons la création de votre site. Vous recevez une première version sous quelques jours, puis nous procédons aux ajustements avant la livraison finale.",
+      question: "What happens after the deposit?",
+      answer: "Upon receiving your deposit, we contact you within 24 hours to schedule a 30-minute brief. Then, we begin creating your website. You receive a first version within a few days, followed by adjustments before final delivery.",
     },
     {
-      question: "Suis-je propriétaire du site ?",
-      answer: "Absolument. Après paiement intégral, vous devenez propriétaire à 100 % de votre site internet. Nous vous fournissons systématiquement le code source complet. Vous êtes libre d'héberger, modifier ou transférer votre site comme vous le souhaitez, sans aucune dépendance technique.",
+      question: "Do I own the website?",
+      answer: "Absolutely. After full payment, you become 100% owner of your website. We systematically provide you with the complete source code. You are free to host, modify, or transfer your site as you wish, without any technical dependency.",
     },
     {
-      question: "Le SEO est-il inclus ?",
-      answer: "Oui, tous nos packs incluent une structure SEO optimisée avec des meta titles et meta descriptions uniques pour chaque page, ainsi que l'indexation Google. Le Pack Intermédiaire propose un SEO avancé avec des fonctionnalités supplémentaires.",
+      question: "Is SEO included?",
+      answer: "Yes, all our packages include an optimized SEO structure with unique meta titles and meta descriptions for each page, as well as Google indexing. The Intermediate Pack offers advanced SEO with additional features.",
     },
     {
-      question: "Puis-je utiliser mon propre nom de domaine ?",
-      answer: "Oui, vous pouvez utiliser votre propre nom de domaine. Le paramétrage du domaine et des DNS est inclus dans tous nos packs. Si vous n'avez pas encore de domaine, nous pouvons vous conseiller sur les meilleures options.",
+      question: "Can I use my own domain name?",
+      answer: "Yes, you can use your own domain name. Domain and DNS setup is included in all our packages. If you don't have a domain yet, we can advise you on the best options.",
     },
   ];
 
@@ -43,10 +43,10 @@ const WebFAQ = () => {
             <span>FAQ</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Questions fréquentes
+            Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tout ce que vous devez savoir avant de démarrer
+            Everything you need to know before getting started
           </p>
         </div>
 

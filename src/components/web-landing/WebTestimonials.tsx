@@ -4,34 +4,34 @@ const WebTestimonials = () => {
   const testimonials = [
     {
       name: "Sophie M.",
-      role: "Consultante indépendante",
-      content: "Site livré très rapidement, travail sérieux et efficace. Paiement simple et sécurisé.",
+      role: "Independent Consultant",
+      content: "Website delivered very quickly, serious and efficient work. Simple and secure payment.",
       rating: 5,
-      highlight: "Très rapidement",
+      highlight: "Very fast",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
     },
     {
       name: "Thomas R.",
-      role: "Dirigeant PME",
-      content: "Une équipe professionnelle et réactive. Le site était en ligne en moins de 48h.",
+      role: "SMB Director",
+      content: "A professional and responsive team. The website was live in less than 48 hours.",
       rating: 5,
-      highlight: "Moins de 48h",
+      highlight: "Under 48h",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
     },
     {
       name: "Marie L.",
-      role: "Coach en développement",
-      content: "Rarement vu une telle rapidité avec un tel niveau de qualité. Code source fourni, tout est clair.",
+      role: "Development Coach",
+      content: "Rarely seen such speed with this level of quality. Source code provided, everything is clear.",
       rating: 5,
-      highlight: "Qualité exceptionnelle",
+      highlight: "Exceptional quality",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
     },
     {
       name: "Pierre D.",
       role: "Entrepreneur",
-      content: "Process transparent du début à la fin. Le site correspond exactement à mes attentes.",
+      content: "Transparent process from start to finish. The website matches exactly my expectations.",
       rating: 5,
-      highlight: "Process transparent",
+      highlight: "Transparent process",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
     },
   ];
@@ -46,13 +46,13 @@ const WebTestimonials = () => {
         <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Star className="w-4 h-4 fill-secondary text-secondary" />
-            <span>Avis vérifiés</span>
+            <span>Verified Reviews</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Avis clients
+            Client Reviews
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
-            Ils nous ont fait confiance pour la création de leur site internet professionnel
+            They trusted us for their professional website creation
           </p>
         </header>
 
@@ -85,7 +85,7 @@ const WebTestimonials = () => {
               <footer className="pt-4 border-t border-border flex items-center gap-3">
                 <img 
                   src={testimonial.avatar} 
-                  alt={`Photo de ${testimonial.name}`}
+                  alt={`Photo of ${testimonial.name}`}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-primary/20"
                   loading="lazy"
                 />
@@ -111,7 +111,7 @@ const WebTestimonials = () => {
               />
             ))}
           </div>
-          <span className="text-sm ml-2">+ de 50 clients satisfaits</span>
+          <span className="text-sm ml-2">50+ satisfied clients</span>
         </div>
       </div>
     </section>

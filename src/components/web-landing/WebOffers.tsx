@@ -4,61 +4,61 @@ import { Button } from "@/components/ui/button";
 const WebOffers = () => {
   const offers = [
     {
-      name: "Pack Starter",
-      price: "749 €",
-      originalPrice: "1099 €",
-      deposit: "50 %",
-      deliveryTime: "7 jours ouvrés",
+      name: "Starter Pack",
+      price: "€749",
+      originalPrice: "€1,099",
+      deposit: "50%",
+      deliveryTime: "7 business days",
       features: [
-        "Site internet 3 à 4 pages",
-        "Formulaire de contact intégré",
-        "Structure SEO optimisée",
-        "Meta title et meta description",
-        "Indexation Google",
-        "Paramétrage domaine et DNS",
-        "Code source fourni",
+        "3-4 page website",
+        "Integrated contact form",
+        "Optimized SEO structure",
+        "Meta title & description",
+        "Google indexing",
+        "Domain & DNS setup",
+        "Source code provided",
       ],
-      cta: "Valider l'acompte – Pack Starter",
+      cta: "Pay Deposit – Starter Pack",
       link: "https://payment.fractionalpropertyhub.com/b/3cI7sMcTrdbOgDWeI31ck03",
       popular: false,
       gradient: "from-slate-500 to-slate-600",
     },
     {
-      name: "Pack Intermédiaire",
-      price: "999 €",
-      originalPrice: "1499 €",
-      deposit: "50 %",
-      deliveryTime: "7 à 10 jours ouvrés",
+      name: "Intermediate Pack",
+      price: "€999",
+      originalPrice: "€1,499",
+      deposit: "50%",
+      deliveryTime: "7-10 business days",
       features: [
-        "Site internet complet avec blog",
-        "Intégration Calendly",
-        "Gestion simple du contenu",
-        "SEO avancé + meta tags",
-        "Indexation Google",
-        "Paramétrage domaine et DNS",
-        "Code source fourni",
+        "Complete website with blog",
+        "Calendly integration",
+        "Simple content management",
+        "Advanced SEO + meta tags",
+        "Google indexing",
+        "Domain & DNS setup",
+        "Source code provided",
       ],
-      cta: "Valider l'acompte – Pack Intermédiaire",
+      cta: "Pay Deposit – Intermediate Pack",
       link: "https://payment.fractionalpropertyhub.com/b/14AaEY06FdbObjCgQb1ck04",
       popular: true,
       gradient: "from-primary to-primary/80",
     },
     {
-      name: "Pack Pro",
-      price: "Sur devis",
+      name: "Pro Pack",
+      price: "Custom Quote",
       originalPrice: null,
       deposit: null,
-      deliveryTime: "Selon projet",
+      deliveryTime: "Based on project",
       features: [
-        "E-commerce complet",
-        "Développement sur mesure",
-        "Applications web & logiciels",
-        "Automatisations avancées",
-        "Intégrations API tierces",
-        "Support technique dédié",
+        "Full e-commerce",
+        "Custom development",
+        "Web apps & software",
+        "Advanced automations",
+        "Third-party API integrations",
+        "Dedicated technical support",
       ],
-      description: "Pour les projets complexes nécessitant une approche personnalisée. Discutons de vos besoins spécifiques lors d'un appel découverte gratuit.",
-      cta: "Prendre rendez-vous",
+      description: "For complex projects requiring a personalized approach. Let's discuss your specific needs in a free discovery call.",
+      cta: "Book a Call",
       link: "https://calendly.com/greg-nlgconsulting/15min",
       popular: false,
       isCustom: true,
@@ -77,13 +77,13 @@ const WebOffers = () => {
         <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Zap className="w-4 h-4 text-secondary" />
-            <span>Offres exclusives</span>
+            <span>Exclusive Offers</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Des sites performants, optimisés pour Google
+            High-performance websites, optimized for Google
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choisissez l'offre adaptée à vos besoins. Paiement sécurisé, livraison rapide, code source fourni.
+            Choose the offer that suits your needs. Secure payment, fast delivery, source code provided.
           </p>
         </header>
 
@@ -101,7 +101,7 @@ const WebOffers = () => {
               {offer.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-30 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground text-sm font-bold px-5 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
                   <Sparkles className="w-4 h-4" />
-                  Populaire
+                  Popular
                 </div>
               )}
 
@@ -122,17 +122,17 @@ const WebOffers = () => {
                 
                 {offer.originalPrice && (
                   <div className="inline-flex items-center bg-green-500/10 text-green-600 text-xs font-semibold px-2 py-1 rounded-full mb-2">
-                    Économisez {parseInt(offer.originalPrice) - parseInt(offer.price)} €
+                    Save €{parseInt(offer.originalPrice.replace(/[^0-9]/g, '')) - parseInt(offer.price.replace(/[^0-9]/g, ''))}
                   </div>
                 )}
                 
                 {offer.deposit && (
-                  <p className="text-sm text-muted-foreground">Acompte : {offer.deposit}</p>
+                  <p className="text-sm text-muted-foreground">Deposit: {offer.deposit}</p>
                 )}
                 
                 <p className="text-sm text-primary font-medium mt-2 flex items-center justify-center gap-1">
                   <Zap className="w-4 h-4" />
-                  Délai : {offer.deliveryTime}
+                  Delivery: {offer.deliveryTime}
                 </p>
               </div>
 
@@ -174,16 +174,16 @@ const WebOffers = () => {
                 {!offer.isCustom && (
                   <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-green-500" />
-                    Paiement sécurisé
+                    Secure payment
                     <span className="w-1 h-1 rounded-full bg-green-500" />
-                    Facture incluse
+                    Invoice included
                   </p>
                 )}
 
                 {offer.isCustom && (
                   <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-2">
                     <Briefcase className="w-3 h-3" />
-                    Appel découverte gratuit de 15 min
+                    Free 15-min discovery call
                   </p>
                 )}
               </div>

@@ -5,36 +5,36 @@ const WebMethod = () => {
     {
       icon: CreditCard,
       number: "1",
-      title: "Paiement sécurisé de l'acompte",
-      description: "Réglez 50 % en toute sécurité via Stripe pour démarrer votre projet.",
+      title: "Secure deposit payment",
+      description: "Pay 50% securely via Stripe to start your project.",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: MessageSquare,
       number: "2",
-      title: "Brief rapide (30 minutes)",
-      description: "Échange pour comprendre vos besoins, votre activité et vos objectifs.",
+      title: "Quick brief (30 minutes)",
+      description: "Discussion to understand your needs, business, and goals.",
       color: "from-purple-500 to-purple-600",
     },
     {
       icon: Monitor,
       number: "3",
-      title: "Première version sous quelques jours",
-      description: "Nous vous présentons une première version fonctionnelle de votre site.",
+      title: "First version in a few days",
+      description: "We present you a first functional version of your website.",
       color: "from-emerald-500 to-emerald-600",
     },
     {
       icon: RefreshCw,
       number: "4",
-      title: "Ajustements",
-      description: "2 séries de corrections incluses pour un résultat parfait.",
+      title: "Adjustments",
+      description: "2 rounds of revisions included for a perfect result.",
       color: "from-orange-500 to-orange-600",
     },
     {
       icon: Rocket,
       number: "5",
-      title: "Livraison finale",
-      description: "Mise en ligne après paiement du solde. Code source fourni.",
+      title: "Final delivery",
+      description: "Go live after balance payment. Source code provided.",
       color: "from-primary to-primary/80",
     },
   ];
@@ -48,13 +48,13 @@ const WebMethod = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Rocket className="w-4 h-4" />
-            <span>Process simple</span>
+            <span>Simple Process</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Notre processus en 5 étapes
+            Our 5-Step Process
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stratégie → Design & Build → Lancement
+            Strategy → Design & Build → Launch
           </p>
         </div>
 
@@ -120,7 +120,7 @@ const WebMethod = () => {
             onClick={() => document.querySelector("#offres")?.scrollIntoView({ behavior: "smooth" })}
             className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300"
           >
-            Commencer maintenant
+            Get started now
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
