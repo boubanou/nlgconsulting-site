@@ -1,11 +1,22 @@
-import { Award, Zap, Shield, Code, Sparkles } from "lucide-react";
+import { Award, Zap, Shield, Code, Sparkles, Palette, FileText, BarChart3, Settings } from "lucide-react";
 
 const WebPositioning = () => {
   const highlights = [
-    { icon: Zap, title: "Rapidité exceptionnelle", description: "Sites livrés en quelques jours", color: "from-yellow-500 to-orange-500" },
-    { icon: Award, title: "Expertise pointue", description: "Équipe spécialisée web", color: "from-purple-500 to-pink-500" },
-    { icon: Shield, title: "Méthode rigoureuse", description: "Process sécurisé et cadré", color: "from-blue-500 to-cyan-500" },
+    { icon: Zap, title: "Livraison 72h", description: "Sites livrés en quelques jours", color: "from-yellow-500 to-orange-500" },
+    { icon: Palette, title: "UX/UI Design", description: "Interfaces modernes et performantes", color: "from-purple-500 to-pink-500" },
+    { icon: FileText, title: "Copywriting", description: "Textes optimisés conversion", color: "from-blue-500 to-cyan-500" },
     { icon: Code, title: "Code source fourni", description: "Propriétaire à 100 %", color: "from-emerald-500 to-teal-500" },
+  ];
+
+  const services = [
+    "UX/UI Design professionnel",
+    "Copywriting orienté conversion",
+    "Fondations SEO optimisées",
+    "Intégration CRM & automations",
+    "Stripe, Calendly, formulaires",
+    "Workflows IA intégrés",
+    "Analytics & tracking",
+    "Support technique inclus",
   ];
 
   return (
@@ -15,14 +26,14 @@ const WebPositioning = () => {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <header className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />
-              <span>Pourquoi nous choisir</span>
+              <span>NLG Studio</span>
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              Création de site internet rapide et professionnelle
+              Sites internet professionnels, prêts à générer des revenus
             </h2>
           </header>
           
@@ -31,16 +42,27 @@ const WebPositioning = () => {
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl" />
             
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed relative z-10">
-              <strong className="text-foreground text-lg md:text-xl">NLG Consulting</strong> fait partie des équipes les plus rapides et les plus pointues en France 
-              pour la création de sites internet professionnels.
+              <strong className="text-foreground text-lg md:text-xl">NLG Studio</strong> est la division web de NLG Consulting, 
+              spécialisée dans la création de sites internet à haute performance commerciale.
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4 relative z-10">
-              Nous travaillons vite, <span className="text-primary font-semibold">très vite</span>, mais toujours avec méthode, rigueur et exigence. 
-              Chaque projet est cadré, sécurisé et livré dans les délais annoncés.
+              Nous livrons des sites <span className="text-primary font-semibold">clé en main en moins de 72 heures</span>, 
+              avec UX/UI design, copywriting, SEO, CRM, automatisations et analytics intégrés.
             </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-4 relative z-10">
-              Nous sommes également <strong className="text-foreground">les seuls à fournir systématiquement le code source complet</strong> de votre site internet. 
-              Vous êtes propriétaire à 100 %, sans dépendance technique.
+            
+            {/* Services grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 relative z-10">
+              {services.map((service, index) => (
+                <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                  <span>{service}</span>
+                </div>
+              ))}
+            </div>
+            
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-6 relative z-10">
+              <strong className="text-foreground">NLG conserve 100% du code source</strong> et vous le fournit à la livraison. 
+              Aucune dépendance, aucun abonnement caché.
             </p>
           </article>
 

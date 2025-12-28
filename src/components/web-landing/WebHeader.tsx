@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X, Zap, Phone, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -18,11 +18,9 @@ const WebHeader = () => {
   const navLinks = [
     { label: "Nos offres", href: "#offres" },
     { label: "Notre méthode", href: "#methode" },
-    { label: "Sécurité & confiance", href: "#securite" },
+    { label: "Sécurité", href: "#securite" },
     { label: "Avis clients", href: "#avis" },
     { label: "FAQ", href: "#faq" },
-    { label: "À propos", href: "https://nlgconsulting.co/about", external: true },
-    { label: "Contact", href: "https://nlgconsulting.co/contact", external: true },
   ];
 
   const scrollToSection = (href: string) => {
@@ -43,33 +41,30 @@ const WebHeader = () => {
     }`}>
       <nav className="container mx-auto px-4" aria-label="Navigation principale">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo only - removed redundant text */}
-          <Link to="/web" className="flex items-center group" aria-label="NLG Consulting - Accueil">
-            <img src="/logo.svg" alt="NLG Consulting" className="h-10 w-auto group-hover:scale-105 transition-transform" />
-          </Link>
+          {/* Back to main site + Logo */}
+          <div className="flex items-center gap-4">
+            <Link 
+              to="/" 
+              className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              NLG Consulting
+            </Link>
+            <Link to="/web" className="flex items-center group" aria-label="NLG Studio - Accueil">
+              <img src="/logo.svg" alt="NLG Consulting" className="h-10 w-auto group-hover:scale-105 transition-transform" />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              link.external ? (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <button
-                  key={link.label}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
-                >
-                  {link.label}
-                </button>
-              )
+              <button
+                key={link.label}
+                onClick={() => scrollToSection(link.href)}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+              >
+                {link.label}
+              </button>
             ))}
           </div>
 
@@ -78,10 +73,11 @@ const WebHeader = () => {
             <Button 
               variant="outline" 
               size="sm"
-              className="border-2 hover:bg-primary/5 hover:border-primary/50"
+              className="border-2 hover:bg-primary/5 hover:border-primary/50 gap-2"
               onClick={() => window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank")}
             >
-              Prendre rendez-vous
+              <Phone className="w-4 h-4" />
+              Réserver un appel
             </Button>
             <Button 
               size="sm"
@@ -89,7 +85,7 @@ const WebHeader = () => {
               onClick={() => scrollToSection("#offres")}
             >
               <Zap className="w-4 h-4" />
-              Valider l'acompte
+              Payer maintenant
             </Button>
           </div>
 
@@ -108,39 +104,35 @@ const WebHeader = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
             <div className="flex flex-col gap-1">
+              <Link
+                to="/"
+                className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors py-3 px-4 rounded-lg flex items-center gap-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Retour à NLG Consulting
+              </Link>
               {navLinks.map((link) => (
-                link.external ? (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors py-3 px-4 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ) : (
-                  <button
-                    key={link.label}
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors py-3 px-4 rounded-lg text-left"
-                  >
-                    {link.label}
-                  </button>
-                )
+                <button
+                  key={link.label}
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors py-3 px-4 rounded-lg text-left"
+                >
+                  {link.label}
+                </button>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border mt-2 px-4">
                 <Button 
                   variant="outline" 
                   size="sm"
-                  className="w-full"
+                  className="w-full gap-2"
                   onClick={() => {
                     window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank");
                     setMobileMenuOpen(false);
                   }}
                 >
-                  Prendre rendez-vous
+                  <Phone className="w-4 h-4" />
+                  Réserver un appel
                 </Button>
                 <Button 
                   size="sm"
@@ -148,7 +140,7 @@ const WebHeader = () => {
                   onClick={() => scrollToSection("#offres")}
                 >
                   <Zap className="w-4 h-4" />
-                  Valider l'acompte
+                  Payer maintenant
                 </Button>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Shield, Lock, Code, Zap, CheckCircle, ArrowRight, Sparkles, Search } from "lucide-react";
+import { Shield, Lock, Code, Zap, CheckCircle, ArrowRight, Sparkles, Search, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WebHero = () => {
@@ -30,18 +30,18 @@ const WebHero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Sparkles className="w-4 h-4" />
-            <span>Sites livrés en moins de 7 jours</span>
+            <span>Sites livrés en moins de 72 heures</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Votre site internet professionnel,{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">rapide, sécurisé</span>{" "}
-            et clé en main
+            Lancez votre site internet{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">générateur de revenus</span>{" "}
+            en moins de 72h
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Nous concevons des sites internet performants, optimisés pour Google, 
-            pensés pour générer des clients, avec un paiement en ligne 100 % sécurisé.
+            Sites professionnels, optimisés pour la conversion, avec UX/UI design, copywriting, 
+            SEO, CRM, automatisations, Stripe, Calendly et analytics inclus.
           </p>
 
           {/* Reassurance Points - 6 items in 2x3 grid */}
@@ -68,17 +68,18 @@ const WebHero = () => {
               onClick={scrollToOffers}
             >
               <span className="flex items-center justify-center gap-2">
-                Valider l'acompte (50 % – paiement sécurisé)
+                Payer maintenant (Stripe sécurisé)
                 <ArrowRight className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="w-full sm:w-auto text-base px-8 border-2 hover:bg-primary/5 hover:border-primary/50 transition-all duration-300"
+              className="w-full sm:w-auto text-base px-8 border-2 hover:bg-primary/5 hover:border-primary/50 transition-all duration-300 gap-2"
               onClick={() => window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank")}
             >
-              Prendre rendez-vous
+              <Phone className="w-4 h-4" />
+              Réserver un appel
             </Button>
           </div>
 
@@ -86,12 +87,12 @@ const WebHero = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-6 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: "0.9s" }}>
             <span className="flex items-center gap-1">
               <Shield className="w-4 h-4 text-primary" />
-              Paiement sécurisé
+              Paiement sécurisé Stripe
             </span>
             <span className="w-1 h-1 rounded-full bg-muted-foreground hidden sm:block" />
             <span>Facture incluse</span>
             <span className="w-1 h-1 rounded-full bg-muted-foreground hidden sm:block" />
-            <span>Code source fourni</span>
+            <span>NLG propriétaire 100% du code source</span>
           </div>
         </div>
       </div>

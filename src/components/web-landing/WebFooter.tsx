@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Lock, Zap, ArrowRight } from "lucide-react";
+import { Shield, Lock, Zap, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WebFooter = () => {
@@ -9,10 +9,10 @@ const WebFooter = () => {
       <div className="bg-gradient-to-r from-primary to-primary/80 py-16">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-            Prêt à lancer votre site internet ?
+            Prêt à lancer votre site générateur de revenus ?
           </h3>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Rejoignez nos clients satisfaits et obtenez un site professionnel en quelques jours.
+            Obtenez un site professionnel, optimisé conversion, en moins de 72 heures.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -22,16 +22,17 @@ const WebFooter = () => {
               onClick={() => document.querySelector("#offres")?.scrollIntoView({ behavior: "smooth" })}
             >
               <Zap className="w-4 h-4" />
-              Voir les offres
+              Payer maintenant
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2"
               onClick={() => window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank")}
             >
-              Prendre rendez-vous
+              <Phone className="w-4 h-4" />
+              Réserver un appel
             </Button>
           </div>
         </div>
@@ -42,15 +43,15 @@ const WebFooter = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-              <Link to="/web" className="flex items-center gap-2 group">
+              <Link to="/" className="flex items-center gap-2 group">
                 <img src="/logo.svg" alt="NLG Consulting" className="h-8 w-auto group-hover:scale-105 transition-transform" />
-                <span className="font-bold text-foreground">NLG Consulting</span>
+                <span className="font-bold text-foreground">NLG Studio</span>
               </Link>
               
-              <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2 bg-green-500/10 text-green-600 px-3 py-1.5 rounded-full">
                   <Shield className="w-4 h-4" />
-                  <span className="font-medium">Paiement sécurisé</span>
+                  <span className="font-medium">Paiement Stripe</span>
                 </div>
                 <div className="flex items-center gap-2 bg-blue-500/10 text-blue-600 px-3 py-1.5 rounded-full">
                   <Lock className="w-4 h-4" />
@@ -60,39 +61,27 @@ const WebFooter = () => {
             </div>
             
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground mb-8">
-              <Link to="/web/terms" className="hover:text-primary transition-colors">
-                Conditions générales de vente
+              <Link to="/" className="hover:text-primary transition-colors">
+                NLG Consulting
               </Link>
-              <a 
-                href="https://nlgconsulting.co/privacy-policy" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
+              <Link to="/web/terms" className="hover:text-primary transition-colors">
+                Conditions générales
+              </Link>
+              <Link to="/privacy-policy" className="hover:text-primary transition-colors">
                 Politique de confidentialité
-              </a>
-              <a 
-                href="https://nlgconsulting.co/about" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
+              </Link>
+              <Link to="/about" className="hover:text-primary transition-colors">
                 À propos
-              </a>
-              <a 
-                href="https://nlgconsulting.co/contact" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
+              </Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
             
             <div className="text-center text-sm text-muted-foreground pt-8 border-t border-border">
               <p>© {new Date().getFullYear()} NLG Consulting. Tous droits réservés.</p>
               <p className="mt-2">
-                Création de sites internet professionnels – France, Belgique, Suisse, Canada
+                NLG Studio – Création de sites internet professionnels en 72h
               </p>
             </div>
           </div>

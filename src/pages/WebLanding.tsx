@@ -13,12 +13,12 @@ const WebLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Création de site internet rapide et sécurisé | NLG Consulting</title>
+        <title>Site Internet en 72h | NLG Studio by NLG Consulting</title>
         <meta 
           name="description" 
-          content="Création de site internet professionnel en quelques jours. Paiement sécurisé Stripe, code source fourni, SEO inclus." 
+          content="Lancez votre site internet générateur de revenus en moins de 72h. UX/UI, copywriting, SEO, CRM, automatisations, Stripe inclus. Paiement sécurisé, code source fourni." 
         />
-        <link rel="canonical" href="https://web.nlgconsulting.co/" />
+        <link rel="canonical" href="https://nlgconsulting.co/web" />
       </Helmet>
       
       <div className="min-h-screen bg-background">
