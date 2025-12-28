@@ -51,10 +51,10 @@ const WebMethod = () => {
             <span>Process simple</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Notre méthode
+            Notre processus en 5 étapes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un process simple, rapide et transparent pour votre site internet
+            Stratégie → Design & Build → Lancement
           </p>
         </div>
 
