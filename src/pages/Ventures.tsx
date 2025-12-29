@@ -36,17 +36,18 @@ const Ventures = () => {
       description: "A SaaS platform bridging real estate and financial technology. Block Tech enables fractional ownership, tokenization, and streamlined property investment workflows.",
       why: "Real estate investment is fragmented and inaccessible. Block Tech democratizes access to property assets through technology.",
       role: "Founded, built, and operated by NLG. We handle product development, go-to-market, and scaling.",
-      link: "#"
+      link: "https://block-tech.co"
     },
     {
       name: "FractionalPropertyHub",
       type: "Marketplace & Lead Generation",
       icon: <Globe className="w-8 h-8" />,
-      logo: null,
+      logo: null, // Placeholder - add logo when available
+      logoPlaceholder: "FPH",
       description: "A marketplace connecting investors with fractional real estate opportunities. Lead generation engine for property developers and investment platforms.",
       why: "Investors struggle to find vetted fractional opportunities. Developers need qualified leads.",
       role: "Built and scaled by NLG as a lead-gen and marketplace play.",
-      link: "#"
+      link: "https://fractionalpropertyhub.com"
     },
     {
       name: "Business Legend",
@@ -56,17 +57,19 @@ const Ventures = () => {
       description: "A media brand featuring entrepreneurship stories, business insights, and expert interviews. Podcast and content platform for founders and operators.",
       why: "Authentic business stories inspire action. Business Legend shares real journeys from real builders.",
       role: "Content creation, production, and distribution managed by NLG.",
-      link: "#"
+      link: "https://businesslegend.co"
     },
     {
       name: "STEAD",
       type: "Sports & Lifestyle Brand",
       icon: <Dumbbell className="w-8 h-8" />,
-      logo: null,
+      logo: null, // Placeholder - add logo when available
+      logoPlaceholder: "STEAD",
       description: "A sports and lifestyle brand focused on performance, discipline, and quality. Apparel and community for athletes and active professionals.",
       why: "Lifestyle reflects mindset. STEAD embodies the discipline and excellence we value.",
       role: "Brand development and operations by NLG.",
-      link: "#"
+      link: null, // Coming soon
+      comingSoon: true
     }
   ];
 
@@ -114,6 +117,10 @@ const Ventures = () => {
                     <div className="bg-muted/50 p-8 flex flex-col items-center justify-center text-center">
                       {venture.logo ? (
                         <img src={venture.logo} alt={venture.name} className="h-16 w-auto mb-4 object-contain" />
+                      ) : venture.logoPlaceholder ? (
+                        <div className="w-16 h-16 rounded-xl bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold mb-4">
+                          {venture.logoPlaceholder}
+                        </div>
                       ) : (
                         <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
                           {venture.icon}
@@ -135,13 +142,20 @@ const Ventures = () => {
                         <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">NLG's Role</h4>
                         <p className="text-foreground">{venture.role}</p>
                       </div>
-                      {venture.link !== "#" && (
-                        <Button asChild variant="outline" className="mt-4">
-                          <a href={venture.link} target="_blank" rel="noopener noreferrer">
-                            Visit Website <ExternalLink className="ml-2 w-4 h-4" />
-                          </a>
+                      <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t">
+                        {venture.link && !venture.comingSoon ? (
+                          <Button asChild variant="default">
+                            <a href={venture.link} target="_blank" rel="noopener noreferrer">
+                              Visit Website <ExternalLink className="ml-2 w-4 h-4" />
+                            </a>
+                          </Button>
+                        ) : venture.comingSoon ? (
+                          <Badge variant="outline" className="text-sm py-1.5 px-4">Coming Soon</Badge>
+                        ) : null}
+                        <Button asChild variant="outline">
+                          <Link to="/book">Book a Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
                         </Button>
-                      )}
+                      </div>
                     </div>
                   </div>
                 </CardContent>

@@ -28,11 +28,15 @@ import lv from './locales/lv.json';
 import et from './locales/et.json';
 import ga from './locales/ga.json';
 import mt from './locales/mt.json';
+import ar from './locales/ar.json';
+import zh from './locales/zh.json';
+import ja from './locales/ja.json';
+import he from './locales/he.json';
 
 export const locales = [
   'en', 'fr', 'de', 'es', 'it', 'pt', 'nl', 'da', 'sv', 'no', 'fi',
   'el', 'pl', 'cs', 'sk', 'sl', 'hu', 'ro', 'bg', 'hr', 'lt', 'lv',
-  'et', 'ga', 'mt'
+  'et', 'ga', 'mt', 'ar', 'zh', 'ja', 'he'
 ] as const;
 
 export type Locale = typeof locales[number];
@@ -63,6 +67,10 @@ const resources = {
   et: { translation: et },
   ga: { translation: ga },
   mt: { translation: mt },
+  ar: { translation: ar },
+  zh: { translation: zh },
+  ja: { translation: ja },
+  he: { translation: he },
 };
 
 i18n

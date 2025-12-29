@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "book": "電話予約",
+    "login": "ログイン",
+    "admin": "管理者",
+    "logout": "ログアウト",
+    "ventures": "ベンチャー",
+    "studio": "スタジオ",
+    "sales": "営業",
+    "advisory": "アドバイザリー"
+  },
+  "brand": {
+    "nlgConsulting": "NLG Consulting"
+  },
+  "home": {
+    "hero_title": "世界中でプラットフォームを構築、運営、拡大",
+    "hero_subtitle": "PropTech • FinTech • メディア • AI＆オートメーション • ブロックチェーン • 営業システム",
+    "cta_book": "戦略コールを予約",
+    "cta_consultation": "ウェブサイトを立ち上げる"
+  },
+  "contact": {
+    "title": "成長目標についてお話しましょう",
+    "subtitle": "詳細をお知らせください。緊急の場合は「即時コールバック」をチェックしてください。",
+    "form_name": "お名前",
+    "form_company": "会社名",
+    "form_email": "メールアドレス",
+    "form_phone": "電話番号",
+    "form_message": "メッセージ（任意）",
+    "form_urgent": "即時コールバックをリクエスト",
+    "form_consent": "プライバシーポリシーに記載されているとおり、お問い合わせに対応する目的で個人データを処理することに同意します。",
+    "form_submit": "送信",
+    "form_submitting": "送信中...",
+    "success_title": "ありがとうございます！",
+    "success_message": "リクエストが送信されました。まもなくご連絡いたします。",
+    "success_cta": "電話を予約"
+  },
+  "book": {
+    "title": "無料相談を予約",
+    "subtitle": "15分の電話で、どのようにお手伝いできるかをご相談ください"
+  },
+  "footer": {
+    "tagline": "グローバルビジネス・テック＆グロースグループ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "rights": "全著作権所有。"
+  }
+}
