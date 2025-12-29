@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CookieConsent } from "./components/CookieConsent";
 import { LeadPopup } from "./components/LeadPopup";
+import GregoChatbot from "./components/GregoChatbot";
 
 // Lazy load pages for code splitting and better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -53,6 +54,7 @@ const App = () => (
     <BrowserRouter>
       <CookieConsent />
       <LeadPopup />
+      <GregoChatbot />
       <ScrollToTop />
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
