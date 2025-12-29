@@ -190,7 +190,7 @@ const Advisory = () => {
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
                 <Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base px-8 border-primary-foreground/30 hover:bg-primary-foreground/10">
+              <Button asChild size="lg" variant="outline-light" className="text-base px-8">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

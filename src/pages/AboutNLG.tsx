@@ -122,8 +122,21 @@ const AboutNLG = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-5 gap-12 items-start">
               <div className="md:col-span-2">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center">
-                  <Users className="w-24 h-24 text-primary/40" />
+                {/* Founder photo placeholder - replace src with actual image */}
+                <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/10 shadow-xl relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-muted/80">
+                    <Users className="w-20 h-20 text-primary/40 mb-4" />
+                    <p className="text-sm font-medium text-muted-foreground">Founder photo (Gregory Brenig)</p>
+                    <p className="text-xs text-muted-foreground/60 mt-1">Replace with uploaded image</p>
+                  </div>
+                  {/* Uncomment and add src when photo is available:
+                  <img 
+                    src="/founder-gregory-brenig.jpg" 
+                    alt="Gregory Brenig - Founder & CEO of NLG Consulting" 
+                    className="w-full h-full object-cover"
+                  />
+                  */}
                 </div>
               </div>
               <div className="md:col-span-3">

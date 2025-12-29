@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "book": "预约电话",
+    "login": "登录",
+    "admin": "管理员",
+    "logout": "登出",
+    "ventures": "投资项目",
+    "studio": "工作室",
+    "sales": "销售",
+    "advisory": "咨询"
+  },
+  "brand": {
+    "nlgConsulting": "NLG Consulting"
+  },
+  "home": {
+    "hero_title": "在全球范围内构建、运营和扩展平台",
+    "hero_subtitle": "房产科技 • 金融科技 • 媒体 • 人工智能与自动化 • 区块链 • 销售系统",
+    "cta_book": "预约策略电话",
+    "cta_consultation": "启动您的网站"
+  },
+  "contact": {
+    "title": "让我们谈谈您的增长目标",
+    "subtitle": "分享您的详细信息。如果紧急，请选择'立即回电'。",
+    "form_name": "姓名",
+    "form_company": "公司",
+    "form_email": "电子邮件",
+    "form_phone": "电话",
+    "form_message": "留言（可选）",
+    "form_urgent": "请求立即回电",
+    "form_consent": "我同意按照隐私政策中描述的方式处理我的个人数据以回复我的询问。",
+    "form_submit": "发送",
+    "form_submitting": "发送中...",
+    "success_title": "谢谢！",
+    "success_message": "您的请求已发送。我们会尽快与您联系。",
+    "success_cta": "预约电话"
+  },
+  "book": {
+    "title": "预约您的免费咨询",
+    "subtitle": "安排15分钟的电话讨论我们如何帮助您"
+  },
+  "footer": {
+    "tagline": "全球商业、技术和增长集团",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "rights": "版权所有。"
+  }
+}
