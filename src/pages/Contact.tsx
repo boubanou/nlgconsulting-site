@@ -1,14 +1,9 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
-  const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
-
-  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -49,19 +44,16 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>{t("contact.title")} - NLG Consulting</title>
-        <meta name="description" content={t("contact.subtitle")} />
+        <title>Contact Us - NLG Consulting</title>
+        <meta name="description" content="Share your details. If urgent, check 'Immediate callback'." />
         <link rel="canonical" href="https://nlgconsulting.co/contact" />
         <meta name="robots" content="index, follow" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/contact" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/contact" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/contact`} />
-        <meta property="og:title" content={`${t("contact.title")} - NLG Consulting`} />
-        <meta property="og:description" content={t("contact.subtitle")} />
+        <meta property="og:url" content="https://nlgconsulting.co/contact" />
+        <meta property="og:title" content="Contact Us - NLG Consulting" />
+        <meta property="og:description" content="Share your details. If urgent, check 'Immediate callback'." />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -75,8 +67,8 @@ const Contact = () => {
         <main className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-2xl">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("contact.title")}</h1>
-              <p className="text-xl text-muted-foreground">{t("contact.subtitle")}</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Let's talk about your growth goals</h1>
+              <p className="text-xl text-muted-foreground">Share your details. If urgent, check 'Immediate callback'.</p>
             </div>
 
             <ContactForm />

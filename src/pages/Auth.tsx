@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -28,7 +27,6 @@ const authSchema = z.object({
 type AuthFormValues = z.infer<typeof authSchema>;
 
 const Auth = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(false);
@@ -69,9 +67,9 @@ const Auth = () => {
 
       if (error) throw error;
 
-      toast.success(t("auth.login_success"));
+      toast.success("Successfully logged in");
     } catch (error: any) {
-      toast.error(t("auth.login_error"));
+      toast.error("Invalid credentials");
     } finally {
       setLoading(false);
     }
@@ -82,13 +80,13 @@ const Auth = () => {
   return (
     <>
       <Helmet>
-        <title>{t("auth.title")} - NLG Consulting</title>
+        <title>Admin Login - NLG Consulting</title>
       </Helmet>
 
       <div className="min-h-screen bg-background flex items-center justify-center px-4">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle className="text-2xl text-center">{t("auth.title")}</CardTitle>
+            <CardTitle className="text-2xl text-center">Admin Login</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -98,7 +96,7 @@ const Auth = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("auth.email")}</FormLabel>
+                      <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input type="email" {...field} />
                       </FormControl>
@@ -112,7 +110,7 @@ const Auth = () => {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("auth.password")}</FormLabel>
+                      <FormLabel>Password</FormLabel>
                       <FormControl>
                         <Input type="password" {...field} />
                       </FormControl>
@@ -122,7 +120,7 @@ const Auth = () => {
                 />
 
                 <Button type="submit" className="w-full" disabled={loading}>
-                  {loading ? t("auth.logging_in") : t("auth.login")}
+                  {loading ? "Logging in..." : "Log In"}
                 </Button>
               </form>
             </Form>

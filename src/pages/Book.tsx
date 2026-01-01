@@ -1,23 +1,18 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
 import CalendarEmbed from "@/components/CalendarEmbed";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen } from "lucide-react";
 
 const Book = () => {
-  const { t, i18n } = useTranslation();
-
-  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "name": t("book.title"),
-        "description": t("book.subtitle"),
+        "name": "Book Your Free Consultation",
+        "description": "Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings",
         "url": "https://nlgconsulting.co/book",
         "potentialAction": {
           "@type": "ReserveAction",
@@ -51,19 +46,16 @@ const Book = () => {
   return (
     <>
       <Helmet>
-        <title>{t("book.title")} - NLG Consulting</title>
-        <meta name="description" content={t("book.subtitle")} />
+        <title>Book Your Free Consultation - NLG Consulting</title>
+        <meta name="description" content="Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings" />
         <link rel="canonical" href="https://nlgconsulting.co/book" />
         <meta name="robots" content="index, follow" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/book" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/book" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/book" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://nlgconsulting.co/${i18n.language === 'fr' ? 'fr' : 'en'}/book`} />
-        <meta property="og:title" content={`${t("book.title")} - NLG Consulting`} />
-        <meta property="og:description" content={t("book.subtitle")} />
+        <meta property="og:url" content="https://nlgconsulting.co/book" />
+        <meta property="og:title" content="Book Your Free Consultation - NLG Consulting" />
+        <meta property="og:description" content="Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -77,8 +69,8 @@ const Book = () => {
         <main className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("book.title")}</h1>
-              <p className="text-xl text-muted-foreground">{t("book.subtitle")}</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Book Your Free Consultation</h1>
+              <p className="text-xl text-muted-foreground">Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings</p>
             </div>
 
             <CalendarEmbed />

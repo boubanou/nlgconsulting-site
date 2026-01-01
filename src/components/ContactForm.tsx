@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -34,7 +33,6 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const ContactForm = () => {
-  const { t, i18n } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ContactFormValues>({
@@ -61,7 +59,7 @@ const ContactForm = () => {
           company: data.company || null,
           phone: data.phone || null,
           message: data.message || null,
-          locale: i18n.language,
+          locale: "en",
           urgent: data.urgent || false,
         },
       });
@@ -70,8 +68,8 @@ const ContactForm = () => {
         throw new Error(error.message || "Failed to submit form");
       }
 
-      toast.success(t("contact.success_title"), {
-        description: t("contact.success_message"),
+      toast.success("Thank You!", {
+        description: "Your request has been sent. We'll get back to you shortly.",
       });
 
       form.reset();
@@ -95,7 +93,7 @@ const ContactForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("contact.form_name")}</FormLabel>
+                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -109,7 +107,7 @@ const ContactForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("contact.form_email")}</FormLabel>
+                  <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input type="email" {...field} />
                   </FormControl>
@@ -123,7 +121,7 @@ const ContactForm = () => {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("contact.form_company")}</FormLabel>
+                  <FormLabel>Company</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -137,7 +135,7 @@ const ContactForm = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("contact.form_phone")}</FormLabel>
+                  <FormLabel>Phone</FormLabel>
                   <FormControl>
                     <PhoneInput
                       {...field}
@@ -156,7 +154,7 @@ const ContactForm = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("contact.form_message")}</FormLabel>
+                  <FormLabel>Message (optional)</FormLabel>
                   <FormControl>
                     <Textarea {...field} rows={5} />
                   </FormControl>
@@ -174,7 +172,7 @@ const ContactForm = () => {
                     <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>{t("contact.form_urgent")}</FormLabel>
+                    <FormLabel>Request immediate callback</FormLabel>
                   </div>
                 </FormItem>
               )}
@@ -189,7 +187,7 @@ const ContactForm = () => {
                     <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>{t("contact.form_consent")}</FormLabel>
+                    <FormLabel>I consent to the processing of my personal data for the purpose of responding to my inquiry, as described in the Privacy Policy.</FormLabel>
                     <FormMessage />
                   </div>
                 </FormItem>
@@ -197,7 +195,7 @@ const ContactForm = () => {
             />
 
             <Button type="submit" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? t("contact.form_submitting") : t("contact.form_submit")}
+              {isSubmitting ? "Sending..." : "Send"}
             </Button>
           </form>
         </Form>
