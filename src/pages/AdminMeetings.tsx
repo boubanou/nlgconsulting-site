@@ -1,55 +1,34 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import AdminLayout from "@/components/admin/AdminLayout";
 import MeetingsTable from "@/components/admin/MeetingsTable";
 import { useUserRole } from "@/hooks/useUserRole";
 
 const AdminMeetings = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const { hasAccess, isLoading } = useUserRole();
 
   useEffect(() => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        navigate("/auth");
-        return;
-      }
-      // Wait for the role to be loaded before checking access
-      if (!isLoading && !hasAccess) {
-        navigate("/access-denied");
-      }
+      if (!session) { navigate("/auth"); return; }
+      if (!isLoading && !hasAccess) { navigate("/access-denied"); }
     };
-
-    // Only check auth when not loading
-    if (!isLoading) {
-      checkAuth();
-    }
+    if (!isLoading) { checkAuth(); }
   }, [navigate, hasAccess, isLoading]);
 
   if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-      </div>
-    );
+    return <div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>;
   }
 
   return (
     <>
-      <Helmet>
-        <title>{t("admin.meetings_title")} - NLG Consulting</title>
-      </Helmet>
+      <Helmet><title>Meetings - NLG Consulting</title></Helmet>
       <AdminLayout>
         <div className="space-y-6">
-          <div>
-            <h1 className="text-3xl font-bold mb-2">{t("admin.meetings_title")}</h1>
-            <p className="text-muted-foreground">{t("admin.meetings_subtitle")}</p>
-          </div>
+          <div><h1 className="text-3xl font-bold mb-2">Meetings</h1><p className="text-muted-foreground">View scheduled and completed meetings</p></div>
           <MeetingsTable />
         </div>
       </AdminLayout>

@@ -1,55 +1,34 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import AdminLayout from "@/components/admin/AdminLayout";
 import UserManagement from "@/components/admin/UserManagement";
 import { useUserRole } from "@/hooks/useUserRole";
 
 const AdminUsers = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const { isOwner, isLoading } = useUserRole();
 
   useEffect(() => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        navigate("/auth");
-        return;
-      }
-      // Wait for the role to be loaded before checking access
-      if (!isLoading && !isOwner) {
-        navigate("/access-denied");
-      }
+      if (!session) { navigate("/auth"); return; }
+      if (!isLoading && !isOwner) { navigate("/access-denied"); }
     };
-
-    // Only check auth when not loading
-    if (!isLoading) {
-      checkAuth();
-    }
+    if (!isLoading) { checkAuth(); }
   }, [navigate, isOwner, isLoading]);
 
   if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-      </div>
-    );
+    return <div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>;
   }
 
   return (
     <>
-      <Helmet>
-        <title>{t("admin.users_title")} - NLG Consulting</title>
-      </Helmet>
+      <Helmet><title>User Management - NLG Consulting</title></Helmet>
       <AdminLayout>
         <div className="space-y-6">
-          <div>
-            <h1 className="text-3xl font-bold mb-2">{t("admin.users_title")}</h1>
-            <p className="text-muted-foreground">{t("admin.users_subtitle")}</p>
-          </div>
+          <div><h1 className="text-3xl font-bold mb-2">User Management</h1><p className="text-muted-foreground">Invite and manage team members</p></div>
           <UserManagement />
         </div>
       </AdminLayout>

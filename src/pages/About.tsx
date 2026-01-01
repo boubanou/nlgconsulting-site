@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,28 +7,24 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const About = () => {
-  const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
-
   const values = [
     {
       icon: <Shield className="w-8 h-8 text-primary mb-2" />,
-      title: t("about.value1_title"),
-      description: t("about.value1_text"),
+      title: "Transparency & Trust",
+      description: "Clear reporting, honest feedback, and partnership-based relationships.",
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-primary mb-2" />,
-      title: t("about.value2_title"),
-      description: t("about.value2_text"),
+      title: "Performance & Accountability",
+      description: "We own the results. KPIs are tracked, optimized, and reported weekly.",
     },
     {
       icon: <Heart className="w-8 h-8 text-primary mb-2" />,
-      title: t("about.value3_title"),
-      description: t("about.value3_text"),
+      title: "Human-First Communication",
+      description: "No bots, no spam. Every message is crafted to start real conversations.",
     },
   ];
 
-  // Structured Data for SEO - Enhanced with BreadcrumbList
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -51,7 +46,7 @@ const About = () => {
             { "@type": "Country", "name": "Canada" },
             { "@type": "Country", "name": "Israel" }
           ],
-          "description": t("about.subtitle"),
+          "description": "Accelerating B2B & B2C growth without the overhead of hiring",
           "knowsAbout": ["B2B Lead Generation", "Sales Development", "Appointment Setting", "Multichannel Outreach"]
         }
       },
@@ -78,19 +73,16 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>{t("about.title")} - NLG Consulting</title>
-        <meta name="description" content={t("about.subtitle")} />
+        <title>Who We Are - NLG Consulting</title>
+        <meta name="description" content="Accelerating B2B & B2C growth without the overhead of hiring" />
         <link rel="canonical" href="https://nlgconsulting.co/about" />
         <meta name="robots" content="index, follow" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/en/about" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/about" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/about" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://nlgconsulting.co/${currentLang === 'fr' ? 'fr' : 'en'}/about`} />
-        <meta property="og:title" content={`${t("about.title")} - NLG Consulting`} />
-        <meta property="og:description" content={t("about.subtitle")} />
+        <meta property="og:url" content="https://nlgconsulting.co/about" />
+        <meta property="og:title" content="Who We Are - NLG Consulting" />
+        <meta property="og:description" content="Accelerating B2B & B2C growth without the overhead of hiring" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -105,29 +97,29 @@ const About = () => {
           <div className="container mx-auto max-w-4xl">
             {/* Hero */}
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t("about.title")}</h1>
-              <p className="text-xl text-muted-foreground">{t("about.subtitle")}</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Who We Are</h1>
+              <p className="text-xl text-muted-foreground">Accelerating B2B & B2C growth without the overhead of hiring</p>
             </div>
 
             {/* Bio Section */}
             <Card className="mb-12 border-primary/20">
               <CardHeader>
-                <CardTitle className="text-2xl">{t("about.bio_title")}</CardTitle>
+                <CardTitle className="text-2xl">Meet Gregory Brenig, Founder</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">{t("about.bio_intro")}</p>
-                <p className="text-muted-foreground leading-relaxed">{t("about.bio_experience")}</p>
-                <p className="text-muted-foreground leading-relaxed">{t("about.bio_approach")}</p>
+                <p className="text-muted-foreground leading-relaxed">NLG Consulting is led by Gregory Brenig, a business development specialist with 15+ years of experience across real estate, tech, and B2B SaaS.</p>
+                <p className="text-muted-foreground leading-relaxed">With operations based in Europe and Tel Aviv, Gregory has helped founders, agencies, and sales teams across France, Belgium, Switzerland, and Canada scale their revenue without the costs and risks of hiring.</p>
+                <p className="text-muted-foreground leading-relaxed">His approach combines data-driven targeting, human-first communication, and relentless execution to deliver measurable pipeline growth.</p>
               </CardContent>
             </Card>
 
             {/* Mission */}
             <Card className="mb-12 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
               <CardHeader>
-                <CardTitle className="text-2xl">{t("about.mission_title")}</CardTitle>
+                <CardTitle className="text-2xl">Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed text-lg">{t("about.mission_text")}</p>
+                <p className="text-muted-foreground leading-relaxed text-lg">We help founders, agencies, and sales teams scale faster with data-driven outreach and real human touch. Our goal: deliver qualified meetings that turn into closed deals.</p>
               </CardContent>
             </Card>
 
@@ -135,14 +127,14 @@ const About = () => {
             <div className="text-center mb-16">
               <Button asChild size="lg" variant="outline">
                 <Link to="/book">
-                  {t("about.cta1")} <ArrowRight className="ml-2 w-4 h-4" />
+                  Join our network of partners <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
             </div>
 
             {/* Values */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12">{t("about.values_title")}</h2>
+              <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {values.map((value, index) => (
                   <Card key={index} className="text-center">
@@ -162,19 +154,19 @@ const About = () => {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                   <TrendingUp className="w-10 h-10 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{t("home.track_record_title")}</h3>
+                <h3 className="text-2xl font-bold mb-4">Track Record</h3>
                 <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
                   <div>
                     <p className="text-3xl font-bold text-primary mb-1">1,500+</p>
-                    <p className="text-xs text-muted-foreground">{t("home.track_record_meetings")}</p>
+                    <p className="text-xs text-muted-foreground">1,500+ qualified meetings delivered</p>
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-primary mb-1">10+</p>
-                    <p className="text-xs text-muted-foreground">{t("home.track_record_sectors")}</p>
+                    <p className="text-xs text-muted-foreground">10+ B2B sectors</p>
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-primary mb-1">4</p>
-                    <p className="text-xs text-muted-foreground">{t("home.track_record_regions")}</p>
+                    <p className="text-xs text-muted-foreground">FR, BE, CH, CA markets</p>
                   </div>
                 </div>
               </div>
@@ -182,10 +174,10 @@ const About = () => {
 
             {/* Final CTA */}
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-6">{t("about.cta2")}</h2>
+              <h2 className="text-3xl font-bold mb-6">Let's discuss your sales goals</h2>
               <Button asChild size="lg" className="text-lg px-8">
                 <Link to="/book">
-                  {t("home.cta_book")} <ArrowRight className="ml-2 w-5 h-5" />
+                  Book a 15-min call <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
             </div>

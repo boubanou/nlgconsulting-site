@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +11,6 @@ import MeetingsTable from "@/components/admin/MeetingsTable";
 import CallbacksTable from "@/components/admin/CallbacksTable";
 
 const Admin = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
@@ -24,9 +22,7 @@ const Admin = () => {
       if (!session) navigate("/auth");
     });
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
       if (!session) navigate("/auth");
     });
@@ -47,7 +43,7 @@ const Admin = () => {
   return (
     <>
       <Helmet>
-        <title>{t("admin.title")} - NLG Consulting</title>
+        <title>Admin Dashboard - NLG Consulting</title>
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -56,30 +52,20 @@ const Admin = () => {
         <main className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-7xl">
             <div className="flex justify-between items-center mb-8">
-              <h1 className="text-4xl font-bold">{t("admin.title")}</h1>
-              <Button onClick={handleLogout} variant="outline">
-                {t("nav.logout")}
-              </Button>
+              <h1 className="text-4xl font-bold">Admin Dashboard</h1>
+              <Button onClick={handleLogout} variant="outline">Logout</Button>
             </div>
 
             <Tabs defaultValue="leads" className="space-y-4">
               <TabsList>
-                <TabsTrigger value="leads">{t("admin.leads_title")}</TabsTrigger>
-                <TabsTrigger value="meetings">{t("admin.meetings_title")}</TabsTrigger>
-                <TabsTrigger value="callbacks">{t("admin.callbacks_title")}</TabsTrigger>
+                <TabsTrigger value="leads">Leads</TabsTrigger>
+                <TabsTrigger value="meetings">Meetings</TabsTrigger>
+                <TabsTrigger value="callbacks">Callbacks</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="leads">
-                <LeadsTable />
-              </TabsContent>
-
-              <TabsContent value="meetings">
-                <MeetingsTable />
-              </TabsContent>
-
-              <TabsContent value="callbacks">
-                <CallbacksTable />
-              </TabsContent>
+              <TabsContent value="leads"><LeadsTable /></TabsContent>
+              <TabsContent value="meetings"><MeetingsTable /></TabsContent>
+              <TabsContent value="callbacks"><CallbacksTable /></TabsContent>
             </Tabs>
           </div>
         </main>
