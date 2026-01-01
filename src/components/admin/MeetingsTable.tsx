@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -24,7 +23,6 @@ import {
 } from "@/components/ui/sheet";
 
 const MeetingsTable = () => {
-  const { t } = useTranslation();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   
@@ -60,8 +58,8 @@ const MeetingsTable = () => {
         () => {
           queryClient.invalidateQueries({ queryKey: ["meetings"] });
           toast({
-            title: t("admin.new_meeting"),
-            description: t("admin.meeting_booked"),
+            title: "New Meeting",
+            description: "A meeting has been booked",
           });
         }
       )
@@ -70,7 +68,7 @@ const MeetingsTable = () => {
     return () => {
       supabase.removeChannel(channel);
     };
-  }, [queryClient, t, toast]);
+  }, [queryClient, toast]);
 
   const updateMeetingMutation = useMutation({
     mutationFn: async ({ id, updates }: { id: string; updates: any }) => {
@@ -83,15 +81,15 @@ const MeetingsTable = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["meetings"] });
       toast({
-        title: t("admin.success"),
-        description: t("admin.meeting_updated"),
+        title: "Success",
+        description: "Meeting updated successfully",
       });
       setIsDrawerOpen(false);
     },
     onError: () => {
       toast({
-        title: t("admin.error"),
-        description: t("admin.update_failed"),
+        title: "Error",
+        description: "Failed to update meeting",
         variant: "destructive",
       });
     },
@@ -134,7 +132,7 @@ const MeetingsTable = () => {
       <div className="relative max-w-sm">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
-          placeholder={t("admin.search_meetings")}
+          placeholder="Search meetings..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-10"
@@ -146,13 +144,13 @@ const MeetingsTable = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>{t("admin.attendee_name")}</TableHead>
-              <TableHead>{t("admin.email")}</TableHead>
-              <TableHead>{t("admin.start_time")}</TableHead>
-              <TableHead>{t("admin.end_time")}</TableHead>
-              <TableHead>{t("admin.duration")}</TableHead>
-              <TableHead>{t("admin.notes")}</TableHead>
-              <TableHead className="text-right">{t("admin.actions")}</TableHead>
+              <TableHead>Attendee Name</TableHead>
+              <TableHead>Email</TableHead>
+              <TableHead>Start Time</TableHead>
+              <TableHead>End Time</TableHead>
+              <TableHead>Duration</TableHead>
+              <TableHead>Notes</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -207,7 +205,7 @@ const MeetingsTable = () => {
             ) : (
               <TableRow>
                 <TableCell colSpan={7} className="text-center text-muted-foreground py-12">
-                  {t("admin.no_data")}
+                  No data available
                 </TableCell>
               </TableRow>
             )}
@@ -219,27 +217,27 @@ const MeetingsTable = () => {
       <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
         <SheetContent className="w-full sm:max-w-lg">
           <SheetHeader>
-            <SheetTitle>{t("admin.meeting_details")}</SheetTitle>
+            <SheetTitle>Meeting Details</SheetTitle>
           </SheetHeader>
           {selectedMeeting && (
             <div className="space-y-6 mt-6">
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.attendee_name")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">Attendee Name</p>
                   <p className="font-medium">{selectedMeeting.attendee_name}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.email")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">Email</p>
                   <p className="font-medium">{selectedMeeting.attendee_email}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.start_time")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">Start Time</p>
                   <p className="text-sm">
                     {new Date(selectedMeeting.start_ts).toLocaleString()}
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.end_time")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">End Time</p>
                   <p className="text-sm">
                     {new Date(selectedMeeting.end_ts).toLocaleString()}
                   </p>
@@ -255,15 +253,15 @@ const MeetingsTable = () => {
               </div>
 
               <div className="space-y-2">
-                <p className="text-sm font-medium">{t("admin.notes")}</p>
+                <p className="text-sm font-medium">Notes</p>
                 <Textarea
                   value={editedNotes}
                   onChange={(e) => setEditedNotes(e.target.value)}
                   rows={6}
-                  placeholder={t("admin.add_meeting_notes")}
+                  placeholder="Add meeting notes..."
                 />
                 <Button onClick={handleSaveNotes} className="w-full">
-                  {t("admin.save_notes")}
+                  Save Notes
                 </Button>
               </div>
             </div>

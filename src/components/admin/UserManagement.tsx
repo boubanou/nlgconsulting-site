@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useUserRole, UserRole } from "@/hooks/useUserRole";
@@ -14,7 +13,6 @@ import { UserPlus, Trash2, Mail } from "lucide-react";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 
 const UserManagement = () => {
-  const { t } = useTranslation();
   const { isOwner } = useUserRole();
   const queryClient = useQueryClient();
   
@@ -62,12 +60,12 @@ const UserManagement = () => {
       return authData;
     },
     onSuccess: () => {
-      toast.success(t("admin.user_invited"));
+      toast.success("User invited successfully");
       setNewUserEmail("");
       queryClient.invalidateQueries({ queryKey: ["allUserRoles"] });
     },
     onError: (error: any) => {
-      toast.error(error.message || t("admin.invite_failed"));
+      toast.error(error.message || "Failed to invite user");
     },
   });
 
@@ -82,11 +80,11 @@ const UserManagement = () => {
       if (error) throw error;
     },
     onSuccess: () => {
-      toast.success(t("admin.user_removed"));
+      toast.success("User removed successfully");
       queryClient.invalidateQueries({ queryKey: ["allUserRoles"] });
     },
     onError: (error: any) => {
-      toast.error(error.message || t("admin.remove_failed"));
+      toast.error(error.message || "Failed to remove user");
     },
   });
 
@@ -101,11 +99,11 @@ const UserManagement = () => {
       if (error) throw error;
     },
     onSuccess: () => {
-      toast.success(t("admin.role_updated"));
+      toast.success("Role updated successfully");
       queryClient.invalidateQueries({ queryKey: ["allUserRoles"] });
     },
     onError: (error: any) => {
-      toast.error(error.message || t("admin.update_failed"));
+      toast.error(error.message || "Failed to update role");
     },
   });
 
@@ -113,8 +111,8 @@ const UserManagement = () => {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>{t("admin.access_denied")}</CardTitle>
-          <CardDescription>{t("admin.owner_only_feature")}</CardDescription>
+          <CardTitle>Access Denied</CardTitle>
+          <CardDescription>Only owners can access this feature</CardDescription>
         </CardHeader>
       </Card>
     );
@@ -122,7 +120,7 @@ const UserManagement = () => {
 
   const handleInvite = () => {
     if (!newUserEmail || !newUserRole) {
-      toast.error(t("admin.fill_all_fields"));
+      toast.error("Please fill in all fields");
       return;
     }
     inviteMutation.mutate({ email: newUserEmail, role: newUserRole });
@@ -133,15 +131,15 @@ const UserManagement = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <UserPlus className="h-5 w-5" />
-          {t("admin.user_management")}
+          User Management
         </CardTitle>
-        <CardDescription>{t("admin.manage_team_access")}</CardDescription>
+        <CardDescription>Manage team access and permissions</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         {/* Invite Form */}
         <div className="flex flex-col sm:flex-row gap-3">
           <Input
-            placeholder={t("admin.email_placeholder")}
+            placeholder="Enter email address"
             type="email"
             value={newUserEmail}
             onChange={(e) => setNewUserEmail(e.target.value)}
@@ -152,13 +150,13 @@ const UserManagement = () => {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="agent">{t("admin.role_agent")}</SelectItem>
-              <SelectItem value="owner">{t("admin.role_owner")}</SelectItem>
+              <SelectItem value="agent">Agent</SelectItem>
+              <SelectItem value="owner">Owner</SelectItem>
             </SelectContent>
           </Select>
           <Button onClick={handleInvite} disabled={inviteMutation.isPending}>
             <Mail className="h-4 w-4 mr-2" />
-            {t("admin.invite")}
+            Invite
           </Button>
         </div>
 
@@ -166,16 +164,16 @@ const UserManagement = () => {
         <div className="border rounded-lg">
           {isLoading ? (
             <div className="p-8 text-center text-muted-foreground">
-              {t("admin.loading")}
+              Loading...
             </div>
           ) : userRoles && userRoles.length > 0 ? (
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>{t("admin.user_id")}</TableHead>
-                  <TableHead>{t("admin.role")}</TableHead>
-                  <TableHead>{t("admin.created_at")}</TableHead>
-                  <TableHead className="text-right">{t("admin.actions")}</TableHead>
+                  <TableHead>User ID</TableHead>
+                  <TableHead>Role</TableHead>
+                  <TableHead>Created At</TableHead>
+                  <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -199,10 +197,10 @@ const UserManagement = () => {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="agent">
-                            <Badge variant="secondary">{t("admin.role_agent")}</Badge>
+                            <Badge variant="secondary">Agent</Badge>
                           </SelectItem>
                           <SelectItem value="owner">
-                            <Badge variant="default">{t("admin.role_owner")}</Badge>
+                            <Badge variant="default">Owner</Badge>
                           </SelectItem>
                         </SelectContent>
                       </Select>
@@ -219,17 +217,17 @@ const UserManagement = () => {
                         </AlertDialogTrigger>
                         <AlertDialogContent>
                           <AlertDialogHeader>
-                            <AlertDialogTitle>{t("admin.confirm_remove")}</AlertDialogTitle>
+                            <AlertDialogTitle>Confirm Removal</AlertDialogTitle>
                             <AlertDialogDescription>
-                              {t("admin.remove_user_warning")}
+                              This will remove the user's access. This action cannot be undone.
                             </AlertDialogDescription>
                           </AlertDialogHeader>
                           <AlertDialogFooter>
-                            <AlertDialogCancel>{t("admin.cancel")}</AlertDialogCancel>
+                            <AlertDialogCancel>Cancel</AlertDialogCancel>
                             <AlertDialogAction
                               onClick={() => deleteMutation.mutate(userRole.user_id)}
                             >
-                              {t("admin.remove")}
+                              Remove
                             </AlertDialogAction>
                           </AlertDialogFooter>
                         </AlertDialogContent>
@@ -241,7 +239,7 @@ const UserManagement = () => {
             </Table>
           ) : (
             <div className="p-8 text-center text-muted-foreground">
-              {t("admin.no_users")}
+              No users found
             </div>
           )}
         </div>

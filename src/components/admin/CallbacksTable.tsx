@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Clock, User, Loader2, GripVertical } from "lucide-react";
+import { Phone, Clock, Loader2 } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -16,7 +15,6 @@ import {
 } from "@/components/ui/sheet";
 
 const CallbacksTable = () => {
-  const { t } = useTranslation();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [selectedCallback, setSelectedCallback] = useState<any>(null);
@@ -69,14 +67,14 @@ const CallbacksTable = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["callbacks"] });
       toast({
-        title: t("admin.success"),
-        description: t("admin.callback_updated"),
+        title: "Success",
+        description: "Callback updated successfully",
       });
     },
     onError: () => {
       toast({
-        title: t("admin.error"),
-        description: t("admin.update_failed"),
+        title: "Error",
+        description: "Failed to update callback",
         variant: "destructive",
       });
     },
@@ -105,10 +103,10 @@ const CallbacksTable = () => {
   };
 
   const statusColumns = [
-    { key: "New", label: t("admin.callback_new"), variant: "default" as const },
-    { key: "Attempted", label: t("admin.callback_attempted"), variant: "secondary" as const },
-    { key: "Reached", label: t("admin.callback_reached"), variant: "outline" as const },
-    { key: "Closed", label: t("admin.callback_closed"), variant: "outline" as const },
+    { key: "New", label: "New", variant: "default" as const },
+    { key: "Attempted", label: "Attempted", variant: "secondary" as const },
+    { key: "Reached", label: "Reached", variant: "outline" as const },
+    { key: "Closed", label: "Closed", variant: "outline" as const },
   ];
 
   const getCallbacksByStatus = (status: string) => {
@@ -170,7 +168,7 @@ const CallbacksTable = () => {
                 ))}
                 {columnCallbacks.length === 0 && (
                   <div className="text-center p-8 text-sm text-muted-foreground border-2 border-dashed rounded-lg">
-                    {t("admin.no_callbacks")}
+                    No callbacks
                   </div>
                 )}
               </div>
@@ -183,23 +181,23 @@ const CallbacksTable = () => {
       <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
         <SheetContent className="w-full sm:max-w-lg">
           <SheetHeader>
-            <SheetTitle>{t("admin.callback_details")}</SheetTitle>
+            <SheetTitle>Callback Details</SheetTitle>
           </SheetHeader>
           {selectedCallback && (
             <div className="space-y-6 mt-6">
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.phone")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">Phone</p>
                   <p className="font-medium text-lg">{selectedCallback.phone}</p>
                 </div>
                 {selectedCallback.timezone && (
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">{t("admin.timezone")}</p>
+                    <p className="text-xs text-muted-foreground mb-1">Timezone</p>
                     <p className="font-medium">{selectedCallback.timezone}</p>
                   </div>
                 )}
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.status")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">Status</p>
                   <div className="flex gap-2 flex-wrap">
                     {statusColumns.map((status) => (
                       <Button
@@ -214,21 +212,21 @@ const CallbacksTable = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">{t("admin.created")}</p>
+                  <p className="text-xs text-muted-foreground mb-1">Created</p>
                   <p className="text-sm">{new Date(selectedCallback.created_at).toLocaleString()}</p>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <p className="text-sm font-medium">{t("admin.note")}</p>
+                <p className="text-sm font-medium">Note</p>
                 <Textarea
                   value={editedNote}
                   onChange={(e) => setEditedNote(e.target.value)}
                   rows={6}
-                  placeholder={t("admin.add_note")}
+                  placeholder="Add a note..."
                 />
                 <Button onClick={handleSaveNote} className="w-full">
-                  {t("admin.save_note")}
+                  Save Note
                 </Button>
               </div>
             </div>
