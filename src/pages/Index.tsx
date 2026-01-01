@@ -277,6 +277,51 @@ const Index = () => {
           </div>
         </section>
 
+        {/* SEO Content Section - Why Choose NLG */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                  {currentLang === 'fr' 
+                    ? "Pourquoi externaliser votre prospection commerciale ?"
+                    : "Why Outsource Your Sales Prospecting?"}
+                </h2>
+                <div className="prose prose-lg text-muted-foreground space-y-4">
+                  <p>
+                    {currentLang === 'fr'
+                      ? "La prospection commerciale est le moteur de croissance de toute entreprise B2B. Pourtant, la plupart des équipes commerciales passent plus de 60% de leur temps sur des tâches non génératrices de revenus : recherche de prospects, qualification, relances, et administration CRM."
+                      : "Sales prospecting is the growth engine of every B2B company. Yet most sales teams spend over 60% of their time on non-revenue generating tasks: prospect research, qualification, follow-ups, and CRM administration."}
+                  </p>
+                  <p>
+                    {currentLang === 'fr'
+                      ? "NLG Consulting vous permet de transformer cette réalité. Notre équipe dédiée de SDR (Sales Development Representatives) prend en charge l'intégralité de votre prospection : identification des décideurs, séquences multicanales personnalisées, qualification approfondie, et prise de rendez-vous directement dans votre agenda."
+                      : "NLG Consulting transforms this reality. Our dedicated team of Sales Development Representatives handles your entire prospecting process: decision-maker identification, personalized multichannel sequences, in-depth qualification, and appointment setting directly in your calendar."}
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: <Shield className="w-6 h-6" />, title: currentLang === 'fr' ? "Résultats garantis" : "Guaranteed Results", desc: currentLang === 'fr' ? "15-30 RDV qualifiés par mois" : "15-30 qualified meetings per month" },
+                  { icon: <Globe className="w-6 h-6" />, title: currentLang === 'fr' ? "Multicanal" : "Multichannel", desc: currentLang === 'fr' ? "LinkedIn, email, téléphone" : "LinkedIn, email, phone" },
+                  { icon: <Users className="w-6 h-6" />, title: currentLang === 'fr' ? "Équipe dédiée" : "Dedicated Team", desc: currentLang === 'fr' ? "SDR formés à votre offre" : "SDRs trained on your offer" },
+                  { icon: <TrendingUp className="w-6 h-6" />, title: currentLang === 'fr' ? "ROI rapide" : "Fast ROI", desc: currentLang === 'fr' ? "Résultats dès le 1er mois" : "Results from month 1" }
+                ].map((item, i) => (
+                  <Card key={i}>
+                    <CardContent className="pt-6 text-center">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 text-primary mx-auto">
+                        {item.icon}
+                      </div>
+                      <h3 className="font-semibold mb-1">{item.title}</h3>
+                      <p className="text-xs text-muted-foreground">{item.desc}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* How It Works Section */}
         <section className="py-12 sm:py-20 px-4 bg-secondary/5">
           <div className="container mx-auto max-w-6xl">
@@ -311,6 +356,71 @@ const Index = () => {
                   <p className="text-sm sm:text-base text-muted-foreground">{t("home.step3_desc")}</p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Mid-page CTA */}
+        <section className="py-16 px-4 bg-primary text-primary-foreground">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              {currentLang === 'fr' 
+                ? "Prêt à accélérer votre croissance ?"
+                : "Ready to Accelerate Your Growth?"}
+            </h2>
+            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+              {currentLang === 'fr'
+                ? "Réservez un appel stratégique gratuit de 15 minutes pour discuter de vos objectifs commerciaux."
+                : "Book a free 15-minute strategy call to discuss your business objectives."}
+            </p>
+            <Button asChild size="lg" variant="secondary">
+              <Link to="/book">
+                {t("home.cta_book")} <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* SEO Content - Services Overview */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                {currentLang === 'fr' 
+                  ? "Une approche multicanale pour des résultats maximaux"
+                  : "A Multichannel Approach for Maximum Results"}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                {currentLang === 'fr'
+                  ? "Notre méthodologie combine trois canaux complémentaires pour atteindre vos prospects là où ils sont les plus réceptifs."
+                  : "Our methodology combines three complementary channels to reach your prospects where they're most receptive."}
+              </p>
+            </div>
+            <div className="prose prose-lg text-muted-foreground max-w-4xl mx-auto">
+              <h3 className="text-xl font-semibold text-foreground">
+                {currentLang === 'fr' ? "LinkedIn Outreach B2B" : "B2B LinkedIn Outreach"}
+              </h3>
+              <p>
+                {currentLang === 'fr'
+                  ? "LinkedIn est le réseau social professionnel numéro 1 pour la prospection B2B. Nos experts créent des séquences de connexion et de messaging personnalisées qui génèrent des conversations authentiques avec vos décideurs cibles. Taux de réponse moyen : 25-35%."
+                  : "LinkedIn is the #1 professional social network for B2B prospecting. Our experts create personalized connection and messaging sequences that generate authentic conversations with your target decision-makers. Average response rate: 25-35%."}
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">
+                {currentLang === 'fr' ? "Cold Email Personnalisé" : "Personalized Cold Email"}
+              </h3>
+              <p>
+                {currentLang === 'fr'
+                  ? "L'email reste le canal le plus scalable pour la prospection B2B. Nous construisons des séquences d'emails hyper-personnalisées, avec des variables dynamiques, des tests A/B continus, et un suivi rigoureux des métriques. Délivrabilité garantie à 95%+."
+                  : "Email remains the most scalable channel for B2B prospecting. We build hyper-personalized email sequences with dynamic variables, continuous A/B testing, and rigorous metric tracking. Deliverability guaranteed at 95%+."}
+              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-8">
+                {currentLang === 'fr' ? "Appels SDR Qualifiés" : "Qualified SDR Calls"}
+              </h3>
+              <p>
+                {currentLang === 'fr'
+                  ? "Pour les prospects les plus chauds, rien ne remplace un appel humain. Nos SDR sont formés à votre offre et utilisent des scripts de qualification éprouvés pour convertir l'intérêt en rendez-vous concrets. Chaque appel est enregistré et analysé pour optimisation continue."
+                  : "For the hottest prospects, nothing beats a human call. Our SDRs are trained on your offer and use proven qualification scripts to convert interest into concrete appointments. Every call is recorded and analyzed for continuous optimization."}
+              </p>
             </div>
           </div>
         </section>

@@ -96,16 +96,46 @@ const Advisory = () => {
               Advisory
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Strategic Guidance for Growth
+              Strategic Business Advisory for Founders and Executives
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Expert advisory on business structuring, go-to-market, monetization, scaling, and technology transformation.
+              Expert advisory on business structuring, go-to-market strategy, monetization, scaling operations, and technology transformation.
             </p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/book">
                 Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
+          </div>
+        </section>
+
+        {/* SEO Content - Advisory Introduction */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Strategic Advisory That Drives Real Results</h2>
+              <p>
+                Most consulting engagements end with a strategy deck and a handshake. Months later, that deck sits unused while the same problems persist. We take a fundamentally different approach.
+              </p>
+              <p>
+                NLG Consulting's advisory practice is built around execution, not slides. Every strategy session includes actionable next steps, accountability frameworks, and optional implementation support. We work alongside you as a thinking partner, not an outside observer.
+              </p>
+              <p>
+                Our advisors bring diverse, hands-on experience from building and scaling companies across PropTech, FinTech, Media, and Technology. We've faced the same challenges you're facing—fundraising, go-to-market, team building, scaling operations—and we've developed frameworks that work in the real world.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Who Benefits From Strategic Advisory</h3>
+              <p>
+                Our advisory services are designed for founders and executives who are facing inflection points—moments that require external perspective and expertise. Common scenarios include:
+              </p>
+              <ul>
+                <li>Launching a new product or entering a new market</li>
+                <li>Scaling from startup to growth stage</li>
+                <li>Preparing for fundraising or M&A</li>
+                <li>Restructuring operations for efficiency</li>
+                <li>Building or transforming technology infrastructure</li>
+                <li>Developing go-to-market and monetization strategies</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -173,6 +203,30 @@ const Advisory = () => {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content - Working with Us */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">What Sets Our Advisory Apart</h2>
+              <p>
+                Traditional consultants observe from the outside and recommend changes. We've built companies ourselves, so we understand the real challenges of execution—not just the theory.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Operator Experience</h3>
+              <p>
+                Our advisory team includes founders who've built and exited companies, executives who've scaled startups to significant revenue, and operators who've built sales, marketing, and product functions from scratch. This isn't theoretical knowledge—it's battle-tested experience.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Implementation Support</h3>
+              <p>
+                Unlike traditional advisors who leave you with a strategy to implement on your own, we offer optional implementation support through our service divisions. Need a sales team? Our SDR services can help. Need a website? NLG Studio delivers in 72 hours. This integration between strategy and execution is unique to NLG.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global Perspective</h3>
+              <p>
+                With experience across Europe, North America, and the Middle East, we bring global perspective to local challenges. Whether you're expanding internationally or optimizing your home market, we have relevant insights.
+              </p>
             </div>
           </div>
         </section>

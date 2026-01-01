@@ -77,6 +77,34 @@ const AboutNLG = () => {
           </div>
         </section>
 
+        {/* SEO Content - Who We Are */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Who We Are: The Story Behind NLG Consulting</h2>
+              <p>
+                Founded in 2020, NLG Consulting emerged from a simple observation: most businesses struggle to bridge the gap between strategy and execution. Traditional consulting firms deliver beautiful slide decks that gather dust. We wanted to do things differently.
+              </p>
+              <p>
+                NLG stands for "Next Level Growth"—a commitment we make to every client and every venture we touch. We're not just consultants; we're builders, operators, and investors who put skin in the game. Our team has collectively launched over 20 platforms, generated millions in revenue for clients, and built a portfolio of companies across PropTech, FinTech, Media, and Technology.
+              </p>
+              <p>
+                What sets us apart is our execution-first philosophy. We don't just advise—we implement. Whether it's building a complete sales infrastructure from scratch, launching a revenue-ready website in 72 hours, or providing strategic guidance to scale your business, we work alongside you as partners, not vendors.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Our Core Values</h3>
+              <p>
+                <strong>Discipline:</strong> We believe in rigorous processes, consistent execution, and holding ourselves to the highest standards. Every project follows our proven methodologies refined through years of client work.
+              </p>
+              <p>
+                <strong>Speed:</strong> In today's market, speed is a competitive advantage. We move fast, learn faster, and deliver on time. Our 72-hour website service exemplifies this commitment to rapid execution.
+              </p>
+              <p>
+                <strong>Excellence:</strong> Good enough is never good enough. We aim for world-class standards in everything we do—from the quality of leads we generate to the design of platforms we build.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* What is NLG */}
         <section className="py-20 px-4 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
@@ -192,8 +220,35 @@ const AboutNLG = () => {
           </div>
         </section>
 
+        {/* SEO Content - Our Approach */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Our Approach to Business Growth</h2>
+              <p>
+                At NLG Consulting, we believe that sustainable business growth comes from three pillars: strategic clarity, operational excellence, and relentless execution. Here's how we apply this framework across our services:
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Sales & Lead Generation</h3>
+              <p>
+                Our outsourced sales development services help B2B companies generate 15-30 qualified meetings per month through multichannel prospecting. We handle everything from ideal customer profile definition to appointment setting, allowing your sales team to focus on closing deals.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Website & Technology</h3>
+              <p>
+                Through NLG Studio, we build revenue-ready websites in under 72 hours. Each website includes UX/UI design, conversion-optimized copywriting, SEO, CRM integration, and payment processing. Our clients typically see a 3x improvement in conversion rates.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Strategic Advisory</h3>
+              <p>
+                For founders and executives who need high-level guidance, our advisory services cover business structuring, go-to-market strategy, monetization, scaling, and technology transformation. We work with you as a strategic partner, not just an outside consultant.
+              </p>
+              <p className="mt-8">
+                Ready to take your business to the next level? Book a free strategy call to discuss your goals and see how NLG Consulting can help you achieve them.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-muted/30">
           <div className="container mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold mb-4">Let's Build Together</h2>
             <p className="text-lg text-muted-foreground mb-8">
