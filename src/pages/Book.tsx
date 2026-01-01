@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import MainNavbar from "@/components/MainNavbar";
+import MainFooter from "@/components/MainFooter";
 import CalendarEmbed from "@/components/CalendarEmbed";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 const Book = () => {
   const { t, i18n } = useTranslation();
@@ -69,7 +72,7 @@ const Book = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navbar />
+        <MainNavbar />
 
         <main className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-4xl">
@@ -79,10 +82,24 @@ const Book = () => {
             </div>
 
             <CalendarEmbed />
+
+            {/* Book CTA */}
+            <div className="mt-16 text-center p-8 bg-muted/30 rounded-2xl">
+              <BookOpen className="w-12 h-12 mx-auto mb-4 text-primary" />
+              <h2 className="text-2xl font-bold mb-2">Read the Book</h2>
+              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+                Get strategic insights from Gregory Brenig's book on building and scaling businesses.
+              </p>
+              <Button asChild size="lg">
+                <a href="https://a.co/d/3wU4Qgc" target="_blank" rel="noopener noreferrer">
+                  Buy on Amazon <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
+            </div>
           </div>
         </main>
 
-        <Footer />
+        <MainFooter />
       </div>
     </>
   );

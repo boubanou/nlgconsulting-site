@@ -42,8 +42,7 @@ const Ventures = () => {
       name: "FractionalPropertyHub",
       type: "Marketplace & Lead Generation",
       icon: <Globe className="w-8 h-8" />,
-      logo: null, // Placeholder - add logo when available
-      logoPlaceholder: "FPH",
+      logo: "/brands/fractionalpropertyhub.png",
       description: "A marketplace connecting investors with fractional real estate opportunities. Lead generation engine for property developers and investment platforms.",
       why: "Investors struggle to find vetted fractional opportunities. Developers need qualified leads.",
       role: "Built and scaled by NLG as a lead-gen and marketplace play.",
@@ -63,8 +62,7 @@ const Ventures = () => {
       name: "STEAD",
       type: "Sports & Lifestyle Brand",
       icon: <Dumbbell className="w-8 h-8" />,
-      logo: null, // Placeholder - add logo when available
-      logoPlaceholder: "STEAD",
+      logo: "/brands/stead.png",
       description: "A sports and lifestyle brand focused on performance, discipline, and quality. Apparel and community for athletes and active professionals.",
       why: "Lifestyle reflects mindset. STEAD embodies the discipline and excellence we value.",
       role: "Brand development and operations by NLG.",
@@ -117,10 +115,6 @@ const Ventures = () => {
                     <div className="bg-muted/50 p-8 flex flex-col items-center justify-center text-center">
                       {venture.logo ? (
                         <img src={venture.logo} alt={venture.name} className="h-16 w-auto mb-4 object-contain" />
-                      ) : venture.logoPlaceholder ? (
-                        <div className="w-16 h-16 rounded-xl bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold mb-4">
-                          {venture.logoPlaceholder}
-                        </div>
                       ) : (
                         <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
                           {venture.icon}

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import MainNavbar from "@/components/MainNavbar";
+import MainFooter from "@/components/MainFooter";
 
 const PrivacyPolicy = () => {
   const { t, i18n } = useTranslation();
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
         </script>
       </Helmet>
 
-      <Navbar />
+      <MainNavbar />
       
       <main className="min-h-screen bg-gradient-to-b from-background to-accent/5">
         <div className="container max-w-4xl mx-auto px-4 pt-24 md:pt-32 pb-16">
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
         </div>
       </main>
 
-      <Footer />
+      <MainFooter />
     </>
   );
 };
