@@ -8,10 +8,10 @@ const WebThankYou = () => {
   return (
     <>
       <Helmet>
-        <title>Merci pour votre paiement | NLG Consulting</title>
+        <title>Thank You for Your Payment | NLG Consulting</title>
         <meta 
           name="description" 
-          content="Votre paiement a été reçu. Notre équipe vous contactera sous 24 heures pour lancer votre projet de site internet." 
+          content="Your payment has been received. Our team will contact you within 24 hours to launch your website project." 
         />
         <link rel="canonical" href="https://web.nlgconsulting.co/thank-you" />
       </Helmet>
@@ -26,37 +26,37 @@ const WebThankYou = () => {
               </div>
               
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Merci pour votre paiement
+                Thank You for Your Payment
               </h1>
               
               <p className="text-lg text-muted-foreground mb-8">
-                Notre équipe vous contactera sous 24 heures pour lancer votre projet.
+                Our team will contact you within 24 hours to launch your project.
               </p>
               
               <div className="bg-muted/50 rounded-lg p-6 mb-8">
-                <h2 className="text-lg font-semibold text-foreground mb-3">Prochaines étapes</h2>
+                <h2 className="text-lg font-semibold text-foreground mb-3">Next Steps</h2>
                 <ul className="text-left text-muted-foreground space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold">1.</span>
-                    Vous recevrez un email de confirmation avec votre facture
+                    You will receive a confirmation email with your invoice
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold">2.</span>
-                    Un membre de notre équipe vous contactera sous 24h
+                    A team member will contact you within 24 hours
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold">3.</span>
-                    Brief de 30 minutes pour définir votre projet
+                    30-minute brief to define your project
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary font-bold">4.</span>
-                    Première version de votre site sous quelques jours
+                    First version of your website within a few days
                   </li>
                 </ul>
               </div>
               
               <p className="text-muted-foreground mb-6">
-                Vous souhaitez planifier votre appel dès maintenant ?
+                Would you like to schedule your call now?
               </p>
               
               <Button 
@@ -65,7 +65,7 @@ const WebThankYou = () => {
                 onClick={() => window.open("https://calendly.com/greg-nlgconsulting/15min", "_blank")}
               >
                 <Calendar className="w-5 h-5" />
-                Planifier un appel
+                Schedule a Call
               </Button>
             </div>
           </div>

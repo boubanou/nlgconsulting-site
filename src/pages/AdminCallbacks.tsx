@@ -1,14 +1,12 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import AdminLayout from "@/components/admin/AdminLayout";
 import CallbacksTable from "@/components/admin/CallbacksTable";
 import { useUserRole } from "@/hooks/useUserRole";
 
 const AdminCallbacks = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const { hasAccess, isLoading } = useUserRole();
 
@@ -42,13 +40,13 @@ const AdminCallbacks = () => {
   return (
     <>
       <Helmet>
-        <title>{t("admin.callbacks_title")} - NLG Consulting</title>
+        <title>Callbacks - NLG Consulting</title>
       </Helmet>
       <AdminLayout>
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-bold mb-2">{t("admin.callbacks_title")}</h1>
-            <p className="text-muted-foreground">{t("admin.callbacks_subtitle")}</p>
+            <h1 className="text-3xl font-bold mb-2">Callbacks</h1>
+            <p className="text-muted-foreground">Manage callback requests from visitors</p>
           </div>
           <CallbacksTable />
         </div>
