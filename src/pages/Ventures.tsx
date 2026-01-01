@@ -97,11 +97,29 @@ const Ventures = () => {
               Portfolio
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Ventures & Brands
+              Ventures & Brands We Build and Scale
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Platforms and brands we've built, operate, and scale across PropTech, FinTech, Media, and Lifestyle.
             </p>
+          </div>
+        </section>
+
+        {/* SEO Content - Portfolio Introduction */}
+        <section className="py-12 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Building the Future of Technology and Business</h2>
+              <p>
+                NLG Consulting operates as both a consulting firm and a venture studio. Unlike traditional consulting companies that only advise, we put capital, resources, and operational expertise into building and scaling our own portfolio of companies. This unique positioning gives us hands-on experience that directly benefits our consulting clients.
+              </p>
+              <p>
+                Our venture portfolio spans four key sectors: PropTech (property technology), FinTech (financial technology), Media, and Lifestyle. Each venture is carefully selected based on market opportunity, alignment with our expertise, and potential for significant impact. We take a long-term approach, focusing on sustainable growth over quick exits.
+              </p>
+              <p>
+                What makes our venture approach unique is the synergy between our portfolio companies and our consulting services. Lessons learned from building Block Tech inform our advisory work with other PropTech startups. The media strategies we develop for Business Legend are applied to help clients build their brand presence. This cross-pollination creates a virtuous cycle of learning and improvement.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -155,6 +173,30 @@ const Ventures = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        {/* SEO Content - Investment Philosophy */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Our Investment and Operating Philosophy</h2>
+              <p>
+                Each venture in our portfolio follows a consistent operating philosophy built on three principles:
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Technology-First Approach</h3>
+              <p>
+                We believe technology is the key differentiator in today's market. Every venture we build leverages cutting-edge technology—whether it's blockchain for fractional ownership, AI for automation, or modern web frameworks for rapid deployment. This technology-first approach allows us to scale efficiently and create sustainable competitive advantages.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global From Day One</h3>
+              <p>
+                We build ventures for global markets from the start. Our team operates across Europe, North America, and the Middle East, giving us firsthand understanding of different markets and regulatory environments. This global perspective is embedded in every product and service we develop.
+              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Execution Over Ideas</h3>
+              <p>
+                Ideas are cheap; execution is everything. We focus on building real products that solve real problems. Our ventures are not theoretical concepts—they're operating businesses generating revenue and serving customers. This hands-on approach is what allows us to bring genuine expertise to our consulting clients.
+              </p>
+            </div>
           </div>
         </section>
 
