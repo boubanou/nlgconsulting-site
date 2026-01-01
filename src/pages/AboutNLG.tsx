@@ -8,10 +8,9 @@ import {
   Globe, 
   Rocket, 
   Target, 
-  BookOpen,
   Award,
   Building2,
-  Users
+  Linkedin
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
@@ -122,21 +121,12 @@ const AboutNLG = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-5 gap-12 items-start">
               <div className="md:col-span-2">
-                {/* Founder photo placeholder - replace src with actual image */}
-                <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/10 shadow-xl relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-muted/80">
-                    <Users className="w-20 h-20 text-primary/40 mb-4" />
-                    <p className="text-sm font-medium text-muted-foreground">Founder photo (Gregory Brenig)</p>
-                    <p className="text-xs text-muted-foreground/60 mt-1">Replace with uploaded image</p>
-                  </div>
-                  {/* Uncomment and add src when photo is available:
+                <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/10 shadow-xl">
                   <img 
-                    src="/founder-gregory-brenig.jpg" 
+                    src="/images/gregory-brenig.jpg" 
                     alt="Gregory Brenig - Founder & CEO of NLG Consulting" 
                     className="w-full h-full object-cover"
                   />
-                  */}
                 </div>
               </div>
               <div className="md:col-span-3">
@@ -165,6 +155,11 @@ const AboutNLG = () => {
                 <div className="flex gap-4 mt-8">
                   <Button asChild>
                     <Link to="/book">Book a Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  </Button>
+                  <Button asChild variant="outline">
+                    <a href="https://www.linkedin.com/in/gregorybrenig/" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="mr-2 w-4 h-4" /> LinkedIn
+                    </a>
                   </Button>
                 </div>
               </div>

@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageCircle, X, Send, Calendar, Globe, Loader2 } from "lucide-react";
+import { X, Send, Calendar, Globe, Loader2 } from "lucide-react";
+import { useVisitorScoring } from "@/hooks/useVisitorScoring";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -11,18 +12,57 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/grego-chat`;
 
 const GregoChatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hi! I'm Grego, your NLG Consulting assistant. How can I help you today? 🚀" }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [hasShownOpener, setHasShownOpener] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  
+  const { 
+    score, 
+    canEngage, 
+    trackChatOpen, 
+    getOpeningMessage,
+    visitorIntent 
+  } = useVisitorScoring();
 
+  // Auto-scroll to bottom
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
+
+  // Show proactive opener when conditions are met
+  useEffect(() => {
+    if (canEngage && score.shouldEngage && !hasShownOpener && !isOpen) {
+      const opener = getOpeningMessage();
+      if (opener) {
+        // Show notification pulse
+        setHasShownOpener(true);
+      }
+    }
+  }, [canEngage, score.shouldEngage, hasShownOpener, isOpen, getOpeningMessage]);
+
+  // Initialize chat with context-aware greeting
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      const opener = getOpeningMessage();
+      if (opener && score.total >= 40) {
+        setMessages([{ role: "assistant", content: opener }]);
+      } else {
+        setMessages([{ 
+          role: "assistant", 
+          content: "Hi! I'm Grego, your NLG Consulting assistant. How can I help you today? 🚀" 
+        }]);
+      }
+    }
+  }, [isOpen, messages.length, getOpeningMessage, score.total]);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+    trackChatOpen();
+  };
 
   const streamChat = async (userMessages: Message[]) => {
     setIsLoading(true);
@@ -35,7 +75,14 @@ const GregoChatbot = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
         },
-        body: JSON.stringify({ messages: userMessages }),
+        body: JSON.stringify({ 
+          messages: userMessages,
+          visitorContext: {
+            intent: visitorIntent,
+            score: score.total,
+            engagementLevel: score.engagementLevel
+          }
+        }),
       });
 
       if (!resp.ok || !resp.body) {
@@ -46,7 +93,6 @@ const GregoChatbot = () => {
       const decoder = new TextDecoder();
       let textBuffer = "";
 
-      // Add empty assistant message
       setMessages(prev => [...prev, { role: "assistant", content: "" }]);
 
       while (true) {
@@ -99,7 +145,7 @@ const GregoChatbot = () => {
     setMessages(newMessages);
     setInput("");
 
-    await streamChat(newMessages.slice(1)); // Skip initial greeting
+    await streamChat(newMessages.slice(1));
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -111,9 +157,9 @@ const GregoChatbot = () => {
 
   return (
     <>
-      {/* Chat Bubble */}
+      {/* Chat Bubble - Using NLG favicon as avatar */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => isOpen ? setIsOpen(false) : handleOpen()}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center group"
         aria-label="Chat with Grego"
       >
@@ -121,8 +167,14 @@ const GregoChatbot = () => {
           <X className="w-6 h-6" />
         ) : (
           <>
-            <MessageCircle className="w-6 h-6" />
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-background animate-pulse" />
+            <img 
+              src="/favicon.svg" 
+              alt="Grego" 
+              className="w-8 h-8 rounded-full"
+            />
+            {score.shouldEngage && !hasShownOpener && (
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-background animate-pulse" />
+            )}
           </>
         )}
       </button>
@@ -133,8 +185,8 @@ const GregoChatbot = () => {
           {/* Header */}
           <div className="p-4 border-b bg-primary text-primary-foreground rounded-t-lg">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <span className="text-lg font-bold">G</span>
+              <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center overflow-hidden">
+                <img src="/favicon.svg" alt="Grego" className="w-7 h-7" />
               </div>
               <div>
                 <h3 className="font-semibold">Grego</h3>
