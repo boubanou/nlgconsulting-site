@@ -1,12 +1,9 @@
-import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Calendar, Phone, TrendingUp } from "lucide-react";
 
 const Dashboard = () => {
-  const { t } = useTranslation();
-
   // Get leads count for last 30 days
   const { data: leadsCount } = useQuery({
     queryKey: ["dashboard-leads-count"],
@@ -94,28 +91,28 @@ const Dashboard = () => {
 
   const kpis = [
     {
-      title: t("admin.kpi_leads"),
+      title: "Total Leads",
       value: leadsCount,
       icon: Users,
       color: "text-blue-600",
       bgColor: "bg-blue-100",
     },
     {
-      title: t("admin.kpi_qualified_rate"),
+      title: "Qualified Rate",
       value: `${qualifiedRate}%`,
       icon: TrendingUp,
       color: "text-green-600",
       bgColor: "bg-green-100",
     },
     {
-      title: t("admin.kpi_meetings"),
+      title: "Meetings",
       value: meetingsCount,
       icon: Calendar,
       color: "text-purple-600",
       bgColor: "bg-purple-100",
     },
     {
-      title: t("admin.kpi_callbacks"),
+      title: "Callbacks",
       value: callbacksCount,
       icon: Phone,
       color: "text-orange-600",
@@ -126,8 +123,8 @@ const Dashboard = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold mb-2">{t("admin.dashboard")}</h1>
-        <p className="text-muted-foreground">{t("admin.dashboard_subtitle")}</p>
+        <h1 className="text-3xl font-bold mb-2">Dashboard</h1>
+        <p className="text-muted-foreground">Overview of your lead generation performance</p>
       </div>
 
       {/* KPI Cards */}
@@ -147,7 +144,7 @@ const Dashboard = () => {
               <CardContent>
                 <div className="text-3xl font-bold">{kpi.value}</div>
                 <p className="text-xs text-muted-foreground mt-1">
-                  {t("admin.last_30_days")}
+                  Last 30 days
                 </p>
               </CardContent>
             </Card>
@@ -158,7 +155,7 @@ const Dashboard = () => {
       {/* Recent Activity */}
       <Card>
         <CardHeader>
-          <CardTitle>{t("admin.recent_activity")}</CardTitle>
+          <CardTitle>Recent Activity</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -182,7 +179,7 @@ const Dashboard = () => {
               ))
             ) : (
               <p className="text-center text-muted-foreground py-8">
-                {t("admin.no_data")}
+                No data available
               </p>
             )}
           </div>

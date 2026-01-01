@@ -1,6 +1,5 @@
 import { ReactNode, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { 
@@ -22,7 +21,6 @@ interface AdminLayoutProps {
 }
 
 const AdminLayout = ({ children }: AdminLayoutProps) => {
-  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const { role, isLoading, isOwner } = useUserRole();
@@ -34,14 +32,14 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   };
 
   const navItems = [
-    { path: "/admin", label: t("admin.dashboard"), icon: LayoutDashboard },
-    { path: "/admin/leads", label: t("admin.leads_title"), icon: Users },
-    { path: "/admin/meetings", label: t("admin.meetings_title"), icon: Calendar },
-    { path: "/admin/callbacks", label: t("admin.callbacks_title"), icon: Phone },
+    { path: "/admin", label: "Dashboard", icon: LayoutDashboard },
+    { path: "/admin/leads", label: "Leads", icon: Users },
+    { path: "/admin/meetings", label: "Meetings", icon: Calendar },
+    { path: "/admin/callbacks", label: "Callbacks", icon: Phone },
   ];
 
   if (isOwner) {
-    navItems.push({ path: "/admin/users", label: t("admin.users_title"), icon: UsersIcon });
+    navItems.push({ path: "/admin/users", label: "Users", icon: UsersIcon });
   }
 
   const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
@@ -132,7 +130,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
             onClick={handleLogout}
           >
             <LogOut className="h-5 w-5" />
-            {t("nav.logout")}
+            Logout
           </Button>
         </div>
       </aside>
