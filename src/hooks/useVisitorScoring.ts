@@ -13,18 +13,30 @@ interface VisitorScore {
   engagementLevel: "silent" | "soft" | "pitch" | "push" | "close";
 }
 
-interface VisitorData {
+export interface VisitorData {
   device: "desktop" | "mobile" | "tablet";
   referrer: string;
   country: string;
+  language: string;
+  timezone: string;
+  screenResolution: string;
   isReturning: boolean;
   pageViews: string[];
   ctaClicks: number;
   timeOnSite: number;
   chatOpened: boolean;
+  sessionStart: number;
+  // Collected contact info
+  name?: string;
+  email?: string;
+  phone?: string;
+  company?: string;
+  gregoInteractions: number;
+  lastInteraction?: string;
 }
 
 const STORAGE_KEY = "nlg_visitor_data";
+const SESSION_KEY = "nlg_session_id";
 
 const getStoredData = (): Partial<VisitorData> => {
   try {
@@ -43,6 +55,19 @@ const saveData = (data: VisitorData) => {
   }
 };
 
+const getSessionId = (): string => {
+  try {
+    let sessionId = sessionStorage.getItem(SESSION_KEY);
+    if (!sessionId) {
+      sessionId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem(SESSION_KEY, sessionId);
+    }
+    return sessionId;
+  } catch {
+    return `${Date.now()}-anon`;
+  }
+};
+
 const detectDevice = (): "desktop" | "mobile" | "tablet" => {
   const ua = navigator.userAgent.toLowerCase();
   if (/tablet|ipad|playbook|silk/.test(ua)) return "tablet";
@@ -50,10 +75,29 @@ const detectDevice = (): "desktop" | "mobile" | "tablet" => {
   return "desktop";
 };
 
+const detectCountry = (): string => {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    // Map timezone to approximate country
+    if (tz.includes("Europe/Paris") || tz.includes("Europe/Monaco")) return "FR";
+    if (tz.includes("Europe/London")) return "GB";
+    if (tz.includes("Europe/Berlin") || tz.includes("Europe/Vienna")) return "DE";
+    if (tz.includes("America/New_York") || tz.includes("America/Los_Angeles")) return "US";
+    if (tz.includes("Europe/Brussels")) return "BE";
+    if (tz.includes("Europe/Zurich")) return "CH";
+    if (tz.includes("Europe/Amsterdam")) return "NL";
+    return tz.split("/")[0] || "Unknown";
+  } catch {
+    return "Unknown";
+  }
+};
+
 const detectIntent = (pageViews: string[], referrer: string): { intent: VisitorIntent; score: number } => {
   const webPages = pageViews.filter(p => p.includes("/web")).length;
   const salesPages = pageViews.filter(p => p.includes("/sales")).length;
   const advisoryPages = pageViews.filter(p => p.includes("/advisory") || p.includes("/about")).length;
+  const venturesPages = pageViews.filter(p => p.includes("/ventures")).length;
+  const bookPages = pageViews.filter(p => p.includes("/book") || p.includes("/contact")).length;
   
   // Check referrer for intent signals
   const referrerLower = referrer.toLowerCase();
@@ -61,59 +105,84 @@ const detectIntent = (pageViews: string[], referrer: string): { intent: VisitorI
   let referrerIntent: VisitorIntent = "general";
   
   if (referrerLower.includes("google") || referrerLower.includes("bing")) {
-    referrerBonus = 10;
-    // Could check search terms if available
+    referrerBonus = 15;
   }
   if (referrerLower.includes("linkedin")) {
-    referrerBonus = 15;
+    referrerBonus = 20;
     referrerIntent = "advisory";
+  }
+  if (referrerLower.includes("producthunt") || referrerLower.includes("reddit")) {
+    referrerBonus = 12;
+    referrerIntent = "website";
   }
   
   // Determine dominant intent
-  const scores = {
-    website: webPages * 15 + (referrer.includes("web") ? 10 : 0),
-    sales: salesPages * 15,
-    advisory: advisoryPages * 12 + (referrerIntent === "advisory" ? 10 : 0),
-    general: 5
+  const scores: Record<VisitorIntent, number> = {
+    website: webPages * 20 + (referrer.includes("web") ? 15 : 0),
+    sales: salesPages * 18 + venturesPages * 10,
+    advisory: advisoryPages * 15 + (referrerIntent === "advisory" ? 15 : 0),
+    general: 5 + bookPages * 10
   };
   
-  const maxIntent = Object.entries(scores).reduce((a, b) => a[1] > b[1] ? a : b);
+  const maxIntent = (Object.entries(scores) as [VisitorIntent, number][]).reduce((a, b) => a[1] > b[1] ? a : b);
   const intentScore = Math.min(50, maxIntent[1] + referrerBonus);
   
-  return { intent: maxIntent[0] as VisitorIntent, score: intentScore };
+  return { intent: maxIntent[0], score: intentScore };
 };
 
 const calculateBusinessScore = (data: VisitorData): number => {
   let score = 0;
   
   // Device: desktop indicates business user
-  if (data.device === "desktop") score += 8;
-  else if (data.device === "tablet") score += 5;
+  if (data.device === "desktop") score += 10;
+  else if (data.device === "tablet") score += 6;
+  else score += 3;
   
-  // Returning visitor
-  if (data.isReturning) score += 7;
+  // Returning visitor - high intent signal
+  if (data.isReturning) score += 10;
   
-  // Traffic source signals (simplified - would need analytics for full implementation)
+  // Traffic source signals
   const referrer = data.referrer.toLowerCase();
-  if (referrer.includes("linkedin")) score += 10;
-  else if (referrer.includes("google")) score += 5;
+  if (referrer.includes("linkedin")) score += 12;
+  else if (referrer.includes("google")) score += 8;
+  else if (referrer.includes("direct") || !referrer) score += 5;
   
-  return Math.min(25, score);
+  // European timezone = target market
+  if (data.timezone.includes("Europe")) score += 5;
+  
+  // Already provided contact info
+  if (data.email) score += 10;
+  if (data.phone) score += 8;
+  
+  return Math.min(35, score);
 };
 
 const calculateActionScore = (data: VisitorData): number => {
   let score = 0;
   
-  // CTA clicks
-  score += Math.min(15, data.ctaClicks * 5);
+  // CTA clicks - strong intent
+  score += Math.min(15, data.ctaClicks * 6);
   
-  // Chat opened
-  if (data.chatOpened) score += 5;
+  // Chat interactions
+  score += Math.min(10, data.gregoInteractions * 3);
   
-  // Multiple page views
-  if (data.pageViews.length >= 3) score += 5;
+  // Multiple page views - exploring site
+  if (data.pageViews.length >= 2) score += 5;
+  if (data.pageViews.length >= 4) score += 8;
   
-  return Math.min(25, score);
+  // Time on site (1 point per 10 seconds, max 10)
+  score += Math.min(10, Math.floor(data.timeOnSite / 10));
+  
+  // Visited high-intent pages
+  const hasVisitedBook = data.pageViews.some(p => p.includes("/book"));
+  const hasVisitedContact = data.pageViews.some(p => p.includes("/contact"));
+  const hasVisitedWeb = data.pageViews.some(p => p.includes("/web"));
+  
+  if (hasVisitedBook) score += 15;
+  if (hasVisitedContact) score += 12;
+  if (hasVisitedWeb) score += 8;
+  
+  return Math.min(40, score);
 };
 
 export const useVisitorScoring = () => {
@@ -123,13 +192,25 @@ export const useVisitorScoring = () => {
     
     return {
       device: detectDevice(),
-      referrer: document.referrer,
-      country: "", // Would need geo API
+      referrer: document.referrer || stored.referrer || "direct",
+      country: detectCountry(),
+      language: navigator.language || "en",
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
       isReturning: !!stored.pageViews?.length,
-      pageViews: [...(stored.pageViews || []), currentPath],
+      pageViews: stored.pageViews 
+        ? [...new Set([...stored.pageViews, currentPath])] 
+        : [currentPath],
       ctaClicks: stored.ctaClicks || 0,
       timeOnSite: stored.timeOnSite || 0,
-      chatOpened: stored.chatOpened || false
+      chatOpened: stored.chatOpened || false,
+      sessionStart: Date.now(),
+      name: stored.name,
+      email: stored.email,
+      phone: stored.phone,
+      company: stored.company,
+      gregoInteractions: stored.gregoInteractions || 0,
+      lastInteraction: stored.lastInteraction
     };
   });
 
@@ -164,17 +245,37 @@ export const useVisitorScoring = () => {
     };
   }, []);
 
-  // Track page views
+  // Track page views on navigation
   useEffect(() => {
     const handleNavigation = () => {
+      const newPath = window.location.pathname;
       setVisitorData(prev => ({
         ...prev,
-        pageViews: [...prev.pageViews, window.location.pathname]
+        pageViews: [...new Set([...prev.pageViews, newPath])]
       }));
     };
 
     window.addEventListener("popstate", handleNavigation);
-    return () => window.removeEventListener("popstate", handleNavigation);
+    
+    // Also watch for pushState/replaceState
+    const originalPushState = history.pushState;
+    const originalReplaceState = history.replaceState;
+    
+    history.pushState = function(...args) {
+      originalPushState.apply(this, args);
+      handleNavigation();
+    };
+    
+    history.replaceState = function(...args) {
+      originalReplaceState.apply(this, args);
+      handleNavigation();
+    };
+
+    return () => {
+      window.removeEventListener("popstate", handleNavigation);
+      history.pushState = originalPushState;
+      history.replaceState = originalReplaceState;
+    };
   }, []);
 
   // Calculate score when data changes
@@ -198,7 +299,7 @@ export const useVisitorScoring = () => {
       intentScore,
       businessScore,
       actionScore,
-      isBusinessVisitor: businessScore >= 15,
+      isBusinessVisitor: businessScore >= 18,
       shouldEngage: canEngage && total >= 40,
       engagementLevel
     });
@@ -212,52 +313,98 @@ export const useVisitorScoring = () => {
   }, []);
 
   const trackChatOpen = useCallback(() => {
-    setVisitorData(prev => ({ ...prev, chatOpened: true }));
+    setVisitorData(prev => ({ 
+      ...prev, 
+      chatOpened: true,
+      gregoInteractions: prev.gregoInteractions + 1,
+      lastInteraction: new Date().toISOString()
+    }));
   }, []);
+
+  const setContactInfo = useCallback((info: { name?: string; email?: string; phone?: string; company?: string }) => {
+    setVisitorData(prev => {
+      const updated = { ...prev, ...info };
+      saveData(updated);
+      return updated;
+    });
+  }, []);
+
+  const getSessionId = useCallback(() => {
+    return `${visitorData.sessionStart}-${visitorData.device}`;
+  }, [visitorData.sessionStart, visitorData.device]);
 
   const getOpeningMessage = useCallback((): string | null => {
     if (!canEngage || score.total < 40) return null;
 
     const { intent, engagementLevel } = score;
 
-    // Intent-specific openers
+    // Intent-specific openers - direct and action-oriented
     const openers: Record<VisitorIntent, Record<string, string>> = {
       website: {
-        soft: "Looking for a website that actually converts? Our 72-hour delivery might be exactly what you need.",
-        pitch: "I noticed you're exploring our website packages. Our Studio has delivered 50+ revenue-ready sites. Want to see what's possible for your business?",
-        push: "Ready to launch a high-converting website in 72 hours? I can show you exactly how we'd approach your project.",
-        close: "Let's get your website project started. I can book you a quick call with our team right now."
+        soft: "👋 I noticed you're exploring our website services. We build revenue-ready sites in just 72 hours. Want to see some examples?",
+        pitch: "You're looking at our Studio packages. We've delivered 50+ conversion-optimized websites. I can show you exactly what we'd build for you – interested?",
+        push: "Ready to launch a website that actually converts? I can get you on a quick 15-minute call to scope your project right now.",
+        close: "Let me book you a strategy call – we can have your website live this week. Does tomorrow work?"
       },
       sales: {
-        soft: "Scaling your outbound pipeline? We've helped companies go from 0 to 30 qualified meetings per month.",
-        pitch: "Our Sales & BD team specializes in building predictable revenue engines. What's your current pipeline challenge?",
-        push: "If you're serious about scaling sales, I'd recommend a quick strategy call. We've done this for 50+ companies.",
-        close: "Let's get you booked for a sales audit. 15 minutes to map out your revenue growth potential."
+        soft: "👋 Looking to scale your sales pipeline? We've helped companies go from 0 to 30 qualified meetings per month.",
+        pitch: "Our Sales & BD infrastructure has generated millions in pipeline for startups and scale-ups. What's your current outbound challenge?",
+        push: "I'd recommend a quick Sales Audit call – 15 minutes to map your growth potential. Can I book that for you?",
+        close: "Let's get you scheduled for a Sales Audit. This call alone could transform your pipeline. Ready?"
       },
       advisory: {
-        soft: "Scaling a business requires the right strategic guidance. That's exactly what we do at NLG.",
-        pitch: "Gregory Brenig has 15+ years helping founders scale. What strategic challenge are you facing?",
-        push: "A 15-minute strategy call could save you months of trial and error. Want me to set that up?",
-        close: "Let's get you on the calendar with Gregory. Direct strategic guidance for founders."
+        soft: "👋 Gregory Brenig has 15+ years helping founders scale globally. Are you facing a strategic decision right now?",
+        pitch: "Strategic advisory from someone who's built and scaled multiple ventures. What challenge is keeping you up at night?",
+        push: "A 15-minute strategy call with Gregory could save you months. Want me to book it?",
+        close: "Let me get you direct access to Gregory. Strategic founders don't wait – shall I book you in?"
+      },
+      ventures: {
+        soft: "👋 Interested in our portfolio? NLG Ventures backs innovative PropTech, FinTech, and AI companies.",
+        pitch: "We're always looking for bold founders and partnership opportunities. Are you building something interesting?",
+        push: "If you're raising or looking for strategic partners, let's talk. Can I book you a call with our team?",
+        close: "Partnership opportunities move fast. Let me connect you directly with Gregory."
       },
       general: {
-        soft: "Welcome to NLG Consulting. I'm Grego—here to help you find exactly what you need.",
-        pitch: "We help businesses launch websites fast, scale sales, and get strategic guidance. Which sounds most relevant?",
-        push: "Whether it's a website, sales infrastructure, or strategy—we execute fast. What can I help with?",
-        close: "Ready to take action? Book a quick call and let's discuss your goals."
+        soft: "👋 Welcome to NLG Consulting! Whether it's websites, sales, or strategy – I'm here to help you find the right fit.",
+        pitch: "We help businesses launch fast, scale sales, and get strategic guidance. Which sounds most relevant to your needs?",
+        push: "Whatever you're working on, a 15-minute call could clarify your best next steps. Want me to book it?",
+        close: "Ready to move forward? Let's get you on the calendar with our team."
       }
     };
 
     return openers[intent][engagementLevel] || openers.general.soft;
   }, [score, canEngage]);
 
+  const getRecommendedPage = useCallback((): { url: string; label: string } | null => {
+    const { intent } = score;
+    
+    const recommendations: Record<VisitorIntent, { url: string; label: string }> = {
+      website: { url: "/web", label: "Website Packages" },
+      sales: { url: "/sales", label: "Sales & BD Services" },
+      advisory: { url: "/advisory", label: "Strategic Advisory" },
+      ventures: { url: "/ventures", label: "NLG Ventures" },
+      general: { url: "/book", label: "Book a Strategy Call" }
+    };
+    
+    return recommendations[intent];
+  }, [score]);
+
+  const getBookingUrl = useCallback((): string => {
+    return "https://calendly.com/greg-nlgconsulting/15min";
+  }, []);
+
   return {
     score,
     canEngage,
     timeOnSite,
+    visitorData,
     trackCTAClick,
     trackChatOpen,
+    setContactInfo,
     getOpeningMessage,
+    getRecommendedPage,
+    getBookingUrl,
+    getSessionId,
     visitorIntent: score.intent
   };
 };
