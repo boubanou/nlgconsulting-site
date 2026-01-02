@@ -358,12 +358,6 @@ export const useVisitorScoring = () => {
         push: "A 15-minute strategy call with Gregory could save you months. Want me to book it?",
         close: "Let me get you direct access to Gregory. Strategic founders don't wait – shall I book you in?"
       },
-      ventures: {
-        soft: "👋 Interested in our portfolio? NLG Ventures backs innovative PropTech, FinTech, and AI companies.",
-        pitch: "We're always looking for bold founders and partnership opportunities. Are you building something interesting?",
-        push: "If you're raising or looking for strategic partners, let's talk. Can I book you a call with our team?",
-        close: "Partnership opportunities move fast. Let me connect you directly with Gregory."
-      },
       general: {
         soft: "👋 Welcome to NLG Consulting! Whether it's websites, sales, or strategy – I'm here to help you find the right fit.",
         pitch: "We help businesses launch fast, scale sales, and get strategic guidance. Which sounds most relevant to your needs?",
@@ -382,7 +376,7 @@ export const useVisitorScoring = () => {
       website: { url: "/web", label: "Website Packages" },
       sales: { url: "/sales", label: "Sales & BD Services" },
       advisory: { url: "/advisory", label: "Strategic Advisory" },
-      ventures: { url: "/ventures", label: "NLG Ventures" },
+      
       general: { url: "/book", label: "Book a Strategy Call" }
     };
     
