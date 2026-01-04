@@ -81,6 +81,8 @@ const Ventures = () => {
         />
         <meta name="keywords" content="venture studio, PropTech investment, FinTech ventures, startup portfolio, fractional real estate, business ventures, technology investment" />
         <link rel="canonical" href="https://nlgconsulting.co/ventures" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/ventures" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/ventures" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/ventures" />

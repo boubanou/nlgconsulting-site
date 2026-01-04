@@ -46,6 +46,8 @@ const WebLanding = () => {
           content="fast website development, 72 hour website, business website, landing page design, website with payments, Stripe integration, SEO website, professional web design, startup website" 
         />
         <link rel="canonical" href="https://nlgconsulting.co/web" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/web" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/site-internet" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/web" />

@@ -86,6 +86,8 @@ const About = () => {
         <meta name="description" content="Gregory Brenig is a recognized expert in FinTech, PropTech, and AI-driven business models. 15+ years helping founders scale globally. Author of 'Level Up in Fractional Real Estate'." />
         <meta name="keywords" content="Gregory Brenig, business consultant, FinTech expert, PropTech advisor, fractional real estate, NLG Consulting, startup advisor, AI strategy" />
         <link rel="canonical" href="https://nlgconsulting.co/about" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/about" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/a-propos" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}

@@ -50,6 +50,8 @@ const Book = () => {
         <meta name="description" content="Book a free 15-minute strategy call with NLG Consulting. Discuss your growth challenges and discover how we can help scale your business with B2B sales, websites, or advisory." />
         <meta name="keywords" content="book consultation, strategy call, free business consultation, B2B growth, sales strategy, business advisory" />
         <link rel="canonical" href="https://nlgconsulting.co/book" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/book" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/rendez-vous" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}

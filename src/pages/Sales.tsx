@@ -88,6 +88,8 @@ const Sales = () => {
         />
         <meta name="keywords" content="SDR as a service, outsourced sales development, B2B outbound, lead generation agency, sales prospecting, appointment setting, pipeline building" />
         <link rel="canonical" href="https://nlgconsulting.co/sales" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/sales" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/vente" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/sales" />
