@@ -39,6 +39,8 @@ const ContactPage = () => {
         />
         <meta name="keywords" content="contact NLG Consulting, book consultation, strategy call, free business consultation, get in touch" />
         <link rel="canonical" href="https://nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/contact" />

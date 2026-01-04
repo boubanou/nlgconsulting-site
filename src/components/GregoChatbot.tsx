@@ -147,6 +147,9 @@ const GregoChatbot = () => {
     return content.replace(/\[ACTION\].*?\[\/ACTION\]/g, '').trim();
   };
 
+  // Detect if on French page
+  const isFrench = window.location.pathname.startsWith('/fr');
+
   const handleOpen = () => {
     setIsOpen(true);
     trackChatOpen();
@@ -157,9 +160,12 @@ const GregoChatbot = () => {
         setMessages([{ role: "assistant", content: opener }]);
       } else {
         const recommendation = getRecommendedPage();
+        const frenchMessage = `👋 Bienvenue ! Je suis Grego, votre guide NLG Consulting. ${recommendation ? `Vous pourriez être intéressé par nos ${recommendation.label === "Website Packages" ? "offres de sites web" : recommendation.label === "Sales & BD Services" ? "services commerciaux" : recommendation.label === "Strategic Advisory" ? "services de conseil stratégique" : "services"}. ` : ''}Qu'est-ce qui vous amène aujourd'hui ?`;
+        const englishMessage = `👋 Welcome! I'm Grego, your NLG Consulting guide. ${recommendation ? `Based on what I see, you might be interested in our ${recommendation.label}. ` : ''}What brings you here today?`;
+        
         setMessages([{ 
           role: "assistant", 
-          content: `👋 Welcome! I'm Grego, your NLG Consulting guide. ${recommendation ? `Based on what I see, you might be interested in our ${recommendation.label}. ` : ''}What brings you here today?`
+          content: isFrench ? frenchMessage : englishMessage
         }]);
       }
     }
@@ -178,14 +184,16 @@ const GregoChatbot = () => {
         },
         body: JSON.stringify({ 
           messages: userMessages,
+          language: isFrench ? 'fr' : 'en',
           visitorContext: {
             intent: visitorIntent,
             score: score.total,
             engagementLevel: score.engagementLevel,
+            language: isFrench ? 'fr' : 'en',
             visitorData: {
               device: visitorData.device,
               country: visitorData.country,
-              language: visitorData.language,
+              language: isFrench ? 'fr' : visitorData.language,
               timezone: visitorData.timezone,
               referrer: visitorData.referrer,
               pageViews: visitorData.pageViews,
@@ -259,9 +267,12 @@ const GregoChatbot = () => {
       
     } catch (error) {
       console.error("Chat error:", error);
+      const errorMessage = isFrench 
+        ? "Je m'excuse, j'ai un petit souci. Laissez-moi vous mettre en contact directement – vous pouvez réserver un appel avec Gregory ici : https://calendly.com/greg-nlgconsulting/15min"
+        : "I apologize, I'm having a moment. Let me connect you directly – you can book a call with Gregory here: https://calendly.com/greg-nlgconsulting/15min";
       setMessages(prev => [...prev, { 
         role: "assistant", 
-        content: "I apologize, I'm having a moment. Let me connect you directly – you can book a call with Gregory here: https://calendly.com/greg-nlgconsulting/15min" 
+        content: errorMessage
       }]);
     } finally {
       setIsLoading(false);
@@ -291,9 +302,13 @@ const GregoChatbot = () => {
     setContactInfo(formData);
     
     // Add thank you message
+    const thankYouMessage = isFrench
+      ? `Parfait, merci ${formData.name || ''}! J'ai vos coordonnées. Maintenant, laissez-moi vous aider à trouver exactement ce qu'il vous faut. Quelle est votre priorité – lancer un site web, développer vos ventes, ou obtenir des conseils stratégiques ?`
+      : `Perfect, thanks ${formData.name || 'for that'}! I've got your details. Now let me help you find exactly what you need. What's your biggest priority right now – launching a website, scaling sales, or getting strategic guidance?`;
+    
     setMessages(prev => [...prev, {
       role: "assistant",
-      content: `Perfect, thanks ${formData.name || 'for that'}! I've got your details. Now let me help you find exactly what you need. What's your biggest priority right now – launching a website, scaling sales, or getting strategic guidance?`
+      content: thankYouMessage
     }]);
     
     setShowContactForm(false);
@@ -327,16 +342,20 @@ const GregoChatbot = () => {
     
     setContactInfo(formData);
     
+    const callbackMessage = isFrench
+      ? `C'est noté ! Nous vous rappellerons au ${formData.phone} très bientôt. Y a-t-il quelque chose de spécifique que vous aimeriez aborder lors de l'appel ?`
+      : `Got it! We'll call you back at ${formData.phone} shortly. Is there anything specific you'd like to discuss on the call?`;
+    
     setMessages(prev => [...prev, {
       role: "assistant", 
-      content: `Got it! We'll call you back at ${formData.phone} shortly. Is there anything specific you'd like to discuss on the call?`
+      content: callbackMessage
     }]);
     
     setShowCallbackForm(false);
     
     toast({
-      title: "Callback Requested! 📞",
-      description: "We'll call you back very soon.",
+      title: isFrench ? "Rappel demandé ! 📞" : "Callback Requested! 📞",
+      description: isFrench ? "Nous vous rappellerons très bientôt." : "We'll call you back very soon.",
     });
     
     // Save callback request
@@ -435,7 +454,7 @@ const GregoChatbot = () => {
               </div>
               <div className="flex-1">
                 <h3 className="font-semibold">Grego</h3>
-                <p className="text-xs opacity-80">NLG Consulting AI Guide</p>
+                <p className="text-xs opacity-80">{isFrench ? "Guide IA NLG Consulting" : "NLG Consulting AI Guide"}</p>
               </div>
               <div className="text-xs opacity-60">
                 {score.total > 0 && `${score.intent} • ${score.total}pts`}
@@ -476,7 +495,7 @@ const GregoChatbot = () => {
               onClick={() => window.open(getBookingUrl(), "_blank")}
             >
               <Calendar className="w-3 h-3 mr-1" />
-              Book Call
+              {isFrench ? "Réserver" : "Book Call"}
             </Button>
             <Button
               variant="outline"
@@ -485,7 +504,7 @@ const GregoChatbot = () => {
               onClick={() => setShowCallbackForm(true)}
             >
               <Phone className="w-3 h-3 mr-1" />
-              Call Me Back
+              {isFrench ? "Rappel" : "Call Me Back"}
             </Button>
             {recommendedPage && (
               <Button
@@ -495,7 +514,7 @@ const GregoChatbot = () => {
                 onClick={() => navigate(recommendedPage.url)}
               >
                 <ArrowRight className="w-3 h-3 mr-1" />
-                {recommendedPage.label.split(' ')[0]}
+                {isFrench ? "Voir" : recommendedPage.label.split(' ')[0]}
               </Button>
             )}
           </div>
@@ -507,7 +526,7 @@ const GregoChatbot = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Type your message..."
+                placeholder={isFrench ? "Écrivez votre message..." : "Type your message..."}
                 className="flex-1"
                 disabled={isLoading}
               />
@@ -531,9 +550,9 @@ const GregoChatbot = () => {
       <Dialog open={showContactForm} onOpenChange={setShowContactForm}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Let's get to know you better</DialogTitle>
+            <DialogTitle>{isFrench ? "Faisons connaissance" : "Let's get to know you better"}</DialogTitle>
             <DialogDescription>
-              Share your details so I can personalize your experience
+              {isFrench ? "Partagez vos coordonnées pour une expérience personnalisée" : "Share your details so I can personalize your experience"}
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 py-4">
@@ -594,10 +613,10 @@ const GregoChatbot = () => {
           </div>
           <div className="flex justify-end gap-2">
             <Button variant="outline" onClick={() => setShowContactForm(false)}>
-              Skip
+              {isFrench ? "Passer" : "Skip"}
             </Button>
             <Button onClick={handleContactSubmit}>
-              Continue
+              {isFrench ? "Continuer" : "Continue"}
             </Button>
           </div>
         </DialogContent>
@@ -607,39 +626,39 @@ const GregoChatbot = () => {
       <Dialog open={showCallbackForm} onOpenChange={setShowCallbackForm}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Request a Callback</DialogTitle>
+            <DialogTitle>{isFrench ? "Demander un rappel" : "Request a Callback"}</DialogTitle>
             <DialogDescription>
-              Leave your number and we'll call you back shortly
+              {isFrench ? "Laissez votre numéro et nous vous rappellerons rapidement" : "Leave your number and we'll call you back shortly"}
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 py-4">
             <div className="space-y-2">
-              <Label htmlFor="callback-name">Name</Label>
+              <Label htmlFor="callback-name">{isFrench ? "Nom" : "Name"}</Label>
               <Input
                 id="callback-name"
                 value={formData.name}
                 onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                placeholder="Your name"
+                placeholder={isFrench ? "Votre nom" : "Your name"}
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="callback-phone">Phone Number *</Label>
+              <Label htmlFor="callback-phone">{isFrench ? "Numéro de téléphone *" : "Phone Number *"}</Label>
               <Input
                 id="callback-phone"
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                placeholder="+1 234 567 890"
+                placeholder="+33 6 12 34 56 78"
                 required
               />
             </div>
           </div>
           <div className="flex justify-end gap-2">
             <Button variant="outline" onClick={() => setShowCallbackForm(false)}>
-              Cancel
+              {isFrench ? "Annuler" : "Cancel"}
             </Button>
             <Button onClick={handleCallbackRequest} disabled={!formData.phone}>
-              Request Callback
+              {isFrench ? "Demander un rappel" : "Request Callback"}
             </Button>
           </div>
         </DialogContent>

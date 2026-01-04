@@ -19,6 +19,8 @@ const PrivacyPolicy = () => {
         <meta name="description" content="Privacy policy, GDPR data protection and legal notice of NLG Consulting. Full compliance with European regulations." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://nlgconsulting.co/privacy-policy" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/privacy-policy" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/politique-confidentialite" />
         
         <meta property="og:title" content="Privacy Policy & Legal Notice | NLG Consulting" />
         <meta property="og:description" content="Privacy policy, GDPR data protection and legal notice of NLG Consulting. Full compliance with European regulations." />

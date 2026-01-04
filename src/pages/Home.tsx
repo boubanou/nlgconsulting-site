@@ -111,6 +111,9 @@ const Home = () => {
         />
         <meta name="keywords" content="B2B lead generation, website development, strategic advisory, PropTech, FinTech, AI consulting, sales development, startup growth" />
         <link rel="canonical" href="https://nlgconsulting.co/" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/" />

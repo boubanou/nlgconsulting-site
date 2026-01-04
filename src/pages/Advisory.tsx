@@ -80,6 +80,8 @@ const Advisory = () => {
         />
         <meta name="keywords" content="business advisory, strategic consulting, go-to-market strategy, AI consulting, startup advisor, scaling strategy, monetization, business structuring" />
         <link rel="canonical" href="https://nlgconsulting.co/advisory" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/advisory" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/conseil" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/advisory" />

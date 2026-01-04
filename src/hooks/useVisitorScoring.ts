@@ -337,9 +337,40 @@ export const useVisitorScoring = () => {
     if (!canEngage || score.total < 25) return null; // Lowered from 40 to 25
 
     const { intent, engagementLevel } = score;
+    
+    // Detect if we're on French pages
+    const isFrench = window.location.pathname.startsWith('/fr');
 
-    // Intent-specific openers - direct and action-oriented
-    const openers: Record<VisitorIntent, Record<string, string>> = {
+    // French intent-specific openers
+    const frenchOpeners: Record<VisitorIntent, Record<string, string>> = {
+      website: {
+        soft: "👋 Je vois que vous explorez nos services web. Nous créons des sites performants en 72 heures. Voulez-vous voir des exemples ?",
+        pitch: "Vous regardez nos offres Studio. Nous avons livré plus de 50 sites optimisés conversion. Je peux vous montrer exactement ce qu'on ferait pour vous – intéressé ?",
+        push: "Prêt à lancer un site qui convertit vraiment ? Je peux vous réserver un appel de 15 minutes pour cadrer votre projet.",
+        close: "Laissez-moi vous réserver un appel stratégique – votre site peut être en ligne cette semaine. Demain, ça vous va ?"
+      },
+      sales: {
+        soft: "👋 Vous cherchez à développer votre pipeline commercial ? Nous avons aidé des entreprises à passer de 0 à 30 RDV qualifiés par mois.",
+        pitch: "Notre infrastructure Sales & BD a généré des millions en pipeline pour des startups et scale-ups. Quel est votre défi actuel en prospection ?",
+        push: "Je vous recommande un Audit Commercial rapide – 15 minutes pour cartographier votre potentiel de croissance. Puis-je le réserver ?",
+        close: "Planifions votre Audit Commercial. Cet appel seul pourrait transformer votre pipeline. Prêt ?"
+      },
+      advisory: {
+        soft: "👋 Gregory Brenig accompagne des fondateurs depuis 15+ ans à scaler globalement. Avez-vous une décision stratégique à prendre ?",
+        pitch: "Conseil stratégique par quelqu'un qui a construit et scalé plusieurs ventures. Quel défi vous empêche de dormir ?",
+        push: "Un appel stratégique de 15 minutes avec Gregory pourrait vous faire gagner des mois. Voulez-vous que je réserve ?",
+        close: "Laissez-moi vous donner accès direct à Gregory. Les fondateurs stratégiques n'attendent pas – on réserve ?"
+      },
+      general: {
+        soft: "👋 Bienvenue chez NLG Consulting ! Sites web, développement commercial ou stratégie – je suis là pour vous guider.",
+        pitch: "Nous aidons les entreprises à lancer rapidement, scaler les ventes et obtenir des conseils stratégiques. Qu'est-ce qui vous correspond le mieux ?",
+        push: "Quel que soit votre projet, un appel de 15 minutes pourrait clarifier vos prochaines étapes. Voulez-vous que je le réserve ?",
+        close: "Prêt à avancer ? Réservons un créneau avec notre équipe."
+      }
+    };
+
+    // English intent-specific openers - direct and action-oriented
+    const englishOpeners: Record<VisitorIntent, Record<string, string>> = {
       website: {
         soft: "👋 I noticed you're exploring our website services. We build revenue-ready sites in just 72 hours. Want to see some examples?",
         pitch: "You're looking at our Studio packages. We've delivered 50+ conversion-optimized websites. I can show you exactly what we'd build for you – interested?",
@@ -365,6 +396,8 @@ export const useVisitorScoring = () => {
         close: "Ready to move forward? Let's get you on the calendar with our team."
       }
     };
+
+    const openers = isFrench ? frenchOpeners : englishOpeners;
 
     return openers[intent][engagementLevel] || openers.general.soft;
   }, [score, canEngage]);
