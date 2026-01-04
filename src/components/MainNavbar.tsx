@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { useUserRole } from "@/hooks/useUserRole";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const MainNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { hasAccess } = useUserRole();
+  const { switchLanguageUrl } = useLanguage();
 
   const navLinks = [
     { label: "Home", to: "/" },
@@ -38,6 +40,9 @@ const MainNavbar = () => {
                 BackOffice
               </Link>
             )}
+            <Link to={switchLanguageUrl} className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+              <Globe className="w-4 h-4" /> FR
+            </Link>
             <Button asChild size="sm">
               <Link to="/book">Book a Call</Link>
             </Button>
@@ -62,6 +67,9 @@ const MainNavbar = () => {
                 BackOffice
               </Link>
             )}
+            <Link to={switchLanguageUrl} className="block text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+              🇫🇷 Français
+            </Link>
             <Button asChild className="w-full">
               <Link to="/book" onClick={() => setIsOpen(false)}>Book a Call</Link>
             </Button>
