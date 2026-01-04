@@ -217,9 +217,13 @@ const About = () => {
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="lg">
-                      <Link to="/book">
-                        Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
+                      <a 
+                        href="https://www.linkedin.com/in/gregory-brenig-98007125/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Linkedin className="mr-2 w-4 h-4" /> LinkedIn
+                      </a>
                     </Button>
                   </div>
                 </div>
