@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ExternalLink, Building2, Radio, Dumbbell, Globe } from "lucide-react";
+import { ArrowRight, ExternalLink, Building2, Radio, Dumbbell, Globe, BookOpen } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
 
@@ -73,17 +73,19 @@ const Ventures = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Ventures & Brands | NLG Consulting Portfolio</title>
+<Helmet>
+        <title>NLG Ventures Portfolio | PropTech, FinTech, Media Investments</title>
         <meta 
           name="description" 
-          content="Explore NLG Consulting's portfolio: Block Tech (PropTech/FinTech), FractionalPropertyHub, Business Legend (Media), and STEAD (Sports & Lifestyle)." 
+          content="Explore NLG's venture portfolio: Block Tech (PropTech/FinTech), FractionalPropertyHub, Business Legend, and more. We build, invest, and scale innovative platforms worldwide." 
         />
+        <meta name="keywords" content="venture studio, PropTech investment, FinTech ventures, startup portfolio, fractional real estate, business ventures, technology investment" />
         <link rel="canonical" href="https://nlgconsulting.co/ventures" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/ventures" />
-        <meta property="og:title" content="Ventures & Brands | NLG Consulting" />
+        <meta property="og:title" content="NLG Ventures Portfolio | PropTech, FinTech, Media Investments" />
+        <meta property="og:description" content="Explore NLG's venture portfolio: Block Tech, FractionalPropertyHub, Business Legend, and more. We build, invest, and scale." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -173,6 +175,60 @@ const Ventures = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        {/* Book as a Venture Section */}
+        <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-primary/10">
+          <div className="container mx-auto max-w-5xl">
+            <Card className="overflow-hidden border-2 border-primary/30">
+              <CardContent className="p-0">
+                <div className="grid md:grid-cols-3 gap-0">
+                  {/* Book Cover */}
+                  <div className="bg-muted/50 p-8 flex flex-col items-center justify-center text-center">
+                    <img 
+                      src="/images/book-cover.jpg" 
+                      alt="Level Up in Fractional Real Estate by Gregory Brenig"
+                      className="w-40 h-auto rounded-lg shadow-xl mb-4 hover:scale-105 transition-transform"
+                    />
+                    <Badge variant="secondary" className="mt-2">
+                      <BookOpen className="w-3 h-3 mr-1" />
+                      Intellectual Venture
+                    </Badge>
+                  </div>
+                  
+                  {/* Book Details */}
+                  <div className="md:col-span-2 p-8 space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Level Up in Fractional Real Estate</h3>
+                      <p className="text-primary font-medium">More than a book — a strategic vision on innovation, investment, and modern asset models.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Executive Summary</h4>
+                      <p className="text-foreground">
+                        This comprehensive guide by Gregory Brenig explores the future of real estate investment through fractional ownership and tokenization. It provides a strategic roadmap for building rental income and achieving financial freedom through innovative, accessible property investment models.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Why It's a Venture</h4>
+                      <p className="text-foreground">
+                        This book represents NLG's intellectual contribution to the PropTech and FinTech ecosystem. It codifies our expertise in fractional real estate and serves as a thought leadership platform that drives awareness, partnerships, and business opportunities globally.
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t">
+                      <Button asChild variant="default">
+                        <a href="https://a.co/d/dih3FYN" target="_blank" rel="noopener noreferrer">
+                          Buy on Amazon <ExternalLink className="ml-2 w-4 h-4" />
+                        </a>
+                      </Button>
+                      <Button asChild variant="outline">
+                        <Link to="/about">About the Author <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 

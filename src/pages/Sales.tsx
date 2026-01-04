@@ -81,16 +81,18 @@ const Sales = () => {
   return (
     <>
       <Helmet>
-        <title>Sales & Business Development | NLG Consulting</title>
+        <title>Outsourced B2B Sales Development | SDR as a Service | NLG Consulting</title>
         <meta 
           name="description" 
-          content="Outsource your B2B sales with NLG Consulting. Lead generation, multichannel outbound, SDR systems, CRM pipelines, and AI calling. 15-30 qualified meetings per month." 
+          content="Full-service B2B sales development: lead generation, multichannel outbound, SDR systems, CRM pipelines. 15-30 qualified meetings per month guaranteed." 
         />
+        <meta name="keywords" content="SDR as a service, outsourced sales development, B2B outbound, lead generation agency, sales prospecting, appointment setting, pipeline building" />
         <link rel="canonical" href="https://nlgconsulting.co/sales" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/sales" />
-        <meta property="og:title" content="Sales & Business Development | NLG Consulting" />
+        <meta property="og:title" content="Outsourced B2B Sales Development | SDR as a Service" />
+        <meta property="og:description" content="15-30 qualified meetings per month. Full SDR infrastructure with lead generation, multichannel outbound, and CRM integration." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

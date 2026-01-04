@@ -36,21 +36,21 @@ const WebLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Website in 72 Hours | NLG Studio Web Development</title>
+        <title>Professional Website in 72 Hours | NLG Studio | From €997</title>
         <meta 
           name="description" 
-          content="Launch your revenue-ready website in under 72 hours. Complete package: UX/UI design, SEO copywriting, CRM integration, Stripe payments, analytics. Source code included." 
+          content="Launch your revenue-ready website in under 72 hours. Complete package: UX/UI design, SEO, Stripe payments, CRM integration. Source code included. Starting at €997." 
         />
         <meta 
           name="keywords" 
-          content="website development, 72 hour website, fast web design, conversion optimization, Stripe integration, SEO website, professional web design, landing page, business website" 
+          content="fast website development, 72 hour website, business website, landing page design, website with payments, Stripe integration, SEO website, professional web design, startup website" 
         />
         <link rel="canonical" href="https://nlgconsulting.co/web" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/web" />
-        <meta property="og:title" content="Professional Website in 72 Hours | NLG Studio" />
-        <meta property="og:description" content="Launch your revenue-ready website in under 72 hours with UX/UI, SEO, CRM, and payments included." />
+        <meta property="og:title" content="Professional Website in 72 Hours | NLG Studio | From €997" />
+        <meta property="og:description" content="Launch your revenue-ready website in under 72 hours. UX/UI, SEO, CRM, Stripe included. From €997." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       

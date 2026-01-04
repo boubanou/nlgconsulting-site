@@ -32,16 +32,18 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | NLG Consulting</title>
+        <title>Contact NLG Consulting | Get in Touch | Free Consultation</title>
         <meta 
           name="description" 
-          content="Contact NLG Consulting. Book a strategy call or send us a message. We're here to help with your business, tech, and growth needs." 
+          content="Contact NLG Consulting for B2B lead generation, website development, or strategic advisory. Book a free 15-minute strategy call. Reach out today." 
         />
+        <meta name="keywords" content="contact NLG Consulting, book consultation, strategy call, free business consultation, get in touch" />
         <link rel="canonical" href="https://nlgconsulting.co/contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/contact" />
-        <meta property="og:title" content="Contact Us | NLG Consulting" />
+        <meta property="og:title" content="Contact NLG Consulting | Get in Touch | Free Consultation" />
+        <meta property="og:description" content="Book a free 15-minute strategy call or send us a message. We respond within 24 hours." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

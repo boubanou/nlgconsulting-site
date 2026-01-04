@@ -131,12 +131,12 @@ const detectIntent = (pageViews: string[], referrer: string): { intent: VisitorI
 };
 
 const calculateBusinessScore = (data: VisitorData): number => {
-  let score = 0;
+  let score = 10; // Base score for visiting the site
   
-  // Device: desktop indicates business user
-  if (data.device === "desktop") score += 10;
-  else if (data.device === "tablet") score += 6;
-  else score += 3;
+  // Device: desktop indicates business user (boosted)
+  if (data.device === "desktop") score += 15;
+  else if (data.device === "tablet") score += 8;
+  else score += 5;
   
   // Returning visitor - high intent signal
   if (data.isReturning) score += 10;
@@ -228,16 +228,16 @@ export const useVisitorScoring = () => {
   const [timeOnSite, setTimeOnSite] = useState(0);
   const [canEngage, setCanEngage] = useState(false);
 
-  // Track time on site and 30-second trigger
+  // Track time on site and 15-second trigger (faster activation)
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeOnSite(prev => prev + 1);
     }, 1000);
 
-    // 30-second engagement permission trigger
+    // 15-second engagement permission trigger (reduced from 30s)
     const engageTimer = setTimeout(() => {
       setCanEngage(true);
-    }, 30000);
+    }, 15000);
 
     return () => {
       clearInterval(interval);
@@ -285,12 +285,12 @@ export const useVisitorScoring = () => {
     const actionScore = calculateActionScore(visitorData);
     const total = intentScore + businessScore + actionScore;
 
-    // Determine engagement level based on score
+    // Determine engagement level based on score (lowered thresholds for faster activation)
     let engagementLevel: VisitorScore["engagementLevel"];
-    if (total < 40) engagementLevel = "silent";
-    else if (total < 60) engagementLevel = "soft";
-    else if (total < 75) engagementLevel = "pitch";
-    else if (total < 90) engagementLevel = "push";
+    if (total < 25) engagementLevel = "silent";
+    else if (total < 45) engagementLevel = "soft";
+    else if (total < 60) engagementLevel = "pitch";
+    else if (total < 75) engagementLevel = "push";
     else engagementLevel = "close";
 
     setScore({
@@ -300,7 +300,7 @@ export const useVisitorScoring = () => {
       businessScore,
       actionScore,
       isBusinessVisitor: businessScore >= 18,
-      shouldEngage: canEngage && total >= 40,
+      shouldEngage: canEngage && total >= 25, // Lowered from 40 to 25
       engagementLevel
     });
 
@@ -334,7 +334,7 @@ export const useVisitorScoring = () => {
   }, [visitorData.sessionStart, visitorData.device]);
 
   const getOpeningMessage = useCallback((): string | null => {
-    if (!canEngage || score.total < 40) return null;
+    if (!canEngage || score.total < 25) return null; // Lowered from 40 to 25
 
     const { intent, engagementLevel } = score;
 

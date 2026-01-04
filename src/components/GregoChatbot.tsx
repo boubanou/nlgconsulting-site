@@ -153,7 +153,7 @@ const GregoChatbot = () => {
     
     if (messages.length === 0) {
       const opener = getOpeningMessage();
-      if (opener && score.total >= 40) {
+      if (opener && score.total >= 25) {
         setMessages([{ role: "assistant", content: opener }]);
       } else {
         const recommendation = getRecommendedPage();

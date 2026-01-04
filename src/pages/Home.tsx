@@ -104,17 +104,18 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>NLG Consulting | Global Business, Tech & Growth Group</title>
+        <title>NLG Consulting | B2B Lead Generation, Websites in 72h, Strategic Advisory</title>
         <meta 
           name="description" 
-          content="N.L.G. Consulting is a global Business, Tech & Growth Group building, operating and scaling platforms, brands and sales systems worldwide. PropTech, FinTech, AI, Media." 
+          content="NLG Consulting: 15-30 qualified B2B meetings/month, revenue-ready websites in 72 hours, and strategic advisory for scaling founders. PropTech, FinTech, AI expertise." 
         />
+        <meta name="keywords" content="B2B lead generation, website development, strategic advisory, PropTech, FinTech, AI consulting, sales development, startup growth" />
         <link rel="canonical" href="https://nlgconsulting.co/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/" />
-        <meta property="og:title" content="NLG Consulting | Global Business, Tech & Growth Group" />
-        <meta property="og:description" content="Building, operating and scaling platforms, brands and sales systems worldwide." />
+        <meta property="og:title" content="NLG Consulting | B2B Lead Generation, Websites, Advisory" />
+        <meta property="og:description" content="15-30 qualified B2B meetings/month, websites in 72 hours, and strategic advisory for scaling founders." />
         <meta property="og:image" content="https://nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -139,15 +140,18 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <Button asChild size="lg" className="text-base px-8">
                   <Link to="/book">
-                    Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
+                    Start Growing Your Pipeline <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="text-base px-8">
                   <Link to="/web">
-                    Launch a Website <Rocket className="ml-2 w-4 h-4" />
+                    Get Your Website in 72 Hours <Rocket className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
               </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                ⏱️ Limited slots available — We onboard only 3 new clients per month
+              </p>
             </div>
           </div>
         </section>
