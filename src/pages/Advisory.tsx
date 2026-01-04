@@ -73,16 +73,18 @@ const Advisory = () => {
   return (
     <>
       <Helmet>
-        <title>Advisory & Strategy | NLG Consulting</title>
+        <title>Strategic Business Advisory | Go-to-Market, Scaling, AI Strategy | NLG Consulting</title>
         <meta 
           name="description" 
-          content="Strategic advisory on business structuring, go-to-market, monetization, scaling, AI strategy, and blockchain. Expert guidance from NLG Consulting." 
+          content="Expert advisory on go-to-market strategy, monetization, scaling operations, and AI transformation. Hands-on guidance from operators who've built and scaled companies." 
         />
+        <meta name="keywords" content="business advisory, strategic consulting, go-to-market strategy, AI consulting, startup advisor, scaling strategy, monetization, business structuring" />
         <link rel="canonical" href="https://nlgconsulting.co/advisory" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/advisory" />
-        <meta property="og:title" content="Advisory & Strategy | NLG Consulting" />
+        <meta property="og:title" content="Strategic Business Advisory | Go-to-Market, Scaling, AI Strategy" />
+        <meta property="og:description" content="Expert advisory from operators who've built and scaled companies. Go-to-market, monetization, AI strategy." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

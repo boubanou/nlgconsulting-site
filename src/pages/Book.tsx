@@ -46,8 +46,9 @@ const Book = () => {
   return (
     <>
       <Helmet>
-        <title>Book Your Free Consultation - NLG Consulting</title>
-        <meta name="description" content="Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings" />
+        <title>Book a Free Strategy Call | 15-Minute Consultation | NLG Consulting</title>
+        <meta name="description" content="Book a free 15-minute strategy call with NLG Consulting. Discuss your growth challenges and discover how we can help scale your business with B2B sales, websites, or advisory." />
+        <meta name="keywords" content="book consultation, strategy call, free business consultation, B2B growth, sales strategy, business advisory" />
         <link rel="canonical" href="https://nlgconsulting.co/book" />
         <meta name="robots" content="index, follow" />
         
