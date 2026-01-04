@@ -250,7 +250,7 @@ const Sales = () => {
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
                 <Link to="/book">Book a Sales Audit <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
