@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import RelatedServices from "@/components/RelatedServices";
 
 const Contact = () => {
   const structuredData = {
@@ -82,8 +84,15 @@ const Contact = () => {
             </div>
 
             <ContactForm />
+
+            <p className="text-center text-muted-foreground mt-8 text-sm">
+              Or <Link to="/book" className="text-primary hover:underline font-medium">book a call directly</Link> to speak with our team.
+            </p>
           </div>
         </main>
+
+        {/* Related Services */}
+        <RelatedServices currentService="contact" />
 
         <Footer />
       </div>

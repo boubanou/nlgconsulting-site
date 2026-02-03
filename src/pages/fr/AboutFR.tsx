@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
+import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
 
 const AboutFR = () => {
   const structuredData = {
@@ -95,14 +96,17 @@ const AboutFR = () => {
                 Fondé en 2020, NLG Consulting est né d'un constat simple : la plupart des entreprises peinent à passer de la stratégie à l'exécution. Les cabinets de conseil traditionnels livrent de belles présentations qui prennent la poussière. Nous avons voulu faire les choses différemment.
               </p>
               <p>
-                NLG signifie "Next Level Growth" — un engagement que nous prenons envers chaque client et chaque venture. Nous ne sommes pas seulement des consultants ; nous sommes des bâtisseurs, des opérateurs et des investisseurs qui s'impliquent personnellement.
+                NLG signifie "Next Level Growth" — un engagement que nous prenons envers chaque client et chaque venture. Nous ne sommes pas seulement des consultants ; nous sommes des bâtisseurs, des opérateurs et des investisseurs qui s'impliquent personnellement. Découvrez notre <Link to="/fr/ventures" className="text-primary hover:underline font-medium">portefeuille de ventures</Link>.
               </p>
               <p>
-                Ce qui nous distingue, c'est notre philosophie d'exécution d'abord. Nous ne conseillons pas seulement — nous implémentons. Que ce soit pour construire une infrastructure commerciale complète, lancer un site web prêt à générer du revenu en 72 heures, ou fournir un accompagnement stratégique pour scaler votre entreprise.
+                Ce qui nous distingue, c'est notre philosophie d'exécution d'abord. Nous ne conseillons pas seulement — nous implémentons. Que ce soit pour construire une <Link to="/fr/vente" className="text-primary hover:underline font-medium">infrastructure commerciale complète</Link>, lancer un <Link to="/fr/site-internet" className="text-primary hover:underline font-medium">site web prêt à générer du revenu en 72 heures</Link>, ou fournir un <Link to="/fr/conseil" className="text-primary hover:underline font-medium">accompagnement stratégique</Link> pour scaler votre entreprise.
               </p>
             </div>
           </div>
         </section>
+
+        {/* Related Services Section */}
+        <RelatedServicesFR currentService="about" />
 
         {/* What is NLG */}
         <section className="py-20 px-4 bg-muted/30">

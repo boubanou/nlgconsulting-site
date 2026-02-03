@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink, Building2, Radio, Dumbbell, Globe, BookOpen } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
+import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
 
 const VenturesFR = () => {
   const structuredData = {
@@ -230,7 +231,8 @@ const VenturesFR = () => {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Related Services */}
+        <RelatedServicesFR currentService="ventures" />
         <section className="py-20 px-4 bg-muted/30">
           <div className="container mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold mb-4">Partenaires avec nous</h2>

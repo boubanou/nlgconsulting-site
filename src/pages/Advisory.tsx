@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
+import RelatedServices from "@/components/RelatedServices";
 
 const Advisory = () => {
   const structuredData = {
@@ -231,15 +232,18 @@ const Advisory = () => {
               </p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Implementation Support</h3>
               <p>
-                Unlike traditional advisors who leave you with a strategy to implement on your own, we offer optional implementation support through our service divisions. Need a sales team? Our SDR services can help. Need a website? NLG Studio delivers in 72 hours. This integration between strategy and execution is unique to NLG.
+                Unlike traditional advisors who leave you with a strategy to implement on your own, we offer optional implementation support through our service divisions. Need a sales team? Our <Link to="/sales" className="text-primary hover:underline font-medium">SDR services</Link> can help. Need a website? <Link to="/web" className="text-primary hover:underline font-medium">NLG Studio</Link> delivers in 72 hours. This integration between strategy and execution is unique to NLG.
               </p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global Perspective</h3>
               <p>
-                With experience across Europe, North America, and the Middle East, we bring global perspective to local challenges. Whether you're expanding internationally or optimizing your home market, we have relevant insights.
+                With experience across Europe, North America, and the Middle East, we bring global perspective to local challenges. Whether you're expanding internationally or optimizing your home market, we have relevant insights. Explore our <Link to="/ventures" className="text-primary hover:underline font-medium">venture portfolio</Link> to see how we apply these principles.
               </p>
             </div>
           </div>
         </section>
+
+        {/* Related Services */}
+        <RelatedServices currentService="advisory" />
 
         {/* CTA */}
         <section className="py-20 px-4 bg-primary text-primary-foreground">

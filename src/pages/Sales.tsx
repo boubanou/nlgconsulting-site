@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
+import RelatedServices from "@/components/RelatedServices";
 
 const Sales = () => {
   const structuredData = {
@@ -285,11 +286,14 @@ const Sales = () => {
                 By month four, your outbound engine is running like clockwork. You know exactly how many touches lead to how many meetings, and how many meetings lead to closed deals. Average: 20-30 meetings per month with continuous improvement.
               </p>
               <p className="mt-8">
-                Ready to build a predictable pipeline? Book a free sales audit to discuss your current situation and see how NLG can help.
+                Our methodology is refined through our <Link to="/advisory" className="text-primary hover:underline font-medium">advisory practice</Link> and real-world experience from our <Link to="/ventures" className="text-primary hover:underline font-medium">venture portfolio</Link>. Ready to build a predictable pipeline? Book a free sales audit to discuss your current situation.
               </p>
             </div>
           </div>
         </section>
+
+        {/* Related Services */}
+        <RelatedServices currentService="sales" />
 
         {/* CTA */}
         <section className="py-20 px-4 bg-primary text-primary-foreground">

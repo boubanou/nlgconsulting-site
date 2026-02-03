@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, TrendingUp, Heart, ArrowRight, Linkedin, ExternalLink, BookOpen } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 
 const About = () => {
   const values = [
@@ -285,8 +286,14 @@ const About = () => {
                     <p className="text-xs text-muted-foreground">Continents served</p>
                   </div>
                 </div>
+                <p className="text-muted-foreground mt-6">
+                  Explore our <Link to="/ventures" className="text-primary hover:underline font-medium">venture portfolio</Link> to see how we build and scale platforms.
+                </p>
               </div>
             </div>
+
+            {/* Our Services Section */}
+            <RelatedServices currentService="about" />
 
             {/* Final CTA */}
             <div className="text-center">
