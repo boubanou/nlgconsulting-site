@@ -36,23 +36,29 @@ const WebLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Website in 72 Hours | NLG Studio | From €997</title>
+        <title>Website in 72 Hours | From €749 | SEO + Stripe Included | NLG Studio</title>
         <meta 
           name="description" 
-          content="Launch your revenue-ready website in under 72 hours. Complete package: UX/UI design, SEO, Stripe payments, CRM integration. Source code included. Starting at €997." 
+          content="Launch your conversion-ready website in 72 hours. UX design, SEO, Stripe payments, CRM integration. 100% code ownership. Starting at €749." 
         />
         <meta 
           name="keywords" 
-          content="fast website development, 72 hour website, business website, landing page design, website with payments, Stripe integration, SEO website, professional web design, startup website" 
+          content="website 72 hours, fast website development, business website, landing page design, Stripe integration, SEO website, professional web design, startup website, conversion website" 
         />
         <link rel="canonical" href="https://nlgconsulting.co/web" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/web" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/site-internet" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/web" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/web" />
-        <meta property="og:title" content="Professional Website in 72 Hours | NLG Studio | From €997" />
-        <meta property="og:description" content="Launch your revenue-ready website in under 72 hours. UX/UI, SEO, CRM, Stripe included. From €997." />
+        <meta property="og:title" content="Website in 72 Hours | From €749 | SEO + Stripe Included" />
+        <meta property="og:description" content="Launch your conversion-ready website in 72 hours. UX design, SEO, Stripe payments, CRM integration. 100% code ownership. Starting at €749." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Website in 72 Hours | From €749 | SEO + Stripe Included" />
+        <meta name="twitter:description" content="Launch your conversion-ready website in 72 hours. UX design, SEO, Stripe payments, CRM integration. 100% code ownership." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       

@@ -46,19 +46,27 @@ const Book = () => {
   return (
     <>
       <Helmet>
-        <title>Book a Free Strategy Call | 15-Minute Consultation | NLG Consulting</title>
-        <meta name="description" content="Book a free 15-minute strategy call with NLG Consulting. Discuss your growth challenges and discover how we can help scale your business with B2B sales, websites, or advisory." />
-        <meta name="keywords" content="book consultation, strategy call, free business consultation, B2B growth, sales strategy, business advisory" />
+        <title>Book Free Strategy Call | 15-Min Consultation | Response in 24h | NLG Consulting</title>
+        <meta name="description" content="Schedule your free 15-minute strategy call. Discuss B2B lead generation, website development, or business advisory. Response within 24 hours. Limited slots." />
+        <meta name="keywords" content="book strategy call, free consultation, B2B growth strategy, business advisory call, sales strategy meeting, book appointment" />
         <link rel="canonical" href="https://nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/rendez-vous" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/book" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/book" />
-        <meta property="og:title" content="Book Your Free Consultation - NLG Consulting" />
-        <meta property="og:description" content="Schedule a 15-minute call to discuss how we can help you generate qualified B2B meetings" />
+        <meta property="og:title" content="Book Free Strategy Call | 15-Min Consultation | NLG Consulting" />
+        <meta property="og:description" content="Schedule your free 15-minute strategy call. Discuss B2B lead generation, website development, or business advisory. Response within 24 hours." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book Free Strategy Call | 15-Min Consultation | NLG Consulting" />
+        <meta name="twitter:description" content="Schedule your free 15-minute strategy call. Discuss B2B lead generation, website development, or business advisory." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         
         {/* Structured Data */}
         <script type="application/ld+json">

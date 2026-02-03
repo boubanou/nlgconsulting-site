@@ -81,18 +81,27 @@ const SalesFR = () => {
   return (
     <>
       <Helmet>
-        <title>Développement Commercial B2B Externalisé | SDR as a Service | NLG Consulting</title>
+        <title>Externalisation SDR | 15-30 RDV B2B Qualifiés/Mois Garantis | NLG</title>
         <meta 
           name="description" 
-          content="Service complet de développement commercial B2B : génération de leads, outbound multicanal, systèmes SDR, pipelines CRM. 15-30 rendez-vous qualifiés par mois garantis." 
+          content="Externalisez votre prospection B2B. Infrastructure SDR complète: LinkedIn, email, cold calling. 15-30 RDV qualifiés garantis. Audit commercial gratuit." 
         />
-        <meta name="keywords" content="SDR externalisé, développement commercial, génération de leads B2B, prospection commerciale, prise de rendez-vous, agence leads" />
+        <meta name="keywords" content="SDR externalisé, externalisation prospection, génération de leads B2B, prospection commerciale, prise de rendez-vous, agence leads, LinkedIn outreach" />
         <link rel="canonical" href="https://nlgconsulting.co/fr/vente" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/sales" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/vente" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/sales" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nlgconsulting.co/fr/vente" />
+        <meta property="og:title" content="Externalisation SDR | 15-30 RDV B2B Qualifiés/Mois | NLG" />
+        <meta property="og:description" content="Externalisez votre prospection B2B. Infrastructure SDR complète: LinkedIn, email, cold calling. 15-30 RDV qualifiés garantis." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Externalisation SDR | 15-30 RDV B2B Qualifiés/Mois | NLG" />
+        <meta name="twitter:description" content="Externalisez votre prospection B2B. Infrastructure SDR complète: LinkedIn, email, cold calling. 15-30 RDV qualifiés garantis." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
