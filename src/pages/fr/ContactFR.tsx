@@ -32,18 +32,27 @@ const ContactFR = () => {
   return (
     <>
       <Helmet>
-        <title>Contacter NLG Consulting | Prendre Contact | Consultation Gratuite</title>
+        <title>Contacter NLG Consulting | Réponse sous 24h | Consultation Gratuite</title>
         <meta 
           name="description" 
-          content="Contactez NLG Consulting pour la génération de leads B2B, la création de sites web ou le conseil stratégique. Réservez un appel stratégique gratuit de 15 minutes." 
+          content="Contactez NLG Consulting. Génération de leads B2B, création de sites web ou conseil stratégique. Rappel immédiat disponible. Réponse sous 24h." 
         />
-        <meta name="keywords" content="contacter NLG Consulting, réserver consultation, appel stratégique, consultation business gratuite, prendre contact" />
+        <meta name="keywords" content="contacter NLG, prendre contact, réserver consultation, appel stratégique gratuit, demande de rappel" />
         <link rel="canonical" href="https://nlgconsulting.co/fr/contact" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/contact" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/contact" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nlgconsulting.co/fr/contact" />
+        <meta property="og:title" content="Contacter NLG Consulting | Réponse sous 24h" />
+        <meta property="og:description" content="Contactez NLG Consulting. Génération de leads B2B, création de sites web ou conseil stratégique. Rappel immédiat disponible." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contacter NLG Consulting | Réponse sous 24h" />
+        <meta name="twitter:description" content="Contactez NLG Consulting. Génération de leads B2B, création de sites web ou conseil stratégique." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

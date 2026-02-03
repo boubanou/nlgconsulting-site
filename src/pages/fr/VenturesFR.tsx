@@ -74,18 +74,27 @@ const VenturesFR = () => {
   return (
     <>
       <Helmet>
-        <title>Portefeuille NLG Ventures | Investissements PropTech, FinTech, Média</title>
+        <title>Portefeuille NLG Ventures | PropTech, FinTech & Média | Nous Construisons & Scalons</title>
         <meta 
           name="description" 
-          content="Découvrez le portefeuille de ventures NLG : Block Tech (PropTech/FinTech), FractionalPropertyHub, Business Legend, et plus. Nous construisons, investissons et développons des plateformes innovantes." 
+          content="Explorez le portefeuille NLG: Block Tech, FractionalPropertyHub, Business Legend. Nous construisons et développons des plateformes innovantes." 
         />
-        <meta name="keywords" content="venture studio, investissement PropTech, ventures FinTech, portefeuille startup, immobilier fractionné, ventures business, investissement technologique" />
+        <meta name="keywords" content="venture studio, investissement PropTech, ventures FinTech, portefeuille startup, immobilier fractionné, ventures business, Block Tech" />
         <link rel="canonical" href="https://nlgconsulting.co/fr/ventures" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/ventures" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/ventures" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/ventures" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nlgconsulting.co/fr/ventures" />
+        <meta property="og:title" content="Portefeuille NLG Ventures | PropTech, FinTech & Média" />
+        <meta property="og:description" content="Explorez le portefeuille NLG: Block Tech, FractionalPropertyHub, Business Legend. Nous construisons et développons des plateformes innovantes." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portefeuille NLG Ventures | PropTech, FinTech & Média" />
+        <meta name="twitter:description" content="Explorez le portefeuille NLG: Block Tech, FractionalPropertyHub, Business Legend. Nous construisons et développons des plateformes." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

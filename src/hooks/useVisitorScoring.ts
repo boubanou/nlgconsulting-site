@@ -228,16 +228,16 @@ export const useVisitorScoring = () => {
   const [timeOnSite, setTimeOnSite] = useState(0);
   const [canEngage, setCanEngage] = useState(false);
 
-  // Track time on site and 15-second trigger (faster activation)
+  // Track time on site and 12-second trigger (faster activation for higher conversion)
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeOnSite(prev => prev + 1);
     }, 1000);
 
-    // 15-second engagement permission trigger (reduced from 30s)
+    // 12-second engagement permission trigger (reduced from 15s for faster GREGO activation)
     const engageTimer = setTimeout(() => {
       setCanEngage(true);
-    }, 15000);
+    }, 12000);
 
     return () => {
       clearInterval(interval);
@@ -285,12 +285,12 @@ export const useVisitorScoring = () => {
     const actionScore = calculateActionScore(visitorData);
     const total = intentScore + businessScore + actionScore;
 
-    // Determine engagement level based on score (lowered thresholds for faster activation)
+    // Determine engagement level based on score (aggressive thresholds for maximum conversion)
     let engagementLevel: VisitorScore["engagementLevel"];
-    if (total < 25) engagementLevel = "silent";
-    else if (total < 45) engagementLevel = "soft";
-    else if (total < 60) engagementLevel = "pitch";
-    else if (total < 75) engagementLevel = "push";
+    if (total < 20) engagementLevel = "silent";
+    else if (total < 35) engagementLevel = "soft";
+    else if (total < 50) engagementLevel = "pitch";
+    else if (total < 65) engagementLevel = "push";
     else engagementLevel = "close";
 
     setScore({
@@ -299,8 +299,8 @@ export const useVisitorScoring = () => {
       intentScore,
       businessScore,
       actionScore,
-      isBusinessVisitor: businessScore >= 18,
-      shouldEngage: canEngage && total >= 25, // Lowered from 40 to 25
+      isBusinessVisitor: businessScore >= 15,
+      shouldEngage: canEngage && total >= 20, // Lowered from 25 to 20 for faster engagement
       engagementLevel
     });
 
@@ -334,7 +334,7 @@ export const useVisitorScoring = () => {
   }, [visitorData.sessionStart, visitorData.device]);
 
   const getOpeningMessage = useCallback((): string | null => {
-    if (!canEngage || score.total < 25) return null; // Lowered from 40 to 25
+    if (!canEngage || score.total < 20) return null; // Lowered from 25 to 20 for faster activation
 
     const { intent, engagementLevel } = score;
     

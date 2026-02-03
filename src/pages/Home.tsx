@@ -104,12 +104,12 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>NLG Consulting | B2B Lead Generation, Websites in 72h, Strategic Advisory</title>
+        <title>B2B Lead Generation Agency | 15-30 Meetings/Month Guaranteed | NLG Consulting</title>
         <meta 
           name="description" 
-          content="NLG Consulting: 15-30 qualified B2B meetings/month, revenue-ready websites in 72 hours, and strategic advisory for scaling founders. PropTech, FinTech, AI expertise." 
+          content="Scale your B2B pipeline with 15-30 qualified meetings per month. Websites in 72h, SDR systems & strategic advisory. Trusted by 50+ startups. Book free call." 
         />
-        <meta name="keywords" content="B2B lead generation, website development, strategic advisory, PropTech, FinTech, AI consulting, sales development, startup growth" />
+        <meta name="keywords" content="B2B lead generation, outsourced SDR, sales development, qualified meetings, website 72 hours, strategic advisory, PropTech, FinTech, AI consulting" />
         <link rel="canonical" href="https://nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr" />
@@ -117,9 +117,13 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/" />
-        <meta property="og:title" content="NLG Consulting | B2B Lead Generation, Websites, Advisory" />
-        <meta property="og:description" content="15-30 qualified B2B meetings/month, websites in 72 hours, and strategic advisory for scaling founders." />
-        <meta property="og:image" content="https://nlgconsulting.co/logo.svg" />
+        <meta property="og:title" content="B2B Lead Generation Agency | 15-30 Meetings/Month | NLG Consulting" />
+        <meta property="og:description" content="Scale your B2B pipeline with 15-30 qualified meetings per month. Websites in 72h, SDR systems & strategic advisory. Trusted by 50+ startups." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="B2B Lead Generation Agency | 15-30 Meetings/Month | NLG Consulting" />
+        <meta name="twitter:description" content="Scale your B2B pipeline with 15-30 qualified meetings per month. Websites in 72h, SDR systems & strategic advisory." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

@@ -82,20 +82,27 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Gregory Brenig | Founder of NLG Consulting | Tech & Business Expert</title>
-        <meta name="description" content="Gregory Brenig is a recognized expert in FinTech, PropTech, and AI-driven business models. 15+ years helping founders scale globally. Author of 'Level Up in Fractional Real Estate'." />
-        <meta name="keywords" content="Gregory Brenig, business consultant, FinTech expert, PropTech advisor, fractional real estate, NLG Consulting, startup advisor, AI strategy" />
+        <title>Gregory Brenig | Founder NLG Consulting | PropTech & FinTech Expert | 15+ Years</title>
+        <meta name="description" content="Meet Gregory Brenig, founder of NLG Consulting. 15+ years in PropTech, FinTech & AI. Author of 'Level Up in Fractional Real Estate'. Book a call." />
+        <meta name="keywords" content="Gregory Brenig, NLG founder, FinTech expert, PropTech advisor, fractional real estate author, startup advisor, AI strategy, business consultant" />
         <link rel="canonical" href="https://nlgconsulting.co/about" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/about" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/a-propos" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/about" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://nlgconsulting.co/about" />
-        <meta property="og:title" content="About Gregory Brenig | Founder of NLG Consulting" />
-        <meta property="og:description" content="Gregory Brenig is a recognized expert in FinTech, PropTech, and AI-driven business models. 15+ years helping founders scale globally." />
+        <meta property="og:title" content="Gregory Brenig | Founder NLG Consulting | PropTech & FinTech Expert" />
+        <meta property="og:description" content="Meet Gregory Brenig, founder of NLG Consulting. 15+ years in PropTech, FinTech & AI. Author of 'Level Up in Fractional Real Estate'." />
         <meta property="og:image" content="https://nlgconsulting.co/images/gregory-brenig.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gregory Brenig | Founder NLG Consulting | PropTech & FinTech Expert" />
+        <meta name="twitter:description" content="Meet Gregory Brenig, founder of NLG Consulting. 15+ years in PropTech, FinTech & AI." />
+        <meta name="twitter:image" content="https://nlgconsulting.co/images/gregory-brenig.jpg" />
         
         {/* Structured Data */}
         <script type="application/ld+json">

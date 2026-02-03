@@ -14,7 +14,7 @@ import { toast } from "sonner";
 import { useLocation } from "react-router-dom";
 
 const SESSION_STORAGE_KEY = "nlg-lead-popup-shown";
-const POPUP_DELAY_MS = 30000; // 30 seconds
+const POPUP_DELAY_MS = 20000; // 20 seconds (reduced from 30s for higher conversion)
 
 // Translations
 const translations = {

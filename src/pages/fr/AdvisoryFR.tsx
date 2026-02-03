@@ -73,10 +73,10 @@ const AdvisoryFR = () => {
   return (
     <>
       <Helmet>
-        <title>Conseil Stratégique d'Entreprise | Go-to-Market, Scaling, Stratégie IA | NLG Consulting</title>
+        <title>Conseil Stratégique | Go-to-Market & Stratégie IA | 15+ Ans d'Expérience | NLG</title>
         <meta 
           name="description" 
-          content="Conseil expert en stratégie go-to-market, monétisation, scaling et transformation IA. Accompagnement concret par des opérateurs qui ont construit et développé des entreprises." 
+          content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience. Réservez votre appel stratégique gratuit." 
         />
         <meta name="keywords" content="conseil stratégique, consultant business, stratégie go-to-market, conseil IA, advisor startup, stratégie de croissance, monétisation, structuration entreprise" />
         <link rel="canonical" href="https://nlgconsulting.co/fr/conseil" />
@@ -84,7 +84,16 @@ const AdvisoryFR = () => {
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/conseil" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/advisory" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nlgconsulting.co/fr/conseil" />
+        <meta property="og:title" content="Conseil Stratégique | Go-to-Market & Stratégie IA | NLG" />
+        <meta property="og:description" content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Conseil Stratégique | Go-to-Market & Stratégie IA | NLG" />
+        <meta name="twitter:description" content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

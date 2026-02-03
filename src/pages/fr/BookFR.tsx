@@ -28,15 +28,24 @@ const BookFR = () => {
   return (
     <>
       <Helmet>
-        <title>Réserver un Appel Stratégique Gratuit | Consultation 15 Minutes | NLG Consulting</title>
-        <meta name="description" content="Réservez un appel stratégique gratuit de 15 minutes avec NLG Consulting. Discutez de vos défis de croissance et découvrez comment nous pouvons vous aider à scaler avec la vente B2B, les sites web ou le conseil." />
-        <meta name="keywords" content="réserver consultation, appel stratégique, consultation business gratuite, croissance B2B, stratégie commerciale, conseil business" />
+        <title>Réserver un Appel Gratuit | Consultation 15 Min | Réponse sous 24h | NLG Consulting</title>
+        <meta name="description" content="Planifiez votre appel stratégique gratuit de 15 minutes. Génération de leads, création de sites web ou conseil. Réponse sous 24h. Places limitées." />
+        <meta name="keywords" content="réserver appel stratégique, consultation gratuite, croissance B2B, stratégie commerciale, conseil business, prendre rendez-vous" />
         <link rel="canonical" href="https://nlgconsulting.co/fr/rendez-vous" />
         <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/rendez-vous" />
         <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/book" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nlgconsulting.co/fr/rendez-vous" />
+        <meta property="og:title" content="Réserver un Appel Gratuit | Consultation 15 Min | NLG Consulting" />
+        <meta property="og:description" content="Planifiez votre appel stratégique gratuit de 15 minutes. Génération de leads, création de sites web ou conseil. Réponse sous 24h." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Réserver un Appel Gratuit | Consultation 15 Min | NLG Consulting" />
+        <meta name="twitter:description" content="Planifiez votre appel stratégique gratuit de 15 minutes. Génération de leads, création de sites web ou conseil." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

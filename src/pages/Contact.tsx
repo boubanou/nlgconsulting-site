@@ -44,16 +44,26 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - NLG Consulting</title>
-        <meta name="description" content="Share your details. If urgent, check 'Immediate callback'." />
+        <title>Contact NLG Consulting | Get in Touch | Response Within 24h</title>
+        <meta name="description" content="Contact NLG Consulting. Share your details for B2B lead generation, website development, or strategic advisory. Immediate callback available." />
         <link rel="canonical" href="https://nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/contact" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nlgconsulting.co/contact" />
-        <meta property="og:title" content="Contact Us - NLG Consulting" />
-        <meta property="og:description" content="Share your details. If urgent, check 'Immediate callback'." />
+        <meta property="og:title" content="Contact NLG Consulting | Get in Touch" />
+        <meta property="og:description" content="Contact NLG Consulting. Share your details for B2B lead generation, website development, or strategic advisory." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact NLG Consulting | Get in Touch" />
+        <meta name="twitter:description" content="Contact NLG Consulting. Share your details for B2B lead generation, website development, or strategic advisory." />
+        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
