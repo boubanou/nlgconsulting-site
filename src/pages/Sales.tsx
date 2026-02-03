@@ -34,6 +34,51 @@ const Sales = () => {
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
           { "@type": "ListItem", "position": 2, "name": "Sales & BD", "item": "https://nlgconsulting.co/sales" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many qualified meetings can I expect per month?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our clients typically receive 15-30 qualified B2B meetings per month. This depends on your target market, ICP, and industry, but we guarantee consistent delivery within this range."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to see results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most clients see their first qualified meetings within 2-3 weeks of onboarding. By month 2-3, your outbound engine is optimized and delivering 15-25 meetings monthly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What channels do you use for outreach?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We deploy coordinated multichannel outreach including LinkedIn, email sequences, and cold calling. This maximizes touchpoints and response rates across your target audience."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you integrate with our CRM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all activities are logged directly in your CRM (HubSpot, Salesforce, Pipedrive, etc.) for complete visibility and seamless handoff to your sales team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does outsourced SDR cost compared to in-house?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Building an in-house SDR team costs €80,000+ per year per SDR (salary, tools, training, management). Our outsourced solution delivers better results at a fraction of the cost with no ramp-up time."
+            }
+          }
+        ]
       }
     ]
   };
