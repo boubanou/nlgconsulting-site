@@ -34,6 +34,51 @@ const SalesFR = () => {
           { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
           { "@type": "ListItem", "position": 2, "name": "Vente & BD", "item": "https://nlgconsulting.co/fr/vente" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Combien de rendez-vous qualifiés puis-je espérer par mois ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nos clients reçoivent généralement 15-30 rendez-vous B2B qualifiés par mois. Cela dépend de votre marché cible, ICP et secteur, mais nous garantissons une livraison constante dans cette fourchette."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps faut-il pour voir des résultats ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La plupart des clients voient leurs premiers rendez-vous qualifiés dans les 2-3 semaines suivant l'onboarding. Aux mois 2-3, votre moteur outbound est optimisé et livre 15-25 rendez-vous mensuels."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quels canaux utilisez-vous pour la prospection ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nous déployons une prospection multicanale coordonnée incluant LinkedIn, séquences email et cold calling. Cela maximise les points de contact et les taux de réponse."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Intégrez-vous notre CRM ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, toutes les activités sont enregistrées directement dans votre CRM (HubSpot, Salesforce, Pipedrive, etc.) pour une visibilité complète et un transfert fluide à votre équipe commerciale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien coûte l'externalisation SDR par rapport à l'interne ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Construire une équipe SDR interne coûte plus de 80 000€ par an par SDR (salaire, outils, formation, management). Notre solution externalisée délivre de meilleurs résultats à une fraction du coût sans temps de montée en compétence."
+            }
+          }
+        ]
       }
     ]
   };

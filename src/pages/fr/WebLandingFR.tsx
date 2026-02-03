@@ -21,13 +21,65 @@ const WebLandingFR = () => {
         "name": "Site Web en 72 Heures - NLG Studio",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Développement de site web professionnel livré en moins de 72 heures. Inclut design UX/UI, copywriting, optimisation SEO, intégration CRM et paiements Stripe.",
-        "url": "https://nlgconsulting.co/fr/site-internet"
+        "url": "https://nlgconsulting.co/fr/site-internet",
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "749",
+          "highPrice": "2499",
+          "priceCurrency": "EUR",
+          "offerCount": "3"
+        }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
           { "@type": "ListItem", "position": 2, "name": "Site Internet", "item": "https://nlgconsulting.co/fr/site-internet" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Le paiement est-il sécurisé ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, tous les paiements sont traités par Stripe, leader mondial des paiements en ligne. Vos données bancaires sont cryptées selon les normes PCI-DSS et ne sont jamais stockées sur nos serveurs. Vous recevez automatiquement une facture après chaque paiement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que se passe-t-il après le versement de l'acompte ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dès réception de votre acompte, nous vous contactons sous 24 heures pour planifier un brief de 30 minutes. Ensuite, nous commençons la création de votre site. Vous recevez une première version en quelques jours, suivie des ajustements avant la livraison finale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Suis-je propriétaire du site web ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolument. Après paiement complet, vous devenez 100% propriétaire de votre site web. Nous vous fournissons systématiquement le code source complet. Vous êtes libre d'héberger, modifier ou transférer votre site comme vous le souhaitez, sans aucune dépendance technique."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le SEO est-il inclus ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, tous nos packs incluent une structure SEO optimisée avec des meta titles et meta descriptions uniques pour chaque page, ainsi que l'indexation Google. Le Pack Intermédiaire propose un SEO avancé avec des fonctionnalités supplémentaires."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je utiliser mon propre nom de domaine ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, vous pouvez utiliser votre propre nom de domaine. La configuration du domaine et du DNS est incluse dans tous nos packs. Si vous n'avez pas encore de domaine, nous pouvons vous conseiller sur les meilleures options."
+            }
+          }
         ]
       }
     ]

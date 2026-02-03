@@ -21,13 +21,65 @@ const WebLanding = () => {
         "name": "Website in 72 Hours - NLG Studio",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Professional website development delivered in under 72 hours. Includes UX/UI design, copywriting, SEO optimization, CRM integration, and Stripe payment processing.",
-        "url": "https://nlgconsulting.co/web"
+        "url": "https://nlgconsulting.co/web",
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "749",
+          "highPrice": "2499",
+          "priceCurrency": "EUR",
+          "offerCount": "3"
+        }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
           { "@type": "ListItem", "position": 2, "name": "Web Studio", "item": "https://nlgconsulting.co/web" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the payment secure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all payments are processed by Stripe, the world leader in online payments. Your banking data is encrypted according to PCI-DSS standards and is never stored on our servers. You automatically receive an invoice after each payment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens after the deposit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upon receiving your deposit, we contact you within 24 hours to schedule a 30-minute brief. Then, we begin creating your website. You receive a first version within a few days, followed by adjustments before final delivery."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. After full payment, you become 100% owner of your website. We systematically provide you with the complete source code. You are free to host, modify, or transfer your site as you wish, without any technical dependency."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SEO included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all our packages include an optimized SEO structure with unique meta titles and meta descriptions for each page, as well as Google indexing. The Intermediate Pack offers advanced SEO with additional features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use my own domain name?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can use your own domain name. Domain and DNS setup is included in all our packages. If you don't have a domain yet, we can advise you on the best options."
+            }
+          }
         ]
       }
     ]
