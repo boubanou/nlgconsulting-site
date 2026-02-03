@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 import CalendarEmbed from "@/components/CalendarEmbed";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen } from "lucide-react";
+import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
 
 const BookFR = () => {
   const structuredData = {
@@ -74,8 +76,15 @@ const BookFR = () => {
                 </a>
               </Button>
             </div>
+
+            <p className="text-center text-muted-foreground text-sm">
+              Pas sûr du service ? Explorez <Link to="/fr/vente" className="text-primary hover:underline">Vente & BD</Link>, <Link to="/fr/site-internet" className="text-primary hover:underline">Studio Web</Link>, ou <Link to="/fr/conseil" className="text-primary hover:underline">Conseil</Link>.
+            </p>
           </div>
         </main>
+
+        {/* Related Services */}
+        <RelatedServicesFR currentService="book" />
 
         <MainFooterFR />
       </div>

@@ -8,6 +8,7 @@ import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 import ContactForm from "@/components/ContactForm";
 import CalendarEmbed from "@/components/CalendarEmbed";
+import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
 
 const ContactFR = () => {
   const structuredData = {
@@ -167,6 +168,9 @@ const ContactFR = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Services */}
+        <RelatedServicesFR currentService="contact" />
 
         <MainFooterFR />
       </div>

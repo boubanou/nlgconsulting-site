@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
+import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
 
 const AdvisoryFR = () => {
   const structuredData = {
@@ -214,7 +215,8 @@ const AdvisoryFR = () => {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Related Services */}
+        <RelatedServicesFR currentService="advisory" />
         <section className="py-20 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

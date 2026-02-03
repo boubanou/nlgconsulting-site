@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
+import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
 
 const SalesFR = () => {
   const structuredData = {
@@ -265,7 +266,8 @@ const SalesFR = () => {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Related Services */}
+        <RelatedServicesFR currentService="sales" />
         <section className="py-20 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-3xl text-center">
             <Zap className="w-12 h-12 mx-auto mb-6 opacity-80" />

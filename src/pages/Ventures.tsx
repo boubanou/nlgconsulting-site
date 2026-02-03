@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink, Building2, Radio, Dumbbell, Globe, BookOpen } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
+import RelatedServices from "@/components/RelatedServices";
 
 const Ventures = () => {
   const structuredData = {
@@ -254,15 +255,18 @@ const Ventures = () => {
               </p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global From Day One</h3>
               <p>
-                We build ventures for global markets from the start. Our team operates across Europe, North America, and the Middle East, giving us firsthand understanding of different markets and regulatory environments. This global perspective is embedded in every product and service we develop.
+                We build ventures for global markets from the start. Our team operates across Europe, North America, and the Middle East, giving us firsthand understanding of different markets and regulatory environments. This global perspective is embedded in every product and service we develop—including our <Link to="/advisory" className="text-primary hover:underline font-medium">strategic advisory</Link> practice.
               </p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Execution Over Ideas</h3>
               <p>
-                Ideas are cheap; execution is everything. We focus on building real products that solve real problems. Our ventures are not theoretical concepts—they're operating businesses generating revenue and serving customers. This hands-on approach is what allows us to bring genuine expertise to our consulting clients.
+                Ideas are cheap; execution is everything. We focus on building real products that solve real problems. Our ventures are not theoretical concepts—they're operating businesses generating revenue and serving customers. This hands-on approach is what allows us to bring genuine expertise to our consulting clients. Whether you need <Link to="/sales" className="text-primary hover:underline font-medium">sales development</Link> or a <Link to="/web" className="text-primary hover:underline font-medium">website in 72 hours</Link>, we deliver.
               </p>
             </div>
           </div>
         </section>
+
+        {/* Related Services */}
+        <RelatedServices currentService="ventures" />
 
         {/* CTA */}
         <section className="py-20 px-4 bg-muted/30">
