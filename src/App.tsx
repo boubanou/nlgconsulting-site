@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { CookieConsent } from "./components/CookieConsent";
 import { LeadPopup } from "./components/LeadPopup";
 import GregoChatbot from "./components/GregoChatbot";
+import { LanguageRedirectHandler } from "./components/LanguageRedirectHandler";
 
 // Lazy load pages for code splitting and better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -67,6 +68,7 @@ const App = () => (
       <LeadPopup />
       <GregoChatbot />
       <ScrollToTop />
+      <LanguageRedirectHandler />
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
