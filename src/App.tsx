@@ -31,6 +31,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const WebLanding = lazy(() => import("./pages/WebLanding"));
 const WebTerms = lazy(() => import("./pages/WebTerms"));
 const WebThankYou = lazy(() => import("./pages/WebThankYou"));
+const Marketing = lazy(() => import("./pages/Marketing"));
 
 // French Pages
 const HomeFR = lazy(() => import("./pages/fr/HomeFR"));
@@ -42,6 +43,7 @@ const ContactFR = lazy(() => import("./pages/fr/ContactFR"));
 const BookFR = lazy(() => import("./pages/fr/BookFR"));
 const WebLandingFR = lazy(() => import("./pages/fr/WebLandingFR"));
 const PrivacyPolicyFR = lazy(() => import("./pages/fr/PrivacyPolicyFR"));
+const MarketingFR = lazy(() => import("./pages/fr/MarketingFR"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -91,6 +93,7 @@ const App = () => (
           <Route path="/web" element={<WebLanding />} />
           <Route path="/web/terms" element={<WebTerms />} />
           <Route path="/web/thank-you" element={<WebThankYou />} />
+          <Route path="/marketing" element={<Marketing />} />
           
           {/* French Pages */}
           <Route path="/fr" element={<HomeFR />} />
@@ -102,6 +105,7 @@ const App = () => (
           <Route path="/fr/rendez-vous" element={<BookFR />} />
           <Route path="/fr/site-internet" element={<WebLandingFR />} />
           <Route path="/fr/politique-confidentialite" element={<PrivacyPolicyFR />} />
+          <Route path="/fr/marketing" element={<MarketingFR />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

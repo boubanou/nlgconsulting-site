@@ -48,6 +48,7 @@ const MainFooter = () => {
             <h4 className="font-semibold mb-4 text-sm">Services</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/sales" className="text-muted-foreground hover:text-primary transition-colors">Sales & BD</Link></li>
+              <li><Link to="/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing & PPC</Link></li>
               <li><Link to="/web" className="text-muted-foreground hover:text-primary transition-colors">Web Studio</Link></li>
               <li><Link to="/advisory" className="text-muted-foreground hover:text-primary transition-colors">Advisory</Link></li>
             </ul>

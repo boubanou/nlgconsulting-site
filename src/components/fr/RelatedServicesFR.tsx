@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Target, Lightbulb, Rocket } from "lucide-react";
 
 interface RelatedServicesFRProps {
-  currentService: "sales" | "web" | "advisory" | "ventures" | "about" | "contact" | "book";
+  currentService: "sales" | "web" | "advisory" | "ventures" | "about" | "contact" | "book" | "marketing";
 }
 
 const services = {
@@ -35,6 +35,13 @@ const services = {
     icon: <Rocket className="w-6 h-6" />,
     link: "/fr/ventures",
     cta: "Explorer le portfolio"
+  },
+  marketing: {
+    title: "Marketing & PPC",
+    description: "Campagnes PPC orientées ROI sur Google, Meta, LinkedIn et plus.",
+    icon: <Target className="w-6 h-6" />,
+    link: "/fr/marketing",
+    cta: "Booster votre marketing"
   }
 };
 
@@ -42,21 +49,23 @@ const RelatedServicesFR = ({ currentService }: RelatedServicesFRProps) => {
   const getRelatedServices = () => {
     switch (currentService) {
       case "sales":
-        return ["web", "advisory", "ventures"];
+        return ["marketing", "web", "advisory"];
       case "web":
-        return ["sales", "advisory"];
+        return ["sales", "marketing", "advisory"];
       case "advisory":
-        return ["sales", "web", "ventures"];
+        return ["sales", "marketing", "web"];
       case "ventures":
+        return ["sales", "marketing", "web"];
+      case "marketing":
         return ["sales", "web", "advisory"];
       case "about":
-        return ["sales", "web", "advisory"];
+        return ["sales", "marketing", "web"];
       case "contact":
-        return ["sales", "web", "advisory"];
+        return ["sales", "marketing", "web"];
       case "book":
-        return ["sales", "web", "advisory"];
+        return ["sales", "marketing", "web"];
       default:
-        return ["sales", "web", "advisory"];
+        return ["sales", "marketing", "web"];
     }
   };
 
@@ -72,6 +81,8 @@ const RelatedServicesFR = ({ currentService }: RelatedServicesFRProps) => {
         return "De la stratégie à l'exécution";
       case "ventures":
         return "Travaillez avec nous";
+      case "marketing":
+        return "Accélérez votre croissance";
       case "about":
         return "Nos Services";
       case "contact":
