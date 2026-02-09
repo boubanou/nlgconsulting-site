@@ -16,6 +16,7 @@ const MainNavbar = () => {
     { label: "Ventures", to: "/ventures" },
     { label: "Studio", to: "/web" },
     { label: "Sales", to: "/sales" },
+    { label: "Marketing", to: "/marketing" },
     { label: "Advisory", to: "/advisory" },
     { label: "Contact", to: "/contact" },
   ];
