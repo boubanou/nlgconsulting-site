@@ -47,7 +47,12 @@ const MainFooter = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm">Services</h4>
             <ul className="space-y-2 text-sm">
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">All Services</Link></li>
               <li><Link to="/sales" className="text-muted-foreground hover:text-primary transition-colors">Sales & BD</Link></li>
+              <li><Link to="/ai-lead-generation" className="text-muted-foreground hover:text-primary transition-colors">AI Lead Generation</Link></li>
+              <li><Link to="/saas-monetization" className="text-muted-foreground hover:text-primary transition-colors">SaaS Monetization</Link></li>
+              <li><Link to="/go-to-market" className="text-muted-foreground hover:text-primary transition-colors">Go-To-Market</Link></li>
+              <li><Link to="/proptech-consulting" className="text-muted-foreground hover:text-primary transition-colors">PropTech Consulting</Link></li>
               <li><Link to="/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing & PPC</Link></li>
               <li><Link to="/web" className="text-muted-foreground hover:text-primary transition-colors">Web Studio</Link></li>
               <li><Link to="/advisory" className="text-muted-foreground hover:text-primary transition-colors">Advisory</Link></li>
