@@ -1,259 +1,259 @@
 
-# Plan de Maillage Interne SEO - NLG Consulting
 
-## Objectif
-Optimiser le maillage interne pour :
-- Distribuer le "link juice" (autorité SEO) vers les pages stratégiques
-- Améliorer l'indexation et le crawl de toutes les pages
-- Guider les visiteurs vers la conversion (booking)
-- Renforcer la pertinence thématique entre les pages liées
+# NLG Consulting -- Full SEO Restructuring & Revenue Optimization Plan
+
+## Executive Summary
+
+Complete restructuring of nlgconsulting.co to rank Page 1 on Google for SaaS & PropTech revenue consulting queries, achieve 30%+ CTR on niche keywords, and convert organic traffic into booked strategy calls.
 
 ---
 
-## 1. AUDIT DU MAILLAGE ACTUEL
+## 1. CURRENT STATE ANALYSIS
 
-### 1.1 Points Forts Existants
-| Element | Status |
-|---------|--------|
-| Navigation principale (Navbar) | Liens vers toutes les pages principales |
-| Footer | Liens basiques vers services et legal |
-| CTAs sur chaque page | Liens vers /book ou /fr/rendez-vous |
-| Home - 4 Pillars | Liens vers /ventures, /web, /sales, /advisory |
+### Existing Pages (14 total, EN+FR)
+- Home, About, Sales, Advisory, Web/Studio, Marketing, Ventures, Contact, Book, Privacy
+- French mirrors at /fr/*
 
-### 1.2 Problèmes Identifiés
-| Problème | Impact SEO |
-|----------|-----------|
-| Aucun lien contextuel entre pages services | Perte de pertinence thématique |
-| Pages About/Contact sans liens vers services | Pas de distribution d'autorité |
-| Page Sales ne lie pas vers Web/Advisory | Opportunités de cross-sell manquées |
-| Page Advisory mentionne "NLG Studio" sans lien | Lien textuel non exploité |
-| Ventures ne lie pas vers services | Perte de contexte commercial |
-| Pas de section "Articles liés" ou "Services connexes" | Pas de maillage profond |
-| Footer trop minimaliste | Opportunités de liens perdues |
+### Key Issues
+- No silo architecture -- pages exist flat with no topical clustering
+- Generic positioning ("B2B Lead Generation Agency") competing against thousands of agencies
+- No dedicated pillar page connecting sub-services
+- Missing high-intent niche pages (AI lead gen, SaaS monetization, PropTech consulting)
+- No blog infrastructure for topical authority
+- Book page is generic -- not optimized for SaaS/PropTech decision-makers
 
 ---
 
-## 2. STRATEGIE DE MAILLAGE INTERNE
+## 2. NEW SITE ARCHITECTURE -- SEO SILO STRUCTURE
 
-### 2.1 Matrice des Liens Prioritaires
+### Pillar Page (NEW)
+`/services` -- "Revenue Acceleration for SaaS & PropTech"
+
+### Sub-Pages (Service Cluster)
+
+| # | Route | Page Title (SEO) | Primary Keyword | Status |
+|---|-------|-------------------|-----------------|--------|
+| 1 | /sales | Scale SaaS Revenue Without Hiring a Sales Team | B2B sales outsourcing SaaS | REWRITE |
+| 2 | /ai-lead-generation | AI Lead Generation Systems That Book Meetings | AI lead generation B2B | NEW |
+| 3 | /saas-monetization | SaaS Monetization & Revenue Model Consulting | SaaS monetization strategy | NEW |
+| 4 | /go-to-market | International Go-To-Market Strategy for SaaS | go-to-market strategy SaaS | NEW |
+| 5 | /proptech-consulting | PropTech & Real Estate Technology Consulting | PropTech consulting | NEW |
+| 6 | /advisory | Strategic Advisory That Builds Revenue Engines | business advisory SaaS | REWRITE |
+| 7 | /web | Launch Your Revenue-Ready Website in 72 Hours | website 72 hours | KEEP |
+| 8 | /marketing | Turn Ad Spend Into Predictable Revenue | PPC management B2B | KEEP |
+
+### Supporting Pages
+| Route | Purpose |
+|-------|---------|
+| /book | High-conversion consultation page (REWRITE) |
+| /about | EEAT authority page (ENHANCE) |
+| /ventures | Social proof & credibility (KEEP) |
+
+---
+
+## 3. KEYWORD MAP PER PAGE
+
+### /services (Pillar)
+- Primary: revenue acceleration consulting
+- Secondary: SaaS growth consulting, B2B revenue strategy, tech consulting firm, startup scaling consultant
+- Long-tail: "how to accelerate SaaS revenue", "consulting firm for SaaS growth"
+
+### /sales (Rewrite)
+- Primary: B2B sales outsourcing SaaS
+- Secondary: outsourced SDR for SaaS, sales development representative service, appointment setting B2B, pipeline generation
+- Long-tail: "outsource sales team for SaaS startup", "how to scale B2B sales without hiring"
+
+### /ai-lead-generation (New)
+- Primary: AI lead generation B2B
+- Secondary: AI SDR, automated lead generation, AI prospecting tools, AI-powered sales development
+- Long-tail: "AI vs human SDR comparison", "best AI lead generation for SaaS"
+
+### /saas-monetization (New)
+- Primary: SaaS monetization strategy
+- Secondary: SaaS pricing strategy, revenue model consulting, subscription pricing optimization, SaaS revenue growth
+- Long-tail: "how to monetize a SaaS product", "SaaS pricing models comparison"
+
+### /go-to-market (New)
+- Primary: go-to-market strategy SaaS
+- Secondary: international GTM strategy, market entry strategy, SaaS launch strategy, expansion planning
+- Long-tail: "go-to-market plan for B2B SaaS", "how to enter European market SaaS"
+
+### /proptech-consulting (New)
+- Primary: PropTech consulting
+- Secondary: real estate technology consulting, fractional real estate technology, property technology strategy, PropTech startup advisor
+- Long-tail: "PropTech consultant for real estate companies", "fractional ownership technology consulting"
+
+---
+
+## 4. SEO TITLES & META DESCRIPTIONS (CTR 30%+)
+
+| Page | Title (under 60 chars) | Meta Description (140-155 chars) |
+|------|------------------------|----------------------------------|
+| /services | Revenue Acceleration for SaaS & PropTech | Scale revenue without scaling headcount. Strategy + execution for SaaS founders & PropTech operators. Book your free strategy call. |
+| /sales | Scale SaaS Revenue Without Hiring | Outsourced SDR that books 15-30 qualified meetings/month. No hiring risk. No ramp-up time. Results in 3 weeks. Free sales audit. |
+| /ai-lead-generation | AI Lead Generation That Books Meetings | AI-powered prospecting systems that generate qualified B2B meetings on autopilot. 3x pipeline at 50% lower cost. See how it works. |
+| /saas-monetization | SaaS Monetization: Fix Your Revenue Model | Stop leaving revenue on the table. Expert SaaS pricing & monetization consulting. Increase ARPU 30-50%. Free revenue audit. |
+| /go-to-market | Go-To-Market Strategy for SaaS Founders | Launch in new markets without burning cash. Proven GTM frameworks for SaaS. International expansion expertise. Book strategy call. |
+| /proptech-consulting | PropTech Consulting: Build & Scale Platforms | Expert PropTech & real estate technology consulting. Tokenization, marketplaces, fractional ownership. From concept to revenue. |
+| /book | Free Revenue Strategy Call for SaaS Leaders | 15-min strategy call with a SaaS & PropTech revenue expert. Walk away with 3 actionable growth ideas. Limited slots this week. |
+
+---
+
+## 5. CONTENT OUTLINE PER PAGE
+
+### Each page follows this conversion structure:
+
+1. **Hero** -- Pain-driven H1 + value proposition + primary CTA
+2. **Cost of Inaction** -- What happens if they do nothing (revenue loss quantified)
+3. **Solution Overview** -- What we do differently (3-4 key differentiators)
+4. **Process Breakdown** -- Step 1/2/3 with clear outcomes
+5. **Expected ROI** -- Specific numbers and timeframes
+6. **EEAT Authority Block** -- Founder credentials, experience proof, industry expertise
+7. **FAQ Section** -- 5 questions targeting rich snippet queries
+8. **CTA Block #1** -- Mid-page conversion block
+9. **Related Services** -- Internal links to 2-3 sibling pages
+10. **Final CTA** -- Strong closing with urgency
+
+### Word Count Targets
+- Pillar page (/services): 2,000+ words
+- Service sub-pages: 1,500+ words each
+- Book page: 800 words (conversion-focused, not SEO-heavy)
+
+---
+
+## 6. INTERNAL LINKING MAP
 
 ```text
-+---------------+--------------------------------------------------+
-| Page Source   | Liens à Ajouter                                  |
-+---------------+--------------------------------------------------+
-| Home          | Déjà bien maillée (4 pillars)                    |
-+---------------+--------------------------------------------------+
-| Sales         | → /web (complémentaire)                          |
-|               | → /advisory (upsell)                             |
-|               | → /about (crédibilité)                           |
-|               | → /ventures (preuves)                            |
-+---------------+--------------------------------------------------+
-| Web           | → /sales (complémentaire)                        |
-|               | → /advisory (stratégie)                          |
-|               | → /about (crédibilité)                           |
-+---------------+--------------------------------------------------+
-| Advisory      | → /sales (exécution)                             |
-|               | → /web (studio)                                  |
-|               | → /ventures (portfolio)                          |
-|               | → /about (expertise)                             |
-+---------------+--------------------------------------------------+
-| Ventures      | → /advisory (conseil)                            |
-|               | → /sales (croissance)                            |
-|               | → /web (technologie)                             |
-+---------------+--------------------------------------------------+
-| About         | → /sales (services)                              |
-|               | → /web (studio)                                  |
-|               | → /advisory (conseil)                            |
-|               | → /ventures (portfolio)                          |
-+---------------+--------------------------------------------------+
-| Contact       | → /book (CTA prioritaire)                        |
-|               | → /sales, /web, /advisory (services)             |
-+---------------+--------------------------------------------------+
-| Book          | → /sales, /web, /advisory (si pas sûr)           |
-+---------------+--------------------------------------------------+
-```
+/services (PILLAR)
+  |-- /sales
+  |-- /ai-lead-generation
+  |-- /saas-monetization
+  |-- /go-to-market
+  |-- /proptech-consulting
+  |-- /advisory
+  |-- /web
+  |-- /marketing
 
-### 2.2 Types de Liens à Implémenter
+Cross-links:
+  /sales <--> /ai-lead-generation (SDR + AI complement)
+  /sales <--> /go-to-market (execution of GTM)
+  /saas-monetization <--> /advisory (pricing is strategy)
+  /saas-monetization <--> /go-to-market (monetize + launch)
+  /proptech-consulting <--> /ventures (proof of work)
+  /proptech-consulting <--> /saas-monetization (PropTech revenue models)
+  /go-to-market <--> /marketing (paid channels for GTM)
+  /web <--> /marketing (website + traffic)
 
-1. **Liens contextuels dans le contenu**
-   - Ancres textuelles naturelles dans les paragraphes SEO
-   - Exemple: "Notre équipe SDR est formée selon notre méthodologie Advisory"
-
-2. **Sections "Services Connexes"**
-   - Cartes visuelles en bas de chaque page service
-   - 2-3 services complémentaires avec CTA
-
-3. **Breadcrumbs améliorés**
-   - Déjà en JSON-LD, ajouter le rendu visuel
-
-4. **Footer enrichi**
-   - Ajouter toutes les pages dans un méga-footer
-   - Liens de langues croisées (EN → FR, FR → EN)
-
----
-
-## 3. IMPLEMENTATION PAR PAGE
-
-### 3.1 Page Sales (EN + FR)
-**Ajouter section "Services Connexes" avant le CTA final :**
-- Carte 1: "Need a website to convert your leads?" → /web
-- Carte 2: "Want strategic guidance on your GTM?" → /advisory
-- Carte 3: "See how we build and scale ventures" → /ventures
-
-**Ajouter lien contextuel dans le contenu SEO :**
-- "Our methodology is refined through our [Advisory practice](/advisory) and real-world experience from our [venture portfolio](/ventures)."
-
-### 3.2 Page Web/Studio (EN + FR)
-**Ajouter section "Complete Your Growth Stack" :**
-- Carte 1: "Drive traffic to your new website" → /sales
-- Carte 2: "Get strategic guidance on positioning" → /advisory
-
-**Lien contextuel :**
-- "Combine your new website with our [SDR services](/sales) to generate qualified meetings immediately."
-
-### 3.3 Page Advisory (EN + FR)
-**Ajouter section "From Strategy to Execution" :**
-- Carte 1: "Execute your sales strategy" → /sales
-- Carte 2: "Launch your website fast" → /web
-- Carte 3: "See our venture portfolio" → /ventures
-
-**Lien contextuel existant à transformer :**
-- Le texte mentionne déjà "NLG Studio delivers in 72 hours" → Ajouter lien
-
-### 3.4 Page Ventures (EN + FR)
-**Ajouter section "Work With Us" améliorée :**
-- Carte 1: "Get our sales methodology" → /sales
-- Carte 2: "Build with our studio" → /web
-- Carte 3: "Get strategic advice" → /advisory
-
-### 3.5 Page About (EN + FR)
-**Ajouter section "Our Services" après les valeurs :**
-- 3 cartes vers Sales, Web, Advisory
-- Lien vers Ventures dans la section "Track Record"
-
-### 3.6 Page Contact (EN + FR)
-**Ajouter section "How Can We Help?" avant le formulaire :**
-- 3 boutons/liens vers les services principaux
-- Lien clair vers /book pour meeting immédiat
-
-### 3.7 Pages Book (EN + FR)
-**Ajouter texte sous le calendrier :**
-- "Not sure which service? Explore [Sales](/sales), [Web Studio](/web), or [Advisory](/advisory)"
-
----
-
-## 4. FOOTER ENRICHI
-
-### 4.1 Structure Proposée
-
-```text
-+------------------+------------------+------------------+------------------+
-| Company          | Services         | Resources        | Legal            |
-+------------------+------------------+------------------+------------------+
-| Home             | Sales & BD       | Blog (futur)     | Privacy Policy   |
-| About NLG        | Studio (Web)     | Case Studies     | Terms            |
-| Ventures         | Advisory         | Book (Amazon)    | Cookie Policy    |
-| Contact          |                  | FAQ              |                  |
-+------------------+------------------+------------------+------------------+
-| Book a Call (CTA principal centré)                                        |
-+------------------+------------------+------------------+------------------+
-| Language: EN | FR                   | © 2025 NLG Consulting              |
-+------------------+------------------+------------------+------------------+
+Every page --> /book (primary CTA)
+Every page --> /services (breadcrumb back to pillar)
 ```
 
 ---
 
-## 5. COMPOSANT REUTILISABLE
+## 7. /BOOK PAGE -- HIGH-CONVERSION REWRITE
 
-### 5.1 Créer un composant RelatedServices
-Un composant React réutilisable pour afficher les services connexes :
-
-**Props :**
-- `currentService`: string (sales | web | advisory | ventures)
-- `language`: "en" | "fr"
-
-**Logique :**
-- Exclut le service actuel
-- Affiche 2-3 services complémentaires avec icônes et CTA
+### Structure:
+- **H1**: "Free Revenue Strategy Consultation"
+- **Who it's for**: SaaS founders, PropTech operators, B2B CEOs scaling to 1M-10M ARR
+- **Who it's NOT for**: Agencies looking for subcontractors, companies with no product-market fit, people looking for free work
+- **What you'll walk away with**: 3 actionable growth ideas, clarity on your biggest revenue blocker, a prioritized 90-day plan
+- **Authority proof**: 50+ companies advised, ventures built, 15+ years operator experience
+- **Scarcity**: "We take on 3 new clients per month. Limited slots available this week."
+- **Calendly embed**
 
 ---
 
-## 6. FICHIERS A MODIFIER
+## 8. EEAT AUTHORITY ENHANCEMENTS
 
-### Phase 1 : Composants Réutilisables
-1. `src/components/RelatedServices.tsx` - Nouveau composant
-2. `src/components/fr/RelatedServicesFR.tsx` - Version FR
-3. `src/components/MainFooter.tsx` - Footer enrichi EN
-4. `src/components/fr/MainFooterFR.tsx` - Footer enrichi FR
+### About Page (/about) -- Add:
+- Specific revenue cases (anonymized): "Helped a Series A SaaS go from 0 to 20 qualified meetings/month"
+- International experience map: Europe, North America, Middle East
+- Tech stack expertise: AI/ML, Blockchain, SaaS architecture
+- Industry specializations: PropTech, FinTech, Media, SaaS
+- Published author credentials (Amazon book)
 
-### Phase 2 : Pages Services (EN)
-5. `src/pages/Sales.tsx` - Section + liens contextuels
-6. `src/pages/WebLanding.tsx` - Section + liens contextuels
-7. `src/pages/Advisory.tsx` - Section + liens contextuels
-8. `src/pages/Ventures.tsx` - Section améliorée
-
-### Phase 3 : Pages Services (FR)
-9. `src/pages/fr/SalesFR.tsx` - Section + liens contextuels
-10. `src/pages/fr/WebLandingFR.tsx` - Section + liens contextuels
-11. `src/pages/fr/AdvisoryFR.tsx` - Section + liens contextuels
-12. `src/pages/fr/VenturesFR.tsx` - Section améliorée
-
-### Phase 4 : Pages Secondaires
-13. `src/pages/About.tsx` - Section services
-14. `src/pages/fr/AboutFR.tsx` - Section services FR
-15. `src/pages/Contact.tsx` - Liens services + Navbar correcte
-16. `src/pages/fr/ContactFR.tsx` - Liens services FR
-17. `src/pages/Book.tsx` - Liens exploration
-18. `src/pages/fr/BookFR.tsx` - Liens exploration FR
+### Structured Data Additions:
+- `@type: Person` for Gregory Brenig with `knowsAbout`, `alumniOf`, `award`
+- `@type: Organization` with `foundingDate`, `numberOfEmployees`, `areaServed`
 
 ---
 
-## 7. ANCRES OPTIMISEES POUR LE MAILLAGE
+## 9. SCHEMA MARKUP PER PAGE
 
-| Service | Ancre EN | Ancre FR |
-|---------|----------|----------|
-| Sales | "B2B sales development", "SDR services", "lead generation" | "développement commercial B2B", "services SDR", "génération de leads" |
-| Web | "website in 72 hours", "web studio", "fast website development" | "site web en 72h", "studio web", "création site rapide" |
-| Advisory | "strategic advisory", "business consulting", "GTM strategy" | "conseil stratégique", "consulting business", "stratégie GTM" |
-| Ventures | "venture portfolio", "our platforms" | "portefeuille ventures", "nos plateformes" |
-| Book | "book a call", "schedule a meeting", "free consultation" | "réserver un appel", "prendre rendez-vous", "consultation gratuite" |
+Every service page will include:
+- `@type: Service` with `provider`, `areaServed`, `offers`
+- `@type: FAQPage` with 5 questions
+- `@type: BreadcrumbList`
+- `@type: Organization` (on pillar + home)
 
 ---
 
-## 8. IMPACT SEO ATTENDU
+## 10. TECHNICAL CHANGES
 
-| Métrique | Avant | Après (3 mois) |
-|----------|-------|----------------|
-| Pages avec liens contextuels | 2/14 | 14/14 |
-| Liens internes moyens par page | 4-6 | 10-15 |
-| Profondeur de crawl max | 2 clics | 2 clics (maintenu) |
-| Distribution PageRank | Concentrée (Home) | Distribuée |
-| Taux de rebond estimé | 60-70% | 50-60% |
-| Pages/session | 1.5 | 2.5-3.0 |
+### Files to Create (NEW)
+1. `src/pages/Services.tsx` -- Pillar page
+2. `src/pages/AILeadGeneration.tsx` -- AI Lead Gen service
+3. `src/pages/SaaSMonetization.tsx` -- SaaS Monetization service
+4. `src/pages/GoToMarket.tsx` -- GTM Strategy service
+5. `src/pages/PropTechConsulting.tsx` -- PropTech service
+6. French versions: `src/pages/fr/ServicesFR.tsx`, `AILeadGenerationFR.tsx`, `SaaSMonetizationFR.tsx`, `GoToMarketFR.tsx`, `PropTechConsultingFR.tsx`
+
+### Files to Modify
+7. `src/App.tsx` -- Add new routes
+8. `src/components/MainNavbar.tsx` -- Add Services dropdown or links
+9. `src/components/fr/MainNavbarFR.tsx` -- French nav
+10. `src/components/MainFooter.tsx` -- Add new pages to mega-footer
+11. `src/components/fr/MainFooterFR.tsx` -- French footer
+12. `src/components/RelatedServices.tsx` -- Add new service types
+13. `src/components/fr/RelatedServicesFR.tsx` -- French version
+14. `src/pages/Sales.tsx` -- Rewrite with SaaS positioning
+15. `src/pages/Advisory.tsx` -- Rewrite with revenue-driven framing
+16. `src/pages/Book.tsx` -- High-conversion rewrite
+17. `src/pages/About.tsx` -- EEAT enhancements
+18. `src/pages/Home.tsx` -- Update pillar links and positioning
+19. `public/sitemap.xml` -- Add all new URLs
+20. `public/robots.txt` -- Verify clean
+
+### French Mirrors to Modify
+21-28. All FR equivalents of the above pages
 
 ---
 
-## 9. RECAPITULATIF DES MODIFICATIONS
+## 11. IMPLEMENTATION SEQUENCE
 
-| # | Fichier | Type | Priorité |
-|---|---------|------|----------|
-| 1 | src/components/RelatedServices.tsx | Créer | Haute |
-| 2 | src/components/fr/RelatedServicesFR.tsx | Créer | Haute |
-| 3 | src/components/MainFooter.tsx | Modifier | Haute |
-| 4 | src/components/fr/MainFooterFR.tsx | Modifier | Haute |
-| 5 | src/pages/Sales.tsx | Modifier | Haute |
-| 6 | src/pages/fr/SalesFR.tsx | Modifier | Haute |
-| 7 | src/pages/WebLanding.tsx | Modifier | Haute |
-| 8 | src/pages/fr/WebLandingFR.tsx | Modifier | Haute |
-| 9 | src/pages/Advisory.tsx | Modifier | Haute |
-| 10 | src/pages/fr/AdvisoryFR.tsx | Modifier | Haute |
-| 11 | src/pages/Ventures.tsx | Modifier | Moyenne |
-| 12 | src/pages/fr/VenturesFR.tsx | Modifier | Moyenne |
-| 13 | src/pages/About.tsx | Modifier | Moyenne |
-| 14 | src/pages/fr/AboutFR.tsx | Modifier | Moyenne |
-| 15 | src/pages/Contact.tsx | Modifier | Moyenne |
-| 16 | src/pages/fr/ContactFR.tsx | Modifier | Moyenne |
-| 17 | src/pages/Book.tsx | Modifier | Basse |
-| 18 | src/pages/fr/BookFR.tsx | Modifier | Basse |
+### Phase 1: Core Architecture (Priority)
+- Create pillar page /services
+- Create 4 new service pages (EN)
+- Add routes to App.tsx
+- Update navigation and footer
 
-**Temps estimé d'implémentation : 45-60 minutes**
+### Phase 2: Rewrites
+- Rewrite /sales with SaaS-first positioning
+- Rewrite /advisory with revenue-driven framing
+- Rewrite /book as high-conversion page
+- Enhance /about with EEAT blocks
+
+### Phase 3: French Versions
+- Create FR versions of all new pages
+- Update FR nav/footer
+
+### Phase 4: SEO Infrastructure
+- Update sitemap.xml with all new URLs
+- Update RelatedServices components
+- Verify all internal links
+- Add schema markup to all pages
+
+---
+
+## 12. ESTIMATED IMPACT
+
+| Metric | Current | Target (6 months) |
+|--------|---------|-------------------|
+| Indexed pages | 14 | 24+ |
+| Organic impressions/day | 50-100 | 1,000+ |
+| CTR (branded + niche) | 3-5% | 15-30% |
+| Organic clicks/day | 2-5 | 150-300 |
+| Bounce rate | 65% | 40-45% |
+| Meetings booked/week | 2-3 | 15-25 |
+| Visitor-to-meeting rate | 0.5% | 3-5% |
+
