@@ -8,19 +8,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://nlgconsulting.co/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/about"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/a-propos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/about"/>
-    <lastmod>2025-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://nlgconsulting.co/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/services"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   
   <url>
@@ -28,7 +28,47 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/sales"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/vente"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/sales"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/ai-lead-generation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/ai-lead-generation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/generation-leads-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/ai-lead-generation"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/saas-monetization</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/saas-monetization"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/monetisation-saas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/saas-monetization"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/go-to-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/go-to-market"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/strategie-go-to-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/go-to-market"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/proptech-consulting</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/proptech-consulting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/conseil-proptech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/proptech-consulting"/>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -38,7 +78,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/advisory"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/conseil"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/advisory"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -48,25 +88,29 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/web"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/site-internet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/web"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   
   <url>
-    <loc>https://nlgconsulting.co/web/terms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/web/terms"/>
-    <lastmod>2025-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://nlgconsulting.co/marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/marketing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/marketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/marketing"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://nlgconsulting.co/web/thank-you</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/web/thank-you"/>
-    <lastmod>2025-02-03</lastmod>
+    <loc>https://nlgconsulting.co/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/about"/>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
   
   <url>
@@ -74,7 +118,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/ventures"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/ventures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/ventures"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -84,7 +128,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/contact"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/contact"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -94,7 +138,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/book"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/rendez-vous"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/book"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -104,7 +148,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/politique-confidentialite"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/privacy-policy"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -115,19 +159,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://nlgconsulting.co/fr/a-propos</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/about"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/a-propos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/about"/>
-    <lastmod>2025-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://nlgconsulting.co/fr/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/services"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   
   <url>
@@ -135,7 +179,47 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/sales"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/vente"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/sales"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/fr/generation-leads-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/ai-lead-generation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/generation-leads-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/ai-lead-generation"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/fr/monetisation-saas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/saas-monetization"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/monetisation-saas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/saas-monetization"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/fr/strategie-go-to-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/go-to-market"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/strategie-go-to-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/go-to-market"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/fr/conseil-proptech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/proptech-consulting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/conseil-proptech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/proptech-consulting"/>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -145,7 +229,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/advisory"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/conseil"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/advisory"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -155,9 +239,29 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/web"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/site-internet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/web"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/fr/marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/marketing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/marketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/marketing"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://nlgconsulting.co/fr/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/about"/>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <url>
@@ -165,7 +269,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/ventures"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/ventures"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/ventures"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -175,7 +279,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/contact"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/contact"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -185,7 +289,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/book"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/rendez-vous"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/book"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -195,7 +299,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nlgconsulting.co/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nlgconsulting.co/fr/politique-confidentialite"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nlgconsulting.co/privacy-policy"/>
-    <lastmod>2025-02-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

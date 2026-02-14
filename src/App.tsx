@@ -9,7 +9,7 @@ import { LeadPopup } from "./components/LeadPopup";
 import GregoChatbot from "./components/GregoChatbot";
 import { LanguageRedirectHandler } from "./components/LanguageRedirectHandler";
 
-// Lazy load pages for code splitting and better performance
+// Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
 const AboutNLG = lazy(() => import("./pages/AboutNLG"));
 const Ventures = lazy(() => import("./pages/Ventures"));
@@ -27,7 +27,12 @@ const AdminUsers = lazy(() => import("./pages/AdminUsers"));
 const AccessDenied = lazy(() => import("./pages/AccessDenied"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Web Landing Pages (Studio)
+// Service Pages
+const Services = lazy(() => import("./pages/Services"));
+const AILeadGeneration = lazy(() => import("./pages/AILeadGeneration"));
+const SaaSMonetization = lazy(() => import("./pages/SaaSMonetization"));
+const GoToMarket = lazy(() => import("./pages/GoToMarket"));
+const PropTechConsulting = lazy(() => import("./pages/PropTechConsulting"));
 const WebLanding = lazy(() => import("./pages/WebLanding"));
 const WebTerms = lazy(() => import("./pages/WebTerms"));
 const WebThankYou = lazy(() => import("./pages/WebThankYou"));
@@ -44,17 +49,21 @@ const BookFR = lazy(() => import("./pages/fr/BookFR"));
 const WebLandingFR = lazy(() => import("./pages/fr/WebLandingFR"));
 const PrivacyPolicyFR = lazy(() => import("./pages/fr/PrivacyPolicyFR"));
 const MarketingFR = lazy(() => import("./pages/fr/MarketingFR"));
+const ServicesFR = lazy(() => import("./pages/fr/ServicesFR"));
+const AILeadGenerationFR = lazy(() => import("./pages/fr/AILeadGenerationFR"));
+const SaaSMonetizationFR = lazy(() => import("./pages/fr/SaaSMonetizationFR"));
+const GoToMarketFR = lazy(() => import("./pages/fr/GoToMarketFR"));
+const PropTechConsultingFR = lazy(() => import("./pages/fr/PropTechConsultingFR"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 60 * 1000, // 1 minute
-      gcTime: 5 * 60 * 1000, // 5 minutes
+      staleTime: 60 * 1000,
+      gcTime: 5 * 60 * 1000,
     },
   },
 });
 
-// Loading fallback component
 const LoadingFallback = () => (
   <div className="flex items-center justify-center min-h-screen bg-background">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
@@ -89,7 +98,12 @@ const App = () => (
           <Route path="/admin/callbacks" element={<AdminCallbacks />} />
           <Route path="/admin/users" element={<AdminUsers />} />
           
-          {/* Web Landing Pages (web.nlgconsulting.co) */}
+          {/* Service Pages */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/ai-lead-generation" element={<AILeadGeneration />} />
+          <Route path="/saas-monetization" element={<SaaSMonetization />} />
+          <Route path="/go-to-market" element={<GoToMarket />} />
+          <Route path="/proptech-consulting" element={<PropTechConsulting />} />
           <Route path="/web" element={<WebLanding />} />
           <Route path="/web/terms" element={<WebTerms />} />
           <Route path="/web/thank-you" element={<WebThankYou />} />
@@ -106,6 +120,11 @@ const App = () => (
           <Route path="/fr/site-internet" element={<WebLandingFR />} />
           <Route path="/fr/politique-confidentialite" element={<PrivacyPolicyFR />} />
           <Route path="/fr/marketing" element={<MarketingFR />} />
+          <Route path="/fr/services" element={<ServicesFR />} />
+          <Route path="/fr/generation-leads-ia" element={<AILeadGenerationFR />} />
+          <Route path="/fr/monetisation-saas" element={<SaaSMonetizationFR />} />
+          <Route path="/fr/strategie-go-to-market" element={<GoToMarketFR />} />
+          <Route path="/fr/conseil-proptech" element={<PropTechConsultingFR />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

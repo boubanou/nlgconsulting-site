@@ -13,10 +13,10 @@ const MainNavbarFR = () => {
   const navLinks = [
     { label: "Accueil", to: "/fr" },
     { label: "À propos", to: "/fr/a-propos" },
+    { label: "Services", to: "/fr/services" },
     { label: "Ventures", to: "/fr/ventures" },
     { label: "Studio", to: "/fr/site-internet" },
     { label: "Vente", to: "/fr/vente" },
-    { label: "Marketing", to: "/fr/marketing" },
     { label: "Conseil", to: "/fr/conseil" },
     { label: "Contact", to: "/fr/contact" },
   ];
