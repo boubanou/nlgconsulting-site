@@ -18,27 +18,27 @@ const AILeadGeneration = () => {
       {
         "@type": "Service",
         "name": "AI Lead Generation Systems",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
         "description": "AI-powered B2B prospecting systems that generate qualified meetings on autopilot. 3x pipeline at 50% lower cost than traditional SDR.",
-        "url": "https://nlgconsulting.co/ai-lead-generation",
+        "url": "https://www.nlgconsulting.co/ai-lead-generation",
         "areaServed": ["Europe", "North America", "Middle East"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/services" },
-          { "@type": "ListItem", "position": 3, "name": "AI Lead Generation", "item": "https://nlgconsulting.co/ai-lead-generation" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/services" },
+          { "@type": "ListItem", "position": 3, "name": "AI Lead Generation", "item": "https://www.nlgconsulting.co/ai-lead-generation" }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "How does AI lead generation work?", "acceptedAnswer": { "@type": "Answer", "text": "AI lead generation uses machine learning algorithms to identify ideal prospects, personalize outreach at scale, and optimize messaging based on response data. It automates the repetitive parts of prospecting while maintaining personalization that drives responses." } },
-          { "@type": "Question", "name": "Is AI lead generation better than human SDRs?", "acceptedAnswer": { "@type": "Answer", "text": "AI and human SDRs are complementary. AI excels at scale, data analysis, and 24/7 operation. Humans excel at nuanced conversations and relationship building. The best results come from combining both — AI handles initial outreach and qualification, humans handle high-value conversations." } },
-          { "@type": "Question", "name": "What kind of results can I expect from AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "Clients typically see 3x pipeline generation at 50% lower cost per meeting compared to traditional SDR methods. AI systems can process thousands of prospects daily and continuously optimize based on response patterns." } },
-          { "@type": "Question", "name": "How long does it take to set up an AI lead generation system?", "acceptedAnswer": { "@type": "Answer", "text": "Initial setup takes 1-2 weeks including ICP definition, data integration, and sequence creation. The system begins generating results within the first week of deployment and continuously improves over time." } },
-          { "@type": "Question", "name": "What AI tools and platforms do you use?", "acceptedAnswer": { "@type": "Answer", "text": "We use a stack of best-in-class AI tools for prospecting, enrichment, personalization, and sequencing. The specific tools are selected based on your market, ICP, and technical requirements. We stay vendor-agnostic to ensure you always have the best technology." } }
+          { "@type": "Question", "name": "Is AI lead generation better than human SDRs?", "acceptedAnswer": { "@type": "Answer", "text": "AI and human SDRs are complementary. AI excels at scale, data analysis, and 24/7 operation. Humans excel at nuanced conversations and relationship building. The best results come from combining both." } },
+          { "@type": "Question", "name": "What kind of results can I expect from AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "Clients typically see 3x pipeline generation at 50% lower cost per meeting compared to traditional SDR methods." } },
+          { "@type": "Question", "name": "How long does it take to set up an AI lead generation system?", "acceptedAnswer": { "@type": "Answer", "text": "Initial setup takes 1-2 weeks including ICP definition, data integration, and sequence creation. The system begins generating results within the first week of deployment." } },
+          { "@type": "Question", "name": "What AI tools and platforms do you use?", "acceptedAnswer": { "@type": "Answer", "text": "We use a stack of best-in-class AI tools for prospecting, enrichment, personalization, and sequencing. The specific tools are selected based on your market, ICP, and technical requirements." } }
         ]
       }
     ]
@@ -47,16 +47,15 @@ const AILeadGeneration = () => {
   return (
     <>
       <Helmet>
-        <title>AI Lead Generation That Books Meetings | NLG</title>
+        <title>AI Lead Generation That Books Meetings | NLG Consulting</title>
         <meta name="description" content="AI-powered prospecting systems that generate qualified B2B meetings on autopilot. 3x pipeline at 50% lower cost. See how it works." />
-        <meta name="keywords" content="AI lead generation, AI SDR, automated lead generation, AI prospecting, AI-powered sales development, B2B AI outreach" />
-        <link rel="canonical" href="https://nlgconsulting.co/ai-lead-generation" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/ai-lead-generation" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/generation-leads-ia" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/ai-lead-generation" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/ai-lead-generation" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-lead-generation" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/generation-leads-ia" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/ai-lead-generation" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/ai-lead-generation" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/ai-lead-generation" />
         <meta property="og:title" content="AI Lead Generation That Books Meetings | NLG Consulting" />
         <meta property="og:description" content="AI-powered prospecting systems. 3x pipeline at 50% lower cost. Qualified B2B meetings on autopilot." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />

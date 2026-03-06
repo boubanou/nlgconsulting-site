@@ -19,9 +19,9 @@ const WebLanding = () => {
       {
         "@type": "Service",
         "name": "Website in 72 Hours - NLG Studio",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
         "description": "Professional website development delivered in under 72 hours. Includes UX/UI design, copywriting, SEO optimization, CRM integration, and Stripe payment processing.",
-        "url": "https://nlgconsulting.co/web",
+        "url": "https://www.nlgconsulting.co/web",
         "offers": {
           "@type": "AggregateOffer",
           "lowPrice": "749",
@@ -33,53 +33,18 @@ const WebLanding = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Web Studio", "item": "https://nlgconsulting.co/web" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Web Studio", "item": "https://www.nlgconsulting.co/web" }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is the payment secure?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, all payments are processed by Stripe, the world leader in online payments. Your banking data is encrypted according to PCI-DSS standards and is never stored on our servers. You automatically receive an invoice after each payment."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens after the deposit?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Upon receiving your deposit, we contact you within 24 hours to schedule a 30-minute brief. Then, we begin creating your website. You receive a first version within a few days, followed by adjustments before final delivery."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I own the website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. After full payment, you become 100% owner of your website. We systematically provide you with the complete source code. You are free to host, modify, or transfer your site as you wish, without any technical dependency."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is SEO included?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, all our packages include an optimized SEO structure with unique meta titles and meta descriptions for each page, as well as Google indexing. The Intermediate Pack offers advanced SEO with additional features."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I use my own domain name?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, you can use your own domain name. Domain and DNS setup is included in all our packages. If you don't have a domain yet, we can advise you on the best options."
-            }
-          }
+          { "@type": "Question", "name": "Is the payment secure?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, all payments are processed by Stripe, the world leader in online payments. Your banking data is encrypted according to PCI-DSS standards and is never stored on our servers." } },
+          { "@type": "Question", "name": "What happens after the deposit?", "acceptedAnswer": { "@type": "Answer", "text": "Upon receiving your deposit, we contact you within 24 hours to schedule a 30-minute brief. Then, we begin creating your website." } },
+          { "@type": "Question", "name": "Do I own the website?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. After full payment, you become 100% owner of your website. We provide the complete source code." } },
+          { "@type": "Question", "name": "Is SEO included?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, all our packages include an optimized SEO structure with unique meta titles and descriptions for each page." } },
+          { "@type": "Question", "name": "Can I use my own domain name?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can use your own domain name. Domain and DNS setup is included in all our packages." } }
         ]
       }
     ]
@@ -88,28 +53,21 @@ const WebLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Website in 72 Hours | From €749 | SEO + Stripe Included | NLG Studio</title>
-        <meta 
-          name="description" 
-          content="Launch your conversion-ready website in 72 hours. UX design, SEO, Stripe payments, CRM integration. 100% code ownership. Starting at €749." 
-        />
-        <meta 
-          name="keywords" 
-          content="website 72 hours, fast website development, business website, landing page design, Stripe integration, SEO website, professional web design, startup website, conversion website" 
-        />
-        <link rel="canonical" href="https://nlgconsulting.co/web" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/web" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/site-internet" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/web" />
+        <title>Website in 72 Hours | High-Converting B2B Sites | NLG Consulting</title>
+        <meta name="description" content="Get a revenue-ready website in 72 hours. Designed for conversion, optimized for SEO. From landing pages to full platforms. Starting at €749." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/web" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/web" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/site-internet" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/web" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/web" />
-        <meta property="og:title" content="Website in 72 Hours | From €749 | SEO + Stripe Included" />
-        <meta property="og:description" content="Launch your conversion-ready website in 72 hours. UX design, SEO, Stripe payments, CRM integration. 100% code ownership. Starting at €749." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/web" />
+        <meta property="og:title" content="Website in 72 Hours | High-Converting B2B Sites | NLG Consulting" />
+        <meta property="og:description" content="Get a revenue-ready website in 72 hours. Designed for conversion, optimized for SEO. From landing pages to full platforms." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Website in 72 Hours | From €749 | SEO + Stripe Included" />
-        <meta name="twitter:description" content="Launch your conversion-ready website in 72 hours. UX design, SEO, Stripe payments, CRM integration. 100% code ownership." />
+        <meta name="twitter:title" content="Website in 72 Hours | High-Converting B2B Sites | NLG Consulting" />
+        <meta name="twitter:description" content="Get a revenue-ready website in 72 hours. Designed for conversion, optimized for SEO. From landing pages to full platforms." />
         <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

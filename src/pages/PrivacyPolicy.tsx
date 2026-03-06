@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
     "@type": "WebPage",
     name: "Privacy Policy & Legal Notice | NLG Consulting",
     description: "Privacy policy, GDPR data protection and legal notice of NLG Consulting. Full compliance with European regulations.",
-    url: "https://nlgconsulting.co/privacy-policy",
+    url: "https://www.nlgconsulting.co/privacy-policy",
     inLanguage: "en",
   };
 
@@ -18,13 +18,14 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy & Legal Notice | NLG Consulting</title>
         <meta name="description" content="Privacy policy, GDPR data protection and legal notice of NLG Consulting. Full compliance with European regulations." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://nlgconsulting.co/privacy-policy" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/privacy-policy" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/politique-confidentialite" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/privacy-policy" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/privacy-policy" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/politique-confidentialite" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/privacy-policy" />
         
         <meta property="og:title" content="Privacy Policy & Legal Notice | NLG Consulting" />
         <meta property="og:description" content="Privacy policy, GDPR data protection and legal notice of NLG Consulting. Full compliance with European regulations." />
-        <meta property="og:url" content="https://nlgconsulting.co/privacy-policy" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/privacy-policy" />
         <meta property="og:type" content="website" />
         
         <script type="application/ld+json">

@@ -75,25 +75,21 @@ const Ventures = () => {
   return (
     <>
 <Helmet>
-        <title>NLG Ventures | PropTech, FinTech & Media Portfolio | We Build & Scale Platforms</title>
-        <meta 
-          name="description" 
-          content="Explore NLG's venture portfolio: Block Tech, FractionalPropertyHub, Business Legend. We build, operate & scale innovative platforms worldwide." 
-        />
-        <meta name="keywords" content="venture studio, PropTech investment, FinTech ventures, startup portfolio, fractional real estate, business ventures, technology investment, Block Tech" />
-        <link rel="canonical" href="https://nlgconsulting.co/ventures" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/ventures" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/ventures" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/ventures" />
+        <title>Ventures & Portfolio | NLG Consulting</title>
+        <meta name="description" content="Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/ventures" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ventures" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/ventures" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/ventures" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/ventures" />
-        <meta property="og:title" content="NLG Ventures | PropTech, FinTech & Media Portfolio" />
-        <meta property="og:description" content="Explore NLG's venture portfolio: Block Tech, FractionalPropertyHub, Business Legend. We build, operate & scale innovative platforms worldwide." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/ventures" />
+        <meta property="og:title" content="Ventures & Portfolio | NLG Consulting" />
+        <meta property="og:description" content="Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="NLG Ventures | PropTech, FinTech & Media Portfolio" />
-        <meta name="twitter:description" content="Explore NLG's venture portfolio: Block Tech, FractionalPropertyHub, Business Legend. We build, operate & scale innovative platforms." />
+        <meta name="twitter:title" content="Ventures & Portfolio | NLG Consulting" />
+        <meta name="twitter:description" content="Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI." />
         <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

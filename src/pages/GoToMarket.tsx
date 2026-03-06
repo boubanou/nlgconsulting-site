@@ -18,26 +18,26 @@ const GoToMarket = () => {
       {
         "@type": "Service",
         "name": "International Go-To-Market Strategy for SaaS",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
         "description": "Proven GTM frameworks for SaaS companies entering new markets. International expansion without burning cash.",
-        "url": "https://nlgconsulting.co/go-to-market"
+        "url": "https://www.nlgconsulting.co/go-to-market"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/services" },
-          { "@type": "ListItem", "position": 3, "name": "Go-To-Market", "item": "https://nlgconsulting.co/go-to-market" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/services" },
+          { "@type": "ListItem", "position": 3, "name": "Go-To-Market", "item": "https://www.nlgconsulting.co/go-to-market" }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is a go-to-market strategy?", "acceptedAnswer": { "@type": "Answer", "text": "A go-to-market (GTM) strategy is a comprehensive plan for launching a product in a new market or scaling in existing markets. It covers target audience, positioning, pricing, channels, sales process, and success metrics. For SaaS companies, a strong GTM strategy can mean the difference between market leadership and expensive failure." } },
-          { "@type": "Question", "name": "How do you help SaaS companies expand internationally?", "acceptedAnswer": { "@type": "Answer", "text": "We help with market selection, localization strategy, pricing adaptation, channel partnerships, regulatory compliance, and on-the-ground execution. Our team has direct experience expanding businesses across Europe, North America, and the Middle East." } },
-          { "@type": "Question", "name": "How long does a GTM strategy engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "A complete GTM strategy takes 4-6 weeks to develop. This includes market research, competitive analysis, positioning, pricing strategy, channel planning, and a detailed execution roadmap. Implementation support is available on an ongoing basis." } },
-          { "@type": "Question", "name": "What markets do you have experience in?", "acceptedAnswer": { "@type": "Answer", "text": "We have direct operational experience in Western Europe (France, UK, Belgium, Netherlands, Germany), North America (US, Canada), and the Middle East (UAE, Saudi Arabia). For other markets, we leverage our partner network." } },
-          { "@type": "Question", "name": "Can you help execute the GTM plan, not just create it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unlike traditional consultants, we offer full execution support including outsourced SDR teams, marketing campaigns, website localization, and operational setup. We can be your on-the-ground partner in new markets." } }
+          { "@type": "Question", "name": "What is a go-to-market strategy?", "acceptedAnswer": { "@type": "Answer", "text": "A go-to-market (GTM) strategy is a comprehensive plan for launching a product in a new market or scaling in existing markets. It covers target audience, positioning, pricing, channels, sales process, and success metrics." } },
+          { "@type": "Question", "name": "How do you help SaaS companies expand internationally?", "acceptedAnswer": { "@type": "Answer", "text": "We help with market selection, localization strategy, pricing adaptation, channel partnerships, regulatory compliance, and on-the-ground execution." } },
+          { "@type": "Question", "name": "How long does a GTM strategy engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "A complete GTM strategy takes 4-6 weeks to develop including market research, competitive analysis, positioning, pricing strategy, and execution roadmap." } },
+          { "@type": "Question", "name": "What markets do you have experience in?", "acceptedAnswer": { "@type": "Answer", "text": "We have direct operational experience in Western Europe, North America, and the Middle East. For other markets, we leverage our partner network." } },
+          { "@type": "Question", "name": "Can you help execute the GTM plan, not just create it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer full execution support including outsourced SDR teams, marketing campaigns, website localization, and operational setup." } }
         ]
       }
     ]
@@ -46,16 +46,15 @@ const GoToMarket = () => {
   return (
     <>
       <Helmet>
-        <title>Go-To-Market Strategy for SaaS Founders | NLG</title>
+        <title>Go-To-Market Strategy for SaaS Founders | NLG Consulting</title>
         <meta name="description" content="Launch in new markets without burning cash. Proven GTM frameworks for SaaS. International expansion expertise. Book strategy call." />
-        <meta name="keywords" content="go-to-market strategy SaaS, international GTM strategy, market entry strategy, SaaS launch strategy, expansion planning, B2B go-to-market" />
-        <link rel="canonical" href="https://nlgconsulting.co/go-to-market" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/go-to-market" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/strategie-go-to-market" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/go-to-market" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/go-to-market" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/go-to-market" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/strategie-go-to-market" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/go-to-market" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/go-to-market" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/go-to-market" />
         <meta property="og:title" content="Go-To-Market Strategy for SaaS Founders | NLG Consulting" />
         <meta property="og:description" content="Launch in new markets without burning cash. Proven GTM frameworks for SaaS companies." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

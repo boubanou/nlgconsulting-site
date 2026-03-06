@@ -18,26 +18,26 @@ const SaaSMonetization = () => {
       {
         "@type": "Service",
         "name": "SaaS Monetization & Revenue Model Consulting",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Expert SaaS pricing and monetization consulting. Fix your revenue model to increase ARPU 30-50%. From freemium to enterprise pricing.",
-        "url": "https://nlgconsulting.co/saas-monetization"
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Expert SaaS pricing and monetization consulting. Fix your revenue model to increase ARPU 30-50%.",
+        "url": "https://www.nlgconsulting.co/saas-monetization"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/services" },
-          { "@type": "ListItem", "position": 3, "name": "SaaS Monetization", "item": "https://nlgconsulting.co/saas-monetization" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/services" },
+          { "@type": "ListItem", "position": 3, "name": "SaaS Monetization", "item": "https://www.nlgconsulting.co/saas-monetization" }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is SaaS monetization consulting?", "acceptedAnswer": { "@type": "Answer", "text": "SaaS monetization consulting helps software companies optimize their pricing strategy, packaging, and revenue model to maximize ARPU, reduce churn, and accelerate revenue growth. It covers everything from freemium strategy to enterprise pricing tiers." } },
-          { "@type": "Question", "name": "How much can better pricing increase my SaaS revenue?", "acceptedAnswer": { "@type": "Answer", "text": "A 1% improvement in pricing generates 11% more profit on average. Our clients typically see ARPU increases of 30-50% within 60 days through strategic pricing optimization, tier restructuring, and value metric alignment." } },
-          { "@type": "Question", "name": "When should a SaaS company review its pricing?", "acceptedAnswer": { "@type": "Answer", "text": "Every SaaS company should review pricing at least annually. Key triggers include: launching new features, entering new markets, experiencing high churn, seeing low upgrade rates, or preparing for fundraising. If you haven't reviewed pricing in 12+ months, you're likely leaving revenue on the table." } },
-          { "@type": "Question", "name": "Do you help with marketplace and platform monetization?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have deep experience in marketplace monetization including commission models, transaction fees, subscription tiers, and hybrid models. Our PropTech ventures give us firsthand experience building profitable marketplace platforms." } },
-          { "@type": "Question", "name": "How long does a monetization engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "A typical monetization engagement runs 4-8 weeks. Week 1-2: data analysis and competitive benchmarking. Week 3-4: strategy development and pricing model design. Week 5-8: implementation support, A/B testing setup, and rollout planning." } }
+          { "@type": "Question", "name": "What is SaaS monetization consulting?", "acceptedAnswer": { "@type": "Answer", "text": "SaaS monetization consulting helps software companies optimize their pricing strategy, packaging, and revenue model to maximize ARPU, reduce churn, and accelerate revenue growth." } },
+          { "@type": "Question", "name": "How much can better pricing increase my SaaS revenue?", "acceptedAnswer": { "@type": "Answer", "text": "A 1% improvement in pricing generates 11% more profit on average. Our clients typically see ARPU increases of 30-50% within 60 days." } },
+          { "@type": "Question", "name": "When should a SaaS company review its pricing?", "acceptedAnswer": { "@type": "Answer", "text": "Every SaaS company should review pricing at least annually. Key triggers include: launching new features, entering new markets, experiencing high churn, or preparing for fundraising." } },
+          { "@type": "Question", "name": "Do you help with marketplace and platform monetization?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have deep experience in marketplace monetization including commission models, transaction fees, subscription tiers, and hybrid models." } },
+          { "@type": "Question", "name": "How long does a monetization engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "A typical monetization engagement runs 4-8 weeks. Week 1-2: data analysis. Week 3-4: strategy development. Week 5-8: implementation support." } }
         ]
       }
     ]
@@ -46,16 +46,15 @@ const SaaSMonetization = () => {
   return (
     <>
       <Helmet>
-        <title>SaaS Monetization: Fix Your Revenue Model | NLG</title>
+        <title>SaaS Monetization: Fix Your Revenue Model | NLG Consulting</title>
         <meta name="description" content="Stop leaving revenue on the table. Expert SaaS pricing & monetization consulting. Increase ARPU 30-50%. Free revenue audit." />
-        <meta name="keywords" content="SaaS monetization strategy, SaaS pricing strategy, revenue model consulting, subscription pricing optimization, SaaS revenue growth, pricing tiers" />
-        <link rel="canonical" href="https://nlgconsulting.co/saas-monetization" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/saas-monetization" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/monetisation-saas" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/saas-monetization" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/saas-monetization" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/saas-monetization" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/monetisation-saas" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/saas-monetization" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/saas-monetization" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/saas-monetization" />
         <meta property="og:title" content="SaaS Monetization: Fix Your Revenue Model | NLG Consulting" />
         <meta property="og:description" content="Stop leaving revenue on the table. Increase ARPU 30-50% with expert SaaS pricing & monetization consulting." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

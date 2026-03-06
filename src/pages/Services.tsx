@@ -27,8 +27,8 @@ const Services = () => {
       {
         "@type": "Organization",
         "name": "NLG Consulting",
-        "url": "https://nlgconsulting.co",
-        "logo": "https://nlgconsulting.co/logo.svg",
+        "url": "https://www.nlgconsulting.co",
+        "logo": "https://www.nlgconsulting.co/logo.svg",
         "description": "Revenue acceleration consulting for SaaS & PropTech companies.",
         "founder": {
           "@type": "Person",
@@ -37,21 +37,21 @@ const Services = () => {
           "knowsAbout": ["SaaS Revenue Strategy", "PropTech", "B2B Sales", "AI Lead Generation"]
         },
         "areaServed": ["Europe", "North America", "Middle East"],
-        "foundingDate": "2019"
+        "foundingDate": "2020"
       },
       {
         "@type": "Service",
         "name": "Revenue Acceleration Consulting",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "End-to-end revenue acceleration for SaaS and PropTech companies.",
-        "url": "https://nlgconsulting.co/services",
+        "url": "https://www.nlgconsulting.co/services",
         "serviceType": "Revenue Acceleration Consulting"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/services" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/services" }
         ]
       },
       {
@@ -81,18 +81,17 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Revenue Acceleration for SaaS & PropTech | NLG Consulting</title>
-        <meta name="description" content="Scale revenue without scaling headcount. Strategy + execution for SaaS founders & PropTech operators. Sales, AI, monetization, GTM. Book your free strategy call." />
-        <meta name="keywords" content="revenue acceleration consulting, SaaS growth consulting, B2B revenue strategy, tech consulting firm, startup scaling consultant, PropTech consulting" />
-        <link rel="canonical" href="https://nlgconsulting.co/services" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/services" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/services" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/services" />
+        <title>Revenue Acceleration Services for SaaS & PropTech | NLG Consulting</title>
+        <meta name="description" content="End-to-end growth services: outsourced SDR, AI lead gen, SaaS monetization, GTM strategy, PropTech consulting. Book a strategy call." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/services" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/services" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/services" />
-        <meta property="og:title" content="Revenue Acceleration for SaaS & PropTech | NLG Consulting" />
-        <meta property="og:description" content="Scale revenue without scaling headcount. Strategy + execution for SaaS founders & PropTech operators." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/services" />
+        <meta property="og:title" content="Revenue Acceleration Services for SaaS & PropTech | NLG Consulting" />
+        <meta property="og:description" content="End-to-end growth services: outsourced SDR, AI lead gen, SaaS monetization, GTM strategy, PropTech consulting." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
