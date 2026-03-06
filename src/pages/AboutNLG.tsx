@@ -22,21 +22,22 @@ const AboutNLG = () => {
       {
         "@type": "AboutPage",
         "name": "About NLG Consulting",
-        "description": "Learn about NLG Consulting, a global Business, Tech & Growth Group.",
-        "url": "https://nlgconsulting.co/about"
+        "description": "Meet Gregory Brenig and the NLG team. 15+ years building ventures, scaling sales teams, and advising SaaS & PropTech companies worldwide.",
+        "url": "https://www.nlgconsulting.co/about"
       },
       {
         "@type": "Person",
         "name": "Gregory Brenig",
         "jobTitle": "Founder & CEO",
-        "worksFor": { "@type": "Organization", "name": "NLG Consulting" },
-        "knowsAbout": ["Real Estate", "Finance", "Technology", "Business Development"]
+        "worksFor": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "knowsAbout": ["B2B Sales", "PropTech", "FinTech", "AI & Automation", "Go-To-Market Strategy", "SaaS Monetization"],
+        "sameAs": "https://www.linkedin.com/in/gregorybrenig/"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://nlgconsulting.co/about" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.nlgconsulting.co/about" }
         ]
       }
     ]
