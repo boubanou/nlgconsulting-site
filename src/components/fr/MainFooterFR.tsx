@@ -43,22 +43,30 @@ const MainFooterFR = () => {
             </ul>
           </div>
 
+          {/* IA & Automatisation */}
+          <div>
+            <h4 className="font-semibold mb-4 text-sm">IA & Automatisation</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/fr/conseil-ia" className="text-muted-foreground hover:text-primary transition-colors">Conseil IA</Link></li>
+              <li><Link to="/fr/automation-ia" className="text-muted-foreground hover:text-primary transition-colors">Automatisation IA</Link></li>
+              <li><Link to="/fr/agents-ia-entreprise" className="text-muted-foreground hover:text-primary transition-colors">Agents IA</Link></li>
+              <li><Link to="/fr/automation-marketing-ia" className="text-muted-foreground hover:text-primary transition-colors">Marketing IA</Link></li>
+              <li><Link to="/fr/automation-commerciale-ia" className="text-muted-foreground hover:text-primary transition-colors">Ventes IA</Link></li>
+              <li><Link to="/fr/conseil-prompt-engineering" className="text-muted-foreground hover:text-primary transition-colors">Prompt Engineering</Link></li>
+              <li><Link to="/fr/implementation-ia-externalisee" className="text-muted-foreground hover:text-primary transition-colors">IA Externalisée</Link></li>
+            </ul>
+          </div>
+
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-sm">Services</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/fr/services" className="text-muted-foreground hover:text-primary transition-colors">Tous les services</Link></li>
               <li><Link to="/fr/vente" className="text-muted-foreground hover:text-primary transition-colors">Vente & BD</Link></li>
-              <li><Link to="/fr/generation-leads-ia" className="text-muted-foreground hover:text-primary transition-colors">Génération Leads IA</Link></li>
-              <li><Link to="/fr/monetisation-saas" className="text-muted-foreground hover:text-primary transition-colors">Monétisation SaaS</Link></li>
-              <li><Link to="/fr/strategie-go-to-market" className="text-muted-foreground hover:text-primary transition-colors">Go-To-Market</Link></li>
-              <li><Link to="/fr/conseil-proptech" className="text-muted-foreground hover:text-primary transition-colors">Conseil PropTech</Link></li>
-              <li><Link to="/fr/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing & PPC</Link></li>
               <li><Link to="/fr/site-internet" className="text-muted-foreground hover:text-primary transition-colors">Studio Web</Link></li>
               <li><Link to="/fr/conseil" className="text-muted-foreground hover:text-primary transition-colors">Conseil</Link></li>
+              <li><Link to="/fr/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing</Link></li>
               <li><Link to="/fr/sdr-externalise" className="text-muted-foreground hover:text-primary transition-colors">SDR Externalisé</Link></li>
-              <li><Link to="/fr/prise-de-rendez-vous-b2b" className="text-muted-foreground hover:text-primary transition-colors">Prise de RDV B2B</Link></li>
-              <li><Link to="/fr/site-web-en-72h" className="text-muted-foreground hover:text-primary transition-colors">Site Web en 72h</Link></li>
             </ul>
           </div>
 
