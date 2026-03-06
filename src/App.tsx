@@ -89,6 +89,15 @@ const AutomationCommercialeIAFR = lazy(() => import("./pages/fr/AutomationCommer
 const ConseilPromptEngineeringFR = lazy(() => import("./pages/fr/ConseilPromptEngineeringFR"));
 const ImplementationIAFR = lazy(() => import("./pages/fr/ImplementationIAFR"));
 
+// Industry Pages
+const AIForSaaS = lazy(() => import("./pages/AIForSaaS"));
+const AIForPropTech = lazy(() => import("./pages/AIForPropTech"));
+const AIForFinTech = lazy(() => import("./pages/AIForFinTech"));
+const AIForRealEstate = lazy(() => import("./pages/AIForRealEstate"));
+const AIForConsultingFirms = lazy(() => import("./pages/AIForConsultingFirms"));
+const AIForAgencies = lazy(() => import("./pages/AIForAgencies"));
+const AIForB2BServices = lazy(() => import("./pages/AIForB2BServices"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -177,6 +186,15 @@ const App = () => (
           <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
           <Route path="/prompt-engineering-consulting" element={<PromptEngineeringConsulting />} />
           <Route path="/outsourced-ai-implementation" element={<OutsourcedAIImplementation />} />
+
+          {/* Industry Pages */}
+          <Route path="/ai-for-saas" element={<AIForSaaS />} />
+          <Route path="/ai-for-proptech" element={<AIForPropTech />} />
+          <Route path="/ai-for-fintech" element={<AIForFinTech />} />
+          <Route path="/ai-for-real-estate" element={<AIForRealEstate />} />
+          <Route path="/ai-for-consulting-firms" element={<AIForConsultingFirms />} />
+          <Route path="/ai-for-agencies" element={<AIForAgencies />} />
+          <Route path="/ai-for-b2b-services" element={<AIForB2BServices />} />
 
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
