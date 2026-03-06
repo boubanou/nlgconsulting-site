@@ -75,6 +75,20 @@ export const useLanguage = () => {
       if (currentPath === "/fr/agence-lead-generation-b2b") return "/b2b-lead-generation-agency";
       if (currentPath === "/fr/prise-de-rendez-vous-b2b") return "/appointment-setting";
       if (currentPath === "/fr/site-web-en-72h") return "/website-in-72-hours";
+      if (currentPath === "/fr/ia-pour-saas") return "/ai-for-saas";
+      if (currentPath === "/fr/ia-pour-proptech") return "/ai-for-proptech";
+      if (currentPath === "/fr/ia-pour-fintech") return "/ai-for-fintech";
+      if (currentPath === "/fr/ia-pour-immobilier") return "/ai-for-real-estate";
+      if (currentPath === "/fr/ia-pour-cabinets-conseil") return "/ai-for-consulting-firms";
+      if (currentPath === "/fr/ia-pour-agences") return "/ai-for-agencies";
+      if (currentPath === "/fr/ia-pour-services-b2b") return "/ai-for-b2b-services";
+      if (currentPath === "/fr/conseil-ia") return "/ai-consulting";
+      if (currentPath === "/fr/automation-ia") return "/ai-automation";
+      if (currentPath === "/fr/agents-ia-entreprise") return "/ai-agents-for-business";
+      if (currentPath === "/fr/automation-marketing-ia") return "/ai-marketing-automation";
+      if (currentPath === "/fr/automation-commerciale-ia") return "/ai-sales-automation";
+      if (currentPath === "/fr/conseil-prompt-engineering") return "/prompt-engineering-consulting";
+      if (currentPath === "/fr/implementation-ia-externalisee") return "/outsourced-ai-implementation";
       return currentPath.replace("/fr", "") || "/";
     }
   };
