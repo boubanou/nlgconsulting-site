@@ -16,13 +16,13 @@ const VenturesFR = () => {
         "@type": "WebPage",
         "name": "Ventures & Marques | NLG Consulting",
         "description": "Découvrez le portefeuille de ventures de NLG Consulting dans la PropTech, FinTech, Média et Lifestyle.",
-        "url": "https://nlgconsulting.co/fr/ventures"
+        "url": "https://www.nlgconsulting.co/fr/ventures"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://nlgconsulting.co/fr/ventures" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://www.nlgconsulting.co/fr/ventures" }
         ]
       }
     ]
