@@ -21,7 +21,7 @@ const WebLandingFR = () => {
         "name": "Site Web en 72 Heures - NLG Studio",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Développement de site web professionnel livré en moins de 72 heures. Inclut design UX/UI, copywriting, optimisation SEO, intégration CRM et paiements Stripe.",
-        "url": "https://nlgconsulting.co/fr/site-internet",
+        "url": "https://www.nlgconsulting.co/fr/site-internet",
         "offers": {
           "@type": "AggregateOffer",
           "lowPrice": "749",
@@ -33,8 +33,8 @@ const WebLandingFR = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Site Internet", "item": "https://nlgconsulting.co/fr/site-internet" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Site Internet", "item": "https://www.nlgconsulting.co/fr/site-internet" }
         ]
       },
       {
