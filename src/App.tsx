@@ -252,6 +252,12 @@ const App = () => (
           <Route path="/fr/prise-de-rendez-vous-b2b" element={<PriseRendezVousFR />} />
           <Route path="/fr/site-web-en-72h" element={<SiteWebEn72hFR />} />
 
+          {/* French Training & Guide Pages */}
+          <Route path="/fr/formation-ia-entreprise" element={<FormationIAEntrepriseFR />} />
+          <Route path="/fr/consultant-ia-fractionnel" element={<ConsultantIAFractionnelFR />} />
+          <Route path="/fr/meilleurs-outils-ia-entreprise" element={<MeilleursOutilsIAFR />} />
+          <Route path="/fr/automatiser-marketing-avec-ia" element={<AutomatiserMarketingIAFR />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
