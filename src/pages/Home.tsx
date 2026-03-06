@@ -33,21 +33,24 @@ const Home = () => {
         "@type": "Organization",
         "name": "NLG Consulting",
         "alternateName": "N.L.G. Consulting Group",
-        "url": "https://nlgconsulting.co",
-        "logo": "https://nlgconsulting.co/logo.svg",
-        "description": "N.L.G. Consulting is a global Business, Tech & Growth Group building, operating and scaling platforms, brands and sales systems worldwide.",
+        "url": "https://www.nlgconsulting.co",
+        "logo": "https://www.nlgconsulting.co/logo.svg",
+        "description": "B2B lead generation agency. Outsourced SDR, GTM advisory, websites in 72h. Trusted by 50+ startups worldwide.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
-          "jobTitle": "Founder & CEO"
+          "jobTitle": "Founder & CEO",
+          "sameAs": "https://www.linkedin.com/in/gregorybrenig/"
         },
-        "areaServed": "Worldwide",
-        "knowsAbout": ["PropTech", "FinTech", "AI & Automation", "Media", "Business Development", "Blockchain"]
+        "foundingDate": "2020",
+        "areaServed": ["Europe", "North America", "Middle East"],
+        "sameAs": ["https://www.linkedin.com/company/nlg-consulting/"],
+        "knowsAbout": ["B2B Lead Generation", "Outsourced SDR", "PropTech", "FinTech", "AI & Automation", "Go-To-Market Strategy"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" }
         ]
       }
     ]
