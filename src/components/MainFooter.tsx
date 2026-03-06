@@ -21,7 +21,7 @@ const MainFooter = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Logo & Tagline */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/">
@@ -57,6 +57,20 @@ const MainFooter = () => {
             </ul>
           </div>
 
+          {/* Industries */}
+          <div>
+            <h4 className="font-semibold mb-4 text-sm">Industries</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ai-for-saas" className="text-muted-foreground hover:text-primary transition-colors">AI for SaaS</Link></li>
+              <li><Link to="/ai-for-fintech" className="text-muted-foreground hover:text-primary transition-colors">AI for FinTech</Link></li>
+              <li><Link to="/ai-for-proptech" className="text-muted-foreground hover:text-primary transition-colors">AI for PropTech</Link></li>
+              <li><Link to="/ai-for-real-estate" className="text-muted-foreground hover:text-primary transition-colors">AI for Real Estate</Link></li>
+              <li><Link to="/ai-for-consulting-firms" className="text-muted-foreground hover:text-primary transition-colors">AI for Consulting</Link></li>
+              <li><Link to="/ai-for-agencies" className="text-muted-foreground hover:text-primary transition-colors">AI for Agencies</Link></li>
+              <li><Link to="/ai-for-b2b-services" className="text-muted-foreground hover:text-primary transition-colors">AI for B2B Services</Link></li>
+            </ul>
+          </div>
+
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-sm">Services</h4>
@@ -67,14 +81,18 @@ const MainFooter = () => {
               <li><Link to="/advisory" className="text-muted-foreground hover:text-primary transition-colors">Advisory</Link></li>
               <li><Link to="/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing</Link></li>
               <li><Link to="/outsourced-sdr" className="text-muted-foreground hover:text-primary transition-colors">Outsourced SDR</Link></li>
+              <li><Link to="/ai-training-for-teams" className="text-muted-foreground hover:text-primary transition-colors">AI Training</Link></li>
+              <li><Link to="/fractional-ai-consultant" className="text-muted-foreground hover:text-primary transition-colors">Fractional AI</Link></li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Resources & Legal */}
           <div>
             <h4 className="font-semibold mb-4 text-sm">Resources</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/book" className="text-muted-foreground hover:text-primary transition-colors">Book a Call</Link></li>
+              <li><Link to="/best-ai-tools-for-business" className="text-muted-foreground hover:text-primary transition-colors">Best AI Tools</Link></li>
+              <li><Link to="/how-to-automate-marketing-with-ai" className="text-muted-foreground hover:text-primary transition-colors">Automate Marketing</Link></li>
               <li>
                 <a 
                   href="https://a.co/d/3wU4Qgc" 
@@ -86,11 +104,7 @@ const MainFooter = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">Legal</h4>
+            <h4 className="font-semibold mb-4 mt-6 text-sm">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link to="/web/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms</Link></li>
