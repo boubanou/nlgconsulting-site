@@ -74,27 +74,23 @@ const AdvisoryFR = () => {
   return (
     <>
       <Helmet>
-        <title>Conseil Stratégique | Go-to-Market & Stratégie IA | 15+ Ans d'Expérience | NLG</title>
-        <meta 
-          name="description" 
-          content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience. Réservez votre appel stratégique gratuit." 
-        />
-        <meta name="keywords" content="conseil stratégique, consultant business, stratégie go-to-market, conseil IA, advisor startup, stratégie de croissance, monétisation, structuration entreprise" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/conseil" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/advisory" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/conseil" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/advisory" />
+        <title>Conseil Stratégique pour SaaS & PropTech | NLG Consulting</title>
+        <meta name="description" content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience. Réservez votre appel stratégique gratuit." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/conseil" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/advisory" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/advisory" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/conseil" />
-        <meta property="og:title" content="Conseil Stratégique | Go-to-Market & Stratégie IA | NLG" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/conseil" />
+        <meta property="og:title" content="Conseil Stratégique pour SaaS & PropTech | NLG Consulting" />
         <meta property="og:description" content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Conseil Stratégique | Go-to-Market & Stratégie IA | NLG" />
+        <meta name="twitter:title" content="Conseil Stratégique pour SaaS & PropTech | NLG Consulting" />
         <meta name="twitter:description" content="Conseil expert pour dirigeants: go-to-market, monétisation, stratégie IA, scaling. 15+ ans d'expérience." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

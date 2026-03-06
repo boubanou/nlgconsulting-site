@@ -130,20 +130,19 @@ const MarketingFR = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing PPC & campagnes digitales orientées ROI | NLG Consulting</title>
-        <meta
-          name="description"
-          content="Gestion de campagnes PPC & marketing digital multi-canaux. ROI, performance, croissance mesurable. E-commerce, B2B, B2C. Prenez rendez-vous."
-        />
-        <meta name="keywords" content="gestion campagnes PPC, marketing digital performance, agence PPC, marketing e-commerce, campagnes Google Ads, externalisation marketing, marketing multi-canaux, stratégie marketing ROI" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/marketing" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/marketing" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/marketing" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/marketing" />
+        <title>Marketing PPC & Campagnes Digitales ROI | NLG Consulting</title>
+        <meta name="description" content="Gestion de campagnes PPC & marketing digital multi-canaux. ROI, performance, croissance mesurable. E-commerce, B2B, B2C. Prenez rendez-vous." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/marketing" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/marketing" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/marketing" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/marketing" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/marketing" />
-        <meta property="og:title" content="Marketing PPC & campagnes digitales orientées ROI | NLG" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/marketing" />
+        <meta property="og:title" content="Marketing PPC & Campagnes Digitales ROI | NLG Consulting" />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

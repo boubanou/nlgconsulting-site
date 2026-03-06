@@ -56,6 +56,9 @@ const MainFooter = () => {
               <li><Link to="/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing & PPC</Link></li>
               <li><Link to="/web" className="text-muted-foreground hover:text-primary transition-colors">Web Studio</Link></li>
               <li><Link to="/advisory" className="text-muted-foreground hover:text-primary transition-colors">Advisory</Link></li>
+              <li><Link to="/outsourced-sdr" className="text-muted-foreground hover:text-primary transition-colors">Outsourced SDR</Link></li>
+              <li><Link to="/appointment-setting" className="text-muted-foreground hover:text-primary transition-colors">Appointment Setting</Link></li>
+              <li><Link to="/website-in-72-hours" className="text-muted-foreground hover:text-primary transition-colors">Website in 72 Hours</Link></li>
             </ul>
           </div>
 

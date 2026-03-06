@@ -11,11 +11,11 @@ const PropTechConsultingFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Conseil PropTech & Technologie Immobilière", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://nlgconsulting.co/fr/conseil-proptech" },
+      { "@type": "Service", "name": "Conseil PropTech & Technologie Immobilière", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/conseil-proptech" },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/fr/services" },
-        { "@type": "ListItem", "position": 3, "name": "Conseil PropTech", "item": "https://nlgconsulting.co/fr/conseil-proptech" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" },
+        { "@type": "ListItem", "position": 3, "name": "Conseil PropTech", "item": "https://www.nlgconsulting.co/fr/conseil-proptech" }
       ]}
     ]
   };
@@ -25,10 +25,10 @@ const PropTechConsultingFR = () => {
       <Helmet>
         <title>Conseil PropTech : Construisez & Scalez | NLG</title>
         <meta name="description" content="Conseil expert en PropTech et technologie immobilière. Tokenisation, marketplaces, propriété fractionnée. Du concept aux revenus. Par des opérateurs PropTech." />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/conseil-proptech" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/proptech-consulting" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/conseil-proptech" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/proptech-consulting" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/conseil-proptech" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/proptech-consulting" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-proptech" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/proptech-consulting" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

@@ -33,27 +33,23 @@ const ContactFR = () => {
   return (
     <>
       <Helmet>
-        <title>Contacter NLG Consulting | Réponse sous 24h | Consultation Gratuite</title>
-        <meta 
-          name="description" 
-          content="Contactez NLG Consulting. Génération de leads B2B, création de sites web ou conseil stratégique. Rappel immédiat disponible. Réponse sous 24h." 
-        />
-        <meta name="keywords" content="contacter NLG, prendre contact, réserver consultation, appel stratégique gratuit, demande de rappel" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/contact" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/contact" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/contact" />
+        <title>Contacter NLG Consulting | Réservez un Appel Stratégique Gratuit</title>
+        <meta name="description" content="Contactez NLG Consulting. Demandez un rappel, envoyez un message ou réservez un appel stratégique gratuit de 15 minutes. Réponse sous 24h." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/contact" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/contact" />
-        <meta property="og:title" content="Contacter NLG Consulting | Réponse sous 24h" />
-        <meta property="og:description" content="Contactez NLG Consulting. Génération de leads B2B, création de sites web ou conseil stratégique. Rappel immédiat disponible." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/contact" />
+        <meta property="og:title" content="Contacter NLG Consulting | Réservez un Appel Stratégique Gratuit" />
+        <meta property="og:description" content="Contactez NLG Consulting. Demandez un rappel, envoyez un message ou réservez un appel stratégique gratuit." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contacter NLG Consulting | Réponse sous 24h" />
-        <meta name="twitter:description" content="Contactez NLG Consulting. Génération de leads B2B, création de sites web ou conseil stratégique." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:title" content="Contacter NLG Consulting | Réservez un Appel Stratégique Gratuit" />
+        <meta name="twitter:description" content="Contactez NLG Consulting. Demandez un rappel, envoyez un message ou réservez un appel stratégique gratuit." />
+        <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

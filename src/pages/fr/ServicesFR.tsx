@@ -11,10 +11,10 @@ const ServicesFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Accélération de Revenus pour SaaS & PropTech", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://nlgconsulting.co/fr/services" },
+      { "@type": "Service", "name": "Accélération de Revenus pour SaaS & PropTech", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/services" },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/fr/services" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" }
       ]}
     ]
   };
@@ -35,11 +35,18 @@ const ServicesFR = () => {
       <Helmet>
         <title>Accélération de Revenus SaaS & PropTech | NLG Consulting</title>
         <meta name="description" content="Scalez vos revenus sans scaler vos équipes. Stratégie + exécution pour fondateurs SaaS et opérateurs PropTech. Ventes, IA, monétisation, GTM." />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/services" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/services" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/services" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/services" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/services" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/services" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/services" />
+        <meta property="og:title" content="Accélération de Revenus SaaS & PropTech | NLG Consulting" />
+        <meta property="og:description" content="Scalez vos revenus sans scaler vos équipes. Stratégie + exécution pour fondateurs SaaS et opérateurs PropTech." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

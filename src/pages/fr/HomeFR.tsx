@@ -95,28 +95,24 @@ const HomeFR = () => {
   return (
     <>
       <Helmet>
-        <title>Génération de Leads B2B | 15-30 RDV Qualifiés/Mois Garantis | NLG Consulting</title>
-        <meta 
-          name="description" 
-          content="Développez votre pipeline B2B avec 15-30 RDV qualifiés par mois. Sites web en 72h, équipes SDR et conseil stratégique. Plus de 50 startups accompagnées. Appel gratuit." 
-        />
-        <meta name="keywords" content="génération de leads B2B, SDR externalisé, prospection commerciale, RDV qualifiés, site web 72 heures, conseil stratégique, PropTech, FinTech, conseil IA" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/" />
+        <title>Agence Lead Generation B2B | SDR Externalisé & GTM | NLG Consulting</title>
+        <meta name="description" content="Génération de leads B2B pour startups et entreprises. SDR externalisé, prospection, conseil GTM et sites web en 72h. Réservez un appel stratégique." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr" />
-        <meta property="og:title" content="Génération de Leads B2B | 15-30 RDV Qualifiés/Mois | NLG Consulting" />
-        <meta property="og:description" content="Développez votre pipeline B2B avec 15-30 RDV qualifiés par mois. Sites web en 72h, équipes SDR et conseil stratégique. Plus de 50 startups accompagnées." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr" />
+        <meta property="og:title" content="Agence Lead Generation B2B | SDR Externalisé & GTM | NLG Consulting" />
+        <meta property="og:description" content="Génération de leads B2B pour startups et entreprises. SDR externalisé, prospection, conseil GTM et sites web en 72h." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Génération de Leads B2B | 15-30 RDV Qualifiés/Mois | NLG Consulting" />
-        <meta name="twitter:description" content="Développez votre pipeline B2B avec 15-30 RDV qualifiés par mois. Sites web en 72h, équipes SDR et conseil stratégique." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:title" content="Agence Lead Generation B2B | SDR Externalisé & GTM | NLG Consulting" />
+        <meta name="twitter:description" content="Génération de leads B2B pour startups et entreprises. SDR externalisé, prospection, conseil GTM et sites web en 72h." />
+        <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

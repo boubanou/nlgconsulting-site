@@ -8,7 +8,7 @@ const PrivacyPolicyFR = () => {
     "@type": "WebPage",
     name: "Politique de Confidentialité & Mentions Légales | NLG Consulting",
     description: "Politique de confidentialité, protection des données RGPD et mentions légales de NLG Consulting. Conformité totale avec les réglementations européennes.",
-    url: "https://nlgconsulting.co/fr/politique-confidentialite",
+    url: "https://www.nlgconsulting.co/fr/politique-confidentialite",
     inLanguage: "fr",
   };
 
@@ -18,10 +18,10 @@ const PrivacyPolicyFR = () => {
         <title>Politique de Confidentialité & Mentions Légales | NLG Consulting</title>
         <meta name="description" content="Politique de confidentialité, protection des données RGPD et mentions légales de NLG Consulting. Conformité totale avec les réglementations européennes." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/politique-confidentialite" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/privacy-policy" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/politique-confidentialite" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/privacy-policy" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/politique-confidentialite" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/privacy-policy" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/politique-confidentialite" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/privacy-policy" />
         <meta property="og:locale" content="fr_FR" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
