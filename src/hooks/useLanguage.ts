@@ -93,6 +93,10 @@ export const useLanguage = () => {
       if (currentPath === "/fr/automation-commerciale-ia") return "/ai-sales-automation";
       if (currentPath === "/fr/conseil-prompt-engineering") return "/prompt-engineering-consulting";
       if (currentPath === "/fr/implementation-ia-externalisee") return "/outsourced-ai-implementation";
+      if (currentPath === "/fr/formation-ia-entreprise") return "/ai-training-for-teams";
+      if (currentPath === "/fr/consultant-ia-fractionnel") return "/fractional-ai-consultant";
+      if (currentPath === "/fr/meilleurs-outils-ia-entreprise") return "/best-ai-tools-for-business";
+      if (currentPath === "/fr/automatiser-marketing-avec-ia") return "/how-to-automate-marketing-with-ai";
       return currentPath.replace("/fr", "") || "/";
     }
   };
