@@ -19,7 +19,7 @@ const WebOffersFR = () => {
         "Code source fourni",
       ],
       cta: "Payer l'acompte – Pack Starter",
-      link: "https://payment.fractionalpropertyhub.com/b/3cI7sMcTrdbOgDWeI31ck03",
+      link: "https://buy.stripe.com/3cI7sMcTrdbOgDWeI31ck03",
       popular: false,
       gradient: "from-slate-500 to-slate-600",
     },
