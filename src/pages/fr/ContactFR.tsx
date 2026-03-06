@@ -18,13 +18,13 @@ const ContactFR = () => {
         "@type": "ContactPage",
         "name": "Contacter NLG Consulting",
         "description": "Prenez contact avec NLG Consulting. Réservez un appel ou envoyez-nous un message.",
-        "url": "https://nlgconsulting.co/fr/contact"
+        "url": "https://www.nlgconsulting.co/fr/contact"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://nlgconsulting.co/fr/contact" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.nlgconsulting.co/fr/contact" }
         ]
       }
     ]
