@@ -27,13 +27,13 @@ const SalesFR = () => {
         "name": "Développement Commercial B2B Externalisé",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Génération de leads outbound, systèmes SDR multicanaux et infrastructure pipeline CRM.",
-        "url": "https://nlgconsulting.co/fr/vente"
+        "url": "https://www.nlgconsulting.co/fr/vente"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Vente & BD", "item": "https://nlgconsulting.co/fr/vente" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Vente & BD", "item": "https://www.nlgconsulting.co/fr/vente" }
         ]
       },
       {
