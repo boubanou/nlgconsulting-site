@@ -15,6 +15,15 @@ const AboutNLG = lazy(() => import("./pages/AboutNLG"));
 const Ventures = lazy(() => import("./pages/Ventures"));
 const Sales = lazy(() => import("./pages/Sales"));
 const Advisory = lazy(() => import("./pages/Advisory"));
+
+// AI Cluster Hub Pages
+const AIConsulting = lazy(() => import("./pages/AIConsulting"));
+const AIAutomation = lazy(() => import("./pages/AIAutomation"));
+const AIAgentsForBusiness = lazy(() => import("./pages/AIAgentsForBusiness"));
+const AIMarketingAutomation = lazy(() => import("./pages/AIMarketingAutomation"));
+const AISalesAutomationPage = lazy(() => import("./pages/AISalesAutomationPage"));
+const PromptEngineeringConsulting = lazy(() => import("./pages/PromptEngineeringConsulting"));
+const OutsourcedAIImplementation = lazy(() => import("./pages/OutsourcedAIImplementation"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const Book = lazy(() => import("./pages/Book"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -142,6 +151,15 @@ const App = () => (
           <Route path="/fr/strategie-go-to-market" element={<GoToMarketFR />} />
           <Route path="/fr/conseil-proptech" element={<PropTechConsultingFR />} />
           
+          {/* AI Cluster Hub Pages */}
+          <Route path="/ai-consulting" element={<AIConsulting />} />
+          <Route path="/ai-automation" element={<AIAutomation />} />
+          <Route path="/ai-agents-for-business" element={<AIAgentsForBusiness />} />
+          <Route path="/ai-marketing-automation" element={<AIMarketingAutomation />} />
+          <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
+          <Route path="/prompt-engineering-consulting" element={<PromptEngineeringConsulting />} />
+          <Route path="/outsourced-ai-implementation" element={<OutsourcedAIImplementation />} />
+
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
           <Route path="/b2b-lead-generation-agency" element={<B2BLeadGenerationAgency />} />
