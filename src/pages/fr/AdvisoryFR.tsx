@@ -26,13 +26,13 @@ const AdvisoryFR = () => {
         "name": "Conseil & Stratégie d'Entreprise",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Accompagnement stratégique pour la structuration d'entreprise, le go-to-market, le scaling et la transformation tech.",
-        "url": "https://nlgconsulting.co/fr/conseil"
+        "url": "https://www.nlgconsulting.co/fr/conseil"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Conseil", "item": "https://nlgconsulting.co/fr/conseil" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Conseil", "item": "https://www.nlgconsulting.co/fr/conseil" }
         ]
       }
     ]
