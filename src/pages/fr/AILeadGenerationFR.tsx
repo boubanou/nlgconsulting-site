@@ -11,11 +11,11 @@ const AILeadGenerationFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Génération de Leads par Intelligence Artificielle", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://nlgconsulting.co/fr/generation-leads-ia" },
+      { "@type": "Service", "name": "Génération de Leads par Intelligence Artificielle", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/generation-leads-ia" },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/fr/services" },
-        { "@type": "ListItem", "position": 3, "name": "Génération Leads IA", "item": "https://nlgconsulting.co/fr/generation-leads-ia" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" },
+        { "@type": "ListItem", "position": 3, "name": "Génération Leads IA", "item": "https://www.nlgconsulting.co/fr/generation-leads-ia" }
       ]},
       { "@type": "FAQPage", "mainEntity": [
         { "@type": "Question", "name": "Comment fonctionne la génération de leads par IA ?", "acceptedAnswer": { "@type": "Answer", "text": "L'IA utilise le machine learning pour identifier les prospects idéaux, personnaliser l'outreach à grande échelle et optimiser les messages en fonction des données de réponse." } },
@@ -30,11 +30,18 @@ const AILeadGenerationFR = () => {
       <Helmet>
         <title>Génération de Leads IA pour le B2B | NLG Consulting</title>
         <meta name="description" content="Systèmes de prospection IA qui génèrent des rendez-vous B2B qualifiés en automatique. 3x plus de pipeline à -50% du coût. Découvrez comment." />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/generation-leads-ia" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/ai-lead-generation" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/generation-leads-ia" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/ai-lead-generation" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/generation-leads-ia" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-lead-generation" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/generation-leads-ia" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/ai-lead-generation" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/generation-leads-ia" />
+        <meta property="og:title" content="Génération de Leads IA pour le B2B | NLG Consulting" />
+        <meta property="og:description" content="Systèmes de prospection IA qui génèrent des rendez-vous B2B qualifiés en automatique. 3x plus de pipeline à -50% du coût." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

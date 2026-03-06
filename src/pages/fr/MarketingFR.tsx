@@ -34,13 +34,13 @@ const MarketingFR = () => {
         "name": "Marketing PPC & Campagnes Digitales",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Gestion de campagnes PPC et marketing digital orientés ROI. Google Ads, Meta Ads, LinkedIn Ads, campagnes multi-canaux.",
-        "url": "https://nlgconsulting.co/fr/marketing"
+        "url": "https://www.nlgconsulting.co/fr/marketing"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://nlgconsulting.co/fr/marketing" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://www.nlgconsulting.co/fr/marketing" }
         ]
       },
       {
@@ -130,20 +130,19 @@ const MarketingFR = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing PPC & campagnes digitales orientées ROI | NLG Consulting</title>
-        <meta
-          name="description"
-          content="Gestion de campagnes PPC & marketing digital multi-canaux. ROI, performance, croissance mesurable. E-commerce, B2B, B2C. Prenez rendez-vous."
-        />
-        <meta name="keywords" content="gestion campagnes PPC, marketing digital performance, agence PPC, marketing e-commerce, campagnes Google Ads, externalisation marketing, marketing multi-canaux, stratégie marketing ROI" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/marketing" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/marketing" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/marketing" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/marketing" />
+        <title>Marketing PPC & Campagnes Digitales ROI | NLG Consulting</title>
+        <meta name="description" content="Gestion de campagnes PPC & marketing digital multi-canaux. ROI, performance, croissance mesurable. E-commerce, B2B, B2C. Prenez rendez-vous." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/marketing" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/marketing" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/marketing" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/marketing" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/marketing" />
-        <meta property="og:title" content="Marketing PPC & campagnes digitales orientées ROI | NLG" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/marketing" />
+        <meta property="og:title" content="Marketing PPC & Campagnes Digitales ROI | NLG Consulting" />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

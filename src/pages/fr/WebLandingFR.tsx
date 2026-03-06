@@ -21,7 +21,7 @@ const WebLandingFR = () => {
         "name": "Site Web en 72 Heures - NLG Studio",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Développement de site web professionnel livré en moins de 72 heures. Inclut design UX/UI, copywriting, optimisation SEO, intégration CRM et paiements Stripe.",
-        "url": "https://nlgconsulting.co/fr/site-internet",
+        "url": "https://www.nlgconsulting.co/fr/site-internet",
         "offers": {
           "@type": "AggregateOffer",
           "lowPrice": "749",
@@ -33,8 +33,8 @@ const WebLandingFR = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Site Internet", "item": "https://nlgconsulting.co/fr/site-internet" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Site Internet", "item": "https://www.nlgconsulting.co/fr/site-internet" }
         ]
       },
       {
@@ -89,29 +89,22 @@ const WebLandingFR = () => {
     <>
       <Helmet>
         <title>Création Site Web 72h | Dès 749€ | SEO + Stripe Inclus | NLG Studio</title>
-        <meta 
-          name="description" 
-          content="Lancez votre site web optimisé conversion en 72h. Design UX, SEO, paiements Stripe, CRM. 100% propriétaire du code. À partir de 749€." 
-        />
-        <meta 
-          name="keywords" 
-          content="création site web 72 heures, site internet rapide, site web entreprise, landing page, intégration Stripe, site web SEO, design web professionnel, site conversion" 
-        />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/site-internet" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/web" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/site-internet" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/web" />
+        <meta name="description" content="Lancez votre site web optimisé conversion en 72h. Design UX, SEO, paiements Stripe, CRM. 100% propriétaire du code. À partir de 749€." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/site-internet" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/web" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/site-internet" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/web" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/site-internet" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/site-internet" />
         <meta property="og:title" content="Création Site Web 72h | Dès 749€ | SEO + Stripe Inclus" />
         <meta property="og:description" content="Lancez votre site web optimisé conversion en 72h. Design UX, SEO, paiements Stripe, CRM. 100% propriétaire du code." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Création Site Web 72h | Dès 749€ | SEO + Stripe Inclus" />
         <meta name="twitter:description" content="Lancez votre site web optimisé conversion en 72h. Design UX, SEO, paiements Stripe, CRM. 100% propriétaire du code." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       

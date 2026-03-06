@@ -24,7 +24,7 @@ const AboutFR = () => {
         "@type": "AboutPage",
         "name": "À propos de NLG Consulting",
         "description": "Découvrez NLG Consulting, un groupe mondial Business, Tech & Croissance.",
-        "url": "https://nlgconsulting.co/fr/a-propos"
+        "url": "https://www.nlgconsulting.co/fr/a-propos"
       },
       {
         "@type": "Person",
@@ -35,8 +35,8 @@ const AboutFR = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://nlgconsulting.co/fr/a-propos" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://www.nlgconsulting.co/fr/a-propos" }
         ]
       }
     ]
@@ -45,27 +45,23 @@ const AboutFR = () => {
   return (
     <>
       <Helmet>
-        <title>Gregory Brenig | Fondateur NLG Consulting | Expert PropTech & FinTech | 15+ Ans</title>
-        <meta 
-          name="description" 
-          content="Découvrez Gregory Brenig, fondateur de NLG Consulting. 15+ ans en PropTech, FinTech & IA. Auteur de 'Level Up in Fractional Real Estate'. Réservez un appel." 
-        />
-        <meta name="keywords" content="Gregory Brenig, fondateur NLG, expert FinTech, consultant PropTech, auteur immobilier fractionné, advisor startup, stratégie IA" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/a-propos" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/about" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/a-propos" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/about" />
+        <title>À propos de NLG Consulting | Opérateur B2B & Advisory Fondateur</title>
+        <meta name="description" content="Découvrez Gregory Brenig et l'équipe NLG. 15+ ans à construire des ventures, scaler des équipes commerciales et conseiller des entreprises SaaS & PropTech." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/a-propos" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/about" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/a-propos" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/about" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/a-propos" />
-        <meta property="og:title" content="Gregory Brenig | Fondateur NLG Consulting | Expert PropTech & FinTech" />
-        <meta property="og:description" content="Découvrez Gregory Brenig, fondateur de NLG Consulting. 15+ ans en PropTech, FinTech & IA." />
-        <meta property="og:image" content="https://nlgconsulting.co/images/gregory-brenig.jpg" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/a-propos" />
+        <meta property="og:title" content="À propos de NLG Consulting | Opérateur B2B & Advisory" />
+        <meta property="og:description" content="Découvrez Gregory Brenig et l'équipe NLG. 15+ ans en PropTech, FinTech & IA." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/images/gregory-brenig.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gregory Brenig | Fondateur NLG Consulting | Expert PropTech & FinTech" />
-        <meta name="twitter:description" content="Découvrez Gregory Brenig, fondateur de NLG Consulting. 15+ ans en PropTech, FinTech & IA." />
-        <meta name="twitter:image" content="https://nlgconsulting.co/images/gregory-brenig.jpg" />
+        <meta name="twitter:title" content="À propos de NLG Consulting | Opérateur B2B & Advisory" />
+        <meta name="twitter:description" content="Découvrez Gregory Brenig et l'équipe NLG. 15+ ans en PropTech, FinTech & IA." />
+        <meta name="twitter:image" content="https://www.nlgconsulting.co/images/gregory-brenig.jpg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

@@ -16,13 +16,13 @@ const VenturesFR = () => {
         "@type": "WebPage",
         "name": "Ventures & Marques | NLG Consulting",
         "description": "Découvrez le portefeuille de ventures de NLG Consulting dans la PropTech, FinTech, Média et Lifestyle.",
-        "url": "https://nlgconsulting.co/fr/ventures"
+        "url": "https://www.nlgconsulting.co/fr/ventures"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://nlgconsulting.co/fr/ventures" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://www.nlgconsulting.co/fr/ventures" }
         ]
       }
     ]
@@ -75,27 +75,23 @@ const VenturesFR = () => {
   return (
     <>
       <Helmet>
-        <title>Portefeuille NLG Ventures | PropTech, FinTech & Média | Nous Construisons & Scalons</title>
-        <meta 
-          name="description" 
-          content="Explorez le portefeuille NLG: Block Tech, FractionalPropertyHub, Business Legend. Nous construisons et développons des plateformes innovantes." 
-        />
-        <meta name="keywords" content="venture studio, investissement PropTech, ventures FinTech, portefeuille startup, immobilier fractionné, ventures business, Block Tech" />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/ventures" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/ventures" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/ventures" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/ventures" />
+        <title>Ventures & Portefeuille | NLG Consulting</title>
+        <meta name="description" content="Découvrez les plateformes et marques construites et opérées par NLG Consulting en PropTech, FinTech, Média et IA." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/ventures" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ventures" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/ventures" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/ventures" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/fr/ventures" />
-        <meta property="og:title" content="Portefeuille NLG Ventures | PropTech, FinTech & Média" />
-        <meta property="og:description" content="Explorez le portefeuille NLG: Block Tech, FractionalPropertyHub, Business Legend. Nous construisons et développons des plateformes innovantes." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/fr/ventures" />
+        <meta property="og:title" content="Ventures & Portefeuille | NLG Consulting" />
+        <meta property="og:description" content="Découvrez les plateformes et marques construites et opérées par NLG Consulting en PropTech, FinTech, Média et IA." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Portefeuille NLG Ventures | PropTech, FinTech & Média" />
-        <meta name="twitter:description" content="Explorez le portefeuille NLG: Block Tech, FractionalPropertyHub, Business Legend. Nous construisons et développons des plateformes." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:title" content="Ventures & Portefeuille | NLG Consulting" />
+        <meta name="twitter:description" content="Découvrez les plateformes et marques construites et opérées par NLG Consulting en PropTech, FinTech, Média et IA." />
+        <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

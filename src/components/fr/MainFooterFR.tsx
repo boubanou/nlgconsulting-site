@@ -56,6 +56,9 @@ const MainFooterFR = () => {
               <li><Link to="/fr/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing & PPC</Link></li>
               <li><Link to="/fr/site-internet" className="text-muted-foreground hover:text-primary transition-colors">Studio Web</Link></li>
               <li><Link to="/fr/conseil" className="text-muted-foreground hover:text-primary transition-colors">Conseil</Link></li>
+              <li><Link to="/fr/sdr-externalise" className="text-muted-foreground hover:text-primary transition-colors">SDR Externalisé</Link></li>
+              <li><Link to="/fr/prise-de-rendez-vous-b2b" className="text-muted-foreground hover:text-primary transition-colors">Prise de RDV B2B</Link></li>
+              <li><Link to="/fr/site-web-en-72h" className="text-muted-foreground hover:text-primary transition-colors">Site Web en 72h</Link></li>
             </ul>
           </div>
 

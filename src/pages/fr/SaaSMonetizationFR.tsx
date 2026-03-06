@@ -11,11 +11,11 @@ const SaaSMonetizationFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Monétisation SaaS & Conseil en Modèle de Revenus", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://nlgconsulting.co/fr/monetisation-saas" },
+      { "@type": "Service", "name": "Monétisation SaaS & Conseil en Modèle de Revenus", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/monetisation-saas" },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/fr/services" },
-        { "@type": "ListItem", "position": 3, "name": "Monétisation SaaS", "item": "https://nlgconsulting.co/fr/monetisation-saas" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" },
+        { "@type": "ListItem", "position": 3, "name": "Monétisation SaaS", "item": "https://www.nlgconsulting.co/fr/monetisation-saas" }
       ]}
     ]
   };
@@ -25,10 +25,10 @@ const SaaSMonetizationFR = () => {
       <Helmet>
         <title>Monétisation SaaS : Optimisez Vos Revenus | NLG</title>
         <meta name="description" content="Arrêtez de laisser des revenus sur la table. Conseil expert en pricing et monétisation SaaS. ARPU +30-50%. Audit revenus gratuit." />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/monetisation-saas" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/saas-monetization" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/monetisation-saas" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/saas-monetization" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/monetisation-saas" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/saas-monetization" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/monetisation-saas" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/saas-monetization" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

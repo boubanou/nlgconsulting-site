@@ -11,11 +11,11 @@ const GoToMarketFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Stratégie Go-To-Market pour SaaS", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://nlgconsulting.co/fr/strategie-go-to-market" },
+      { "@type": "Service", "name": "Stratégie Go-To-Market pour SaaS", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/strategie-go-to-market" },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/fr/services" },
-        { "@type": "ListItem", "position": 3, "name": "Go-To-Market", "item": "https://nlgconsulting.co/fr/strategie-go-to-market" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" },
+        { "@type": "ListItem", "position": 3, "name": "Go-To-Market", "item": "https://www.nlgconsulting.co/fr/strategie-go-to-market" }
       ]}
     ]
   };
@@ -25,10 +25,10 @@ const GoToMarketFR = () => {
       <Helmet>
         <title>Stratégie Go-To-Market pour fondateurs SaaS | NLG</title>
         <meta name="description" content="Lancez-vous sur de nouveaux marchés sans brûler du cash. Frameworks GTM éprouvés pour SaaS. Expansion internationale. Réservez un appel stratégique." />
-        <link rel="canonical" href="https://nlgconsulting.co/fr/strategie-go-to-market" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/go-to-market" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/strategie-go-to-market" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/go-to-market" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/fr/strategie-go-to-market" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/go-to-market" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/strategie-go-to-market" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/go-to-market" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

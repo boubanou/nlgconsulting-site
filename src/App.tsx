@@ -126,6 +126,22 @@ const App = () => (
           <Route path="/fr/strategie-go-to-market" element={<GoToMarketFR />} />
           <Route path="/fr/conseil-proptech" element={<PropTechConsultingFR />} />
           
+          {/* SEO Landing Pages - English */}
+          <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
+          <Route path="/b2b-lead-generation-agency" element={<B2BLeadGenerationAgency />} />
+          <Route path="/appointment-setting" element={<AppointmentSetting />} />
+          <Route path="/go-to-market-consulting" element={<GoToMarketConsulting />} />
+          <Route path="/website-in-72-hours" element={<WebsiteIn72Hours />} />
+          <Route path="/proptech-lead-generation" element={<PropTechLeadGeneration />} />
+          <Route path="/fintech-lead-generation" element={<FinTechLeadGeneration />} />
+          <Route path="/ai-sales-outreach" element={<AISalesOutreach />} />
+          
+          {/* SEO Landing Pages - French */}
+          <Route path="/fr/sdr-externalise" element={<SDRExternaliseFR />} />
+          <Route path="/fr/agence-lead-generation-b2b" element={<AgenceLeadGenerationFR />} />
+          <Route path="/fr/prise-de-rendez-vous-b2b" element={<PriseRendezVousFR />} />
+          <Route path="/fr/site-web-en-72h" element={<SiteWebEn72hFR />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
