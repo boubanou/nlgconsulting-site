@@ -80,6 +80,15 @@ const SaaSMonetizationFR = lazy(() => import("./pages/fr/SaaSMonetizationFR"));
 const GoToMarketFR = lazy(() => import("./pages/fr/GoToMarketFR"));
 const PropTechConsultingFR = lazy(() => import("./pages/fr/PropTechConsultingFR"));
 
+// French AI Hub Pages
+const ConseilIAFR = lazy(() => import("./pages/fr/ConseilIAFR"));
+const AutomationIAFR = lazy(() => import("./pages/fr/AutomationIAFR"));
+const AgentsIAFR = lazy(() => import("./pages/fr/AgentsIAFR"));
+const AutomationMarketingIAFR = lazy(() => import("./pages/fr/AutomationMarketingIAFR"));
+const AutomationCommercialeIAFR = lazy(() => import("./pages/fr/AutomationCommercialeIAFR"));
+const ConseilPromptEngineeringFR = lazy(() => import("./pages/fr/ConseilPromptEngineeringFR"));
+const ImplementationIAFR = lazy(() => import("./pages/fr/ImplementationIAFR"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
