@@ -39,6 +39,20 @@ export const useLanguage = () => {
       if (currentPath === "/appointment-setting") return "/fr/prise-de-rendez-vous-b2b";
       if (currentPath === "/go-to-market-consulting") return "/fr/strategie-go-to-market";
       if (currentPath === "/website-in-72-hours") return "/fr/site-web-en-72h";
+      if (currentPath === "/ai-for-saas") return "/fr/ia-pour-saas";
+      if (currentPath === "/ai-for-proptech") return "/fr/ia-pour-proptech";
+      if (currentPath === "/ai-for-fintech") return "/fr/ia-pour-fintech";
+      if (currentPath === "/ai-for-real-estate") return "/fr/ia-pour-immobilier";
+      if (currentPath === "/ai-for-consulting-firms") return "/fr/ia-pour-cabinets-conseil";
+      if (currentPath === "/ai-for-agencies") return "/fr/ia-pour-agences";
+      if (currentPath === "/ai-for-b2b-services") return "/fr/ia-pour-services-b2b";
+      if (currentPath === "/ai-consulting") return "/fr/conseil-ia";
+      if (currentPath === "/ai-automation") return "/fr/automation-ia";
+      if (currentPath === "/ai-agents-for-business") return "/fr/agents-ia-entreprise";
+      if (currentPath === "/ai-marketing-automation") return "/fr/automation-marketing-ia";
+      if (currentPath === "/ai-sales-automation") return "/fr/automation-commerciale-ia";
+      if (currentPath === "/prompt-engineering-consulting") return "/fr/conseil-prompt-engineering";
+      if (currentPath === "/outsourced-ai-implementation") return "/fr/implementation-ia-externalisee";
       return `/fr${currentPath}`;
     } else {
       // FR to EN
