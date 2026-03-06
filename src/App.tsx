@@ -15,6 +15,15 @@ const AboutNLG = lazy(() => import("./pages/AboutNLG"));
 const Ventures = lazy(() => import("./pages/Ventures"));
 const Sales = lazy(() => import("./pages/Sales"));
 const Advisory = lazy(() => import("./pages/Advisory"));
+
+// AI Cluster Hub Pages
+const AIConsulting = lazy(() => import("./pages/AIConsulting"));
+const AIAutomation = lazy(() => import("./pages/AIAutomation"));
+const AIAgentsForBusiness = lazy(() => import("./pages/AIAgentsForBusiness"));
+const AIMarketingAutomation = lazy(() => import("./pages/AIMarketingAutomation"));
+const AISalesAutomationPage = lazy(() => import("./pages/AISalesAutomationPage"));
+const PromptEngineeringConsulting = lazy(() => import("./pages/PromptEngineeringConsulting"));
+const OutsourcedAIImplementation = lazy(() => import("./pages/OutsourcedAIImplementation"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const Book = lazy(() => import("./pages/Book"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
