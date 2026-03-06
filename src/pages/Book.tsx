@@ -14,15 +14,15 @@ const Book = () => {
       {
         "@type": "WebPage",
         "name": "Free Revenue Strategy Consultation",
-        "description": "15-min strategy call with a SaaS & PropTech revenue expert. Walk away with 3 actionable growth ideas.",
-        "url": "https://nlgconsulting.co/book",
-        "potentialAction": { "@type": "ReserveAction", "target": "https://nlgconsulting.co/book", "result": { "@type": "Reservation", "name": "15-Minute Strategy Call" } }
+        "description": "Book a free 15-min strategy call with a B2B growth expert. Walk away with 3 actionable ideas.",
+        "url": "https://www.nlgconsulting.co/book",
+        "potentialAction": { "@type": "ReserveAction", "target": "https://www.nlgconsulting.co/book", "result": { "@type": "Reservation", "name": "15-Minute Strategy Call" } }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Book a Call", "item": "https://nlgconsulting.co/book" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Book a Call", "item": "https://www.nlgconsulting.co/book" }
         ]
       }
     ]
@@ -31,15 +31,15 @@ const Book = () => {
   return (
     <>
       <Helmet>
-        <title>Free Revenue Strategy Call for SaaS Leaders | NLG</title>
-        <meta name="description" content="15-min strategy call with a SaaS & PropTech revenue expert. Walk away with 3 actionable growth ideas. Limited slots this week." />
-        <link rel="canonical" href="https://nlgconsulting.co/book" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/book" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/rendez-vous" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/book" />
+        <title>Free Revenue Strategy Call | NLG Consulting</title>
+        <meta name="description" content="Book a free 15-min strategy call with a B2B growth expert. Walk away with 3 actionable ideas. Limited slots available." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/book" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/book" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/rendez-vous" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/book" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/book" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/book" />
         <meta property="og:title" content="Free Revenue Strategy Call | NLG Consulting" />
         <meta property="og:description" content="15-min strategy call. Walk away with 3 actionable growth ideas. Limited slots." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />

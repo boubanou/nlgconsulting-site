@@ -32,10 +32,10 @@ const Marketing = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Marketing PPC & Campagnes Digitales",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "PPC campaign management and digital marketing services focused on ROI. Google Ads, Meta Ads, LinkedIn Ads, multi-channel campaigns.",
-        "url": "https://nlgconsulting.co/marketing",
+        "name": "PPC & Marketing Campaigns",
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Full-stack PPC and marketing management. Google, Meta, LinkedIn Ads. Data-driven campaigns that generate leads and revenue.",
+        "url": "https://www.nlgconsulting.co/marketing",
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "EUR",
@@ -45,8 +45,8 @@ const Marketing = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://nlgconsulting.co/marketing" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://www.nlgconsulting.co/marketing" }
         ]
       },
       {
@@ -144,21 +144,18 @@ const Marketing = () => {
   return (
     <>
       <Helmet>
-        <title>PPC Marketing & ROI-Driven Digital Campaigns | NLG Consulting</title>
-        <meta
-          name="description"
-          content="PPC campaign management & multi-channel digital marketing. ROI-focused performance for e-commerce, B2B, B2C. Google Ads, Meta, LinkedIn. Book a strategy call."
-        />
-        <meta name="keywords" content="PPC campaign management, digital marketing performance, PPC agency, e-commerce marketing, Google Ads campaigns, marketing outsourcing, multi-channel marketing, ROI marketing strategy" />
-        <link rel="canonical" href="https://nlgconsulting.co/marketing" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/marketing" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/marketing" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/marketing" />
+        <title>PPC & Marketing Campaigns | ROI-Driven | NLG Consulting</title>
+        <meta name="description" content="Full-stack PPC and marketing management. Google, Meta, LinkedIn Ads. Data-driven campaigns that generate leads and revenue." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/marketing" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/marketing" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/marketing" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/marketing" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/marketing" />
-        <meta property="og:title" content="PPC Marketing & ROI-Driven Digital Campaigns | NLG" />
-        <meta property="og:description" content="ROI-focused PPC campaign management. Google Ads, Meta, LinkedIn. Multi-channel digital marketing for e-commerce, B2B, B2C." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/marketing" />
+        <meta property="og:title" content="PPC & Marketing Campaigns | ROI-Driven | NLG Consulting" />
+        <meta property="og:description" content="Full-stack PPC and marketing management. Google, Meta, LinkedIn Ads. Data-driven campaigns that generate leads and revenue." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

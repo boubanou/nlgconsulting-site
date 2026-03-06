@@ -24,16 +24,17 @@ const Sales = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Sales & Business Development",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Outbound lead generation, SDR systems, and CRM pipeline infrastructure.",
-        "url": "https://nlgconsulting.co/sales"
+        "name": "Outsourced SDR Services",
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Outsourced B2B sales development. LinkedIn, email, cold calling. 15-30 qualified meetings per month guaranteed.",
+        "url": "https://www.nlgconsulting.co/sales",
+        "areaServed": ["Europe", "North America", "Middle East"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Sales & BD", "item": "https://nlgconsulting.co/sales" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Outsourced SDR", "item": "https://www.nlgconsulting.co/sales" }
         ]
       },
       {
@@ -127,25 +128,21 @@ const Sales = () => {
   return (
     <>
       <Helmet>
-        <title>Outsourced SDR Services | 15-30 Qualified B2B Meetings/Month Guaranteed | NLG</title>
-        <meta 
-          name="description" 
-          content="Outsource your B2B sales development to NLG. Full SDR infrastructure: LinkedIn, email, cold calling. 15-30 qualified meetings guaranteed. Free sales audit." 
-        />
-        <meta name="keywords" content="SDR as a service, outsourced SDR, B2B sales development, lead generation agency, appointment setting, LinkedIn outreach, cold email, pipeline building" />
-        <link rel="canonical" href="https://nlgconsulting.co/sales" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/sales" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/vente" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/sales" />
+        <title>Outsourced SDR | 15-30 Qualified B2B Meetings/Month | NLG Consulting</title>
+        <meta name="description" content="Outsource your B2B sales development. LinkedIn, email, cold calling. 15-30 qualified meetings/month guaranteed. No hiring risk. Free audit." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/sales" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/sales" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/vente" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/sales" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/sales" />
-        <meta property="og:title" content="Outsourced SDR Services | 15-30 Qualified B2B Meetings/Month" />
-        <meta property="og:description" content="Outsource your B2B sales development. Full SDR infrastructure: LinkedIn, email, cold calling. 15-30 qualified meetings guaranteed." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/sales" />
+        <meta property="og:title" content="Outsourced SDR | 15-30 Qualified B2B Meetings/Month | NLG Consulting" />
+        <meta property="og:description" content="Outsource your B2B sales development. LinkedIn, email, cold calling. 15-30 qualified meetings/month guaranteed." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Outsourced SDR Services | 15-30 Qualified B2B Meetings/Month" />
-        <meta name="twitter:description" content="Outsource your B2B sales development. Full SDR infrastructure: LinkedIn, email, cold calling. 15-30 qualified meetings guaranteed." />
+        <meta name="twitter:title" content="Outsourced SDR | 15-30 Qualified B2B Meetings/Month | NLG Consulting" />
+        <meta name="twitter:description" content="Outsource your B2B sales development. LinkedIn, email, cold calling. 15-30 qualified meetings/month guaranteed." />
         <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

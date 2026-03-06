@@ -33,21 +33,24 @@ const Home = () => {
         "@type": "Organization",
         "name": "NLG Consulting",
         "alternateName": "N.L.G. Consulting Group",
-        "url": "https://nlgconsulting.co",
-        "logo": "https://nlgconsulting.co/logo.svg",
-        "description": "N.L.G. Consulting is a global Business, Tech & Growth Group building, operating and scaling platforms, brands and sales systems worldwide.",
+        "url": "https://www.nlgconsulting.co",
+        "logo": "https://www.nlgconsulting.co/logo.svg",
+        "description": "B2B lead generation agency. Outsourced SDR, GTM advisory, websites in 72h. Trusted by 50+ startups worldwide.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
-          "jobTitle": "Founder & CEO"
+          "jobTitle": "Founder & CEO",
+          "sameAs": "https://www.linkedin.com/in/gregorybrenig/"
         },
-        "areaServed": "Worldwide",
-        "knowsAbout": ["PropTech", "FinTech", "AI & Automation", "Media", "Business Development", "Blockchain"]
+        "foundingDate": "2020",
+        "areaServed": ["Europe", "North America", "Middle East"],
+        "sameAs": ["https://www.linkedin.com/company/nlg-consulting/"],
+        "knowsAbout": ["B2B Lead Generation", "Outsourced SDR", "PropTech", "FinTech", "AI & Automation", "Go-To-Market Strategy"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" }
         ]
       }
     ]
@@ -104,25 +107,21 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>B2B Lead Generation Agency | 15-30 Meetings/Month Guaranteed | NLG Consulting</title>
-        <meta 
-          name="description" 
-          content="Scale your B2B pipeline with 15-30 qualified meetings per month. Websites in 72h, SDR systems & strategic advisory. Trusted by 50+ startups. Book free call." 
-        />
-        <meta name="keywords" content="B2B lead generation, outsourced SDR, sales development, qualified meetings, website 72 hours, strategic advisory, PropTech, FinTech, AI consulting" />
-        <link rel="canonical" href="https://nlgconsulting.co/" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/" />
+        <title>B2B Lead Generation Agency | Outsourced SDR & GTM | NLG Consulting</title>
+        <meta name="description" content="B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h. Book a free strategy call." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/" />
-        <meta property="og:title" content="B2B Lead Generation Agency | 15-30 Meetings/Month | NLG Consulting" />
-        <meta property="og:description" content="Scale your B2B pipeline with 15-30 qualified meetings per month. Websites in 72h, SDR systems & strategic advisory. Trusted by 50+ startups." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/" />
+        <meta property="og:title" content="B2B Lead Generation Agency | Outsourced SDR & GTM | NLG Consulting" />
+        <meta property="og:description" content="B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h. Book a free strategy call." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="B2B Lead Generation Agency | 15-30 Meetings/Month | NLG Consulting" />
-        <meta name="twitter:description" content="Scale your B2B pipeline with 15-30 qualified meetings per month. Websites in 72h, SDR systems & strategic advisory." />
+        <meta name="twitter:title" content="B2B Lead Generation Agency | Outsourced SDR & GTM | NLG Consulting" />
+        <meta name="twitter:description" content="B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h." />
         <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

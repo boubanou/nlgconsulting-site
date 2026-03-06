@@ -17,13 +17,13 @@ const ContactPage = () => {
         "@type": "ContactPage",
         "name": "Contact NLG Consulting",
         "description": "Get in touch with NLG Consulting. Book a call or send us a message.",
-        "url": "https://nlgconsulting.co/contact"
+        "url": "https://www.nlgconsulting.co/contact"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://nlgconsulting.co/contact" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.nlgconsulting.co/contact" }
         ]
       }
     ]
@@ -32,20 +32,18 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact NLG Consulting | Get in Touch | Free Consultation</title>
-        <meta 
-          name="description" 
-          content="Contact NLG Consulting for B2B lead generation, website development, or strategic advisory. Book a free 15-minute strategy call. Reach out today." 
-        />
-        <meta name="keywords" content="contact NLG Consulting, book consultation, strategy call, free business consultation, get in touch" />
-        <link rel="canonical" href="https://nlgconsulting.co/contact" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/contact" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/contact" />
+        <title>Contact NLG Consulting | Book a Free Strategy Call</title>
+        <meta name="description" content="Get in touch with NLG Consulting. Request a callback, send a message, or book a free 15-minute strategy call." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/contact" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/contact" />
-        <meta property="og:title" content="Contact NLG Consulting | Get in Touch | Free Consultation" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/contact" />
+        <meta property="og:title" content="Contact NLG Consulting | Book a Free Strategy Call" />
         <meta property="og:description" content="Book a free 15-minute strategy call or send us a message. We respond within 24 hours." />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

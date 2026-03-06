@@ -1,134 +1,259 @@
 
 
-# SEO Technical Overhaul Plan — NLG Consulting
+# NLG Consulting -- Full SEO Restructuring & Revenue Optimization Plan
 
-## Current State Summary
+## Executive Summary
 
-All pages use `nlgconsulting.co` (non-www) as canonical domain. The `index.html` has placeholder verification tags, `meta keywords`, `geo.region`, `geo.placename`, `meta language`, `msnbot`, and `yandex` tags that add no SEO value. Structured data exists on most pages but URLs are inconsistent (non-www). The site is hosted on Lovable/Vercel with SPA routing.
-
-**Key issue**: The user wants `www.nlgconsulting.co` as canonical, but the site currently uses `nlgconsulting.co`. All canonicals, hreflangs, og:urls, structured data URLs, and sitemap URLs must be updated to `www.nlgconsulting.co`.
+Complete restructuring of nlgconsulting.co to rank Page 1 on Google for SaaS & PropTech revenue consulting queries, achieve 30%+ CTR on niche keywords, and convert organic traffic into booked strategy calls.
 
 ---
 
-## Implementation Plan
+## 1. CURRENT STATE ANALYSIS
 
-### Phase 1: Domain Canonical + Head Cleanup
+### Existing Pages (14 total, EN+FR)
+- Home, About, Sales, Advisory, Web/Studio, Marketing, Ventures, Contact, Book, Privacy
+- French mirrors at /fr/*
 
-**`index.html`** — Clean the global `<head>`:
-- Remove: `meta keywords`, `geo.region`, `geo.placename`, `meta language`, `msnbot`, `yandex`, placeholder verification codes (`google-site-verification`, `msvalidate.01`, `yandex-verification`)
-- Update canonical to `https://www.nlgconsulting.co/`
-- Update all og:url, og:image, hreflang, sitemap references to use `www.`
-- Keep: charset, viewport, robots, theme-color, favicons, consent mode, GA4, preconnects
+### Key Issues
+- No silo architecture -- pages exist flat with no topical clustering
+- Generic positioning ("B2B Lead Generation Agency") competing against thousands of agencies
+- No dedicated pillar page connecting sub-services
+- Missing high-intent niche pages (AI lead gen, SaaS monetization, PropTech consulting)
+- No blog infrastructure for topical authority
+- Book page is generic -- not optimized for SaaS/PropTech decision-makers
 
-**`vercel.json`** — Add redirect from non-www to www:
-```json
-{ "source": "/:path(.*)", "has": [{"type": "host", "value": "nlgconsulting.co"}], "destination": "https://www.nlgconsulting.co/:path", "permanent": true }
+---
+
+## 2. NEW SITE ARCHITECTURE -- SEO SILO STRUCTURE
+
+### Pillar Page (NEW)
+`/services` -- "Revenue Acceleration for SaaS & PropTech"
+
+### Sub-Pages (Service Cluster)
+
+| # | Route | Page Title (SEO) | Primary Keyword | Status |
+|---|-------|-------------------|-----------------|--------|
+| 1 | /sales | Scale SaaS Revenue Without Hiring a Sales Team | B2B sales outsourcing SaaS | REWRITE |
+| 2 | /ai-lead-generation | AI Lead Generation Systems That Book Meetings | AI lead generation B2B | NEW |
+| 3 | /saas-monetization | SaaS Monetization & Revenue Model Consulting | SaaS monetization strategy | NEW |
+| 4 | /go-to-market | International Go-To-Market Strategy for SaaS | go-to-market strategy SaaS | NEW |
+| 5 | /proptech-consulting | PropTech & Real Estate Technology Consulting | PropTech consulting | NEW |
+| 6 | /advisory | Strategic Advisory That Builds Revenue Engines | business advisory SaaS | REWRITE |
+| 7 | /web | Launch Your Revenue-Ready Website in 72 Hours | website 72 hours | KEEP |
+| 8 | /marketing | Turn Ad Spend Into Predictable Revenue | PPC management B2B | KEEP |
+
+### Supporting Pages
+| Route | Purpose |
+|-------|---------|
+| /book | High-conversion consultation page (REWRITE) |
+| /about | EEAT authority page (ENHANCE) |
+| /ventures | Social proof & credibility (KEEP) |
+
+---
+
+## 3. KEYWORD MAP PER PAGE
+
+### /services (Pillar)
+- Primary: revenue acceleration consulting
+- Secondary: SaaS growth consulting, B2B revenue strategy, tech consulting firm, startup scaling consultant
+- Long-tail: "how to accelerate SaaS revenue", "consulting firm for SaaS growth"
+
+### /sales (Rewrite)
+- Primary: B2B sales outsourcing SaaS
+- Secondary: outsourced SDR for SaaS, sales development representative service, appointment setting B2B, pipeline generation
+- Long-tail: "outsource sales team for SaaS startup", "how to scale B2B sales without hiring"
+
+### /ai-lead-generation (New)
+- Primary: AI lead generation B2B
+- Secondary: AI SDR, automated lead generation, AI prospecting tools, AI-powered sales development
+- Long-tail: "AI vs human SDR comparison", "best AI lead generation for SaaS"
+
+### /saas-monetization (New)
+- Primary: SaaS monetization strategy
+- Secondary: SaaS pricing strategy, revenue model consulting, subscription pricing optimization, SaaS revenue growth
+- Long-tail: "how to monetize a SaaS product", "SaaS pricing models comparison"
+
+### /go-to-market (New)
+- Primary: go-to-market strategy SaaS
+- Secondary: international GTM strategy, market entry strategy, SaaS launch strategy, expansion planning
+- Long-tail: "go-to-market plan for B2B SaaS", "how to enter European market SaaS"
+
+### /proptech-consulting (New)
+- Primary: PropTech consulting
+- Secondary: real estate technology consulting, fractional real estate technology, property technology strategy, PropTech startup advisor
+- Long-tail: "PropTech consultant for real estate companies", "fractional ownership technology consulting"
+
+---
+
+## 4. SEO TITLES & META DESCRIPTIONS (CTR 30%+)
+
+| Page | Title (under 60 chars) | Meta Description (140-155 chars) |
+|------|------------------------|----------------------------------|
+| /services | Revenue Acceleration for SaaS & PropTech | Scale revenue without scaling headcount. Strategy + execution for SaaS founders & PropTech operators. Book your free strategy call. |
+| /sales | Scale SaaS Revenue Without Hiring | Outsourced SDR that books 15-30 qualified meetings/month. No hiring risk. No ramp-up time. Results in 3 weeks. Free sales audit. |
+| /ai-lead-generation | AI Lead Generation That Books Meetings | AI-powered prospecting systems that generate qualified B2B meetings on autopilot. 3x pipeline at 50% lower cost. See how it works. |
+| /saas-monetization | SaaS Monetization: Fix Your Revenue Model | Stop leaving revenue on the table. Expert SaaS pricing & monetization consulting. Increase ARPU 30-50%. Free revenue audit. |
+| /go-to-market | Go-To-Market Strategy for SaaS Founders | Launch in new markets without burning cash. Proven GTM frameworks for SaaS. International expansion expertise. Book strategy call. |
+| /proptech-consulting | PropTech Consulting: Build & Scale Platforms | Expert PropTech & real estate technology consulting. Tokenization, marketplaces, fractional ownership. From concept to revenue. |
+| /book | Free Revenue Strategy Call for SaaS Leaders | 15-min strategy call with a SaaS & PropTech revenue expert. Walk away with 3 actionable growth ideas. Limited slots this week. |
+
+---
+
+## 5. CONTENT OUTLINE PER PAGE
+
+### Each page follows this conversion structure:
+
+1. **Hero** -- Pain-driven H1 + value proposition + primary CTA
+2. **Cost of Inaction** -- What happens if they do nothing (revenue loss quantified)
+3. **Solution Overview** -- What we do differently (3-4 key differentiators)
+4. **Process Breakdown** -- Step 1/2/3 with clear outcomes
+5. **Expected ROI** -- Specific numbers and timeframes
+6. **EEAT Authority Block** -- Founder credentials, experience proof, industry expertise
+7. **FAQ Section** -- 5 questions targeting rich snippet queries
+8. **CTA Block #1** -- Mid-page conversion block
+9. **Related Services** -- Internal links to 2-3 sibling pages
+10. **Final CTA** -- Strong closing with urgency
+
+### Word Count Targets
+- Pillar page (/services): 2,000+ words
+- Service sub-pages: 1,500+ words each
+- Book page: 800 words (conversion-focused, not SEO-heavy)
+
+---
+
+## 6. INTERNAL LINKING MAP
+
+```text
+/services (PILLAR)
+  |-- /sales
+  |-- /ai-lead-generation
+  |-- /saas-monetization
+  |-- /go-to-market
+  |-- /proptech-consulting
+  |-- /advisory
+  |-- /web
+  |-- /marketing
+
+Cross-links:
+  /sales <--> /ai-lead-generation (SDR + AI complement)
+  /sales <--> /go-to-market (execution of GTM)
+  /saas-monetization <--> /advisory (pricing is strategy)
+  /saas-monetization <--> /go-to-market (monetize + launch)
+  /proptech-consulting <--> /ventures (proof of work)
+  /proptech-consulting <--> /saas-monetization (PropTech revenue models)
+  /go-to-market <--> /marketing (paid channels for GTM)
+  /web <--> /marketing (website + traffic)
+
+Every page --> /book (primary CTA)
+Every page --> /services (breadcrumb back to pillar)
 ```
 
-### Phase 2: Sitewide URL Migration (non-www → www)
+---
 
-Update ALL canonical, hreflang, og:url, and structured data URLs across every page component to use `https://www.nlgconsulting.co/`. This affects ~25+ page files:
+## 7. /BOOK PAGE -- HIGH-CONVERSION REWRITE
 
-- `Home.tsx`, `AboutNLG.tsx`, `Sales.tsx`, `Advisory.tsx`, `WebLanding.tsx`, `Marketing.tsx`, `Services.tsx`, `AILeadGeneration.tsx`, `SaaSMonetization.tsx`, `GoToMarket.tsx`, `PropTechConsulting.tsx`, `Ventures.tsx`, `ContactPage.tsx`, `Book.tsx`, `PrivacyPolicy.tsx`
-- All French mirrors: `HomeFR.tsx`, `AboutFR.tsx`, `SalesFR.tsx`, `AdvisoryFR.tsx`, `WebLandingFR.tsx`, `MarketingFR.tsx`, `ServicesFR.tsx`, `AILeadGenerationFR.tsx`, `SaaSMonetizationFR.tsx`, `GoToMarketFR.tsx`, `PropTechConsultingFR.tsx`, `VenturesFR.tsx`, `ContactFR.tsx`, `BookFR.tsx`, `PrivacyPolicyFR.tsx`
-
-Also remove `meta keywords` from every page that has it.
-
-### Phase 3: Title & Meta Description Rewrite
-
-Optimized titles/metas for all core pages:
-
-| Page | New Title | New Meta Description |
-|------|-----------|---------------------|
-| `/` | B2B Lead Generation Agency \| Outsourced SDR & GTM \| NLG Consulting | B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h. Book a free strategy call. |
-| `/about` | About NLG Consulting \| B2B Growth Operator & Founder-Led Advisory | Meet Gregory Brenig and the NLG team. 15+ years building ventures, scaling sales teams, and advising SaaS & PropTech companies worldwide. |
-| `/sales` | Outsourced SDR \| 15-30 Qualified B2B Meetings/Month \| NLG Consulting | Outsource your B2B sales development. LinkedIn, email, cold calling. 15-30 qualified meetings/month guaranteed. No hiring risk. Free audit. |
-| `/web` | Website in 72 Hours \| High-Converting B2B Sites \| NLG Consulting | Get a revenue-ready website in 72 hours. Designed for conversion, optimized for SEO. From landing pages to full platforms. |
-| `/advisory` | Strategic Business Advisory for SaaS & PropTech \| NLG Consulting | Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and international expansion. |
-| `/marketing` | PPC & Marketing Campaigns \| ROI-Driven \| NLG Consulting | Full-stack PPC and marketing management. Google, Meta, LinkedIn Ads. Data-driven campaigns that generate leads and revenue. |
-| `/services` | Revenue Acceleration Services for SaaS & PropTech \| NLG Consulting | End-to-end growth services: outsourced SDR, AI lead gen, SaaS monetization, GTM strategy, PropTech consulting. Book a strategy call. |
-| `/contact` | Contact NLG Consulting \| Book a Free Strategy Call | Get in touch with NLG Consulting. Request a callback, send a message, or book a free 15-minute strategy call. |
-| `/book` | Free Revenue Strategy Call \| NLG Consulting | Book a free 15-min strategy call with a B2B growth expert. Walk away with 3 actionable ideas. Limited slots available. |
-| `/ventures` | Ventures & Portfolio \| NLG Consulting | Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI. |
-| `/fr` | Agence Lead Generation B2B \| SDR Externalisé & GTM \| NLG Consulting | Génération de leads B2B pour startups et entreprises. SDR externalisé, prospection, conseil GTM et sites web en 72h. Réservez un appel. |
-
-Plus equivalent rewrites for all FR pages.
-
-### Phase 4: New High-Intent SEO Landing Pages (8 EN + 5 FR)
-
-Create dedicated pages with unique content (~800-1200 words each):
-
-**English:**
-1. `/outsourced-sdr` — Outsourced SDR Services
-2. `/b2b-lead-generation-agency` — B2B Lead Generation Agency
-3. `/appointment-setting` — B2B Appointment Setting
-4. `/go-to-market-consulting` — Go-To-Market Consulting
-5. `/website-in-72-hours` — Website in 72 Hours
-6. `/proptech-lead-generation` — PropTech Lead Generation
-7. `/fintech-lead-generation` — FinTech Lead Generation
-8. `/ai-sales-outreach` — AI Sales Outreach
-
-**French:**
-1. `/fr/sdr-externalise` — SDR Externalisé
-2. `/fr/agence-lead-generation-b2b` — Agence Lead Generation B2B
-3. `/fr/prise-de-rendez-vous-b2b` — Prise de Rendez-vous B2B
-4. `/fr/strategie-go-to-market` — Stratégie Go-To-Market
-5. `/fr/site-web-en-72h` — Site Web en 72h
-
-Each page includes: H1, SEO intro, methodology, differentiators, FAQ (5 questions), CTA, internal links, JSON-LD (Service + FAQPage + BreadcrumbList), hreflang where equivalent exists.
-
-### Phase 5: Structured Data Upgrade
-
-- Upgrade Organization schema on Home to include `sameAs` (LinkedIn), `foundingDate`, `areaServed`
-- Upgrade Person schema on About to include `knowsAbout`, `sameAs`
-- Every new landing page gets `Service` + `FAQPage` + `BreadcrumbList` schemas
-- All schema URLs use `www.nlgconsulting.co`
-
-### Phase 6: Sitemap & Robots Update
-
-**`sitemap.xml`**: Add all new pages with proper hreflang clusters, update all existing URLs to `www.nlgconsulting.co`.
-
-**`robots.txt`**: Update sitemap URL to `https://www.nlgconsulting.co/sitemap.xml`. Keep blocking `/admin` and `/auth`.
-
-### Phase 7: Internal Linking Enhancement
-
-- Update `RelatedServices.tsx` and FR variant with new page types (outsourced-sdr, appointment-setting, etc.)
-- Add new pages to `MainNavbar.tsx` services dropdown and `MainFooter.tsx` mega-footer
-- Each new landing page links to 2-3 related service pages + `/book`
-
-### Phase 8: App.tsx Routes
-
-Add 13 new routes for the landing pages + lazy imports.
+### Structure:
+- **H1**: "Free Revenue Strategy Consultation"
+- **Who it's for**: SaaS founders, PropTech operators, B2B CEOs scaling to 1M-10M ARR
+- **Who it's NOT for**: Agencies looking for subcontractors, companies with no product-market fit, people looking for free work
+- **What you'll walk away with**: 3 actionable growth ideas, clarity on your biggest revenue blocker, a prioritized 90-day plan
+- **Authority proof**: 50+ companies advised, ventures built, 15+ years operator experience
+- **Scarcity**: "We take on 3 new clients per month. Limited slots available this week."
+- **Calendly embed**
 
 ---
 
-## Files Summary
+## 8. EEAT AUTHORITY ENHANCEMENTS
 
-**New files (13):**
-- `src/pages/OutsourcedSDR.tsx`
-- `src/pages/B2BLeadGenerationAgency.tsx`
-- `src/pages/AppointmentSetting.tsx`
-- `src/pages/GoToMarketConsulting.tsx`
-- `src/pages/WebsiteIn72Hours.tsx`
-- `src/pages/PropTechLeadGeneration.tsx`
-- `src/pages/FinTechLeadGeneration.tsx`
-- `src/pages/AISalesOutreach.tsx`
-- `src/pages/fr/SDRExternaliseFR.tsx`
-- `src/pages/fr/AgenceLeadGenerationFR.tsx`
-- `src/pages/fr/PriseRendezVousFR.tsx`
-- `src/pages/fr/StrategieGoToMarketFR.tsx`
-- `src/pages/fr/SiteWebEn72hFR.tsx`
+### About Page (/about) -- Add:
+- Specific revenue cases (anonymized): "Helped a Series A SaaS go from 0 to 20 qualified meetings/month"
+- International experience map: Europe, North America, Middle East
+- Tech stack expertise: AI/ML, Blockchain, SaaS architecture
+- Industry specializations: PropTech, FinTech, Media, SaaS
+- Published author credentials (Amazon book)
 
-**Modified files (~30+):**
-- `index.html` — head cleanup
-- `vercel.json` — www redirect
-- `public/sitemap.xml` — full rewrite
-- `public/robots.txt` — update sitemap URL
-- `src/App.tsx` — new routes
-- `src/components/MainNavbar.tsx` + FR — footer links
-- `src/components/MainFooter.tsx` + FR — mega-footer expansion
-- `src/components/RelatedServices.tsx` + FR — new service types
-- All 25+ existing page files — canonical/hreflang/og migration to www + title/meta rewrites + keywords removal
+### Structured Data Additions:
+- `@type: Person` for Gregory Brenig with `knowsAbout`, `alumniOf`, `award`
+- `@type: Organization` with `foundingDate`, `numberOfEmployees`, `areaServed`
 
-**Estimated scope**: Large but systematic. Most page edits are find-and-replace of `nlgconsulting.co` → `www.nlgconsulting.co` plus title/meta updates.
+---
+
+## 9. SCHEMA MARKUP PER PAGE
+
+Every service page will include:
+- `@type: Service` with `provider`, `areaServed`, `offers`
+- `@type: FAQPage` with 5 questions
+- `@type: BreadcrumbList`
+- `@type: Organization` (on pillar + home)
+
+---
+
+## 10. TECHNICAL CHANGES
+
+### Files to Create (NEW)
+1. `src/pages/Services.tsx` -- Pillar page
+2. `src/pages/AILeadGeneration.tsx` -- AI Lead Gen service
+3. `src/pages/SaaSMonetization.tsx` -- SaaS Monetization service
+4. `src/pages/GoToMarket.tsx` -- GTM Strategy service
+5. `src/pages/PropTechConsulting.tsx` -- PropTech service
+6. French versions: `src/pages/fr/ServicesFR.tsx`, `AILeadGenerationFR.tsx`, `SaaSMonetizationFR.tsx`, `GoToMarketFR.tsx`, `PropTechConsultingFR.tsx`
+
+### Files to Modify
+7. `src/App.tsx` -- Add new routes
+8. `src/components/MainNavbar.tsx` -- Add Services dropdown or links
+9. `src/components/fr/MainNavbarFR.tsx` -- French nav
+10. `src/components/MainFooter.tsx` -- Add new pages to mega-footer
+11. `src/components/fr/MainFooterFR.tsx` -- French footer
+12. `src/components/RelatedServices.tsx` -- Add new service types
+13. `src/components/fr/RelatedServicesFR.tsx` -- French version
+14. `src/pages/Sales.tsx` -- Rewrite with SaaS positioning
+15. `src/pages/Advisory.tsx` -- Rewrite with revenue-driven framing
+16. `src/pages/Book.tsx` -- High-conversion rewrite
+17. `src/pages/About.tsx` -- EEAT enhancements
+18. `src/pages/Home.tsx` -- Update pillar links and positioning
+19. `public/sitemap.xml` -- Add all new URLs
+20. `public/robots.txt` -- Verify clean
+
+### French Mirrors to Modify
+21-28. All FR equivalents of the above pages
+
+---
+
+## 11. IMPLEMENTATION SEQUENCE
+
+### Phase 1: Core Architecture (Priority)
+- Create pillar page /services
+- Create 4 new service pages (EN)
+- Add routes to App.tsx
+- Update navigation and footer
+
+### Phase 2: Rewrites
+- Rewrite /sales with SaaS-first positioning
+- Rewrite /advisory with revenue-driven framing
+- Rewrite /book as high-conversion page
+- Enhance /about with EEAT blocks
+
+### Phase 3: French Versions
+- Create FR versions of all new pages
+- Update FR nav/footer
+
+### Phase 4: SEO Infrastructure
+- Update sitemap.xml with all new URLs
+- Update RelatedServices components
+- Verify all internal links
+- Add schema markup to all pages
+
+---
+
+## 12. ESTIMATED IMPACT
+
+| Metric | Current | Target (6 months) |
+|--------|---------|-------------------|
+| Indexed pages | 14 | 24+ |
+| Organic impressions/day | 50-100 | 1,000+ |
+| CTR (branded + niche) | 3-5% | 15-30% |
+| Organic clicks/day | 2-5 | 150-300 |
+| Bounce rate | 65% | 40-45% |
+| Meetings booked/week | 2-3 | 15-25 |
+| Visitor-to-meeting rate | 0.5% | 3-5% |
 

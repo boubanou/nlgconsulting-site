@@ -21,6 +21,7 @@ const PropTechConsulting = () => {
         "provider": {
           "@type": "Organization",
           "name": "NLG Consulting",
+          "url": "https://www.nlgconsulting.co",
           "founder": {
             "@type": "Person",
             "name": "Gregory Brenig",
@@ -29,24 +30,24 @@ const PropTechConsulting = () => {
           }
         },
         "description": "Expert PropTech consulting from a team that builds PropTech platforms. Tokenization, marketplaces, fractional ownership, and real estate technology strategy.",
-        "url": "https://nlgconsulting.co/proptech-consulting"
+        "url": "https://www.nlgconsulting.co/proptech-consulting"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nlgconsulting.co/services" },
-          { "@type": "ListItem", "position": 3, "name": "PropTech Consulting", "item": "https://nlgconsulting.co/proptech-consulting" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/services" },
+          { "@type": "ListItem", "position": 3, "name": "PropTech Consulting", "item": "https://www.nlgconsulting.co/proptech-consulting" }
         ]
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is PropTech consulting?", "acceptedAnswer": { "@type": "Answer", "text": "PropTech consulting helps real estate companies and startups leverage technology to build platforms, optimize operations, and create new revenue models. This includes marketplace development, tokenization strategy, fractional ownership platforms, and digital transformation of traditional real estate processes." } },
-          { "@type": "Question", "name": "What experience does NLG have in PropTech?", "acceptedAnswer": { "@type": "Answer", "text": "NLG Consulting's founder has built PropTech platforms, authored 'Level Up in Fractional Real Estate' (available on Amazon), and operated in the real estate technology space for years. We're not just advisors — we're PropTech operators who understand the technology, regulations, and market dynamics from the inside." } },
-          { "@type": "Question", "name": "Can you help with real estate tokenization?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have deep experience in real estate tokenization including security token architecture, regulatory compliance, smart contract strategy, and marketplace design. We help companies navigate the technical and legal complexities of tokenizing real estate assets." } },
-          { "@type": "Question", "name": "Do you build PropTech platforms or just advise?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We provide strategic advisory on PropTech business models, technology architecture, and go-to-market strategy. Through our web studio, we can also build the technology platform itself — from MVP to production-ready product." } },
-          { "@type": "Question", "name": "What PropTech business models do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "We work across all PropTech verticals: marketplace platforms, property management software, fractional ownership, tokenization, co-living/co-working, construction tech, and real estate data analytics. Our monetization expertise helps you design the right revenue model for your specific market." } }
+          { "@type": "Question", "name": "What is PropTech consulting?", "acceptedAnswer": { "@type": "Answer", "text": "PropTech consulting helps real estate companies and startups leverage technology to build platforms, optimize operations, and create new revenue models." } },
+          { "@type": "Question", "name": "What experience does NLG have in PropTech?", "acceptedAnswer": { "@type": "Answer", "text": "NLG Consulting's founder has built PropTech platforms, authored 'Level Up in Fractional Real Estate', and operated in the real estate technology space for years." } },
+          { "@type": "Question", "name": "Can you help with real estate tokenization?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have deep experience in real estate tokenization including security token architecture, regulatory compliance, smart contract strategy, and marketplace design." } },
+          { "@type": "Question", "name": "Do you build PropTech platforms or just advise?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We provide strategic advisory and through our web studio, we can also build the technology platform itself." } },
+          { "@type": "Question", "name": "What PropTech business models do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "We work across all PropTech verticals: marketplace platforms, property management software, fractional ownership, tokenization, co-living/co-working, construction tech, and real estate data analytics." } }
         ]
       }
     ]
@@ -55,16 +56,15 @@ const PropTechConsulting = () => {
   return (
     <>
       <Helmet>
-        <title>PropTech Consulting: Build & Scale Platforms | NLG</title>
-        <meta name="description" content="Expert PropTech & real estate technology consulting. Tokenization, marketplaces, fractional ownership. From concept to revenue. By PropTech operators." />
-        <meta name="keywords" content="PropTech consulting, real estate technology consulting, fractional real estate technology, property technology strategy, PropTech startup advisor, real estate tokenization" />
-        <link rel="canonical" href="https://nlgconsulting.co/proptech-consulting" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/proptech-consulting" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/conseil-proptech" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/proptech-consulting" />
+        <title>PropTech Consulting: Build & Scale Platforms | NLG Consulting</title>
+        <meta name="description" content="Expert PropTech & real estate technology consulting. Tokenization, marketplaces, fractional ownership. From concept to revenue." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/proptech-consulting" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/proptech-consulting" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-proptech" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/proptech-consulting" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/proptech-consulting" />
+        <meta property="og:url" content="https://www.nlgconsulting.co/proptech-consulting" />
         <meta property="og:title" content="PropTech Consulting: Build & Scale Platforms | NLG Consulting" />
         <meta property="og:description" content="Expert PropTech consulting from operators who build PropTech platforms. Tokenization, marketplaces, fractional ownership." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

@@ -23,16 +23,16 @@ const Advisory = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Advisory & Strategy",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Strategic guidance on business structuring, go-to-market, scaling, and tech transformation.",
-        "url": "https://nlgconsulting.co/advisory"
+        "name": "Strategic Business Advisory",
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and international expansion.",
+        "url": "https://www.nlgconsulting.co/advisory"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Advisory", "item": "https://nlgconsulting.co/advisory" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Advisory", "item": "https://www.nlgconsulting.co/advisory" }
         ]
       }
     ]
@@ -74,25 +74,21 @@ const Advisory = () => {
   return (
     <>
       <Helmet>
-        <title>Strategic Business Advisory | Go-to-Market & AI Strategy | 15+ Years Experience | NLG</title>
-        <meta 
-          name="description" 
-          content="Expert advisory for founders: go-to-market, monetization, AI strategy, scaling. 15+ years experience. Book your free 15-min strategy call today." 
-        />
-        <meta name="keywords" content="business advisory, strategic consulting, go-to-market strategy, AI consulting, startup advisor, scaling strategy, monetization, business structuring, founder advisory" />
-        <link rel="canonical" href="https://nlgconsulting.co/advisory" />
-        <link rel="alternate" hrefLang="en" href="https://nlgconsulting.co/advisory" />
-        <link rel="alternate" hrefLang="fr" href="https://nlgconsulting.co/fr/conseil" />
-        <link rel="alternate" hrefLang="x-default" href="https://nlgconsulting.co/advisory" />
+        <title>Strategic Business Advisory for SaaS & PropTech | NLG Consulting</title>
+        <meta name="description" content="Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and international expansion." />
+        <link rel="canonical" href="https://www.nlgconsulting.co/advisory" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/advisory" />
+        <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/advisory" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nlgconsulting.co/advisory" />
-        <meta property="og:title" content="Strategic Business Advisory | Go-to-Market & AI Strategy | NLG" />
-        <meta property="og:description" content="Expert advisory for founders: go-to-market, monetization, AI strategy, scaling. 15+ years experience. Book your free strategy call." />
+        <meta property="og:url" content="https://www.nlgconsulting.co/advisory" />
+        <meta property="og:title" content="Strategic Business Advisory for SaaS & PropTech | NLG Consulting" />
+        <meta property="og:description" content="Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and expansion." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Strategic Business Advisory | Go-to-Market & AI Strategy | NLG" />
-        <meta name="twitter:description" content="Expert advisory for founders: go-to-market, monetization, AI strategy, scaling. 15+ years experience." />
+        <meta name="twitter:title" content="Strategic Business Advisory for SaaS & PropTech | NLG Consulting" />
+        <meta name="twitter:description" content="Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization." />
         <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
