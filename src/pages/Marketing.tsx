@@ -421,7 +421,7 @@ const Marketing = () => {
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
                 <Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button asChild variant="outline-light" size="lg">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

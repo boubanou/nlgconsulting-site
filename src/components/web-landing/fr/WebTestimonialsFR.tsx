@@ -44,7 +44,7 @@ const WebTestimonialsFR = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <header className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-secondary/20 text-foreground px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Star className="w-4 h-4 fill-secondary text-secondary" />
             <span>Avis Vérifiés</span>
           </div>

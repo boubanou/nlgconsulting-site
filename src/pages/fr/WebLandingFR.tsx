@@ -135,8 +135,8 @@ const WebLandingFR = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  variant="outline" 
-                  className="bg-transparent border-white text-white hover:bg-white/10"
+                  variant="outline-light" 
+                  className=""
                 >
                   <Link to="/fr/rendez-vous">Réserver un appel</Link>
                 </Button>

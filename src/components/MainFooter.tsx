@@ -100,7 +100,7 @@ const MainFooter = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2025 NLG Consulting. All rights reserved.</p>
+          <p>© 2026 NLG Consulting. All rights reserved.</p>
           <Link to="/fr" className="hover:text-primary transition-colors">
             🇫🇷 Version française
           </Link>

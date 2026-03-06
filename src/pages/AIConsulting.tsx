@@ -181,7 +181,7 @@ const AIConsulting = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary"><Link to="/book">Book a Free Consultation <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"><Link to="/about">About Our Team</Link></Button>
+              <Button asChild size="lg" variant="outline-light"><Link to="/about">About Our Team</Link></Button>
             </div>
           </div>
         </section>

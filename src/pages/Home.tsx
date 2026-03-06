@@ -253,7 +253,7 @@ const Home = () => {
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild size="lg" variant="outline-light" className="text-base px-8">
                 <Link to="/book">Book a Call</Link>
               </Button>
             </div>
