@@ -5,16 +5,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   ArrowRight, 
-  Building2, 
-  Rocket, 
-  Globe, 
-  TrendingUp, 
-  Users, 
+  Brain,
+  Workflow,
+  Bot,
+  Megaphone,
+  TrendingUp,
+  GraduationCap,
+  Building2,
+  Users,
   Zap,
   CheckCircle,
   Star,
   Calendar,
-  Phone
+  Phone,
+  Globe,
+  Rocket,
+  Target
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
@@ -35,7 +41,7 @@ const Home = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "B2B lead generation agency. Outsourced SDR, GTM advisory, websites in 72h. Trusted by 50+ startups worldwide.",
+        "description": "AI consulting, automation, and business growth systems for B2B companies. Strategy, implementation, and outsourced AI execution for founders and executives worldwide.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
@@ -45,7 +51,7 @@ const Home = () => {
         "foundingDate": "2020",
         "areaServed": ["Europe", "North America", "Middle East"],
         "sameAs": ["https://www.linkedin.com/company/nlg-consulting/"],
-        "knowsAbout": ["B2B Lead Generation", "Outsourced SDR", "PropTech", "FinTech", "AI & Automation", "Go-To-Market Strategy"]
+        "knowsAbout": ["AI Consulting", "AI Automation", "AI Agents", "B2B Lead Generation", "Prompt Engineering", "Go-To-Market Strategy", "Business Process Automation", "Outsourced AI Implementation"]
       },
       {
         "@type": "BreadcrumbList",
@@ -56,36 +62,56 @@ const Home = () => {
     ]
   };
 
-  const pillars = [
+  const clusters = [
     {
-      icon: <Building2 className="w-8 h-8" />,
-      title: "Ventures & Brands",
-      description: "Building and operating PropTech, FinTech, and Media platforms globally.",
-      link: "/ventures"
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Consulting",
+      description: "Strategic AI advisory for businesses navigating the transformation toward intelligent operations.",
+      link: "/ai-consulting",
+      cta: "Explore AI Consulting"
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
-      title: "Studio",
-      description: "Revenue-ready websites and automation systems delivered in 72 hours.",
-      link: "/web"
+      icon: <Workflow className="w-6 h-6" />,
+      title: "AI Automation",
+      description: "End-to-end workflow automation — from marketing and sales to operations and content.",
+      link: "/ai-automation",
+      cta: "Explore Automation"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Sales & BD",
-      description: "Outbound systems, SDR teams, and pipeline infrastructure for growth.",
-      link: "/sales"
+      icon: <Bot className="w-6 h-6" />,
+      title: "AI Agents",
+      description: "Custom AI agents that handle sales, marketing, content, and operations autonomously.",
+      link: "/ai-agents-for-business",
+      cta: "Explore AI Agents"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Advisory",
-      description: "Strategic guidance on go-to-market, scaling, and tech transformation.",
-      link: "/advisory"
+      icon: <Megaphone className="w-6 h-6" />,
+      title: "AI Marketing",
+      description: "Automated content creation, SEO, social media, and campaign management powered by AI.",
+      link: "/ai-marketing-automation",
+      cta: "Explore AI Marketing"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "AI Sales Systems",
+      description: "AI-powered SDR, outbound, appointment setting, and pipeline automation for B2B growth.",
+      link: "/ai-sales-automation",
+      cta: "Explore AI Sales"
+    },
+    {
+      icon: <GraduationCap className="w-6 h-6" />,
+      title: "Prompt Engineering",
+      description: "Expert consulting and training on prompt design, AI workflows, and team upskilling.",
+      link: "/prompt-engineering-consulting",
+      cta: "Explore Training"
     }
   ];
 
-  const ventures = [
-    { name: "Block Tech", type: "PropTech / FinTech SaaS", logo: "/brands/blocktech.png" },
-    { name: "Business Legend", type: "Media & Podcast", logo: "/brands/businesslegend.png" }
+  const existingServices = [
+    { icon: <Users className="w-5 h-5" />, title: "Sales & BD", description: "Outsourced SDR, multichannel outbound, and pipeline systems.", link: "/sales" },
+    { icon: <Zap className="w-5 h-5" />, title: "Web Studio", description: "Revenue-ready websites delivered in 72 hours.", link: "/web" },
+    { icon: <Target className="w-5 h-5" />, title: "Advisory", description: "Strategic guidance on GTM, monetization, and scaling.", link: "/advisory" },
+    { icon: <Building2 className="w-5 h-5" />, title: "Ventures", description: "Platforms we build and operate across PropTech, FinTech, and Media.", link: "/ventures" },
   ];
 
   const logos = [
@@ -107,8 +133,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>B2B Lead Generation Agency | Outsourced SDR & GTM | NLG Consulting</title>
-        <meta name="description" content="B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h. Book a free strategy call." />
+        <title>AI Consulting & Automation for Business | NLG Consulting</title>
+        <meta name="description" content="AI consulting, automation systems, and outsourced implementation for B2B companies. Strategy, AI agents, prompt engineering, and growth systems. Book a free call." />
         <link rel="canonical" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -116,71 +142,71 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/" />
-        <meta property="og:title" content="B2B Lead Generation Agency | Outsourced SDR & GTM | NLG Consulting" />
-        <meta property="og:description" content="B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h. Book a free strategy call." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:title" content="AI Consulting & Automation for Business | NLG Consulting" />
+        <meta property="og:description" content="AI consulting, automation systems, and outsourced implementation for B2B companies. Strategy, AI agents, prompt engineering, and growth systems." />
+        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="B2B Lead Generation Agency | Outsourced SDR & GTM | NLG Consulting" />
-        <meta name="twitter:description" content="B2B lead generation for startups and service companies. Outsourced SDR, cold outreach, GTM advisory and websites in 72h." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta name="twitter:title" content="AI Consulting & Automation for Business | NLG Consulting" />
+        <meta name="twitter:description" content="AI consulting, automation systems, and outsourced implementation for B2B companies." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
         <MainNavbar />
 
-        {/* Hero Section */}
-        <section className="pt-32 md:pt-40 pb-16 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center space-y-6">
-              <Badge variant="outline" className="px-4 py-2 text-sm">
-                Global Business, Tech & Growth Group
+        {/* Hero — Premium, calm, strategic */}
+        <section className="pt-32 md:pt-40 pb-20 px-4">
+          <div className="container mx-auto max-w-5xl">
+            <div className="text-center space-y-8">
+              <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase">
+                AI Consulting · Automation · Implementation
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Building, Operating & Scaling<br />
-                <span className="text-gradient">Platforms Worldwide</span>
+              <h1 className="text-foreground leading-[1.1] max-w-4xl mx-auto">
+                We help businesses understand, deploy, and scale{" "}
+                <span className="text-gradient">AI systems</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                PropTech • FinTech • Media • AI & Automation • Blockchain • Sales Systems
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Strategic AI consulting, workflow automation, AI agents, and outsourced implementation — for founders, executives, and growth teams worldwide.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <Button asChild size="lg" className="text-base px-8">
                   <Link to="/book">
-                    Start Growing Your Pipeline <ArrowRight className="ml-2 w-4 h-4" />
+                    Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="text-base px-8">
-                  <Link to="/web">
-                    Get Your Website in 72 Hours <Rocket className="ml-2 w-4 h-4" />
+                  <Link to="/services">
+                    Explore Services
                   </Link>
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
-                ⏱️ Limited slots available — We onboard only 3 new clients per month
-              </p>
             </div>
           </div>
         </section>
 
-        {/* What We Do - 4 Pillars */}
-        <section className="py-20 px-4 bg-muted/30">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
+        {/* What We Do — AI Cluster Navigation */}
+        <section className="section-padding bg-muted/30">
+          <div className="container-wide">
+            <div className="text-center mb-14">
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">What We Do</p>
+              <h2 className="mb-4">AI-Powered Business Systems</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A full-stack business group covering ventures, technology, sales, and strategy.
+                From strategy to execution — we help companies integrate AI into their marketing, sales, operations, and growth infrastructure.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {pillars.map((pillar, i) => (
-                <Link to={pillar.link} key={i}>
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
-                    <CardContent className="pt-6">
-                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        {pillar.icon}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {clusters.map((cluster, i) => (
+                <Link to={cluster.link} key={i} className="group">
+                  <Card className="h-full border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-md">
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 rounded-lg bg-primary/8 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        {cluster.icon}
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">{pillar.title}</h3>
-                      <p className="text-muted-foreground text-sm">{pillar.description}</p>
+                      <h3 className="text-lg font-semibold mb-2">{cluster.title}</h3>
+                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{cluster.description}</p>
+                      <span className="text-sm text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                        {cluster.cta} <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -189,182 +215,135 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Ventures Overview */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ventures & Brands</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Platforms we've built, operate, and scale across multiple industries.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {ventures.map((venture, i) => (
-                <Card key={i} className="overflow-hidden">
-                  <CardContent className="p-6 flex items-center gap-6">
-                    <div className="w-20 h-20 rounded-xl bg-muted flex items-center justify-center flex-shrink-0">
-                      <img src={venture.logo} alt={venture.name} className="h-12 w-auto object-contain" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">{venture.name}</h3>
-                      <p className="text-muted-foreground text-sm">{venture.type}</p>
-                    </div>
-                  </CardContent>
-                </Card>
+        {/* Strategic Positioning Statement */}
+        <section className="section-padding">
+          <div className="container-tight text-center">
+            <h2 className="mb-6">Why Companies Choose NLG</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto">
+              Most businesses know they need AI — but struggle with where to start, what to prioritize, and how to implement without disrupting operations. We bridge the gap between AI strategy and real-world execution.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-8 text-left">
+              {[
+                { title: "Strategy First", desc: "We start with your business goals — not the technology. Every engagement begins with a clear roadmap tied to measurable outcomes." },
+                { title: "Operator-Led", desc: "Our team has built and scaled companies. We bring operational experience from PropTech, FinTech, SaaS, and Media — not just theory." },
+                { title: "Full Execution", desc: "From consulting to implementation, we handle the entire lifecycle. Outsource AI execution without hiring a full team." }
+              ].map((item, i) => (
+                <div key={i} className="space-y-3">
+                  <div className="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
+                    <CheckCircle className="w-4 h-4" />
+                  </div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
               ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button asChild variant="outline">
-                <Link to="/ventures">View All Ventures <ArrowRight className="ml-2 w-4 h-4" /></Link>
-              </Button>
             </div>
           </div>
         </section>
 
-        {/* Studio CTA */}
-        <section className="py-20 px-4 bg-primary text-primary-foreground">
-          <div className="container mx-auto max-w-4xl text-center">
-            <Zap className="w-12 h-12 mx-auto mb-6 opacity-80" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Launch Your Website in 72 Hours
-            </h2>
+        {/* Outsourced AI Implementation CTA */}
+        <section className="py-16 px-4 bg-primary text-primary-foreground">
+          <div className="container-tight text-center">
+            <h2 className="text-primary-foreground mb-4">Outsourced AI Implementation</h2>
             <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Revenue-ready websites with UX design, conversion copywriting, SEO, CRM, Stripe payments, and AI workflows—delivered fast.
+              Don't have an in-house AI team? We act as your external AI department — deploying automation, building agents, and running systems so you don't have to.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/web">
-                  View Packages <ArrowRight className="ml-2 w-4 h-4" />
+                <Link to="/outsourced-ai-implementation">
+                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline-light" className="text-base px-8">
+              <Button asChild size="lg" variant="outline" className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <Link to="/book">Book a Call</Link>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* Sales & BD */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Sales & Business Development</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Outbound lead generation, multichannel SDR systems, and CRM pipeline infrastructure to scale your revenue.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {["Lead Generation", "Multichannel Outbound", "SDR Systems", "CRM Pipelines", "AI Calling"].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button asChild>
-                  <Link to="/sales">Book a Sales Audit <ArrowRight className="ml-2 w-4 h-4" /></Link>
-                </Button>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="bg-primary/5">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-4xl font-bold text-primary">15-30</div>
-                    <div className="text-sm text-muted-foreground">Meetings / Month</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-primary/5">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-4xl font-bold text-primary">3+</div>
-                    <div className="text-sm text-muted-foreground">Channels</div>
-                  </CardContent>
-                </Card>
-              </div>
+        {/* Existing Services — Compact */}
+        <section className="section-padding">
+          <div className="container-wide">
+            <div className="text-center mb-12">
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Also</p>
+              <h2 className="mb-4">Sales, Studio & Advisory</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Beyond AI — we operate sales infrastructure, build websites, and provide strategic advisory.
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* Advisory CTA */}
-        <section className="py-20 px-4 bg-muted/30">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1 grid grid-cols-2 gap-4">
-                {["Go-to-Market", "Monetization", "Tech Strategy", "Scaling"].map((item, i) => (
-                  <Card key={i}>
-                    <CardContent className="p-4 text-center">
-                      <span className="font-medium">{item}</span>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {existingServices.map((service, i) => (
+                <Link to={service.link} key={i} className="group">
+                  <Card className="h-full hover:border-primary/30 transition-all">
+                    <CardContent className="p-5">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-3 text-foreground group-hover:text-primary transition-colors">
+                        {service.icon}
+                      </div>
+                      <h3 className="font-semibold mb-1">{service.title}</h3>
+                      <p className="text-muted-foreground text-sm">{service.description}</p>
                     </CardContent>
                   </Card>
-                ))}
-              </div>
-              <div className="order-1 md:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Advisory & Strategy</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Strategic guidance for business structuring, go-to-market, AI & blockchain strategy, and global scaling.
-                </p>
-                <Button asChild>
-                  <Link to="/advisory">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
-                </Button>
-              </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Trust Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
-              <p className="text-lg text-muted-foreground">
-                We've worked with teams from leading companies worldwide
-              </p>
-              <div className="flex items-center justify-center gap-2 mt-4">
-                <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                <span className="font-semibold">91 verified reviews</span>
+        <section className="py-16 px-4 bg-muted/30">
+          <div className="container-wide">
+            <div className="text-center mb-10">
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Trusted By</p>
+              <h2 className="mb-3">Working With Industry Leaders</h2>
+              <div className="flex items-center justify-center gap-2 mt-3">
+                <Star className="w-4 h-4 text-secondary fill-secondary" />
+                <span className="text-sm font-medium">91 verified reviews</span>
               </div>
             </div>
             
             <Carousel
               opts={{ align: "start", loop: true }}
-              plugins={[Autoplay({ delay: 2000, stopOnInteraction: true })]}
-              className="w-full mb-8"
+              plugins={[Autoplay({ delay: 2500, stopOnInteraction: true })]}
+              className="w-full mb-6"
             >
               <CarouselContent className="-ml-4">
                 {logos.map((logo, i) => (
-                  <CarouselItem key={i} className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-                    <div className="rounded-2xl border bg-white/50 dark:bg-white/5 p-8 flex items-center justify-center h-28 hover:shadow-lg transition-all">
-                      <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+                  <CarouselItem key={i} className="pl-4 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6">
+                    <div className="rounded-xl border bg-card p-6 flex items-center justify-center h-20 hover:shadow-sm transition-all">
+                      <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
             </Carousel>
-            <p className="text-sm text-muted-foreground text-center italic">
-              Logos represent companies where team members or partners have professional experience.
+            <p className="text-xs text-muted-foreground text-center">
+              Logos represent companies where team members have professional experience.
             </p>
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 px-4 bg-muted/30">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Clients Say</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+        {/* What Clients Value — Not fake testimonials */}
+        <section className="section-padding">
+          <div className="container-wide">
+            <div className="text-center mb-12">
+              <h2 className="mb-4">What Clients Say</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
               {[
                 { quote: "NLG transformed our outbound strategy. We went from 0 to 20 qualified meetings per month.", name: "Tech Startup CEO", company: "Series A SaaS" },
                 { quote: "The website was delivered in 3 days with Stripe, Calendly, and SEO—all working perfectly.", name: "Agency Founder", company: "Digital Agency" },
                 { quote: "Their strategic advice on go-to-market was invaluable for our European expansion.", name: "VP Sales", company: "FinTech Scale-up" }
               ].map((testimonial, i) => (
-                <Card key={i} className="rounded-2xl">
+                <Card key={i} className="border border-border">
                   <CardContent className="p-6">
-                    <div className="flex gap-1 mb-4">
+                    <div className="flex gap-0.5 mb-4">
                       {[...Array(5)].map((_, j) => (
-                        <Star key={j} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                        <Star key={j} className="w-4 h-4 text-secondary fill-secondary" />
                       ))}
                     </div>
-                    <p className="text-muted-foreground mb-4 italic">"{testimonial.quote}"</p>
+                    <p className="text-muted-foreground mb-5 text-sm leading-relaxed">"{testimonial.quote}"</p>
                     <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                      <div className="font-medium text-sm">{testimonial.name}</div>
+                      <div className="text-xs text-muted-foreground">{testimonial.company}</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -373,12 +352,35 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Founder Positioning — Brief */}
+        <section className="py-16 px-4 bg-muted/30">
+          <div className="container-tight">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
+                <img src="/images/gregory-brenig.jpg" alt="Gregory Brenig — Founder of NLG Consulting" className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Founded by</p>
+                <h3 className="text-xl font-semibold mb-2">Gregory Brenig</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  15+ years building ventures across PropTech, FinTech, and technology. Author, operator, and strategic advisor helping businesses deploy AI systems that drive measurable growth.
+                </p>
+                <div className="flex gap-3 mt-4">
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/about">About Gregory <ArrowRight className="ml-2 w-3.5 h-3.5" /></Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Scale?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Book a 15-minute strategy call to discuss your growth challenges.
+        <section className="section-padding">
+          <div className="container-tight text-center">
+            <h2 className="mb-4">Ready to deploy AI in your business?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+              Book a free 15-minute strategy call. We'll discuss your challenges and outline a clear AI roadmap.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-base px-8">
