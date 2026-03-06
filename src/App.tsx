@@ -160,6 +160,15 @@ const App = () => (
           <Route path="/fr/strategie-go-to-market" element={<GoToMarketFR />} />
           <Route path="/fr/conseil-proptech" element={<PropTechConsultingFR />} />
           
+          {/* French AI Hub Pages */}
+          <Route path="/fr/conseil-ia" element={<ConseilIAFR />} />
+          <Route path="/fr/automation-ia" element={<AutomationIAFR />} />
+          <Route path="/fr/agents-ia-entreprise" element={<AgentsIAFR />} />
+          <Route path="/fr/automation-marketing-ia" element={<AutomationMarketingIAFR />} />
+          <Route path="/fr/automation-commerciale-ia" element={<AutomationCommercialeIAFR />} />
+          <Route path="/fr/conseil-prompt-engineering" element={<ConseilPromptEngineeringFR />} />
+          <Route path="/fr/implementation-ia-externalisee" element={<ImplementationIAFR />} />
+          
           {/* AI Cluster Hub Pages */}
           <Route path="/ai-consulting" element={<AIConsulting />} />
           <Route path="/ai-automation" element={<AIAutomation />} />
