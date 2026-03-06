@@ -682,4 +682,80 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Training & Outsourcing Pages -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-training-for-teams</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-training-for-teams"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/formation-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-training-for-teams"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/formation-ia-entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-training-for-teams"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/formation-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-training-for-teams"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fractional-ai-consultant</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/fractional-ai-consultant"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/consultant-ia-fractionnel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/fractional-ai-consultant"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/consultant-ia-fractionnel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/fractional-ai-consultant"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/consultant-ia-fractionnel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/fractional-ai-consultant"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Guide Pages -->
+  <url>
+    <loc>https://www.nlgconsulting.co/best-ai-tools-for-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/best-ai-tools-for-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/meilleurs-outils-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/best-ai-tools-for-business"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/meilleurs-outils-ia-entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/best-ai-tools-for-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/meilleurs-outils-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/best-ai-tools-for-business"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/how-to-automate-marketing-with-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/how-to-automate-marketing-with-ai"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automatiser-marketing-avec-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/how-to-automate-marketing-with-ai"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/automatiser-marketing-avec-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/how-to-automate-marketing-with-ai"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automatiser-marketing-avec-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/how-to-automate-marketing-with-ai"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -53,6 +53,10 @@ export const useLanguage = () => {
       if (currentPath === "/ai-sales-automation") return "/fr/automation-commerciale-ia";
       if (currentPath === "/prompt-engineering-consulting") return "/fr/conseil-prompt-engineering";
       if (currentPath === "/outsourced-ai-implementation") return "/fr/implementation-ia-externalisee";
+      if (currentPath === "/ai-training-for-teams") return "/fr/formation-ia-entreprise";
+      if (currentPath === "/fractional-ai-consultant") return "/fr/consultant-ia-fractionnel";
+      if (currentPath === "/best-ai-tools-for-business") return "/fr/meilleurs-outils-ia-entreprise";
+      if (currentPath === "/how-to-automate-marketing-with-ai") return "/fr/automatiser-marketing-avec-ia";
       return `/fr${currentPath}`;
     } else {
       // FR to EN
@@ -89,6 +93,10 @@ export const useLanguage = () => {
       if (currentPath === "/fr/automation-commerciale-ia") return "/ai-sales-automation";
       if (currentPath === "/fr/conseil-prompt-engineering") return "/prompt-engineering-consulting";
       if (currentPath === "/fr/implementation-ia-externalisee") return "/outsourced-ai-implementation";
+      if (currentPath === "/fr/formation-ia-entreprise") return "/ai-training-for-teams";
+      if (currentPath === "/fr/consultant-ia-fractionnel") return "/fractional-ai-consultant";
+      if (currentPath === "/fr/meilleurs-outils-ia-entreprise") return "/best-ai-tools-for-business";
+      if (currentPath === "/fr/automatiser-marketing-avec-ia") return "/how-to-automate-marketing-with-ai";
       return currentPath.replace("/fr", "") || "/";
     }
   };

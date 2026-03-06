@@ -107,6 +107,20 @@ const AIForConsultingFirms = lazy(() => import("./pages/AIForConsultingFirms"));
 const AIForAgencies = lazy(() => import("./pages/AIForAgencies"));
 const AIForB2BServices = lazy(() => import("./pages/AIForB2BServices"));
 
+// Training & Outsourcing Pages (Cluster F)
+const AITrainingForTeams = lazy(() => import("./pages/AITrainingForTeams"));
+const FractionalAIConsultant = lazy(() => import("./pages/FractionalAIConsultant"));
+
+// Guide Pages (Cluster H)
+const BestAIToolsForBusiness = lazy(() => import("./pages/BestAIToolsForBusiness"));
+const HowToAutomateMarketingWithAI = lazy(() => import("./pages/HowToAutomateMarketingWithAI"));
+
+// French Training & Guide Pages
+const FormationIAEntrepriseFR = lazy(() => import("./pages/fr/FormationIAEntrepriseFR"));
+const ConsultantIAFractionnelFR = lazy(() => import("./pages/fr/ConsultantIAFractionnelFR"));
+const MeilleursOutilsIAFR = lazy(() => import("./pages/fr/MeilleursOutilsIAFR"));
+const AutomatiserMarketingIAFR = lazy(() => import("./pages/fr/AutomatiserMarketingIAFR"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -214,6 +228,14 @@ const App = () => (
           <Route path="/ai-for-agencies" element={<AIForAgencies />} />
           <Route path="/ai-for-b2b-services" element={<AIForB2BServices />} />
 
+          {/* Training & Outsourcing Pages */}
+          <Route path="/ai-training-for-teams" element={<AITrainingForTeams />} />
+          <Route path="/fractional-ai-consultant" element={<FractionalAIConsultant />} />
+
+          {/* Guide Pages */}
+          <Route path="/best-ai-tools-for-business" element={<BestAIToolsForBusiness />} />
+          <Route path="/how-to-automate-marketing-with-ai" element={<HowToAutomateMarketingWithAI />} />
+
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
           <Route path="/b2b-lead-generation-agency" element={<B2BLeadGenerationAgency />} />
@@ -229,6 +251,12 @@ const App = () => (
           <Route path="/fr/agence-lead-generation-b2b" element={<AgenceLeadGenerationFR />} />
           <Route path="/fr/prise-de-rendez-vous-b2b" element={<PriseRendezVousFR />} />
           <Route path="/fr/site-web-en-72h" element={<SiteWebEn72hFR />} />
+
+          {/* French Training & Guide Pages */}
+          <Route path="/fr/formation-ia-entreprise" element={<FormationIAEntrepriseFR />} />
+          <Route path="/fr/consultant-ia-fractionnel" element={<ConsultantIAFractionnelFR />} />
+          <Route path="/fr/meilleurs-outils-ia-entreprise" element={<MeilleursOutilsIAFR />} />
+          <Route path="/fr/automatiser-marketing-avec-ia" element={<AutomatiserMarketingIAFR />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
