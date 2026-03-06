@@ -15,14 +15,14 @@ const Ventures = () => {
       {
         "@type": "WebPage",
         "name": "Ventures & Brands | NLG Consulting",
-        "description": "Explore NLG Consulting's portfolio of ventures across PropTech, FinTech, Media, and Lifestyle.",
-        "url": "https://nlgconsulting.co/ventures"
+        "description": "Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI.",
+        "url": "https://www.nlgconsulting.co/ventures"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://nlgconsulting.co/ventures" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://www.nlgconsulting.co/ventures" }
         ]
       }
     ]
