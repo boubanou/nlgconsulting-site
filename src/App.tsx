@@ -38,6 +38,22 @@ const WebTerms = lazy(() => import("./pages/WebTerms"));
 const WebThankYou = lazy(() => import("./pages/WebThankYou"));
 const Marketing = lazy(() => import("./pages/Marketing"));
 
+// SEO Landing Pages - English
+const OutsourcedSDR = lazy(() => import("./pages/OutsourcedSDR"));
+const B2BLeadGenerationAgency = lazy(() => import("./pages/B2BLeadGenerationAgency"));
+const AppointmentSetting = lazy(() => import("./pages/AppointmentSetting"));
+const GoToMarketConsulting = lazy(() => import("./pages/GoToMarketConsulting"));
+const WebsiteIn72Hours = lazy(() => import("./pages/WebsiteIn72Hours"));
+const PropTechLeadGeneration = lazy(() => import("./pages/PropTechLeadGeneration"));
+const FinTechLeadGeneration = lazy(() => import("./pages/FinTechLeadGeneration"));
+const AISalesOutreach = lazy(() => import("./pages/AISalesOutreach"));
+
+// SEO Landing Pages - French
+const SDRExternaliseFR = lazy(() => import("./pages/fr/SDRExternaliseFR"));
+const AgenceLeadGenerationFR = lazy(() => import("./pages/fr/AgenceLeadGenerationFR"));
+const PriseRendezVousFR = lazy(() => import("./pages/fr/PriseRendezVousFR"));
+const SiteWebEn72hFR = lazy(() => import("./pages/fr/SiteWebEn72hFR"));
+
 // French Pages
 const HomeFR = lazy(() => import("./pages/fr/HomeFR"));
 const AboutFR = lazy(() => import("./pages/fr/AboutFR"));
