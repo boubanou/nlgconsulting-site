@@ -151,6 +151,15 @@ const App = () => (
           <Route path="/fr/strategie-go-to-market" element={<GoToMarketFR />} />
           <Route path="/fr/conseil-proptech" element={<PropTechConsultingFR />} />
           
+          {/* AI Cluster Hub Pages */}
+          <Route path="/ai-consulting" element={<AIConsulting />} />
+          <Route path="/ai-automation" element={<AIAutomation />} />
+          <Route path="/ai-agents-for-business" element={<AIAgentsForBusiness />} />
+          <Route path="/ai-marketing-automation" element={<AIMarketingAutomation />} />
+          <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
+          <Route path="/prompt-engineering-consulting" element={<PromptEngineeringConsulting />} />
+          <Route path="/outsourced-ai-implementation" element={<OutsourcedAIImplementation />} />
+
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
           <Route path="/b2b-lead-generation-agency" element={<B2BLeadGenerationAgency />} />

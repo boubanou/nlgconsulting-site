@@ -43,22 +43,30 @@ const MainFooter = () => {
             </ul>
           </div>
 
+          {/* AI & Automation */}
+          <div>
+            <h4 className="font-semibold mb-4 text-sm">AI & Automation</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ai-consulting" className="text-muted-foreground hover:text-primary transition-colors">AI Consulting</Link></li>
+              <li><Link to="/ai-automation" className="text-muted-foreground hover:text-primary transition-colors">AI Automation</Link></li>
+              <li><Link to="/ai-agents-for-business" className="text-muted-foreground hover:text-primary transition-colors">AI Agents</Link></li>
+              <li><Link to="/ai-marketing-automation" className="text-muted-foreground hover:text-primary transition-colors">AI Marketing</Link></li>
+              <li><Link to="/ai-sales-automation" className="text-muted-foreground hover:text-primary transition-colors">AI Sales</Link></li>
+              <li><Link to="/prompt-engineering-consulting" className="text-muted-foreground hover:text-primary transition-colors">Prompt Engineering</Link></li>
+              <li><Link to="/outsourced-ai-implementation" className="text-muted-foreground hover:text-primary transition-colors">Outsourced AI</Link></li>
+            </ul>
+          </div>
+
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-sm">Services</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">All Services</Link></li>
               <li><Link to="/sales" className="text-muted-foreground hover:text-primary transition-colors">Sales & BD</Link></li>
-              <li><Link to="/ai-lead-generation" className="text-muted-foreground hover:text-primary transition-colors">AI Lead Generation</Link></li>
-              <li><Link to="/saas-monetization" className="text-muted-foreground hover:text-primary transition-colors">SaaS Monetization</Link></li>
-              <li><Link to="/go-to-market" className="text-muted-foreground hover:text-primary transition-colors">Go-To-Market</Link></li>
-              <li><Link to="/proptech-consulting" className="text-muted-foreground hover:text-primary transition-colors">PropTech Consulting</Link></li>
-              <li><Link to="/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing & PPC</Link></li>
               <li><Link to="/web" className="text-muted-foreground hover:text-primary transition-colors">Web Studio</Link></li>
               <li><Link to="/advisory" className="text-muted-foreground hover:text-primary transition-colors">Advisory</Link></li>
+              <li><Link to="/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing</Link></li>
               <li><Link to="/outsourced-sdr" className="text-muted-foreground hover:text-primary transition-colors">Outsourced SDR</Link></li>
-              <li><Link to="/appointment-setting" className="text-muted-foreground hover:text-primary transition-colors">Appointment Setting</Link></li>
-              <li><Link to="/website-in-72-hours" className="text-muted-foreground hover:text-primary transition-colors">Website in 72 Hours</Link></li>
             </ul>
           </div>
 
