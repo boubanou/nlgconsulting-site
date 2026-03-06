@@ -89,6 +89,15 @@ const AutomationCommercialeIAFR = lazy(() => import("./pages/fr/AutomationCommer
 const ConseilPromptEngineeringFR = lazy(() => import("./pages/fr/ConseilPromptEngineeringFR"));
 const ImplementationIAFR = lazy(() => import("./pages/fr/ImplementationIAFR"));
 
+// French Industry Pages
+const IAForSaaSFR = lazy(() => import("./pages/fr/IAForSaaSFR"));
+const IAForPropTechFR = lazy(() => import("./pages/fr/IAForPropTechFR"));
+const IAForFinTechFR = lazy(() => import("./pages/fr/IAForFinTechFR"));
+const IAForImmobilierFR = lazy(() => import("./pages/fr/IAForImmobilierFR"));
+const IAForCabinetConseilFR = lazy(() => import("./pages/fr/IAForCabinetConseilFR"));
+const IAForAgencesFR = lazy(() => import("./pages/fr/IAForAgencesFR"));
+const IAForServicesB2BFR = lazy(() => import("./pages/fr/IAForServicesB2BFR"));
+
 // Industry Pages
 const AIForSaaS = lazy(() => import("./pages/AIForSaaS"));
 const AIForPropTech = lazy(() => import("./pages/AIForPropTech"));
@@ -177,6 +186,15 @@ const App = () => (
           <Route path="/fr/automation-commerciale-ia" element={<AutomationCommercialeIAFR />} />
           <Route path="/fr/conseil-prompt-engineering" element={<ConseilPromptEngineeringFR />} />
           <Route path="/fr/implementation-ia-externalisee" element={<ImplementationIAFR />} />
+          
+          {/* French Industry Pages */}
+          <Route path="/fr/ia-pour-saas" element={<IAForSaaSFR />} />
+          <Route path="/fr/ia-pour-proptech" element={<IAForPropTechFR />} />
+          <Route path="/fr/ia-pour-fintech" element={<IAForFinTechFR />} />
+          <Route path="/fr/ia-pour-immobilier" element={<IAForImmobilierFR />} />
+          <Route path="/fr/ia-pour-cabinets-conseil" element={<IAForCabinetConseilFR />} />
+          <Route path="/fr/ia-pour-agences" element={<IAForAgencesFR />} />
+          <Route path="/fr/ia-pour-services-b2b" element={<IAForServicesB2BFR />} />
           
           {/* AI Cluster Hub Pages */}
           <Route path="/ai-consulting" element={<AIConsulting />} />

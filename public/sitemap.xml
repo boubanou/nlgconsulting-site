@@ -554,4 +554,132 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Industry Pages EN+FR -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-saas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-saas"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-saas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-saas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-saas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-saas"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-saas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-saas"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-proptech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-proptech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-proptech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-proptech"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-proptech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-proptech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-proptech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-proptech"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-fintech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-fintech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-fintech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-fintech"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-fintech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-fintech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-fintech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-fintech"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-real-estate</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-immobilier"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-real-estate"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-immobilier</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-real-estate"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-immobilier"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-real-estate"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-consulting-firms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-consulting-firms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-cabinets-conseil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-consulting-firms"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-cabinets-conseil</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-consulting-firms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-cabinets-conseil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-consulting-firms"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-agencies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-agencies"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-agences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-agencies"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-agences</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-agencies"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-agences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-agencies"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-for-b2b-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-b2b-services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-services-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-b2b-services"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ia-pour-services-b2b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-for-b2b-services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-services-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-for-b2b-services"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
