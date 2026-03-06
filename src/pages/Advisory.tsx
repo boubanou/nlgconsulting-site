@@ -23,16 +23,16 @@ const Advisory = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Advisory & Strategy",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Strategic guidance on business structuring, go-to-market, scaling, and tech transformation.",
-        "url": "https://nlgconsulting.co/advisory"
+        "name": "Strategic Business Advisory",
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and international expansion.",
+        "url": "https://www.nlgconsulting.co/advisory"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Advisory", "item": "https://nlgconsulting.co/advisory" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Advisory", "item": "https://www.nlgconsulting.co/advisory" }
         ]
       }
     ]
