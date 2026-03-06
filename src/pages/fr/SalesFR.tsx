@@ -275,7 +275,7 @@ const SalesFR = () => {
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
                 <Link to="/fr/rendez-vous">Audit commercial gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button asChild variant="outline-light" size="lg">
                 <Link to="/fr/contact">Nous contacter</Link>
               </Button>
             </div>
