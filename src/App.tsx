@@ -228,6 +228,14 @@ const App = () => (
           <Route path="/ai-for-agencies" element={<AIForAgencies />} />
           <Route path="/ai-for-b2b-services" element={<AIForB2BServices />} />
 
+          {/* Training & Outsourcing Pages */}
+          <Route path="/ai-training-for-teams" element={<AITrainingForTeams />} />
+          <Route path="/fractional-ai-consultant" element={<FractionalAIConsultant />} />
+
+          {/* Guide Pages */}
+          <Route path="/best-ai-tools-for-business" element={<BestAIToolsForBusiness />} />
+          <Route path="/how-to-automate-marketing-with-ai" element={<HowToAutomateMarketingWithAI />} />
+
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
           <Route path="/b2b-lead-generation-agency" element={<B2BLeadGenerationAgency />} />
