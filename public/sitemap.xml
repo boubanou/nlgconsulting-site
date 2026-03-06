@@ -414,4 +414,144 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- AI Hub: AI Consulting -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-consulting</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-consulting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-consulting"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/conseil-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-consulting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-consulting"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Hub: AI Automation -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-automation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automation-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-automation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/automation-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-automation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automation-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-automation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Hub: AI Agents -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-agents-for-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-agents-for-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/agents-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-agents-for-business"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/agents-ia-entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-agents-for-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/agents-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-agents-for-business"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Hub: AI Marketing Automation -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-marketing-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-marketing-automation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automation-marketing-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-marketing-automation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/automation-marketing-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-marketing-automation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automation-marketing-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-marketing-automation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Hub: AI Sales Automation -->
+  <url>
+    <loc>https://www.nlgconsulting.co/ai-sales-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-sales-automation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automation-commerciale-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-sales-automation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/automation-commerciale-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/ai-sales-automation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/automation-commerciale-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/ai-sales-automation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Hub: Prompt Engineering -->
+  <url>
+    <loc>https://www.nlgconsulting.co/prompt-engineering-consulting</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/prompt-engineering-consulting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/conseil-prompt-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/prompt-engineering-consulting"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/conseil-prompt-engineering</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/prompt-engineering-consulting"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/conseil-prompt-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/prompt-engineering-consulting"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Hub: Outsourced AI Implementation -->
+  <url>
+    <loc>https://www.nlgconsulting.co/outsourced-ai-implementation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/outsourced-ai-implementation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/implementation-ia-externalisee"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/outsourced-ai-implementation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/implementation-ia-externalisee</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/outsourced-ai-implementation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/implementation-ia-externalisee"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/outsourced-ai-implementation"/>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

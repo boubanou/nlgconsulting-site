@@ -80,6 +80,15 @@ const SaaSMonetizationFR = lazy(() => import("./pages/fr/SaaSMonetizationFR"));
 const GoToMarketFR = lazy(() => import("./pages/fr/GoToMarketFR"));
 const PropTechConsultingFR = lazy(() => import("./pages/fr/PropTechConsultingFR"));
 
+// French AI Hub Pages
+const ConseilIAFR = lazy(() => import("./pages/fr/ConseilIAFR"));
+const AutomationIAFR = lazy(() => import("./pages/fr/AutomationIAFR"));
+const AgentsIAFR = lazy(() => import("./pages/fr/AgentsIAFR"));
+const AutomationMarketingIAFR = lazy(() => import("./pages/fr/AutomationMarketingIAFR"));
+const AutomationCommercialeIAFR = lazy(() => import("./pages/fr/AutomationCommercialeIAFR"));
+const ConseilPromptEngineeringFR = lazy(() => import("./pages/fr/ConseilPromptEngineeringFR"));
+const ImplementationIAFR = lazy(() => import("./pages/fr/ImplementationIAFR"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -150,6 +159,15 @@ const App = () => (
           <Route path="/fr/monetisation-saas" element={<SaaSMonetizationFR />} />
           <Route path="/fr/strategie-go-to-market" element={<GoToMarketFR />} />
           <Route path="/fr/conseil-proptech" element={<PropTechConsultingFR />} />
+          
+          {/* French AI Hub Pages */}
+          <Route path="/fr/conseil-ia" element={<ConseilIAFR />} />
+          <Route path="/fr/automation-ia" element={<AutomationIAFR />} />
+          <Route path="/fr/agents-ia-entreprise" element={<AgentsIAFR />} />
+          <Route path="/fr/automation-marketing-ia" element={<AutomationMarketingIAFR />} />
+          <Route path="/fr/automation-commerciale-ia" element={<AutomationCommercialeIAFR />} />
+          <Route path="/fr/conseil-prompt-engineering" element={<ConseilPromptEngineeringFR />} />
+          <Route path="/fr/implementation-ia-externalisee" element={<ImplementationIAFR />} />
           
           {/* AI Cluster Hub Pages */}
           <Route path="/ai-consulting" element={<AIConsulting />} />
