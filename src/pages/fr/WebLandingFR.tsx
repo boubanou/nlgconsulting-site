@@ -135,7 +135,7 @@ const WebLandingFR = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  variant="outline" 
+                  variant="outline-light" 
                   className=""
                 >
                   <Link to="/fr/rendez-vous">Réserver un appel</Link>
