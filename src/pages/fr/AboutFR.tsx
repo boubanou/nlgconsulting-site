@@ -24,7 +24,7 @@ const AboutFR = () => {
         "@type": "AboutPage",
         "name": "À propos de NLG Consulting",
         "description": "Découvrez NLG Consulting, un groupe mondial Business, Tech & Croissance.",
-        "url": "https://nlgconsulting.co/fr/a-propos"
+        "url": "https://www.nlgconsulting.co/fr/a-propos"
       },
       {
         "@type": "Person",
@@ -35,8 +35,8 @@ const AboutFR = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://nlgconsulting.co/fr/a-propos" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://www.nlgconsulting.co/fr/a-propos" }
         ]
       }
     ]
