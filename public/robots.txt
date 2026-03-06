@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://nlgconsulting.co/sitemap.xml
+Sitemap: https://www.nlgconsulting.co/sitemap.xml
 
 # Block admin pages
 Disallow: /admin
