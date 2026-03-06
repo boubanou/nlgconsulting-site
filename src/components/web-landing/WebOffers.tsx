@@ -19,7 +19,7 @@ const WebOffers = () => {
         "Source code provided",
       ],
       cta: "Pay Deposit – Starter Pack",
-      link: "https://payment.fractionalpropertyhub.com/b/3cI7sMcTrdbOgDWeI31ck03",
+      link: "https://buy.stripe.com/3cI7sMcTrdbOgDWeI31ck03",
       popular: false,
       gradient: "from-slate-500 to-slate-600",
     },
