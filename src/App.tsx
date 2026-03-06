@@ -89,6 +89,15 @@ const AutomationCommercialeIAFR = lazy(() => import("./pages/fr/AutomationCommer
 const ConseilPromptEngineeringFR = lazy(() => import("./pages/fr/ConseilPromptEngineeringFR"));
 const ImplementationIAFR = lazy(() => import("./pages/fr/ImplementationIAFR"));
 
+// French Industry Pages
+const IAForSaaSFR = lazy(() => import("./pages/fr/IAForSaaSFR"));
+const IAForPropTechFR = lazy(() => import("./pages/fr/IAForPropTechFR"));
+const IAForFinTechFR = lazy(() => import("./pages/fr/IAForFinTechFR"));
+const IAForImmobilierFR = lazy(() => import("./pages/fr/IAForImmobilierFR"));
+const IAForCabinetConseilFR = lazy(() => import("./pages/fr/IAForCabinetConseilFR"));
+const IAForAgencesFR = lazy(() => import("./pages/fr/IAForAgencesFR"));
+const IAForServicesB2BFR = lazy(() => import("./pages/fr/IAForServicesB2BFR"));
+
 // Industry Pages
 const AIForSaaS = lazy(() => import("./pages/AIForSaaS"));
 const AIForPropTech = lazy(() => import("./pages/AIForPropTech"));
