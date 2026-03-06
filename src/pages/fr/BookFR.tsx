@@ -15,13 +15,13 @@ const BookFR = () => {
         "@type": "WebPage",
         "name": "Réserver votre consultation gratuite",
         "description": "Planifiez un appel de 15 minutes pour discuter de comment nous pouvons vous aider à générer des rendez-vous B2B qualifiés",
-        "url": "https://nlgconsulting.co/fr/rendez-vous"
+        "url": "https://www.nlgconsulting.co/fr/rendez-vous"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Rendez-vous", "item": "https://nlgconsulting.co/fr/rendez-vous" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Rendez-vous", "item": "https://www.nlgconsulting.co/fr/rendez-vous" }
         ]
       }
     ]
