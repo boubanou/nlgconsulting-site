@@ -107,6 +107,20 @@ const AIForConsultingFirms = lazy(() => import("./pages/AIForConsultingFirms"));
 const AIForAgencies = lazy(() => import("./pages/AIForAgencies"));
 const AIForB2BServices = lazy(() => import("./pages/AIForB2BServices"));
 
+// Training & Outsourcing Pages (Cluster F)
+const AITrainingForTeams = lazy(() => import("./pages/AITrainingForTeams"));
+const FractionalAIConsultant = lazy(() => import("./pages/FractionalAIConsultant"));
+
+// Guide Pages (Cluster H)
+const BestAIToolsForBusiness = lazy(() => import("./pages/BestAIToolsForBusiness"));
+const HowToAutomateMarketingWithAI = lazy(() => import("./pages/HowToAutomateMarketingWithAI"));
+
+// French Training & Guide Pages
+const FormationIAEntrepriseFR = lazy(() => import("./pages/fr/FormationIAEntrepriseFR"));
+const ConsultantIAFractionnelFR = lazy(() => import("./pages/fr/ConsultantIAFractionnelFR"));
+const MeilleursOutilsIAFR = lazy(() => import("./pages/fr/MeilleursOutilsIAFR"));
+const AutomatiserMarketingIAFR = lazy(() => import("./pages/fr/AutomatiserMarketingIAFR"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
