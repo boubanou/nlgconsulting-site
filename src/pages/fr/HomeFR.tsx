@@ -31,14 +31,14 @@ const HomeFR = () => {
       {
         "@type": "Organization",
         "name": "NLG Consulting",
-        "url": "https://nlgconsulting.co/fr",
-        "logo": "https://nlgconsulting.co/logo.svg",
+        "url": "https://www.nlgconsulting.co/fr",
+        "logo": "https://www.nlgconsulting.co/logo.svg",
         "description": "NLG Consulting est un groupe mondial Business, Tech & Croissance qui construit, opère et scale des plateformes, marques et systèmes de vente dans le monde entier."
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" }
         ]
       }
     ]
