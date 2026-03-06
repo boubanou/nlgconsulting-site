@@ -32,10 +32,10 @@ const Marketing = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Marketing PPC & Campagnes Digitales",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "PPC campaign management and digital marketing services focused on ROI. Google Ads, Meta Ads, LinkedIn Ads, multi-channel campaigns.",
-        "url": "https://nlgconsulting.co/marketing",
+        "name": "PPC & Marketing Campaigns",
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Full-stack PPC and marketing management. Google, Meta, LinkedIn Ads. Data-driven campaigns that generate leads and revenue.",
+        "url": "https://www.nlgconsulting.co/marketing",
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "EUR",
@@ -45,8 +45,8 @@ const Marketing = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://nlgconsulting.co/marketing" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://www.nlgconsulting.co/marketing" }
         ]
       },
       {
