@@ -34,13 +34,13 @@ const MarketingFR = () => {
         "name": "Marketing PPC & Campagnes Digitales",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
         "description": "Gestion de campagnes PPC et marketing digital orientés ROI. Google Ads, Meta Ads, LinkedIn Ads, campagnes multi-canaux.",
-        "url": "https://nlgconsulting.co/fr/marketing"
+        "url": "https://www.nlgconsulting.co/fr/marketing"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://nlgconsulting.co/fr" },
-          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://nlgconsulting.co/fr/marketing" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
+          { "@type": "ListItem", "position": 2, "name": "Marketing & PPC", "item": "https://www.nlgconsulting.co/fr/marketing" }
         ]
       },
       {
