@@ -187,6 +187,15 @@ const App = () => (
           <Route path="/fr/conseil-prompt-engineering" element={<ConseilPromptEngineeringFR />} />
           <Route path="/fr/implementation-ia-externalisee" element={<ImplementationIAFR />} />
           
+          {/* French Industry Pages */}
+          <Route path="/fr/ia-pour-saas" element={<IAForSaaSFR />} />
+          <Route path="/fr/ia-pour-proptech" element={<IAForPropTechFR />} />
+          <Route path="/fr/ia-pour-fintech" element={<IAForFinTechFR />} />
+          <Route path="/fr/ia-pour-immobilier" element={<IAForImmobilierFR />} />
+          <Route path="/fr/ia-pour-cabinets-conseil" element={<IAForCabinetConseilFR />} />
+          <Route path="/fr/ia-pour-agences" element={<IAForAgencesFR />} />
+          <Route path="/fr/ia-pour-services-b2b" element={<IAForServicesB2BFR />} />
+          
           {/* AI Cluster Hub Pages */}
           <Route path="/ai-consulting" element={<AIConsulting />} />
           <Route path="/ai-automation" element={<AIAutomation />} />
