@@ -21,7 +21,7 @@ const MainFooterFR = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Logo & Tagline */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/fr">
@@ -57,6 +57,20 @@ const MainFooterFR = () => {
             </ul>
           </div>
 
+          {/* Industries */}
+          <div>
+            <h4 className="font-semibold mb-4 text-sm">Industries</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/fr/ia-pour-saas" className="text-muted-foreground hover:text-primary transition-colors">IA pour SaaS</Link></li>
+              <li><Link to="/fr/ia-pour-fintech" className="text-muted-foreground hover:text-primary transition-colors">IA pour FinTech</Link></li>
+              <li><Link to="/fr/ia-pour-proptech" className="text-muted-foreground hover:text-primary transition-colors">IA pour PropTech</Link></li>
+              <li><Link to="/fr/ia-pour-immobilier" className="text-muted-foreground hover:text-primary transition-colors">IA pour Immobilier</Link></li>
+              <li><Link to="/fr/ia-pour-cabinets-conseil" className="text-muted-foreground hover:text-primary transition-colors">IA pour Conseil</Link></li>
+              <li><Link to="/fr/ia-pour-agences" className="text-muted-foreground hover:text-primary transition-colors">IA pour Agences</Link></li>
+              <li><Link to="/fr/ia-pour-services-b2b" className="text-muted-foreground hover:text-primary transition-colors">IA pour Services B2B</Link></li>
+            </ul>
+          </div>
+
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-sm">Services</h4>
@@ -67,14 +81,18 @@ const MainFooterFR = () => {
               <li><Link to="/fr/conseil" className="text-muted-foreground hover:text-primary transition-colors">Conseil</Link></li>
               <li><Link to="/fr/marketing" className="text-muted-foreground hover:text-primary transition-colors">Marketing</Link></li>
               <li><Link to="/fr/sdr-externalise" className="text-muted-foreground hover:text-primary transition-colors">SDR Externalisé</Link></li>
+              <li><Link to="/fr/formation-ia-entreprise" className="text-muted-foreground hover:text-primary transition-colors">Formation IA</Link></li>
+              <li><Link to="/fr/consultant-ia-fractionnel" className="text-muted-foreground hover:text-primary transition-colors">Consultant IA fractionnel</Link></li>
             </ul>
           </div>
 
-          {/* Ressources */}
+          {/* Ressources & Légal */}
           <div>
             <h4 className="font-semibold mb-4 text-sm">Ressources</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/fr/rendez-vous" className="text-muted-foreground hover:text-primary transition-colors">Prendre RDV</Link></li>
+              <li><Link to="/fr/meilleurs-outils-ia-entreprise" className="text-muted-foreground hover:text-primary transition-colors">Meilleurs outils IA</Link></li>
+              <li><Link to="/fr/automatiser-marketing-avec-ia" className="text-muted-foreground hover:text-primary transition-colors">Automatiser le marketing</Link></li>
               <li>
                 <a 
                   href="https://a.co/d/dih3FYN" 
@@ -86,14 +104,10 @@ const MainFooterFR = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Légal */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">Légal</h4>
+            <h4 className="font-semibold mb-4 mt-6 text-sm">Légal</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/fr/politique-confidentialite" className="text-muted-foreground hover:text-primary transition-colors">Confidentialité</Link></li>
-              <li><Link to="/fr/site-internet/conditions" className="text-muted-foreground hover:text-primary transition-colors">CGV</Link></li>
+              <li><Link to="/web/terms" className="text-muted-foreground hover:text-primary transition-colors">CGV</Link></li>
             </ul>
           </div>
         </div>
