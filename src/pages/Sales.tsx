@@ -24,16 +24,17 @@ const Sales = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Sales & Business Development",
-        "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Outbound lead generation, SDR systems, and CRM pipeline infrastructure.",
-        "url": "https://nlgconsulting.co/sales"
+        "name": "Outsourced SDR Services",
+        "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
+        "description": "Outsourced B2B sales development. LinkedIn, email, cold calling. 15-30 qualified meetings per month guaranteed.",
+        "url": "https://www.nlgconsulting.co/sales",
+        "areaServed": ["Europe", "North America", "Middle East"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nlgconsulting.co" },
-          { "@type": "ListItem", "position": 2, "name": "Sales & BD", "item": "https://nlgconsulting.co/sales" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
+          { "@type": "ListItem", "position": 2, "name": "Outsourced SDR", "item": "https://www.nlgconsulting.co/sales" }
         ]
       },
       {
