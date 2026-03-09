@@ -98,6 +98,7 @@ export const useLanguage = () => {
       if (currentPath === "/fr/consultant-ia-fractionnel") return "/fractional-ai-consultant";
       if (currentPath === "/fr/meilleurs-outils-ia-entreprise") return "/best-ai-tools-for-business";
       if (currentPath === "/fr/automatiser-marketing-avec-ia") return "/how-to-automate-marketing-with-ai";
+      if (currentPath === "/fr/cas-usage") return "/use-cases";
       return currentPath.replace("/fr", "") || "/";
     }
   };

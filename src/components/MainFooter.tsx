@@ -93,6 +93,7 @@ const MainFooter = () => {
               <li><Link to="/book" className="text-muted-foreground hover:text-primary transition-colors">Book a Call</Link></li>
               <li><Link to="/best-ai-tools-for-business" className="text-muted-foreground hover:text-primary transition-colors">Best AI Tools</Link></li>
               <li><Link to="/how-to-automate-marketing-with-ai" className="text-muted-foreground hover:text-primary transition-colors">Automate Marketing</Link></li>
+              <li><Link to="/use-cases" className="text-muted-foreground hover:text-primary transition-colors">Use Cases</Link></li>
               <li>
                 <a 
                   href="https://a.co/d/3wU4Qgc" 

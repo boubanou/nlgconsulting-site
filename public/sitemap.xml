@@ -758,4 +758,24 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Use Cases -->
+  <url>
+    <loc>https://www.nlgconsulting.co/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/cas-usage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/use-cases"/>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/cas-usage</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/cas-usage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/use-cases"/>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
