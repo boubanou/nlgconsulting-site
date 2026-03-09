@@ -62,8 +62,8 @@ const industriesData = [
 
 const resourcesData = [
   { label: "Cas d'Usage", to: "/fr/cas-usage" },
-  { label: "Meilleurs Outils IA", to: "/fr/meilleurs-outils-ia" },
-  { label: "Automatiser le Marketing avec l'IA", to: "/fr/automatiser-marketing-ia" },
+  { label: "Meilleurs Outils IA", to: "/fr/meilleurs-outils-ia-entreprise" },
+  { label: "Automatiser le Marketing avec l'IA", to: "/fr/automatiser-marketing-avec-ia" },
   { label: "Livre", to: "/fr/rendez-vous" },
 ];
 
