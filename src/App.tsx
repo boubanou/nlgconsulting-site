@@ -260,6 +260,7 @@ const App = () => (
           <Route path="/fr/consultant-ia-fractionnel" element={<ConsultantIAFractionnelFR />} />
           <Route path="/fr/meilleurs-outils-ia-entreprise" element={<MeilleursOutilsIAFR />} />
           <Route path="/fr/automatiser-marketing-avec-ia" element={<AutomatiserMarketingIAFR />} />
+          <Route path="/fr/cas-usage" element={<CasUsageFR />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
