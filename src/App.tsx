@@ -114,6 +114,7 @@ const FractionalAIConsultant = lazy(() => import("./pages/FractionalAIConsultant
 // Guide Pages (Cluster H)
 const BestAIToolsForBusiness = lazy(() => import("./pages/BestAIToolsForBusiness"));
 const HowToAutomateMarketingWithAI = lazy(() => import("./pages/HowToAutomateMarketingWithAI"));
+const UseCases = lazy(() => import("./pages/UseCases"));
 
 // French Training & Guide Pages
 const FormationIAEntrepriseFR = lazy(() => import("./pages/fr/FormationIAEntrepriseFR"));
