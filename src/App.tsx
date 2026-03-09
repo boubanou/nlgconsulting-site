@@ -236,6 +236,7 @@ const App = () => (
           {/* Guide Pages */}
           <Route path="/best-ai-tools-for-business" element={<BestAIToolsForBusiness />} />
           <Route path="/how-to-automate-marketing-with-ai" element={<HowToAutomateMarketingWithAI />} />
+          <Route path="/use-cases" element={<UseCases />} />
 
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
