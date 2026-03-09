@@ -114,12 +114,14 @@ const FractionalAIConsultant = lazy(() => import("./pages/FractionalAIConsultant
 // Guide Pages (Cluster H)
 const BestAIToolsForBusiness = lazy(() => import("./pages/BestAIToolsForBusiness"));
 const HowToAutomateMarketingWithAI = lazy(() => import("./pages/HowToAutomateMarketingWithAI"));
+const UseCases = lazy(() => import("./pages/UseCases"));
 
 // French Training & Guide Pages
 const FormationIAEntrepriseFR = lazy(() => import("./pages/fr/FormationIAEntrepriseFR"));
 const ConsultantIAFractionnelFR = lazy(() => import("./pages/fr/ConsultantIAFractionnelFR"));
 const MeilleursOutilsIAFR = lazy(() => import("./pages/fr/MeilleursOutilsIAFR"));
 const AutomatiserMarketingIAFR = lazy(() => import("./pages/fr/AutomatiserMarketingIAFR"));
+const CasUsageFR = lazy(() => import("./pages/fr/CasUsageFR"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -235,6 +237,7 @@ const App = () => (
           {/* Guide Pages */}
           <Route path="/best-ai-tools-for-business" element={<BestAIToolsForBusiness />} />
           <Route path="/how-to-automate-marketing-with-ai" element={<HowToAutomateMarketingWithAI />} />
+          <Route path="/use-cases" element={<UseCases />} />
 
           {/* SEO Landing Pages - English */}
           <Route path="/outsourced-sdr" element={<OutsourcedSDR />} />
@@ -257,6 +260,7 @@ const App = () => (
           <Route path="/fr/consultant-ia-fractionnel" element={<ConsultantIAFractionnelFR />} />
           <Route path="/fr/meilleurs-outils-ia-entreprise" element={<MeilleursOutilsIAFR />} />
           <Route path="/fr/automatiser-marketing-avec-ia" element={<AutomatiserMarketingIAFR />} />
+          <Route path="/fr/cas-usage" element={<CasUsageFR />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

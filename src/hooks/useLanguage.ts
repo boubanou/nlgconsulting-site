@@ -57,6 +57,7 @@ export const useLanguage = () => {
       if (currentPath === "/fractional-ai-consultant") return "/fr/consultant-ia-fractionnel";
       if (currentPath === "/best-ai-tools-for-business") return "/fr/meilleurs-outils-ia-entreprise";
       if (currentPath === "/how-to-automate-marketing-with-ai") return "/fr/automatiser-marketing-avec-ia";
+      if (currentPath === "/use-cases") return "/fr/cas-usage";
       return `/fr${currentPath}`;
     } else {
       // FR to EN
@@ -97,6 +98,7 @@ export const useLanguage = () => {
       if (currentPath === "/fr/consultant-ia-fractionnel") return "/fractional-ai-consultant";
       if (currentPath === "/fr/meilleurs-outils-ia-entreprise") return "/best-ai-tools-for-business";
       if (currentPath === "/fr/automatiser-marketing-avec-ia") return "/how-to-automate-marketing-with-ai";
+      if (currentPath === "/fr/cas-usage") return "/use-cases";
       return currentPath.replace("/fr", "") || "/";
     }
   };
