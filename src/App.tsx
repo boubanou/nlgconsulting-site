@@ -121,6 +121,7 @@ const FormationIAEntrepriseFR = lazy(() => import("./pages/fr/FormationIAEntrepr
 const ConsultantIAFractionnelFR = lazy(() => import("./pages/fr/ConsultantIAFractionnelFR"));
 const MeilleursOutilsIAFR = lazy(() => import("./pages/fr/MeilleursOutilsIAFR"));
 const AutomatiserMarketingIAFR = lazy(() => import("./pages/fr/AutomatiserMarketingIAFR"));
+const CasUsageFR = lazy(() => import("./pages/fr/CasUsageFR"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
