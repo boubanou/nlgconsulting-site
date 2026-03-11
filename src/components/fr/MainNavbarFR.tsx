@@ -23,7 +23,7 @@ const solutionsData = {
     links: [
       { label: "Conseil IA", to: "/fr/conseil-ia" },
       { label: "Automatisation IA", to: "/fr/automation-ia" },
-      { label: "Agents IA", to: "/fr/agents-ia" },
+      { label: "Agents IA", to: "/fr/agents-ia-entreprise" },
       { label: "Automation Marketing IA", to: "/fr/automation-marketing-ia" },
       { label: "Automation Commerciale IA", to: "/fr/automation-commerciale-ia" },
       { label: "Conseil Prompt Engineering", to: "/fr/conseil-prompt-engineering" },
