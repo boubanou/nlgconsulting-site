@@ -35,8 +35,8 @@ const solutionsData = {
     links: [
       { label: "Vente & BD", to: "/fr/vente" },
       { label: "SDR Externalisé", to: "/fr/sdr-externalise" },
-      { label: "Prise de Rendez-vous", to: "/fr/prise-rendez-vous" },
-      { label: "Conseil Go-to-Market", to: "/fr/go-to-market" },
+      { label: "Prise de Rendez-vous", to: "/fr/prise-de-rendez-vous-b2b" },
+      { label: "Conseil Go-to-Market", to: "/fr/strategie-go-to-market" },
       { label: "Génération de Leads IA", to: "/fr/generation-leads-ia" },
     ],
   },
