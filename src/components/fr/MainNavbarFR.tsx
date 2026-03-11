@@ -23,7 +23,7 @@ const solutionsData = {
     links: [
       { label: "Conseil IA", to: "/fr/conseil-ia" },
       { label: "Automatisation IA", to: "/fr/automation-ia" },
-      { label: "Agents IA", to: "/fr/agents-ia" },
+      { label: "Agents IA", to: "/fr/agents-ia-entreprise" },
       { label: "Automation Marketing IA", to: "/fr/automation-marketing-ia" },
       { label: "Automation Commerciale IA", to: "/fr/automation-commerciale-ia" },
       { label: "Conseil Prompt Engineering", to: "/fr/conseil-prompt-engineering" },
@@ -35,15 +35,15 @@ const solutionsData = {
     links: [
       { label: "Vente & BD", to: "/fr/vente" },
       { label: "SDR Externalisé", to: "/fr/sdr-externalise" },
-      { label: "Prise de Rendez-vous", to: "/fr/prise-rendez-vous" },
-      { label: "Conseil Go-to-Market", to: "/fr/go-to-market" },
+      { label: "Prise de Rendez-vous", to: "/fr/prise-de-rendez-vous-b2b" },
+      { label: "Conseil Go-to-Market", to: "/fr/strategie-go-to-market" },
       { label: "Génération de Leads IA", to: "/fr/generation-leads-ia" },
     ],
   },
   advisory: {
     title: "Conseil & Formation",
     links: [
-      { label: "Advisory", to: "/fr/advisory" },
+      { label: "Advisory", to: "/fr/conseil" },
       { label: "Formation IA pour Équipes", to: "/fr/formation-ia-entreprise" },
       { label: "Consultant IA Fractionnel", to: "/fr/consultant-ia-fractionnel" },
     ],
