@@ -43,7 +43,7 @@ const solutionsData = {
   advisory: {
     title: "Conseil & Formation",
     links: [
-      { label: "Advisory", to: "/fr/advisory" },
+      { label: "Advisory", to: "/fr/conseil" },
       { label: "Formation IA pour Équipes", to: "/fr/formation-ia-entreprise" },
       { label: "Consultant IA Fractionnel", to: "/fr/consultant-ia-fractionnel" },
     ],
