@@ -19,7 +19,6 @@ import {
   Calendar,
   Phone,
   Globe,
-  Rocket,
   Target
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
@@ -41,7 +40,7 @@ const Home = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "AI consulting, automation, and business growth systems for B2B companies. Strategy, implementation, and outsourced AI execution for founders and executives worldwide.",
+        "description": "AI-powered growth systems, revenue operations, and strategic advisory for FinTech, PropTech, SaaS, and B2B companies. AI consulting, agentic workflows, GTM structure, RevOps, and outbound infrastructure.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
@@ -51,7 +50,7 @@ const Home = () => {
         "foundingDate": "2020",
         "areaServed": ["Europe", "North America", "Middle East"],
         "sameAs": ["https://www.linkedin.com/company/nlg-consulting/"],
-        "knowsAbout": ["AI Consulting", "AI Automation", "AI Agents", "B2B Lead Generation", "Prompt Engineering", "Go-To-Market Strategy", "Business Process Automation", "Outsourced AI Implementation"]
+        "knowsAbout": ["AI Consulting", "AI Automation", "AI Agents", "Agentic AI", "Revenue Operations", "B2B Lead Generation", "GTM Strategy", "Workflow Automation", "Outsourced SDR", "Claude Code Automation"]
       },
       {
         "@type": "BreadcrumbList",
@@ -66,52 +65,52 @@ const Home = () => {
     {
       icon: <Brain className="w-6 h-6" />,
       title: "AI Consulting",
-      description: "Strategic AI advisory for businesses navigating the transformation toward intelligent operations.",
+      description: "Practical AI strategy for business operations, sales, content, and growth — tied to measurable outcomes, not slide decks.",
       link: "/ai-consulting",
       cta: "Explore AI Consulting"
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "AI Automation",
-      description: "End-to-end workflow automation — from marketing and sales to operations and content.",
+      title: "AI Workflow Automation",
+      description: "Design and deploy AI-powered workflows across marketing, sales, operations, and content production using Claude, GPT, Make, and custom pipelines.",
       link: "/ai-automation",
       cta: "Explore Automation"
     },
     {
       icon: <Bot className="w-6 h-6" />,
-      title: "AI Agents",
-      description: "Custom AI agents that handle sales, marketing, content, and operations autonomously.",
+      title: "AI Agents & Agentic Systems",
+      description: "Custom AI agents built on Claude, GPT, and agentic frameworks — handling research, prospecting, content, and multi-step business workflows.",
       link: "/ai-agents-for-business",
       cta: "Explore AI Agents"
     },
     {
       icon: <Megaphone className="w-6 h-6" />,
-      title: "AI Marketing",
-      description: "Automated content creation, SEO, social media, and campaign management powered by AI.",
+      title: "AI Marketing Systems",
+      description: "AI-powered content engines, SEO automation, social media workflows, and campaign systems that scale output without scaling headcount.",
       link: "/ai-marketing-automation",
       cta: "Explore AI Marketing"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI Sales Systems",
-      description: "AI-powered SDR, outbound, appointment setting, and pipeline automation for B2B growth.",
+      title: "AI Sales & RevOps",
+      description: "AI-enhanced outbound architecture, pipeline systems, CRM workflows, and revenue operations for consistent qualified meeting generation.",
       link: "/ai-sales-automation",
       cta: "Explore AI Sales"
     },
     {
       icon: <GraduationCap className="w-6 h-6" />,
-      title: "Prompt Engineering",
-      description: "Expert consulting and training on prompt design, AI workflows, and team upskilling.",
+      title: "Prompt Engineering & AI Training",
+      description: "Hands-on training for teams on prompt design, AI workflow orchestration, Claude Code, and practical AI adoption for daily operations.",
       link: "/prompt-engineering-consulting",
       cta: "Explore Training"
     }
   ];
 
   const existingServices = [
-    { icon: <Users className="w-5 h-5" />, title: "Sales & BD", description: "Outsourced SDR, multichannel outbound, and pipeline systems.", link: "/sales" },
-    { icon: <Zap className="w-5 h-5" />, title: "Web Studio", description: "Revenue-ready websites delivered in 72 hours.", link: "/web" },
-    { icon: <Target className="w-5 h-5" />, title: "Advisory", description: "Strategic guidance on GTM, monetization, and scaling.", link: "/advisory" },
-    { icon: <Building2 className="w-5 h-5" />, title: "Ventures", description: "Platforms we build and operate across PropTech, FinTech, and Media.", link: "/ventures" },
+    { icon: <Users className="w-5 h-5" />, title: "Outbound & Lead Generation", description: "AI-enhanced outbound systems, outsourced SDR infrastructure, and B2B meeting generation.", link: "/sales" },
+    { icon: <Zap className="w-5 h-5" />, title: "Conversion Websites & SEO", description: "Revenue-ready websites, landing pages, and SEO authority assets — built as business tools, not design projects.", link: "/web" },
+    { icon: <Target className="w-5 h-5" />, title: "Strategic Advisory", description: "GTM structure, commercial model review, AI adoption planning, and growth systems strategy for founders.", link: "/advisory" },
+    { icon: <Building2 className="w-5 h-5" />, title: "Ventures & Platforms", description: "Platforms we build, test, and operate across PropTech, FinTech, and Media — execution-first.", link: "/ventures" },
   ];
 
   const logos = [
@@ -133,8 +132,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AI Consulting & Automation for Business | NLG Consulting</title>
-        <meta name="description" content="AI consulting, automation systems, and outsourced implementation for B2B companies. Strategy, AI agents, prompt engineering, and growth systems. Book a free call." />
+        <title>AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting</title>
+        <meta name="description" content="AI consulting, agentic workflows, RevOps, GTM strategy, and outbound infrastructure for FinTech, PropTech, SaaS & B2B companies. Qualified meetings and measurable revenue. Book a strategy call." />
         <link rel="canonical" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -142,31 +141,31 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/" />
-        <meta property="og:title" content="AI Consulting & Automation for Business | NLG Consulting" />
-        <meta property="og:description" content="AI consulting, automation systems, and outsourced implementation for B2B companies. Strategy, AI agents, prompt engineering, and growth systems." />
+        <meta property="og:title" content="AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting" />
+        <meta property="og:description" content="AI consulting, agentic workflows, RevOps, GTM strategy, and outbound infrastructure. Qualified meetings and measurable revenue." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Consulting & Automation for Business | NLG Consulting" />
-        <meta name="twitter:description" content="AI consulting, automation systems, and outsourced implementation for B2B companies." />
+        <meta name="twitter:title" content="AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting" />
+        <meta name="twitter:description" content="AI consulting, agentic workflows, RevOps, and outbound infrastructure for B2B companies." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
         <MainNavbar />
 
-        {/* Hero — Premium, calm, strategic */}
+        {/* Hero */}
         <section className="pt-32 md:pt-40 pb-20 px-4">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center space-y-8">
               <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase">
-                AI Consulting · Automation · Implementation
+                AI Consulting · RevOps · Growth Systems
               </Badge>
               <h1 className="text-foreground leading-[1.1] max-w-4xl mx-auto">
-                We help businesses understand, deploy, and scale{" "}
-                <span className="text-gradient">AI systems</span>
+                AI-Powered Growth Systems for{" "}
+                <span className="text-gradient">FinTech, PropTech & B2B Companies</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Strategic AI consulting, workflow automation, AI agents, and outsourced implementation — for founders, executives, and growth teams worldwide.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                We help founders and SMEs deploy AI consulting, agentic workflows, GTM structure, RevOps, outbound systems, and conversion assets that turn strategy into qualified meetings and measurable revenue.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <Button asChild size="lg" className="text-base px-8">
@@ -176,7 +175,7 @@ const Home = () => {
                 </Button>
                 <Button asChild variant="outline" size="lg" className="text-base px-8">
                   <Link to="/services">
-                    Explore Services
+                    Explore Our Services
                   </Link>
                 </Button>
               </div>
@@ -184,14 +183,14 @@ const Home = () => {
           </div>
         </section>
 
-        {/* What We Do — AI Cluster Navigation */}
+        {/* AI Systems Cluster */}
         <section className="section-padding bg-muted/30">
           <div className="container-wide">
             <div className="text-center mb-14">
-              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">What We Do</p>
-              <h2 className="mb-4">AI-Powered Business Systems</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                From strategy to execution — we help companies integrate AI into their marketing, sales, operations, and growth infrastructure.
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">What We Build</p>
+              <h2 className="mb-4">AI Systems, Revenue Infrastructure & Growth Operations</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                From AI consulting and workflow automation to agentic systems and revenue operations — we deploy AI into real business processes that generate commercial results.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -215,18 +214,18 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Strategic Positioning Statement */}
+        {/* Why NLG — Operator Positioning */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-6">Why Companies Choose NLG</h2>
+            <h2 className="mb-6">Operator-Led Execution, Not Theory</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto">
-              Most businesses know they need AI — but struggle with where to start, what to prioritize, and how to implement without disrupting operations. We bridge the gap between AI strategy and real-world execution.
+              Most companies know they need AI and better commercial systems — but struggle with where to start, what to prioritise, and how to execute without disrupting operations. We bridge the gap between strategy and measurable business performance.
             </p>
             <div className="grid sm:grid-cols-3 gap-8 text-left">
               {[
-                { title: "Strategy First", desc: "We start with your business goals — not the technology. Every engagement begins with a clear roadmap tied to measurable outcomes." },
-                { title: "Operator-Led", desc: "Our team has built and scaled companies. We bring operational experience from PropTech, FinTech, SaaS, and Media — not just theory." },
-                { title: "Full Execution", desc: "From consulting to implementation, we handle the entire lifecycle. Outsource AI execution without hiring a full team." }
+                { title: "Business-First AI", desc: "Every engagement starts with your commercial objectives — not the technology. We deploy AI workflows, agents, and automation tied to pipeline, revenue, and operational efficiency." },
+                { title: "Built by Operators", desc: "We've built and scaled companies across PropTech, FinTech, SaaS, and Media. This is hands-on operating experience applied to your growth challenges — not academic advisory." },
+                { title: "Strategy Through Execution", desc: "From AI consulting to outbound infrastructure, CRM architecture to conversion websites — we handle the full lifecycle. Outsource your growth systems without building a team from scratch." }
               ].map((item, i) => (
                 <div key={i} className="space-y-3">
                   <div className="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
@@ -240,17 +239,17 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Outsourced AI Implementation CTA */}
+        {/* Revenue Systems CTA */}
         <section className="py-16 px-4 bg-primary text-primary-foreground">
           <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Outsourced AI Implementation</h2>
+            <h2 className="text-primary-foreground mb-4">Your External AI & Growth Operations Team</h2>
             <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Don't have an in-house AI team? We act as your external AI department — deploying automation, building agents, and running systems so you don't have to.
+              No in-house AI team? No structured RevOps? We operate as your external growth systems department — deploying AI workflows, building outbound infrastructure, and running revenue operations so your team stays focused on closing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
                 <Link to="/outsourced-ai-implementation">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  Explore Outsourced AI <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline-light" className="text-base px-8">
@@ -260,14 +259,14 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Existing Services — Compact */}
+        {/* Outbound, Web, Advisory, Ventures */}
         <section className="section-padding">
           <div className="container-wide">
             <div className="text-center mb-12">
-              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Also</p>
-              <h2 className="mb-4">Sales, Studio & Advisory</h2>
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Beyond AI</p>
+              <h2 className="mb-4">Outbound Systems, Conversion Assets & Strategic Advisory</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Beyond AI — we operate sales infrastructure, build websites, and provide strategic advisory.
+                We also build and operate outbound infrastructure, revenue-ready websites, and strategic advisory for founders navigating growth, monetisation, and market positioning.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -292,8 +291,8 @@ const Home = () => {
         <section className="py-16 px-4 bg-muted/30">
           <div className="container-wide">
             <div className="text-center mb-10">
-              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Trusted By</p>
-              <h2 className="mb-3">Working With Industry Leaders</h2>
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Professional Network</p>
+              <h2 className="mb-3">Operating Across Industries</h2>
               <div className="flex items-center justify-center gap-2 mt-3">
                 <Star className="w-4 h-4 text-secondary fill-secondary" />
                 <span className="text-sm font-medium">91 verified reviews</span>
@@ -321,17 +320,17 @@ const Home = () => {
           </div>
         </section>
 
-        {/* What Clients Value — Not fake testimonials */}
+        {/* Client Impact */}
         <section className="section-padding">
           <div className="container-wide">
             <div className="text-center mb-12">
-              <h2 className="mb-4">What Clients Say</h2>
+              <h2 className="mb-4">Client Outcomes</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { quote: "NLG transformed our outbound strategy. We went from 0 to 20 qualified meetings per month.", name: "Tech Startup CEO", company: "Series A SaaS" },
-                { quote: "The website was delivered in 3 days with Stripe, Calendly, and SEO—all working perfectly.", name: "Agency Founder", company: "Digital Agency" },
-                { quote: "Their strategic advice on go-to-market was invaluable for our European expansion.", name: "VP Sales", company: "FinTech Scale-up" }
+                { quote: "NLG restructured our entire outbound architecture. We went from scattered initiatives to a system generating 20+ qualified meetings monthly.", name: "CEO", company: "Series A SaaS" },
+                { quote: "The combination of AI workflows, conversion website, and SEO gave us a complete commercial engine — deployed in weeks, not months.", name: "Founder", company: "FinTech Platform" },
+                { quote: "Their strategic advisory on GTM and revenue operations was instrumental in our European market entry. Execution-focused, not just frameworks.", name: "VP Sales", company: "PropTech Scale-up" }
               ].map((testimonial, i) => (
                 <Card key={i} className="border border-border">
                   <CardContent className="p-6">
@@ -352,7 +351,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Founder Positioning — Brief */}
+        {/* Founder */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="container-tight">
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -363,7 +362,7 @@ const Home = () => {
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Founded by</p>
                 <h3 className="text-xl font-semibold mb-2">Gregory Brenig</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  15+ years building ventures across PropTech, FinTech, and technology. Author, operator, and strategic advisor helping businesses deploy AI systems that drive measurable growth.
+                  15+ years building ventures and growth systems across PropTech, FinTech, and technology. Operator, author, and strategic advisor helping companies deploy AI-powered revenue infrastructure and move from scattered initiatives to structured commercial execution.
                 </p>
                 <div className="flex gap-3 mt-4">
                   <Button asChild variant="outline" size="sm">
@@ -378,14 +377,14 @@ const Home = () => {
         {/* Final CTA */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-4">Ready to deploy AI in your business?</h2>
+            <h2 className="mb-4">Build Your Growth System</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              Book a free 15-minute strategy call. We'll discuss your challenges and outline a clear AI roadmap.
+              Book a strategy call to discuss your AI adoption, outbound architecture, revenue operations, or commercial performance challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-base px-8">
                 <Link to="/book">
-                  <Calendar className="mr-2 w-4 h-4" /> Book a Call
+                  <Calendar className="mr-2 w-4 h-4" /> Book a Strategy Call
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-base px-8">
