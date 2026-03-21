@@ -23,10 +23,11 @@ const Advisory = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Strategic Business Advisory",
+        "name": "Strategic Advisory & GTM Structuring",
         "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
-        "description": "Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and international expansion.",
-        "url": "https://www.nlgconsulting.co/advisory"
+        "description": "Operator-led strategic advisory for FinTech, PropTech, SaaS, and B2B founders. GTM structuring, revenue operations, commercial model review, AI adoption planning, and growth systems strategy.",
+        "url": "https://www.nlgconsulting.co/advisory",
+        "areaServed": ["Europe", "North America", "Middle East"]
       },
       {
         "@type": "BreadcrumbList",
@@ -34,48 +35,32 @@ const Advisory = () => {
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
           { "@type": "ListItem", "position": 2, "name": "Advisory", "item": "https://www.nlgconsulting.co/advisory" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is strategic advisory for founders?", "acceptedAnswer": { "@type": "Answer", "text": "Strategic advisory provides founders and executives with operator-level guidance on GTM structure, commercial model design, revenue operations, AI adoption, and growth systems — focused on execution, not slides." } },
+          { "@type": "Question", "name": "How does NLG advisory differ from traditional consulting?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional consulting delivers strategy decks. We deliver structured execution support — every advisory session includes actionable frameworks, accountability, and optional implementation through our service divisions." } },
+          { "@type": "Question", "name": "Which industries does NLG advise?", "acceptedAnswer": { "@type": "Answer", "text": "We work with founders and leadership teams in FinTech, PropTech, SaaS, and B2B services. Our operator experience spans 15+ years across Europe, North America, and the Middle East." } }
+        ]
       }
     ]
   };
 
   const areas = [
-    {
-      icon: <Layers className="w-6 h-6" />,
-      title: "Business Structuring",
-      description: "Optimize your corporate structure, operations, and governance for growth and efficiency."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Go-to-Market Strategy",
-      description: "Launch new products and enter new markets with a validated, execution-ready GTM plan."
-    },
-    {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: "Monetization",
-      description: "Design and optimize revenue models, pricing strategies, and recurring revenue streams."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Scaling & Expansion",
-      description: "Scale operations, expand geographically, and build systems for sustainable growth."
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Tech & AI Strategy",
-      description: "Leverage technology and AI to automate, optimize, and differentiate your business."
-    },
-    {
-      icon: <Lightbulb className="w-6 h-6" />,
-      title: "Blockchain & Crypto",
-      description: "Serious blockchain strategy for tokenization, smart contracts, and decentralized infrastructure."
-    }
+    { icon: <TrendingUp className="w-6 h-6" />, title: "GTM Strategy & Revenue Operations", description: "Structure your go-to-market, define revenue operations, and build commercial systems that generate measurable pipeline." },
+    { icon: <Layers className="w-6 h-6" />, title: "Offer Clarity & Market Positioning", description: "Sharpen your value proposition, competitive positioning, and pricing architecture for stronger commercial traction." },
+    { icon: <DollarSign className="w-6 h-6" />, title: "Commercial Model Review", description: "Audit and optimise your revenue model, unit economics, and monetisation strategy for sustainable growth." },
+    { icon: <Cpu className="w-6 h-6" />, title: "AI Adoption Planning", description: "Practical AI adoption roadmaps connecting workflow automation, AI agents, and operational AI to real business outcomes." },
+    { icon: <Globe className="w-6 h-6" />, title: "International Expansion", description: "Market entry strategy, operational structuring, and commercial execution for international growth." },
+    { icon: <Lightbulb className="w-6 h-6" />, title: "Growth Systems Architecture", description: "Design the systems, processes, and operating cadence that turn strategy into structured, repeatable execution." }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Strategic Business Advisory for SaaS & PropTech | NLG Consulting</title>
-        <meta name="description" content="Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and international expansion." />
+        <title>Strategic Advisory | GTM & Growth Systems | NLG</title>
+        <meta name="description" content="Operator-led strategic advisory for FinTech, PropTech, SaaS, and B2B founders. GTM structuring, RevOps, commercial model review, AI adoption, and growth systems." />
         <link rel="canonical" href="https://www.nlgconsulting.co/advisory" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/advisory" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil" />
@@ -83,76 +68,62 @@ const Advisory = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/advisory" />
-        <meta property="og:title" content="Strategic Business Advisory for SaaS & PropTech | NLG Consulting" />
-        <meta property="og:description" content="Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization, and expansion." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:title" content="Strategic Advisory | GTM & Growth Systems | NLG Consulting" />
+        <meta property="og:description" content="Operator-led strategic advisory for FinTech, PropTech, SaaS, and B2B founders. Execution-focused, not slides." />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Strategic Business Advisory for SaaS & PropTech | NLG Consulting" />
-        <meta name="twitter:description" content="Operator-led strategic advisory for SaaS founders and PropTech operators. Revenue strategy, GTM, monetization." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
         <MainNavbar />
 
-        {/* Hero */}
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">
-              Advisory
-            </Badge>
+            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Advisory</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Strategic Business Advisory for Founders and Executives
+              Strategic Advisory for Founders Building Growth Systems
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Expert advisory on business structuring, go-to-market strategy, monetization, scaling operations, and technology transformation.
+              Operator-led advisory on GTM structuring, revenue operations, commercial model design, AI adoption, and growth systems architecture — focused on execution, not slides.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/book">
-                Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              <Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
 
-        {/* SEO Content - Advisory Introduction */}
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="prose prose-lg text-muted-foreground max-w-none">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Strategic Advisory That Drives Real Results</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Execution-Focused Advisory, Not Strategy Decks</h2>
               <p>
-                Most consulting engagements end with a strategy deck and a handshake. Months later, that deck sits unused while the same problems persist. We take a fundamentally different approach.
+                Most consulting engagements end with a strategy deck and a handshake. Months later, that deck sits unused while the same challenges persist. Leadership teams don't lack ideas — they lack structured execution.
               </p>
               <p>
-                NLG Consulting's advisory practice is built around execution, not slides. Every strategy session includes actionable next steps, accountability frameworks, and optional implementation support. We work alongside you as a thinking partner, not an outside observer.
+                NLG Consulting's advisory practice is built around operational clarity. Every session produces actionable frameworks, accountability structures, and — when needed — direct implementation support through our <Link to="/services" className="text-primary hover:underline font-medium">service divisions</Link>.
               </p>
               <p>
-                Our advisors bring diverse, hands-on experience from building and scaling companies across PropTech, FinTech, Media, and Technology. We've faced the same challenges you're facing—fundraising, go-to-market, team building, scaling operations—and we've developed frameworks that work in the real world.
+                Our advisory is informed by 15+ years of operator experience building and scaling companies across FinTech, PropTech, and B2B technology markets in Europe, Israel, and North America. We've navigated the same challenges you're facing — GTM design, revenue model optimisation, team structuring, international expansion, and AI adoption — and built frameworks that work in practice, not just in theory.
               </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Who Benefits From Strategic Advisory</h3>
-              <p>
-                Our advisory services are designed for founders and executives who are facing inflection points—moments that require external perspective and expertise. Common scenarios include:
-              </p>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">When Strategic Advisory Creates the Most Value</h3>
               <ul>
-                <li>Launching a new product or entering a new market</li>
-                <li>Scaling from startup to growth stage</li>
-                <li>Preparing for fundraising or M&A</li>
-                <li>Restructuring operations for efficiency</li>
-                <li>Building or transforming technology infrastructure</li>
-                <li>Developing go-to-market and monetization strategies</li>
+                <li>Structuring or restructuring your go-to-market and revenue operations</li>
+                <li>Clarifying your offer, positioning, and commercial model</li>
+                <li>Planning practical AI adoption that connects to business outcomes</li>
+                <li>Preparing for fundraising, M&A, or board-level conversations</li>
+                <li>Scaling commercial operations without proportional headcount growth</li>
+                <li>Entering new markets or verticals with structured execution</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Areas */}
         <section className="py-20 px-4 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Advisory Areas</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Advisory Domains</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                We provide strategic guidance across these key domains.
+                Structured guidance across the areas that drive commercial performance.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -171,7 +142,6 @@ const Advisory = () => {
           </div>
         </section>
 
-        {/* How We Work */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
@@ -180,12 +150,12 @@ const Advisory = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Strategy Sessions</h3>
+                  <h3 className="text-xl font-semibold mb-4">Focused Strategy Sessions</h3>
                   <p className="text-muted-foreground mb-4">
-                    Focused 1-on-1 sessions to tackle specific challenges, develop strategies, and create action plans.
+                    1-on-1 sessions designed to tackle specific inflection points — GTM design, commercial restructuring, AI adoption, or growth system architecture.
                   </p>
                   <ul className="space-y-2">
-                    {["Deep-dive analysis", "Actionable recommendations", "Follow-up support"].map((item, i) => (
+                    {["Structured diagnostic and analysis", "Actionable frameworks and next steps", "Implementation support when needed"].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-primary" />
                         {item}
@@ -196,12 +166,12 @@ const Advisory = () => {
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Ongoing Advisory</h3>
+                  <h3 className="text-xl font-semibold mb-4">Ongoing Advisory Partnership</h3>
                   <p className="text-muted-foreground mb-4">
-                    Continuous strategic partnership with regular check-ins, guidance, and support.
+                    Continuous strategic partnership with regular operating reviews, decision support, and access to our execution capabilities.
                   </p>
                   <ul className="space-y-2">
-                    {["Monthly strategy calls", "Slack/email access", "Resource sharing"].map((item, i) => (
+                    {["Monthly strategy and operating reviews", "Direct access via Slack or email", "Priority access to service divisions"].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-primary" />
                         {item}
@@ -214,41 +184,35 @@ const Advisory = () => {
           </div>
         </section>
 
-        {/* SEO Content - Working with Us */}
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="prose prose-lg text-muted-foreground max-w-none">
-              <h2 className="text-3xl font-bold text-foreground mb-6">What Sets Our Advisory Apart</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Why Operator-Led Advisory Is Different</h2>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Built on Operating Experience</h3>
               <p>
-                Traditional consultants observe from the outside and recommend changes. We've built companies ourselves, so we understand the real challenges of execution—not just the theory.
+                Our advisory practice is led by operators who've built companies, scaled commercial teams, and navigated complex markets firsthand. This isn't academic knowledge — it's structured experience from real business environments.
               </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Operator Experience</h3>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Strategy Connected to Execution</h3>
               <p>
-                Our advisory team includes founders who've built and exited companies, executives who've scaled startups to significant revenue, and operators who've built sales, marketing, and product functions from scratch. This isn't theoretical knowledge—it's battle-tested experience.
+                Unlike traditional advisors, we offer direct implementation support. Need an <Link to="/sales" className="text-primary hover:underline font-medium">outbound system</Link>? We build it. Need <Link to="/ai-automation" className="text-primary hover:underline font-medium">AI workflow automation</Link>? We deploy it. Need a <Link to="/web" className="text-primary hover:underline font-medium">conversion website</Link>? We deliver it. Advisory and execution in one firm.
               </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Implementation Support</h3>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">International Perspective</h3>
               <p>
-                Unlike traditional advisors who leave you with a strategy to implement on your own, we offer optional implementation support through our service divisions. Need a sales team? Our <Link to="/sales" className="text-primary hover:underline font-medium">SDR services</Link> can help. Need a website? <Link to="/web" className="text-primary hover:underline font-medium">NLG Studio</Link> delivers in 72 hours. This integration between strategy and execution is unique to NLG.
-              </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global Perspective</h3>
-              <p>
-                With experience across Europe, North America, and the Middle East, we bring global perspective to local challenges. Whether you're expanding internationally or optimizing your home market, we have relevant insights. Explore our <Link to="/ventures" className="text-primary hover:underline font-medium">venture portfolio</Link> to see how we apply these principles.
+                With operating experience across Europe, North America, and the Middle East, we bring relevant context to international expansion, market-specific GTM design, and cross-border commercial operations. See how we apply these principles through our <Link to="/ventures" className="text-primary hover:underline font-medium">venture portfolio</Link>.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Related Services */}
         <RelatedServices currentService="advisory" />
 
-        {/* CTA */}
         <section className="py-20 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let's Build Your Strategy
+              Discuss Your Growth Structure
             </h2>
             <p className="text-lg opacity-90 mb-8">
-              Book a 15-minute call to discuss your challenges and how we can help.
+              If you are reviewing your GTM model, commercial operations, or growth systems architecture — we can assess where structure and operating leverage can be improved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
