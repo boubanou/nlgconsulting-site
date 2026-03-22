@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Brain, Target, Users, Building2, Lightbulb, CheckCircle, Workflow, TrendingUp } from "lucide-react";
+import { ArrowRight, Brain, Target, Users, Building2, Lightbulb, CheckCircle, Workflow } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 
@@ -14,9 +14,9 @@ const ConseilIAFR = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "Conseil en Intelligence Artificielle pour Entreprises",
+        "name": "Conseil en IA pour la Croissance & les Opérations Business",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Conseil stratégique en IA pour entreprises, startups et PME. Nous vous aidons à comprendre, planifier et déployer l'intelligence artificielle dans vos opérations.",
+        "description": "Conseil en IA opérationnel pour FinTech, PropTech, SaaS et entreprises B2B. Nous aidons les dirigeants à adopter des workflows IA, des systèmes agentiques et de l'IA opérationnelle pour améliorer la performance commerciale.",
         "url": "https://www.nlgconsulting.co/fr/conseil-ia",
         "areaServed": "Worldwide",
         "serviceType": "AI Consulting"
@@ -24,10 +24,10 @@ const ConseilIAFR = () => {
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "Qu'est-ce que le conseil en IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Le conseil en IA aide les entreprises à comprendre comment l'intelligence artificielle peut transformer leurs opérations, leur marketing, leurs ventes et leurs processus internes. Un consultant IA identifie les opportunités, conçoit la stratégie et accompagne l'implémentation." }},
-          { "@type": "Question", "name": "Le conseil en IA est-il adapté aux PME ?", "acceptedAnswer": { "@type": "Answer", "text": "Absolument. L'IA n'est plus réservée aux grandes entreprises. Les PME peuvent tirer parti d'outils comme ChatGPT, Claude, Make ou Zapier pour automatiser des tâches répétitives, améliorer leur marketing et accélérer leurs ventes avec un investissement raisonnable." }},
-          { "@type": "Question", "name": "Combien coûte un accompagnement en conseil IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Les tarifs varient selon la complexité du projet. Nous proposons des missions ponctuelles (audit, roadmap) et des accompagnements continus (fractional AI consultant). Chaque engagement commence par un appel découverte gratuit." }},
-          { "@type": "Question", "name": "Par où commencer avec l'IA dans mon entreprise ?", "acceptedAnswer": { "@type": "Answer", "text": "Commencez par un audit IA : identifiez les processus chronophages, les tâches répétitives et les points de friction dans vos opérations. C'est exactement ce que nous faisons lors de notre premier échange." }}
+          { "@type": "Question", "name": "Qu'est-ce que le conseil en IA pour les entreprises ?", "acceptedAnswer": { "@type": "Answer", "text": "Le conseil en IA aide les entreprises à identifier où l'intelligence artificielle — workflows IA, systèmes agentiques, automatisation Claude Code — peut améliorer les opérations, les ventes, le marketing et la prise de décision. Il fait le lien entre les capacités IA disponibles et les résultats business concrets." }},
+          { "@type": "Question", "name": "En quoi le conseil en IA diffère-t-il de l'achat d'outils IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Les outils sont des composants. Le conseil en IA fournit l'architecture — comprendre quels processus bénéficient de l'IA, concevoir les workflows, sélectionner les modèles et construire des systèmes connectés aux opérations réelles." }},
+          { "@type": "Question", "name": "Qui bénéficie du conseil en IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Les fondateurs, CEO et dirigeants opérationnels de sociétés FinTech, PropTech, SaaS et B2B qui veulent adopter l'IA de manière structurée — liée au revenu, à l'efficacité et à des résultats mesurables." }},
+          { "@type": "Question", "name": "Qu'est-ce que le conseil en IA agentique ?", "acceptedAnswer": { "@type": "Answer", "text": "Le conseil en IA agentique se concentre sur la conception de systèmes IA multi-étapes — des agents IA — capables de raisonner, planifier, utiliser des outils et exécuter des processus business complexes avec une supervision humaine." }}
         ]
       },
       {
@@ -43,14 +43,14 @@ const ConseilIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Conseil en IA pour Entreprises | Stratégie & Implémentation | NLG Consulting</title>
-        <meta name="description" content="Conseil stratégique en intelligence artificielle pour entreprises, startups et PME. Audit IA, roadmap, formation et accompagnement à l'implémentation. Réservez un appel gratuit." />
+        <title>Conseil en IA | Workflows & Systèmes Agentiques | NLG</title>
+        <meta name="description" content="Conseil en IA opérationnel pour FinTech, PropTech, SaaS & B2B. Workflows IA, systèmes agentiques, automatisation Claude Code et IA opérationnelle liés au revenu et à l'efficacité." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/ai-consulting" />
-        <meta property="og:title" content="Conseil en IA pour Entreprises | NLG Consulting" />
-        <meta property="og:description" content="Conseil stratégique en intelligence artificielle pour entreprises. Audit, roadmap et implémentation IA." />
+        <meta property="og:title" content="Conseil en IA | Workflows & Systèmes Agentiques | NLG" />
+        <meta property="og:description" content="Conseil en IA opérationnel : workflows, systèmes agentiques et IA opérationnelle pour FinTech, PropTech & B2B." />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr/conseil-ia" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -58,124 +58,83 @@ const ConseilIAFR = () => {
 
       <MainNavbarFR />
       <main className="min-h-screen bg-background">
-        {/* Hero */}
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Conseil IA</Badge>
             <h1 className="mb-6">
-              Conseil en Intelligence Artificielle{" "}
-              <span className="text-gradient">pour Entreprises</span>
+              Conseil en IA pour les{" "}
+              <span className="text-gradient">Opérations & la Croissance</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Comprenez où et comment l'IA peut transformer vos opérations. Nous vous aidons à construire une stratégie IA claire, identifier les opportunités concrètes et déployer les bons outils — sans complexité inutile.
+              La plupart des entreprises savent que l'IA compte. Peu savent comment la connecter au revenu, aux opérations et à la performance commerciale. Nous aidons les dirigeants à adopter des workflows IA, des systèmes agentiques et de l'IA opérationnelle de manière structurée et mesurable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver une consultation gratuite <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
-              <Button asChild variant="outline" size="lg"><Link to="/fr/contact">Nous contacter</Link></Button>
+              <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild variant="outline" size="lg"><Link to="/fr/services">Explorer nos services</Link></Button>
             </div>
           </div>
         </section>
 
-        {/* Problem */}
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="text-center mb-4">Pourquoi les entreprises ont besoin de conseil en IA</h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-              L'intelligence artificielle évolue à une vitesse sans précédent. Des outils comme ChatGPT, Claude d'Anthropic ou les systèmes de Google transforment la façon dont les entreprises opèrent. Mais la plupart des organisations ne savent pas par où commencer, quels outils choisir, ni comment intégrer l'IA dans leurs processus existants.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { icon: Brain, title: "Complexité technologique", desc: "L'écosystème IA est vaste — LLMs, agents, automatisation, fine-tuning. Un consultant vous aide à naviguer les choix et éviter les erreurs coûteuses." },
-                { icon: Target, title: "Priorités floues", desc: "Beaucoup d'entreprises investissent dans l'IA sans stratégie claire. Nous identifions les cas d'usage à fort impact en premier." },
-                { icon: TrendingUp, title: "Avantage compétitif", desc: "Les entreprises qui intègrent l'IA dans leurs processus prennent une avance significative sur leurs concurrents. Ne restez pas à la traîne." }
-              ].map((item, i) => (
-                <Card key={i} className="text-center border-border"><CardContent className="p-6"><item.icon className="w-8 h-8 mx-auto mb-4 text-primary" /><h3 className="font-semibold mb-2">{item.title}</h3><p className="text-sm text-muted-foreground">{item.desc}</p></CardContent></Card>
-              ))}
+            <h2 className="mb-6">L'écart entre les outils IA et les résultats business</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                L'écosystème IA évolue rapidement — OpenAI, Claude d'Anthropic, Google Gemini et les modèles open source créent des capacités inédites. Mais pour la plupart des opérateurs FinTech, PropTech, fondateurs SaaS et entreprises B2B, le défi n'est pas l'accès à la technologie. C'est de savoir comment déployer l'IA de manière à réellement améliorer la performance commerciale.
+              </p>
+              <p>
+                Sans conseil en IA structuré, les entreprises expérimentent sans direction : elles s'abonnent à des outils sous-utilisés, lancent des pilotes isolés sans plan d'intégration, ou retardent l'adoption pendant que les concurrents construisent des avantages opérationnels.
+              </p>
+              <p>
+                Le conseil en IA connecte la technologie aux résultats. Concevoir des <Link to="/fr/automation-ia" className="text-primary hover:underline">workflows IA</Link> qui réduisent la charge manuelle, construire des <Link to="/fr/agents-ia-entreprise" className="text-primary hover:underline">systèmes IA agentiques</Link> pour les processus multi-étapes, et créer une clarté opérationnelle sur où l'IA apporte un vrai levier.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Services */}
         <section className="section-padding">
-          <div className="container-tight">
-            <h2 className="text-center mb-4">Ce que comprend notre conseil en IA</h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-              De l'audit initial à l'implémentation complète, nous couvrons chaque étape de votre transformation IA.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="container-wide">
+            <div className="text-center mb-12">
+              <h2 className="mb-4">Ce que couvre notre conseil en IA</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Du diagnostic au déploiement — une approche structurée de l'adoption IA pragmatique.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: "Audit IA & Diagnostic", desc: "Analyse complète de vos processus, outils et workflows pour identifier les opportunités d'automatisation et d'optimisation par l'IA.", icon: Lightbulb },
-                { title: "Roadmap & Stratégie IA", desc: "Élaboration d'une feuille de route IA adaptée à vos objectifs business, avec priorisation des initiatives et estimation des ROI.", icon: Target },
-                { title: "Sélection d'outils & Architecture", desc: "Recommandations sur les outils IA les plus adaptés — ChatGPT, Claude, Make, Zapier, n8n — et conception de l'architecture technique.", icon: Workflow },
-                { title: "Formation & Accompagnement", desc: "Formation de vos équipes au prompt engineering, aux outils IA et aux bonnes pratiques pour maximiser l'adoption en interne.", icon: Users }
+                { icon: <Target className="w-5 h-5" />, title: "Audit IA & Diagnostic opérationnel", desc: "Nous évaluons vos workflows, votre stack technologique et vos capacités d'équipe pour identifier où l'IA crée le plus de valeur business — pas de la nouveauté." },
+                { icon: <Lightbulb className="w-5 h-5" />, title: "Stratégie IA & Roadmap", desc: "Un plan d'implémentation priorisé connectant les initiatives IA au revenu, à l'efficacité et à la productivité du fondateur — avec des jalons clairs." },
+                { icon: <Brain className="w-5 h-5" />, title: "IA Agentique & Design de Workflows", desc: "Architecture de systèmes IA multi-étapes — workflows Claude, agents IA et processus human-in-the-loop pour les ventes, le contenu et les opérations." },
+                { icon: <Workflow className="w-5 h-5" />, title: "Intégration IA dans les processus", desc: "Connexion de l'IA à votre CRM, stack outbound, pipeline de contenu et outils opérationnels — HubSpot, Salesforce, Clay, Make et APIs custom." },
+                { icon: <Users className="w-5 h-5" />, title: "Formation & Montée en compétences", desc: "Formation pratique en prompt engineering, workflows IA et IA opérationnelle — conçue pour les fondateurs, équipes commerciales et marketing." },
+                { icon: <Building2 className="w-5 h-5" />, title: "Advisory IA en fractional", desc: "Accompagnement stratégique continu en IA à mesure que votre entreprise se développe — aligné sur votre stratégie GTM, RevOps et priorités commerciales." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 p-6 rounded-xl border border-border">
-                  <item.icon className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div><h3 className="font-semibold mb-1">{item.title}</h3><p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p></div>
-                </div>
+                <Card key={i} className="border border-border">
+                  <CardContent className="p-6">
+                    <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center text-primary mb-4">{item.icon}</div>
+                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Who It's For */}
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="text-center mb-10">Pour qui est le conseil en IA</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <h2 className="text-center mb-10">Pour qui</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { icon: Building2, label: "Dirigeants de PME", desc: "Optimisez vos opérations et réduisez vos coûts grâce à l'IA." },
-                { icon: Users, label: "Fondateurs de startups", desc: "Accélérez votre croissance avec des systèmes IA dès le départ." },
-                { icon: TrendingUp, label: "Responsables marketing", desc: "Automatisez la création de contenu, le SEO et les campagnes." },
-                { icon: Target, label: "Directeurs commerciaux", desc: "Automatisez la prospection, les relances et la qualification." },
-                { icon: Brain, label: "Cabinets de conseil", desc: "Intégrez l'IA dans vos propres services et vos livrables." },
-                { icon: Lightbulb, label: "Scale-ups", desc: "Structurez vos processus IA pour passer à l'échelle." }
+                "Fondateurs & CEO intégrant l'IA dans leurs systèmes de croissance",
+                "Opérateurs FinTech et PropTech cherchant l'IA opérationnelle",
+                "Sociétés SaaS intégrant l'IA dans le produit et le GTM",
+                "Directeurs commerciaux concevant des pipelines augmentés par l'IA",
+                "CMO construisant des systèmes de contenu et SEO IA",
+                "Entreprises B2B structurant l'IA pour la délivrance et les opérations",
+                "Équipes growth connectant l'IA au RevOps et à l'outbound",
+                "Entreprises passant de l'expérimentation IA à l'exécution"
               ].map((item, i) => (
-                <div key={i} className="text-center p-4">
-                  <item.icon className="w-8 h-8 mx-auto mb-3 text-primary" />
-                  <h3 className="font-semibold text-sm mb-1">{item.label}</h3>
-                  <p className="text-xs text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Methodology */}
-        <section className="section-padding">
-          <div className="container-tight">
-            <h2 className="text-center mb-10">Notre méthodologie</h2>
-            <div className="space-y-4">
-              {[
-                { step: "01", title: "Appel découverte", desc: "Nous échangeons sur vos enjeux, vos objectifs et votre maturité IA actuelle. Cet appel de 15-30 minutes est gratuit et sans engagement." },
-                { step: "02", title: "Audit & Diagnostic", desc: "Analyse approfondie de vos processus, outils et workflows. Identification des quick wins et des projets à fort impact." },
-                { step: "03", title: "Stratégie & Roadmap", desc: "Livraison d'une feuille de route IA priorisée avec recommandations d'outils, estimations de coûts et calendrier d'implémentation." },
-                { step: "04", title: "Implémentation & Support", desc: "Accompagnement dans le déploiement — que ce soit via nos équipes (outsourced) ou en formant les vôtres." }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start p-6 rounded-xl border border-border">
-                  <span className="text-2xl font-semibold text-primary/40">{item.step}</span>
-                  <div><h3 className="font-semibold mb-1">{item.title}</h3><p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why NLG */}
-        <section className="section-padding bg-muted/30">
-          <div className="container-tight">
-            <h2 className="text-center mb-10">Pourquoi NLG Consulting</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Expertise terrain en IA, automation et business growth",
-                "Approche pragmatique : résultats concrets, pas de buzzwords",
-                "Expérience internationale (Europe, Moyen-Orient, Amérique)",
-                "Capacité d'exécution : conseil + implémentation sous un même toit",
-                "Connaissance approfondie des outils — OpenAI, Anthropic, Make, Clay, HubSpot",
-                "Accompagnement bilingue français-anglais"
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 p-4">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div key={i} className="flex items-center gap-3 p-4 rounded-lg border border-border">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                   <span className="text-sm">{item}</span>
                 </div>
               ))}
@@ -183,60 +142,89 @@ const ConseilIAFR = () => {
           </div>
         </section>
 
-        {/* CTA Banner */}
-        <section className="py-16 px-4 bg-primary text-primary-foreground">
-          <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Prêt à explorer le potentiel de l'IA ?</h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Réservez un appel découverte gratuit pour discuter de votre stratégie IA.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Réserver un appel gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
-              <Button asChild size="lg" variant="outline-light"><Link to="/fr/a-propos">Notre équipe</Link></Button>
+        <section className="section-padding">
+          <div className="container-tight">
+            <h2 className="text-center mb-10">Notre méthode</h2>
+            <div className="space-y-6">
+              {[
+                { step: "01", title: "Audit & Diagnostic opérationnel", desc: "Nous cartographions vos workflows, processus commerciaux, opérations marketing et stack technique pour identifier les opportunités IA à fort levier." },
+                { step: "02", title: "Architecture IA & Roadmap", desc: "Nous concevons le système — quels modèles IA, quels workflows, quelles intégrations, quels processus d'équipe évoluent. Un plan d'exécution pratique." },
+                { step: "03", title: "Construction, Déploiement & Intégration", desc: "Nous implémentons les workflows IA et systèmes agentiques directement dans vos opérations — connectés à votre CRM, outils outbound et pipeline de contenu." },
+                { step: "04", title: "Optimisation & Extension", desc: "Nous suivons les résultats, affinons les outputs IA, étendons à d'autres processus et construisons la capacité IA interne de votre équipe." }
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6 items-start p-6 rounded-xl border border-border">
+                  <span className="text-2xl font-semibold text-primary/40">{item.step}</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Related Services */}
+        <section className="py-16 px-4 bg-primary text-primary-foreground">
+          <div className="container-tight text-center">
+            <h2 className="text-primary-foreground mb-6">Pourquoi NLG Consulting</h2>
+            <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+              Nous ne sommes pas un cabinet de conseil classique qui livre des rapports. Nous sommes des opérateurs qui conçoivent et déploient des systèmes IA — avec plus de 15 ans d'expérience terrain en FinTech, PropTech, SaaS et revenue operations B2B. Stratégie et exécution sous un même toit.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild size="lg" variant="outline-light"><Link to="/fr/a-propos">À propos du fondateur</Link></Button>
+            </div>
+          </div>
+        </section>
+
         <section className="section-padding">
           <div className="container-wide">
             <h2 className="text-center mb-10">Services connexes</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { title: "Automation IA", desc: "Automatisez vos workflows avec l'intelligence artificielle.", link: "/fr/automation-ia" },
-                { title: "Agents IA pour entreprise", desc: "Déployez des agents IA autonomes dans vos opérations.", link: "/fr/agents-ia-entreprise" },
-                { title: "Implémentation IA externalisée", desc: "Confiez-nous l'exécution de vos projets IA.", link: "/fr/implementation-ia-externalisee" }
+                { title: "Automatisation IA des workflows", desc: "Déployez des workflows IA dans les ventes, le marketing et les opérations.", link: "/fr/automation-ia" },
+                { title: "Agents IA pour entreprises", desc: "Systèmes agentiques pour la prospection, le contenu, la recherche et le support fondateur.", link: "/fr/agents-ia-entreprise" },
+                { title: "Advisory stratégique", desc: "Structure GTM, RevOps et conseil en systèmes de croissance pour fondateurs.", link: "/fr/conseil" }
               ].map((item, i) => (
                 <Link to={item.link} key={i} className="group">
-                  <Card className="h-full hover:border-primary/30 transition-all"><CardContent className="p-6"><h3 className="font-semibold mb-2">{item.title}</h3><p className="text-muted-foreground text-sm mb-3">{item.desc}</p><span className="text-sm text-primary font-medium inline-flex items-center gap-1">En savoir plus <ArrowRight className="w-3.5 h-3.5" /></span></CardContent></Card>
+                  <Card className="h-full hover:border-primary/30 transition-all">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm mb-3">{item.desc}</p>
+                      <span className="text-sm text-primary font-medium inline-flex items-center gap-1">En savoir plus <ArrowRight className="w-3.5 h-3.5" /></span>
+                    </CardContent>
+                  </Card>
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
             <h2 className="text-center mb-10">Questions fréquentes</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
-                { q: "Qu'est-ce que le conseil en IA ?", a: "Le conseil en IA aide les entreprises à comprendre comment l'intelligence artificielle peut transformer leurs opérations, leur marketing, leurs ventes et leurs processus internes. Un consultant IA identifie les opportunités, conçoit la stratégie et accompagne l'implémentation." },
-                { q: "Le conseil en IA est-il adapté aux PME ?", a: "Absolument. L'IA n'est plus réservée aux grandes entreprises. Les PME peuvent tirer parti d'outils comme ChatGPT, Claude, Make ou Zapier pour automatiser des tâches répétitives, améliorer leur marketing et accélérer leurs ventes avec un investissement raisonnable." },
-                { q: "Combien coûte un accompagnement en conseil IA ?", a: "Les tarifs varient selon la complexité du projet. Nous proposons des missions ponctuelles (audit, roadmap) et des accompagnements continus (fractional AI consultant). Chaque engagement commence par un appel découverte gratuit de 15 minutes." },
-                { q: "Par où commencer avec l'IA dans mon entreprise ?", a: "Commencez par un audit IA : identifiez les processus chronophages, les tâches répétitives et les points de friction dans vos opérations. C'est exactement ce que nous faisons lors de notre premier échange." },
-                { q: "Quelle est la différence entre conseil IA et implémentation IA ?", a: "Le conseil en IA se concentre sur la stratégie — comprendre où et comment utiliser l'IA. L'implémentation IA concerne l'exécution — construire, configurer et déployer les systèmes. Chez NLG, nous faisons les deux." }
+                { q: "Qu'est-ce que le conseil en IA pour les entreprises ?", a: "Le conseil en IA aide les entreprises à identifier où l'intelligence artificielle — workflows IA, systèmes agentiques, automatisation Claude Code — peut améliorer les opérations, les ventes, le marketing et la prise de décision." },
+                { q: "En quoi le conseil en IA diffère-t-il de l'achat d'outils ?", a: "Les outils sont des composants. Le conseil en IA fournit l'architecture — comprendre quels processus bénéficient de l'IA, concevoir les workflows, et construire des systèmes connectés aux opérations réelles." },
+                { q: "Qui bénéficie du conseil en IA ?", a: "Les fondateurs, CEO et dirigeants opérationnels de sociétés FinTech, PropTech, SaaS et B2B qui veulent adopter l'IA de manière structurée, liée au revenu et à des résultats mesurables." },
+                { q: "Qu'est-ce que le conseil en IA agentique ?", a: "Il se concentre sur la conception de systèmes IA multi-étapes — des agents IA — capables de raisonner, planifier, utiliser des outils et exécuter des processus business complexes avec supervision humaine." },
+                { q: "Combien de temps dure un engagement de conseil en IA ?", a: "Un audit et roadmap IA ciblés prennent typiquement 2 à 3 semaines. Les partenariats d'advisory et d'implémentation s'étendent sur plusieurs mois selon la complexité." }
               ].map((item, i) => (
-                <AccordionItem key={i} value={`faq-${i}`}><AccordionTrigger className="text-left">{item.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent></AccordionItem>
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
+                </AccordionItem>
               ))}
             </Accordion>
           </div>
         </section>
 
-        {/* Final CTA */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-4">Transformez votre entreprise avec l'IA</h2>
-            <p className="text-lg text-muted-foreground mb-8">Réservez un appel gratuit pour discuter de votre feuille de route IA.</p>
-            <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver une consultation gratuite <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <h2 className="mb-4">Discutons de votre stratégie IA</h2>
+            <p className="text-lg text-muted-foreground mb-8">Réservez un appel ciblé pour évaluer où l'IA peut améliorer vos opérations, votre performance commerciale et votre efficacité de fondateur.</p>
+            <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>
         </section>
       </main>
