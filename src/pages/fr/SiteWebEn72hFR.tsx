@@ -2,7 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Zap } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowRight, Globe, Search, BarChart3, Layers, Zap, Target } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
@@ -11,15 +13,15 @@ const SiteWebEn72hFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Site Web en 72h", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" }, "description": "Obtenez un site web professionnel et optimisé pour la conversion en 72 heures. Conçu pour les startups et entreprises B2B.", "url": "https://www.nlgconsulting.co/fr/site-web-en-72h", "areaServed": ["Europe", "Amérique du Nord", "Moyen-Orient"] },
+      { "@type": "Service", "name": "Sites Web de Conversion & Actifs SEO", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" }, "description": "Sites web orientés revenus, actifs d'autorité SEO et systèmes de conversion pour entreprises B2B, FinTech et PropTech.", "url": "https://www.nlgconsulting.co/fr/site-web-en-72h", "areaServed": ["Europe", "Amérique du Nord", "Moyen-Orient"] },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Site Web en 72h", "item": "https://www.nlgconsulting.co/fr/site-web-en-72h" }
+        { "@type": "ListItem", "position": 2, "name": "Sites Web de Conversion", "item": "https://www.nlgconsulting.co/fr/site-web-en-72h" }
       ]},
       { "@type": "FAQPage", "mainEntity": [
-        { "@type": "Question", "name": "Peut-on vraiment créer un site web en 72 heures ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Après un briefing d'une heure, nous livrons un site web complet et en ligne en 72 heures grâce à nos frameworks optimisés pour la conversion B2B." } },
-        { "@type": "Question", "name": "Qu'est-ce qui est inclus ?", "acceptedAnswer": { "@type": "Answer", "text": "Jusqu'à 7 pages responsives, configuration SEO, formulaires de contact, analytics, intégration CRM et design optimisé pour la conversion." } },
-        { "@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": { "@type": "Answer", "text": "Nos sites web en 72h démarrent à 1 500€. Les projets enterprise et plateformes sur mesure sont devisés séparément." } }
+        { "@type": "Question", "name": "Qu'est-ce qu'un site web de conversion ?", "acceptedAnswer": { "@type": "Answer", "text": "Un site web de conversion est conçu comme un outil de revenus — chaque élément est structuré pour capturer des leads qualifiés, améliorer la visibilité SEO et soutenir le pipeline commercial." } },
+        { "@type": "Question", "name": "Pouvez-vous livrer un site en 72 heures ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Notre modèle de déploiement rapide livre des sites web complets et prêts pour la conversion en 72 heures — idéal pour les entreprises qui doivent avancer vite sans compromettre la qualité." } },
+        { "@type": "Question", "name": "Le SEO est-il inclus ?", "acceptedAnswer": { "@type": "Answer", "text": "Chaque site web inclut une architecture SEO technique : données structurées, optimisation meta, sitemap, performance Core Web Vitals et hiérarchie de contenu conçue pour la visibilité." } }
       ]}
     ]
   };
@@ -27,88 +29,123 @@ const SiteWebEn72hFR = () => {
   return (
     <>
       <Helmet>
-        <title>Site Web en 72h | Sites B2B Haute Conversion | NLG Consulting</title>
-        <meta name="description" content="Obtenez un site web professionnel en 72 heures. Optimisé pour la conversion B2B et le SEO. À partir de 1 500€. Réservez un briefing gratuit." />
+        <title>Sites Web de Conversion & Actifs SEO | NLG Consulting</title>
+        <meta name="description" content="Sites web orientés revenus et actifs d'autorité SEO pour entreprises B2B. Optimisés pour la conversion, architecturés pour le SEO, déployés en 72 heures." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/site-web-en-72h" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/site-web-en-72h" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/website-in-72-hours" />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/website-in-72-hours" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr/site-web-en-72h" />
-        <meta property="og:title" content="Site Web en 72h | NLG Consulting" />
+        <meta property="og:title" content="Sites Web de Conversion & Actifs SEO | NLG Consulting" />
+        <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <MainNavbarFR />
+
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Site Web en 72h</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Votre Site Web, en Ligne en 72 Heures</h1>
+            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Studio Web & SEO</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Sites Web de Conversion & Actifs d'Autorité SEO</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Arrêtez d'attendre des mois pour un site qui ne convertit pas. Nous livrons des sites web B2B optimisés pour la conversion et le SEO en seulement 72 heures.
+              Votre site web n'est pas une brochure — c'est une infrastructure de revenus. Nous construisons des sites optimisés pour la conversion et architecturés pour le SEO qui capturent des leads qualifiés et soutiennent votre pipeline commercial.
             </p>
-            <Button asChild size="lg" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Commencer Aujourd'hui <ArrowRight className="ml-2 w-4 h-4" /></Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="text-base px-8">
+                <Link to="/fr/rendez-vous">Discuter de votre projet web <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/fr/services">Explorer nos services</Link>
+              </Button>
+            </div>
           </div>
         </section>
 
         <section className="py-16 px-4">
-          <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Pourquoi 72 Heures Change Tout</h2>
-            <p>La plupart des agences web prennent 2-4 mois et facturent 10 000€+. Le temps que le site soit en ligne, votre marché a bougé et vous avez perdu des mois de leads potentiels.</p>
-            <p>Notre modèle en 72 heures inverse la donne. Après un briefing d'une heure, nous construisons et lançons votre site complet en 3 jours.</p>
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Ce Que Vous Obtenez</h3>
-            <ul>
-              <li><strong>Jusqu'à 7 pages :</strong> Accueil, À propos, Services, Contact, et plus.</li>
-              <li><strong>Design mobile-first :</strong> Responsive sur tous les appareils.</li>
-              <li><strong>Configuration SEO :</strong> Balises meta, sitemap, schema, Core Web Vitals.</li>
-              <li><strong>Formulaires & CTA :</strong> Optimisés pour la capture de leads.</li>
-              <li><strong>Analytics & CRM :</strong> Google Analytics, intégration CRM.</li>
-            </ul>
-            <p>Combinez avec notre <Link to="/fr/sdr-externalise" className="text-primary hover:underline">SDR externalisé</Link> ou nos <Link to="/fr/marketing" className="text-primary hover:underline">campagnes PPC</Link> pour générer du trafic et convertir.</p>
-          </div>
-        </section>
-
-        <section className="py-12 px-4 bg-primary text-primary-foreground">
-          <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[{ metric: "72h", label: "Délai de Livraison" }, { metric: "1 500€", label: "Prix de Départ" }, { metric: "7", label: "Pages Incluses" }, { metric: "100%", label: "Optimisé SEO" }].map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold">{item.metric}</div>
-                <div className="text-sm opacity-80 mt-1">{item.label}</div>
-              </div>
-            ))}
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Le Site Web Comme Système Commercial</h2>
+              <p>
+                La plupart des entreprises B2B traitent leur site web comme un livrable design — un projet ponctuel confié à une agence web. Le résultat : un site esthétique mais qui ne génère aucun pipeline, ne se positionne sur aucun mot-clé, et reste déconnecté du moteur commercial.
+              </p>
+              <p>
+                Notre approche est différente. Chaque site web que nous construisons est conçu comme un système de conversion — intégré à votre <Link to="/fr/vente" className="text-primary hover:underline font-medium">infrastructure outbound</Link>, optimisé pour l'autorité SEO, et structuré pour capturer et qualifier les leads.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="py-16 px-4 bg-muted/30">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-10">FAQ Site Web en 72h</h2>
-            <div className="space-y-6">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl font-bold text-center mb-10">Ce Que Nous Construisons</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { q: "Peut-on vraiment créer un site en 72h ?", a: "Oui. Après un briefing d'une heure, nous livrons un site complet et en ligne en 72 heures." },
-                { q: "Qu'est-ce qui est inclus ?", a: "Jusqu'à 7 pages responsives, SEO, formulaires, analytics et intégration CRM." },
-                { q: "Combien ça coûte ?", a: "À partir de 1 500€. Projets enterprise devisés séparément." }
+                { icon: Globe, title: "Sites de Conversion", desc: "Sites B2B orientés revenus avec positionnement clair, systèmes de capture de leads et architecture de pages optimisée." },
+                { icon: Search, title: "Actifs d'Autorité SEO", desc: "Pages de contenu, structures pilier et clusters thématiques conçus pour la visibilité organique et l'autorité de domaine." },
+                { icon: Target, title: "Landing Pages", desc: "Pages d'atterrissage spécifiques pour trafic payant, séquences outbound et lancements produits." },
+                { icon: Layers, title: "Interfaces Plateforme", desc: "Applications web et interfaces SaaS pour plateformes FinTech, PropTech et B2B nécessitant une complexité fonctionnelle." },
+                { icon: BarChart3, title: "SEO Technique", desc: "Données structurées, Core Web Vitals, architecture sitemap, schema markup et optimisation de performance." },
+                { icon: Zap, title: "Déploiement 72h", desc: "Livraison complète de site en 72 heures — idéal pour les entreprises qui doivent avancer vite sans compromettre la qualité." }
               ].map((item, i) => (
-                <div key={i} className="bg-background rounded-lg p-6">
-                  <h3 className="font-semibold text-lg mb-2">{item.q}</h3>
-                  <p className="text-muted-foreground">{item.a}</p>
-                </div>
+                <Card key={i} className="border-border">
+                  <CardContent className="p-6">
+                    <item.icon className="w-8 h-8 mb-4 text-primary" />
+                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Notre Approche</h2>
+              <ul>
+                <li><strong>Audit Positionnement & Messaging :</strong> Clarification de votre proposition de valeur, audience cible et différenciation concurrentielle avant d'écrire une seule ligne de code.</li>
+                <li><strong>Architecture SEO :</strong> Mapping de mots-clés, hiérarchie de contenu et stratégie de maillage interne pour une croissance organique durable.</li>
+                <li><strong>Design de Conversion :</strong> Chaque page structurée autour d'un objectif commercial clair — capture de leads, réservation ou qualification.</li>
+                <li><strong>Performance Technique :</strong> Temps de chargement rapides, design responsive mobile-first, accessibilité et conformité Core Web Vitals.</li>
+                <li><strong>Intégration :</strong> Connexions CRM, setup analytics, et alignement avec vos <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link>.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center mb-10">Questions Fréquentes</h2>
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                { q: "Qu'est-ce qu'un site web de conversion ?", a: "Un site conçu comme un outil de revenus — chaque élément est structuré pour capturer des leads qualifiés, améliorer la visibilité SEO et soutenir le pipeline commercial." },
+                { q: "Pouvez-vous livrer un site en 72 heures ?", a: "Oui. Notre modèle de déploiement rapide livre des sites complets et prêts pour la conversion en 72 heures." },
+                { q: "Le SEO est-il inclus ?", a: "Chaque site inclut une architecture SEO technique complète : données structurées, optimisation meta, sitemap, Core Web Vitals et hiérarchie de contenu." },
+                { q: "Quels secteurs ciblez-vous ?", a: "B2B SaaS, FinTech, PropTech et services professionnels. Nos sites sont construits pour la génération de leads et la performance commerciale." },
+                { q: "Comment cela s'intègre avec les autres services NLG ?", a: "Votre site se connecte directement à nos systèmes outbound, workflows d'automatisation IA et infrastructure de génération de leads." }
+              ].map((item, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
         <RelatedServicesFR currentService="web" />
 
-        <section className="py-20 px-4 bg-primary text-primary-foreground">
+        <section className="py-20 px-4">
           <div className="container mx-auto max-w-3xl text-center">
-            <Zap className="w-12 h-12 mx-auto mb-6 opacity-80" />
-            <h2 className="text-3xl font-bold mb-4">Prêt à Lancer Votre Site ?</h2>
-            <p className="text-lg opacity-90 mb-8">Réservez un briefing gratuit et ayez votre nouveau site en ligne en 72 heures.</p>
-            <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Briefing Gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <h2 className="text-3xl font-bold mb-4">Discutons de Votre Projet Web & SEO</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Que vous ayez besoin d'un déploiement rapide ou d'une construction de plateforme complète, nous pouvons évaluer la meilleure approche pour vos objectifs commerciaux.
+            </p>
+            <Button asChild size="lg" className="text-base px-8">
+              <Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>

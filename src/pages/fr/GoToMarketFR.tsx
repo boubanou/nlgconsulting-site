@@ -2,7 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Globe } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowRight, Globe, Target, Users, BarChart3, Layers, Map } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
@@ -11,11 +13,14 @@ const GoToMarketFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Stratégie Go-To-Market pour SaaS", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/strategie-go-to-market" },
+      { "@type": "Service", "name": "Stratégie Go-To-Market & Exécution", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "description": "Consulting GTM pour FinTech, PropTech et SaaS. Entrée marché, positionnement, stratégie de canaux, pricing et exécution de lancement.", "url": "https://www.nlgconsulting.co/fr/strategie-go-to-market" },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" },
-        { "@type": "ListItem", "position": 3, "name": "Go-To-Market", "item": "https://www.nlgconsulting.co/fr/strategie-go-to-market" }
+        { "@type": "ListItem", "position": 2, "name": "Go-To-Market", "item": "https://www.nlgconsulting.co/fr/strategie-go-to-market" }
+      ]},
+      { "@type": "FAQPage", "mainEntity": [
+        { "@type": "Question", "name": "Qu'est-ce que le consulting go-to-market ?", "acceptedAnswer": { "@type": "Answer", "text": "Le consulting GTM structure la façon dont une entreprise entre ou s'étend sur un marché — couvrant sélection de cible, positionnement, pricing, architecture de canaux et exécution de lancement." } },
+        { "@type": "Question", "name": "Exécutez-vous ou conseillez-vous seulement ?", "acceptedAnswer": { "@type": "Answer", "text": "Les deux. Nous concevons la stratégie GTM et pouvons exécuter via nos systèmes outbound, automatisation IA, sites de conversion et infrastructure SDR." } }
       ]}
     ]
   };
@@ -23,83 +28,108 @@ const GoToMarketFR = () => {
   return (
     <>
       <Helmet>
-        <title>Stratégie Go-To-Market pour fondateurs SaaS | NLG</title>
-        <meta name="description" content="Lancez-vous sur de nouveaux marchés sans brûler du cash. Frameworks GTM éprouvés pour SaaS. Expansion internationale. Réservez un appel stratégique." />
+        <title>Stratégie GTM & Exécution pour SaaS & Tech | NLG</title>
+        <meta name="description" content="Consulting go-to-market pour FinTech, PropTech et SaaS. Entrée marché, positionnement, pricing, stratégie de canaux et exécution — de la stratégie aux revenus." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/strategie-go-to-market" />
-        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/go-to-market" />
+        <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/go-to-market-consulting" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/strategie-go-to-market" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/go-to-market" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/go-to-market-consulting" />
         <meta name="robots" content="index, follow" />
+        <meta property="og:locale" content="fr_FR" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <MainNavbarFR />
+
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Stratégie Go-To-Market</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Lancez-vous sur de nouveaux marchés sans brûler du cash</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">Frameworks go-to-market éprouvés pour les entreprises SaaS prêtes à scaler à l'international. Sélection de marché, positionnement, pricing, canaux et exécution — en un package stratégique.</p>
+            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Stratégie GTM</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Stratégie Go-To-Market & Exécution</h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              Structurer une entrée marché n'est pas un exercice de slides — cela requiert une clarté opérationnelle sur le positionnement, le pricing, l'architecture de canaux et l'exécution outbound. Nous apportons un consulting GTM de niveau opérateur aux entreprises FinTech, PropTech et SaaS.
+            </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Planifier votre entrée marché <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Discuter de votre GTM <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
 
-        <section className="py-12 px-4 bg-primary text-primary-foreground">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Pourquoi la Plupart des Plans GTM Sous-Performent</h2>
+              <p>
+                La majorité des échecs GTM proviennent des mêmes failles structurelles : hypothèses de demande non validées, pricing mal aligné, infrastructure outbound faible, ou stratégies de canaux conçues en théorie plutôt que testées en pratique.
+              </p>
+              <p>
+                La pratique GTM de NLG Consulting est construite sur une expérience opérationnelle directe. Nous avons lancé et scalé des entreprises en Europe, Amérique du Nord et Moyen-Orient — et nous apportons cette perspective d'exécution à chaque engagement.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl font-bold text-center mb-10">Framework GTM</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { metric: "15+", label: "Ans d'expérience internationale" },
-                { metric: "3", label: "Continents couverts" },
-                { metric: "4-6 sem.", label: "Stratégie prête" },
-                { metric: "50+", label: "Entreprises accompagnées" }
+                { icon: Target, title: "Validation de Marché", desc: "Analyse TAM/SAM/SOM, validation de demande, mapping concurrentiel et développement de personas acheteurs." },
+                { icon: Map, title: "Positionnement & Messaging", desc: "Positionnement différencié qui résonne avec les acheteurs cibles — testé contre des signaux de marché réels." },
+                { icon: Layers, title: "Architecture de Canaux", desc: "Vente directe, partenariats, PLG ou hybride — conception du bon mix de canaux pour votre modèle." },
+                { icon: BarChart3, title: "Stratégie de Pricing", desc: "Modèles de pricing basés sur la valeur, optimisés pour votre marché et paysage concurrentiel." },
+                { icon: Users, title: "Exécution Outbound", desc: "Plans GTM connectés à nos systèmes outbound, infrastructure SDR et prospection IA." },
+                { icon: Globe, title: "Expansion Internationale", desc: "GTM cross-border avec connaissance réglementaire, adaptation locale et exécution multi-géographique." }
               ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold">{item.metric}</div>
-                  <div className="text-sm opacity-80 mt-1">{item.label}</div>
-                </div>
+                <Card key={i} className="border-border">
+                  <CardContent className="p-6">
+                    <item.icon className="w-8 h-8 mb-4 text-primary" />
+                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
         <section className="py-16 px-4">
-          <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Pourquoi la plupart des expansions internationales SaaS échouent</h2>
-            <p>80% des entreprises SaaS qui tentent l'expansion internationale sous-performent. L'erreur courante ? Traiter un nouveau marché comme un copier-coller du marché d'origine.</p>
-            <p>Notre pratique GTM est construite sur une expérience opérationnelle internationale réelle. Nous avons construit et scalé des entreprises en Europe, Amérique du Nord et Moyen-Orient.</p>
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">De la stratégie aux revenus</h3>
-            <p>Nous ne nous arrêtons pas aux decks stratégiques. Nous déployons des <Link to="/fr/vente" className="text-primary hover:underline font-medium">équipes SDR</Link>, lançons des <Link to="/fr/marketing" className="text-primary hover:underline font-medium">campagnes marketing</Link>, construisons des sites localisés via notre <Link to="/fr/site-internet" className="text-primary hover:underline font-medium">studio web</Link>.</p>
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">De la Stratégie aux Revenus</h2>
+              <p>
+                Nous ne nous arrêtons pas aux decks stratégiques. Les plans GTM se connectent directement à nos capacités d'exécution — <Link to="/fr/sdr-externalise" className="text-primary hover:underline font-medium">systèmes outbound SDR</Link>, <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link>, <Link to="/fr/site-web-en-72h" className="text-primary hover:underline font-medium">sites de conversion</Link> et <Link to="/fr/automatisation-marketing-ia" className="text-primary hover:underline font-medium">automatisation marketing</Link>.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="py-16 px-4 bg-muted/30">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-10">Questions fréquentes</h2>
-            <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-center mb-10">Questions Fréquentes</h2>
+            <Accordion type="single" collapsible className="w-full">
               {[
-                { q: "Qu'est-ce qu'une stratégie go-to-market ?", a: "Un plan complet pour lancer sur un nouveau marché : audience, positionnement, pricing, canaux, processus de vente et métriques de succès." },
-                { q: "Comment aidez-vous à l'expansion internationale ?", a: "Sélection de marché, localisation, adaptation des prix, partenariats, conformité réglementaire et exécution terrain." },
-                { q: "Combien de temps prend une stratégie GTM ?", a: "4-6 semaines incluant recherche, analyse concurrentielle, positionnement, pricing et feuille de route d'exécution détaillée." },
-                { q: "Pouvez-vous aussi exécuter le plan ?", a: "Oui. Nous déployons des équipes SDR, campagnes marketing, localisation de sites et setup opérationnel." }
+                { q: "Qu'est-ce que le consulting go-to-market ?", a: "Le consulting GTM structure comment une entreprise entre ou s'étend sur un marché — sélection de cible, positionnement, pricing, architecture de canaux et exécution de lancement." },
+                { q: "Qui bénéficie du consulting GTM ?", a: "Les entreprises FinTech, PropTech et SaaS qui lancent de nouveaux produits, entrent sur de nouvelles géographies, ou restructurent leur modèle commercial." },
+                { q: "Combien de temps dure un engagement GTM ?", a: "Typiquement 4-8 semaines pour la stratégie, avec 3-6 mois de support d'exécution selon le scope." },
+                { q: "Exécutez-vous ou conseillez-vous seulement ?", a: "Les deux. Nous concevons la stratégie et pouvons exécuter via nos systèmes outbound, automatisation IA, sites de conversion et infrastructure SDR." },
+                { q: "Quelles géographies couvrez-vous ?", a: "Europe, Amérique du Nord et Moyen-Orient — avec une expertise approfondie du GTM cross-border." }
               ].map((item, i) => (
-                <div key={i} className="border-b border-border pb-6">
-                  <h3 className="text-lg font-semibold mb-2">{item.q}</h3>
-                  <p className="text-muted-foreground">{item.a}</p>
-                </div>
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </section>
 
         <RelatedServicesFR currentService="go-to-market" />
 
-        <section className="py-20 px-4 bg-primary text-primary-foreground">
+        <section className="py-20 px-4">
           <div className="container mx-auto max-w-3xl text-center">
-            <Globe className="w-12 h-12 mx-auto mb-6 opacity-80" />
-            <h2 className="text-3xl font-bold mb-4">Prêt à conquérir de nouveaux marchés ?</h2>
-            <p className="text-lg opacity-90 mb-8">Réservez un appel stratégique pour discuter de vos objectifs d'expansion.</p>
-            <Button asChild size="lg" variant="secondary" className="text-base px-8">
+            <h2 className="text-3xl font-bold mb-4">Revoyez Votre Structure Go-To-Market</h2>
+            <p className="text-lg text-muted-foreground mb-8">Si vous planifiez une entrée marché, expansion ou restructuration commerciale, nous pouvons évaluer où clarté et levier peuvent être améliorés.</p>
+            <Button asChild size="lg" className="text-base px-8">
               <Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>

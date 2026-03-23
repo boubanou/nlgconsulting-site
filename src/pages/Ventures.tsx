@@ -14,8 +14,8 @@ const Ventures = () => {
     "@graph": [
       {
         "@type": "WebPage",
-        "name": "Ventures & Brands | NLG Consulting",
-        "description": "Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI.",
+        "name": "Venture Studio & Portfolio | NLG Consulting",
+        "description": "Operator-built platforms across PropTech, FinTech, Media and Lifestyle. NLG Consulting's venture studio builds, operates and scales technology companies.",
         "url": "https://www.nlgconsulting.co/ventures"
       },
       {
@@ -34,19 +34,19 @@ const Ventures = () => {
       type: "PropTech / FinTech SaaS",
       icon: <Building2 className="w-8 h-8" />,
       logo: "/brands/blocktech.png",
-      description: "A SaaS platform bridging real estate and financial technology. Block Tech enables fractional ownership, tokenization, and streamlined property investment workflows.",
-      why: "Real estate investment is fragmented and inaccessible. Block Tech democratizes access to property assets through technology.",
-      role: "Founded, built, and operated by NLG. We handle product development, go-to-market, and scaling.",
+      description: "A SaaS platform bridging real estate and financial technology — enabling fractional ownership, tokenisation, and streamlined property investment workflows for institutional and retail investors.",
+      why: "Real estate investment remains fragmented and capital-intensive. Block Tech creates accessible, structured entry points through technology.",
+      role: "Founded, built and operated by NLG. Product development, GTM strategy, and scaling managed internally.",
       link: "https://block-tech.co"
     },
     {
       name: "FractionalPropertyHub",
-      type: "Marketplace & Lead Generation",
+      type: "Marketplace & Lead Engine",
       icon: <Globe className="w-8 h-8" />,
       logo: "/brands/fractionalpropertyhub.png",
-      description: "A marketplace connecting investors with fractional real estate opportunities. Lead generation engine for property developers and investment platforms.",
-      why: "Investors struggle to find vetted fractional opportunities. Developers need qualified leads.",
-      role: "Built and scaled by NLG as a lead-gen and marketplace play.",
+      description: "A marketplace connecting investors with vetted fractional real estate opportunities. Built as a lead generation engine for property developers and investment platforms.",
+      why: "Investors need curated access to fractional opportunities. Developers need qualified, intent-driven leads.",
+      role: "Built and scaled by NLG as a revenue-generating marketplace and lead acquisition system.",
       link: "https://fractionalpropertyhub.com"
     },
     {
@@ -54,29 +54,29 @@ const Ventures = () => {
       type: "Media & Podcast",
       icon: <Radio className="w-8 h-8" />,
       logo: "/brands/businesslegend.png",
-      description: "A media brand featuring entrepreneurship stories, business insights, and expert interviews. Podcast and content platform for founders and operators.",
-      why: "Authentic business stories inspire action. Business Legend shares real journeys from real builders.",
-      role: "Content creation, production, and distribution managed by NLG.",
+      description: "A media brand featuring operator stories, business insights, and expert interviews. Content platform for founders, executives and growth operators.",
+      why: "Authentic operator stories create trust and authority. Business Legend codifies real execution experience into content.",
+      role: "Content strategy, production and distribution managed by NLG.",
       link: "https://businesslegend.co"
     },
     {
       name: "STEAD",
-      type: "Sports & Lifestyle Brand",
+      type: "Sports & Lifestyle",
       icon: <Dumbbell className="w-8 h-8" />,
       logo: "/brands/stead.png",
-      description: "A sports and lifestyle brand focused on performance, discipline, and quality. Apparel and community for athletes and active professionals.",
-      why: "Lifestyle reflects mindset. STEAD embodies the discipline and excellence we value.",
+      description: "A performance-focused sports and lifestyle brand built around discipline, quality and active professionals.",
+      why: "Lifestyle reflects operating philosophy. STEAD embodies the discipline and precision we bring to business.",
       role: "Brand development and operations by NLG.",
-      link: null, // Coming soon
+      link: null,
       comingSoon: true
     }
   ];
 
   return (
     <>
-<Helmet>
-        <title>Ventures & Portfolio | NLG Consulting</title>
-        <meta name="description" content="Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI." />
+      <Helmet>
+        <title>Venture Studio & Portfolio | NLG Consulting</title>
+        <meta name="description" content="Operator-built platforms across PropTech, FinTech, Media and Lifestyle. NLG Consulting's venture studio builds, operates and scales technology companies." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ventures" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ventures" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/ventures" />
@@ -84,53 +84,41 @@ const Ventures = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/ventures" />
-        <meta property="og:title" content="Ventures & Portfolio | NLG Consulting" />
-        <meta property="og:description" content="Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
+        <meta property="og:title" content="Venture Studio & Portfolio | NLG Consulting" />
+        <meta property="og:description" content="Operator-built platforms across PropTech, FinTech, Media and Lifestyle." />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ventures & Portfolio | NLG Consulting" />
-        <meta name="twitter:description" content="Discover the platforms and brands built and operated by NLG Consulting across PropTech, FinTech, Media, and AI." />
-        <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
         <MainNavbar />
 
-        {/* Hero */}
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">
-              Portfolio
-            </Badge>
+            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Venture Studio</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Ventures & Brands We Build and Scale
+              Operator-Built Platforms & Revenue Assets
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Platforms and brands we've built, operate, and scale across PropTech, FinTech, Media, and Lifestyle.
+              NLG Consulting operates as both a consulting firm and a venture studio — building, operating and scaling technology companies across PropTech, FinTech, Media and Lifestyle.
             </p>
           </div>
         </section>
 
-        {/* SEO Content - Portfolio Introduction */}
         <section className="py-12 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="prose prose-lg text-muted-foreground max-w-none">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Building the Future of Technology and Business</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">An Execution-First Venture Model</h2>
               <p>
-                NLG Consulting operates as both a consulting firm and a venture studio. Unlike traditional consulting companies that only advise, we put capital, resources, and operational expertise into building and scaling our own portfolio of companies. This unique positioning gives us hands-on experience that directly benefits our consulting clients.
+                Unlike traditional consulting firms that only advise, NLG invests operational expertise, capital and systems into building its own portfolio of companies. Every venture follows a consistent methodology: identify a clear market inefficiency, build technology-first, launch with revenue infrastructure from day one, and iterate based on commercial performance.
               </p>
               <p>
-                Our venture portfolio spans four key sectors: PropTech (property technology), FinTech (financial technology), Media, and Lifestyle. Each venture is carefully selected based on market opportunity, alignment with our expertise, and potential for significant impact. We take a long-term approach, focusing on sustainable growth over quick exits.
-              </p>
-              <p>
-                What makes our venture approach unique is the synergy between our portfolio companies and our consulting services. Lessons learned from building Block Tech inform our advisory work with other PropTech startups. The media strategies we develop for Business Legend are applied to help clients build their brand presence. This cross-pollination creates a virtuous cycle of learning and improvement.
+                This operator-led approach creates a direct feedback loop between our <Link to="/advisory" className="text-primary hover:underline font-medium">strategic advisory</Link> practice and real-world execution. Lessons from scaling Block Tech inform how we advise PropTech clients. Revenue systems designed for FractionalPropertyHub shape the <Link to="/ai-automation" className="text-primary hover:underline font-medium">AI automation workflows</Link> we deploy for B2B companies.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Ventures List */}
         <section className="py-12 px-4">
           <div className="container mx-auto max-w-5xl space-y-12">
             {ventures.map((venture, i) => (
@@ -150,29 +138,29 @@ const Ventures = () => {
                     </div>
                     <div className="md:col-span-2 p-8 space-y-4">
                       <div>
-                        <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">What It Is</h4>
+                        <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Platform</h4>
                         <p className="text-foreground">{venture.description}</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Why It Exists</h4>
+                        <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Thesis</h4>
                         <p className="text-foreground">{venture.why}</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">NLG's Role</h4>
+                        <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Operating Role</h4>
                         <p className="text-foreground">{venture.role}</p>
                       </div>
                       <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t">
                         {venture.link && !venture.comingSoon ? (
                           <Button asChild variant="default">
                             <a href={venture.link} target="_blank" rel="noopener noreferrer">
-                              Visit Website <ExternalLink className="ml-2 w-4 h-4" />
+                              Visit Platform <ExternalLink className="ml-2 w-4 h-4" />
                             </a>
                           </Button>
                         ) : venture.comingSoon ? (
                           <Badge variant="outline" className="text-sm py-1.5 px-4">Coming Soon</Badge>
                         ) : null}
                         <Button asChild variant="outline">
-                          <Link to="/book">Book a Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                          <Link to="/book">Discuss Partnership <ArrowRight className="ml-2 w-4 h-4" /></Link>
                         </Button>
                       </div>
                     </div>
@@ -183,47 +171,37 @@ const Ventures = () => {
           </div>
         </section>
 
-        {/* Book as a Venture Section */}
         <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-primary/10">
           <div className="container mx-auto max-w-5xl">
             <Card className="overflow-hidden border-2 border-primary/30">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-3 gap-0">
-                  {/* Book Cover */}
                   <div className="bg-muted/50 p-8 flex flex-col items-center justify-center text-center">
                     <img 
                       src="/images/book-cover.jpg" 
                       alt="Level Up in Fractional Real Estate by Gregory Brenig"
-                      className="w-40 h-auto rounded-lg shadow-xl mb-4 hover:scale-105 transition-transform"
+                      className="w-40 h-auto rounded-lg shadow-xl mb-4"
                     />
                     <Badge variant="secondary" className="mt-2">
                       <BookOpen className="w-3 h-3 mr-1" />
-                      Intellectual Venture
+                      Published Work
                     </Badge>
                   </div>
-                  
-                  {/* Book Details */}
                   <div className="md:col-span-2 p-8 space-y-4">
                     <div>
                       <h3 className="text-2xl font-bold mb-2">Level Up in Fractional Real Estate</h3>
-                      <p className="text-primary font-medium">More than a book — a strategic vision on innovation, investment, and modern asset models.</p>
+                      <p className="text-primary font-medium">A strategic framework for fractional ownership, tokenisation and modern property investment models.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Executive Summary</h4>
+                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">About the Book</h4>
                       <p className="text-foreground">
-                        This comprehensive guide by Gregory Brenig explores the future of real estate investment through fractional ownership and tokenization. It provides a strategic roadmap for building rental income and achieving financial freedom through innovative, accessible property investment models.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-2">Why It's a Venture</h4>
-                      <p className="text-foreground">
-                        This book represents NLG's intellectual contribution to the PropTech and FinTech ecosystem. It codifies our expertise in fractional real estate and serves as a thought leadership platform that drives awareness, partnerships, and business opportunities globally.
+                        Written by Gregory Brenig, this guide codifies operational experience in fractional real estate — covering investment structures, technology infrastructure, regulatory considerations and go-to-market strategy for property platforms.
                       </p>
                     </div>
                     <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t">
                       <Button asChild variant="default">
                         <a href="https://a.co/d/dih3FYN" target="_blank" rel="noopener noreferrer">
-                          Buy on Amazon <ExternalLink className="ml-2 w-4 h-4" />
+                          Available on Amazon <ExternalLink className="ml-2 w-4 h-4" />
                         </a>
                       </Button>
                       <Button asChild variant="outline">
@@ -237,46 +215,40 @@ const Ventures = () => {
           </div>
         </section>
 
-        {/* SEO Content - Investment Philosophy */}
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="prose prose-lg text-muted-foreground max-w-none">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Our Investment and Operating Philosophy</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Operating Philosophy</h2>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Technology-First, Revenue-Driven</h3>
               <p>
-                Each venture in our portfolio follows a consistent operating philosophy built on three principles:
+                Every venture is built on modern technology infrastructure — from AI-powered workflows to automated lead systems. Technology creates operating leverage, reduces marginal costs, and enables scaling without proportional headcount growth. The same <Link to="/ai-consulting" className="text-primary hover:underline font-medium">AI consulting</Link> frameworks we apply to clients are tested first in our own portfolio.
               </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Technology-First Approach</h3>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global Scope, Local Execution</h3>
               <p>
-                We believe technology is the key differentiator in today's market. Every venture we build leverages cutting-edge technology—whether it's blockchain for fractional ownership, AI for automation, or modern web frameworks for rapid deployment. This technology-first approach allows us to scale efficiently and create sustainable competitive advantages.
+                Our ventures operate across Europe, North America and the Middle East. This international footprint informs our <Link to="/go-to-market-consulting" className="text-primary hover:underline font-medium">go-to-market consulting</Link> — we understand regulatory nuances, buyer behaviour differences and market-entry sequencing from direct experience.
               </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Global From Day One</h3>
+              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Execution Over Theory</h3>
               <p>
-                We build ventures for global markets from the start. Our team operates across Europe, North America, and the Middle East, giving us firsthand understanding of different markets and regulatory environments. This global perspective is embedded in every product and service we develop—including our <Link to="/advisory" className="text-primary hover:underline font-medium">strategic advisory</Link> practice.
-              </p>
-              <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Execution Over Ideas</h3>
-              <p>
-                Ideas are cheap; execution is everything. We focus on building real products that solve real problems. Our ventures are not theoretical concepts—they're operating businesses generating revenue and serving customers. This hands-on approach is what allows us to bring genuine expertise to our consulting clients. Whether you need <Link to="/sales" className="text-primary hover:underline font-medium">sales development</Link> or a <Link to="/web" className="text-primary hover:underline font-medium">website in 72 hours</Link>, we deliver.
+                Every venture generates revenue and serves real customers. This operator credibility is what distinguishes our advisory work — we build <Link to="/services" className="text-primary hover:underline font-medium">growth systems</Link> that we use ourselves before recommending them to clients.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Related Services */}
         <RelatedServices currentService="ventures" />
 
-        {/* CTA */}
         <section className="py-20 px-4 bg-muted/30">
           <div className="container mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Partner With Us</h2>
+            <h2 className="text-3xl font-bold mb-4">Explore a Partnership</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Interested in collaborating or investing? Let's discuss how we can work together.
+              If you are building in PropTech, FinTech or B2B technology and looking for an operator-aligned partner, we welcome the conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
                 <Link to="/book">Book a Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>

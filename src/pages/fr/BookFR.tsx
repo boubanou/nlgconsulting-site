@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 import CalendarEmbed from "@/components/CalendarEmbed";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen } from "lucide-react";
-import RelatedServicesFR from "@/components/fr/RelatedServicesFR";
+import { CheckCircle, XCircle } from "lucide-react";
 
 const BookFR = () => {
   const structuredData = {
@@ -13,8 +11,8 @@ const BookFR = () => {
     "@graph": [
       {
         "@type": "WebPage",
-        "name": "Réserver votre consultation gratuite",
-        "description": "Planifiez un appel de 15 minutes pour discuter de comment nous pouvons vous aider à générer des rendez-vous B2B qualifiés",
+        "name": "Réserver un Appel Stratégique | NLG Consulting",
+        "description": "Planifiez un appel stratégique de 15 minutes pour discuter de vos systèmes de croissance, automatisation IA, revenue operations et performance commerciale.",
         "url": "https://www.nlgconsulting.co/fr/rendez-vous"
       },
       {
@@ -30,8 +28,8 @@ const BookFR = () => {
   return (
     <>
       <Helmet>
-        <title>Appel Stratégique Gratuit | Consultation Revenus | NLG Consulting</title>
-        <meta name="description" content="Réservez un appel gratuit de 15 min avec un expert croissance B2B. Repartez avec 3 idées actionnables. Places limitées." />
+        <title>Réserver un Appel Stratégique | NLG Consulting</title>
+        <meta name="description" content="Planifiez un appel stratégique de 15 minutes pour discuter de systèmes de croissance IA, revenue operations et performance commerciale pour votre entreprise." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/rendez-vous" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/rendez-vous" />
@@ -39,14 +37,10 @@ const BookFR = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr/rendez-vous" />
-        <meta property="og:title" content="Appel Stratégique Gratuit | Consultation Revenus | NLG Consulting" />
-        <meta property="og:description" content="Réservez un appel gratuit de 15 min avec un expert croissance B2B. Repartez avec 3 idées actionnables." />
-        <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
+        <meta property="og:title" content="Réserver un Appel Stratégique | NLG Consulting" />
+        <meta property="og:description" content="Appel stratégique de 15 minutes sur les systèmes de croissance IA, revenue operations et performance commerciale." />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Appel Stratégique Gratuit | Consultation Revenus | NLG Consulting" />
-        <meta name="twitter:description" content="Réservez un appel gratuit de 15 min avec un expert croissance B2B. Repartez avec 3 idées actionnables." />
-        <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -56,34 +50,44 @@ const BookFR = () => {
         <main className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Réservez votre consultation gratuite</h1>
-              <p className="text-xl text-muted-foreground">Planifiez un appel de 15 minutes pour discuter de comment nous pouvons vous aider à générer des rendez-vous B2B qualifiés</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Réserver un Appel Stratégique</h1>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Une conversation de 15 minutes centrée sur vos systèmes de croissance, votre structure commerciale et votre maturité IA — avec un opérateur qui a scalé des revenus dans la FinTech, PropTech et le B2B.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="p-6 rounded-2xl border bg-card">
+                <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-primary" /> Cet appel est pertinent si…
+                </h2>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous êtes fondateur, CEO ou dirigeant croissance d'une entreprise B2B, FinTech ou PropTech</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous devez structurer votre outbound, pipeline ou revenue operations</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous souhaitez déployer des workflows IA, agents ou automatisations dans vos opérations</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous cherchez un accompagnement d'exécution, pas seulement du conseil théorique</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-2xl border bg-card">
+                <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
+                  <XCircle className="w-5 h-5 text-destructive" /> Ce n'est pas adapté si…
+                </h2>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous cherchez un développeur ou designer freelance</li>
+                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous n'avez pas encore de produit ou de clients payants</li>
+                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous recherchez du consulting gratuit ou du travail spéculatif</li>
+                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous avez besoin d'une agence pour de la sous-traitance</li>
+                </ul>
+              </div>
             </div>
 
             <CalendarEmbed />
 
-            {/* Book CTA */}
-            <div className="mt-16 text-center p-8 bg-muted/30 rounded-2xl">
-              <BookOpen className="w-12 h-12 mx-auto mb-4 text-primary" />
-              <h2 className="text-2xl font-bold mb-2">Lire le livre</h2>
-              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Obtenez des insights stratégiques du livre de Gregory Brenig sur la construction et le développement d'entreprises.
-              </p>
-              <Button asChild size="lg">
-                <a href="https://a.co/d/dih3FYN" target="_blank" rel="noopener noreferrer">
-                  Acheter sur Amazon <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-            </div>
-
-            <p className="text-center text-muted-foreground text-sm">
-              Pas sûr du service ? Explorez <Link to="/fr/vente" className="text-primary hover:underline">Vente & BD</Link>, <Link to="/fr/site-internet" className="text-primary hover:underline">Studio Web</Link>, ou <Link to="/fr/conseil" className="text-primary hover:underline">Conseil</Link>.
+            <p className="text-center text-muted-foreground text-sm mt-8">
+              Préférez explorer d'abord ? Découvrez nos <Link to="/fr/services" className="text-primary hover:underline">services</Link>, <Link to="/fr/cas-usage" className="text-primary hover:underline">cas d'usage</Link>, <Link to="/fr/conseil-ia" className="text-primary hover:underline">consulting IA</Link>, ou <Link to="/fr/conseil" className="text-primary hover:underline">conseil stratégique</Link>.
             </p>
           </div>
         </main>
-
-        {/* Related Services */}
-        <RelatedServicesFR currentService="book" />
 
         <MainFooterFR />
       </div>
