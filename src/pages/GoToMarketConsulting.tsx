@@ -2,7 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Zap } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowRight, Globe, Target, Users, BarChart3, Layers, Map } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
 import RelatedServices from "@/components/RelatedServices";
@@ -11,17 +13,15 @@ const GoToMarketConsulting = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Go-To-Market Consulting", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" }, "description": "Go-to-market consulting for SaaS, FinTech, and PropTech companies. Market entry strategy, channel design, pricing, and launch execution.", "url": "https://www.nlgconsulting.co/go-to-market-consulting", "areaServed": ["Europe", "North America", "Middle East"] },
+      { "@type": "Service", "name": "Go-To-Market Strategy & Execution", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" }, "description": "GTM consulting for FinTech, PropTech and SaaS companies. Market entry, positioning, channel strategy, pricing and launch execution with operator-level involvement.", "url": "https://www.nlgconsulting.co/go-to-market-consulting", "areaServed": ["Europe", "North America", "Middle East"] },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
         { "@type": "ListItem", "position": 2, "name": "Go-To-Market Consulting", "item": "https://www.nlgconsulting.co/go-to-market-consulting" }
       ]},
       { "@type": "FAQPage", "mainEntity": [
-        { "@type": "Question", "name": "What is go-to-market consulting?", "acceptedAnswer": { "@type": "Answer", "text": "GTM consulting helps companies plan and execute their market entry or expansion strategy — including target market selection, positioning, pricing, channel strategy, and launch execution." } },
-        { "@type": "Question", "name": "Who needs GTM consulting?", "acceptedAnswer": { "@type": "Answer", "text": "SaaS, FinTech, and PropTech companies launching new products, entering new markets, or pivoting their revenue model benefit most from GTM consulting." } },
-        { "@type": "Question", "name": "How long does a GTM engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "A typical GTM strategy engagement takes 4-8 weeks for the strategy phase, followed by 3-6 months of execution support." } },
-        { "@type": "Question", "name": "Do you help with execution or just strategy?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We develop the strategy and can execute it through our outsourced SDR, marketing, and sales infrastructure services." } },
-        { "@type": "Question", "name": "What markets do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "We help companies launch and expand across Europe, North America, and the Middle East, with deep expertise in cross-border GTM." } }
+        { "@type": "Question", "name": "What is go-to-market consulting?", "acceptedAnswer": { "@type": "Answer", "text": "GTM consulting structures how a company enters or expands in a market — covering target selection, positioning, pricing, channel design, outbound architecture and launch execution." } },
+        { "@type": "Question", "name": "Who benefits from GTM consulting?", "acceptedAnswer": { "@type": "Answer", "text": "FinTech, PropTech and SaaS companies launching new products, entering new geographies, or restructuring their commercial model to improve revenue performance." } },
+        { "@type": "Question", "name": "Do you execute or only advise?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We design the GTM strategy and can execute through our outbound systems, AI automation, conversion websites and SDR infrastructure." } }
       ]}
     ]
   };
@@ -29,78 +29,111 @@ const GoToMarketConsulting = () => {
   return (
     <>
       <Helmet>
-        <title>Go-To-Market Consulting | GTM Strategy & Execution | NLG Consulting</title>
-        <meta name="description" content="Go-to-market consulting for SaaS, FinTech, and PropTech. Market entry, positioning, pricing, channel strategy, and launch execution. Book a free GTM review." />
+        <title>GTM Strategy & Execution for SaaS & Tech | NLG</title>
+        <meta name="description" content="Go-to-market consulting for FinTech, PropTech and SaaS. Market entry, positioning, pricing, channel strategy and launch execution — from strategy to revenue." />
         <link rel="canonical" href="https://www.nlgconsulting.co/go-to-market-consulting" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/go-to-market-consulting" />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/go-to-market-consulting" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/go-to-market-consulting" />
-        <meta property="og:title" content="Go-To-Market Consulting | GTM Strategy & Execution | NLG Consulting" />
-        <meta property="og:description" content="GTM consulting for SaaS, FinTech, and PropTech. Strategy + execution." />
+        <meta property="og:title" content="GTM Strategy & Execution for SaaS & Tech | NLG" />
+        <meta property="og:description" content="Go-to-market consulting from strategy to execution for FinTech, PropTech and SaaS companies." />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <MainNavbar />
+
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">GTM Consulting</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Go-To-Market Consulting for SaaS & Tech Companies</h1>
+            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">GTM Strategy</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Go-To-Market Strategy & Execution</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Launch in new markets without burning cash. Our operator-led GTM consulting gives you the strategy, channels, and execution plan to win — fast.
+              Structuring market entry is not a slide deck exercise — it requires operational clarity on positioning, pricing, channel architecture and outbound execution. We bring operator-level GTM consulting to FinTech, PropTech and SaaS companies.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/book">Book a Free GTM Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Discuss Your GTM <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
 
         <section className="py-16 px-4">
-          <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Why Most Go-To-Market Strategies Fail</h2>
-            <p>70% of new market entries fail because companies skip the fundamentals: they don't validate demand, misunderstand buyer behavior, or underinvest in sales infrastructure. The result? Burned cash and missed windows.</p>
-            <p>NLG Consulting's GTM approach is different. We're operators, not just consultants. We've launched and scaled companies across Europe, North America, and the Middle East. We know what works because we've done it ourselves.</p>
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Our GTM Framework</h3>
-            <ul>
-              <li><strong>Market Validation:</strong> TAM/SAM/SOM analysis, competitive mapping, and demand validation.</li>
-              <li><strong>Positioning & Messaging:</strong> Differentiated positioning that resonates with your target buyers.</li>
-              <li><strong>Channel Strategy:</strong> Direct sales, partnerships, PLG, or hybrid — we design the right channel mix.</li>
-              <li><strong>Pricing Strategy:</strong> Value-based pricing models optimized for your market and buyer personas.</li>
-              <li><strong>Launch Execution:</strong> We don't just plan — we execute through our <Link to="/outsourced-sdr" className="text-primary hover:underline">outsourced SDR</Link> and <Link to="/marketing" className="text-primary hover:underline">marketing</Link> teams.</li>
-            </ul>
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Why Most Go-To-Market Plans Underperform</h2>
+              <p>
+                The majority of GTM failures stem from the same structural gaps: unvalidated demand assumptions, misaligned pricing, weak outbound infrastructure, or channel strategies designed in theory rather than tested in practice. The cost is not just lost revenue — it is lost time and market position.
+              </p>
+              <p>
+                NLG Consulting's GTM practice is built on direct operating experience. We have launched and scaled companies across Europe, North America and the Middle East — and we bring that execution perspective to every engagement.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="py-16 px-4 bg-muted/30">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-10">GTM Consulting FAQ</h2>
-            <div className="space-y-6">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl font-bold text-center mb-10">GTM Framework</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { q: "What is go-to-market consulting?", a: "GTM consulting helps companies plan and execute market entry or expansion — target market, positioning, pricing, channels, and launch." },
-                { q: "Who needs GTM consulting?", a: "SaaS, FinTech, and PropTech companies launching new products, entering new markets, or pivoting their revenue model." },
-                { q: "How long does a GTM engagement take?", a: "4-8 weeks for strategy, 3-6 months of execution support." },
-                { q: "Strategy only or execution too?", a: "Both. We develop strategy and execute through our SDR, marketing, and sales infrastructure." },
-                { q: "What markets do you cover?", a: "Europe, North America, and the Middle East." }
+                { icon: Target, title: "Market Validation", desc: "TAM/SAM/SOM analysis, demand validation, competitive mapping and buyer persona development." },
+                { icon: Map, title: "Positioning & Messaging", desc: "Differentiated positioning that resonates with target buyers — tested against real market signals." },
+                { icon: Layers, title: "Channel Architecture", desc: "Direct sales, partnerships, PLG or hybrid — designing the right channel mix for your model." },
+                { icon: BarChart3, title: "Pricing Strategy", desc: "Value-based pricing models optimised for your market, buyer segments and competitive landscape." },
+                { icon: Users, title: "Outbound Execution", desc: "GTM plans connected to our outbound systems, SDR infrastructure and AI-enhanced prospecting." },
+                { icon: Globe, title: "International Expansion", desc: "Cross-border GTM with regulatory awareness, local market adaptation and multi-geography execution." }
               ].map((item, i) => (
-                <div key={i} className="bg-background rounded-lg p-6">
-                  <h3 className="font-semibold text-lg mb-2">{item.q}</h3>
-                  <p className="text-muted-foreground">{item.a}</p>
-                </div>
+                <Card key={i} className="border-border">
+                  <CardContent className="p-6">
+                    <item.icon className="w-8 h-8 mb-4 text-primary" />
+                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="prose prose-lg text-muted-foreground max-w-none">
+              <h2 className="text-3xl font-bold text-foreground mb-6">From Strategy to Revenue</h2>
+              <p>
+                We do not stop at strategy decks. GTM plans connect directly to our execution capabilities — <Link to="/outsourced-sdr" className="text-primary hover:underline font-medium">outbound SDR systems</Link>, <Link to="/ai-automation" className="text-primary hover:underline font-medium">AI automation workflows</Link>, <Link to="/website-in-72-hours" className="text-primary hover:underline font-medium">conversion websites</Link> and <Link to="/ai-marketing-automation" className="text-primary hover:underline font-medium">marketing automation</Link>. This means your go-to-market plan becomes an operating system, not a document.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                { q: "What is go-to-market consulting?", a: "GTM consulting structures how a company enters or expands in a market — covering target selection, positioning, pricing, channel design, outbound architecture and launch execution." },
+                { q: "Who benefits from GTM consulting?", a: "FinTech, PropTech and SaaS companies launching new products, entering new geographies, or restructuring their commercial model." },
+                { q: "How long does a GTM engagement take?", a: "Typically 4-8 weeks for strategy, with 3-6 months of execution support depending on scope." },
+                { q: "Do you execute or only advise?", a: "Both. We design the strategy and can execute through our outbound systems, AI automation, conversion websites and SDR infrastructure." },
+                { q: "What geographies do you cover?", a: "Europe, North America and the Middle East — with deep expertise in cross-border GTM." }
+              ].map((item, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
         <RelatedServices currentService="go-to-market" />
 
-        <section className="py-20 px-4 bg-primary text-primary-foreground">
+        <section className="py-20 px-4">
           <div className="container mx-auto max-w-3xl text-center">
-            <Zap className="w-12 h-12 mx-auto mb-6 opacity-80" />
-            <h2 className="text-3xl font-bold mb-4">Ready to Launch Your GTM?</h2>
-            <p className="text-lg opacity-90 mb-8">Book a free GTM review and walk away with 3 actionable insights for your market entry.</p>
-            <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <Link to="/book">Book a Free GTM Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <h2 className="text-3xl font-bold mb-4">Review Your Go-To-Market Structure</h2>
+            <p className="text-lg text-muted-foreground mb-8">If you are planning a market entry, expansion or commercial restructuring, we can assess where clarity and leverage can be improved.</p>
+            <Button asChild size="lg" className="text-base px-8">
+              <Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
