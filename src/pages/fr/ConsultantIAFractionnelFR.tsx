@@ -12,10 +12,10 @@ const ConsultantIAFractionnelFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Consultant IA fractionnel", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "description": "Engagez un consultant IA fractionnel pour diriger votre stratégie et implémentation IA sans le coût d'un poste à temps plein.", "url": "https://www.nlgconsulting.co/fr/consultant-ia-fractionnel", "areaServed": "Worldwide" },
+      { "@type": "Service", "name": "Consultant IA Fractionnel & Growth Architect", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "description": "Consultant IA fractionnel senior pour fondateurs et équipes de croissance. Stratégie IA, architecture de workflows, design RevOps et supervision d'implémentation — sans le coût d'un poste temps plein.", "url": "https://www.nlgconsulting.co/fr/consultant-ia-fractionnel", "areaServed": "Worldwide" },
       { "@type": "FAQPage", "mainEntity": [
-        { "@type": "Question", "name": "Qu'est-ce qu'un consultant IA fractionnel ?", "acceptedAnswer": { "@type": "Answer", "text": "Un consultant IA fractionnel est un expert IA senior qui travaille avec votre entreprise à temps partiel ou par projet, fournissant un leadership IA stratégique sans le coût d'un poste à temps plein." }},
-        { "@type": "Question", "name": "Combien coûte un consultant IA fractionnel ?", "acceptedAnswer": { "@type": "Answer", "text": "Le consulting IA fractionnel coûte généralement 30-50% de moins qu'un poste à temps plein, avec des arrangements flexibles de quelques heures par semaine à plusieurs jours par mois." }}
+        { "@type": "Question", "name": "Qu'est-ce qu'un consultant IA fractionnel ?", "acceptedAnswer": { "@type": "Answer", "text": "Un opérateur IA senior qui travaille avec votre entreprise à temps partiel — fournissant stratégie IA, architecture de workflows et supervision d'implémentation sans le coût d'un poste exécutif à temps plein." }},
+        { "@type": "Question", "name": "En quoi un consultant fractionnel diffère-t-il d'une agence ?", "acceptedAnswer": { "@type": "Answer", "text": "Un consultant fractionnel travaille intégré dans votre équipe, comprend votre modèle business en profondeur et fournit une direction stratégique — pas seulement de l'exécution. C'est du leadership IA senior, à vos conditions." }}
       ]},
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
@@ -27,8 +27,8 @@ const ConsultantIAFractionnelFR = () => {
   return (
     <>
       <Helmet>
-        <title>Consultant IA fractionnel | Leadership IA à temps partiel | NLG</title>
-        <meta name="description" content="Engagez un consultant IA fractionnel pour la stratégie et l'implémentation IA. Expertise senior à une fraction du coût. Engagement flexible et sans risque." />
+        <title>Consultant IA Fractionnel | Growth Architect | NLG</title>
+        <meta name="description" content="Consultant IA fractionnel pour fondateurs et équipes de croissance. Stratégie IA, architecture de workflows et RevOps à une fraction du coût. Démarrage sous 1-2 semaines." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/consultant-ia-fractionnel" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/fractional-ai-consultant" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/consultant-ia-fractionnel" />
@@ -42,10 +42,10 @@ const ConsultantIAFractionnelFR = () => {
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Fractionnel</Badge>
             <h1 className="mb-6">Consultant{" "}<span className="text-gradient">IA fractionnel</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Vous avez besoin d'expertise IA, mais pas d'un poste à temps plein. Un consultant IA fractionnel vous donne la stratégie, la supervision d'implémentation et l'accompagnement — à votre rythme, à une fraction du coût.
+              Vous avez besoin de leadership IA senior, pas d'un abonnement supplémentaire. Un consultant IA fractionnel vous donne la stratégie, la supervision d'architecture et l'accompagnement pour déployer des systèmes IA qui génèrent des résultats business mesurables — à votre rythme, à une fraction du coût.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button asChild size="lg"><Link to="/fr/rendez-vous">Discuter d'un consultant IA <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild size="lg"><Link to="/fr/rendez-vous">Discuter du format fractionnel <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
               <Button asChild variant="outline" size="lg"><Link to="/fr/contact">Nous contacter</Link></Button>
             </div>
           </div>
@@ -53,15 +53,15 @@ const ConsultantIAFractionnelFR = () => {
 
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="text-center mb-10">Ce que fait un consultant IA fractionnel</h2>
+            <h2 className="text-center mb-10">Ce que délivre un consultant IA fractionnel</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: Brain, title: "Stratégie IA", desc: "Définir votre roadmap IA — quels processus automatiser, quels outils adopter, et comment mesurer le ROI." },
-                { icon: Zap, title: "Supervision d'implémentation", desc: "Gérer la sélection d'outils IA, l'évaluation des fournisseurs et l'implémentation pour assurer les résultats." },
-                { icon: UserCheck, title: "Montée en compétences", desc: "Former votre équipe, établir les bonnes pratiques IA et créer des guidelines internes." },
-                { icon: Shield, title: "Risque & Conformité", desc: "Naviguer les réglementations IA, la protection des données et les considérations éthiques de votre secteur." },
-                { icon: TrendingUp, title: "Suivi de performance", desc: "Définir les KPIs, suivre l'adoption, mesurer les gains de productivité et optimiser les investissements IA." },
-                { icon: Clock, title: "Engagement flexible", desc: "Ajustez selon vos besoins — de quelques heures par semaine à des sprints projets complets. Sans contrat long terme." }
+                { icon: Brain, title: "Stratégie & roadmap IA", desc: "Définir quels processus automatiser, quels outils adopter et comment mesurer le ROI — aligné sur votre modèle business et votre stade de croissance." },
+                { icon: Zap, title: "Architecture de workflows", desc: "Concevoir et superviser les workflows IA, systèmes agentic et automatisation qui s'intègrent à vos opérations et votre stack technique." },
+                { icon: UserCheck, title: "Enablement équipe", desc: "Former votre équipe, établir les bonnes pratiques et créer les playbooks internes pour une adoption IA durable dans toute l'organisation." },
+                { icon: Shield, title: "Gouvernance & risque", desc: "Naviguer les réglementations IA, la protection des données et les considérations éthiques — particulièrement critique pour FinTech, PropTech et secteurs régulés." },
+                { icon: TrendingUp, title: "Performance & RevOps", desc: "Définir les KPIs, suivre l'adoption, mesurer les gains de productivité et optimiser les investissements IA pour des résultats commerciaux concrets." },
+                { icon: Clock, title: "Engagement flexible", desc: "Ajustez selon vos besoins — de quelques heures par semaine à des sprints projets complets. Sans contrat long terme, sans risque de recrutement." }
               ].map((item, i) => (
                 <Card key={i} className="border-border"><CardContent className="p-6"><item.icon className="w-8 h-8 mb-4 text-primary" /><h3 className="font-semibold mb-2">{item.title}</h3><p className="text-sm text-muted-foreground">{item.desc}</p></CardContent></Card>
               ))}
@@ -73,7 +73,7 @@ const ConsultantIAFractionnelFR = () => {
           <div className="container-tight">
             <h2 className="text-center mb-10">Pourquoi fractionnel plutôt que temps plein</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {["30-50% d'économie par rapport à un poste IA à temps plein", "Accès à une expertise senior dès le premier jour — pas de période de montée en compétences", "Perspective fraîche grâce au travail dans plusieurs industries et entreprises", "Flexibilité d'ajuster l'engagement selon les besoins du projet", "Pas de risque de recrutement — démarrage immédiat, ajustement au fur et à mesure", "Pollinisation croisée des meilleures pratiques d'autres implémentations IA"].map((item, i) => (
+              {["30-50% d'économie par rapport à un poste IA temps plein — avec une expertise senior dès le premier jour", "Perspective fraîche grâce au travail dans plusieurs secteurs, modèles business et stades de croissance", "Pollinisation croisée des meilleures pratiques de dizaines d'implémentations IA en SaaS, FinTech et B2B", "Flexibilité d'ajuster l'engagement selon les phases du projet — pas de coûts fixes, pas de risque de recrutement", "Connecté à un écosystème d'exécution complet : automatisation IA, systèmes outbound, advisory stratégique et assets web", "Mindset opérateur : votre consultant IA fractionnel a construit des entreprises, pas seulement conseillé"].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-4"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /><span className="text-sm">{item}</span></div>
               ))}
             </div>
@@ -82,9 +82,9 @@ const ConsultantIAFractionnelFR = () => {
 
         <section className="py-16 px-4 bg-primary text-primary-foreground">
           <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Leadership IA sans le coût temps plein</h2>
-            <p className="text-lg opacity-90 mb-8">Réservez une consultation pour discuter de comment un consultant IA fractionnel peut accélérer votre transformation.</p>
-            <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Réserver une consultation <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <h2 className="text-primary-foreground mb-4">Leadership IA senior sans le coût temps plein</h2>
+            <p className="text-lg opacity-90 mb-8">Réservez un appel stratégique pour discuter de comment un consultant IA fractionnel peut accélérer vos systèmes de croissance.</p>
+            <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>
         </section>
 
@@ -93,9 +93,9 @@ const ConsultantIAFractionnelFR = () => {
             <h2 className="text-center mb-10">Questions fréquentes</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
-                { q: "Qu'est-ce qu'un consultant IA fractionnel ?", a: "Un expert IA senior qui travaille avec votre entreprise à temps partiel, fournissant un leadership IA stratégique sans le coût d'un poste à temps plein." },
-                { q: "Combien coûte un consultant IA fractionnel ?", a: "Généralement 30-50% de moins qu'un poste temps plein, avec des arrangements flexibles de quelques heures par semaine à plusieurs jours par mois." },
-                { q: "Sous quel délai un consultant IA fractionnel peut-il commencer ?", a: "La plupart des engagements démarrent en 1-2 semaines. Nous commençons par une phase de découverte, puis passons à la stratégie et l'implémentation." }
+                { q: "Qu'est-ce qu'un consultant IA fractionnel ?", a: "Un opérateur IA senior qui travaille avec votre entreprise à temps partiel — fournissant stratégie IA, architecture de workflows et supervision d'implémentation sans le coût d'un poste exécutif temps plein." },
+                { q: "En quoi cela diffère-t-il d'une agence IA ?", a: "Un consultant fractionnel travaille intégré dans votre équipe, comprend votre modèle business en profondeur et fournit une direction stratégique en plus de l'exécution. C'est du leadership, pas de la prestation." },
+                { q: "Sous quel délai un consultant fractionnel peut-il démarrer ?", a: "La plupart des engagements démarrent sous 1-2 semaines. On commence par une phase de découverte pour cartographier vos opérations, puis on passe à la stratégie et l'implémentation — avec des résultats mesurables dès le premier mois." }
               ].map((item, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}><AccordionTrigger className="text-left">{item.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent></AccordionItem>
               ))}
@@ -103,7 +103,7 @@ const ConsultantIAFractionnelFR = () => {
           </div>
         </section>
 
-        <section className="section-padding"><div className="container-tight text-center"><h2 className="mb-4">Prêt pour un leadership IA fractionnel ?</h2><p className="text-lg text-muted-foreground mb-8">Réservez un appel stratégique gratuit.</p><Button asChild size="lg"><Link to="/fr/rendez-vous">Consultation gratuite <ArrowRight className="ml-2 w-4 h-4" /></Link></Button></div></section>
+        <section className="section-padding"><div className="container-tight text-center"><h2 className="mb-4">Prêt pour un leadership IA fractionnel ?</h2><p className="text-lg text-muted-foreground mb-8">Réservez un appel stratégique gratuit.</p><Button asChild size="lg"><Link to="/fr/rendez-vous">Appel stratégique gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button></div></section>
       </main>
       <MainFooterFR />
     </>
