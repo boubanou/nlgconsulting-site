@@ -18,33 +18,32 @@ import {
 } from "./ui/collapsible";
 
 const solutionsData = {
-  aiAutomation: {
-    title: "AI & Automation",
+  aiSystems: {
+    title: "AI Systems & Automation",
     links: [
       { label: "AI Consulting", to: "/ai-consulting" },
-      { label: "AI Automation", to: "/ai-automation" },
-      { label: "AI Agents", to: "/ai-agents-for-business" },
-      { label: "AI Marketing Automation", to: "/ai-marketing-automation" },
-      { label: "AI Sales Automation", to: "/ai-sales-automation" },
+      { label: "AI Agents & Agentic Systems", to: "/ai-agents-for-business" },
+      { label: "Workflow Automation", to: "/ai-automation" },
+      { label: "Outsourced AI Operations", to: "/outsourced-ai-implementation" },
       { label: "Prompt Engineering", to: "/prompt-engineering-consulting" },
-      { label: "Outsourced AI Implementation", to: "/outsourced-ai-implementation" },
     ],
   },
-  salesGrowth: {
-    title: "Sales & Growth",
+  growthRevOps: {
+    title: "Growth Systems & RevOps",
     links: [
-      { label: "Sales & BD", to: "/sales" },
+      { label: "Sales & Pipeline", to: "/sales" },
       { label: "Outsourced SDR", to: "/outsourced-sdr" },
-      { label: "Appointment Setting", to: "/appointment-setting" },
-      { label: "Go-to-Market Consulting", to: "/go-to-market-consulting" },
-      { label: "Lead Generation", to: "/ai-lead-generation" },
+      { label: "AI Lead Generation", to: "/ai-lead-generation" },
+      { label: "GTM Strategy & Execution", to: "/go-to-market-consulting" },
+      { label: "AI Marketing Systems", to: "/ai-marketing-automation" },
+      { label: "AI Sales Automation", to: "/ai-sales-automation" },
     ],
   },
   advisory: {
-    title: "Advisory & Training",
+    title: "Strategic Advisory",
     links: [
-      { label: "Advisory", to: "/advisory" },
-      { label: "AI Training for Teams", to: "/ai-training-for-teams" },
+      { label: "Founder Advisory", to: "/advisory" },
+      { label: "AI Enablement for Teams", to: "/ai-training-for-teams" },
       { label: "Fractional AI Consultant", to: "/fractional-ai-consultant" },
     ],
   },
@@ -61,10 +60,10 @@ const industriesData = [
 ];
 
 const resourcesData = [
-  { label: "Use Cases", to: "/use-cases" },
+  { label: "Use Cases & Case Studies", to: "/use-cases" },
   { label: "Best AI Tools for Business", to: "/best-ai-tools-for-business" },
-  { label: "How to Automate Marketing with AI", to: "/how-to-automate-marketing-with-ai" },
-  { label: "Book", to: "/book" },
+  { label: "AI Marketing Systems Guide", to: "/how-to-automate-marketing-with-ai" },
+  { label: "Ventures & Studio", to: "/ventures" },
 ];
 
 const MainNavbar = () => {
@@ -94,14 +93,14 @@ const MainNavbar = () => {
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[520px] p-6">
+                    <div className="w-[540px] p-6">
                       <div className="grid grid-cols-2 gap-8">
                         <div className="space-y-4">
                           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70">
-                            {solutionsData.aiAutomation.title}
+                            {solutionsData.aiSystems.title}
                           </p>
                           <div className="space-y-1">
-                            {solutionsData.aiAutomation.links.map((link) => (
+                            {solutionsData.aiSystems.links.map((link) => (
                               <Link
                                 key={link.to}
                                 to={link.to}
@@ -115,10 +114,10 @@ const MainNavbar = () => {
                         <div className="space-y-6">
                           <div className="space-y-4">
                             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70">
-                              {solutionsData.salesGrowth.title}
+                              {solutionsData.growthRevOps.title}
                             </p>
                             <div className="space-y-1">
-                              {solutionsData.salesGrowth.links.map((link) => (
+                              {solutionsData.growthRevOps.links.map((link) => (
                                 <Link
                                   key={link.to}
                                   to={link.to}
@@ -167,7 +166,7 @@ const MainNavbar = () => {
                   <NavigationMenuContent>
                     <div className="w-[400px] p-6">
                       <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 mb-4">
-                        Industry Focus
+                        Sector Focus
                       </p>
                       <div className="grid grid-cols-2 gap-1">
                         {industriesData.map((link) => (
@@ -190,7 +189,7 @@ const MainNavbar = () => {
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[280px] p-6">
+                    <div className="w-[300px] p-6">
                       <div className="space-y-1">
                         {resourcesData.map((link) => (
                           <Link
@@ -251,23 +250,23 @@ const MainNavbar = () => {
               </CollapsibleTrigger>
               <CollapsibleContent className="pl-4 space-y-0.5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 pt-2 pb-1">
-                  AI & Automation
+                  AI Systems & Automation
                 </p>
-                {solutionsData.aiAutomation.links.map((link) => (
+                {solutionsData.aiSystems.links.map((link) => (
                   <Link key={link.to} to={link.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 pt-3 pb-1">
-                  Sales & Growth
+                  Growth Systems & RevOps
                 </p>
-                {solutionsData.salesGrowth.links.map((link) => (
+                {solutionsData.growthRevOps.links.map((link) => (
                   <Link key={link.to} to={link.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 pt-3 pb-1">
-                  Advisory & Training
+                  Strategic Advisory
                 </p>
                 {solutionsData.advisory.links.map((link) => (
                   <Link key={link.to} to={link.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setIsOpen(false)}>

@@ -18,33 +18,32 @@ import {
 } from "../ui/collapsible";
 
 const solutionsData = {
-  aiAutomation: {
-    title: "IA & Automatisation",
+  aiSystems: {
+    title: "Systèmes IA & Automatisation",
     links: [
       { label: "Conseil IA", to: "/fr/conseil-ia" },
-      { label: "Automatisation IA", to: "/fr/automation-ia" },
-      { label: "Agents IA", to: "/fr/agents-ia-entreprise" },
-      { label: "Automation Marketing IA", to: "/fr/automation-marketing-ia" },
-      { label: "Automation Commerciale IA", to: "/fr/automation-commerciale-ia" },
-      { label: "Conseil Prompt Engineering", to: "/fr/conseil-prompt-engineering" },
-      { label: "Implémentation IA Externalisée", to: "/fr/implementation-ia-externalisee" },
+      { label: "Agents IA & Systèmes Agentiques", to: "/fr/agents-ia-entreprise" },
+      { label: "Automatisation de Workflows", to: "/fr/automation-ia" },
+      { label: "Opérations IA Externalisées", to: "/fr/implementation-ia-externalisee" },
+      { label: "Prompt Engineering", to: "/fr/conseil-prompt-engineering" },
     ],
   },
-  salesGrowth: {
-    title: "Vente & Croissance",
+  growthRevOps: {
+    title: "Systèmes de Croissance & RevOps",
     links: [
-      { label: "Vente & BD", to: "/fr/vente" },
+      { label: "Vente & Pipeline", to: "/fr/vente" },
       { label: "SDR Externalisé", to: "/fr/sdr-externalise" },
-      { label: "Prise de Rendez-vous", to: "/fr/prise-de-rendez-vous-b2b" },
-      { label: "Conseil Go-to-Market", to: "/fr/strategie-go-to-market" },
       { label: "Génération de Leads IA", to: "/fr/generation-leads-ia" },
+      { label: "Stratégie GTM & Exécution", to: "/fr/strategie-go-to-market" },
+      { label: "Systèmes Marketing IA", to: "/fr/automation-marketing-ia" },
+      { label: "Automation Commerciale IA", to: "/fr/automation-commerciale-ia" },
     ],
   },
   advisory: {
-    title: "Conseil & Formation",
+    title: "Advisory Stratégique",
     links: [
-      { label: "Advisory", to: "/fr/conseil" },
-      { label: "Formation IA pour Équipes", to: "/fr/formation-ia-entreprise" },
+      { label: "Advisory Fondateur", to: "/fr/conseil" },
+      { label: "Enablement IA Équipes", to: "/fr/formation-ia-entreprise" },
       { label: "Consultant IA Fractionnel", to: "/fr/consultant-ia-fractionnel" },
     ],
   },
@@ -61,10 +60,10 @@ const industriesData = [
 ];
 
 const resourcesData = [
-  { label: "Cas d'Usage", to: "/fr/cas-usage" },
-  { label: "Meilleurs Outils IA", to: "/fr/meilleurs-outils-ia-entreprise" },
-  { label: "Automatiser le Marketing avec l'IA", to: "/fr/automatiser-marketing-avec-ia" },
-  { label: "Livre", to: "/fr/rendez-vous" },
+  { label: "Cas d'Usage & Études de Cas", to: "/fr/cas-usage" },
+  { label: "Meilleurs Outils IA Business", to: "/fr/meilleurs-outils-ia-entreprise" },
+  { label: "Guide Systèmes Marketing IA", to: "/fr/automatiser-marketing-avec-ia" },
+  { label: "Ventures & Studio", to: "/fr/ventures" },
 ];
 
 const MainNavbarFR = () => {
@@ -94,14 +93,14 @@ const MainNavbarFR = () => {
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[520px] p-6">
+                    <div className="w-[540px] p-6">
                       <div className="grid grid-cols-2 gap-8">
                         <div className="space-y-4">
                           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70">
-                            {solutionsData.aiAutomation.title}
+                            {solutionsData.aiSystems.title}
                           </p>
                           <div className="space-y-1">
-                            {solutionsData.aiAutomation.links.map((link) => (
+                            {solutionsData.aiSystems.links.map((link) => (
                               <Link
                                 key={link.to}
                                 to={link.to}
@@ -115,10 +114,10 @@ const MainNavbarFR = () => {
                         <div className="space-y-6">
                           <div className="space-y-4">
                             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70">
-                              {solutionsData.salesGrowth.title}
+                              {solutionsData.growthRevOps.title}
                             </p>
                             <div className="space-y-1">
-                              {solutionsData.salesGrowth.links.map((link) => (
+                              {solutionsData.growthRevOps.links.map((link) => (
                                 <Link
                                   key={link.to}
                                   to={link.to}
@@ -251,23 +250,23 @@ const MainNavbarFR = () => {
               </CollapsibleTrigger>
               <CollapsibleContent className="pl-4 space-y-0.5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 pt-2 pb-1">
-                  IA & Automatisation
+                  Systèmes IA & Automatisation
                 </p>
-                {solutionsData.aiAutomation.links.map((link) => (
+                {solutionsData.aiSystems.links.map((link) => (
                   <Link key={link.to} to={link.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 pt-3 pb-1">
-                  Vente & Croissance
+                  Systèmes de Croissance & RevOps
                 </p>
-                {solutionsData.salesGrowth.links.map((link) => (
+                {solutionsData.growthRevOps.links.map((link) => (
                   <Link key={link.to} to={link.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/70 pt-3 pb-1">
-                  Conseil & Formation
+                  Advisory Stratégique
                 </p>
                 {solutionsData.advisory.links.map((link) => (
                   <Link key={link.to} to={link.to} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setIsOpen(false)}>
