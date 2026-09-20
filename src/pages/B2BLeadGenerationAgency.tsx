@@ -62,7 +62,7 @@ const B2BLeadGenerationAgency = () => {
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">Beyond Contact Lists: Building Lead Generation Infrastructure</h2>
             <p>Most lead generation agencies sell you a database of names and consider the job done. The gap between "leads" and revenue remains entirely your problem. NLG Consulting takes a fundamentally different approach.</p>
-            <p>We build and operate your entire lead generation infrastructure — from ICP architecture and prospect intelligence to multichannel outbound execution, qualification workflows, and CRM pipeline management. The result is not a list of contacts, but a system that produces qualified meetings with verified decision-makers.</p>
+            <p>We build and operate your entire lead generation infrastructure — from ICP architecture and prospect intelligence to multichannel outbound execution, qualification workflows, and CRM pipeline management. The result is not a list of contacts, but a system that produces qualified meetings with verified decision-makers. Our <Link to="/insights/b2b-lead-generation-playbook" className="text-primary hover:underline font-medium">B2B lead generation playbook</Link> explains how these layers work together.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">The Lead Generation System</h3>
             <ul>
               <li><strong><Link to="/outsourced-sdr" className="text-primary hover:underline">Outsourced SDR Operations:</Link></strong> Trained sales development operators who execute structured prospecting and meeting booking on your behalf.</li>

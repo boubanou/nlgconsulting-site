@@ -91,6 +91,7 @@ const MainFooterFR = () => {
             <h4 className="font-semibold mb-4 text-sm">Ressources</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/fr/rendez-vous" className="text-muted-foreground hover:text-primary transition-colors">Prendre RDV</Link></li>
+              <li><Link to="/fr/ressources" className="text-muted-foreground hover:text-primary transition-colors">Guides & Ressources</Link></li>
               <li><Link to="/fr/meilleurs-outils-ia-entreprise" className="text-muted-foreground hover:text-primary transition-colors">Meilleurs outils IA</Link></li>
               <li><Link to="/fr/automatiser-marketing-avec-ia" className="text-muted-foreground hover:text-primary transition-colors">Automatiser le marketing</Link></li>
               <li><Link to="/fr/cas-usage" className="text-muted-foreground hover:text-primary transition-colors">Cas d'usage</Link></li>

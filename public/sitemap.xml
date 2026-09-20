@@ -778,4 +778,132 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- Insights & Authority Content -->
+  <url>
+    <loc>https://www.nlgconsulting.co/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/ai-audit-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-audit-checklist"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/audit-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-audit-checklist"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/audit-ia-entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-audit-checklist"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/audit-ia-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-audit-checklist"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/ai-automation-roi</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-automation-roi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/roi-automatisation-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-automation-roi"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/roi-automatisation-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-automation-roi"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/roi-automatisation-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-automation-roi"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/outsourced-sdr-vs-in-house</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/outsourced-sdr-vs-in-house"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/sdr-externalise-vs-interne"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/outsourced-sdr-vs-in-house"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/sdr-externalise-vs-interne</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/outsourced-sdr-vs-in-house"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/sdr-externalise-vs-interne"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/outsourced-sdr-vs-in-house"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/b2b-lead-generation-playbook</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/b2b-lead-generation-playbook"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/strategie-lead-generation-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/b2b-lead-generation-playbook"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/strategie-lead-generation-b2b</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/b2b-lead-generation-playbook"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/strategie-lead-generation-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/b2b-lead-generation-playbook"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/ai-use-cases-proptech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-use-cases-proptech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/cas-usage-ia-proptech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-use-cases-proptech"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/cas-usage-ia-proptech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-use-cases-proptech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/cas-usage-ia-proptech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-use-cases-proptech"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/ai-use-cases-fintech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-use-cases-fintech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/cas-usage-ia-fintech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-use-cases-fintech"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/cas-usage-ia-fintech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-use-cases-fintech"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/cas-usage-ia-fintech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-use-cases-fintech"/>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 </urlset>

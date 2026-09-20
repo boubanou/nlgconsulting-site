@@ -61,7 +61,7 @@ const AgenceLeadGenerationFR = () => {
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">Au-delà des listes de contacts : construire une infrastructure de lead generation</h2>
             <p>La plupart des agences de lead generation vous vendent une base de contacts et considèrent le travail terminé. Le fossé entre "leads" et revenus reste entièrement votre problème. NLG Consulting adopte une approche fondamentalement différente.</p>
-            <p>Nous construisons et opérons l'ensemble de votre infrastructure de lead generation — de l'architecture ICP et l'intelligence prospects à l'exécution outbound multicanal, aux workflows de qualification et à la gestion pipeline CRM.</p>
+            <p>Nous construisons et opérons l'ensemble de votre infrastructure de lead generation — de l'architecture ICP et l'intelligence prospects à l'exécution outbound multicanal, aux workflows de qualification et à la gestion pipeline CRM. Notre <Link to="/fr/ressources/strategie-lead-generation-b2b" className="text-primary hover:underline font-medium">playbook de lead generation B2B</Link> détaille la logique de ce système.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Le système de lead generation</h3>
             <ul>
               <li><strong><Link to="/fr/sdr-externalise" className="text-primary hover:underline">Opérations SDR Externalisées :</Link></strong> Opérateurs commerciaux formés qui exécutent la prospection structurée et la prise de rendez-vous.</li>

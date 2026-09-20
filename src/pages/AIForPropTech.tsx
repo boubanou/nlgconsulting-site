@@ -42,7 +42,7 @@ const AIForPropTech = () => {
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">PropTech</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Consulting & Automation for PropTech Companies</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              We help PropTech teams identify and implement practical AI use cases across lead qualification, investor outreach, market intelligence, content and revenue operations — with first-hand understanding of property technology workflows.
+              We help PropTech teams identify and implement practical AI use cases across lead qualification, investor outreach, market intelligence, content and revenue operations — with first-hand understanding of property technology workflows. Explore our guide to <Link to="/insights/ai-use-cases-proptech" className="text-primary hover:underline font-medium">practical AI use cases for PropTech</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Discuss Your PropTech Growth <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>

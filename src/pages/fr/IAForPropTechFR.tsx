@@ -42,7 +42,7 @@ const IAForPropTechFR = () => {
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">PropTech</Badge>
             <h1 className="mb-6">Conseil IA & Automatisation pour{" "}<span className="text-gradient">entreprises PropTech</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Nous aidons les équipes PropTech à identifier et déployer des cas d'usage IA concrets : qualification des prospects, prospection investisseurs, intelligence de marché, contenu et workflows revenue — avec une compréhension opérationnelle du secteur immobilier tech.
+              Nous aidons les équipes PropTech à identifier et déployer des cas d'usage IA concrets : qualification des prospects, prospection investisseurs, intelligence de marché, contenu et workflows revenue — avec une compréhension opérationnelle du secteur immobilier tech. Découvrez notre guide des <Link to="/fr/ressources/cas-usage-ia-proptech" className="text-primary hover:underline font-medium">cas d'usage IA pour PropTech</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Appel stratégique PropTech <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
