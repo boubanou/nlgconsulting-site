@@ -49,7 +49,7 @@ const AgenceLeadGenerationFR = () => {
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Lead Generation B2B</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Agence de Lead Generation B2B : Prospection, Qualification & Pipeline</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Nous concevons et opérons des systèmes complets de lead generation — combinant prospection IA, outbound structuré et architecture pipeline multicanal — pour générer des conversations commerciales qualifiées de manière prévisible.
+              NLG opère votre génération de leads B2B de bout en bout : définition ICP, data prospects vérifiée, prospection multicanal, qualification et suivi CRM. L'objectif est de créer des conversations commerciales exploitables — pas de livrer de simples listes de contacts.
             </p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/fr/rendez-vous">Discuter de votre génération de leads <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -70,7 +70,7 @@ const AgenceLeadGenerationFR = () => {
               <li><strong>Architecture CRM & Pipeline :</strong> Setup revenue operations complet pour la visibilité pipeline et le suivi de conversion.</li>
             </ul>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Expertise sectorielle</h3>
-            <p>Nous opérons des systèmes de lead generation pour les entreprises B2B en <Link to="/fr/ia-fintech" className="text-primary hover:underline">FinTech</Link>, <Link to="/fr/ia-proptech" className="text-primary hover:underline">PropTech</Link>, SaaS et services professionnels. Notre pratique de <Link to="/fr/conseil" className="text-primary hover:underline font-medium">conseil stratégique</Link> assure que votre lead generation s'aligne avec votre stratégie GTM globale.</p>
+            <p>Nous opérons des systèmes de lead generation pour les entreprises B2B en <Link to="/fr/ia-pour-fintech" className="text-primary hover:underline">FinTech</Link>, <Link to="/fr/ia-pour-proptech" className="text-primary hover:underline">PropTech</Link>, SaaS et services professionnels. Notre pratique de <Link to="/fr/conseil" className="text-primary hover:underline font-medium">conseil stratégique</Link> assure que votre lead generation s'aligne avec votre stratégie GTM globale.</p>
           </div>
         </section>
 
