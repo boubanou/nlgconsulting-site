@@ -72,7 +72,7 @@ const AIAutomation = () => {
             <h2 className="mb-6">The Cost of Manual Operations</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>For most FinTech companies, PropTech operators, SaaS teams, and B2B service firms, the operational bottleneck isn't strategy — it's execution bandwidth. Teams spend hours on data entry, lead research, content drafting, report generation, CRM updates, and follow-up sequences. These tasks are essential but don't scale with the business.</p>
-              <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously — with higher consistency and lower cost than manual execution.</p>
+              <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously. Our guide to <Link to="/insights/ai-automation-roi" className="text-primary hover:underline font-medium">measuring AI automation ROI</Link> shows how to baseline a workflow before deployment and evaluate the operating result afterward.</p>
               <p>The difference between companies that scale efficiently and those that don't is often the quality of their operational automation. Not just having tools, but having <Link to="/ai-consulting" className="text-primary hover:underline">well-designed systems</Link> that connect data, logic, and AI into workflows that run without constant oversight.</p>
             </div>
           </div>
