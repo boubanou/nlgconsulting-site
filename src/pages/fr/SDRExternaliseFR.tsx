@@ -49,7 +49,7 @@ const SDRExternaliseFR = () => {
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">SDR Externalisé</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">SDR Externalisé B2B : Prospection Structurée & Rendez-Vous Qualifiés</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Développement commercial structuré sans le risque d'embauche. Nos opérateurs formés exécutent la prospection outbound multicanal, la qualification assistée par IA et la génération de rendez-vous — comme une extension directe de votre équipe commerciale.
+              Une fonction SDR externalisée pour structurer votre prospection B2B sans recruter en interne. Nous définissons l'ICP, construisons les listes de prospects, coordonnons email, LinkedIn et téléphone, qualifions l'intérêt, documentons l'activité dans le CRM et réservons des rendez-vous commerciaux.
             </p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/fr/rendez-vous">Discuter de votre externalisation SDR <ArrowRight className="ml-2 w-4 h-4" /></Link>
