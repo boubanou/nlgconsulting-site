@@ -43,8 +43,8 @@ const AutomationIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Automatisation IA des Workflows | Processus Business | NLG</title>
-        <meta name="description" content="Automatisation de workflows avec l'IA pour les ventes, le marketing et les opérations. Systèmes d'automatisation qui réduisent la charge manuelle et améliorent la qualité d'output pour les entreprises B2B." />
+        <title>Automatisation IA Entreprise | Workflows & Processus | NLG</title>
+        <meta name="description" content="Automatisation IA pour entreprises : cartographie des processus, workflows automatisés, intégrations CRM et déploiement IA pour ventes, marketing et opérations." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
@@ -61,10 +61,10 @@ const AutomationIAFR = () => {
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Automatisation IA</Badge>
             <h1 className="mb-6">
-              Automatisation IA{" "}<span className="text-gradient">des Workflows Business</span>
+              Automatisation IA{" "}<span className="text-gradient">des Processus & Workflows d'Entreprise</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Nous concevons et déployons des systèmes d'automatisation IA qui remplacent les workflows manuels dans les ventes, le marketing, le contenu et les opérations — réduisant les coûts, améliorant la consistance et créant une infrastructure de revenus scalable.
+              Nous cartographions les tâches répétitives, identifions les automatisations à fort impact et déployons des workflows IA connectés à vos outils existants — CRM, marketing, contenu et opérations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Évaluer votre potentiel d'automatisation <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
