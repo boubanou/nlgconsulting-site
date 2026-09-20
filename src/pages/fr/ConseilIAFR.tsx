@@ -86,7 +86,7 @@ const ConseilIAFR = () => {
                 Sans conseil en IA structuré, les entreprises expérimentent sans direction : elles s'abonnent à des outils sous-utilisés, lancent des pilotes isolés sans plan d'intégration, ou retardent l'adoption pendant que les concurrents construisent des avantages opérationnels.
               </p>
               <p>
-                Le conseil en IA connecte la technologie aux résultats. Concevoir des <Link to="/fr/automation-ia" className="text-primary hover:underline">workflows IA</Link> qui réduisent la charge manuelle, construire des <Link to="/fr/agents-ia-entreprise" className="text-primary hover:underline">systèmes IA agentiques</Link> pour les processus multi-étapes, et créer une clarté opérationnelle sur où l'IA apporte un vrai levier.
+                Le conseil en IA connecte la technologie aux résultats. Concevoir des <Link to="/fr/automation-ia" className="text-primary hover:underline">workflows IA</Link> qui réduisent la charge manuelle, construire des <Link to="/fr/agents-ia-entreprise" className="text-primary hover:underline">systèmes IA agentiques</Link> pour les processus multi-étapes, et créer une clarté opérationnelle sur où l'IA apporte un vrai levier. Notre <Link to="/fr/ressources/audit-ia-entreprise" className="text-primary hover:underline font-medium">checklist d'audit IA</Link> détaille cette méthode de priorisation.
               </p>
             </div>
           </div>
