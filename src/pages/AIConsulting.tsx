@@ -102,7 +102,7 @@ const AIConsulting = () => {
           <div className="container-wide">
             <div className="text-center mb-12">
               <h2 className="mb-4">AI Consulting From Audit to Implementation</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">From diagnosis to deployment — a structured approach to practical AI adoption.</p>
+              <p className="text-muted-foreground max-w-2xl mx-auto">From process audit and use-case prioritisation to roadmap, implementation and adoption — a structured path from AI opportunity to measurable execution.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
