@@ -91,7 +91,7 @@ const AIConsulting = () => {
                 Without structured AI consulting, companies tend to experiment without direction: subscribing to tools they underuse, running isolated pilots with no integration plan, or delaying adoption while competitors build operational advantages. The cost isn't just wasted spend — it's the compounding opportunity cost of slower execution, higher manual overhead, and less pipeline visibility.
               </p>
               <p>
-                AI consulting for business connects technology to outcomes. It means designing <Link to="/ai-automation" className="text-primary hover:underline">AI workflows</Link> that reduce manual workload, building <Link to="/ai-agents-for-business" className="text-primary hover:underline">agentic AI systems</Link> that handle multi-step processes, and creating operational clarity around where AI adds leverage and where it doesn't.
+                AI consulting for business connects technology to outcomes. It means designing <Link to="/ai-automation" className="text-primary hover:underline">AI workflows</Link> that reduce manual workload, building <Link to="/ai-agents-for-business" className="text-primary hover:underline">agentic AI systems</Link> that handle multi-step processes, and creating operational clarity around where AI adds leverage and where it doesn't. Start with our <Link to="/insights/ai-audit-checklist" className="text-primary hover:underline font-medium">AI audit checklist</Link> to see how we prioritize use cases before implementation.
               </p>
             </div>
           </div>
