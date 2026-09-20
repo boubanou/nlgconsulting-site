@@ -75,7 +75,7 @@ const OutsourcedSDR = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">Why Structured SDR Outsourcing Outperforms In-House Hiring</h2>
-            <p>Building an in-house SDR function requires €80,000+ per operator per year — before tools, training, and management overhead. The average ramp-up takes 3-6 months, and industry turnover exceeds 35%. For most growth-stage companies, this represents significant capital risk with uncertain returns.</p>
+            <p>Building an in-house SDR function requires recruiting, onboarding, tooling, management and ongoing coaching before the motion becomes repeatable. For many growth-stage companies, that creates fixed overhead before the outbound model has been fully validated.</p>
             <p>NLG Consulting's outsourced SDR model eliminates these variables. We deploy trained operators with established workflows, AI-enhanced prospecting tools, and proven multichannel sequences — delivering qualified commercial conversations within weeks, not months.</p>
             <p>Unlike traditional outsourced SDR vendors, our approach is informed by <Link to="/ai-consulting" className="text-primary hover:underline font-medium">AI consulting</Link> and <Link to="/advisory" className="text-primary hover:underline font-medium">strategic advisory</Link> — ensuring your outbound system aligns with your GTM strategy and revenue objectives.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">What's Included in Every Engagement</h3>
