@@ -78,10 +78,10 @@ const SDRExternaliseFR = () => {
         <section className="py-12 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { metric: "15-30", label: "RDV qualifiés / mois" },
-              { metric: "2-3", label: "Semaines pour démarrer" },
-              { metric: "3+", label: "Canaux coordonnés" },
-              { metric: "60%", label: "Coût inférieur vs interne" }
+              { metric: "ICP", label: "Ciblage & segmentation" },
+              { metric: "Multicanal", label: "Email · LinkedIn · Téléphone" },
+              { metric: "CRM", label: "Suivi activité & pipeline" },
+              { metric: "Reporting", label: "Optimisation continue" }
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold">{item.metric}</div>
