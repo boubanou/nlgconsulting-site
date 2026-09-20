@@ -30,8 +30,8 @@ const AISalesAutomationPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Sales Automation | Pipeline & Revenue Systems | NLG</title>
-        <meta name="description" content="AI-powered sales automation for B2B pipeline generation. Automated prospecting, personalised outreach, multichannel sequences, and pipeline management for FinTech, PropTech & B2B." />
+        <title>AI Sales Automation | Prospecting, Outreach & CRM Workflows | NLG</title>
+        <meta name="description" content="AI sales automation for B2B: automate prospect research, data enrichment, personalised outreach, follow-up and CRM workflows while keeping human sales oversight." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-sales-automation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-sales-automation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-commerciale-ia" />
@@ -49,9 +49,9 @@ const AISalesAutomationPage = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">AI Sales Systems</Badge>
-            <h1 className="mb-6">AI-Powered Sales{" "}<span className="text-gradient">& Pipeline Automation</span></h1>
+            <h1 className="mb-6">AI Sales Automation for{" "}<span className="text-gradient">Prospecting, Outreach & CRM</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              We build AI-enhanced sales systems that handle prospecting, personalised outreach, multichannel sequences, and pipeline management — creating consistent, qualified meeting flow with clearer commercial visibility and lower operational overhead.
+              We automate the repetitive layers of B2B sales — prospect research, enrichment, personalised outreach, follow-up and CRM updates — so your team can focus on qualification, conversations and closing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Assess Your Sales Operations <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
