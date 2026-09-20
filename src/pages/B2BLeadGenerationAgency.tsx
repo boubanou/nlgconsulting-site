@@ -50,10 +50,10 @@ const B2BLeadGenerationAgency = () => {
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">B2B Lead Generation</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">B2B Lead Generation Agency for Qualified Pipeline</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              We design and operate complete lead generation systems — combining AI-powered prospecting, structured outbound, and multichannel pipeline architecture — to generate qualified commercial conversations predictably.
+              NLG operates end-to-end B2B lead generation for SaaS, FinTech, PropTech and service companies: ICP research, verified prospect data, multichannel outreach, qualification and CRM pipeline tracking — built to create sales-ready conversations, not raw lists.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/book">Book a Pipeline Assessment <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Discuss Your Lead Generation <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -115,7 +115,7 @@ const B2BLeadGenerationAgency = () => {
             <h2 className="text-3xl font-bold mb-4">Discuss Your Pipeline Architecture</h2>
             <p className="text-lg opacity-90 mb-8">If you are evaluating your lead generation model, outbound infrastructure, or pipeline systems — we can assess where structured execution and AI can improve commercial performance.</p>
             <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <Link to="/book">Book a Pipeline Assessment <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Discuss Your Lead Generation <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
