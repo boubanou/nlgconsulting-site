@@ -43,8 +43,8 @@ const AgentsIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Agents IA pour Entreprises | Systèmes Agentiques | NLG</title>
-        <meta name="description" content="Conception et déploiement de systèmes IA agentiques pour les ventes, le marketing, le contenu et les opérations. Workflows Claude Code, agents multi-étapes et automatisation human-in-the-loop." />
+        <title>Agents IA pour Entreprise | Workflows Agentiques | NLG</title>
+        <meta name="description" content="Agents IA pour entreprises : workflows agentiques multi-étapes pour recherche, ventes, contenu et opérations, avec intégrations, outils et supervision humaine." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/agents-ia-entreprise" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/agents-ia-entreprise" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-agents-for-business" />
@@ -60,9 +60,9 @@ const AgentsIAFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">IA Agentique</Badge>
-            <h1 className="mb-6">Systèmes IA Agentiques{" "}<span className="text-gradient">pour les Opérations Business</span></h1>
+            <h1 className="mb-6">Agents IA pour{" "}<span className="text-gradient">Workflows & Opérations d'Entreprise</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Les agents IA vont au-delà de l'automatisation. Ils raisonnent, planifient, utilisent des outils et exécutent des processus business complexes — de la prospection commerciale et la production de contenu à la recherche et aux workflows opérationnels. Nous concevons et déployons des systèmes IA agentiques connectés à vos opérations réelles.
+              Nous concevons des agents IA capables de rechercher, raisonner, utiliser des outils et exécuter des workflows multi-étapes dans les ventes, le contenu et les opérations — avec les intégrations, garde-fous et validations humaines nécessaires.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Discuter des agents IA pour votre entreprise <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>

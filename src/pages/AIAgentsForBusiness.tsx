@@ -30,8 +30,8 @@ const AIAgentsForBusiness = () => {
   return (
     <>
       <Helmet>
-        <title>AI Agents for Business | Agentic AI Systems | NLG Consulting</title>
-        <meta name="description" content="Design and deploy agentic AI systems for sales, marketing, content, and operations. Claude Code workflows, multi-step AI agents, and human-in-the-loop automation for B2B companies." />
+        <title>AI Agents for Business | Agentic Workflows & Systems | NLG</title>
+        <meta name="description" content="AI agents for business: design multi-step agentic workflows for research, sales, content and operations with tool use, integrations and human oversight." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-agents-for-business" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-agents-for-business" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/agents-ia-entreprise" />
@@ -50,9 +50,9 @@ const AIAgentsForBusiness = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Agentic AI</Badge>
-            <h1 className="mb-6">Agentic AI Systems{" "}<span className="text-gradient">for Business Operations</span></h1>
+            <h1 className="mb-6">AI Agents for Business{" "}<span className="text-gradient">Workflows & Operations</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              AI agents go beyond automation. They reason, plan, use tools, and execute complex business processes — from sales prospecting and content production to research and operational workflows. We design and deploy agentic AI systems connected to your real business operations.
+              We design AI agents that can research, reason, use tools and complete multi-step workflows across sales, content and operations — with the integrations, guardrails and human oversight needed for real business use.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Discuss AI Agents for Your Business <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>

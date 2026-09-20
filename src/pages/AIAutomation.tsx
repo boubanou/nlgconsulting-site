@@ -36,8 +36,8 @@ const AIAutomation = () => {
   return (
     <>
       <Helmet>
-        <title>AI Workflow Automation | Business Process Automation | NLG</title>
-        <meta name="description" content="AI-powered workflow automation for sales, marketing, and operations. We design and deploy automation systems that reduce manual workload and improve output quality for B2B companies." />
+        <title>AI Automation Agency | Workflow & Process Automation | NLG</title>
+        <meta name="description" content="AI automation for B2B operations: map repetitive workflows, design integrations and deploy AI-powered processes across sales, marketing, content and operations." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
@@ -56,9 +56,9 @@ const AIAutomation = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">AI Automation</Badge>
-            <h1 className="mb-6">AI Workflow Automation{" "}<span className="text-gradient">for Business Operations</span></h1>
+            <h1 className="mb-6">AI Automation for{" "}<span className="text-gradient">Business Workflows & Operations</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              We design and deploy AI-powered automation systems that replace manual workflows across sales, marketing, content, and operations — reducing overhead, improving consistency, and creating scalable revenue infrastructure.
+              We map repetitive work, identify where automation creates real leverage, and deploy AI-powered workflows across sales, marketing, content and operations — integrated with the tools your team already uses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Book an Automation Assessment <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>

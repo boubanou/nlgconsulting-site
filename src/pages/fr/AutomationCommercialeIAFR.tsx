@@ -43,8 +43,8 @@ const AutomationCommercialeIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Automatisation Commerciale IA | Pipeline & Revenus | NLG</title>
-        <meta name="description" content="Automatisation commerciale IA pour la génération de pipeline B2B. Prospection automatisée, outreach personnalisé, séquences multicanal et gestion de pipeline pour FinTech, PropTech & B2B." />
+        <title>Automatisation Commerciale IA | Prospection, CRM & Relances | NLG</title>
+        <meta name="description" content="Automatisation commerciale IA B2B : recherche prospects, enrichissement, outreach personnalisé, relances et workflows CRM avec supervision de l’équipe commerciale." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/automation-commerciale-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-commerciale-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-sales-automation" />
@@ -60,9 +60,9 @@ const AutomationCommercialeIAFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Systèmes Ventes IA</Badge>
-            <h1 className="mb-6">Automatisation Commerciale{" "}<span className="text-gradient">& Pipeline IA</span></h1>
+            <h1 className="mb-6">Automatisation Commerciale IA pour{" "}<span className="text-gradient">Prospection, Relances & CRM</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Nous construisons des systèmes de vente IA qui gèrent la prospection, l'outreach personnalisé, les séquences multicanal et le management de pipeline — créant un flux de réunions qualifiées consistant avec une visibilité commerciale renforcée et un overhead opérationnel réduit.
+              Nous automatisons les couches répétitives de la vente B2B — recherche prospects, enrichissement, personnalisation, relances et mises à jour CRM — afin que l'équipe commerciale se concentre sur la qualification, les conversations et la conclusion.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Évaluer vos opérations commerciales <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>

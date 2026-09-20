@@ -28,8 +28,8 @@ const SDRExternaliseFR = () => {
   return (
     <>
       <Helmet>
-        <title>SDR Externalisé | Prospection IA & Outbound | NLG</title>
-        <meta name="description" content="Opérations SDR externalisées avec prospection augmentée par l'IA. Exécution outbound structurée et génération de rendez-vous qualifiés pour entreprises B2B." />
+        <title>SDR Externalisé B2B | Prospection & RDV Qualifiés | NLG</title>
+        <meta name="description" content="SDR externalisé pour entreprises B2B : définition ICP, prospection multicanal, qualification, intégration CRM et rendez-vous qualifiés sans recruter en interne." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/sdr-externalise" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/sdr-externalise" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/outsourced-sdr" />
@@ -47,12 +47,12 @@ const SDRExternaliseFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">SDR Externalisé</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Opérations SDR Externalisées Avec Prospection Augmentée par l'IA</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">SDR Externalisé B2B : Prospection Structurée & Rendez-Vous Qualifiés</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Développement commercial structuré sans le risque d'embauche. Nos opérateurs formés exécutent la prospection outbound multicanal, la qualification assistée par IA et la génération de rendez-vous — comme une extension directe de votre équipe commerciale.
+              Une fonction SDR externalisée pour structurer votre prospection B2B sans recruter en interne. Nous définissons l'ICP, construisons les listes de prospects, coordonnons email, LinkedIn et téléphone, qualifions l'intérêt, documentons l'activité dans le CRM et réservons des rendez-vous commerciaux.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Réserver un audit commercial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Discuter de votre externalisation SDR <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -60,7 +60,7 @@ const SDRExternaliseFR = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">Pourquoi l'externalisation SDR structurée surpasse le recrutement interne</h2>
-            <p>Construire une fonction SDR interne nécessite 80 000€+ par opérateur par an — avant les outils, la formation et le management. La montée en compétences prend 3-6 mois et le turnover dépasse 35%. Pour la plupart des entreprises en croissance, cela représente un risque de capital significatif avec des retours incertains.</p>
+            <p>Construire une fonction SDR interne implique recrutement, onboarding, outils, management et coaching continu avant que la prospection devienne réellement reproductible. Pour beaucoup d'entreprises en croissance, cela crée des coûts fixes avant même d'avoir validé le modèle outbound.</p>
             <p>Le modèle SDR externalisé de NLG Consulting élimine ces variables. Nous déployons des opérateurs formés avec des workflows établis, des outils de prospection augmentés par l'IA et des séquences multicanal éprouvées — délivrant des conversations commerciales qualifiées en semaines, pas en mois.</p>
             <p>Contrairement aux prestataires SDR traditionnels, notre approche est informée par notre pratique de <Link to="/fr/conseil-ia" className="text-primary hover:underline font-medium">conseil IA</Link> et de <Link to="/fr/conseil" className="text-primary hover:underline font-medium">conseil stratégique</Link> — assurant que votre système outbound s'aligne avec votre stratégie GTM et vos objectifs de revenus.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Ce qui est inclus dans chaque engagement</h3>
@@ -78,10 +78,10 @@ const SDRExternaliseFR = () => {
         <section className="py-12 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { metric: "15-30", label: "RDV qualifiés / mois" },
-              { metric: "2-3", label: "Semaines pour démarrer" },
-              { metric: "3+", label: "Canaux coordonnés" },
-              { metric: "60%", label: "Coût inférieur vs interne" }
+              { metric: "ICP", label: "Ciblage & segmentation" },
+              { metric: "Multicanal", label: "Email · LinkedIn · Téléphone" },
+              { metric: "CRM", label: "Suivi activité & pipeline" },
+              { metric: "Reporting", label: "Optimisation continue" }
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold">{item.metric}</div>
@@ -140,7 +140,7 @@ const SDRExternaliseFR = () => {
             <p className="text-lg opacity-90 mb-8">Si vous évaluez votre modèle SDR, votre architecture outbound ou votre rythme opérationnel commercial — nous pouvons identifier où l'exécution structurée peut améliorer la performance.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/fr/rendez-vous">Réserver un audit commercial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/fr/rendez-vous">Discuter de votre externalisation SDR <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline-light" size="lg">
                 <Link to="/fr/contact">Nous contacter</Link>

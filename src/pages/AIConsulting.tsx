@@ -14,7 +14,7 @@ const AIConsulting = () => {
     "@graph": [
       {
         "@type": "Service",
-        "name": "AI Consulting for Business Operations & Growth",
+        "name": "AI Consulting for Business: Audit, Roadmap & Implementation",
         "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
         "description": "Operator-led AI consulting for FinTech, PropTech, SaaS and B2B companies. We help leadership teams adopt AI workflows, agentic systems, and operational AI to improve commercial performance and founder efficiency.",
         "url": "https://www.nlgconsulting.co/ai-consulting",
@@ -25,7 +25,7 @@ const AIConsulting = () => {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "What is AI consulting for business?", "acceptedAnswer": { "@type": "Answer", "text": "AI consulting helps companies identify where artificial intelligence — including AI workflows, agentic systems, and Claude Code automation — can improve operations, sales, marketing, and decision-making. It bridges the gap between available AI capabilities and practical business outcomes." }},
-          { "@type": "Question", "name": "How is AI consulting different from buying AI tools?", "acceptedAnswer": { "@type": "Answer", "text": "Tools are components. AI consulting provides the architecture — understanding which processes benefit from AI, designing workflows, selecting models, and building systems that connect AI to real business operations. Without consulting, companies typically underutilise 80% of the tools they buy." }},
+          { "@type": "Question", "name": "How is AI consulting different from buying AI tools?", "acceptedAnswer": { "@type": "Answer", "text": "Tools are components. AI consulting provides the architecture — understanding which processes benefit from AI, designing workflows, selecting models, and building systems that connect AI to real business operations. Without a clear operating model, companies often accumulate AI tools without connecting them to repeatable business processes or measurable outcomes." }},
           { "@type": "Question", "name": "Who benefits from AI consulting?", "acceptedAnswer": { "@type": "Answer", "text": "Founders, CEOs, and operational leaders at FinTech, PropTech, SaaS, and B2B companies who want to adopt AI in a structured way — tied to revenue, efficiency, and measurable business outcomes rather than experimentation." }},
           { "@type": "Question", "name": "How long does an AI consulting engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "A focused AI audit and roadmap typically takes 2–3 weeks. Ongoing advisory and implementation partnerships can span several months, depending on complexity and the number of workflows being designed." }},
           { "@type": "Question", "name": "What is agentic AI consulting?", "acceptedAnswer": { "@type": "Answer", "text": "Agentic AI consulting focuses on designing multi-step AI systems — AI agents — that can reason, plan, use tools, and execute complex business processes with human oversight. This goes beyond simple automation to create intelligent systems that handle research, prospecting, content, and operations." }}
@@ -44,8 +44,8 @@ const AIConsulting = () => {
   return (
     <>
       <Helmet>
-        <title>AI Consulting for Business | Agentic AI & Workflows | NLG</title>
-        <meta name="description" content="Operator-led AI consulting for FinTech, PropTech, SaaS & B2B. AI workflows, agentic systems, Claude Code automation, and operational AI tied to revenue and efficiency." />
+        <title>AI Consulting for Business | Audit, Roadmap & Implementation | NLG</title>
+        <meta name="description" content="AI consulting for B2B companies: audit workflows, prioritize high-ROI use cases, build an AI roadmap and implement automation, agents and operational AI." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia" />
@@ -70,10 +70,10 @@ const AIConsulting = () => {
               <span className="text-gradient">Business Operations & Growth</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Most companies know AI matters. Few know how to connect it to revenue, operations, and commercial performance. We help founders and leadership teams adopt AI workflows, agentic systems, and operational AI in a structured, measurable way.
+              Turn AI from experimentation into an operating advantage. We audit your processes, identify high-value use cases, build a practical roadmap, and implement AI workflows and agentic systems tied to measurable business outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button asChild size="lg"><Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild size="lg"><Link to="/book">Book an AI Audit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
               <Button asChild variant="outline" size="lg"><Link to="/services">Explore Services</Link></Button>
             </div>
           </div>
@@ -82,7 +82,7 @@ const AIConsulting = () => {
         {/* Problem */}
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="mb-6">The Gap Between AI Tools and Business Results</h2>
+            <h2 className="mb-6">From AI Experiments to Measurable Business Results</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 The AI ecosystem is moving fast — OpenAI, Anthropic's Claude, Google Gemini, and open-source models are creating capabilities that were impossible two years ago. But for most FinTech operators, PropTech companies, SaaS founders, and B2B service firms, the challenge isn't access to technology. It's knowing how to deploy AI in ways that actually improve commercial performance.
@@ -101,8 +101,8 @@ const AIConsulting = () => {
         <section className="section-padding">
           <div className="container-wide">
             <div className="text-center mb-12">
-              <h2 className="mb-4">What Our AI Consulting Covers</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">From diagnosis to deployment — a structured approach to practical AI adoption.</p>
+              <h2 className="mb-4">AI Consulting From Audit to Implementation</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">From process audit and use-case prioritisation to roadmap, implementation and adoption — a structured path from AI opportunity to measurable execution.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -180,7 +180,7 @@ const AIConsulting = () => {
               We're not a traditional consulting firm delivering reports. We're operators who design and deploy AI systems — with 15+ years of real-world experience across FinTech, PropTech, SaaS, and B2B revenue operations. Strategy and execution under one roof.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary"><Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild size="lg" variant="secondary"><Link to="/book">Book an AI Audit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
               <Button asChild size="lg" variant="outline-light"><Link to="/about">About the Founder</Link></Button>
             </div>
           </div>
@@ -217,7 +217,7 @@ const AIConsulting = () => {
             <Accordion type="single" collapsible className="w-full">
               {[
                 { q: "What is AI consulting for business?", a: "AI consulting helps companies identify where artificial intelligence — including AI workflows, agentic systems, and Claude Code automation — can improve operations, sales, marketing, and decision-making. It bridges the gap between available AI capabilities and practical business outcomes." },
-                { q: "How is AI consulting different from buying AI tools?", a: "Tools are components. AI consulting provides the architecture — understanding which processes benefit from AI, designing workflows, selecting models, and building systems that connect AI to real business operations. Without consulting, companies typically underutilise 80% of the tools they buy." },
+                { q: "How is AI consulting different from buying AI tools?", a: "Tools are components. AI consulting provides the architecture — understanding which processes benefit from AI, designing workflows, selecting models, and building systems that connect AI to real business operations. Without a clear operating model, companies often accumulate AI tools without connecting them to repeatable business processes or measurable outcomes." },
                 { q: "Who benefits from AI consulting?", a: "Founders, CEOs, and operational leaders at FinTech, PropTech, SaaS, and B2B companies who want to adopt AI in a structured way — tied to revenue, efficiency, and measurable business outcomes rather than experimentation." },
                 { q: "What is agentic AI consulting?", a: "Agentic AI consulting focuses on designing multi-step AI systems — AI agents — that can reason, plan, use tools, and execute complex business processes with human oversight. This goes beyond simple automation to create intelligent systems for research, prospecting, content, and operations." },
                 { q: "How long does an AI consulting engagement take?", a: "A focused AI audit and roadmap typically takes 2–3 weeks. Ongoing advisory and implementation partnerships span several months, depending on complexity and the number of workflows being designed." }
@@ -234,9 +234,9 @@ const AIConsulting = () => {
         {/* CTA */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-4">Discuss Your AI Strategy</h2>
-            <p className="text-lg text-muted-foreground mb-8">Book a focused call to assess where AI can improve your operations, commercial performance, and founder efficiency.</p>
-            <Button asChild size="lg"><Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <h2 className="mb-4">Identify Your Highest-ROI AI Opportunities</h2>
+            <p className="text-lg text-muted-foreground mb-8">Book an AI audit discussion to identify the workflows, use cases and implementation priorities most likely to improve revenue, speed and operational efficiency.</p>
+            <Button asChild size="lg"><Link to="/book">Book an AI Audit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>
         </section>
 

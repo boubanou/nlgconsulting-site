@@ -43,8 +43,8 @@ const OutsourcedSDR = () => {
   return (
     <>
       <Helmet>
-        <title>Outsourced SDR | AI-Enhanced Sales Development | NLG</title>
-        <meta name="description" content="Outsourced SDR operations with AI-enhanced prospecting. Structured outbound execution, multichannel sequencing, and qualified meeting generation for B2B companies." />
+        <title>Outsourced SDR Team for B2B | Qualified Meetings | NLG</title>
+        <meta name="description" content="Outsourced SDR team for B2B companies. ICP definition, verified prospecting, multichannel outreach, qualification, CRM reporting and qualified meetings." />
         <link rel="canonical" href="https://www.nlgconsulting.co/outsourced-sdr" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/outsourced-sdr" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/sdr-externalise" />
@@ -62,12 +62,12 @@ const OutsourcedSDR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Outsourced SDR</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Outsourced SDR Operations With AI-Enhanced Prospecting</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Outsourced SDR Team for B2B Prospecting & Qualified Meetings</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Structured sales development without the hiring risk. Our trained operators execute multichannel outbound, AI-assisted qualification, and meeting generation — as a direct extension of your commercial team.
+              A managed outsourced SDR function for B2B growth teams. We define the ICP, build verified prospect lists, run coordinated email, LinkedIn and phone outreach, qualify interest, log activity in your CRM and book sales-ready meetings.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/book">Book a Commercial Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Discuss Your SDR Model <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -75,7 +75,7 @@ const OutsourcedSDR = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">Why Structured SDR Outsourcing Outperforms In-House Hiring</h2>
-            <p>Building an in-house SDR function requires €80,000+ per operator per year — before tools, training, and management overhead. The average ramp-up takes 3-6 months, and industry turnover exceeds 35%. For most growth-stage companies, this represents significant capital risk with uncertain returns.</p>
+            <p>Building an in-house SDR function requires recruiting, onboarding, tooling, management and ongoing coaching before the motion becomes repeatable. For many growth-stage companies, that creates fixed overhead before the outbound model has been fully validated.</p>
             <p>NLG Consulting's outsourced SDR model eliminates these variables. We deploy trained operators with established workflows, AI-enhanced prospecting tools, and proven multichannel sequences — delivering qualified commercial conversations within weeks, not months.</p>
             <p>Unlike traditional outsourced SDR vendors, our approach is informed by <Link to="/ai-consulting" className="text-primary hover:underline font-medium">AI consulting</Link> and <Link to="/advisory" className="text-primary hover:underline font-medium">strategic advisory</Link> — ensuring your outbound system aligns with your GTM strategy and revenue objectives.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">What's Included in Every Engagement</h3>
@@ -94,11 +94,11 @@ const OutsourcedSDR = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { metric: "15-30", label: "Qualified Meetings / Month" },
-                { metric: "2-3", label: "Weeks to First Meeting" },
-                { metric: "3+", label: "Coordinated Channels" },
-                { metric: "60%", label: "Lower Cost vs In-House" }
-              ].map((item, i) => (
+              { metric: "ICP", label: "Targeting & segmentation" },
+              { metric: "Multi-channel", label: "Email · LinkedIn · Phone" },
+              { metric: "CRM", label: "Activity & pipeline tracking" },
+              { metric: "Reporting", label: "Continuous optimisation" }
+            ].map((item, i) => (
                 <div key={i} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold">{item.metric}</div>
                   <div className="text-sm opacity-80 mt-1">{item.label}</div>
@@ -172,7 +172,7 @@ const OutsourcedSDR = () => {
             <p className="text-lg opacity-90 mb-8">If you are evaluating your SDR model, outbound architecture, or commercial operating rhythm — we can assess where structured execution can improve performance.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/book">Book a Commercial Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/book">Discuss Your SDR Model <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline-light" size="lg">
                 <Link to="/contact">Contact Us</Link>
