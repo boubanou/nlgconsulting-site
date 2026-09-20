@@ -43,8 +43,8 @@ const OutsourcedSDR = () => {
   return (
     <>
       <Helmet>
-        <title>Outsourced SDR | AI-Enhanced Sales Development | NLG</title>
-        <meta name="description" content="Outsourced SDR operations with AI-enhanced prospecting. Structured outbound execution, multichannel sequencing, and qualified meeting generation for B2B companies." />
+        <title>Outsourced SDR Team for B2B | Qualified Meetings | NLG</title>
+        <meta name="description" content="Outsourced SDR team for B2B companies. ICP definition, verified prospecting, multichannel outreach, qualification, CRM reporting and qualified meetings." />
         <link rel="canonical" href="https://www.nlgconsulting.co/outsourced-sdr" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/outsourced-sdr" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/sdr-externalise" />
@@ -62,7 +62,7 @@ const OutsourcedSDR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Outsourced SDR</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Outsourced SDR Operations With AI-Enhanced Prospecting</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Outsourced SDR Team for B2B Prospecting & Qualified Meetings</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Structured sales development without the hiring risk. Our trained operators execute multichannel outbound, AI-assisted qualification, and meeting generation — as a direct extension of your commercial team.
             </p>
