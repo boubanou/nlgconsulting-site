@@ -27,8 +27,8 @@ const AIForPropTech = () => {
   return (
     <>
       <Helmet>
-        <title>AI Growth Systems for PropTech | NLG Consulting</title>
-        <meta name="description" content="AI consulting, workflow automation and revenue operations for PropTech. Lead systems, investor outreach, market intelligence. Founder-led PropTech experience." />
+        <title>AI Consulting for PropTech | Automation & Revenue Systems | NLG</title>
+        <meta name="description" content="AI consulting for PropTech companies: automate lead qualification, investor outreach, market research, content and revenue workflows with operator-led implementation." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-for-proptech" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-for-proptech" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-proptech" />
@@ -40,9 +40,9 @@ const AIForPropTech = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">PropTech</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">AI-Powered Growth Systems for PropTech Companies</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Consulting & Automation for PropTech Companies</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              PropTech is being reshaped by AI — from automated valuations and intelligent lead routing to investor communications and market intelligence. We help PropTech operators deploy AI workflows, build revenue infrastructure and create systems that scale across markets.
+              We help PropTech teams identify and implement practical AI use cases across lead qualification, investor outreach, market intelligence, content and revenue operations — with first-hand understanding of property technology workflows.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Discuss Your PropTech Growth <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
