@@ -28,8 +28,8 @@ const SDRExternaliseFR = () => {
   return (
     <>
       <Helmet>
-        <title>SDR Externalisé | Prospection IA & Outbound | NLG</title>
-        <meta name="description" content="Opérations SDR externalisées avec prospection augmentée par l'IA. Exécution outbound structurée et génération de rendez-vous qualifiés pour entreprises B2B." />
+        <title>SDR Externalisé B2B | Prospection & RDV Qualifiés | NLG</title>
+        <meta name="description" content="SDR externalisé pour entreprises B2B : définition ICP, prospection multicanal, qualification, intégration CRM et rendez-vous qualifiés sans recruter en interne." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/sdr-externalise" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/sdr-externalise" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/outsourced-sdr" />
@@ -47,12 +47,12 @@ const SDRExternaliseFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">SDR Externalisé</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Opérations SDR Externalisées Avec Prospection Augmentée par l'IA</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">SDR Externalisé B2B : Prospection Structurée & Rendez-Vous Qualifiés</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Développement commercial structuré sans le risque d'embauche. Nos opérateurs formés exécutent la prospection outbound multicanal, la qualification assistée par IA et la génération de rendez-vous — comme une extension directe de votre équipe commerciale.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Réserver un audit commercial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Discuter de votre externalisation SDR <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -140,7 +140,7 @@ const SDRExternaliseFR = () => {
             <p className="text-lg opacity-90 mb-8">Si vous évaluez votre modèle SDR, votre architecture outbound ou votre rythme opérationnel commercial — nous pouvons identifier où l'exécution structurée peut améliorer la performance.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/fr/rendez-vous">Réserver un audit commercial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/fr/rendez-vous">Discuter de votre externalisation SDR <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline-light" size="lg">
                 <Link to="/fr/contact">Nous contacter</Link>
