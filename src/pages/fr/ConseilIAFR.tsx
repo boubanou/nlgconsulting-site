@@ -43,8 +43,8 @@ const ConseilIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Conseil en IA | Workflows & Systèmes Agentiques | NLG</title>
-        <meta name="description" content="Conseil en IA opérationnel pour FinTech, PropTech, SaaS & B2B. Workflows IA, systèmes agentiques, automatisation Claude Code et IA opérationnelle liés au revenu et à l'efficacité." />
+        <title>Consultant IA Entreprise | Audit, Roadmap & Déploiement | NLG</title>
+        <meta name="description" content="Consultant IA pour PME et entreprises B2B : audit des processus, cas d’usage à fort ROI, roadmap IA, automatisation et déploiement de workflows et agents IA." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-consulting" />
@@ -69,7 +69,7 @@ const ConseilIAFR = () => {
               La plupart des entreprises savent que l'IA compte. Peu savent comment la connecter au revenu, aux opérations et à la performance commerciale. Nous aidons les dirigeants à adopter des workflows IA, des systèmes agentiques et de l'IA opérationnelle de manière structurée et mesurable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un audit IA <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
               <Button asChild variant="outline" size="lg"><Link to="/fr/services">Explorer nos services</Link></Button>
             </div>
           </div>
@@ -171,7 +171,7 @@ const ConseilIAFR = () => {
               Nous ne sommes pas un cabinet de conseil classique qui livre des rapports. Nous sommes des opérateurs qui conçoivent et déploient des systèmes IA — avec plus de 15 ans d'expérience terrain en FinTech, PropTech, SaaS et revenue operations B2B. Stratégie et exécution sous un même toit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+              <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Réserver un audit IA <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
               <Button asChild size="lg" variant="outline-light"><Link to="/fr/a-propos">À propos du fondateur</Link></Button>
             </div>
           </div>
@@ -222,9 +222,9 @@ const ConseilIAFR = () => {
 
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-4">Discutons de votre stratégie IA</h2>
+            <h2 className="mb-4">Identifions vos cas d’usage IA à plus fort ROI</h2>
             <p className="text-lg text-muted-foreground mb-8">Réservez un appel ciblé pour évaluer où l'IA peut améliorer vos opérations, votre performance commerciale et votre efficacité de fondateur.</p>
-            <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un audit IA <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>
         </section>
       </main>
