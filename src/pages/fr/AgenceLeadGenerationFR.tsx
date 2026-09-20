@@ -28,8 +28,8 @@ const AgenceLeadGenerationFR = () => {
   return (
     <>
       <Helmet>
-        <title>Agence Lead Generation B2B | Systèmes Pipeline | NLG</title>
-        <meta name="description" content="Systèmes de lead generation B2B combinant prospection IA, SDR externalisé et architecture pipeline multicanal. Rendez-vous qualifiés et exécution structurée." />
+        <title>Agence Lead Generation B2B | Prospection & Pipeline | NLG</title>
+        <meta name="description" content="Agence de lead generation B2B : définition ICP, data prospects, prospection multicanal, qualification, CRM et génération de pipeline pour SaaS, FinTech et PropTech." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/agence-lead-generation-b2b" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/agence-lead-generation-b2b" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/b2b-lead-generation-agency" />
@@ -47,12 +47,12 @@ const AgenceLeadGenerationFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Lead Generation B2B</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Systèmes de Lead Generation B2B Qui Délivrent des Rendez-Vous Qualifiés</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Agence de Lead Generation B2B : Prospection, Qualification & Pipeline</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Nous concevons et opérons des systèmes complets de lead generation — combinant prospection IA, outbound structuré et architecture pipeline multicanal — pour générer des conversations commerciales qualifiées de manière prévisible.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Réserver un audit pipeline <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Discuter de votre génération de leads <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -111,7 +111,7 @@ const AgenceLeadGenerationFR = () => {
             <h2 className="text-3xl font-bold mb-4">Discutons de votre architecture pipeline</h2>
             <p className="text-lg opacity-90 mb-8">Si vous évaluez votre modèle de lead generation, votre infrastructure outbound ou vos systèmes pipeline — nous pouvons identifier où l'exécution structurée et l'IA peuvent améliorer la performance commerciale.</p>
             <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Réserver un audit pipeline <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Discuter de votre génération de leads <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
