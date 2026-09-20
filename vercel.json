@@ -43,6 +43,62 @@
   ],
   "rewrites": [
     {
+      "source": "/insights",
+      "destination": "/insights/index.html"
+    },
+    {
+      "source": "/fr/ressources",
+      "destination": "/fr/ressources/index.html"
+    },
+    {
+      "source": "/insights/ai-audit-checklist",
+      "destination": "/insights/ai-audit-checklist/index.html"
+    },
+    {
+      "source": "/fr/ressources/audit-ia-entreprise",
+      "destination": "/fr/ressources/audit-ia-entreprise/index.html"
+    },
+    {
+      "source": "/insights/ai-automation-roi",
+      "destination": "/insights/ai-automation-roi/index.html"
+    },
+    {
+      "source": "/fr/ressources/roi-automatisation-ia",
+      "destination": "/fr/ressources/roi-automatisation-ia/index.html"
+    },
+    {
+      "source": "/insights/outsourced-sdr-vs-in-house",
+      "destination": "/insights/outsourced-sdr-vs-in-house/index.html"
+    },
+    {
+      "source": "/fr/ressources/sdr-externalise-vs-interne",
+      "destination": "/fr/ressources/sdr-externalise-vs-interne/index.html"
+    },
+    {
+      "source": "/insights/b2b-lead-generation-playbook",
+      "destination": "/insights/b2b-lead-generation-playbook/index.html"
+    },
+    {
+      "source": "/fr/ressources/strategie-lead-generation-b2b",
+      "destination": "/fr/ressources/strategie-lead-generation-b2b/index.html"
+    },
+    {
+      "source": "/insights/ai-use-cases-proptech",
+      "destination": "/insights/ai-use-cases-proptech/index.html"
+    },
+    {
+      "source": "/fr/ressources/cas-usage-ia-proptech",
+      "destination": "/fr/ressources/cas-usage-ia-proptech/index.html"
+    },
+    {
+      "source": "/insights/ai-use-cases-fintech",
+      "destination": "/insights/ai-use-cases-fintech/index.html"
+    },
+    {
+      "source": "/fr/ressources/cas-usage-ia-fintech",
+      "destination": "/fr/ressources/cas-usage-ia-fintech/index.html"
+    },
+    {
       "source": "/fr",
       "destination": "/fr/index.html"
     },
