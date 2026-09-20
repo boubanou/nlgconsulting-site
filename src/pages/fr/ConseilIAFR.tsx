@@ -62,11 +62,11 @@ const ConseilIAFR = () => {
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Conseil IA</Badge>
             <h1 className="mb-6">
-              Conseil en IA pour les{" "}
-              <span className="text-gradient">Opérations & la Croissance</span>
+              Consultant IA pour Entreprises :{" "}
+              <span className="text-gradient">Audit, Roadmap & Déploiement</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              La plupart des entreprises savent que l'IA compte. Peu savent comment la connecter au revenu, aux opérations et à la performance commerciale. Nous aidons les dirigeants à adopter des workflows IA, des systèmes agentiques et de l'IA opérationnelle de manière structurée et mesurable.
+              Passez de l'expérimentation IA à un plan d'exécution concret. Nous auditons vos processus, priorisons les cas d'usage à fort impact, construisons votre roadmap et déployons des workflows et agents IA reliés à des résultats business mesurables.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Réserver un audit IA <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
@@ -77,7 +77,7 @@ const ConseilIAFR = () => {
 
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="mb-6">L'écart entre les outils IA et les résultats business</h2>
+            <h2 className="mb-6">De l'expérimentation IA à des résultats business mesurables</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 L'écosystème IA évolue rapidement — OpenAI, Claude d'Anthropic, Google Gemini et les modèles open source créent des capacités inédites. Mais pour la plupart des opérateurs FinTech, PropTech, fondateurs SaaS et entreprises B2B, le défi n'est pas l'accès à la technologie. C'est de savoir comment déployer l'IA de manière à réellement améliorer la performance commerciale.
