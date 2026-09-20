@@ -27,8 +27,8 @@ const IAForPropTechFR = () => {
   return (
     <>
       <Helmet>
-        <title>IA pour PropTech : Croissance & Opérations | NLG</title>
-        <meta name="description" content="Systèmes de croissance IA pour PropTech. Qualification de leads, prospection investisseurs, automatisation opérationnelle et pipeline commercial. Par des opérateurs PropTech." />
+        <title>Conseil IA pour PropTech | Automatisation & Croissance | NLG</title>
+        <meta name="description" content="Conseil IA pour PropTech : automatisation de la qualification, prospection investisseurs, intelligence de marché, contenu et workflows revenue par des opérateurs PropTech." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/ia-pour-proptech" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-for-proptech" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/ia-pour-proptech" />
@@ -40,9 +40,9 @@ const IAForPropTechFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">PropTech</Badge>
-            <h1 className="mb-6">Systèmes de croissance IA pour{" "}<span className="text-gradient">entreprises PropTech</span></h1>
+            <h1 className="mb-6">Conseil IA & Automatisation pour{" "}<span className="text-gradient">entreprises PropTech</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Les PropTech qui scalent ont besoin de plus que de la technologie — elles ont besoin d'infrastructure revenue. Nous déployons des systèmes IA qui automatisent la qualification, structurent le pipeline investisseurs et créent un levier opérationnel durable.
+              Nous aidons les équipes PropTech à identifier et déployer des cas d'usage IA concrets : qualification des prospects, prospection investisseurs, intelligence de marché, contenu et workflows revenue — avec une compréhension opérationnelle du secteur immobilier tech.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Appel stratégique PropTech <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
