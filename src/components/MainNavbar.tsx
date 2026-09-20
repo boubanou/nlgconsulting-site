@@ -60,6 +60,7 @@ const industriesData = [
 ];
 
 const resourcesData = [
+  { label: "Insights & Guides", to: "/insights" },
   { label: "Use Cases & Case Studies", to: "/use-cases" },
   { label: "Best AI Tools for Business", to: "/best-ai-tools-for-business" },
   { label: "AI Marketing Systems Guide", to: "/how-to-automate-marketing-with-ai" },
