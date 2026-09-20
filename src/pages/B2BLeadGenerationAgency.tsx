@@ -78,7 +78,12 @@ const B2BLeadGenerationAgency = () => {
         <section className="py-12 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[{ metric: "15-30", label: "Qualified Meetings / Month" }, { metric: "3+", label: "Coordinated Channels" }, { metric: "2-3", label: "Weeks to First Meeting" }, { metric: "60%", label: "Lower Cost vs In-House" }].map((item, i) => (
+              {[
+              { metric: "ICP", label: "Targeting & segmentation" },
+              { metric: "Multi-channel", label: "Email · LinkedIn · Phone" },
+              { metric: "CRM", label: "Activity & pipeline tracking" },
+              { metric: "Reporting", label: "Continuous optimisation" }
+            ].map((item, i) => (
                 <div key={i} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold">{item.metric}</div>
                   <div className="text-sm opacity-80 mt-1">{item.label}</div>
