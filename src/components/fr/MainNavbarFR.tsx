@@ -60,6 +60,7 @@ const industriesData = [
 ];
 
 const resourcesData = [
+  { label: "Guides & Ressources", to: "/fr/ressources" },
   { label: "Cas d'Usage & Études de Cas", to: "/fr/cas-usage" },
   { label: "Meilleurs Outils IA Business", to: "/fr/meilleurs-outils-ia-entreprise" },
   { label: "Guide Systèmes Marketing IA", to: "/fr/automatiser-marketing-avec-ia" },
