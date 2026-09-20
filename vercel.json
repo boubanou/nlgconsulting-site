@@ -1,8 +1,23 @@
 {
   "redirects": [
     {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/ventes",
+      "destination": "/fr/vente",
+      "permanent": true
+    },
+    {
       "source": "/:path(.*)",
-      "has": [{ "type": "host", "value": "nlgconsulting.co" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "nlgconsulting.co"
+        }
+      ],
       "destination": "https://www.nlgconsulting.co/:path",
       "permanent": true
     }
@@ -27,6 +42,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/de",
+      "destination": "/api/gone"
+    },
     {
       "source": "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.svg|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.webp|.*\\.xml|.*\\.html).*)",
       "destination": "/index.html"
