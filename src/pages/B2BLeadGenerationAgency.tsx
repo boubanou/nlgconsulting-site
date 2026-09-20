@@ -29,8 +29,8 @@ const B2BLeadGenerationAgency = () => {
   return (
     <>
       <Helmet>
-        <title>B2B Lead Generation Agency | Pipeline Systems | NLG</title>
-        <meta name="description" content="B2B lead generation systems combining AI-powered prospecting, outsourced SDR, and multichannel pipeline architecture. Qualified meetings, structured execution." />
+        <title>B2B Lead Generation Agency | Qualified Pipeline | NLG</title>
+        <meta name="description" content="B2B lead generation agency for SaaS, FinTech, PropTech and services. ICP research, prospect data, multichannel outreach, qualification, CRM tracking and pipeline." />
         <link rel="canonical" href="https://www.nlgconsulting.co/b2b-lead-generation-agency" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/b2b-lead-generation-agency" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/agence-lead-generation-b2b" />
@@ -48,7 +48,7 @@ const B2BLeadGenerationAgency = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">B2B Lead Generation</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">B2B Lead Generation Systems That Deliver Qualified Meetings</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">B2B Lead Generation Agency for Qualified Pipeline</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               We design and operate complete lead generation systems — combining AI-powered prospecting, structured outbound, and multichannel pipeline architecture — to generate qualified commercial conversations predictably.
             </p>
