@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
+import MainNavbarFR from "@/components/fr/MainNavbarFR";
+import MainFooterFR from "@/components/fr/MainFooterFR";
 import { getInsightsByLang } from "@/content/insights";
 
 const InsightsHub = ({ lang }: { lang: "en" | "fr" }) => {
@@ -25,7 +27,7 @@ const InsightsHub = ({ lang }: { lang: "en" | "fr" }) => {
         <link rel="alternate" hrefLang={isFr ? "en" : "fr"} href={isFr ? "https://www.nlgconsulting.co/insights" : "https://www.nlgconsulting.co/fr/ressources"} />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/insights" />
       </Helmet>
-      <MainNavbar />
+      {isFr ? <MainNavbarFR /> : <MainNavbar />}
       <main className="min-h-screen bg-background">
         <section className="pt-32 md:pt-40 pb-16 px-4 border-b border-border">
           <div className="container mx-auto max-w-5xl text-center">
@@ -56,7 +58,7 @@ const InsightsHub = ({ lang }: { lang: "en" | "fr" }) => {
           </div>
         </section>
       </main>
-      <MainFooter />
+      {isFr ? <MainFooterFR /> : <MainFooter />}
     </>
   );
 };
