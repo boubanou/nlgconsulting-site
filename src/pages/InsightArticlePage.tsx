@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowRight, Clock, CalendarDays } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
+import MainNavbarFR from "@/components/fr/MainNavbarFR";
+import MainFooterFR from "@/components/fr/MainFooterFR";
 import { insightArticles, insightByPath } from "@/content/insights";
 
 const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
@@ -13,13 +15,13 @@ const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
   if (!article) {
     return (
       <>
-        {lang === "fr" ? <MainNavbar /> : <MainNavbar />}
+        {lang === "fr" ? <MainNavbarFR /> : <MainNavbar />}
         <main className="min-h-screen pt-32 px-4">
           <div className="container-tight">
             <h1>{lang === "fr" ? "Ressource introuvable" : "Insight not found"}</h1>
           </div>
         </main>
-        <MainFooter />
+        {lang === "fr" ? <MainFooterFR /> : <MainFooter />}
       </>
     );
   }
@@ -65,7 +67,7 @@ const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
-      <MainNavbar />
+      {lang === "fr" ? <MainNavbarFR /> : <MainNavbar />}
       <main className="min-h-screen bg-background">
         <section className="pt-32 md:pt-40 pb-12 px-4 border-b border-border">
           <div className="container mx-auto max-w-4xl">
@@ -138,7 +140,7 @@ const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
           </article>
         </section>
       </main>
-      <MainFooter />
+      {lang === "fr" ? <MainFooterFR /> : <MainFooter />}
     </>
   );
 };
