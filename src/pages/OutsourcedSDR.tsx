@@ -64,10 +64,10 @@ const OutsourcedSDR = () => {
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Outsourced SDR</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Outsourced SDR Team for B2B Prospecting & Qualified Meetings</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Structured sales development without the hiring risk. Our trained operators execute multichannel outbound, AI-assisted qualification, and meeting generation — as a direct extension of your commercial team.
+              A managed outsourced SDR function for B2B growth teams. We define the ICP, build verified prospect lists, run coordinated email, LinkedIn and phone outreach, qualify interest, log activity in your CRM and book sales-ready meetings.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/book">Book a Commercial Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Discuss Your SDR Model <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -172,7 +172,7 @@ const OutsourcedSDR = () => {
             <p className="text-lg opacity-90 mb-8">If you are evaluating your SDR model, outbound architecture, or commercial operating rhythm — we can assess where structured execution can improve performance.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/book">Book a Commercial Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/book">Discuss Your SDR Model <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline-light" size="lg">
                 <Link to="/contact">Contact Us</Link>
