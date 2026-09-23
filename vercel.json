@@ -43,6 +43,322 @@
   ],
   "rewrites": [
     {
+      "source": "/fr",
+      "destination": "/fr/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services/index.html"
+    },
+    {
+      "source": "/fr/services",
+      "destination": "/fr/services/index.html"
+    },
+    {
+      "source": "/sales",
+      "destination": "/sales/index.html"
+    },
+    {
+      "source": "/fr/vente",
+      "destination": "/fr/vente/index.html"
+    },
+    {
+      "source": "/ai-lead-generation",
+      "destination": "/ai-lead-generation/index.html"
+    },
+    {
+      "source": "/fr/generation-leads-ia",
+      "destination": "/fr/generation-leads-ia/index.html"
+    },
+    {
+      "source": "/saas-monetization",
+      "destination": "/saas-monetization/index.html"
+    },
+    {
+      "source": "/fr/monetisation-saas",
+      "destination": "/fr/monetisation-saas/index.html"
+    },
+    {
+      "source": "/go-to-market",
+      "destination": "/go-to-market/index.html"
+    },
+    {
+      "source": "/fr/strategie-go-to-market",
+      "destination": "/fr/strategie-go-to-market/index.html"
+    },
+    {
+      "source": "/proptech-consulting",
+      "destination": "/proptech-consulting/index.html"
+    },
+    {
+      "source": "/fr/conseil-proptech",
+      "destination": "/fr/conseil-proptech/index.html"
+    },
+    {
+      "source": "/advisory",
+      "destination": "/advisory/index.html"
+    },
+    {
+      "source": "/fr/conseil",
+      "destination": "/fr/conseil/index.html"
+    },
+    {
+      "source": "/web",
+      "destination": "/web/index.html"
+    },
+    {
+      "source": "/fr/site-internet",
+      "destination": "/fr/site-internet/index.html"
+    },
+    {
+      "source": "/marketing",
+      "destination": "/marketing/index.html"
+    },
+    {
+      "source": "/fr/marketing",
+      "destination": "/fr/marketing/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/fr/a-propos",
+      "destination": "/fr/a-propos/index.html"
+    },
+    {
+      "source": "/ventures",
+      "destination": "/ventures/index.html"
+    },
+    {
+      "source": "/fr/ventures",
+      "destination": "/fr/ventures/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/fr/contact",
+      "destination": "/fr/contact/index.html"
+    },
+    {
+      "source": "/book",
+      "destination": "/book/index.html"
+    },
+    {
+      "source": "/fr/rendez-vous",
+      "destination": "/fr/rendez-vous/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/fr/politique-confidentialite",
+      "destination": "/fr/politique-confidentialite/index.html"
+    },
+    {
+      "source": "/outsourced-sdr",
+      "destination": "/outsourced-sdr/index.html"
+    },
+    {
+      "source": "/fr/sdr-externalise",
+      "destination": "/fr/sdr-externalise/index.html"
+    },
+    {
+      "source": "/b2b-lead-generation-agency",
+      "destination": "/b2b-lead-generation-agency/index.html"
+    },
+    {
+      "source": "/fr/agence-lead-generation-b2b",
+      "destination": "/fr/agence-lead-generation-b2b/index.html"
+    },
+    {
+      "source": "/appointment-setting",
+      "destination": "/appointment-setting/index.html"
+    },
+    {
+      "source": "/fr/prise-de-rendez-vous-b2b",
+      "destination": "/fr/prise-de-rendez-vous-b2b/index.html"
+    },
+    {
+      "source": "/go-to-market-consulting",
+      "destination": "/go-to-market-consulting/index.html"
+    },
+    {
+      "source": "/website-in-72-hours",
+      "destination": "/website-in-72-hours/index.html"
+    },
+    {
+      "source": "/fr/site-web-en-72h",
+      "destination": "/fr/site-web-en-72h/index.html"
+    },
+    {
+      "source": "/proptech-lead-generation",
+      "destination": "/proptech-lead-generation/index.html"
+    },
+    {
+      "source": "/fintech-lead-generation",
+      "destination": "/fintech-lead-generation/index.html"
+    },
+    {
+      "source": "/ai-sales-outreach",
+      "destination": "/ai-sales-outreach/index.html"
+    },
+    {
+      "source": "/ai-consulting",
+      "destination": "/ai-consulting/index.html"
+    },
+    {
+      "source": "/fr/conseil-ia",
+      "destination": "/fr/conseil-ia/index.html"
+    },
+    {
+      "source": "/ai-automation",
+      "destination": "/ai-automation/index.html"
+    },
+    {
+      "source": "/fr/automation-ia",
+      "destination": "/fr/automation-ia/index.html"
+    },
+    {
+      "source": "/ai-agents-for-business",
+      "destination": "/ai-agents-for-business/index.html"
+    },
+    {
+      "source": "/fr/agents-ia-entreprise",
+      "destination": "/fr/agents-ia-entreprise/index.html"
+    },
+    {
+      "source": "/ai-marketing-automation",
+      "destination": "/ai-marketing-automation/index.html"
+    },
+    {
+      "source": "/fr/automation-marketing-ia",
+      "destination": "/fr/automation-marketing-ia/index.html"
+    },
+    {
+      "source": "/ai-sales-automation",
+      "destination": "/ai-sales-automation/index.html"
+    },
+    {
+      "source": "/fr/automation-commerciale-ia",
+      "destination": "/fr/automation-commerciale-ia/index.html"
+    },
+    {
+      "source": "/prompt-engineering-consulting",
+      "destination": "/prompt-engineering-consulting/index.html"
+    },
+    {
+      "source": "/fr/conseil-prompt-engineering",
+      "destination": "/fr/conseil-prompt-engineering/index.html"
+    },
+    {
+      "source": "/outsourced-ai-implementation",
+      "destination": "/outsourced-ai-implementation/index.html"
+    },
+    {
+      "source": "/fr/implementation-ia-externalisee",
+      "destination": "/fr/implementation-ia-externalisee/index.html"
+    },
+    {
+      "source": "/ai-for-saas",
+      "destination": "/ai-for-saas/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-saas",
+      "destination": "/fr/ia-pour-saas/index.html"
+    },
+    {
+      "source": "/ai-for-proptech",
+      "destination": "/ai-for-proptech/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-proptech",
+      "destination": "/fr/ia-pour-proptech/index.html"
+    },
+    {
+      "source": "/ai-for-fintech",
+      "destination": "/ai-for-fintech/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-fintech",
+      "destination": "/fr/ia-pour-fintech/index.html"
+    },
+    {
+      "source": "/ai-for-real-estate",
+      "destination": "/ai-for-real-estate/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-immobilier",
+      "destination": "/fr/ia-pour-immobilier/index.html"
+    },
+    {
+      "source": "/ai-for-consulting-firms",
+      "destination": "/ai-for-consulting-firms/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-cabinets-conseil",
+      "destination": "/fr/ia-pour-cabinets-conseil/index.html"
+    },
+    {
+      "source": "/ai-for-agencies",
+      "destination": "/ai-for-agencies/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-agences",
+      "destination": "/fr/ia-pour-agences/index.html"
+    },
+    {
+      "source": "/ai-for-b2b-services",
+      "destination": "/ai-for-b2b-services/index.html"
+    },
+    {
+      "source": "/fr/ia-pour-services-b2b",
+      "destination": "/fr/ia-pour-services-b2b/index.html"
+    },
+    {
+      "source": "/ai-training-for-teams",
+      "destination": "/ai-training-for-teams/index.html"
+    },
+    {
+      "source": "/fr/formation-ia-entreprise",
+      "destination": "/fr/formation-ia-entreprise/index.html"
+    },
+    {
+      "source": "/fractional-ai-consultant",
+      "destination": "/fractional-ai-consultant/index.html"
+    },
+    {
+      "source": "/fr/consultant-ia-fractionnel",
+      "destination": "/fr/consultant-ia-fractionnel/index.html"
+    },
+    {
+      "source": "/best-ai-tools-for-business",
+      "destination": "/best-ai-tools-for-business/index.html"
+    },
+    {
+      "source": "/fr/meilleurs-outils-ia-entreprise",
+      "destination": "/fr/meilleurs-outils-ia-entreprise/index.html"
+    },
+    {
+      "source": "/how-to-automate-marketing-with-ai",
+      "destination": "/how-to-automate-marketing-with-ai/index.html"
+    },
+    {
+      "source": "/fr/automatiser-marketing-avec-ia",
+      "destination": "/fr/automatiser-marketing-avec-ia/index.html"
+    },
+    {
+      "source": "/use-cases",
+      "destination": "/use-cases/index.html"
+    },
+    {
+      "source": "/fr/cas-usage",
+      "destination": "/fr/cas-usage/index.html"
+    },
+    {
       "source": "/insights",
       "destination": "/insights/index.html"
     },
@@ -97,114 +413,6 @@
     {
       "source": "/fr/ressources/cas-usage-ia-fintech",
       "destination": "/fr/ressources/cas-usage-ia-fintech/index.html"
-    },
-    {
-      "source": "/fr",
-      "destination": "/fr/index.html"
-    },
-    {
-      "source": "/ai-consulting",
-      "destination": "/ai-consulting/index.html"
-    },
-    {
-      "source": "/fr/conseil-ia",
-      "destination": "/fr/conseil-ia/index.html"
-    },
-    {
-      "source": "/ai-automation",
-      "destination": "/ai-automation/index.html"
-    },
-    {
-      "source": "/fr/automation-ia",
-      "destination": "/fr/automation-ia/index.html"
-    },
-    {
-      "source": "/ai-agents-for-business",
-      "destination": "/ai-agents-for-business/index.html"
-    },
-    {
-      "source": "/fr/agents-ia-entreprise",
-      "destination": "/fr/agents-ia-entreprise/index.html"
-    },
-    {
-      "source": "/ai-sales-automation",
-      "destination": "/ai-sales-automation/index.html"
-    },
-    {
-      "source": "/fr/automation-commerciale-ia",
-      "destination": "/fr/automation-commerciale-ia/index.html"
-    },
-    {
-      "source": "/outsourced-ai-implementation",
-      "destination": "/outsourced-ai-implementation/index.html"
-    },
-    {
-      "source": "/fr/implementation-ia-externalisee",
-      "destination": "/fr/implementation-ia-externalisee/index.html"
-    },
-    {
-      "source": "/fractional-ai-consultant",
-      "destination": "/fractional-ai-consultant/index.html"
-    },
-    {
-      "source": "/fr/consultant-ia-fractionnel",
-      "destination": "/fr/consultant-ia-fractionnel/index.html"
-    },
-    {
-      "source": "/outsourced-sdr",
-      "destination": "/outsourced-sdr/index.html"
-    },
-    {
-      "source": "/fr/sdr-externalise",
-      "destination": "/fr/sdr-externalise/index.html"
-    },
-    {
-      "source": "/b2b-lead-generation-agency",
-      "destination": "/b2b-lead-generation-agency/index.html"
-    },
-    {
-      "source": "/fr/agence-lead-generation-b2b",
-      "destination": "/fr/agence-lead-generation-b2b/index.html"
-    },
-    {
-      "source": "/appointment-setting",
-      "destination": "/appointment-setting/index.html"
-    },
-    {
-      "source": "/fr/prise-de-rendez-vous-b2b",
-      "destination": "/fr/prise-de-rendez-vous-b2b/index.html"
-    },
-    {
-      "source": "/ai-lead-generation",
-      "destination": "/ai-lead-generation/index.html"
-    },
-    {
-      "source": "/fr/generation-leads-ia",
-      "destination": "/fr/generation-leads-ia/index.html"
-    },
-    {
-      "source": "/ai-for-saas",
-      "destination": "/ai-for-saas/index.html"
-    },
-    {
-      "source": "/fr/ia-pour-saas",
-      "destination": "/fr/ia-pour-saas/index.html"
-    },
-    {
-      "source": "/ai-for-proptech",
-      "destination": "/ai-for-proptech/index.html"
-    },
-    {
-      "source": "/fr/ia-pour-proptech",
-      "destination": "/fr/ia-pour-proptech/index.html"
-    },
-    {
-      "source": "/ai-for-fintech",
-      "destination": "/ai-for-fintech/index.html"
-    },
-    {
-      "source": "/fr/ia-pour-fintech",
-      "destination": "/fr/ia-pour-fintech/index.html"
     },
     {
       "source": "/de",
