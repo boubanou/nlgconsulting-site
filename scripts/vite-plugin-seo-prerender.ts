@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { Plugin } from "vite";
 import { seoRoutes, BASE_URL, type SeoRouteMeta } from "../src/lib/seo-route-metadata";
 import { insightArticles, type InsightArticle } from "../src/content/insights";
@@ -125,6 +127,52 @@ function renderInsightsHub(template: string, lang: "en" | "fr"): string {
   return html;
 }
 
+
+type SitemapEntry = {
+  path: string;
+  canonical: string;
+  alternates: Record<string, string>;
+};
+
+function readSitemapEntries(): SitemapEntry[] {
+  const xml = fs.readFileSync(path.resolve(process.cwd(), "public/sitemap.xml"), "utf8");
+  const blocks = Array.from(xml.matchAll(/<url>([\s\S]*?)<\/url>/g)).map((m) => m[1]);
+  return blocks.map((block) => {
+    const loc = block.match(/<loc>([^<]+)<\/loc>/)?.[1]?.trim();
+    if (!loc) return null;
+    const url = new URL(loc);
+    const alternates: Record<string, string> = {};
+    for (const match of block.matchAll(/<xhtml:link[^>]+hreflang="([^"]+)"[^>]+href="([^"]+)"/g)) {
+      alternates[match[1]] = match[2];
+    }
+    return { path: url.pathname === "/" ? "/" : url.pathname.replace(/\/$/, ""), canonical: loc, alternates };
+  }).filter(Boolean) as SitemapEntry[];
+}
+
+function applySitemapCanonical(template: string, entry: SitemapEntry): string {
+  let html = template;
+  const lang = entry.path.startsWith("/fr") ? "fr" : "en";
+  html = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
+  html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?\s*>/, `<link rel="canonical" href="${escapeAttr(entry.canonical)}">`);
+  html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?\s*>/, `<meta property="og:url" content="${escapeAttr(entry.canonical)}">`);
+  if (entry.alternates["x-default"]) {
+    html = html.replace(/<link rel="alternate" hreflang="x-default" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="x-default" href="${escapeAttr(entry.alternates["x-default"])}">`);
+  } else {
+    html = html.replace(/\s*<link rel="alternate" hreflang="x-default" href="[^"]*"\s*\/?\s*>/, "");
+  }
+  if (entry.alternates["en"]) {
+    html = html.replace(/<link rel="alternate" hreflang="en" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="en" href="${escapeAttr(entry.alternates["en"])}">`);
+  } else {
+    html = html.replace(/\s*<link rel="alternate" hreflang="en" href="[^"]*"\s*\/?\s*>/, "");
+  }
+  if (entry.alternates["fr"]) {
+    html = html.replace(/<link rel="alternate" hreflang="fr" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="fr" href="${escapeAttr(entry.alternates["fr"])}">`);
+  } else {
+    html = html.replace(/\s*<link rel="alternate" hreflang="fr" href="[^"]*"\s*\/?\s*>/, "");
+  }
+  return html;
+}
+
 export default function seoPrerender(): Plugin {
   return {
     name: "nlg-seo-prerender",
@@ -159,7 +207,26 @@ export default function seoPrerender(): Plugin {
         });
       }
 
-      console.log(`[nlg-seo-prerender] generated ${seoRoutes.length} SEO routes + ${insightArticles.length} insights + 2 hubs`);
+      const handled = new Set<string>([
+        ...seoRoutes.map((route) => route.path),
+        "/insights",
+        "/fr/ressources",
+        ...insightArticles.map((article) => article.path),
+      ]);
+
+      const sitemapEntries = readSitemapEntries();
+      let fallbackCount = 0;
+      for (const sitemapEntry of sitemapEntries) {
+        if (handled.has(sitemapEntry.path) || sitemapEntry.path === "/") continue;
+        this.emitFile({
+          type: "asset",
+          fileName: sitemapEntry.path.replace(/^\//, "") + "/index.html",
+          source: applySitemapCanonical(template, sitemapEntry),
+        });
+        fallbackCount++;
+      }
+
+      console.log(`[nlg-seo-prerender] generated ${seoRoutes.length} SEO routes + ${insightArticles.length} insights + 2 hubs + ${fallbackCount} sitemap canonical fallbacks`);
     },
   };
 }
