@@ -1,8 +1,10 @@
 import type { Plugin } from "vite";
 import { commercialInsights } from "../src/content/commercial-insights";
+import { acquisitionInsights } from "../src/content/acquisition-insights";
 import type { InsightArticle } from "../src/content/insights";
 
 const BASE_URL = "https://www.nlgconsulting.co";
+const highIntentInsights = [...commercialInsights, ...acquisitionInsights];
 
 function escapeHtml(value: string): string {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -66,8 +68,8 @@ function renderArticleHtml(template: string, article: InsightArticle): string {
 }
 
 function commercialHubLinks(lang: "en" | "fr"): string {
-  const articles = commercialInsights.filter((article) => article.lang === lang);
-  const title = lang === "fr" ? "Guides prix & choix fournisseur" : "Pricing & buying guides";
+  const articles = highIntentInsights.filter((article) => article.lang === lang);
+  const title = lang === "fr" ? "Guides à forte intention commerciale" : "High-intent buying & execution guides";
   return `<section data-commercial-insights="true"><h2>${title}</h2><ul>${articles.map((article) => `<li><a href="${escapeAttr(article.path)}">${escapeHtml(article.h1)}</a><p>${escapeHtml(article.description)}</p></li>`).join("")}</ul></section>`;
 }
 
@@ -85,7 +87,7 @@ export default function commercialInsightsPrerender(): Plugin {
 
       const template = typeof entry.source === "string" ? entry.source : new TextDecoder().decode(entry.source);
 
-      for (const article of commercialInsights) {
+      for (const article of highIntentInsights) {
         this.emitFile({
           type: "asset",
           fileName: article.path.replace(/^\//, "") + "/index.html",
@@ -105,7 +107,7 @@ export default function commercialInsightsPrerender(): Plugin {
         frHub.source = source.replace('<div id="root"></div>', `${commercialHubLinks("fr")}<div id="root"></div>`);
       }
 
-      console.log(`[nlg-commercial-insights] generated ${commercialInsights.length} high-intent commercial pages`);
+      console.log(`[nlg-commercial-insights] generated ${highIntentInsights.length} high-intent commercial pages`);
     },
   };
 }
