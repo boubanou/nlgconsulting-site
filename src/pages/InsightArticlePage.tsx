@@ -5,12 +5,12 @@ import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
-import { insightArticles, insightByPath } from "@/content/insights";
+import { allInsightArticles, allInsightByPath } from "@/content/insight-registry";
 
 const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
   const { slug } = useParams();
   const path = lang === "fr" ? `/fr/ressources/${slug}` : `/insights/${slug}`;
-  const article = insightByPath[path];
+  const article = allInsightByPath[path];
 
   if (!article) {
     return (
@@ -26,7 +26,7 @@ const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
     );
   }
 
-  const related = insightArticles
+  const related = allInsightArticles
     .filter((item) => item.lang === lang && item.cluster === article.cluster && item.path !== article.path)
     .slice(0, 3);
 
@@ -43,9 +43,7 @@ const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
       name: "NLG Consulting",
       url: "https://www.nlgconsulting.co"
     },
-    mainEntityOfPage: article.path.startsWith("/fr")
-      ? `https://www.nlgconsulting.co${article.path}`
-      : `https://www.nlgconsulting.co${article.path}`
+    mainEntityOfPage: `https://www.nlgconsulting.co${article.path}`
   };
 
   const canonical = `https://www.nlgconsulting.co${article.path}`;

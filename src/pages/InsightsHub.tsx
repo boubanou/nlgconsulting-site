@@ -5,10 +5,10 @@ import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
-import { getInsightsByLang } from "@/content/insights";
+import { getAllInsightsByLang } from "@/content/insight-registry";
 
 const InsightsHub = ({ lang }: { lang: "en" | "fr" }) => {
-  const articles = getInsightsByLang(lang);
+  const articles = getAllInsightsByLang(lang);
   const isFr = lang === "fr";
   const canonical = isFr ? "https://www.nlgconsulting.co/fr/ressources" : "https://www.nlgconsulting.co/insights";
 
@@ -19,8 +19,8 @@ const InsightsHub = ({ lang }: { lang: "en" | "fr" }) => {
         <meta
           name="description"
           content={isFr
-            ? "Guides pratiques NLG sur l’audit IA, l’automatisation, la prospection B2B, le SDR externalisé et les cas d’usage IA pour FinTech et PropTech."
-            : "Practical NLG guides on AI audits, automation, B2B lead generation, outsourced SDR and AI use cases for FinTech and PropTech."}
+            ? "Guides pratiques NLG sur l’audit IA, l’automatisation CRM, les relances commerciales, la prospection B2B et les cas d’usage IA pour PME, FinTech et PropTech."
+            : "Practical NLG guides on AI audits, CRM automation, sales follow-up, B2B lead generation and AI use cases for SMEs, FinTech and PropTech."}
         />
         <link rel="canonical" href={canonical} />
         <link rel="alternate" hrefLang={isFr ? "fr" : "en"} href={canonical} />
@@ -37,8 +37,8 @@ const InsightsHub = ({ lang }: { lang: "en" | "fr" }) => {
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {isFr
-                ? "Des guides conçus pour transformer des sujets complexes en décisions opérationnelles : quoi automatiser, comment structurer l’outbound et où l’IA crée réellement du levier."
-                : "Operator-focused guides that turn complex topics into execution decisions: what to automate, how to structure outbound, and where AI creates real leverage."}
+                ? "Des guides conçus pour transformer des problèmes concrets en décisions opérationnelles : quoi automatiser, comment améliorer le CRM, structurer les relances et où l’IA crée réellement du levier."
+                : "Operator-focused guides that turn concrete business problems into execution decisions: what to automate, how to improve CRM workflows and where AI creates real leverage."}
             </p>
           </div>
         </section>
