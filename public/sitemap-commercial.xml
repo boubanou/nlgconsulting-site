@@ -42,4 +42,47 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/outsourced-sdr-cost"/>
     <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.80</priority>
   </url>
+
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/ai-audit-for-smes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-audit-for-smes"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/audit-ia-pme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-audit-for-smes"/>
+    <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/audit-ia-pme</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-audit-for-smes"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/audit-ia-pme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-audit-for-smes"/>
+    <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/crm-automation-with-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/crm-automation-with-ai"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/automatisation-crm-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/crm-automation-with-ai"/>
+    <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/automatisation-crm-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/crm-automation-with-ai"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/automatisation-crm-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/crm-automation-with-ai"/>
+    <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/automate-sales-follow-up-with-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/automate-sales-follow-up-with-ai"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/automatisation-relances-commerciales-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/automate-sales-follow-up-with-ai"/>
+    <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/automatisation-relances-commerciales-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/automate-sales-follow-up-with-ai"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/automatisation-relances-commerciales-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/automate-sales-follow-up-with-ai"/>
+    <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
+  </url>
 </urlset>
