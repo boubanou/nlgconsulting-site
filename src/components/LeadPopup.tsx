@@ -71,6 +71,7 @@ const copy = {
     emailSubject: "NLG AI Opportunity Diagnostic",
     emailIntro: "Hi Gregory,\n\nI completed the NLG AI Opportunity Scanner. Here is my diagnostic:",
     emailOutro: "\n\nI’d like your view on the best next step.\n",
+    floating: "AI Opportunity Scan",
   },
   fr: {
     eyebrow: "Diagnostic opportunité IA · 2 minutes",
@@ -95,6 +96,7 @@ const copy = {
     emailSubject: "Diagnostic Opportunité IA NLG",
     emailIntro: "Bonjour Gregory,\n\nJ’ai complété le diagnostic interactif NLG. Voici mon résultat :",
     emailOutro: "\n\nJe voudrais votre avis sur la meilleure prochaine étape.\n",
+    floating: "Diagnostic IA",
   },
 } as const;
 
@@ -333,6 +335,21 @@ const track = (event: string, params: Record<string, string | number> = {}) => {
   }
 };
 
+const getRecommendation = (answers: AnswerMap, lang: Lang) => {
+  const goal = answers.goal || "automation";
+  const workflow = answers.workflow;
+
+  if (workflow === "leads") return recommendations[lang].pipeline;
+  if (workflow === "crm") return recommendations[lang].sales;
+  if (answers.state === "manual" || answers.state === "fragmented") {
+    if (goal === "automation" || workflow === "documents" || workflow === "reporting") {
+      return recommendations[lang].automation;
+    }
+  }
+
+  return recommendations[lang][goal] || recommendations[lang].automation;
+};
+
 export const LeadPopup = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -376,6 +393,38 @@ export const LeadPopup = () => {
     };
   }, [showPopup]);
 
+  useEffect(() => {
+    const handleConversionClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      const anchor = target?.closest("a") as HTMLAnchorElement | null;
+      if (!anchor) return;
+
+      const href = anchor.getAttribute("href") || "";
+      const common = { language: lang, path: location.pathname, destination: href };
+
+      if (href.startsWith("mailto:")) {
+        track("conversion_email_click", common);
+      } else if (href === "/book" || href === "/fr/rendez-vous" || href.includes("calendly.com")) {
+        track("conversion_booking_click", common);
+      } else if (href === "/contact" || href === "/fr/contact") {
+        track("conversion_contact_click", common);
+      } else if (
+        href.startsWith("/ai-") ||
+        href.startsWith("/outsourced-") ||
+        href.startsWith("/b2b-") ||
+        href.startsWith("/fr/conseil-ia") ||
+        href.startsWith("/fr/automation-") ||
+        href.startsWith("/fr/sdr-") ||
+        href.startsWith("/fr/agence-")
+      ) {
+        track("conversion_service_click", common);
+      }
+    };
+
+    document.addEventListener("click", handleConversionClick, true);
+    return () => document.removeEventListener("click", handleConversionClick, true);
+  }, [lang, location.pathname]);
+
   const totalScore = useMemo(() => {
     return qs.reduce((sum, question) => {
       const selected = question.options.find((option) => option.value === answers[question.id]);
@@ -390,21 +439,7 @@ export const LeadPopup = () => {
 
   const readiness = Math.round((totalScore / maxScore) * 100);
   const fitLabel = readiness >= 75 ? t.fitHigh : readiness >= 55 ? t.fitMedium : t.fitLow;
-
-  const recommendation = useMemo(() => {
-    const goal = answers.goal || "automation";
-    const workflow = answers.workflow;
-
-    if (workflow === "leads") return recommendations[lang].pipeline;
-    if (workflow === "crm") return recommendations[lang].sales;
-    if (answers.state === "manual" || answers.state === "fragmented") {
-      if (goal === "automation" || workflow === "documents" || workflow === "reporting") {
-        return recommendations[lang].automation;
-      }
-    }
-
-    return recommendations[lang][goal] || recommendations[lang].automation;
-  }, [answers, lang]);
+  const recommendation = useMemo(() => getRecommendation(answers, lang), [answers, lang]);
 
   const selectedLabel = (question: Question) =>
     question.options.find((option) => option.value === answers[question.id])?.label || "—";
@@ -418,6 +453,11 @@ export const LeadPopup = () => {
     setShowPopup(false);
   };
 
+  const openManually = () => {
+    setShowPopup(true);
+    track("ai_scanner_manual_open", { language: lang, path: location.pathname });
+  };
+
   const choose = (question: Question, option: Option) => {
     const nextAnswers = { ...answers, [question.id]: option.value };
     setAnswers(nextAnswers);
@@ -429,18 +469,21 @@ export const LeadPopup = () => {
     });
 
     if (step === qs.length - 1) {
+      const completedScore = Math.round(
+        (qs.reduce((sum, q) => {
+          const value = q.id === question.id ? option.value : nextAnswers[q.id];
+          return sum + (q.options.find((item) => item.value === value)?.score || 0);
+        }, 0) /
+          maxScore) *
+          100,
+      );
+      const completedRecommendation = getRecommendation(nextAnswers, lang);
+
       setComplete(true);
       track("ai_scanner_complete", {
         language: lang,
-        readiness: Math.round(
-          (qs.reduce((sum, q) => {
-            const value = q.id === question.id ? option.value : nextAnswers[q.id];
-            return sum + (q.options.find((item) => item.value === value)?.score || 0);
-          }, 0) /
-            maxScore) *
-            100,
-        ),
-        recommendation: recommendation.key,
+        readiness: completedScore,
+        recommendation: completedRecommendation.key,
       });
     } else {
       setStep((current) => current + 1);
@@ -491,7 +534,19 @@ export const LeadPopup = () => {
     track("ai_scanner_restart", { language: lang });
   };
 
-  if (!showPopup) return null;
+  if (!showPopup) {
+    return (
+      <button
+        type="button"
+        onClick={openManually}
+        className="fixed bottom-5 left-4 sm:left-6 z-40 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-background/95 px-4 py-2.5 text-sm font-medium text-foreground shadow-lg backdrop-blur hover:border-primary/50 hover:bg-primary/5 transition-all"
+        aria-label={t.floating}
+      >
+        <Sparkles className="w-4 h-4 text-primary" />
+        <span>{t.floating}</span>
+      </button>
+    );
+  }
 
   const currentQuestion = qs[step];
   const progress = complete ? 100 : Math.round(((step + 1) / qs.length) * 100);
