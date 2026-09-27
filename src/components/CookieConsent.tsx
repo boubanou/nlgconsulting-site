@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
+import { hasVisitorAnalyticsConsent, trackVisitorEvent } from "@/lib/visitorIntent";
 
 declare global {
   interface Window {
@@ -12,7 +13,7 @@ declare global {
 }
 
 const CONSENT_STORAGE_KEY = "nlgconsent-v2";
-const CONSENT_EXPIRY_DAYS = 180; // 6 months
+const CONSENT_EXPIRY_DAYS = 180;
 
 interface ConsentState {
   analytics: boolean;
@@ -23,29 +24,33 @@ export const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [showCustomize, setShowCustomize] = useState(false);
   const [analyticsConsent, setAnalyticsConsent] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    // Check if consent was already given
     const savedConsent = localStorage.getItem(CONSENT_STORAGE_KEY);
-    
     if (savedConsent) {
       try {
         const consent: ConsentState = JSON.parse(savedConsent);
         const expiryTime = consent.timestamp + (CONSENT_EXPIRY_DAYS * 24 * 60 * 60 * 1000);
-        
         if (Date.now() < expiryTime) {
-          // Valid consent exists
           updateGtagConsent(consent.analytics);
+          setAnalyticsConsent(consent.analytics);
           return;
         }
       } catch (e) {
         console.error("Error parsing consent:", e);
       }
     }
-    
-    // Show banner if no valid consent
     setShowBanner(true);
   }, []);
+
+  useEffect(() => {
+    if (!hasVisitorAnalyticsConsent()) return;
+    trackVisitorEvent("page_view", {
+      pathname: location.pathname,
+      search: location.search,
+    });
+  }, [location.pathname, location.search]);
 
   const updateGtagConsent = (analyticsGranted: boolean) => {
     if (typeof window.gtag === "function") {
@@ -55,13 +60,11 @@ export const CookieConsent = () => {
         ad_personalization: "denied",
       });
 
-      // Initialize GA4 if consent granted
       if (analyticsGranted) {
         window.gtag("config", "G-GV1CDQJ1HB", {
           anonymize_ip: true,
           cookie_flags: "SameSite=None;Secure",
         });
-        console.log("✅ GA4 (G-GV1CDQJ1HB) activated with consent");
       }
     }
   };
@@ -75,23 +78,16 @@ export const CookieConsent = () => {
     updateGtagConsent(analytics);
     setShowBanner(false);
     setShowCustomize(false);
+    if (analytics) {
+      window.dispatchEvent(new Event("visitor-consent-change"));
+      trackVisitorEvent("page_view", { consent_activated: true });
+    }
   };
 
-  const handleAcceptAll = () => {
-    saveConsent(true);
-  };
-
-  const handleDecline = () => {
-    saveConsent(false);
-  };
-
-  const handleCustomize = () => {
-    setShowCustomize(true);
-  };
-
-  const handleSaveCustom = () => {
-    saveConsent(analyticsConsent);
-  };
+  const handleAcceptAll = () => saveConsent(true);
+  const handleDecline = () => saveConsent(false);
+  const handleCustomize = () => setShowCustomize(true);
+  const handleSaveCustom = () => saveConsent(analyticsConsent);
 
   if (!showBanner) return null;
 
@@ -110,26 +106,14 @@ export const CookieConsent = () => {
                   </Link>
                 </p>
               </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleDecline}
-                aria-label="Close"
-                className="shrink-0"
-              >
+              <Button variant="ghost" size="icon" onClick={handleDecline} aria-label="Close" className="shrink-0">
                 <X className="h-4 w-4" />
               </Button>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <Button onClick={handleAcceptAll} className="w-full sm:flex-1 text-sm">
-                Accept all
-              </Button>
-              <Button onClick={handleDecline} variant="outline" className="w-full sm:flex-1 text-sm">
-                Decline
-              </Button>
-              <Button onClick={handleCustomize} variant="secondary" className="w-full sm:flex-1 text-sm">
-                Customize
-              </Button>
+              <Button onClick={handleAcceptAll} className="w-full sm:flex-1 text-sm">Accept all</Button>
+              <Button onClick={handleDecline} variant="outline" className="w-full sm:flex-1 text-sm">Decline</Button>
+              <Button onClick={handleCustomize} variant="secondary" className="w-full sm:flex-1 text-sm">Customize</Button>
             </div>
           </>
         ) : (
@@ -137,16 +121,10 @@ export const CookieConsent = () => {
             <div className="space-y-3 sm:space-y-4">
               <div className="flex justify-between items-start">
                 <h3 className="text-base sm:text-lg font-semibold">Cookie Preferences</h3>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setShowCustomize(false)}
-                  aria-label="Back"
-                >
+                <Button variant="ghost" size="icon" onClick={() => setShowCustomize(false)} aria-label="Back">
                   <X className="h-4 w-4" />
                 </Button>
               </div>
-              
               <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 border rounded-lg gap-2">
                   <div className="flex-1">
@@ -155,7 +133,6 @@ export const CookieConsent = () => {
                   </div>
                   <div className="text-xs sm:text-sm font-semibold text-primary whitespace-nowrap">Required</div>
                 </div>
-                
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 border rounded-lg gap-2">
                   <div className="flex-1">
                     <p className="font-medium text-sm">Analytics cookies</p>
@@ -171,14 +148,9 @@ export const CookieConsent = () => {
                 </div>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <Button onClick={handleSaveCustom} className="w-full sm:flex-1 text-sm">
-                Save my preferences
-              </Button>
-              <Button onClick={() => setShowCustomize(false)} variant="outline" className="w-full sm:flex-1 text-sm">
-                Back
-              </Button>
+              <Button onClick={handleSaveCustom} className="w-full sm:flex-1 text-sm">Save my preferences</Button>
+              <Button onClick={() => setShowCustomize(false)} variant="outline" className="w-full sm:flex-1 text-sm">Back</Button>
             </div>
           </>
         )}
@@ -187,7 +159,6 @@ export const CookieConsent = () => {
   );
 };
 
-// Export function to open cookie preferences
 export const openCookiePreferences = () => {
   localStorage.removeItem(CONSENT_STORAGE_KEY);
   window.location.reload();
