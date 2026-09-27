@@ -10,7 +10,8 @@ import {
   Menu, 
   LogOut, 
   User,
-  Users as UsersIcon
+  Users as UsersIcon,
+  Activity
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useUserRole } from "@/hooks/useUserRole";
@@ -33,6 +34,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
 
   const navItems = [
     { path: "/admin", label: "Dashboard", icon: LayoutDashboard },
+    { path: "/admin?view=visitors", label: "Visitors", icon: Activity },
     { path: "/admin/leads", label: "Leads", icon: Users },
     { path: "/admin/meetings", label: "Meetings", icon: Calendar },
     { path: "/admin/callbacks", label: "Callbacks", icon: Phone },
@@ -46,7 +48,10 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     <nav className="flex flex-col gap-2">
       {navItems.map((item) => {
         const Icon = item.icon;
-        const isActive = location.pathname === item.path;
+        const [itemPath, itemQuery] = item.path.split("?");
+        const isActive = itemQuery
+          ? location.pathname === itemPath && location.search === `?${itemQuery}`
+          : location.pathname === itemPath && !location.search;
         
         return (
           <Link
@@ -77,7 +82,6 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Mobile Header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-background border-b border-border z-50 flex items-center justify-between px-4">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
@@ -92,54 +96,31 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
             </div>
           </SheetContent>
         </Sheet>
-        
         <div className="flex items-center gap-2">
-          <Badge variant="outline" className="text-xs">
-            {role}
-          </Badge>
-          <Button variant="ghost" size="icon" onClick={handleLogout}>
-            <LogOut className="h-5 w-5" />
-          </Button>
+          <Badge variant="outline" className="text-xs">{role}</Badge>
+          <Button variant="ghost" size="icon" onClick={handleLogout}><LogOut className="h-5 w-5" /></Button>
         </div>
       </div>
 
-      {/* Desktop Sidebar */}
       <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-64 bg-card border-r border-border flex-col">
         <div className="p-6">
-          <Link to="/">
-            <img src="/logo.svg" alt="NLG Consulting" className="h-8 w-auto" />
-          </Link>
+          <Link to="/"><img src="/logo.svg" alt="NLG Consulting" className="h-8 w-auto" /></Link>
         </div>
-        
-        <div className="flex-1 px-4 py-6">
-          <NavLinks />
-        </div>
-
+        <div className="flex-1 px-4 py-6"><NavLinks /></div>
         <div className="p-4 border-t border-border">
           <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-accent mb-2">
             <User className="h-5 w-5" />
-            <div className="flex-1 min-w-0">
-              <Badge variant="secondary" className="text-xs">
-                {role}
-              </Badge>
-            </div>
+            <div className="flex-1 min-w-0"><Badge variant="secondary" className="text-xs">{role}</Badge></div>
           </div>
-          <Button 
-            variant="ghost" 
-            className="w-full justify-start gap-3" 
-            onClick={handleLogout}
-          >
+          <Button variant="ghost" className="w-full justify-start gap-3" onClick={handleLogout}>
             <LogOut className="h-5 w-5" />
             Logout
           </Button>
         </div>
       </aside>
 
-      {/* Main Content */}
       <div className="lg:ml-64 pt-16 lg:pt-0">
-        <main className="p-6 lg:p-8">
-          {children}
-        </main>
+        <main className="p-6 lg:p-8">{children}</main>
       </div>
     </div>
   );
