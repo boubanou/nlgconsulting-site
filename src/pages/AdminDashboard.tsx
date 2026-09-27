@@ -1,14 +1,17 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import AdminLayout from "@/components/admin/AdminLayout";
 import Dashboard from "@/components/admin/Dashboard";
+import AdminVisitors from "@/pages/AdminVisitors";
 import { useUserRole } from "@/hooks/useUserRole";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { hasAccess, isLoading } = useUserRole();
+  const view = searchParams.get("view");
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -22,6 +25,8 @@ const AdminDashboard = () => {
   if (isLoading) {
     return <div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>;
   }
+
+  if (view === "visitors") return <AdminVisitors />;
 
   return (
     <>
