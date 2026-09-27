@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
-import { hasVisitorAnalyticsConsent, trackVisitorEvent } from "@/lib/visitorIntent";
+import { hasVisitorAnalyticsConsent, identifyVisitor, trackVisitorEvent } from "@/lib/visitorIntent";
 
 declare global {
   interface Window {
@@ -19,6 +19,23 @@ interface ConsentState {
   analytics: boolean;
   marketing: boolean;
   timestamp: number;
+}
+
+function readSubmittedIdentity(form: HTMLFormElement) {
+  const data = new FormData(form);
+  const get = (...names: string[]) => {
+    for (const name of names) {
+      const value = data.get(name);
+      if (typeof value === "string" && value.trim()) return value.trim().slice(0, 300);
+    }
+    return undefined;
+  };
+  return {
+    email: get("email", "work_email", "business_email"),
+    name: get("name", "full_name", "fullname", "first_name"),
+    company: get("company", "company_name", "organization", "organisation"),
+    phone: get("phone", "telephone", "tel"),
+  };
 }
 
 export const CookieConsent = () => {
@@ -94,7 +111,11 @@ export const CookieConsent = () => {
 
     const onSubmit = (event: SubmitEvent) => {
       const form = event.target instanceof HTMLFormElement ? event.target : null;
-      if (form) trackVisitorEvent("form_submit", { form_id: form.id || undefined }, 20);
+      if (!form) return;
+      const identity = readSubmittedIdentity(form);
+      const identityFields = Object.entries(identity).filter(([, value]) => value).map(([key]) => key);
+      trackVisitorEvent("form_submit", { form_id: form.id || undefined, identity_fields: identityFields }, 20);
+      if (identity.email || identity.phone) identifyVisitor(identity);
     };
 
     const timers = [15, 30, 60, 120].map((seconds) => window.setTimeout(() => {
