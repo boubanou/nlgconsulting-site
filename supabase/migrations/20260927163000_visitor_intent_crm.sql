@@ -74,20 +74,13 @@ alter table public.visitor_profiles enable row level security;
 alter table public.visitor_sessions enable row level security;
 alter table public.visitor_events enable row level security;
 
--- Reading visitor data is restricted to authenticated back-office users.
 drop policy if exists "authenticated can read visitor profiles" on public.visitor_profiles;
-create policy "authenticated can read visitor profiles"
-  on public.visitor_profiles for select to authenticated using (true);
-
+create policy "authenticated can read visitor profiles" on public.visitor_profiles for select to authenticated using (true);
 drop policy if exists "authenticated can read visitor sessions" on public.visitor_sessions;
-create policy "authenticated can read visitor sessions"
-  on public.visitor_sessions for select to authenticated using (true);
-
+create policy "authenticated can read visitor sessions" on public.visitor_sessions for select to authenticated using (true);
 drop policy if exists "authenticated can read visitor events" on public.visitor_events;
-create policy "authenticated can read visitor events"
-  on public.visitor_events for select to authenticated using (true);
+create policy "authenticated can read visitor events" on public.visitor_events for select to authenticated using (true);
 
--- No direct anonymous table writes. Events enter through this constrained RPC only.
 create or replace function public.ingest_visitor_event(payload jsonb)
 returns void
 language plpgsql
@@ -103,7 +96,7 @@ declare
   v_referrer text := left(coalesce(payload->>'referrer',''), 1500);
   v_title text := left(coalesce(payload->>'page_title',''), 500);
   v_score integer := greatest(-20, least(50, coalesce((payload->>'score_delta')::integer, 0)));
-  v_new_session boolean := false;
+  v_created_session text;
 begin
   if v_visitor_id = '' or v_session_id = '' or v_site not in ('nlg','blocktech','fph') then
     raise exception 'invalid visitor payload';
@@ -142,12 +135,18 @@ begin
     case when v_event='page_view' then 1 else 0 end, v_score,
     left(coalesce(payload->>'user_agent',''), 1000), left(coalesce(payload->>'language',''), 50), left(coalesce(payload->>'timezone',''), 100)
   )
-  on conflict (session_id) do update set
-    last_seen_at = now(),
-    pageviews = public.visitor_sessions.pageviews + case when v_event='page_view' then 1 else 0 end,
-    score = public.visitor_sessions.score + v_score;
+  on conflict (session_id) do nothing
+  returning session_id into v_created_session;
 
-  get diagnostics v_new_session = row_count;
+  if v_created_session is null then
+    update public.visitor_sessions set
+      last_seen_at = now(),
+      pageviews = pageviews + case when v_event='page_view' then 1 else 0 end,
+      score = score + v_score
+    where session_id = v_session_id;
+  else
+    update public.visitor_profiles set total_sessions = total_sessions + 1 where visitor_id = v_visitor_id;
+  end if;
 
   insert into public.visitor_events (
     visitor_id, session_id, site, event_name, path, page_title, referrer, score_delta, properties
@@ -155,14 +154,6 @@ begin
     v_visitor_id, v_session_id, v_site, v_event, nullif(v_path,''), nullif(v_title,''), nullif(v_referrer,''), v_score,
     coalesce(payload->'properties','{}'::jsonb)
   );
-
-  -- Increment session count once, on the first event of a new session.
-  if not exists (
-    select 1 from public.visitor_events
-    where session_id = v_session_id and id <> currval(pg_get_serial_sequence('public.visitor_events','id'))
-  ) then
-    update public.visitor_profiles set total_sessions = total_sessions + 1 where visitor_id = v_visitor_id;
-  end if;
 end;
 $$;
 
