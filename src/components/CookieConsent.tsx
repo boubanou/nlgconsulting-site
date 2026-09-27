@@ -17,6 +17,7 @@ const CONSENT_EXPIRY_DAYS = 180;
 
 interface ConsentState {
   analytics: boolean;
+  marketing: boolean;
   timestamp: number;
 }
 
@@ -24,6 +25,7 @@ export const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [showCustomize, setShowCustomize] = useState(false);
   const [analyticsConsent, setAnalyticsConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -33,8 +35,9 @@ export const CookieConsent = () => {
         const consent: ConsentState = JSON.parse(savedConsent);
         const expiryTime = consent.timestamp + (CONSENT_EXPIRY_DAYS * 24 * 60 * 60 * 1000);
         if (Date.now() < expiryTime) {
-          updateGtagConsent(consent.analytics);
-          setAnalyticsConsent(consent.analytics);
+          updateGtagConsent(consent.analytics, consent.marketing);
+          setAnalyticsConsent(consent.analytics === true);
+          setMarketingConsent(consent.marketing === true);
           return;
         }
       } catch (e) {
@@ -48,16 +51,16 @@ export const CookieConsent = () => {
     if (!hasVisitorAnalyticsConsent()) return;
     trackVisitorEvent("page_view", {
       pathname: location.pathname,
-      search: location.search,
     });
-  }, [location.pathname, location.search]);
+  }, [location.pathname]);
 
-  const updateGtagConsent = (analyticsGranted: boolean) => {
+  const updateGtagConsent = (analyticsGranted: boolean, marketingGranted: boolean) => {
     if (typeof window.gtag === "function") {
       window.gtag("consent", "update", {
         analytics_storage: analyticsGranted ? "granted" : "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
+        ad_storage: marketingGranted ? "granted" : "denied",
+        ad_user_data: marketingGranted ? "granted" : "denied",
+        ad_personalization: marketingGranted ? "granted" : "denied",
       });
 
       if (analyticsGranted) {
@@ -69,13 +72,14 @@ export const CookieConsent = () => {
     }
   };
 
-  const saveConsent = (analytics: boolean) => {
+  const saveConsent = (analytics: boolean, marketing: boolean) => {
     const consent: ConsentState = {
       analytics,
+      marketing,
       timestamp: Date.now(),
     };
     localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
-    updateGtagConsent(analytics);
+    updateGtagConsent(analytics, marketing);
     setShowBanner(false);
     setShowCustomize(false);
     if (analytics) {
@@ -84,10 +88,10 @@ export const CookieConsent = () => {
     }
   };
 
-  const handleAcceptAll = () => saveConsent(true);
-  const handleDecline = () => saveConsent(false);
+  const handleAcceptAll = () => saveConsent(true, true);
+  const handleDecline = () => saveConsent(false, false);
   const handleCustomize = () => setShowCustomize(true);
-  const handleSaveCustom = () => saveConsent(analyticsConsent);
+  const handleSaveCustom = () => saveConsent(analyticsConsent, marketingConsent);
 
   if (!showBanner) return null;
 
@@ -100,10 +104,8 @@ export const CookieConsent = () => {
               <div className="flex-1">
                 <h3 className="text-base sm:text-lg font-semibold mb-2">🍪 We use cookies</h3>
                 <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
-                  We use cookies to improve your experience, measure analytics, and personalize content. You can accept or decline according to our{" "}
-                  <Link to="/privacy-policy" className="underline hover:text-primary">
-                    privacy policy
-                  </Link>
+                  Optional analytics help us understand how visitors use the site. Marketing cookies are used separately for campaign attribution and retargeting. You can accept, refuse or customize them according to our{" "}
+                  <Link to="/privacy-policy" className="underline hover:text-primary">privacy policy</Link>.
                 </p>
               </div>
               <Button variant="ghost" size="icon" onClick={handleDecline} aria-label="Close" className="shrink-0">
@@ -112,7 +114,7 @@ export const CookieConsent = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <Button onClick={handleAcceptAll} className="w-full sm:flex-1 text-sm">Accept all</Button>
-              <Button onClick={handleDecline} variant="outline" className="w-full sm:flex-1 text-sm">Decline</Button>
+              <Button onClick={handleDecline} variant="outline" className="w-full sm:flex-1 text-sm">Reject optional</Button>
               <Button onClick={handleCustomize} variant="secondary" className="w-full sm:flex-1 text-sm">Customize</Button>
             </div>
           </>
@@ -126,30 +128,31 @@ export const CookieConsent = () => {
                 </Button>
               </div>
               <div className="space-y-3">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 border rounded-lg gap-2">
-                  <div className="flex-1">
+                <div className="flex items-center justify-between p-3 border rounded-lg gap-3">
+                  <div>
                     <p className="font-medium text-sm">Essential cookies</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Required for the website to function (always active)</p>
+                    <p className="text-xs text-muted-foreground">Required for security and basic site functionality.</p>
                   </div>
-                  <div className="text-xs sm:text-sm font-semibold text-primary whitespace-nowrap">Required</div>
+                  <span className="text-xs font-semibold text-primary">Required</span>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 border rounded-lg gap-2">
-                  <div className="flex-1">
-                    <p className="font-medium text-sm">Analytics cookies</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Help us measure audience and improve the website</p>
+                <label className="flex items-center justify-between p-3 border rounded-lg gap-3 cursor-pointer">
+                  <div>
+                    <p className="font-medium text-sm">Analytics</p>
+                    <p className="text-xs text-muted-foreground">Audience, navigation, engagement, sources and conversion events.</p>
                   </div>
-                  <input
-                    type="checkbox"
-                    checked={analyticsConsent}
-                    onChange={(e) => setAnalyticsConsent(e.target.checked)}
-                    className="w-5 h-5 accent-primary cursor-pointer shrink-0"
-                    aria-label="Analytics cookies"
-                  />
-                </div>
+                  <input type="checkbox" checked={analyticsConsent} onChange={(e) => setAnalyticsConsent(e.target.checked)} className="w-5 h-5 accent-primary" />
+                </label>
+                <label className="flex items-center justify-between p-3 border rounded-lg gap-3 cursor-pointer">
+                  <div>
+                    <p className="font-medium text-sm">Marketing & retargeting</p>
+                    <p className="text-xs text-muted-foreground">Advertising attribution, campaign identifiers and retargeting preferences.</p>
+                  </div>
+                  <input type="checkbox" checked={marketingConsent} onChange={(e) => setMarketingConsent(e.target.checked)} className="w-5 h-5 accent-primary" />
+                </label>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <Button onClick={handleSaveCustom} className="w-full sm:flex-1 text-sm">Save my preferences</Button>
+              <Button onClick={handleSaveCustom} className="w-full sm:flex-1 text-sm">Save preferences</Button>
               <Button onClick={() => setShowCustomize(false)} variant="outline" className="w-full sm:flex-1 text-sm">Back</Button>
             </div>
           </>
