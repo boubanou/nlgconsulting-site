@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
-import BusinessValueEngine from "@/components/BusinessValueEngine";
+import VoiceSiteConcierge from "@/components/VoiceSiteConcierge";
 import {
   Carousel,
   CarouselContent,
@@ -169,7 +169,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="mx-auto w-full max-w-[520px] lg:max-w-none">
-                <BusinessValueEngine lang="en" />
+                <VoiceSiteConcierge lang="en" />
               </div>
             </div>
           </div>
