@@ -23,6 +23,68 @@ function renderSeoContent(meta: SeoRouteMeta): string {
   return `<div data-seo-prerender="true"><main><h1>${escapeHtml(meta.h1)}</h1><p>${escapeHtml(meta.description)}</p>${clusterLinks(meta)}</main></div>`;
 }
 
+function routeStructuredData(meta: SeoRouteMeta) {
+  const homeUrl = meta.lang === "fr" ? `${BASE_URL}/fr` : `${BASE_URL}/`;
+  const breadcrumbName = meta.lang === "fr" ? "Accueil" : "Home";
+  const organization = {
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "NLG Consulting",
+    url: BASE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/logo.svg`
+    },
+    founder: {
+      "@type": "Person",
+      name: "Gregory Brenig",
+      jobTitle: "Founder & CEO",
+      sameAs: "https://www.linkedin.com/in/gregorybrenig/"
+    },
+    areaServed: ["Europe", "North America", "Middle East"],
+    knowsAbout: ["AI Consulting", "AI Automation", "Workflow Automation", "AI Agents", "Sales Automation", "Go-to-Market Strategy", "Revenue Operations"]
+  };
+
+  const graph: any[] = [
+    organization,
+    {
+      "@type": meta.path === "/" || meta.path === "/fr" ? "WebSite" : "WebPage",
+      "@id": `${meta.canonical}#webpage`,
+      url: meta.canonical,
+      name: meta.h1,
+      description: meta.description,
+      inLanguage: meta.lang,
+      isPartOf: { "@id": `${BASE_URL}/#website` },
+      about: { "@id": `${BASE_URL}/#organization` }
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: meta.path === "/" || meta.path === "/fr"
+        ? [{ "@type": "ListItem", position: 1, name: breadcrumbName, item: homeUrl }]
+        : [
+            { "@type": "ListItem", position: 1, name: breadcrumbName, item: homeUrl },
+            { "@type": "ListItem", position: 2, name: meta.h1, item: meta.canonical }
+          ]
+    }
+  ];
+
+  if (meta.path === "/" || meta.path === "/fr") {
+    graph[1]["@id"] = `${BASE_URL}/#website`;
+    graph[1].publisher = { "@id": `${BASE_URL}/#organization` };
+  } else if (meta.cluster !== "core" || meta.path.includes("services")) {
+    graph.push({
+      "@type": "Service",
+      name: meta.h1,
+      description: meta.description,
+      url: meta.canonical,
+      provider: { "@id": `${BASE_URL}/#organization` },
+      areaServed: ["Europe", "North America", "Middle East"]
+    });
+  }
+
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
 function applyMeta(template: string, meta: SeoRouteMeta): string {
   let html = template;
   html = html.replace(/<html lang="[^"]*">/, `<html lang="${meta.lang}">`);
@@ -44,6 +106,8 @@ function applyMeta(template: string, meta: SeoRouteMeta): string {
   html = html.replace(/<link rel="alternate" hreflang="en" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="en" href="${escapeAttr(enUrl)}">`);
   html = html.replace(/<link rel="alternate" hreflang="fr" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="fr" href="${escapeAttr(frUrl)}">`);
 
+  const schema = routeStructuredData(meta);
+  html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script></head>`);
   html = html.replace('<div id="root"></div>', `${renderSeoContent(meta)}<div id="root"></div>`);
   return html;
 }
