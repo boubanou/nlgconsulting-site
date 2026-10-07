@@ -51,7 +51,7 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>AI Automation, Consulting & Growth Services | NLG Consulting</title>
+        <title>AI Automation, Consulting & Growth Services | NLG</title>
         <meta name="description" content="AI automation, AI consulting, sales systems and strategic execution for small and growing businesses. Start with the business outcome; NLG handles the technology and implementation." />
         <link rel="canonical" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
