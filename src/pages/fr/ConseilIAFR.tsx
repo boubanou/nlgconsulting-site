@@ -43,7 +43,7 @@ const ConseilIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Consultant IA pour PME & Entreprises | Audit à Déploiement | NLG</title>
+        <title>Consultant IA pour PME & Entreprises | NLG</title>
         <meta name="description" content="Conseil IA pour PME et entreprises en croissance : identifier les cas d’usage à forte valeur, auditer les processus, construire une roadmap et déployer automatisations et agents IA." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia" />
