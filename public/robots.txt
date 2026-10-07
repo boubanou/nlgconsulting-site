@@ -1,4 +1,4 @@
-# NLG Consulting - B2B Lead Generation
+# NLG Consulting - AI Consulting, Automation & Growth
 User-agent: *
 Allow: /
 
