@@ -52,8 +52,8 @@ const AboutNLG = () => {
   return (
     <>
       <Helmet>
-        <title>About NLG Consulting | AI Consulting & Business Growth Operator</title>
-        <meta name="description" content="Meet Gregory Brenig and the NLG team. 15+ years building ventures, deploying AI systems, and advising companies on automation, sales, and growth worldwide." />
+        <title>About NLG Consulting | AI Automation & Consulting Operators</title>
+        <meta name="description" content="Meet NLG Consulting and founder Gregory Brenig. Operator-led AI consulting, automation and growth execution for small businesses and growing B2B companies." />
         <link rel="canonical" href="https://www.nlgconsulting.co/about" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/about" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/a-propos" />
@@ -81,7 +81,7 @@ const AboutNLG = () => {
               <span className="text-gradient">Built by Operators</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              NLG Consulting is a global consulting and execution firm helping businesses understand, deploy, and scale AI systems — from strategy through to full implementation.
+              NLG Consulting is an operator-led consulting and execution firm helping small businesses and growing companies identify where AI creates value, then design and implement the systems.
             </p>
           </div>
         </section>
@@ -97,7 +97,7 @@ const AboutNLG = () => {
                     Founded in 2020, NLG Consulting emerged from a simple observation: most businesses struggle to bridge the gap between AI strategy and operational execution.
                   </p>
                   <p>
-                    We operate at the intersection of AI consulting, business automation, and hands-on implementation. Our clients — from early-stage startups to established enterprises — work with us to deploy AI systems that improve their marketing, sales, content production, and operational workflows.
+                    We operate at the intersection of AI consulting, business automation and hands-on implementation. The work starts with the business outcome — time, capacity, revenue, margin or customer experience — and then selects the right combination of workflows, automation and AI.
                   </p>
                   <p>
                     What sets us apart is our execution-first philosophy. We don't just advise — we build, integrate, and run AI systems alongside your team. Whether it's designing AI agents, automating sales outreach, training teams on prompt engineering, or building an entire automation stack, we operate as your external AI department.
