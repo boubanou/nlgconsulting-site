@@ -8,13 +8,14 @@ export const useLanguageRedirect = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Only run on first visit (check localStorage)
-    if (localStorage.getItem(LANGUAGE_REDIRECT_KEY)) {
-      return;
+    // Storage can be unavailable in Safari private/restricted contexts. Never let
+    // language detection take down the whole application.
+    try {
+      if (localStorage.getItem(LANGUAGE_REDIRECT_KEY)) return;
+      localStorage.setItem(LANGUAGE_REDIRECT_KEY, "true");
+    } catch {
+      // Continue without persistence; redirect logic itself remains safe.
     }
-
-    // Mark as done immediately to prevent multiple redirects
-    localStorage.setItem(LANGUAGE_REDIRECT_KEY, "true");
 
     // Only redirect if on English pages (not already on /fr/*)
     if (location.pathname.startsWith("/fr")) {
