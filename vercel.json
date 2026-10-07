@@ -472,7 +472,39 @@
       "destination": "/fr/ressources/:slug/index.html"
     },
     {
-      "source": "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.svg|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.webp|.*\\.xml|.*\\.html).*)",
+      "source": "/auth",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/access-denied",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/leads",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/meetings",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/callbacks",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/users",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/web/terms",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/web/thank-you",
       "destination": "/index.html"
     }
   ]
