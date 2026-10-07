@@ -112,7 +112,7 @@ const HomeFR = () => {
   return (
     <>
       <Helmet>
-        <title>Automatisation IA & Conseil IA pour PME | NLG Consulting</title>
+        <title>Automatisation IA & Conseil IA pour PME | NLG</title>
         <meta name="description" content="Automatisation IA et conseil IA pour PME et entreprises en croissance. Gagnez du temps, améliorez vos opérations et vos revenus — ou parlez directement au site NLG." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
@@ -121,13 +121,13 @@ const HomeFR = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr" />
-        <meta property="og:title" content="Automatisation IA & Conseil IA pour PME | NLG Consulting" />
+        <meta property="og:title" content="Automatisation IA & Conseil IA pour PME | NLG" />
         <meta property="og:description" content="Expliquez votre besoin — ou parlez directement au site. NLG construit automatisations IA, workflows et systèmes de croissance autour de résultats business réels." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Automatisation IA & Conseil IA pour PME | NLG Consulting" />
+        <meta name="twitter:title" content="Automatisation IA & Conseil IA pour PME | NLG" />
         <meta name="twitter:description" content="Automatisation IA et conseil clé en main — avec un site NLG auquel vous pouvez parler pour être guidé." />
         <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
