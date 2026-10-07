@@ -7,7 +7,7 @@ type BusinessValueEngineProps = {
 const copy = {
   en: {
     eyebrow: "NLG Opportunity Engine",
-    status: "Live model",
+    status: "Value map",
     centerTop: "Business",
     centerBottom: "AI fit",
     signals: [
@@ -21,7 +21,7 @@ const copy = {
   },
   fr: {
     eyebrow: "NLG Opportunity Engine",
-    status: "Modèle actif",
+    status: "Carte de valeur",
     centerTop: "Business",
     centerBottom: "Fit IA",
     signals: [
