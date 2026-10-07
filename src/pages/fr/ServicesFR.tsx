@@ -33,8 +33,8 @@ const ServicesFR = () => {
   return (
     <>
       <Helmet>
-        <title>Systèmes de Croissance IA & RevOps | NLG Consulting</title>
-        <meta name="description" content="Systèmes de croissance IA, revenue operations et conseil stratégique pour FinTech, PropTech, SaaS et entreprises B2B. Conseil IA, agents agentiques, GTM et outbound." />
+        <title>IA, Automatisation & Croissance pour PME et Entreprises en Développement | NLG</title>
+        <meta name="description" content="IA, automatisation, croissance commerciale et conseil stratégique pour PME, indépendants et entreprises en développement. Partez du résultat business, nous gérons la technologie." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/services" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/services" />
@@ -54,9 +54,9 @@ const ServicesFR = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Services</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Systèmes de Croissance IA & Revenue Operations</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Commencez par ce que Vous Voulez Améliorer — Pas par la Technologie</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Nous aidons les entreprises FinTech, PropTech, SaaS et B2B à déployer des systèmes de croissance structurés — combinant conseil IA, agents agentiques, architecture GTM, infrastructure outbound et assets de conversion.
+              Gagner du temps. Réduire les coûts. Augmenter le chiffre d'affaires. Améliorer la conversion, les marges ou l'expérience client. Donnez-nous l'objectif business — nous identifions la bonne combinaison d'IA, d'automatisation, de croissance et de conseil.
             </p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/fr/rendez-vous">Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -66,8 +66,8 @@ const ServicesFR = () => {
 
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">De la stratégie dispersée à l'exécution structurée</h2>
-            <p>La plupart des entreprises en croissance ne manquent pas d'outils ni d'idées — elles manquent d'exécution structurée. Les initiatives commerciales sont fragmentées, l'adoption de l'IA reste théorique, et la distance entre stratégie et résultats mesurables ne se réduit pas.</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">La Technologie Doit Créer du Levier Business</h2>
+            <p>Vous n'avez pas besoin de savoir quel modèle IA, quelle plateforme d'automatisation ou quelle intégration choisir avant de nous parler. Et vous n'avez pas besoin d'avoir un problème majeur. Nous pouvons améliorer une entreprise qui fonctionne déjà en augmentant sa capacité, sa vitesse, sa régularité, ses revenus ou sa rentabilité.</p>
             <p>NLG Consulting comble ce fossé. Nous combinons <Link to="/fr/conseil-ia" className="text-primary hover:underline font-medium">conseil IA</Link>, <Link to="/fr/conseil" className="text-primary hover:underline font-medium">advisory stratégique</Link>, <Link to="/fr/vente" className="text-primary hover:underline font-medium">infrastructure outbound</Link> et <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">automatisation de workflows</Link> pour créer des systèmes de croissance qui produisent des rendez-vous qualifiés et des résultats commerciaux mesurables.</p>
           </div>
         </section>
