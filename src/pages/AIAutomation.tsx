@@ -36,7 +36,7 @@ const AIAutomation = () => {
   return (
     <>
       <Helmet>
-        <title>AI Automation Agency for Small Business & B2B | NLG Consulting</title>
+        <title>AI Automation Agency for Small Business & B2B | NLG</title>
         <meta name="description" content="Done-for-you AI automation for small businesses and B2B teams. Automate CRM, sales, marketing, reporting and operations with practical workflows built around your existing tools." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
@@ -45,7 +45,7 @@ const AIAutomation = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/ai-automation" />
-        <meta property="og:title" content="AI Automation Agency for Small Business & B2B | NLG Consulting" />
+        <meta property="og:title" content="AI Automation Agency for Small Business & B2B | NLG" />
         <meta property="og:description" content="Done-for-you AI automation for CRM, sales, marketing, reporting and operations — designed around the tools your business already uses." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
