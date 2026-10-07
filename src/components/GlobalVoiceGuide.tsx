@@ -374,6 +374,13 @@ const GlobalVoiceGuide = () => {
     return () => window.clearTimeout(timer);
   }, [hasProfile, isHome, isPublicPage, lang]);
 
+  // Let the invitation land, then collapse it back to the persistent microphone.
+  useEffect(() => {
+    if (!inviteOpen || panelOpen) return;
+    const timer = window.setTimeout(() => setInviteOpen(false), 11000);
+    return () => window.clearTimeout(timer);
+  }, [inviteOpen, panelOpen]);
+
   useEffect(() => {
     const openVoice = () => {
       setInviteOpen(false);
@@ -827,7 +834,8 @@ const GlobalVoiceGuide = () => {
         <button
           type="button"
           onClick={startVoice}
-          className="nlg-voice-launcher fixed bottom-5 right-4 z-[65] inline-flex items-center gap-2 rounded-full border border-primary/15 bg-background/95 px-3.5 py-2.5 text-sm font-semibold text-foreground shadow-xl backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-2xl sm:right-6"
+          style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 14px)" }}
+          className="nlg-voice-launcher fixed right-4 z-[65] inline-flex items-center gap-2 rounded-full border border-primary/15 bg-background/95 px-3.5 py-2.5 text-sm font-semibold text-foreground shadow-xl backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-2xl sm:right-6"
           aria-label={t.talk}
         >
           <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -839,8 +847,11 @@ const GlobalVoiceGuide = () => {
       )}
 
       {panelOpen && (
-        <div className="fixed inset-x-3 bottom-3 z-[80] sm:inset-x-auto sm:bottom-5 sm:right-5 sm:w-[390px]">
-          <div className="overflow-hidden rounded-[1.5rem] border border-primary/15 bg-background/95 shadow-2xl backdrop-blur-xl">
+        <div
+          style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 12px)" }}
+          className="fixed inset-x-3 z-[80] sm:inset-x-auto sm:right-5 sm:w-[390px]"
+        >
+          <div className="max-h-[calc(100dvh-1.5rem)] overflow-y-auto rounded-[1.5rem] border border-primary/15 bg-background/95 shadow-2xl backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-border/70 px-4 py-3">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
