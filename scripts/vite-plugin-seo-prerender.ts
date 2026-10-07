@@ -83,15 +83,34 @@ function applyInsightMeta(template: string, article: InsightArticle): string {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.h1,
-    description: article.description,
-    datePublished: article.published,
-    dateModified: article.updated,
-    author: { "@type": "Person", name: "Gregory Brenig" },
-    publisher: { "@type": "Organization", name: "NLG Consulting", url: BASE_URL },
-    mainEntityOfPage: canonical
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: article.h1,
+        description: article.description,
+        datePublished: article.published,
+        dateModified: article.updated,
+        inLanguage: article.lang,
+        author: { "@type": "Person", name: "Gregory Brenig", url: `${BASE_URL}/about` },
+        publisher: {
+          "@type": "Organization",
+          name: "NLG Consulting",
+          url: BASE_URL,
+          logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.svg` }
+        },
+        mainEntityOfPage: canonical
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: article.lang === "fr" ? "Accueil" : "Home", item: article.lang === "fr" ? `${BASE_URL}/fr` : `${BASE_URL}/` },
+          { "@type": "ListItem", position: 2, name: article.lang === "fr" ? "Ressources" : "Insights", item: article.lang === "fr" ? `${BASE_URL}/fr/ressources` : `${BASE_URL}/insights` },
+          { "@type": "ListItem", position: 3, name: article.h1, item: canonical }
+        ]
+      }
+    ]
   };
+
   html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script></head>`);
   html = html.replace('<div id="root"></div>', `${renderInsightContent(article)}<div id="root"></div>`);
   return html;
