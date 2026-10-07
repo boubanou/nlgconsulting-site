@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const LeadPopupImpl = lazy(() =>
   import("./LeadPopupImpl").then((module) => ({ default: module.LeadPopup })),
@@ -6,6 +7,8 @@ const LeadPopupImpl = lazy(() =>
 
 export const LeadPopup = () => {
   const [ready, setReady] = useState(false);
+  const location = useLocation();
+  const isVoiceHomepage = location.pathname === "/" || location.pathname === "/fr";
 
   useEffect(() => {
     const activate = () => setReady(true);
@@ -21,7 +24,7 @@ export const LeadPopup = () => {
     };
   }, []);
 
-  if (!ready) return null;
+  if (!ready || isVoiceHomepage) return null;
 
   return (
     <Suspense fallback={null}>

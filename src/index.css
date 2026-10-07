@@ -266,3 +266,28 @@
     animation: none !important;
   }
 }
+
+
+@keyframes voice-wave-pulse {
+  0%, 100% {
+    transform: scaleY(0.45);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleY(1.15);
+    opacity: 1;
+  }
+}
+
+.voice-wave-bar {
+  transform-origin: center;
+  animation: voice-wave-pulse 900ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-wave-bar {
+    animation: none !important;
+    transform: scaleY(0.8);
+    opacity: 0.75;
+  }
+}
