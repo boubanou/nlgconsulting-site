@@ -291,3 +291,31 @@
     opacity: 0.75;
   }
 }
+
+
+/* NLG: compact first-visit voice invitation. Motion stops as soon as it lands. */
+@keyframes nlg-voice-invite-arrive {
+  0% { opacity: 0; transform: translate3d(110%, -8px, 0) rotate(2deg); }
+  70% { opacity: 1; transform: translate3d(-7px, 0, 0) rotate(-1deg); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0); }
+}
+
+@keyframes nlg-voice-pulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  80%, 100% { opacity: 0; transform: scale(1.7); }
+}
+
+.nlg-voice-invite {
+  animation: nlg-voice-invite-arrive 750ms cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.nlg-voice-pulse {
+  pointer-events: none;
+  animation: nlg-voice-pulse 2.5s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nlg-voice-invite, .nlg-voice-pulse {
+    animation: none !important;
+  }
+}

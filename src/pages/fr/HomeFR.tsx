@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
-import VoiceSiteConcierge from "@/components/VoiceSiteConcierge";
+import BusinessValueEngine from "@/components/BusinessValueEngine";
 import {
   Carousel,
   CarouselContent,
@@ -156,9 +156,9 @@ const HomeFR = () => {
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
                   <Button asChild size="lg" className="w-full text-sm sm:w-auto sm:text-base">
-                    <a href="#parler-a-nlg">
-                      Parler à NLG <ArrowRight className="ml-1 w-4 h-4" />
-                    </a>
+                    <button type="button" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
+                      Parler au Site <ArrowRight className="ml-1 w-4 h-4" />
+                    </button>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="w-full text-sm sm:w-auto sm:text-base">
                     <Link to="/fr/rendez-vous">Réserver un Appel</Link>
@@ -170,8 +170,8 @@ const HomeFR = () => {
                   <span className="inline-flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-secondary" /> Résultats mesurables</span>
                 </div>
               </div>
-              <div id="parler-a-nlg" className="mx-auto w-full max-w-[520px] scroll-mt-24 lg:max-w-none">
-                <VoiceSiteConcierge lang="fr" />
+              <div className="mx-auto w-full max-w-[520px] lg:max-w-none">
+                <BusinessValueEngine lang="fr" />
               </div>
             </div>
           </div>

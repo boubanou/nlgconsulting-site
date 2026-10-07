@@ -17,7 +17,7 @@ const Book = () => {
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("nlg_voice_profile");
+      const stored = sessionStorage.getItem("nlg_voice_profile");
       if (stored) setVoiceContext(JSON.parse(stored));
     } catch {
       // no-op

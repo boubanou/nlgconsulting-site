@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
-import VoiceSiteConcierge from "@/components/VoiceSiteConcierge";
+import BusinessValueEngine from "@/components/BusinessValueEngine";
 import {
   Carousel,
   CarouselContent,
@@ -154,9 +154,9 @@ const Home = () => {
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
                   <Button asChild size="lg" className="w-full text-sm sm:w-auto sm:text-base">
-                    <a href="#talk-to-nlg">
-                      Talk to NLG <ArrowRight className="ml-1 w-4 h-4" />
-                    </a>
+                    <button type="button" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
+                      Talk to the Website <ArrowRight className="ml-1 w-4 h-4" />
+                    </button>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="w-full text-sm sm:w-auto sm:text-base">
                     <Link to="/book">Book a Strategy Call</Link>
@@ -168,8 +168,8 @@ const Home = () => {
                   <span className="inline-flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-secondary" /> Measurable outcomes</span>
                 </div>
               </div>
-              <div id="talk-to-nlg" className="mx-auto w-full max-w-[520px] scroll-mt-24 lg:max-w-none">
-                <VoiceSiteConcierge lang="en" />
+              <div className="mx-auto w-full max-w-[520px] lg:max-w-none">
+                <BusinessValueEngine lang="en" />
               </div>
             </div>
           </div>
