@@ -16,21 +16,61 @@ export const seoRoutes: SeoRouteMeta[] = [
     "path": "/",
     "lang": "en",
     "cluster": "core",
-    "title": "AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting",
-    "description": "AI consulting, agentic workflows, RevOps, GTM strategy, and outbound infrastructure for FinTech, PropTech, SaaS & B2B companies. Qualified meetings and measurable revenue. Book a strategy call.",
+    "title": "AI & Automation for Small Businesses, Professionals & Growing Companies | NLG",
+    "description": "Use AI and automation to save time, reduce costs, increase revenue and improve performance. NLG identifies the opportunities and implements the systems for you.",
     "canonical": "https://www.nlgconsulting.co/",
-    "h1": "AI-Powered Growth Systems for FinTech, PropTech & B2B Companies",
+    "h1": "Make AI Work for Your Business — Without Becoming an AI Expert",
     "alternate": "/fr"
   },
   {
     "path": "/fr",
     "lang": "fr",
     "cluster": "core",
-    "title": "Systèmes de Croissance IA pour FinTech, PropTech & B2B | NLG Consulting",
-    "description": "Conseil IA, workflows agentiques, RevOps, stratégie GTM et infrastructure outbound pour les entreprises FinTech, PropTech, SaaS & B2B. Rendez-vous qualifiés et revenus mesurables.",
+    "title": "IA & Automatisation pour PME, Indépendants & Entreprises en Croissance | NLG",
+    "description": "Utilisez l'IA et l'automatisation pour gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance. NLG identifie les opportunités et met les systèmes en place pour vous.",
     "canonical": "https://www.nlgconsulting.co/fr",
-    "h1": "Systèmes de Croissance IA pour FinTech, PropTech & B2B",
+    "h1": "Faites Travailler l'IA pour Votre Entreprise — Sans Devenir Expert en IA",
     "alternate": "/"
+  },
+  {
+    "path": "/services",
+    "lang": "en",
+    "cluster": "core",
+    "title": "AI, Automation & Growth Services for Small and Growing Businesses | NLG",
+    "description": "Practical AI, automation, sales growth and strategic advisory for small businesses, professionals and growing companies. Start with the business outcome; we handle the technology.",
+    "canonical": "https://www.nlgconsulting.co/services",
+    "h1": "Start With What You Want to Improve — Not the Technology",
+    "alternate": "/fr/services"
+  },
+  {
+    "path": "/fr/services",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "IA, Automatisation & Croissance pour PME et Entreprises en Développement | NLG",
+    "description": "IA, automatisation, croissance commerciale et conseil stratégique pour PME, indépendants et entreprises en développement. Partez du résultat business, nous gérons la technologie.",
+    "canonical": "https://www.nlgconsulting.co/fr/services",
+    "h1": "Commencez par ce que Vous Voulez Améliorer — Pas par la Technologie",
+    "alternate": "/services"
+  },
+  {
+    "path": "/book",
+    "lang": "en",
+    "cluster": "core",
+    "title": "Book an AI & Automation Strategy Call | NLG Consulting",
+    "description": "A focused 15-minute conversation to identify where AI, automation and growth systems can save time, reduce costs, increase revenue or improve performance.",
+    "canonical": "https://www.nlgconsulting.co/book",
+    "h1": "Book a Strategy Call",
+    "alternate": "/fr/rendez-vous"
+  },
+  {
+    "path": "/fr/rendez-vous",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "Réserver un Appel IA & Automatisation | NLG Consulting",
+    "description": "Une conversation de 15 minutes pour identifier où l'IA, l'automatisation et les systèmes de croissance peuvent faire gagner du temps, réduire les coûts, augmenter les revenus ou améliorer la performance.",
+    "canonical": "https://www.nlgconsulting.co/fr/rendez-vous",
+    "h1": "Réserver un Appel Stratégique",
+    "alternate": "/book"
   },
   {
     "path": "/ai-consulting",
@@ -57,9 +97,9 @@ export const seoRoutes: SeoRouteMeta[] = [
     "lang": "en",
     "cluster": "ai",
     "title": "AI Automation Agency | Workflow & Process Automation | NLG",
-    "description": "AI automation for B2B operations: map repetitive workflows, design integrations and deploy AI-powered processes across sales, marketing, content and operations.",
+    "description": "AI automation for small businesses and growing teams. Save time, reduce costs and improve performance with practical workflows implemented for you. Automation Sprint from €1,250 excl. VAT.",
     "canonical": "https://www.nlgconsulting.co/ai-automation",
-    "h1": "AI Automation for Business Workflows & Operations",
+    "h1": "AI Automation for Business — Without the Technical Complexity",
     "alternate": "/fr/automation-ia"
   },
   {
@@ -67,9 +107,9 @@ export const seoRoutes: SeoRouteMeta[] = [
     "lang": "fr",
     "cluster": "ai",
     "title": "Automatisation IA Entreprise | Workflows & Processus | NLG",
-    "description": "Automatisation IA pour entreprises : cartographie des processus, workflows automatisés, intégrations CRM et déploiement IA pour ventes, marketing et opérations.",
+    "description": "Automatisation IA pour PME, indépendants et équipes en croissance. Gagnez du temps, réduisez les coûts et améliorez la performance avec des workflows mis en place pour vous. Sprint dès 1 250 € HT.",
     "canonical": "https://www.nlgconsulting.co/fr/automation-ia",
-    "h1": "Automatisation IA des Processus & Workflows d'Entreprise",
+    "h1": "Automatisation IA pour Entreprises — Sans la Complexité Technique",
     "alternate": "/ai-automation"
   },
   {
