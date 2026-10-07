@@ -28,7 +28,7 @@ const PropTechLeadGeneration = () => {
     <>
       <Helmet>
         <title>PropTech Lead Generation | Reach Real Estate Decision-Makers | NLG Consulting</title>
-        <meta name="description" content="Lead generation for PropTech companies. Reach real estate developers, property managers, and investors with targeted B2B outreach. 10-25 qualified meetings/month." />
+        <meta name="description" content="Lead generation for PropTech companies. Reach real estate developers, property managers and investors with targeted B2B outreach, qualification and CRM tracking." />
         <link rel="canonical" href="https://www.nlgconsulting.co/proptech-lead-generation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/proptech-lead-generation" />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/proptech-lead-generation" />
