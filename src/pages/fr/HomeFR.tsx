@@ -41,7 +41,7 @@ const HomeFR = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co/fr",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "IA, automatisation et systèmes de croissance pour petites entreprises, indépendants et entreprises en développement. NLG identifie où la technologie peut faire gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance — puis la met en place.",
+        "description": "Automatisation IA et conseil IA clé en main pour PME et entreprises en croissance. NLG identifie où l’IA peut améliorer les opérations, gagner du temps et développer les revenus, puis met les systèmes en place.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
