@@ -5,8 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CookieConsent } from "./components/CookieConsent";
-import { LeadPopup } from "./components/LeadPopup";
-import GregoChatbot from "./components/GregoChatbot";
+import GlobalVoiceGuide from "./components/GlobalVoiceGuide";
 import { LanguageRedirectHandler } from "./components/LanguageRedirectHandler";
 
 // Lazy load pages
@@ -146,8 +145,7 @@ const App = () => (
     <Sonner />
     <BrowserRouter>
       <CookieConsent />
-      <LeadPopup />
-      <GregoChatbot />
+      <GlobalVoiceGuide />
       <ScrollToTop />
       <LanguageRedirectHandler />
       <Suspense fallback={<LoadingFallback />}>
