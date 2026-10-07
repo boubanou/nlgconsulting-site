@@ -14,7 +14,7 @@ const AIAutomation = () => {
     "@graph": [
       {
         "@type": "Service", "name": "AI Workflow Automation for Business", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
-        "description": "AI-powered workflow automation for sales, marketing, operations, and revenue infrastructure. We design and deploy automation systems using Make, n8n, and custom AI integrations for FinTech, PropTech, and B2B companies.",
+        "description": "Done-for-you AI workflow automation for small businesses and growing B2B teams across CRM, sales, marketing, reporting and operations.",
         "url": "https://www.nlgconsulting.co/ai-automation", "areaServed": ["Europe", "North America", "Middle East"], "serviceType": "AI Workflow Automation"
       },
       {
@@ -23,7 +23,7 @@ const AIAutomation = () => {
           { "@type": "Question", "name": "Which business processes can be automated with AI?", "acceptedAnswer": { "@type": "Answer", "text": "Sales prospecting and outreach, content production, lead qualification, CRM management, reporting and analytics, document processing, email sequences, social media, and operational workflows — essentially any process with repeatable patterns and defined inputs." }},
           { "@type": "Question", "name": "What tools do you use for AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "We build on Make, n8n, and custom integrations, combined with AI models from OpenAI and Anthropic (Claude). These connect to your existing tools — HubSpot, Salesforce, Clay, Notion, Airtable, Slack, and custom APIs." }},
           { "@type": "Question", "name": "How is AI automation different from traditional automation?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional automation follows rigid if-then rules. AI automation adds intelligence — understanding context, generating content, making qualification decisions, and handling tasks that require judgment. For complex processes, AI agents go even further." }},
-          { "@type": "Question", "name": "How long does it take to implement AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "Simple workflows deploy in days. Comprehensive systems across multiple departments typically take 2–6 weeks. We start with high-impact workflows and expand progressively." }}
+          { "@type": "Question", "name": "How long does it take to implement AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "Timing depends on the workflow, data access, integrations and control requirements. NLG starts with a bounded, measurable use case and expands only after the operating value is clear." }}
         ]
       },
       { "@type": "BreadcrumbList", "itemListElement": [
@@ -166,7 +166,7 @@ const AIAutomation = () => {
                 { q: "Which processes can be automated with AI?", a: "Sales prospecting, content production, lead qualification, CRM management, reporting, document processing, email sequences, social media, and operational workflows — any process with repeatable patterns and defined inputs." },
                 { q: "What tools do you use?", a: "We build on Make, n8n, and custom integrations, combined with AI from OpenAI and Anthropic (Claude). These connect to HubSpot, Salesforce, Clay, Notion, Airtable, Slack, and custom APIs." },
                 { q: "How is AI automation different from traditional automation?", a: "Traditional automation follows rigid rules. AI automation adds intelligence — understanding context, generating content, making decisions, and handling tasks requiring judgment. For complex processes, AI agents go even further." },
-                { q: "How long does implementation take?", a: "Simple workflows deploy in days. Comprehensive systems across multiple departments typically take 2–6 weeks. We start with high-impact workflows and expand progressively." }
+                { q: "How long does implementation take?", a: "Timing depends on the workflow, data access, integrations and control requirements. We start with a bounded use case, measure it and expand when the value is clear." }
               ].map((item, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
