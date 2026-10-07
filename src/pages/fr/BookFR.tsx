@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
 import CalendarEmbed from "@/components/CalendarEmbed";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const BookFR = () => {
   const structuredData = {
@@ -12,7 +12,7 @@ const BookFR = () => {
       {
         "@type": "WebPage",
         "name": "Réserver un Appel Stratégique | NLG Consulting",
-        "description": "Planifiez un appel stratégique de 15 minutes pour discuter de vos systèmes de croissance, automatisation IA, revenue operations et performance commerciale.",
+        "description": "Planifiez un appel de 15 minutes pour identifier où l'IA, l'automatisation et les systèmes de croissance peuvent faire gagner du temps, réduire les coûts, augmenter les revenus ou améliorer la performance.",
         "url": "https://www.nlgconsulting.co/fr/rendez-vous"
       },
       {
@@ -29,7 +29,7 @@ const BookFR = () => {
     <>
       <Helmet>
         <title>Réserver un Appel Stratégique | NLG Consulting</title>
-        <meta name="description" content="Planifiez un appel stratégique de 15 minutes pour discuter de systèmes de croissance IA, revenue operations et performance commerciale pour votre entreprise." />
+        <meta name="description" content="Planifiez un appel de 15 minutes pour identifier où l'IA et l'automatisation peuvent faire gagner du temps, réduire les coûts, augmenter les revenus ou améliorer la performance." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/rendez-vous" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/rendez-vous" />
@@ -38,7 +38,7 @@ const BookFR = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr/rendez-vous" />
         <meta property="og:title" content="Réserver un Appel Stratégique | NLG Consulting" />
-        <meta property="og:description" content="Appel stratégique de 15 minutes sur les systèmes de croissance IA, revenue operations et performance commerciale." />
+        <meta property="og:description" content="Une conversation pratique de 15 minutes pour identifier où l'IA et l'automatisation peuvent créer plus de valeur dans votre entreprise." />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -52,7 +52,7 @@ const BookFR = () => {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Réserver un Appel Stratégique</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Une conversation de 15 minutes centrée sur vos systèmes de croissance, votre structure commerciale et votre maturité IA — avec un opérateur qui a scalé des revenus dans la FinTech, PropTech et le B2B.
+                Une conversation de 15 minutes sur le fonctionnement de votre entreprise, ce que vous souhaitez améliorer et les endroits où l'IA, l'automatisation ou les systèmes de croissance peuvent créer une valeur mesurable.
               </p>
             </div>
 
@@ -62,21 +62,21 @@ const BookFR = () => {
                   <CheckCircle className="w-5 h-5 text-primary" /> Cet appel est pertinent si…
                 </h2>
                 <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous êtes fondateur, CEO ou dirigeant croissance d'une entreprise B2B, FinTech ou PropTech</li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous devez structurer votre outbound, pipeline ou revenue operations</li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous souhaitez déployer des workflows IA, agents ou automatisations dans vos opérations</li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous cherchez un accompagnement d'exécution, pas seulement du conseil théorique</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous dirigez une PME, un cabinet, une activité indépendante, une agence, une SaaS, FinTech, PropTech ou entreprise B2B en croissance</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous voulez gagner du temps, réduire le travail manuel ou améliorer les marges</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous voulez augmenter les leads, la conversion, le chiffre d'affaires ou la valeur client</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Vous savez que l'IA peut aider mais ne voulez pas passer des jours à comprendre les outils et intégrations</li>
                 </ul>
               </div>
               <div className="p-6 rounded-2xl border bg-card">
                 <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
-                  <XCircle className="w-5 h-5 text-destructive" /> Ce n'est pas adapté si…
+                  <CheckCircle className="w-5 h-5 text-primary" /> Ce que nous pouvons explorer ensemble
                 </h2>
                 <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous cherchez un développeur ou designer freelance</li>
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous n'avez pas encore de produit ou de clients payants</li>
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous recherchez du consulting gratuit ou du travail spéculatif</li>
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> Vous avez besoin d'une agence pour de la sous-traitance</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Quelles tâches ou workflows méritent d'être automatisés en premier</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Où l'IA peut augmenter capacité, vitesse ou qualité même si rien n'est aujourd'hui « cassé »</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Comment la technologie peut améliorer revenus, conversion, marges ou expérience client</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Si un Automation Sprint à 1 250 € HT ou une mission plus large est la bonne prochaine étape</li>
                 </ul>
               </div>
             </div>
