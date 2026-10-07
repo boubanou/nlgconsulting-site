@@ -39,7 +39,7 @@ const HomeFR = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co/fr",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "Systèmes de croissance propulsés par l'IA, revenue operations et conseil stratégique pour les entreprises FinTech, PropTech, SaaS et B2B.",
+        "description": "IA, automatisation et systèmes de croissance pour petites entreprises, indépendants et entreprises en développement. NLG identifie où la technologie peut faire gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance — puis la met en place.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
@@ -49,7 +49,7 @@ const HomeFR = () => {
         "foundingDate": "2020",
         "areaServed": ["Europe", "North America", "Middle East"],
         "sameAs": ["https://www.linkedin.com/company/nlg-consulting/"],
-        "knowsAbout": ["AI Consulting", "AI Automation", "AI Agents", "Agentic AI", "Revenue Operations", "B2B Lead Generation", "GTM Strategy", "Workflow Automation", "Outsourced SDR"]
+        "knowsAbout": ["Conseil IA", "Automatisation IA", "Automatisation des processus", "Agents IA", "IA pour PME", "Croissance du chiffre d'affaires", "Automatisation commerciale", "Revenue Operations", "Génération de leads B2B", "Stratégie GTM", "Efficacité opérationnelle"]
       },
       {
         "@type": "BreadcrumbList",
@@ -62,46 +62,25 @@ const HomeFR = () => {
 
   const clusters = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Conseil IA",
-      description: "Stratégie IA concrète pour les opérations, la vente, le contenu et la croissance — liée à des résultats mesurables, pas des présentations.",
-      link: "/fr/conseil-ia",
-      cta: "Explorer le Conseil IA"
-    },
-    {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Automatisation de Workflows IA",
-      description: "Conception et déploiement de workflows IA pour le marketing, la vente, les opérations et la production de contenu avec Claude, GPT, Make et des pipelines sur mesure.",
+      title: "Gagner du Temps & Automatiser",
+      description: "Supprimez les tâches répétitives, simplifiez le quotidien et connectez les outils que vous utilisez déjà. Nous identifions ce qui mérite d'être automatisé et le construisons pour vous.",
       link: "/fr/automation-ia",
-      cta: "Explorer l'Automatisation"
-    },
-    {
-      icon: <Bot className="w-6 h-6" />,
-      title: "Agents IA & Systèmes Agentiques",
-      description: "Agents IA sur mesure construits sur Claude, GPT et des frameworks agentiques — recherche, prospection, contenu et workflows business multi-étapes.",
-      link: "/fr/agents-ia-entreprise",
-      cta: "Explorer les Agents IA"
-    },
-    {
-      icon: <Megaphone className="w-6 h-6" />,
-      title: "Systèmes Marketing IA",
-      description: "Moteurs de contenu IA, automatisation SEO, workflows réseaux sociaux et systèmes de campagnes qui scalent la production sans scaler les effectifs.",
-      link: "/fr/automation-marketing-ia",
-      cta: "Explorer le Marketing IA"
+      cta: "Voir les Solutions d'Automatisation"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Ventes IA & RevOps",
-      description: "Architecture outbound IA, systèmes pipeline, workflows CRM et revenue operations pour une génération constante de rendez-vous qualifiés.",
-      link: "/fr/automation-commerciale-ia",
-      cta: "Explorer les Ventes IA"
+      title: "Augmenter les Revenus & la Conversion",
+      description: "Utilisez l'IA et des systèmes de croissance structurés pour améliorer la prospection, le suivi, la qualification, la conversion et la performance commerciale.",
+      link: "/fr/vente",
+      cta: "Explorer les Systèmes de Revenus"
     },
     {
-      icon: <GraduationCap className="w-6 h-6" />,
-      title: "Prompt Engineering & Formation IA",
-      description: "Formation pratique pour les équipes : conception de prompts, orchestration de workflows IA, Claude Code et adoption concrète de l'IA au quotidien.",
-      link: "/fr/conseil-prompt-engineering",
-      cta: "Explorer la Formation"
+      icon: <Target className="w-6 h-6" />,
+      title: "Optimiser & Faire Grandir l'Entreprise",
+      description: "Améliorez les processus, les marges, la prise de décision et la croissance sans ajouter de complexité inutile ni augmenter les effectifs proportionnellement.",
+      link: "/fr/conseil",
+      cta: "Explorer le Conseil Stratégique"
     }
   ];
 
@@ -131,8 +110,8 @@ const HomeFR = () => {
   return (
     <>
       <Helmet>
-        <title>Systèmes de Croissance IA pour FinTech, PropTech & B2B | NLG Consulting</title>
-        <meta name="description" content="Conseil IA, workflows agentiques, RevOps, stratégie GTM et infrastructure outbound pour les entreprises FinTech, PropTech, SaaS & B2B. Rendez-vous qualifiés et revenus mesurables." />
+        <title>IA & Automatisation pour PME, Indépendants & Entreprises en Croissance | NLG</title>
+        <meta name="description" content="Utilisez l'IA et l'automatisation pour gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance. NLG identifie les opportunités et met les systèmes en place pour vous." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -140,14 +119,14 @@ const HomeFR = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr" />
-        <meta property="og:title" content="Systèmes de Croissance IA pour FinTech, PropTech & B2B | NLG Consulting" />
-        <meta property="og:description" content="Conseil IA, workflows agentiques, RevOps et infrastructure outbound pour les entreprises B2B." />
+        <meta property="og:title" content="IA & Automatisation qui Créent Plus de Valeur pour Votre Entreprise | NLG" />
+        <meta property="og:description" content="Pas besoin de devenir expert en IA. Nous identifions où l'IA et l'automatisation peuvent faire gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance — puis nous les mettons en place." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Systèmes de Croissance IA pour FinTech, PropTech & B2B | NLG Consulting" />
-        <meta name="twitter:description" content="Conseil IA, workflows agentiques, RevOps et infrastructure outbound pour les entreprises B2B." />
+        <meta name="twitter:title" content="IA & Automatisation qui Créent de la Valeur | NLG Consulting" />
+        <meta name="twitter:description" content="Gagnez du temps, réduisez les coûts, augmentez les revenus et améliorez la performance avec une IA mise en place pour vous." />
         <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -160,24 +139,27 @@ const HomeFR = () => {
           <div className="container mx-auto max-w-5xl">
             <div className="text-center space-y-8">
               <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase">
-                Conseil IA · RevOps · Systèmes de Croissance
+                IA & Automatisation · Croissance · Performance
               </Badge>
               <h1 className="text-foreground leading-[1.1] max-w-4xl mx-auto">
-                Systèmes de Croissance IA pour{" "}
-                <span className="text-gradient">FinTech, PropTech & B2B</span>
+                Faites Travailler l'IA pour Votre Entreprise —{" "}
+                <span className="text-gradient">Sans Devenir Expert en IA</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Nous aidons les fondateurs et PME à déployer du conseil IA, des workflows agentiques, une structure GTM, du RevOps, des systèmes outbound et des actifs de conversion qui transforment la stratégie en rendez-vous qualifiés et revenus mesurables.
+                Expliquez-nous comment fonctionne votre entreprise et ce que vous voulez améliorer. Nous identifions où l'IA, l'automatisation et les systèmes de croissance peuvent faire gagner du temps, réduire les coûts, augmenter les revenus ou améliorer la performance — puis nous les mettons en place pour vous.
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+                Pour PME, indépendants, cabinets et entreprises en croissance — avec une expertise spécialisée en FinTech, PropTech, SaaS et B2B.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <Button asChild size="lg" className="text-base px-8">
                   <Link to="/fr/rendez-vous">
-                    Réserver un appel stratégique <ArrowRight className="ml-2 w-4 h-4" />
+                    Dites-nous ce que vous voulez améliorer <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="text-base px-8">
-                  <Link to="/fr/services">
-                    Explorer nos services
+                  <Link to="/fr/automation-ia">
+                    Voir ce que nous pouvons automatiser
                   </Link>
                 </Button>
               </div>
@@ -189,10 +171,10 @@ const HomeFR = () => {
         <section className="section-padding bg-muted/30">
           <div className="container-wide">
             <div className="text-center mb-14">
-              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Ce que nous construisons</p>
-              <h2 className="mb-4">Systèmes IA, Infrastructure de Revenus & Opérations de Croissance</h2>
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Commencez par le Résultat Business</p>
+              <h2 className="mb-4">Qu'Avez-Vous Envie d'Améliorer ?</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Du conseil IA à l'automatisation de workflows en passant par les systèmes agentiques et les revenue operations — nous déployons l'IA dans des processus business réels qui génèrent des résultats commerciaux.
+                Vous n'avez pas besoin de choisir un outil IA ni de comprendre la stack technique. Commencez par le résultat que vous voulez obtenir — nous déterminons où la technologie crée le plus de valeur.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -219,15 +201,18 @@ const HomeFR = () => {
         {/* Why NLG */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-6">Exécution d'opérateur, pas de la théorie</h2>
+            <h2 className="mb-6">Vous N'Avez Pas Besoin de Comprendre l'IA pour en Profiter</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl mx-auto">
+              Quand vous avez besoin de vous déplacer, vous achetez une voiture — vous ne passez pas des semaines à apprendre à construire le moteur. Avec l'IA et l'automatisation, c'est pareil.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto">
-              La plupart des entreprises savent qu'elles ont besoin d'IA et de meilleurs systèmes commerciaux — mais ne savent pas par où commencer, quoi prioriser, ni comment exécuter sans perturber les opérations. Nous faisons le pont entre stratégie et performance business mesurable.
+              Ne perdez pas des jours à comparer des outils, regarder des tutoriels et essayer de connecter des systèmes complexes. Concentrez-vous sur votre métier. Nous identifions les opportunités, choisissons la technologie, construisons le système et le rendons utile.
             </p>
             <div className="grid sm:grid-cols-3 gap-8 text-left">
               {[
-                { title: "IA orientée business", desc: "Chaque engagement commence par vos objectifs commerciaux — pas la technologie. Nous déployons workflows IA, agents et automatisation liés au pipeline, aux revenus et à l'efficacité opérationnelle." },
-                { title: "Construit par des opérateurs", desc: "Nous avons construit et scalé des entreprises en PropTech, FinTech, SaaS et Média. C'est de l'expérience opérationnelle concrète appliquée à vos défis de croissance — pas du conseil académique." },
-                { title: "De la stratégie à l'exécution", desc: "Du conseil IA à l'infrastructure outbound, de l'architecture CRM aux sites de conversion — nous gérons le cycle complet. Externalisez vos systèmes de croissance sans monter une équipe en partant de zéro." }
+                { title: "Valeur Business d'Abord", desc: "Nous partons du temps, des coûts, du chiffre d'affaires, des marges et de la performance — pas d'un outil IA à la mode. La technologie n'est retenue que si elle crée une vraie valeur." },
+                { title: "Pensé pour les Non-Techniciens", desc: "Vous nous expliquez votre activité. Nous traduisons cela en automatisations et systèmes IA concrets sans vous obliger à maîtriser la complexité technique." },
+                { title: "De l'Opportunité à l'Implémentation", desc: "Nous ne nous arrêtons pas aux recommandations. Nous concevons, construisons, connectons et lançons les systèmes — puis nous mesurons ce qu'ils améliorent." }
               ].map((item, i) => (
                 <div key={i} className="space-y-3">
                   <div className="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
@@ -241,21 +226,25 @@ const HomeFR = () => {
           </div>
         </section>
 
-        {/* Revenue Systems CTA */}
+        {/* Automation Sprint CTA */}
         <section className="py-16 px-4 bg-primary text-primary-foreground">
           <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Votre équipe externe IA & opérations de croissance</h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              Pas d'équipe IA en interne ? Pas de RevOps structuré ? Nous opérons comme votre département externe de systèmes de croissance — déploiement de workflows IA, construction d'infrastructure outbound et gestion des revenue operations.
+            <p className="text-sm uppercase tracking-wide opacity-80 mb-3">Une Première Étape Simple</p>
+            <h2 className="text-primary-foreground mb-4">Commencez par un Workflow Réel — 1 250 € HT</h2>
+            <p className="text-lg opacity-90 mb-4 max-w-2xl mx-auto">
+              Notre AI Automation Sprint couvre un workflow précisément défini. Nous cartographions le processus, choisissons les bons outils, construisons une première version fonctionnelle lorsque les accès le permettent et documentons le passage en production.
+            </p>
+            <p className="text-sm opacity-80 mb-8 max-w-2xl mx-auto">
+              Aucun engagement long. Pas besoin de devenir spécialiste de l'IA. Commencez petit, mesurez la valeur, puis étendez uniquement si cela a du sens.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/fr/implementation-ia-externalisee">
-                  Explorer l'IA externalisée <ArrowRight className="ml-2 w-4 h-4" />
+                <Link to="/fr/automation-ia">
+                  Découvrir l'Automation Sprint <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline-light" className="text-base px-8">
-                <Link to="/fr/rendez-vous">Réserver un appel</Link>
+                <Link to="/fr/rendez-vous">Parler de Votre Workflow</Link>
               </Button>
             </div>
           </div>
@@ -372,9 +361,9 @@ const HomeFR = () => {
         {/* Final CTA */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-4">Construisez votre système de croissance</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              Réservez un appel stratégique pour discuter de votre adoption IA, architecture outbound, revenue operations ou défis de performance commerciale.
+            <h2 className="mb-4">Où l'IA Peut-Elle Créer Plus de Valeur dans Votre Entreprise ?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Vous n'avez pas besoin d'avoir un problème pour profiter de l'IA. Nous pouvons identifier des opportunités pour gagner du temps, améliorer les marges, générer plus de revenus, renforcer l'expérience client ou simplement mieux fonctionner.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-base px-8">
