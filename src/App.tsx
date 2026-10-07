@@ -5,8 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CookieConsent } from "./components/CookieConsent";
-import GlobalVoiceGuide from "./components/GlobalVoiceGuide";
-import { LanguageRedirectHandler } from "./components/LanguageRedirectHandler";
+const GlobalVoiceGuide = lazy(() => import("./components/GlobalVoiceGuide"));
+const LanguageRedirectHandler = lazy(() => import("./components/LanguageRedirectHandler").then((m) => ({ default: m.LanguageRedirectHandler })));
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
@@ -145,9 +145,9 @@ const App = () => (
     <Sonner />
     <BrowserRouter>
       <CookieConsent />
-      <GlobalVoiceGuide />
+      <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
       <ScrollToTop />
-      <LanguageRedirectHandler />
+      <Suspense fallback={null}><LanguageRedirectHandler /></Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
