@@ -43,7 +43,7 @@ const AutomationIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Agence Automatisation IA pour PME & B2B | NLG Consulting</title>
+        <title>Agence Automatisation IA pour PME & B2B | NLG</title>
         <meta name="description" content="Automatisation IA clé en main pour PME et équipes B2B : CRM, ventes, marketing, reporting et opérations, avec des workflows construits autour de vos outils existants." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
