@@ -19,7 +19,7 @@ const FinTechLeadGeneration = () => {
       { "@type": "FAQPage", "mainEntity": [
         { "@type": "Question", "name": "How do you generate leads for FinTech companies?", "acceptedAnswer": { "@type": "Answer", "text": "We use targeted outbound campaigns combining LinkedIn, email, and cold calling to reach CFOs, treasury managers, and financial operations leaders at target companies." } },
         { "@type": "Question", "name": "What FinTech segments do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "Payments, lending, treasury, compliance/RegTech, insurance, and wealth management. Our messaging is tailored to each segment's specific pain points." } },
-        { "@type": "Question", "name": "How many qualified meetings can you deliver?", "acceptedAnswer": { "@type": "Answer", "text": "FinTech clients typically receive 10-25 qualified meetings per month with financial decision-makers." } }
+        { "@type": "Question", "name": "How many qualified meetings can you deliver?", "acceptedAnswer": { "@type": "Answer", "text": "FinTech clients typically receive Qualified pipeline development with financial decision-makers." } }
       ]}
     ]
   };
@@ -28,7 +28,7 @@ const FinTechLeadGeneration = () => {
     <>
       <Helmet>
         <title>FinTech Lead Generation | Reach Financial Decision-Makers | NLG Consulting</title>
-        <meta name="description" content="Lead generation for FinTech companies. Reach CFOs, treasury teams, and financial decision-makers. 10-25 qualified meetings per month. Book a free FinTech audit." />
+        <meta name="description" content="Lead generation for FinTech companies. Reach CFOs, treasury teams and financial decision-makers with structured outreach, qualification and CRM tracking." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fintech-lead-generation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/fintech-lead-generation" />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/fintech-lead-generation" />
@@ -93,7 +93,7 @@ const FinTechLeadGeneration = () => {
           <div className="container mx-auto max-w-3xl text-center">
             <Zap className="w-12 h-12 mx-auto mb-6 opacity-80" />
             <h2 className="text-3xl font-bold mb-4">Ready to Grow Your FinTech Pipeline?</h2>
-            <p className="text-lg opacity-90 mb-8">Book a free FinTech audit and see how we can connect you with financial decision-makers.</p>
+            <p className="text-lg opacity-90 mb-8">Book a FinTech strategy call and see how we can connect you with financial decision-makers.</p>
             <Button asChild size="lg" variant="secondary" className="text-base px-8">
               <Link to="/book">Book a Free Audit <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
