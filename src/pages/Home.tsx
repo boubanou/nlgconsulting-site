@@ -113,7 +113,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AI Automation & Consulting for Small Businesses | NLG Consulting</title>
+        <title>AI Automation & Consulting for Small Business | NLG</title>
         <meta name="description" content="Done-for-you AI automation and consulting for small and growing businesses. Save time, improve operations and grow revenue — or talk to the NLG website and let it guide you." />
         <link rel="canonical" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
@@ -122,11 +122,11 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/" />
-        <meta property="og:title" content="AI Automation & Consulting for Small Businesses | NLG Consulting" />
+        <meta property="og:title" content="AI Automation & Consulting for Small Business | NLG" />
         <meta property="og:description" content="Tell us what your business needs — or talk directly to the website. NLG builds AI automation, workflows and growth systems around real business outcomes." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Automation & Consulting for Small Businesses | NLG Consulting" />
+        <meta name="twitter:title" content="AI Automation & Consulting for Small Business | NLG" />
         <meta name="twitter:description" content="Done-for-you AI automation and consulting — plus an NLG website you can talk to for instant guidance." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
