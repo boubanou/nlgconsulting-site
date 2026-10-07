@@ -19,7 +19,8 @@ import {
   Calendar,
   Phone,
   Globe,
-  Target
+  Target,
+  Mic
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
@@ -112,8 +113,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AI & Automation for Small Businesses, Professionals & Growing Companies | NLG</title>
-        <meta name="description" content="Use AI and automation to save time, reduce costs, increase revenue and improve performance. NLG identifies the opportunities and implements the systems for you." />
+        <title>AI Automation & Consulting for Small Businesses | NLG Consulting</title>
+        <meta name="description" content="Done-for-you AI automation and consulting for small and growing businesses. Save time, improve operations and grow revenue — or talk to the NLG website and let it guide you." />
         <link rel="canonical" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -121,12 +122,12 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/" />
-        <meta property="og:title" content="AI & Automation That Creates More Value for Your Business | NLG Consulting" />
-        <meta property="og:description" content="You do not need to become an AI expert. We identify where AI and automation can save time, reduce costs, increase revenue and improve performance — then build it for you." />
+        <meta property="og:title" content="AI Automation & Consulting for Small Businesses | NLG Consulting" />
+        <meta property="og:description" content="Tell us what your business needs — or talk directly to the website. NLG builds AI automation, workflows and growth systems around real business outcomes." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI & Automation That Creates Business Value | NLG Consulting" />
-        <meta name="twitter:description" content="Save time, reduce costs, increase revenue and improve performance with AI and automation implemented for you." />
+        <meta name="twitter:title" content="AI Automation & Consulting for Small Businesses | NLG Consulting" />
+        <meta name="twitter:description" content="Done-for-you AI automation and consulting — plus an NLG website you can talk to for instant guidance." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -172,6 +173,22 @@ const Home = () => {
                 <BusinessValueEngine lang="en" />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Voice-first differentiator — visible content for people and search engines */}
+        <section className="border-y border-border/70 bg-background px-4 py-12 sm:py-14">
+          <div className="container mx-auto grid max-w-5xl items-center gap-6 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">A Website You Can Talk To</p>
+              <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Don’t search the site. Tell it what you need.</h2>
+              <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Describe your business and what you want to improve using your voice. NLG interprets the request and guides you directly to the most relevant AI consulting, automation, sales or growth page. Prefer not to speak? Type instead.
+              </p>
+            </div>
+            <Button type="button" variant="outline" className="w-full md:w-auto" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
+              <Mic className="mr-2 h-4 w-4" /> Talk to the Website
+            </Button>
           </div>
         </section>
 
