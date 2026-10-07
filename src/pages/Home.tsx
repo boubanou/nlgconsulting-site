@@ -183,7 +183,7 @@ const Home = () => {
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">A Website You Can Talk To</p>
               <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Don’t search the site. Tell it what you need.</h2>
               <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Describe your business and what you want to improve using your voice. NLG interprets the request and guides you directly to the most relevant AI consulting, automation, sales or growth page. Prefer not to speak? Type instead.
+                Describe your business and what you want to improve using your voice. NLG interprets the request and guides you directly to the most relevant AI consulting, automation, sales or growth page. Prefer not to speak? Type instead. <Link to="/insights/voice-ai-website-navigation" className="font-medium text-primary hover:underline">See how the voice-first navigation works</Link>.
               </p>
             </div>
             <Button type="button" variant="outline" className="w-full md:w-auto" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
