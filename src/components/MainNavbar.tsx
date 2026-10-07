@@ -19,19 +19,19 @@ import {
 
 const solutionsData = {
   aiSystems: {
-    title: "AI Systems & Automation",
+    title: "Save Time & Automate",
     links: [
-      { label: "AI Consulting", to: "/ai-consulting" },
+      { label: "Find AI Opportunities", to: "/ai-consulting" },
       { label: "AI Agents & Agentic Systems", to: "/ai-agents-for-business" },
-      { label: "Workflow Automation", to: "/ai-automation" },
+      { label: "Automate Repetitive Work", to: "/ai-automation" },
       { label: "Outsourced AI Operations", to: "/outsourced-ai-implementation" },
       { label: "Prompt Engineering", to: "/prompt-engineering-consulting" },
     ],
   },
   growthRevOps: {
-    title: "Growth Systems & RevOps",
+    title: "Increase Revenue & Growth",
     links: [
-      { label: "Sales & Pipeline", to: "/sales" },
+      { label: "Increase Leads & Sales", to: "/sales" },
       { label: "Outsourced SDR", to: "/outsourced-sdr" },
       { label: "AI Lead Generation", to: "/ai-lead-generation" },
       { label: "GTM Strategy & Execution", to: "/go-to-market-consulting" },
@@ -40,9 +40,9 @@ const solutionsData = {
     ],
   },
   advisory: {
-    title: "Strategic Advisory",
+    title: "Optimise & Scale",
     links: [
-      { label: "Founder Advisory", to: "/advisory" },
+      { label: "Optimise the Business", to: "/advisory" },
       { label: "AI Enablement for Teams", to: "/ai-training-for-teams" },
       { label: "Fractional AI Consultant", to: "/fractional-ai-consultant" },
     ],
