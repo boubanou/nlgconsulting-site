@@ -44,7 +44,7 @@ const AutomationIAFR = () => {
     <>
       <Helmet>
         <title>Automatisation IA Entreprise | Workflows & Processus | NLG</title>
-        <meta name="description" content="Automatisation IA pour entreprises : cartographie des processus, workflows automatisés, intégrations CRM et déploiement IA pour ventes, marketing et opérations." />
+        <meta name="description" content="Automatisation IA pour PME, indépendants et équipes en croissance. Gagnez du temps, réduisez les coûts et améliorez la performance avec des workflows mis en place pour vous. Sprint dès 1 250 € HT." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
@@ -64,7 +64,7 @@ const AutomationIAFR = () => {
               Automatisation IA{" "}<span className="text-gradient">des Processus & Workflows d'Entreprise</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Nous cartographions les tâches répétitives, identifions les automatisations à fort impact et déployons des workflows IA connectés à vos outils existants — CRM, marketing, contenu et opérations.
+              Vous n'avez pas besoin de devenir expert en automatisation. Expliquez-nous comment fonctionne votre activité et ce que vous voulez améliorer. Nous identifions où l'automatisation crée le plus de valeur et construisons les workflows pour vous.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/fr/rendez-vous">Évaluer votre potentiel d'automatisation <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
@@ -75,9 +75,9 @@ const AutomationIAFR = () => {
 
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="mb-6">Le coût des opérations manuelles</h2>
+            <h2 className="mb-6">L'Automatisation ne Sert Pas Seulement à Corriger un Problème</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>Pour la plupart des entreprises FinTech, opérateurs PropTech, équipes SaaS et sociétés de services B2B, le goulot d'étranglement opérationnel n'est pas la stratégie — c'est la bande passante d'exécution. Les équipes passent des heures sur la saisie de données, la recherche de prospects, la rédaction de contenu, la génération de rapports, les mises à jour CRM et les séquences de relance.</p>
+              <p>Votre entreprise n'a pas besoin d'avoir un problème pour que l'automatisation ait du sens. Un processus peut déjà fonctionner et néanmoins devenir plus rapide, moins coûteux, plus régulier ou plus rentable. L'objectif n'est pas seulement de supprimer une difficulté — c'est de créer du levier.</p><p>Pour une PME ou une petite équipe, cela peut signifier économiser des heures de travail manuel, répondre plus vite aux prospects, améliorer les relances, augmenter la capacité sans recruter immédiatement ou offrir une meilleure expérience client.</p>
               <p>L'automatisation IA des workflows change cette équation. En combinant des modèles IA avec des plateformes d'orchestration comme Make et n8n, connectées à vos outils existants, nous construisons des systèmes qui gèrent ces processus en continu. Notre guide sur le <Link to="/fr/ressources/roi-automatisation-ia" className="text-primary hover:underline font-medium">ROI de l'automatisation IA</Link> explique comment mesurer le processus avant et après déploiement.</p>
               <p>La différence entre les entreprises qui scalent efficacement et les autres réside souvent dans la qualité de leur automatisation opérationnelle. Pas simplement avoir des outils, mais avoir des <Link to="/fr/conseil-ia" className="text-primary hover:underline">systèmes bien conçus</Link> qui connectent données, logique et IA dans des workflows qui tournent sans supervision constante.</p>
             </div>
@@ -132,9 +132,11 @@ const AutomationIAFR = () => {
 
         <section className="py-16 px-4 bg-primary text-primary-foreground">
           <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Construisez votre infrastructure d'automatisation</h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Réservez une évaluation pour identifier les workflows avec le plus fort potentiel d'automatisation dans votre entreprise.</p>
-            <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Évaluer votre potentiel <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <p className="text-sm uppercase tracking-wide opacity-80 mb-3">AI Automation Sprint</p>
+            <h2 className="text-primary-foreground mb-4">Commencez par un Workflow Réel — 1 250 € HT</h2>
+            <p className="text-lg opacity-90 mb-3 max-w-2xl mx-auto">Un workflow clairement défini. Nous le cartographions, choisissons les bons outils, construisons une première version fonctionnelle lorsque les accès le permettent et documentons la mise en production.</p>
+            <p className="text-sm opacity-80 mb-8 max-w-2xl mx-auto">Aucun engagement récurrent. Commencez petit, mesurez la valeur, puis étendez seulement si cela a du sens économiquement.</p>
+            <Button asChild size="lg" variant="secondary"><Link to="/fr/rendez-vous">Parler de Votre Workflow <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>
         </section>
 
