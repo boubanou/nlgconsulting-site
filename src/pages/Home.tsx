@@ -40,7 +40,7 @@ const Home = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "AI-powered growth systems, revenue operations, and strategic advisory for FinTech, PropTech, SaaS, and B2B companies. AI consulting, agentic workflows, GTM structure, RevOps, and outbound infrastructure.",
+        "description": "AI, automation and growth systems for small businesses, professionals and growing companies. NLG identifies where technology can save time, reduce costs, increase revenue and improve performance — then implements it for you.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
@@ -50,7 +50,7 @@ const Home = () => {
         "foundingDate": "2020",
         "areaServed": ["Europe", "North America", "Middle East"],
         "sameAs": ["https://www.linkedin.com/company/nlg-consulting/"],
-        "knowsAbout": ["AI Consulting", "AI Automation", "AI Agents", "Agentic AI", "Revenue Operations", "B2B Lead Generation", "GTM Strategy", "Workflow Automation", "Outsourced SDR", "Claude Code Automation"]
+        "knowsAbout": ["AI Consulting", "AI Automation", "Workflow Automation", "AI Agents", "Small Business AI", "Business Process Automation", "Revenue Growth", "Sales Automation", "Revenue Operations", "B2B Lead Generation", "GTM Strategy", "Operational Efficiency"]
       },
       {
         "@type": "BreadcrumbList",
@@ -63,46 +63,25 @@ const Home = () => {
 
   const clusters = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI Consulting",
-      description: "Practical AI strategy for business operations, sales, content, and growth — tied to measurable outcomes, not slide decks.",
-      link: "/ai-consulting",
-      cta: "Explore AI Consulting"
-    },
-    {
       icon: <Workflow className="w-6 h-6" />,
-      title: "AI Workflow Automation",
-      description: "Design and deploy AI-powered workflows across marketing, sales, operations, and content production using Claude, GPT, Make, and custom pipelines.",
+      title: "Save Time & Automate Work",
+      description: "Remove repetitive work, simplify day-to-day operations, and connect the tools you already use. We identify what is worth automating and build it for you.",
       link: "/ai-automation",
-      cta: "Explore Automation"
-    },
-    {
-      icon: <Bot className="w-6 h-6" />,
-      title: "AI Agents & Agentic Systems",
-      description: "Custom AI agents built on Claude, GPT, and agentic frameworks — handling research, prospecting, content, and multi-step business workflows.",
-      link: "/ai-agents-for-business",
-      cta: "Explore AI Agents"
-    },
-    {
-      icon: <Megaphone className="w-6 h-6" />,
-      title: "AI Marketing Systems",
-      description: "AI-powered content engines, SEO automation, social media workflows, and campaign systems that scale output without scaling headcount.",
-      link: "/ai-marketing-automation",
-      cta: "Explore AI Marketing"
+      cta: "See Automation Solutions"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "AI Sales & RevOps",
-      description: "AI-enhanced outbound architecture, pipeline systems, CRM workflows, and revenue operations for consistent qualified meeting generation.",
-      link: "/ai-sales-automation",
-      cta: "Explore AI Sales"
+      title: "Increase Revenue & Conversion",
+      description: "Use AI and structured growth systems to improve prospecting, follow-up, lead qualification, conversion, and commercial performance.",
+      link: "/sales",
+      cta: "Explore Revenue Systems"
     },
     {
-      icon: <GraduationCap className="w-6 h-6" />,
-      title: "Prompt Engineering & AI Training",
-      description: "Hands-on training for teams on prompt design, AI workflow orchestration, Claude Code, and practical AI adoption for daily operations.",
-      link: "/prompt-engineering-consulting",
-      cta: "Explore Training"
+      icon: <Target className="w-6 h-6" />,
+      title: "Optimise & Scale the Business",
+      description: "Improve processes, margins, decision-making and growth without adding unnecessary complexity or proportional headcount.",
+      link: "/advisory",
+      cta: "Explore Strategic Advisory"
     }
   ];
 
@@ -132,8 +111,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting</title>
-        <meta name="description" content="AI consulting, agentic workflows, RevOps, GTM strategy, and outbound infrastructure for FinTech, PropTech, SaaS & B2B companies. Qualified meetings and measurable revenue. Book a strategy call." />
+        <title>AI & Automation for Small Businesses, Professionals & Growing Companies | NLG</title>
+        <meta name="description" content="Use AI and automation to save time, reduce costs, increase revenue and improve performance. NLG identifies the opportunities and implements the systems for you." />
         <link rel="canonical" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -141,12 +120,12 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/" />
-        <meta property="og:title" content="AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting" />
-        <meta property="og:description" content="AI consulting, agentic workflows, RevOps, GTM strategy, and outbound infrastructure. Qualified meetings and measurable revenue." />
+        <meta property="og:title" content="AI & Automation That Creates More Value for Your Business | NLG Consulting" />
+        <meta property="og:description" content="You do not need to become an AI expert. We identify where AI and automation can save time, reduce costs, increase revenue and improve performance — then build it for you." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI-Powered Growth Systems for FinTech, PropTech & B2B | NLG Consulting" />
-        <meta name="twitter:description" content="AI consulting, agentic workflows, RevOps, and outbound infrastructure for B2B companies." />
+        <meta name="twitter:title" content="AI & Automation That Creates Business Value | NLG Consulting" />
+        <meta name="twitter:description" content="Save time, reduce costs, increase revenue and improve performance with AI and automation implemented for you." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -158,24 +137,27 @@ const Home = () => {
           <div className="container mx-auto max-w-5xl">
             <div className="text-center space-y-8">
               <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase">
-                AI Consulting · RevOps · Growth Systems
+                AI & Automation · Growth · Business Performance
               </Badge>
               <h1 className="text-foreground leading-[1.1] max-w-4xl mx-auto">
-                AI-Powered Growth Systems for{" "}
-                <span className="text-gradient">FinTech, PropTech & B2B Companies</span>
+                Make AI Work for Your Business —{" "}
+                <span className="text-gradient">Without Becoming an AI Expert</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                We help founders and SMEs deploy AI consulting, agentic workflows, GTM structure, RevOps, outbound systems, and conversion assets that turn strategy into qualified meetings and measurable revenue.
+                Tell us how your business works and where you want to go. We identify where AI, automation and modern growth systems can save time, reduce costs, increase revenue or improve performance — then we implement it for you.
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+                Built for small businesses, independent professionals and growing companies — with specialist expertise in FinTech, PropTech, SaaS and B2B.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <Button asChild size="lg" className="text-base px-8">
                   <Link to="/book">
-                    Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
+                    Tell Us What You Want to Improve <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="text-base px-8">
-                  <Link to="/services">
-                    Explore Our Services
+                  <Link to="/ai-automation">
+                    See What We Can Automate
                   </Link>
                 </Button>
               </div>
@@ -187,10 +169,10 @@ const Home = () => {
         <section className="section-padding bg-muted/30">
           <div className="container-wide">
             <div className="text-center mb-14">
-              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">What We Build</p>
-              <h2 className="mb-4">AI Systems, Revenue Infrastructure & Growth Operations</h2>
+              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">Start With the Business Outcome</p>
+              <h2 className="mb-4">What Do You Want to Improve?</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                From AI consulting and workflow automation to agentic systems and revenue operations — we deploy AI into real business processes that generate commercial results.
+                You do not need to choose an AI tool or understand the technical stack. Start with the outcome you want — we determine where technology creates the most value.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -217,15 +199,18 @@ const Home = () => {
         {/* Why NLG — Operator Positioning */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-6">Operator-Led Execution, Not Theory</h2>
+            <h2 className="mb-6">You Shouldn't Have to Understand AI to Benefit From It</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl mx-auto">
+              When you need to get somewhere, you buy a car — you do not spend weeks learning how to build the engine. AI and automation should work the same way.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto">
-              Most companies know they need AI and better commercial systems — but struggle with where to start, what to prioritise, and how to execute without disrupting operations. We bridge the gap between strategy and measurable business performance.
+              Do not lose days researching tools, watching tutorials and trying to connect complex systems yourself. You focus on your business. We identify the opportunities, choose the right technology, build the system and make it useful.
             </p>
             <div className="grid sm:grid-cols-3 gap-8 text-left">
               {[
-                { title: "Business-First AI", desc: "Every engagement starts with your commercial objectives — not the technology. We deploy AI workflows, agents, and automation tied to pipeline, revenue, and operational efficiency." },
-                { title: "Built by Operators", desc: "We've built and scaled companies across PropTech, FinTech, SaaS, and Media. This is hands-on operating experience applied to your growth challenges — not academic advisory." },
-                { title: "Strategy Through Execution", desc: "From AI consulting to outbound infrastructure, CRM architecture to conversion websites — we handle the full lifecycle. Outsource your growth systems without building a team from scratch." }
+                { title: "Business Value First", desc: "We start with time, cost, revenue, margin and performance — not with a fashionable AI tool. Technology is selected only when it creates measurable value." },
+                { title: "Built for Non-Technical Teams", desc: "You explain how your business works. We translate that into practical automation and AI systems without requiring you to learn the technical complexity." },
+                { title: "From Opportunity to Implementation", desc: "We do not stop at recommendations. We design, build, connect and launch the systems — then help you measure what they improve." }
               ].map((item, i) => (
                 <div key={i} className="space-y-3">
                   <div className="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
@@ -239,21 +224,25 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Revenue Systems CTA */}
+        {/* Automation Sprint CTA */}
         <section className="py-16 px-4 bg-primary text-primary-foreground">
           <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Your External AI & Growth Operations Team</h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-              No in-house AI team? No structured RevOps? We operate as your external growth systems department — deploying AI workflows, building outbound infrastructure, and running revenue operations so your team stays focused on closing.
+            <p className="text-sm uppercase tracking-wide opacity-80 mb-3">A Simple First Step</p>
+            <h2 className="text-primary-foreground mb-4">Start With One Real Workflow — €1,250 Excl. VAT</h2>
+            <p className="text-lg opacity-90 mb-4 max-w-2xl mx-auto">
+              Our AI Automation Sprint is designed for one clearly defined workflow. We map the process, choose the right tools, build a working first version where access allows, and document the path to production.
+            </p>
+            <p className="text-sm opacity-80 mb-8 max-w-2xl mx-auto">
+              No long commitment. No need to become an AI specialist first. Start small, measure the value, then expand only if it makes sense.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-base px-8">
-                <Link to="/outsourced-ai-implementation">
-                  Explore Outsourced AI <ArrowRight className="ml-2 w-4 h-4" />
+                <Link to="/ai-automation">
+                  Explore the Automation Sprint <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline-light" className="text-base px-8">
-                <Link to="/book">Book a Call</Link>
+                <Link to="/book">Discuss Your Workflow</Link>
               </Button>
             </div>
           </div>
@@ -377,9 +366,9 @@ const Home = () => {
         {/* Final CTA */}
         <section className="section-padding">
           <div className="container-tight text-center">
-            <h2 className="mb-4">Build Your Growth System</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              Book a strategy call to discuss your AI adoption, outbound architecture, revenue operations, or commercial performance challenges.
+            <h2 className="mb-4">Where Could AI Create More Value in Your Business?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              You do not need a broken process to benefit from AI. We can help you find opportunities to save time, improve margins, generate more revenue, strengthen customer experience or simply operate better.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-base px-8">

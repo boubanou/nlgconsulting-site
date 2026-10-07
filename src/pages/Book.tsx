@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
 import CalendarEmbed from "@/components/CalendarEmbed";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const Book = () => {
   const structuredData = {
@@ -12,7 +12,7 @@ const Book = () => {
       {
         "@type": "WebPage",
         "name": "Book a Strategy Call | NLG Consulting",
-        "description": "Schedule a 15-minute strategy call to discuss your growth systems, AI automation, revenue operations and commercial performance.",
+        "description": "Schedule a 15-minute call to identify where AI, automation and growth systems can save time, reduce costs, increase revenue or improve performance.",
         "url": "https://www.nlgconsulting.co/book",
         "potentialAction": { "@type": "ReserveAction", "target": "https://www.nlgconsulting.co/book", "result": { "@type": "Reservation", "name": "Strategy Call" } }
       },
@@ -30,7 +30,7 @@ const Book = () => {
     <>
       <Helmet>
         <title>Book a Strategy Call | NLG Consulting</title>
-        <meta name="description" content="Schedule a 15-minute strategy call to discuss AI-powered growth systems, revenue operations and commercial performance for your business." />
+        <meta name="description" content="Schedule a 15-minute call to identify where AI, automation and growth systems can save time, reduce costs, increase revenue or improve performance." />
         <link rel="canonical" href="https://www.nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/book" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/rendez-vous" />
@@ -39,7 +39,7 @@ const Book = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/book" />
         <meta property="og:title" content="Book a Strategy Call | NLG Consulting" />
-        <meta property="og:description" content="15-minute strategy call on growth systems, AI automation and revenue operations." />
+        <meta property="og:description" content="A practical 15-minute conversation about where AI and automation can create more value in your business." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -51,7 +51,7 @@ const Book = () => {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Book a Strategy Call</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                A focused 15-minute conversation about your growth systems, commercial structure and AI readiness — with an operator who has scaled revenue across FinTech, PropTech and B2B.
+                A focused 15-minute conversation about how your business works, what you want to improve, and where AI, automation or growth systems can create measurable value.
               </p>
             </div>
 
@@ -61,21 +61,21 @@ const Book = () => {
                   <CheckCircle className="w-5 h-5 text-primary" /> This call is relevant if…
                 </h2>
                 <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You are a founder, CEO or growth leader at a B2B, FinTech or PropTech company</li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You need to structure your outbound, pipeline or revenue operations</li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You want to deploy AI workflows, agents or automation into real business operations</li>
-                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You are looking for execution support, not just strategic advice</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You run a small business, professional practice, agency, SaaS, FinTech, PropTech or growing B2B company</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You want to save time, reduce manual work or improve margins</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You want to increase leads, conversion, revenue or customer value</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> You know AI could help but do not want to spend days figuring out tools and integrations yourself</li>
                 </ul>
               </div>
               <div className="p-6 rounded-2xl border bg-card">
                 <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
-                  <XCircle className="w-5 h-5 text-destructive" /> This is not the right fit if…
+                  <CheckCircle className="w-5 h-5 text-primary" /> What we can explore together
                 </h2>
                 <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> You are looking for a freelance developer or designer</li>
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> You do not yet have a product or paying customers</li>
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> You are seeking free consulting or spec work</li>
-                  <li className="flex gap-2"><XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" /> You need an agency for subcontracting</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Which tasks or workflows are worth automating first</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Where AI can increase capacity, speed or quality even if nothing is currently “broken”</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> How technology could improve revenue, conversion, margins or customer experience</li>
+                  <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /> Whether a €1,250 Automation Sprint or a broader engagement is the right next step</li>
                 </ul>
               </div>
             </div>

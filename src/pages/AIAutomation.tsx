@@ -37,7 +37,7 @@ const AIAutomation = () => {
     <>
       <Helmet>
         <title>AI Automation Agency | Workflow & Process Automation | NLG</title>
-        <meta name="description" content="AI automation for B2B operations: map repetitive workflows, design integrations and deploy AI-powered processes across sales, marketing, content and operations." />
+        <meta name="description" content="AI automation for small businesses and growing teams. Save time, reduce costs and improve performance with practical workflows implemented for you. Automation Sprint from €1,250 excl. VAT." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
@@ -58,7 +58,7 @@ const AIAutomation = () => {
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">AI Automation</Badge>
             <h1 className="mb-6">AI Automation for{" "}<span className="text-gradient">Business Workflows & Operations</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              We map repetitive work, identify where automation creates real leverage, and deploy AI-powered workflows across sales, marketing, content and operations — integrated with the tools your team already uses.
+              You do not need to become an automation expert. Tell us how your business works and what you want to improve. We identify where automation creates real value and build the workflows for you — across sales, marketing, customer experience, administration and operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Book an Automation Assessment <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
@@ -69,9 +69,9 @@ const AIAutomation = () => {
 
         <section className="section-padding bg-muted/30">
           <div className="container-tight">
-            <h2 className="mb-6">The Cost of Manual Operations</h2>
+            <h2 className="mb-6">Automation Is Not Only About Fixing Problems</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>For most FinTech companies, PropTech operators, SaaS teams, and B2B service firms, the operational bottleneck isn't strategy — it's execution bandwidth. Teams spend hours on data entry, lead research, content drafting, report generation, CRM updates, and follow-up sequences. These tasks are essential but don't scale with the business.</p>
+              <p>Your business does not need to be broken before automation makes sense. A process can already work and still be made faster, cheaper, more consistent or more profitable. The goal is not simply to remove pain — it is to create leverage.</p><p>For small businesses and growing teams, that can mean saving hours of manual work, responding to leads faster, improving follow-up, increasing capacity without hiring immediately, or giving customers a better experience.</p>
               <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously. Our guide to <Link to="/insights/ai-automation-roi" className="text-primary hover:underline font-medium">measuring AI automation ROI</Link> shows how to baseline a workflow before deployment and evaluate the operating result afterward.</p>
               <p>The difference between companies that scale efficiently and those that don't is often the quality of their operational automation. Not just having tools, but having <Link to="/ai-consulting" className="text-primary hover:underline">well-designed systems</Link> that connect data, logic, and AI into workflows that run without constant oversight.</p>
             </div>
@@ -126,9 +126,11 @@ const AIAutomation = () => {
 
         <section className="py-16 px-4 bg-primary text-primary-foreground">
           <div className="container-tight text-center">
-            <h2 className="text-primary-foreground mb-4">Build Your Automation Infrastructure</h2>
-            <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Book an assessment to identify the workflows with the highest automation potential in your business.</p>
-            <Button asChild size="lg" variant="secondary"><Link to="/book">Book an Assessment <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <p className="text-sm uppercase tracking-wide opacity-80 mb-3">AI Automation Sprint</p>
+            <h2 className="text-primary-foreground mb-4">Start With One Real Workflow — €1,250 Excl. VAT</h2>
+            <p className="text-lg opacity-90 mb-3 max-w-2xl mx-auto">One clearly defined workflow. We map it, choose the right tools, build a working first version where access allows, and document the path to production.</p>
+            <p className="text-sm opacity-80 mb-8 max-w-2xl mx-auto">No ongoing commitment. Start small, measure the value, then expand only when it makes business sense.</p>
+            <Button asChild size="lg" variant="secondary"><Link to="/book">Discuss Your Workflow <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
           </div>
         </section>
 
