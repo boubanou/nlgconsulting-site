@@ -192,6 +192,38 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Interactive AI Guide — visible, crawlable product proof */}
+        <section className="px-4 py-14 sm:py-16">
+          <div className="container mx-auto max-w-5xl">
+            <div className="grid gap-6 rounded-3xl border border-primary/10 bg-muted/25 p-6 sm:p-8 md:grid-cols-[1.3fr_0.7fr] md:items-center">
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Interactive AI Experience</p>
+                <h2 className="mb-3 text-2xl font-semibold sm:text-3xl">Don’t just browse the site. Talk to it.</h2>
+                <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Tell the NLG website what your business does and what you want to improve. Our voice-first guide interprets your request and takes you directly to the most relevant AI automation, consulting, sales or growth resource. Prefer not to speak? Type instead.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground sm:text-sm">
+                  <span className="inline-flex items-center gap-1.5"><Mic className="h-3.5 w-3.5 text-primary" /> Voice-first navigation</span>
+                  <span className="inline-flex items-center gap-1.5"><MessageSquareText className="h-3.5 w-3.5 text-primary" /> Text fallback</span>
+                  <span className="inline-flex items-center gap-1.5"><Target className="h-3.5 w-3.5 text-primary" /> Business-focused guidance</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Button
+                  size="lg"
+                  className="w-full"
+                  onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}
+                >
+                  <Mic className="mr-2 h-4 w-4" /> Talk to the Website
+                </Button>
+                <Button asChild variant="outline" className="w-full">
+                  <Link to="/ai-consulting">Explore AI Consulting <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* AI Systems Cluster */}
         <section className="section-padding bg-muted/30">
           <div className="container-wide">
