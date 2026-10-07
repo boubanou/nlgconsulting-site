@@ -11,7 +11,7 @@ const ServicesFR = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Service", "name": "Systèmes de Croissance IA & Revenue Operations", "provider": { "@type": "Organization", "name": "NLG Consulting" }, "url": "https://www.nlgconsulting.co/fr/services" },
+      { "@type": "Service", "name": "Automatisation IA, Conseil IA & Systèmes de Croissance", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" }, "description": "Automatisation IA, conseil IA, systèmes commerciaux et exécution stratégique pour PME, cabinets et entreprises en croissance.", "url": "https://www.nlgconsulting.co/fr/services", "serviceType": "Conseil IA, Automatisation & Croissance" },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.nlgconsulting.co/fr" },
         { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/fr/services" }
