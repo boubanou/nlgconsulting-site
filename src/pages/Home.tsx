@@ -42,7 +42,7 @@ const Home = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "AI, automation and growth systems for small businesses, professionals and growing companies. NLG identifies where technology can save time, reduce costs, increase revenue and improve performance — then implements it for you.",
+        "description": "Done-for-you AI automation and consulting for small and growing businesses. NLG identifies where AI can improve operations, save time and grow revenue, then implements the systems.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
