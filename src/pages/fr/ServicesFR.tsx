@@ -33,8 +33,8 @@ const ServicesFR = () => {
   return (
     <>
       <Helmet>
-        <title>IA, Automatisation & Croissance pour PME et Entreprises en Développement | NLG</title>
-        <meta name="description" content="IA, automatisation, croissance commerciale et conseil stratégique pour PME, indépendants et entreprises en développement. Partez du résultat business, nous gérons la technologie." />
+        <title>Automatisation IA, Conseil IA & Croissance pour PME | NLG</title>
+        <meta name="description" content="Automatisation IA, conseil IA, systèmes commerciaux et exécution stratégique pour PME et entreprises en croissance. Partez de l’objectif business ; NLG gère la technologie." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/services" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/services" />
@@ -68,7 +68,7 @@ const ServicesFR = () => {
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">La Technologie Doit Créer du Levier Business</h2>
             <p>Vous n'avez pas besoin de savoir quel modèle IA, quelle plateforme d'automatisation ou quelle intégration choisir avant de nous parler. Et vous n'avez pas besoin d'avoir un problème majeur. Nous pouvons améliorer une entreprise qui fonctionne déjà en augmentant sa capacité, sa vitesse, sa régularité, ses revenus ou sa rentabilité.</p>
-            <p>NLG Consulting comble ce fossé. Nous combinons <Link to="/fr/conseil-ia" className="text-primary hover:underline font-medium">conseil IA</Link>, <Link to="/fr/conseil" className="text-primary hover:underline font-medium">advisory stratégique</Link>, <Link to="/fr/vente" className="text-primary hover:underline font-medium">infrastructure outbound</Link> et <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">automatisation de workflows</Link> pour créer des systèmes de croissance qui produisent des rendez-vous qualifiés et des résultats commerciaux mesurables.</p>
+            <p>NLG Consulting comble ce fossé. Nous combinons <Link to="/fr/conseil-ia" className="text-primary hover:underline font-medium">conseil IA</Link>, <Link to="/fr/conseil" className="text-primary hover:underline font-medium">advisory stratégique</Link>, <Link to="/fr/vente" className="text-primary hover:underline font-medium">infrastructure outbound</Link> et <Link to="/fr/automation-ia" className="text-primary hover:underline font-medium">automatisation de workflows</Link> pour créer des systèmes de croissance qui produisent des rendez-vous qualifiés et des résultats commerciaux mesurables.</p>
           </div>
         </section>
 
