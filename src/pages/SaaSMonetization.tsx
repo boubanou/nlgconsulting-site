@@ -47,7 +47,7 @@ const SaaSMonetization = () => {
     <>
       <Helmet>
         <title>SaaS Monetization: Fix Your Revenue Model | NLG Consulting</title>
-        <meta name="description" content="Stop leaving revenue on the table. Expert SaaS pricing & monetization consulting. Increase ARPU 30-50%. Free revenue audit." />
+        <meta name="description" content="SaaS pricing and monetization consulting for founders and growth teams. Review packaging, pricing logic, expansion revenue and commercial metrics with an operator-led approach." />
         <link rel="canonical" href="https://www.nlgconsulting.co/saas-monetization" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/saas-monetization" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/monetisation-saas" />
@@ -56,7 +56,7 @@ const SaaSMonetization = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/saas-monetization" />
         <meta property="og:title" content="SaaS Monetization: Fix Your Revenue Model | NLG Consulting" />
-        <meta property="og:description" content="Stop leaving revenue on the table. Increase ARPU 30-50% with expert SaaS pricing & monetization consulting." />
+        <meta property="og:description" content="Stop leaving revenue on the table. Improve monetization efficiency with expert SaaS pricing & monetization consulting." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -74,7 +74,7 @@ const SaaSMonetization = () => {
               Most SaaS companies undercharge by 30-50%. We fix your revenue model — pricing, packaging, and value metrics — so every customer generates maximum lifetime value.
             </p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/book">Get Your Free Revenue Audit <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Get Your Monetization Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -182,10 +182,10 @@ const SaaSMonetization = () => {
             <DollarSign className="w-12 h-12 mx-auto mb-6 opacity-80" />
             <h2 className="text-3xl font-bold mb-4">Stop Leaving Revenue on the Table</h2>
             <p className="text-lg opacity-90 mb-8">
-              Book a free revenue audit. We'll show you exactly where your pricing is costing you money.
+              Book a monetization review. We'll show you exactly where your pricing is costing you money.
             </p>
             <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <Link to="/book">Get Your Free Revenue Audit <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/book">Get Your Monetization Review <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
