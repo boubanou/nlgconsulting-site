@@ -30,6 +30,8 @@ function applyMeta(template: string, meta: SeoRouteMeta): string {
   html = html.replace(/<meta name="description" content="[^"]*"\s*\/?\s*>/, `<meta name="description" content="${escapeAttr(meta.description)}">`);
   html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?\s*>/, `<link rel="canonical" href="${escapeAttr(meta.canonical)}">`);
   html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?\s*>/, `<meta property="og:url" content="${escapeAttr(meta.canonical)}">`);
+  html = html.replace(/<meta property="og:locale" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale" content="${meta.lang === "fr" ? "fr_FR" : "en_US"}">`);
+  html = html.replace(/<meta property="og:locale:alternate" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale:alternate" content="${meta.lang === "fr" ? "en_US" : "fr_FR"}">`);
   html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/?\s*>/, `<meta property="og:title" content="${escapeAttr(meta.title)}">`);
   html = html.replace(/<meta name="twitter:title" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:title" content="${escapeAttr(meta.title)}">`);
   html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?\s*>/, `<meta property="og:description" content="${escapeAttr(meta.description)}">`);
@@ -155,6 +157,8 @@ function applySitemapCanonical(template: string, entry: SitemapEntry): string {
   html = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
   html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?\s*>/, `<link rel="canonical" href="${escapeAttr(entry.canonical)}">`);
   html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?\s*>/, `<meta property="og:url" content="${escapeAttr(entry.canonical)}">`);
+  html = html.replace(/<meta property="og:locale" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale" content="${lang === "fr" ? "fr_FR" : "en_US"}">`);
+  html = html.replace(/<meta property="og:locale:alternate" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale:alternate" content="${lang === "fr" ? "en_US" : "fr_FR"}">`);
   if (entry.alternates["x-default"]) {
     html = html.replace(/<link rel="alternate" hreflang="x-default" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="x-default" href="${escapeAttr(entry.alternates["x-default"])}">`);
   } else {
