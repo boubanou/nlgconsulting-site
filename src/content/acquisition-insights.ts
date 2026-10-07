@@ -324,7 +324,7 @@ export const acquisitionInsights: InsightArticle[] = [
       }
     ],
     takeaway: "Un bon système de relance IA améliore timing, contexte et discipline ; il ne remplace pas le jugement commercial par du volume générique."
-  }
+  },
 
   {
     slug: "ai-automation-for-small-business",
