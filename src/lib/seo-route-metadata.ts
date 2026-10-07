@@ -451,6 +451,346 @@ export const seoRoutes: SeoRouteMeta[] = [
     "canonical": "https://www.nlgconsulting.co/fr/ressources",
     "h1": "Ressources IA, Sales & Growth B2B",
     "alternate": "/insights"
+  },
+  {
+    "path": "/ventures",
+    "lang": "en",
+    "cluster": "core",
+    "title": "Venture Studio & Portfolio | NLG Consulting",
+    "description": "Operator-built platforms across PropTech, FinTech and media. See how NLG builds and operates technology and revenue assets.",
+    "canonical": "https://www.nlgconsulting.co/ventures",
+    "h1": "Operator-Built Platforms & Revenue Assets",
+    "alternate": "/fr/ventures"
+  },
+  {
+    "path": "/fr/ventures",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "Venture Studio & Portefeuille | NLG Consulting",
+    "description": "Plateformes construites et opérées par NLG dans la PropTech, FinTech et les médias. Découvrez notre approche opérateur.",
+    "canonical": "https://www.nlgconsulting.co/fr/ventures",
+    "h1": "Plateformes Construites & Actifs de Revenus",
+    "alternate": "/ventures"
+  },
+  {
+    "path": "/saas-monetization",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "SaaS Pricing & Monetization Consulting | NLG",
+    "description": "SaaS pricing and monetization consulting for founders and growth teams: packaging, pricing logic, expansion revenue and commercial metrics.",
+    "canonical": "https://www.nlgconsulting.co/saas-monetization",
+    "h1": "SaaS Pricing & Monetization Strategy",
+    "alternate": "/fr/monetisation-saas"
+  },
+  {
+    "path": "/fr/monetisation-saas",
+    "lang": "fr",
+    "cluster": "sales",
+    "title": "Pricing & Monétisation SaaS | NLG Consulting",
+    "description": "Conseil en pricing et monétisation SaaS : packaging, logique tarifaire, expansion revenue et métriques commerciales pour équipes growth.",
+    "canonical": "https://www.nlgconsulting.co/fr/monetisation-saas",
+    "h1": "Pricing & Monétisation SaaS",
+    "alternate": "/saas-monetization"
+  },
+  {
+    "path": "/go-to-market",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "Go-To-Market Strategy for SaaS & Tech | NLG",
+    "description": "Go-to-market strategy for SaaS and tech: market entry, positioning, pricing, channel design and execution planning.",
+    "canonical": "https://www.nlgconsulting.co/go-to-market",
+    "h1": "Go-To-Market Strategy for SaaS & Tech",
+    "alternate": "/fr/strategie-go-to-market"
+  },
+  {
+    "path": "/fr/strategie-go-to-market",
+    "lang": "fr",
+    "cluster": "sales",
+    "title": "Stratégie Go-To-Market SaaS & Tech | NLG",
+    "description": "Conseil go-to-market pour SaaS, FinTech et PropTech : entrée marché, positionnement, pricing, canaux et exécution.",
+    "canonical": "https://www.nlgconsulting.co/fr/strategie-go-to-market",
+    "h1": "Stratégie Go-To-Market & Exécution",
+    "alternate": "/go-to-market"
+  },
+  {
+    "path": "/proptech-consulting",
+    "lang": "en",
+    "cluster": "industry",
+    "title": "PropTech Consulting & Platform Strategy | NLG",
+    "description": "PropTech consulting for real estate technology, tokenization, marketplaces and fractional ownership — from operating model to commercial execution.",
+    "canonical": "https://www.nlgconsulting.co/proptech-consulting",
+    "h1": "PropTech Consulting by Operators Who Build Platforms",
+    "alternate": "/fr/conseil-proptech"
+  },
+  {
+    "path": "/fr/conseil-proptech",
+    "lang": "fr",
+    "cluster": "industry",
+    "title": "Conseil PropTech & Plateformes Immobilières | NLG",
+    "description": "Conseil PropTech pour tokenisation, marketplaces, immobilier fractionné et modèles de plateformes — de la stratégie à l’exécution.",
+    "canonical": "https://www.nlgconsulting.co/fr/conseil-proptech",
+    "h1": "Conseil PropTech par des opérateurs qui construisent des plateformes",
+    "alternate": "/proptech-consulting"
+  },
+  {
+    "path": "/marketing",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "Performance Marketing & PPC for Growth | NLG",
+    "description": "Performance marketing and PPC across Google, Meta and LinkedIn, connected to landing pages, CRM measurement and commercial goals.",
+    "canonical": "https://www.nlgconsulting.co/marketing",
+    "h1": "Turn Your Marketing Budget Into Measurable Growth",
+    "alternate": "/fr/marketing"
+  },
+  {
+    "path": "/fr/marketing",
+    "lang": "fr",
+    "cluster": "sales",
+    "title": "Marketing Performance & PPC | NLG Consulting",
+    "description": "Marketing performance et PPC sur Google, Meta et LinkedIn, reliés aux landing pages, au CRM et aux objectifs commerciaux.",
+    "canonical": "https://www.nlgconsulting.co/fr/marketing",
+    "h1": "Transformez votre budget marketing en croissance mesurable",
+    "alternate": "/marketing"
+  },
+  {
+    "path": "/ai-marketing-automation",
+    "lang": "en",
+    "cluster": "ai",
+    "title": "AI Marketing Automation & Content Systems | NLG",
+    "description": "AI marketing automation for B2B: content operations, SEO workflows, social distribution and campaign infrastructure connected to business outcomes.",
+    "canonical": "https://www.nlgconsulting.co/ai-marketing-automation",
+    "h1": "AI-Powered Marketing & Content Systems",
+    "alternate": "/fr/automation-marketing-ia"
+  },
+  {
+    "path": "/fr/automation-marketing-ia",
+    "lang": "fr",
+    "cluster": "ai",
+    "title": "Automatisation Marketing IA & Contenu | NLG",
+    "description": "Automatisation marketing IA pour B2B : contenu, SEO, réseaux sociaux et workflows de campagnes reliés aux résultats business.",
+    "canonical": "https://www.nlgconsulting.co/fr/automation-marketing-ia",
+    "h1": "Systèmes Marketing & Contenu IA",
+    "alternate": "/ai-marketing-automation"
+  },
+  {
+    "path": "/prompt-engineering-consulting",
+    "lang": "en",
+    "cluster": "ai",
+    "title": "Prompt Engineering Consulting & AI Workflows | NLG",
+    "description": "Prompt engineering consulting for business teams: production prompts, evaluation, reusable AI workflows and operational integration.",
+    "canonical": "https://www.nlgconsulting.co/prompt-engineering-consulting",
+    "h1": "Prompt Engineering for Business Operations",
+    "alternate": "/fr/conseil-prompt-engineering"
+  },
+  {
+    "path": "/fr/conseil-prompt-engineering",
+    "lang": "fr",
+    "cluster": "ai",
+    "title": "Conseil Prompt Engineering & Workflows IA | NLG",
+    "description": "Conseil en prompt engineering pour équipes business : prompts de production, évaluation, workflows IA réutilisables et intégration opérationnelle.",
+    "canonical": "https://www.nlgconsulting.co/fr/conseil-prompt-engineering",
+    "h1": "Prompt Engineering pour Opérations Business",
+    "alternate": "/prompt-engineering-consulting"
+  },
+  {
+    "path": "/ai-for-real-estate",
+    "lang": "en",
+    "cluster": "industry",
+    "title": "AI for Real Estate Operations & Growth | NLG",
+    "description": "AI systems for real estate: lead and investor workflows, reporting, market intelligence and operational automation.",
+    "canonical": "https://www.nlgconsulting.co/ai-for-real-estate",
+    "h1": "AI-Powered Growth Systems for Real Estate",
+    "alternate": "/fr/ia-pour-immobilier"
+  },
+  {
+    "path": "/fr/ia-pour-immobilier",
+    "lang": "fr",
+    "cluster": "industry",
+    "title": "IA pour l’Immobilier : Opérations & Croissance | NLG",
+    "description": "Systèmes IA pour entreprises immobilières : pipeline, relations investisseurs, reporting, intelligence marché et automatisation opérationnelle.",
+    "canonical": "https://www.nlgconsulting.co/fr/ia-pour-immobilier",
+    "h1": "Systèmes IA pour l’immobilier",
+    "alternate": "/ai-for-real-estate"
+  },
+  {
+    "path": "/ai-for-consulting-firms",
+    "lang": "en",
+    "cluster": "industry",
+    "title": "AI for Consulting Firms: Operations & Growth | NLG",
+    "description": "AI systems for consulting firms: research, proposals, knowledge workflows, delivery support and structured business development.",
+    "canonical": "https://www.nlgconsulting.co/ai-for-consulting-firms",
+    "h1": "AI Operational Systems for Consulting Firms",
+    "alternate": "/fr/ia-pour-cabinets-conseil"
+  },
+  {
+    "path": "/fr/ia-pour-cabinets-conseil",
+    "lang": "fr",
+    "cluster": "industry",
+    "title": "IA pour Cabinets de Conseil | NLG Consulting",
+    "description": "Systèmes IA pour cabinets de conseil : recherche, propositions, knowledge workflows, production et business development structuré.",
+    "canonical": "https://www.nlgconsulting.co/fr/ia-pour-cabinets-conseil",
+    "h1": "Levier opérationnel IA pour cabinets de conseil",
+    "alternate": "/ai-for-consulting-firms"
+  },
+  {
+    "path": "/ai-for-agencies",
+    "lang": "en",
+    "cluster": "industry",
+    "title": "AI for Agencies: Operations, Delivery & Margins | NLG",
+    "description": "AI systems for marketing and creative agencies: content production, reporting, prospecting and operational workflows.",
+    "canonical": "https://www.nlgconsulting.co/ai-for-agencies",
+    "h1": "AI Operational Systems for Marketing & Creative Agencies",
+    "alternate": "/fr/ia-pour-agences"
+  },
+  {
+    "path": "/fr/ia-pour-agences",
+    "lang": "fr",
+    "cluster": "industry",
+    "title": "IA pour Agences : Opérations & Marges | NLG",
+    "description": "Systèmes IA pour agences marketing et créatives : production, reporting, prospection et automatisation opérationnelle.",
+    "canonical": "https://www.nlgconsulting.co/fr/ia-pour-agences",
+    "h1": "Levier opérationnel IA pour agences",
+    "alternate": "/ai-for-agencies"
+  },
+  {
+    "path": "/ai-for-b2b-services",
+    "lang": "en",
+    "cluster": "industry",
+    "title": "AI for B2B Services: Growth & Operations | NLG",
+    "description": "AI systems for B2B service companies: pipeline, content, reporting and operational automation connected to commercial performance.",
+    "canonical": "https://www.nlgconsulting.co/ai-for-b2b-services",
+    "h1": "AI-Powered Growth Systems for B2B Service Companies",
+    "alternate": "/fr/ia-pour-services-b2b"
+  },
+  {
+    "path": "/fr/ia-pour-services-b2b",
+    "lang": "fr",
+    "cluster": "industry",
+    "title": "IA pour Services B2B : Croissance & Opérations | NLG",
+    "description": "Systèmes IA pour services B2B : pipeline, contenu, reporting et automatisation opérationnelle reliés à la performance commerciale.",
+    "canonical": "https://www.nlgconsulting.co/fr/ia-pour-services-b2b",
+    "h1": "Infrastructure de croissance IA pour services B2B",
+    "alternate": "/ai-for-b2b-services"
+  },
+  {
+    "path": "/ai-training-for-teams",
+    "lang": "en",
+    "cluster": "ai",
+    "title": "AI Training for Business Teams | NLG Consulting",
+    "description": "Hands-on AI training for business teams covering prompt engineering, workflow automation, AI agents and practical operating use cases.",
+    "canonical": "https://www.nlgconsulting.co/ai-training-for-teams",
+    "h1": "AI Enablement for Business Teams",
+    "alternate": "/fr/formation-ia-entreprise"
+  },
+  {
+    "path": "/fr/formation-ia-entreprise",
+    "lang": "fr",
+    "cluster": "ai",
+    "title": "Formation IA pour Équipes Business | NLG",
+    "description": "Formation IA pratique pour équipes business : prompt engineering, workflows IA, automatisation, agents et exercices opérationnels.",
+    "canonical": "https://www.nlgconsulting.co/fr/formation-ia-entreprise",
+    "h1": "Formation IA pour équipes business",
+    "alternate": "/ai-training-for-teams"
+  },
+  {
+    "path": "/best-ai-tools-for-business",
+    "lang": "en",
+    "cluster": "ai",
+    "title": "Best AI Tools for Business 2026 | NLG Guide",
+    "description": "Practical guide to AI tools for business across automation, sales, research, content and operations, with criteria for choosing the right stack.",
+    "canonical": "https://www.nlgconsulting.co/best-ai-tools-for-business",
+    "h1": "Best AI Tools for Business Growth in 2026",
+    "alternate": "/fr/meilleurs-outils-ia-entreprise"
+  },
+  {
+    "path": "/fr/meilleurs-outils-ia-entreprise",
+    "lang": "fr",
+    "cluster": "ai",
+    "title": "Meilleurs Outils IA pour Entreprise 2026 | NLG",
+    "description": "Guide pratique des outils IA pour l’automatisation, la vente, la recherche, le contenu et les opérations, avec critères de sélection.",
+    "canonical": "https://www.nlgconsulting.co/fr/meilleurs-outils-ia-entreprise",
+    "h1": "Meilleurs outils IA pour la croissance business en 2026",
+    "alternate": "/best-ai-tools-for-business"
+  },
+  {
+    "path": "/how-to-automate-marketing-with-ai",
+    "lang": "en",
+    "cluster": "ai",
+    "title": "How to Automate Marketing with AI | NLG Guide",
+    "description": "How to build AI marketing workflows for content, SEO, email, lead handling and reporting while keeping business goals and human controls clear.",
+    "canonical": "https://www.nlgconsulting.co/how-to-automate-marketing-with-ai",
+    "h1": "How to Build AI-Powered Marketing Systems",
+    "alternate": "/fr/automatiser-marketing-avec-ia"
+  },
+  {
+    "path": "/fr/automatiser-marketing-avec-ia",
+    "lang": "fr",
+    "cluster": "ai",
+    "title": "Automatiser le Marketing avec l’IA | Guide NLG",
+    "description": "Construire des workflows marketing IA pour le contenu, SEO, email, leads et reporting tout en conservant objectifs et contrôles humains.",
+    "canonical": "https://www.nlgconsulting.co/fr/automatiser-marketing-avec-ia",
+    "h1": "Comment construire des systèmes marketing IA",
+    "alternate": "/how-to-automate-marketing-with-ai"
+  },
+  {
+    "path": "/go-to-market-consulting",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "GTM Strategy & Execution for SaaS & Tech | NLG",
+    "description": "Go-to-market consulting for FinTech, PropTech and SaaS: market entry, positioning, pricing, channel strategy and execution.",
+    "canonical": "https://www.nlgconsulting.co/go-to-market-consulting",
+    "h1": "Go-To-Market Strategy & Execution",
+    "alternate": "/fr/strategie-go-to-market"
+  },
+  {
+    "path": "/website-in-72-hours",
+    "lang": "en",
+    "cluster": "core",
+    "title": "Conversion Websites & SEO Assets | NLG Consulting",
+    "description": "Revenue-ready websites and SEO authority assets for B2B companies, designed for conversion and structured for organic discovery.",
+    "canonical": "https://www.nlgconsulting.co/website-in-72-hours",
+    "h1": "Conversion Websites & SEO Authority Assets",
+    "alternate": "/fr/site-web-en-72h"
+  },
+  {
+    "path": "/fr/site-web-en-72h",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "Sites Web de Conversion & Actifs SEO | NLG",
+    "description": "Sites web orientés revenus et actifs SEO pour entreprises B2B, conçus pour la conversion et structurés pour la découverte organique.",
+    "canonical": "https://www.nlgconsulting.co/fr/site-web-en-72h",
+    "h1": "Sites Web de Conversion & Actifs d'Autorité SEO",
+    "alternate": "/website-in-72-hours"
+  },
+  {
+    "path": "/proptech-lead-generation",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "PropTech Lead Generation & Pipeline | NLG",
+    "description": "Lead generation for PropTech companies targeting real estate developers, property managers and investors through structured B2B outreach.",
+    "canonical": "https://www.nlgconsulting.co/proptech-lead-generation",
+    "h1": "PropTech Lead Generation for Real Estate Decision-Makers",
+    "alternate": "/fr/agence-lead-generation-b2b"
+  },
+  {
+    "path": "/fintech-lead-generation",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "FinTech Lead Generation & Pipeline | NLG",
+    "description": "Lead generation for FinTech companies targeting CFOs, treasury teams and financial decision-makers through structured outreach and qualification.",
+    "canonical": "https://www.nlgconsulting.co/fintech-lead-generation",
+    "h1": "FinTech Lead Generation for Financial Decision-Makers",
+    "alternate": "/fr/agence-lead-generation-b2b"
+  },
+  {
+    "path": "/ai-sales-outreach",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "AI Sales Outreach & B2B Prospecting | NLG",
+    "description": "AI-assisted B2B sales outreach for prospect research, targeting, sequencing and personalized messaging connected to pipeline operations.",
+    "canonical": "https://www.nlgconsulting.co/ai-sales-outreach",
+    "h1": "AI-Powered Sales Outreach for B2B",
+    "alternate": "/fr/automation-commerciale-ia"
   }
 ];
 
