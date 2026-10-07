@@ -20,7 +20,8 @@ import {
   Phone,
   Globe,
   Target,
-  Mic
+  Mic,
+  MessageSquareText
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
