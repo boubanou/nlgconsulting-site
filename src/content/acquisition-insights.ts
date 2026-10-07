@@ -19,10 +19,10 @@ export const acquisitionInsights: InsightArticle[] = [
     alternatePath: "/fr/ressources/audit-ia-pme",
     sections: [
       {
-        heading: "Start with the workflows that already hurt",
+        heading: "Start with the workflows that create the most leverage",
         paragraphs: [
-          "List recurring tasks that consume management or team time, slow revenue, create missed follow-ups or require repeated copying between systems. Common SME candidates include CRM administration, lead qualification, sales follow-up, reporting, onboarding, support triage and document preparation.",
-          "The best first use case is usually frequent, rules-based enough to observe, supported by accessible data and easy to measure before and after implementation."
+          "List recurring workflows where better speed, capacity, consistency or follow-through could create business value. A process does not need to be broken before it deserves improvement. Common SME candidates include CRM administration, lead qualification, sales follow-up, reporting, onboarding, support triage and document preparation.",
+          "The best first use case is usually frequent, observable, supported by accessible data and easy to measure before and after implementation. Prioritize the opportunities with the strongest combination of business impact and implementation feasibility."
         ]
       },
       {
@@ -581,5 +581,240 @@ export const acquisitionInsights: InsightArticle[] = [
       }
     ],
     takeaway: "Un site vocal devient utile lorsque la parole est transformée en navigation contrôlée et en résultats mesurables — pas lorsqu’un microphone est ajouté comme gadget."
+  },
+
+  {
+    slug: "ai-automation-for-small-business",
+    path: "/insights/ai-automation-for-small-business",
+    lang: "en",
+    cluster: "ai",
+    title: "AI Automation for Small Business: Practical Workflows | NLG",
+    description: "AI automation for small business: practical workflows for CRM, sales, marketing, reporting, customer service and operations — plus how to choose what to automate first.",
+    h1: "AI Automation for Small Business: Where to Start and What to Automate",
+    eyebrow: "Small Business AI Guide",
+    intro: "AI automation for a small business should create leverage, not another software project to manage. The strongest use cases save time, increase capacity, improve follow-through, support revenue or make an already healthy process faster and more consistent. The goal is to start with business value, then choose the technology.",
+    published: "2026-10-07",
+    updated: "2026-10-07",
+    readingTime: "8 min",
+    servicePath: "/ai-automation",
+    serviceLabel: "AI Automation for Business",
+    alternatePath: "/fr/ressources/automatisation-ia-pme",
+    sections: [
+      {
+        heading: "What can a small business automate with AI?",
+        paragraphs: [
+          "Small businesses often have the best automation opportunities because a few people carry many responsibilities. Removing repetitive coordination can create meaningful capacity without immediately adding headcount.",
+          "Useful automation does not require replacing people. It can prepare information, route work, draft outputs, trigger follow-ups and connect systems while keeping decisions and customer-facing actions under human control where appropriate."
+        ],
+        bullets: [
+          "Lead capture, qualification and CRM routing",
+          "Sales follow-up preparation and overdue-action alerts",
+          "Meeting summaries, tasks and CRM updates",
+          "Customer-service triage and response assistance",
+          "Document extraction, classification and filing",
+          "Weekly reporting and management summaries",
+          "Content repurposing and marketing operations",
+          "Client onboarding and internal handoffs"
+        ]
+      },
+      {
+        heading: "Choose the business outcome before the AI tool",
+        paragraphs: [
+          "Start with the outcome: save five hours a week, respond to inbound leads faster, reduce missed follow-ups, improve reporting quality, increase sales capacity or shorten an onboarding cycle. Then map the workflow that affects that outcome.",
+          "This prevents tool-first projects where a team buys an AI product and later searches for something useful to do with it."
+        ]
+      },
+      {
+        heading: "A working process can still be worth automating",
+        paragraphs: [
+          "Automation is not only a remedy for broken operations. A process may already work and still be improved because the business wants more speed, better margins, higher capacity or a more consistent customer experience.",
+          "That distinction matters for growing companies. The question is not only 'what hurts?' but also 'where would additional leverage matter most?'"
+        ]
+      },
+      {
+        heading: "How to select the first workflow",
+        bullets: [
+          "It happens frequently enough to matter",
+          "The inputs and expected output are reasonably clear",
+          "The required data can be accessed safely",
+          "The workflow has an owner who can validate exceptions",
+          "The result can be measured before and after",
+          "A failure can be contained with review or approval rules"
+        ]
+      },
+      {
+        heading: "From one workflow to an AI operating system",
+        paragraphs: [
+          "Start bounded. Map one workflow, build the smallest useful version, measure it and document what changed. If it works, reuse the architecture and governance model for adjacent processes.",
+          "NLG combines AI consulting and implementation, so a company can begin with an opportunity assessment and move directly into a practical automation without assembling the technical stack itself."
+        ]
+      }
+    ],
+    takeaway: "The best AI automation strategy for a small business starts with one measurable source of leverage, proves the operating model and expands only when the value is clear."
+  },
+  {
+    slug: "automatisation-ia-pme",
+    path: "/fr/ressources/automatisation-ia-pme",
+    lang: "fr",
+    cluster: "ai",
+    title: "Automatisation IA PME : Workflows Concrets & Méthode | NLG",
+    description: "Automatisation IA pour PME : CRM, ventes, marketing, reporting, service client et opérations. Comment identifier les workflows à automatiser en priorité.",
+    h1: "Automatisation IA pour PME : Par Où Commencer et Quoi Automatiser ?",
+    eyebrow: "Guide IA pour PME",
+    intro: "L’automatisation IA d’une PME doit créer du levier, pas ajouter un projet logiciel à gérer. Les meilleurs cas d’usage font gagner du temps, augmentent la capacité, améliorent le suivi commercial ou rendent un processus déjà sain plus rapide et plus régulier.",
+    published: "2026-10-07",
+    updated: "2026-10-07",
+    readingTime: "8 min",
+    servicePath: "/fr/automation-ia",
+    serviceLabel: "Automatisation IA pour Entreprises",
+    alternatePath: "/insights/ai-automation-for-small-business",
+    sections: [
+      {
+        heading: "Que peut automatiser une PME avec l’IA ?",
+        paragraphs: [
+          "Les PME ont souvent un fort potentiel d’automatisation parce qu’une petite équipe concentre de nombreuses responsabilités. Retirer quelques tâches répétitives peut libérer une capacité importante sans recruter immédiatement.",
+          "Automatiser ne signifie pas supprimer le contrôle humain. L’IA peut préparer l’information, router le travail, générer un brouillon, déclencher une relance ou connecter des outils tout en laissant les décisions sensibles aux équipes."
+        ],
+        bullets: [
+          "Capture, qualification et routing des leads vers le CRM",
+          "Préparation des relances commerciales et alertes de suivi",
+          "Comptes-rendus de réunions, tâches et mises à jour CRM",
+          "Triage du support et assistance aux réponses clients",
+          "Extraction, classement et préparation de documents",
+          "Reporting et synthèses de management",
+          "Réutilisation de contenu et opérations marketing",
+          "Onboarding client et coordination interne"
+        ]
+      },
+      {
+        heading: "Partir du résultat business, pas de l’outil IA",
+        paragraphs: [
+          "Définissez d’abord le résultat : gagner plusieurs heures par semaine, répondre plus vite aux prospects, réduire les oublis de relance, améliorer le reporting, augmenter la capacité commerciale ou raccourcir l’onboarding.",
+          "Cette approche évite les projets où l’entreprise achète un outil IA puis cherche ensuite un problème à lui confier."
+        ]
+      },
+      {
+        heading: "Un processus qui fonctionne peut quand même être optimisé",
+        paragraphs: [
+          "L’automatisation n’est pas réservée aux processus défaillants. Une organisation qui fonctionne bien peut vouloir plus de vitesse, de marge, de capacité ou une expérience client plus régulière.",
+          "La bonne question n’est donc pas seulement « qu’est-ce qui ne marche pas ? », mais aussi « où davantage de levier aurait-il le plus de valeur ? »"
+        ]
+      },
+      {
+        heading: "Comment choisir le premier workflow",
+        bullets: [
+          "Il se produit assez souvent pour que l’amélioration soit mesurable",
+          "Les entrées et la sortie attendue sont suffisamment claires",
+          "Les données nécessaires sont accessibles de façon sûre",
+          "Un responsable peut valider les exceptions",
+          "Le résultat peut être comparé avant et après",
+          "Les risques peuvent être contenus par des validations humaines"
+        ]
+      },
+      {
+        heading: "Passer d’un workflow à un système IA",
+        paragraphs: [
+          "Commencez par un périmètre borné : cartographiez un workflow, construisez la plus petite version utile, mesurez-la et documentez ce qui change. Si la valeur est démontrée, étendez ensuite l’architecture aux processus voisins.",
+          "NLG réunit conseil IA et implémentation afin de passer directement de l’identification de l’opportunité à une automatisation concrète sans demander à l’entreprise de construire elle-même toute la stack technique."
+        ]
+      }
+    ],
+    takeaway: "Une stratégie d’automatisation IA efficace pour une PME commence par un levier mesurable, valide le modèle opérationnel puis s’étend uniquement lorsque la valeur est démontrée."
+  },
+  {
+    slug: "voice-ai-website-navigation",
+    path: "/insights/voice-ai-website-navigation",
+    lang: "en",
+    cluster: "ai",
+    title: "Voice AI Website Navigation: From Menus to Intent | NLG",
+    description: "How voice AI can turn a business website into an intent-driven interface: visitors explain what they need, the site interprets the request and guides them to relevant content.",
+    h1: "Voice AI Website Navigation: What Changes When Visitors Can Talk to a Website?",
+    eyebrow: "Interactive AI Experience",
+    intro: "Most websites ask visitors to understand the company’s information architecture before they can find the right answer. Voice-guided navigation reverses that model: the visitor describes their situation in natural language and the site interprets the intent, then routes them to controlled, relevant content.",
+    published: "2026-10-07",
+    updated: "2026-10-07",
+    readingTime: "7 min",
+    servicePath: "/web",
+    serviceLabel: "Web & Conversion Systems",
+    alternatePath: "/fr/ressources/site-web-vocal-ia",
+    sections: [
+      {
+        heading: "Voice is an input layer, not a talking chatbot",
+        paragraphs: [
+          "A useful voice website does not need to speak back. Voice can simply replace search boxes and complex menus as an input method. The visitor talks; the site responds visually by navigating, highlighting or restructuring the information it presents.",
+          "That can feel more natural for a business visitor who knows their situation but does not know the name of the service they need."
+        ]
+      },
+      {
+        heading: "The safest architecture keeps navigation controlled",
+        paragraphs: [
+          "Instead of allowing a language model to generate arbitrary routes or actions, the AI can classify the visitor’s request into a controlled set of intents. The website then decides which approved page or experience to display.",
+          "This preserves brand, compliance and conversion logic while still allowing natural-language interaction."
+        ]
+      },
+      {
+        heading: "Voice should never be mandatory",
+        paragraphs: [
+          "People browse from offices, trains and shared spaces. A voice-first experience therefore needs an immediate text alternative, accessible controls and graceful fallback when browser speech recognition is unavailable.",
+          "The best interface treats voice as the memorable primary experience while keeping the website fully usable without it."
+        ]
+      },
+      {
+        heading: "NLG uses the idea on its own website",
+        paragraphs: [
+          "The NLG website includes a floating voice guide. A visitor can describe their business and what they want to improve; the interface interprets that request and routes the visitor to an existing NLG page that best matches the need.",
+          "The purpose is both practical and demonstrative: the website itself becomes an example of how AI can change a customer journey without requiring synthetic voice responses or a traditional chatbot."
+        ]
+      }
+    ],
+    takeaway: "Voice AI can make a website intent-driven: the visitor explains the goal, while the site retains control over the content, navigation and next commercial step."
+  },
+  {
+    slug: "site-web-vocal-ia",
+    path: "/fr/ressources/site-web-vocal-ia",
+    lang: "fr",
+    cluster: "ai",
+    title: "Site Web Vocal IA : Navigation par la Voix & Intention | NLG",
+    description: "Comment l’IA vocale peut transformer la navigation d’un site : le visiteur explique son besoin, le site comprend l’intention et l’oriente vers le bon contenu.",
+    h1: "Site Web Vocal IA : Que Change un Site Auquel le Visiteur Peut Parler ?",
+    eyebrow: "Expérience IA Interactive",
+    intro: "La plupart des sites demandent au visiteur de comprendre l’arborescence de l’entreprise avant de trouver la bonne réponse. La navigation vocale inverse cette logique : le visiteur décrit sa situation, le site interprète l’intention puis l’oriente vers un contenu contrôlé et pertinent.",
+    published: "2026-10-07",
+    updated: "2026-10-07",
+    readingTime: "7 min",
+    servicePath: "/fr/site-internet",
+    serviceLabel: "Sites & Systèmes de Conversion",
+    alternatePath: "/insights/voice-ai-website-navigation",
+    sections: [
+      {
+        heading: "La voix devient une entrée, pas un chatbot qui parle",
+        paragraphs: [
+          "Un site vocal utile n’a pas besoin de répondre à haute voix. La voix peut simplement remplacer une barre de recherche ou des menus complexes comme mode d’entrée. Le visiteur parle ; le site répond visuellement en naviguant, en mettant en avant ou en adaptant l’information.",
+          "Cette approche est naturelle pour un dirigeant qui connaît sa situation mais ne connaît pas nécessairement le nom du service dont il a besoin."
+        ]
+      },
+      {
+        heading: "Une architecture contrôlée protège le parcours",
+        paragraphs: [
+          "Plutôt que de laisser un modèle génératif inventer librement des routes ou des actions, l’IA peut classifier la demande dans un ensemble d’intentions contrôlées. Le site décide ensuite quelle page approuvée afficher.",
+          "On conserve ainsi la maîtrise de la marque, du parcours de conversion et des contraintes métier tout en permettant une interaction en langage naturel."
+        ]
+      },
+      {
+        heading: "Le vocal doit rester optionnel",
+        paragraphs: [
+          "Les visiteurs consultent un site au bureau, dans les transports ou dans des espaces partagés. Une expérience voice-first doit donc proposer immédiatement une alternative écrite, des contrôles accessibles et un fallback lorsque la reconnaissance vocale du navigateur n’est pas disponible.",
+          "La voix crée l’effet mémorable ; le site doit rester parfaitement utilisable sans elle."
+        ]
+      },
+      {
+        heading: "NLG applique ce principe sur son propre site",
+        paragraphs: [
+          "Le site NLG intègre un guide vocal flottant. Le visiteur peut présenter son entreprise et ce qu’il souhaite améliorer ; l’interface interprète la demande puis l’emmène vers une page NLG existante correspondant au besoin.",
+          "L’objectif est à la fois pratique et démonstratif : le site devient lui-même un exemple d’utilisation de l’IA dans un parcours client sans imposer une réponse vocale ni un chatbot traditionnel."
+        ]
+      }
+    ],
+    takeaway: "L’IA vocale peut transformer un site en interface pilotée par l’intention : le visiteur exprime son objectif, tandis que le site garde le contrôle du contenu, de la navigation et de la prochaine étape commerciale."
   },
 ];
