@@ -36,8 +36,8 @@ const AIAutomation = () => {
   return (
     <>
       <Helmet>
-        <title>AI Automation Agency | Workflow & Process Automation | NLG</title>
-        <meta name="description" content="AI automation for small businesses and growing teams. Save time, reduce costs and improve performance with practical workflows implemented for you. Automation Sprint from €1,250 excl. VAT." />
+        <title>AI Automation Agency for Small Business & B2B | NLG Consulting</title>
+        <meta name="description" content="Done-for-you AI automation for small businesses and B2B teams. Automate CRM, sales, marketing, reporting and operations with practical workflows built around your existing tools." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
@@ -45,8 +45,8 @@ const AIAutomation = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/ai-automation" />
-        <meta property="og:title" content="AI Workflow Automation for Business | NLG Consulting" />
-        <meta property="og:description" content="AI-powered workflow automation for sales, marketing, and operations. Reduce manual workload, improve output quality." />
+        <meta property="og:title" content="AI Automation Agency for Small Business & B2B | NLG Consulting" />
+        <meta property="og:description" content="Done-for-you AI automation for CRM, sales, marketing, reporting and operations — designed around the tools your business already uses." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -56,7 +56,7 @@ const AIAutomation = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">AI Automation</Badge>
-            <h1 className="mb-6">AI Automation for{" "}<span className="text-gradient">Business Workflows & Operations</span></h1>
+            <h1 className="mb-6">AI Automation for{" "}<span className="text-gradient">Small Business & B2B Workflows</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               You do not need to become an automation expert. Tell us how your business works and what you want to improve. We identify where automation creates real value and build the workflows for you — across sales, marketing, customer experience, administration and operations.
             </p>
@@ -72,7 +72,7 @@ const AIAutomation = () => {
             <h2 className="mb-6">Automation Is Not Only About Fixing Problems</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>Your business does not need to be broken before automation makes sense. A process can already work and still be made faster, cheaper, more consistent or more profitable. The goal is not simply to remove pain — it is to create leverage.</p><p>For small businesses and growing teams, that can mean saving hours of manual work, responding to leads faster, improving follow-up, increasing capacity without hiring immediately, or giving customers a better experience.</p>
-              <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously. Our guide to <Link to="/insights/ai-automation-roi" className="text-primary hover:underline font-medium">measuring AI automation ROI</Link> shows how to baseline a workflow before deployment and evaluate the operating result afterward.</p>
+              <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously. Our <Link to="/insights/ai-automation-for-small-business" className="text-primary hover:underline font-medium">small-business AI automation guide</Link> shows what to automate first. Our guide to <Link to="/insights/ai-automation-roi" className="text-primary hover:underline font-medium">measuring AI automation ROI</Link> shows how to baseline a workflow before deployment and evaluate the operating result afterward.</p>
               <p>The difference between companies that scale efficiently and those that don't is often the quality of their operational automation. Not just having tools, but having <Link to="/ai-consulting" className="text-primary hover:underline">well-designed systems</Link> that connect data, logic, and AI into workflows that run without constant oversight.</p>
             </div>
           </div>
