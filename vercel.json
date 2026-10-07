@@ -464,6 +464,14 @@
       "destination": "/api/gone"
     },
     {
+      "source": "/insights/:slug",
+      "destination": "/insights/:slug/index.html"
+    },
+    {
+      "source": "/fr/ressources/:slug",
+      "destination": "/fr/ressources/:slug/index.html"
+    },
+    {
       "source": "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.svg|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.webp|.*\\.xml|.*\\.html).*)",
       "destination": "/index.html"
     }
