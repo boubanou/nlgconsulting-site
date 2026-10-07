@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
+import BusinessValueEngine from "@/components/BusinessValueEngine";
 import {
   Carousel,
   CarouselContent,
@@ -135,33 +136,42 @@ const HomeFR = () => {
         <MainNavbarFR />
 
         {/* Hero */}
-        <section className="pt-32 md:pt-40 pb-20 px-4">
-          <div className="container mx-auto max-w-5xl">
-            <div className="text-center space-y-8">
-              <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase">
-                IA & Automatisation · Croissance · Performance
-              </Badge>
-              <h1 className="text-foreground leading-[1.1] max-w-4xl mx-auto">
-                Faites Travailler l'IA pour Votre Entreprise —{" "}
-                <span className="text-gradient">Sans Devenir Expert en IA</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Expliquez-nous comment fonctionne votre entreprise et ce que vous voulez améliorer. Nous identifions où l'IA, l'automatisation et les systèmes de croissance peuvent faire gagner du temps, réduire les coûts, augmenter les revenus ou améliorer la performance — puis nous les mettons en place pour vous.
-              </p>
-              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-                Pour PME, indépendants, cabinets et entreprises en croissance — avec une expertise spécialisée en FinTech, PropTech, SaaS et B2B.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                <Button asChild size="lg" className="text-base px-8">
-                  <Link to="/fr/rendez-vous">
-                    Dites-nous ce que vous voulez améliorer <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-base px-8">
-                  <Link to="/fr/automation-ia">
-                    Voir ce que nous pouvons automatiser
-                  </Link>
-                </Button>
+        <section className="hero-tech-grid relative overflow-hidden px-4 pb-16 pt-28 sm:pt-32 md:pb-20 md:pt-40">
+          <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-primary/[0.035] to-transparent" aria-hidden="true" />
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+              <div className="min-w-0 text-center lg:text-left">
+                <Badge variant="outline" className="max-w-full px-3 py-2 text-[10px] tracking-[0.12em] sm:px-4 sm:text-xs sm:tracking-wide uppercase">
+                  IA & Automatisation · Croissance · Performance
+                </Badge>
+                <h1 className="mt-6 text-foreground leading-[1.06] sm:mt-7">
+                  Faites Travailler l'IA pour Votre Entreprise —{" "}
+                  <span className="text-gradient">Sans Devenir Expert en IA</span>
+                </h1>
+                <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl lg:mx-0">
+                  Expliquez-nous comment fonctionne votre entreprise et ce que vous voulez améliorer. Nous identifions où l'IA, l'automatisation et les systèmes de croissance peuvent faire gagner du temps, réduire les coûts, augmenter les revenus ou améliorer la performance — puis nous les mettons en place pour vous.
+                </p>
+                <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base lg:mx-0">
+                  Pour PME, indépendants, cabinets et entreprises en croissance — avec une expertise spécialisée en FinTech, PropTech, SaaS et B2B.
+                </p>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+                  <Button asChild size="lg" className="w-full text-sm sm:w-auto sm:text-base">
+                    <Link to="/fr/rendez-vous">
+                      Dites-nous ce que vous voulez améliorer <ArrowRight className="ml-1 w-4 h-4" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="w-full text-sm sm:w-auto sm:text-base">
+                    <Link to="/fr/automation-ia">Voir ce que nous pouvons automatiser</Link>
+                  </Button>
+                </div>
+                <div className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground sm:text-sm lg:justify-start">
+                  <span className="inline-flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-secondary" /> Business d'abord</span>
+                  <span className="inline-flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-secondary" /> Construit pour vous</span>
+                  <span className="inline-flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-secondary" /> Résultats mesurables</span>
+                </div>
+              </div>
+              <div className="mx-auto w-full max-w-[520px] lg:max-w-none">
+                <BusinessValueEngine lang="fr" />
               </div>
             </div>
           </div>
@@ -180,7 +190,7 @@ const HomeFR = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {clusters.map((cluster, i) => (
                 <Link to={cluster.link} key={i} className="group">
-                  <Card className="h-full border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-md">
+                  <Card className="h-full border border-border transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg">
                     <CardContent className="p-6">
                       <div className="w-12 h-12 rounded-lg bg-primary/8 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                         {cluster.icon}
@@ -227,23 +237,24 @@ const HomeFR = () => {
         </section>
 
         {/* Automation Sprint CTA */}
-        <section className="py-16 px-4 bg-primary text-primary-foreground">
-          <div className="container-tight text-center">
-            <p className="text-sm uppercase tracking-wide opacity-80 mb-3">Une Première Étape Simple</p>
-            <h2 className="text-primary-foreground mb-4">Commencez par un Workflow Réel — 1 250 € HT</h2>
-            <p className="text-lg opacity-90 mb-4 max-w-2xl mx-auto">
+        <section className="relative overflow-hidden bg-primary px-4 py-16 text-primary-foreground sm:py-20">
+          <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,white_0,transparent_28%),radial-gradient(circle_at_80%_70%,hsl(var(--secondary))_0,transparent_24%)]" aria-hidden="true" />
+          <div className="container-tight relative text-center">
+            <p className="mb-3 text-xs uppercase tracking-[0.18em] opacity-80 sm:text-sm">Une Première Étape Simple</p>
+            <h2 className="mb-4 text-primary-foreground">Commencez par un Workflow Réel</h2>
+            <p className="mx-auto mb-4 max-w-2xl text-base opacity-90 sm:text-lg">
               Notre AI Automation Sprint couvre un workflow précisément défini. Nous cartographions le processus, choisissons les bons outils, construisons une première version fonctionnelle lorsque les accès le permettent et documentons le passage en production.
             </p>
-            <p className="text-sm opacity-80 mb-8 max-w-2xl mx-auto">
+            <p className="mx-auto mb-8 max-w-2xl text-sm opacity-80">
               Aucun engagement long. Pas besoin de devenir spécialiste de l'IA. Commencez petit, mesurez la valeur, puis étendez uniquement si cela a du sens.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="text-base px-8">
+            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+              <Button asChild size="lg" variant="secondary" className="w-full text-sm sm:w-auto sm:text-base">
                 <Link to="/fr/automation-ia">
-                  Découvrir l'Automation Sprint <ArrowRight className="ml-2 w-4 h-4" />
+                  Découvrir l'Automation Sprint <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline-light" className="text-base px-8">
+              <Button asChild size="lg" variant="outline-light" className="w-full text-sm sm:w-auto sm:text-base">
                 <Link to="/fr/rendez-vous">Parler de Votre Workflow</Link>
               </Button>
             </div>
