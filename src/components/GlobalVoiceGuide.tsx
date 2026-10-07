@@ -116,7 +116,7 @@ const copy = {
     book: "Prendre un rendez-vous",
     askAgain: "Reparler au site",
     privacy:
-      "NLG ne sauvegarde pas de fichier audio dans cette expérience. Le navigateur transcrit votre voix pour permettre au site de comprendre votre demande.",
+      "NLG ne conserve pas le fichier audio. Votre navigateur peut traiter la voix via son service de reconnaissance ; le texte sert à vous guider.",
     unsupported:
       "La saisie vocale n’est pas disponible sur ce navigateur. Vous pouvez continuer en écrivant.",
     denied:
@@ -329,7 +329,7 @@ const GlobalVoiceGuide = () => {
 
   const hasProfile = useMemo(() => {
     try {
-      return !!localStorage.getItem(PROFILE_KEY);
+      return !!sessionStorage.getItem(PROFILE_KEY);
     } catch {
       return false;
     }
@@ -586,7 +586,7 @@ const GlobalVoiceGuide = () => {
     };
 
     try {
-      localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+      sessionStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
     } catch {
       // no-op
     }
@@ -596,6 +596,10 @@ const GlobalVoiceGuide = () => {
       language: lang,
       recommendation: primary.key,
     });
+    // The website guides the visitor rather than presenting a directory of choices.
+    if (location.pathname !== primary.route) {
+      navigate(primary.route);
+    }
   };
 
   const startVoice = async () => {
@@ -836,7 +840,7 @@ const GlobalVoiceGuide = () => {
 
       {panelOpen && (
         <div className="fixed inset-x-3 bottom-3 z-[80] sm:inset-x-auto sm:bottom-5 sm:right-5 sm:w-[390px]">
-          <div className="overflow-hidden rounded-[1.5rem] border border-primary/15 bg-background/97 shadow-2xl backdrop-blur-xl">
+          <div className="overflow-hidden rounded-[1.5rem] border border-primary/15 bg-background/95 shadow-2xl backdrop-blur-xl">
             <div className="flex items-center justify-between border-b border-border/70 px-4 py-3">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
@@ -884,7 +888,7 @@ const GlobalVoiceGuide = () => {
               <div className="p-5">
                 <div className="text-center">
                   <h2 className="text-lg font-semibold">{t.listening}</h2>
-                  <p className="mt-1 text-xs text-muted-foreground">{t.listeningHint}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{firstPrompt ? t.firstText : t.nextText}</p>
                 </div>
 
                 <div className="mt-5 flex h-24 items-center justify-center gap-[5px] rounded-2xl border border-primary/10 bg-primary/[0.035] px-4">
@@ -903,7 +907,7 @@ const GlobalVoiceGuide = () => {
                     {String(Math.floor(seconds / 60)).padStart(2, "0")}:
                     {String(seconds % 60).padStart(2, "0")}
                   </span>
-                  <span>{t.privacy}</span>
+                  <span className="max-w-[230px] text-right text-[10px] leading-tight">{t.privacy}</span>
                 </div>
 
                 {error && <p className="mt-3 text-xs text-destructive">{error}</p>}
@@ -989,15 +993,16 @@ const GlobalVoiceGuide = () => {
                   </p>
                 </div>
 
-                <Button
-                  size="lg"
-                  className="mt-4 w-full rounded-xl"
-                  onClick={openRecommendation}
-                  disabled={location.pathname === recommendation.route}
-                >
-                  {location.pathname === recommendation.route ? t.stayHere : t.openPage}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                {location.pathname !== recommendation.route && (
+                  <Button
+                    size="lg"
+                    className="mt-4 w-full rounded-xl"
+                    onClick={openRecommendation}
+                  >
+                    {t.openPage}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
 
                 <div className="mt-3 grid grid-cols-2 gap-2">
                   <Button
