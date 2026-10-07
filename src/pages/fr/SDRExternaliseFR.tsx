@@ -19,7 +19,7 @@ const SDRExternaliseFR = () => {
       { "@type": "FAQPage", "mainEntity": [
         { "@type": "Question", "name": "Qu'est-ce qu'un SDR externalisé ?", "acceptedAnswer": { "@type": "Answer", "text": "Un SDR externalisé est un opérateur commercial formé fourni par un partenaire externe qui exécute la prospection structurée, la qualification des leads et la prise de rendez-vous — sans les coûts d'embauche, de montée en compétences ou de management interne." } },
         { "@type": "Question", "name": "Quelle différence avec la génération de leads traditionnelle ?", "acceptedAnswer": { "@type": "Answer", "text": "La lead gen traditionnelle livre des listes de contacts. Le SDR externalisé livre des rendez-vous qualifiés à travers l'exécution outbound structurée, l'intégration CRM et la qualification professionnelle." } },
-        { "@type": "Question", "name": "En combien de temps les résultats arrivent-ils ?", "acceptedAnswer": { "@type": "Answer", "text": "Premiers rendez-vous qualifiés en 2-3 semaines. Activité commerciale constante et optimisée au mois 2-3." } },
+        { "@type": "Question", "name": "En combien de temps un SDR externalisé peut-il être opérationnel ?", "acceptedAnswer": { "@type": "Answer", "text": "Le délai dépend de la clarté de l'ICP, de la disponibilité des données, du canal et du cycle de vente. L'objectif est d'activer rapidement un dispositif mesurable, puis d'optimiser le messaging et la qualification à partir des réponses réelles." } },
         { "@type": "Question", "name": "Quels secteurs bénéficient du SDR externalisé ?", "acceptedAnswer": { "@type": "Answer", "text": "SaaS, FinTech, PropTech et services professionnels — tout secteur B2B avec des deals supérieurs à 5 000€ et un profil client défini." } }
       ]}
     ]
@@ -59,9 +59,9 @@ const SDRExternaliseFR = () => {
 
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Pourquoi l'externalisation SDR structurée surpasse le recrutement interne</h2>
-            <p>Construire une fonction SDR interne implique recrutement, onboarding, outils, management et coaching continu avant que la prospection devienne réellement reproductible. Pour beaucoup d'entreprises en croissance, cela crée des coûts fixes avant même d'avoir validé le modèle outbound.</p>
-            <p>Le modèle SDR externalisé de NLG Consulting élimine ces variables. Nous déployons des opérateurs formés avec des workflows établis, des outils de prospection augmentés par l'IA et des séquences multicanal éprouvées — délivrant des conversations commerciales qualifiées en semaines, pas en mois.</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">SDR externalisé : quand externaliser plutôt que recruter ?</h2>
+            <p>Un SDR externalisé devient particulièrement pertinent lorsqu'une entreprise veut tester ou accélérer un canal outbound sans attendre le recrutement, l'onboarding et la montée en compétence d'une équipe interne. Construire une fonction SDR interne implique recrutement, outils, management et coaching continu avant que la prospection devienne réellement reproductible. Pour beaucoup d'entreprises en croissance, cela crée des coûts fixes avant même d'avoir validé le modèle outbound.</p>
+            <p>Le modèle SDR externalisé de NLG Consulting permet de démarrer avec une structure existante : ICP, recherche de prospects, séquences, qualification, CRM et reporting. La performance dépend du marché, de l'offre et du cycle de vente ; le système est piloté par les réponses, les rendez-vous et la qualité du pipeline plutôt que par le seul volume de messages.</p>
             <p>Contrairement aux prestataires SDR traditionnels, notre approche est informée par notre pratique de <Link to="/fr/conseil-ia" className="text-primary hover:underline font-medium">conseil IA</Link> et de <Link to="/fr/conseil" className="text-primary hover:underline font-medium">conseil stratégique</Link> — assurant que votre système outbound s'aligne avec votre stratégie GTM et vos objectifs de revenus. Pour comparer les deux modèles, consultez notre guide <Link to="/fr/ressources/sdr-externalise-vs-interne" className="text-primary hover:underline font-medium">SDR externalisé vs interne</Link>.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Ce qui est inclus dans chaque engagement</h3>
             <ul>
@@ -121,7 +121,7 @@ const SDRExternaliseFR = () => {
                 { q: "Qu'est-ce qu'un SDR externalisé ?", a: "Un opérateur commercial formé fourni par un partenaire externe qui exécute la prospection structurée, la qualification et la prise de rendez-vous — sans coûts d'embauche ni management interne." },
                 { q: "Quelle différence avec la génération de leads ?", a: "La lead gen livre des listes. Le SDR externalisé livre des rendez-vous qualifiés par l'exécution outbound structurée et la qualification professionnelle." },
                 { q: "Que comprend un engagement ?", a: "Définition ICP, recherche de prospects, prospection multicanal, intégration CRM, qualification, prise de rendez-vous et reporting hebdomadaire." },
-                { q: "En combien de temps le pipeline est-il généré ?", a: "Premiers rendez-vous qualifiés en 2-3 semaines. Activité commerciale optimisée au mois 2-3." }
+                { q: "En combien de temps un SDR externalisé peut-il être opérationnel ?", a: "Le délai dépend de l'ICP, des données disponibles, des canaux et du cycle de vente. Nous privilégions une activation mesurable puis une optimisation continue à partir des réponses et de la qualité des rendez-vous." }
               ].map((item, i) => (
                 <div key={i} className="bg-background rounded-lg p-6">
                   <h3 className="font-semibold text-lg mb-2">{item.q}</h3>
