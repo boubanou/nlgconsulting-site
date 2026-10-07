@@ -319,6 +319,7 @@ const GlobalVoiceGuide = () => {
   const animationFrameRef = useRef<number | null>(null);
   const listeningRef = useRef(false);
   const lastWaveUpdateRef = useRef(0);
+  const startVoiceRef = useRef<() => void>(() => undefined);
 
   const isPublicPage =
     !location.pathname.startsWith("/admin") &&
@@ -382,9 +383,18 @@ const GlobalVoiceGuide = () => {
   }, [inviteOpen, panelOpen]);
 
   useEffect(() => {
+    // Clear the old prototype's persistent transcript; the new flow is session-only.
+    try {
+      localStorage.removeItem(PROFILE_KEY);
+    } catch {
+      // no-op
+    }
+  }, []);
+
+  useEffect(() => {
     const openVoice = () => {
       setInviteOpen(false);
-      void startVoice();
+      startVoiceRef.current();
     };
     const openText = () => {
       setInviteOpen(false);
@@ -400,7 +410,7 @@ const GlobalVoiceGuide = () => {
       window.removeEventListener("nlg:open-voice-guide", openVoice);
       window.removeEventListener("nlg:open-text-guide", openText);
     };
-  });
+  }, []);
 
   useEffect(() => {
     let timer: number | undefined;
@@ -762,6 +772,11 @@ const GlobalVoiceGuide = () => {
     setRecommendation(null);
     setError("");
     setMode("idle");
+  };
+
+  // Called by homepage CTA without re-attaching window listeners during waveform updates.
+  startVoiceRef.current = () => {
+    void startVoice();
   };
 
   const closePanel = () => {
