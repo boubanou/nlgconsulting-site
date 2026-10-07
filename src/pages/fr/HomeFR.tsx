@@ -185,7 +185,7 @@ const HomeFR = () => {
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Un Site Auquel Vous Pouvez Parler</p>
               <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Ne cherchez plus dans le site. Expliquez-lui ce dont vous avez besoin.</h2>
               <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Présentez votre activité et ce que vous voulez améliorer à voix haute. NLG comprend votre demande et vous guide directement vers la page de conseil IA, automatisation, vente ou croissance la plus pertinente. Vous préférez ne pas parler ? Écrivez.
+                Présentez votre activité et ce que vous voulez améliorer à voix haute. NLG comprend votre demande et vous guide directement vers la page de conseil IA, automatisation, vente ou croissance la plus pertinente. Vous préférez ne pas parler ? Écrivez. <Link to="/fr/ressources/site-web-vocal-ia" className="font-medium text-primary hover:underline">Découvrez comment fonctionne la navigation vocale IA</Link>.
               </p>
             </div>
             <Button type="button" variant="outline" className="w-full md:w-auto" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
