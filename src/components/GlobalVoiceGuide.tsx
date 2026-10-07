@@ -40,9 +40,9 @@ const INVITE_KEY = "nlg_voice_invite_seen";
 const copy = {
   en: {
     new: "New",
-    inviteTitle: "Talk to this website.",
+    inviteTitle: "Talk to the website. It guides you.",
     inviteText:
-      "Introduce yourself, tell us what your business does and what you need. NLG will guide you directly to the most useful page.",
+      "Say what your business does and what you need. The website will take you directly to the most useful page.",
     inviteReturn: "Have another question? Talk to the site.",
     talk: "Talk to the site",
     write: "I prefer typing",
@@ -84,9 +84,9 @@ const copy = {
   },
   fr: {
     new: "Nouveau",
-    inviteTitle: "Parlez à ce site.",
+    inviteTitle: "Parlez au site. Il vous guide.",
     inviteText:
-      "Présentez-vous, expliquez ce que fait votre entreprise et ce dont vous avez besoin. NLG vous guidera directement vers la page la plus utile.",
+      "Présentez votre activité et votre besoin à voix haute. Le site vous emmène directement à la page la plus utile.",
     inviteReturn: "Une autre question ? Parlez au site.",
     talk: "Parler au site",
     write: "Je préfère écrire",
@@ -577,10 +577,27 @@ const GlobalVoiceGuide = () => {
     setMode("processing");
     setError("");
 
-    const primary = getPrimaryRecommendation(text, lang);
+    let primary = getPrimaryRecommendation(text, lang);
+    // A brief follow-up such as "tell me more" should retain the prior business context.
+    let previousContext = "";
+    try {
+      const prior = sessionStorage.getItem(PROFILE_KEY);
+      if (prior) {
+        const parsed: VoiceProfile = JSON.parse(prior);
+        previousContext = parsed.transcript.slice(0, 2000);
+        if (primary.score <= 1 && parsed.recommendations?.[0]) {
+          primary = parsed.recommendations[0];
+        }
+      }
+    } catch {
+      // no-op
+    }
     setRecommendation(primary);
 
-    const aiSummary = await askGrego(text, primary);
+    const aiSummary = await askGrego(
+      previousContext ? `Previous request: ${previousContext}. New request: ${text}` : text,
+      primary,
+    );
     const finalSummary = aiSummary || t.fallbackSummary;
     setSummary(finalSummary);
 
