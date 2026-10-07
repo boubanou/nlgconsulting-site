@@ -1,9 +1,12 @@
 import { lazy, Suspense, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const GregoChatbotImpl = lazy(() => import("./GregoChatbotImpl"));
 
 const GregoChatbot = () => {
   const [ready, setReady] = useState(false);
+  const location = useLocation();
+  const isVoiceHomepage = location.pathname === "/" || location.pathname === "/fr";
 
   useEffect(() => {
     const activate = () => setReady(true);
@@ -19,7 +22,7 @@ const GregoChatbot = () => {
     };
   }, []);
 
-  if (!ready) return null;
+  if (!ready || isVoiceHomepage) return null;
 
   return (
     <Suspense fallback={null}>
