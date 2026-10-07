@@ -331,6 +331,126 @@ export const seoRoutes: SeoRouteMeta[] = [
     "canonical": "https://www.nlgconsulting.co/fr/ia-pour-fintech",
     "h1": "Systèmes de croissance IA pour entreprises FinTech",
     "alternate": "/ai-for-fintech"
+  },
+  {
+    "path": "/about",
+    "lang": "en",
+    "cluster": "core",
+    "title": "About NLG Consulting | AI Automation & Consulting Operators",
+    "description": "Meet NLG Consulting and founder Gregory Brenig. Operator-led AI consulting, automation and growth execution for small businesses and growing B2B companies.",
+    "canonical": "https://www.nlgconsulting.co/about",
+    "h1": "AI Consulting & Execution, Built by Operators",
+    "alternate": "/fr/a-propos"
+  },
+  {
+    "path": "/fr/a-propos",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "À propos de NLG Consulting | Automatisation & Conseil IA",
+    "description": "Découvrez NLG Consulting et son fondateur Gregory Brenig : conseil IA, automatisation et exécution business pour PME et entreprises B2B en croissance.",
+    "canonical": "https://www.nlgconsulting.co/fr/a-propos",
+    "h1": "Conseil IA & Architecture de Croissance, dirigé par un opérateur",
+    "alternate": "/about"
+  },
+  {
+    "path": "/advisory",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "Strategic Advisory | GTM & Growth Systems | NLG",
+    "description": "Operator-led strategic advisory for founders and growing B2B companies: GTM, RevOps, commercial model, AI adoption and growth systems.",
+    "canonical": "https://www.nlgconsulting.co/advisory",
+    "h1": "Strategic Advisory for Founders Building Growth Systems",
+    "alternate": "/fr/conseil"
+  },
+  {
+    "path": "/fr/conseil",
+    "lang": "fr",
+    "cluster": "sales",
+    "title": "Conseil Stratégique | GTM & Systèmes de Croissance | NLG",
+    "description": "Conseil stratégique opérateur pour fondateurs et entreprises B2B : GTM, RevOps, modèle commercial, adoption IA et systèmes de croissance.",
+    "canonical": "https://www.nlgconsulting.co/fr/conseil",
+    "h1": "Conseil Stratégique pour Fondateurs et Entreprises en Croissance",
+    "alternate": "/advisory"
+  },
+  {
+    "path": "/sales",
+    "lang": "en",
+    "cluster": "sales",
+    "title": "Outbound Systems & Revenue Infrastructure | NLG",
+    "description": "AI-enhanced outbound systems for B2B: pipeline architecture, SDR operations, CRM discipline and qualified meeting generation.",
+    "canonical": "https://www.nlgconsulting.co/sales",
+    "h1": "AI-Enhanced Outbound Systems & Revenue Infrastructure",
+    "alternate": "/fr/vente"
+  },
+  {
+    "path": "/fr/vente",
+    "lang": "fr",
+    "cluster": "sales",
+    "title": "Systèmes Outbound & Infrastructure Commerciale | NLG",
+    "description": "Systèmes outbound augmentés par l’IA : pipeline multicanal, opérations SDR, CRM et génération de rendez-vous qualifiés pour entreprises B2B.",
+    "canonical": "https://www.nlgconsulting.co/fr/vente",
+    "h1": "Systèmes Outbound & Infrastructure Commerciale Augmentés par l'IA",
+    "alternate": "/sales"
+  },
+  {
+    "path": "/web",
+    "lang": "en",
+    "cluster": "core",
+    "title": "Conversion Websites & SEO for B2B | NLG Studio",
+    "description": "Revenue-ready B2B websites, landing pages, SEO and conversion systems designed as commercial assets and connected to your growth stack.",
+    "canonical": "https://www.nlgconsulting.co/web",
+    "h1": "Revenue-Ready Websites Built for Conversion",
+    "alternate": "/fr/site-internet"
+  },
+  {
+    "path": "/fr/site-internet",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "Sites Web B2B, SEO & Conversion | NLG Studio",
+    "description": "Sites B2B, landing pages, SEO et systèmes de conversion conçus comme des actifs commerciaux connectés à votre croissance.",
+    "canonical": "https://www.nlgconsulting.co/fr/site-internet",
+    "h1": "Sites Web Pensés pour la Conversion et la Croissance",
+    "alternate": "/web"
+  },
+  {
+    "path": "/use-cases",
+    "lang": "en",
+    "cluster": "core",
+    "title": "AI Automation & Growth Use Cases | NLG Consulting",
+    "description": "Practical use cases for AI automation, outsourced SDR, B2B lead generation and sales process optimization for leadership teams.",
+    "canonical": "https://www.nlgconsulting.co/use-cases",
+    "h1": "AI Automation, Growth Systems & Strategic Use Cases",
+    "alternate": "/fr/cas-usage"
+  },
+  {
+    "path": "/fr/cas-usage",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "Automatisation IA & Cas d'Usage | NLG Consulting",
+    "description": "Scénarios pratiques d’automatisation IA, suivi commercial, SDR externalisé et génération de leads B2B pour équipes dirigeantes.",
+    "canonical": "https://www.nlgconsulting.co/fr/cas-usage",
+    "h1": "Automatisation IA, Systèmes de Croissance & Cas d'Usage Stratégiques",
+    "alternate": "/use-cases"
+  },
+  {
+    "path": "/insights",
+    "lang": "en",
+    "cluster": "core",
+    "title": "AI, Sales & B2B Growth Insights | NLG Consulting",
+    "description": "Practical guides on AI automation, AI consulting, sales systems, GTM and B2B growth from NLG Consulting.",
+    "canonical": "https://www.nlgconsulting.co/insights",
+    "h1": "AI, Sales & B2B Growth Insights",
+    "alternate": "/fr/ressources"
+  },
+  {
+    "path": "/fr/ressources",
+    "lang": "fr",
+    "cluster": "core",
+    "title": "Ressources IA, Sales & Growth B2B | NLG Consulting",
+    "description": "Guides pratiques sur l’automatisation IA, le conseil IA, la vente, le GTM et la croissance B2B par NLG Consulting.",
+    "canonical": "https://www.nlgconsulting.co/fr/ressources",
+    "h1": "Ressources IA, Sales & Growth B2B",
+    "alternate": "/insights"
   }
 ];
 
