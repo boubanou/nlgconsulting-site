@@ -85,4 +85,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/automate-sales-follow-up-with-ai"/>
     <lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.90</priority>
   </url>
+
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/ai-automation-for-small-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-automation-for-small-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/automatisation-ia-pme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-automation-for-small-business"/>
+    <lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/automatisation-ia-pme</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/ai-automation-for-small-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/automatisation-ia-pme"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/ai-automation-for-small-business"/>
+    <lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/insights/voice-ai-website-navigation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/voice-ai-website-navigation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/site-web-vocal-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/voice-ai-website-navigation"/>
+    <lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.nlgconsulting.co/fr/ressources/site-web-vocal-ia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nlgconsulting.co/insights/voice-ai-website-navigation"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.nlgconsulting.co/fr/ressources/site-web-vocal-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nlgconsulting.co/insights/voice-ai-website-navigation"/>
+    <lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.80</priority>
+  </url>
 </urlset>
