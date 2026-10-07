@@ -40,37 +40,37 @@ const INVITE_KEY = "nlg_voice_invite_seen";
 const copy = {
   en: {
     new: "New",
-    inviteTitle: "Talk to the website. It guides you.",
+    inviteTitle: "Talk to the site.",
     inviteText:
-      "Say what your business does and what you need. The website will take you directly to the most useful page.",
-    inviteReturn: "Have another question? Talk to the site.",
-    talk: "Talk to the site",
-    write: "I prefer typing",
+      "Describe your business and what you need — it guides you.",
+    inviteReturn: "Another question? Talk to the site.",
+    talk: "Speak",
+    write: "Type instead",
     close: "Close",
     introEyebrow: "NLG Voice Guide",
-    firstTitle: "Introduce yourself and tell us what you need.",
+    firstTitle: "Introduce your business.",
     firstText:
-      "Say who you are, what your business does, what is slowing you down, or what you want to improve. Speak naturally.",
-    nextTitle: "Ask the site anything.",
+      "Who are you, what do you do, and what would you like to improve?",
+    nextTitle: "Ask the site.",
     nextText:
-      "Tell us what you are trying to understand, improve or find. We will guide you to the right place.",
+      "Say what you are looking for — the site will guide you.",
     listening: "Listening…",
     listeningHint: "Speak naturally. Your words stay hidden while you talk.",
-    validate: "Done — guide me",
-    switchToText: "I prefer typing",
-    typeTitle: "Tell the site what you need.",
+    validate: "Done",
+    switchToText: "Type instead",
+    typeTitle: "Write what you need.",
     typePlaceholder:
-      "Introduce yourself, explain what your business does and what you would like to improve…",
+      "What does your business do, and what would you like to improve?",
     analyse: "Guide me",
-    backToVoice: "Use my voice",
-    processing: "Finding the best place for you…",
-    resultEyebrow: "Recommended next step",
-    resultPrefix: "Based on what you told us, start here:",
+    backToVoice: "Speak instead",
+    processing: "Guiding you…",
+    resultEyebrow: "For you",
+    resultPrefix: "Start here:",
     alreadyHere: "You are already on the most relevant page.",
     openPage: "Open the recommended page",
     stayHere: "Stay on this page",
-    book: "Book a strategy call",
-    askAgain: "Talk to the site again",
+    book: "Book a call",
+    askAgain: "Speak again",
     privacy:
       "No audio file is saved by NLG in this experience. The browser transcribes your speech so the site can understand your request.",
     unsupported:
@@ -84,37 +84,37 @@ const copy = {
   },
   fr: {
     new: "Nouveau",
-    inviteTitle: "Parlez au site. Il vous guide.",
+    inviteTitle: "Parlez au site.",
     inviteText:
-      "Présentez votre activité et votre besoin à voix haute. Le site vous emmène directement à la page la plus utile.",
+      "Dites ce que vous faites et ce que vous cherchez — il vous guide.",
     inviteReturn: "Une autre question ? Parlez au site.",
-    talk: "Parler au site",
-    write: "Je préfère écrire",
+    talk: "Parler",
+    write: "Écrire",
     close: "Fermer",
     introEyebrow: "Guide vocal NLG",
-    firstTitle: "Présentez-vous et expliquez-nous ce dont vous avez besoin.",
+    firstTitle: "Présentez votre activité.",
     firstText:
-      "Dites qui vous êtes, ce que fait votre entreprise, ce qui vous ralentit ou ce que vous voulez améliorer. Parlez naturellement.",
-    nextTitle: "Posez votre question au site.",
+      "Qui êtes-vous, que faites-vous et qu’aimeriez-vous améliorer ?",
+    nextTitle: "Posez votre question.",
     nextText:
-      "Expliquez ce que vous cherchez à comprendre, améliorer ou trouver. Le site vous guidera vers le bon endroit.",
+      "Dites ce que vous cherchez — le site vous guide.",
     listening: "Je vous écoute…",
-    listeningHint: "Parlez naturellement. Vos mots restent masqués pendant que vous parlez.",
-    validate: "Terminer — guidez-moi",
-    switchToText: "Je préfère écrire",
-    typeTitle: "Expliquez au site ce dont vous avez besoin.",
+    listeningHint: "Parlez naturellement. Vos mots restent masqués.",
+    validate: "Terminer",
+    switchToText: "Écrire",
+    typeTitle: "Écrivez votre demande.",
     typePlaceholder:
-      "Présentez-vous, expliquez ce que fait votre entreprise et ce que vous aimeriez améliorer…",
-    analyse: "Guidez-moi",
-    backToVoice: "Utiliser ma voix",
-    processing: "Je cherche le meilleur endroit pour vous…",
-    resultEyebrow: "Prochaine étape recommandée",
-    resultPrefix: "D’après ce que vous m’avez expliqué, commencez ici :",
+      "Que fait votre entreprise et qu’aimeriez-vous améliorer ?",
+    analyse: "Me guider",
+    backToVoice: "Parler plutôt",
+    processing: "Je vous guide…",
+    resultEyebrow: "Pour vous",
+    resultPrefix: "Commencez ici :",
     alreadyHere: "Vous êtes déjà sur la page la plus pertinente.",
     openPage: "Ouvrir la page recommandée",
     stayHere: "Rester sur cette page",
-    book: "Prendre un rendez-vous",
-    askAgain: "Reparler au site",
+    book: "Rendez-vous",
+    askAgain: "Reparler",
     privacy:
       "NLG ne conserve pas le fichier audio. Votre navigateur peut traiter la voix via son service de reconnaissance ; le texte sert à vous guider.",
     unsupported:
@@ -362,6 +362,9 @@ const GlobalVoiceGuide = () => {
     }
     if (alreadySeen) return;
 
+    const mobile = window.matchMedia("(max-width: 767px)").matches;
+    const invitationDelay = mobile ? 16000 : 12000;
+
     const timer = window.setTimeout(() => {
       setInviteOpen(true);
       try {
@@ -370,7 +373,7 @@ const GlobalVoiceGuide = () => {
         // no-op
       }
       track("voice_guide_invite_show", { language: lang });
-    }, 1200);
+    }, invitationDelay);
 
     return () => window.clearTimeout(timer);
   }, [hasProfile, isHome, isPublicPage, lang]);
@@ -378,7 +381,7 @@ const GlobalVoiceGuide = () => {
   // Let the invitation land, then collapse it back to the persistent microphone.
   useEffect(() => {
     if (!inviteOpen || panelOpen) return;
-    const timer = window.setTimeout(() => setInviteOpen(false), 11000);
+    const timer = window.setTimeout(() => setInviteOpen(false), 8000);
     return () => window.clearTimeout(timer);
   }, [inviteOpen, panelOpen]);
 
@@ -803,36 +806,36 @@ const GlobalVoiceGuide = () => {
   return (
     <>
       {inviteOpen && !panelOpen && (
-        <div className="nlg-voice-invite fixed right-3 top-[84px] z-[70] w-[min(330px,calc(100vw-24px))] sm:right-5 sm:top-[92px]">
-          <div className="rounded-2xl border border-primary/15 bg-background/95 p-4 shadow-2xl backdrop-blur-xl">
-            <div className="flex items-start gap-3">
+        <div className="nlg-voice-invite fixed right-3 top-[82px] z-[70] w-[min(282px,calc(100vw-24px))] sm:right-5 sm:top-[92px] sm:w-[300px]">
+          <div className="rounded-2xl border border-primary/15 bg-background/95 p-3 shadow-xl backdrop-blur-xl">
+            <div className="flex items-start gap-2.5">
               <button
                 type="button"
                 onClick={startVoice}
-                className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md transition-transform hover:scale-105"
+                className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md transition-transform hover:scale-105"
                 aria-label={t.talk}
               >
-                <Mic className="h-4 w-4" />
+                <Mic className="h-3.5 w-3.5" />
               </button>
 
               <div className="min-w-0 flex-1">
-                <div className="mb-1 flex items-center gap-2">
-                  <span className="rounded-full bg-secondary/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-secondary-foreground">
+                <div className="mb-0.5 flex items-center gap-1.5">
+                  <span className="rounded-full bg-secondary/15 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-secondary-foreground">
                     {t.new}
                   </span>
-                  <span className="text-xs font-semibold text-foreground">{t.inviteTitle}</span>
+                  <span className="text-[12px] font-semibold text-foreground">{t.inviteTitle}</span>
                 </div>
-                <p className="text-xs leading-relaxed text-muted-foreground">
+                <p className="text-[11px] leading-[1.45] text-muted-foreground">
                   {hasProfile ? t.inviteReturn : t.inviteText}
                 </p>
 
-                <div className="mt-3 flex items-center gap-3">
+                <div className="mt-2 flex items-center gap-3">
                   <button
                     type="button"
                     onClick={startVoice}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
+                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline"
                   >
-                    <Mic className="h-3.5 w-3.5" />
+                    <Mic className="h-3 w-3" />
                     {t.talk}
                   </button>
                   <button
@@ -842,7 +845,7 @@ const GlobalVoiceGuide = () => {
                       setPanelOpen(true);
                       setMode("text");
                     }}
-                    className="text-[11px] text-muted-foreground hover:text-foreground hover:underline"
+                    className="text-[10px] text-muted-foreground hover:text-foreground hover:underline"
                   >
                     {t.write}
                   </button>
@@ -867,12 +870,12 @@ const GlobalVoiceGuide = () => {
           type="button"
           onClick={startVoice}
           style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 14px)" }}
-          className="nlg-voice-launcher fixed right-4 z-[65] inline-flex items-center gap-2 rounded-full border border-primary/15 bg-background/95 px-3.5 py-2.5 text-sm font-semibold text-foreground shadow-xl backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-2xl sm:right-6"
+          className="nlg-voice-launcher fixed right-3 z-[65] inline-flex items-center gap-1.5 rounded-full border border-primary/15 bg-background/95 px-2.5 py-2 text-xs font-semibold text-foreground shadow-lg backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-xl sm:right-6 sm:px-3"
           aria-label={t.talk}
         >
-          <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+          <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <span className="absolute inset-0 rounded-full border border-primary/30 nlg-voice-pulse" />
-            <Mic className="h-4 w-4" />
+            <Mic className="h-3.5 w-3.5" />
           </span>
           <span>{t.talk}</span>
         </button>
@@ -881,18 +884,13 @@ const GlobalVoiceGuide = () => {
       {panelOpen && (
         <div
           style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 12px)" }}
-          className="fixed inset-x-3 z-[80] sm:inset-x-auto sm:right-5 sm:w-[390px]"
+          className="fixed right-3 z-[80] w-[min(318px,calc(100vw-24px))] sm:right-5 sm:w-[342px]"
         >
-          <div className="max-h-[calc(100dvh-1.5rem)] overflow-y-auto rounded-[1.5rem] border border-primary/15 bg-background/95 shadow-2xl backdrop-blur-xl">
-            <div className="flex items-center justify-between border-b border-border/70 px-4 py-3">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
-                  {t.introEyebrow}
-                </p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  {location.pathname}
-                </p>
-              </div>
+          <div className="max-h-[calc(100dvh-1.25rem)] overflow-y-auto rounded-[1.25rem] border border-primary/15 bg-background/95 shadow-2xl backdrop-blur-xl">
+            <div className="flex items-center justify-between border-b border-border/70 px-3.5 py-2.5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
+                {t.introEyebrow}
+              </p>
               <button
                 type="button"
                 onClick={closePanel}
@@ -904,15 +902,15 @@ const GlobalVoiceGuide = () => {
             </div>
 
             {mode === "idle" && (
-              <div className="p-5">
-                <h2 className="text-lg font-semibold">
+              <div className="p-4">
+                <h2 className="text-base font-semibold">
                   {firstPrompt ? t.firstTitle : t.nextTitle}
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">
                   {firstPrompt ? t.firstText : t.nextText}
                 </p>
 
-                <Button size="lg" className="mt-5 w-full rounded-xl" onClick={startVoice}>
+                <Button size="lg" className="mt-3 w-full rounded-xl" onClick={startVoice}>
                   <Mic className="mr-2 h-4 w-4" />
                   {t.talk}
                 </Button>
@@ -920,7 +918,7 @@ const GlobalVoiceGuide = () => {
                 <button
                   type="button"
                   onClick={() => setMode("text")}
-                  className="mt-3 w-full text-center text-xs text-muted-foreground hover:text-foreground hover:underline"
+                  className="mt-2.5 w-full text-center text-[11px] text-muted-foreground hover:text-foreground hover:underline"
                 >
                   {t.write}
                 </button>
@@ -928,36 +926,36 @@ const GlobalVoiceGuide = () => {
             )}
 
             {mode === "voice" && (
-              <div className="p-5">
+              <div className="p-4">
                 <div className="text-center">
-                  <h2 className="text-lg font-semibold">{t.listening}</h2>
-                  <p className="mt-1 text-xs text-muted-foreground">{firstPrompt ? t.firstText : t.nextText}</p>
+                  <h2 className="text-base font-semibold">{t.listening}</h2>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">{firstPrompt ? t.firstText : t.nextText}</p>
                 </div>
 
-                <div className="mt-5 flex h-24 items-center justify-center gap-[5px] rounded-2xl border border-primary/10 bg-primary/[0.035] px-4">
+                <div className="mt-3.5 flex h-16 items-center justify-center gap-[4px] rounded-xl border border-primary/10 bg-primary/[0.035] px-3">
                   {waveform.map((height, index) => (
                     <span
                       key={index}
-                      className="w-[5px] rounded-full bg-primary transition-[height] duration-75"
+                      className="w-[4px] rounded-full bg-primary transition-[height] duration-75"
                       style={{ height: `${Math.max(10, height)}%` }}
                     />
                   ))}
                 </div>
 
-                <div className="mt-3 flex items-center justify-between text-[11px] text-muted-foreground">
+                <div className="mt-2.5 flex items-center justify-between text-[10px] text-muted-foreground">
                   <span className="inline-flex items-center gap-1.5">
                     <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
                     {String(Math.floor(seconds / 60)).padStart(2, "0")}:
                     {String(seconds % 60).padStart(2, "0")}
                   </span>
-                  <span className="max-w-[230px] text-right text-[10px] leading-tight">{t.privacy}</span>
+                  <span className="text-right text-[9px] leading-tight">{lang === "fr" ? "Audio non conservé par NLG" : "Audio not stored by NLG"}</span>
                 </div>
 
                 {error && <p className="mt-3 text-xs text-destructive">{error}</p>}
 
                 <Button
                   size="lg"
-                  className="mt-5 w-full rounded-xl"
+                  className="mt-3.5 w-full rounded-xl"
                   onClick={finishVoice}
                 >
                   <MicOff className="mr-2 h-4 w-4" />
@@ -967,7 +965,7 @@ const GlobalVoiceGuide = () => {
                 <button
                   type="button"
                   onClick={switchToText}
-                  className="mt-3 w-full text-center text-xs text-muted-foreground hover:text-foreground hover:underline"
+                  className="mt-2.5 w-full text-center text-[11px] text-muted-foreground hover:text-foreground hover:underline"
                 >
                   {t.switchToText}
                 </button>
@@ -975,20 +973,20 @@ const GlobalVoiceGuide = () => {
             )}
 
             {mode === "text" && (
-              <div className="p-5">
-                <h2 className="text-lg font-semibold">{t.typeTitle}</h2>
+              <div className="p-4">
+                <h2 className="text-base font-semibold">{t.typeTitle}</h2>
                 <Textarea
                   value={transcript}
                   onChange={(event) => setTranscript(event.target.value)}
                   placeholder={t.typePlaceholder}
-                  className="mt-4 min-h-[145px] resize-none rounded-2xl border-primary/10 bg-background text-sm leading-relaxed"
+                  className="mt-3 min-h-[104px] resize-none rounded-xl border-primary/10 bg-background text-sm leading-relaxed"
                 />
 
                 {error && <p className="mt-3 text-xs text-destructive">{error}</p>}
 
                 <Button
                   size="lg"
-                  className="mt-4 w-full rounded-xl"
+                  className="mt-3 w-full rounded-xl"
                   onClick={() => analyse(transcript)}
                   disabled={!transcript.trim()}
                 >
@@ -999,7 +997,7 @@ const GlobalVoiceGuide = () => {
                 <button
                   type="button"
                   onClick={startVoice}
-                  className="mt-3 w-full text-center text-xs text-muted-foreground hover:text-foreground hover:underline"
+                  className="mt-2.5 w-full text-center text-[11px] text-muted-foreground hover:text-foreground hover:underline"
                 >
                   <Mic className="mr-1 inline h-3.5 w-3.5" />
                   {t.backToVoice}
@@ -1008,30 +1006,30 @@ const GlobalVoiceGuide = () => {
             )}
 
             {mode === "processing" && (
-              <div className="flex min-h-[280px] flex-col items-center justify-center p-6 text-center">
-                <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-primary/5">
+              <div className="flex min-h-[190px] flex-col items-center justify-center p-5 text-center">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-primary/5">
                   <div className="absolute inset-1 animate-ping rounded-full border border-primary/20" />
-                  <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                  <Loader2 className="h-5 w-5 animate-spin text-primary" />
                 </div>
-                <h2 className="mt-5 text-lg font-semibold">{t.processing}</h2>
+                <h2 className="mt-4 text-base font-semibold">{t.processing}</h2>
               </div>
             )}
 
             {mode === "result" && recommendation && (
-              <div className="p-5">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+              <div className="p-4">
+                <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">
                   <CheckCircle2 className="h-4 w-4 text-secondary" />
                   {t.resultEyebrow}
                 </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{summary}</p>
+                <p className="mt-2.5 text-[12px] leading-relaxed text-muted-foreground">{summary}</p>
 
-                <div className="mt-4 rounded-2xl border border-primary/15 bg-primary/[0.035] p-4">
+                <div className="mt-3 rounded-xl border border-primary/15 bg-primary/[0.035] p-3">
                   <p className="text-xs text-muted-foreground">
                     {location.pathname === recommendation.route ? t.alreadyHere : t.resultPrefix}
                   </p>
-                  <h3 className="mt-1.5 text-base font-semibold">{recommendation.title}</h3>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  <h3 className="mt-1 text-sm font-semibold">{recommendation.title}</h3>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
                     {recommendation.description}
                   </p>
                 </div>
@@ -1047,7 +1045,7 @@ const GlobalVoiceGuide = () => {
                   </Button>
                 )}
 
-                <div className="mt-3 grid grid-cols-2 gap-2">
+                <div className="mt-2.5 grid grid-cols-2 gap-2">
                   <Button
                     variant="outline"
                     className="rounded-xl"
