@@ -219,6 +219,42 @@ type SitemapEntry = {
   alternates: Record<string, string>;
 };
 
+type DerivedRouteSeo = {
+  title?: string;
+  description?: string;
+};
+
+function readRouteComponentSeo(): Map<string, DerivedRouteSeo> {
+  const result = new Map<string, DerivedRouteSeo>();
+  const appSource = fs.readFileSync(path.resolve(process.cwd(), "src/App.tsx"), "utf8");
+  const componentImports = new Map<string, string>();
+
+  for (const match of appSource.matchAll(/const\s+(\w+)\s*=\s*lazy\(\(\)\s*=>\s*import\(["']([^"']+)["']\)\);/g)) {
+    componentImports.set(match[1], match[2]);
+  }
+
+  for (const match of appSource.matchAll(/<Route\s+path="([^"]+)"\s+element=\{<(\w+)/g)) {
+    const routePath = match[1];
+    const componentName = match[2];
+    if (routePath.includes(":") || routePath === "*") continue;
+
+    const importPath = componentImports.get(componentName);
+    if (!importPath) continue;
+
+    const relative = importPath.replace(/^\.\//, "");
+    const sourcePath = path.resolve(process.cwd(), "src", `${relative}.tsx`);
+    if (!fs.existsSync(sourcePath)) continue;
+
+    const source = fs.readFileSync(sourcePath, "utf8");
+    const title = source.match(/<title>([^<{]+)<\/title>/)?.[1]?.trim();
+    const description = source.match(/<meta\s+name="description"\s+content="([^"]+)"\s*\/?\s*>/)?.[1]?.trim();
+
+    if (title || description) result.set(routePath, { title, description });
+  }
+
+  return result;
+}
+
 function readSitemapEntries(): SitemapEntry[] {
   const xml = fs.readFileSync(path.resolve(process.cwd(), "public/sitemap.xml"), "utf8");
   const blocks = Array.from(xml.matchAll(/<url>([\s\S]*?)<\/url>/g)).map((m) => m[1]);
@@ -234,12 +270,22 @@ function readSitemapEntries(): SitemapEntry[] {
   }).filter(Boolean) as SitemapEntry[];
 }
 
-function applySitemapCanonical(template: string, entry: SitemapEntry): string {
+function applySitemapCanonical(template: string, entry: SitemapEntry, derived?: DerivedRouteSeo): string {
   let html = template;
   const lang = entry.path.startsWith("/fr") ? "fr" : "en";
   html = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
   html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?\s*>/, `<link rel="canonical" href="${escapeAttr(entry.canonical)}">`);
   html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?\s*>/, `<meta property="og:url" content="${escapeAttr(entry.canonical)}">`);
+  if (derived?.title) {
+    html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(derived.title)}</title>`);
+    html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/?\s*>/, `<meta property="og:title" content="${escapeAttr(derived.title)}">`);
+    html = html.replace(/<meta name="twitter:title" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:title" content="${escapeAttr(derived.title)}">`);
+  }
+  if (derived?.description) {
+    html = html.replace(/<meta name="description" content="[^"]*"\s*\/?\s*>/, `<meta name="description" content="${escapeAttr(derived.description)}">`);
+    html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?\s*>/, `<meta property="og:description" content="${escapeAttr(derived.description)}">`);
+    html = html.replace(/<meta name="twitter:description" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:description" content="${escapeAttr(derived.description)}">`);
+  }
   html = html.replace(/<meta property="og:locale" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale" content="${lang === "fr" ? "fr_FR" : "en_US"}">`);
   html = html.replace(/<meta property="og:locale:alternate" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale:alternate" content="${lang === "fr" ? "en_US" : "fr_FR"}">`);
   if (entry.alternates["x-default"]) {
@@ -302,13 +348,14 @@ export default function seoPrerender(): Plugin {
       ]);
 
       const sitemapEntries = readSitemapEntries();
+      const derivedRouteSeo = readRouteComponentSeo();
       let fallbackCount = 0;
       for (const sitemapEntry of sitemapEntries) {
         if (handled.has(sitemapEntry.path) || sitemapEntry.path === "/") continue;
         this.emitFile({
           type: "asset",
           fileName: sitemapEntry.path.replace(/^\//, "") + "/index.html",
-          source: applySitemapCanonical(template, sitemapEntry),
+          source: applySitemapCanonical(template, sitemapEntry, derivedRouteSeo.get(sitemapEntry.path)),
         });
         fallbackCount++;
       }
