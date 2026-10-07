@@ -51,8 +51,8 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>AI Growth Systems & Revenue Operations | NLG Consulting</title>
-        <meta name="description" content="AI consulting, workflow automation, AI agents, outbound infrastructure, RevOps, and strategic advisory for FinTech, PropTech, SaaS & B2B. Book a strategy call." />
+        <title>AI, Automation & Growth Services for Small and Growing Businesses | NLG</title>
+        <meta name="description" content="Practical AI, automation, sales growth and strategic advisory for small businesses, professionals and growing companies. Start with the business outcome; we handle the technology." />
         <link rel="canonical" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/services" />
@@ -72,10 +72,10 @@ const Services = () => {
         {/* Hero */}
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">AI Consulting · RevOps · Growth Systems</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">AI-Powered Growth Systems & Revenue Operations</h1>
+            <Badge variant="outline" className="px-4 py-2 text-sm mb-6">AI · Automation · Revenue · Optimisation</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Start With What You Want to Improve — Not the Technology</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              End-to-end AI consulting, workflow automation, agentic systems, outbound infrastructure, and strategic advisory — designed for FinTech, PropTech, SaaS, and B2B companies that need structured execution, not just strategy decks.
+              Save time. Reduce costs. Increase revenue. Improve conversion, margins or customer experience. Tell us the business outcome — we identify the right combination of AI, automation, growth systems and strategic support.
             </p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/book">Book a Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -87,8 +87,8 @@ const Services = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
             <div className="prose prose-lg text-muted-foreground max-w-none">
-              <h2 className="text-3xl font-bold text-foreground mb-6">From Scattered Initiatives to Structured Commercial Execution</h2>
-              <p>Most companies don't lack tools — they lack structured execution. They invest in AI without a clear commercial application. They run outbound without pipeline architecture. They build websites without conversion logic. The result: scattered initiatives, inconsistent performance, and limited commercial visibility.</p>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Technology Should Create Business Leverage</h2>
+              <p>You do not need to know which AI model, automation platform or integration you need before talking to us. You also do not need to have a major operational problem. We can improve an already healthy business by increasing capacity, speed, consistency, revenue or profitability.</p>
               <p>NLG Consulting brings the structure. We combine <Link to="/ai-consulting" className="text-primary hover:underline font-medium">AI consulting</Link>, <Link to="/ai-automation" className="text-primary hover:underline font-medium">workflow automation</Link>, <Link to="/ai-agents-for-business" className="text-primary hover:underline font-medium">agentic AI systems</Link>, <Link to="/sales" className="text-primary hover:underline font-medium">outbound infrastructure</Link>, and <Link to="/advisory" className="text-primary hover:underline font-medium">strategic advisory</Link> into growth systems that generate qualified meetings and measurable revenue.</p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Built by Operators, for Operators</h3>
               <p>We've built and scaled companies across <Link to="/ai-for-proptech" className="text-primary hover:underline font-medium">PropTech</Link>, <Link to="/ai-for-fintech" className="text-primary hover:underline font-medium">FinTech</Link>, and SaaS. Our <Link to="/ventures" className="text-primary hover:underline font-medium">venture portfolio</Link> and <Link to="/use-cases" className="text-primary hover:underline font-medium">use cases</Link> demonstrate the same operating discipline we apply to client engagements.</p>
