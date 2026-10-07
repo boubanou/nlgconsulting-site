@@ -44,7 +44,7 @@ const AIConsulting = () => {
   return (
     <>
       <Helmet>
-        <title>AI Consulting for Small Business & B2B | Audit to Implementation | NLG</title>
+        <title>AI Consulting for Small Business & B2B | NLG</title>
         <meta name="description" content="AI consulting for small and growing businesses: identify high-value use cases, map workflows, build a practical AI roadmap and implement automation and AI agents." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-consulting" />
