@@ -16,7 +16,7 @@ const AIConsulting = () => {
         "@type": "Service",
         "name": "AI Consulting for Business: Audit, Roadmap & Implementation",
         "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
-        "description": "Operator-led AI consulting for FinTech, PropTech, SaaS and B2B companies. We help leadership teams adopt AI workflows, agentic systems, and operational AI to improve commercial performance and founder efficiency.",
+        "description": "Operator-led AI consulting for small businesses, growing companies and B2B teams. We identify high-value workflows, build practical roadmaps and implement AI automation and agents tied to measurable business outcomes.",
         "url": "https://www.nlgconsulting.co/ai-consulting",
         "areaServed": ["Europe", "North America", "Middle East"],
         "serviceType": "AI Consulting"
@@ -44,8 +44,8 @@ const AIConsulting = () => {
   return (
     <>
       <Helmet>
-        <title>AI Consulting for Business | Audit, Roadmap & Implementation | NLG</title>
-        <meta name="description" content="AI consulting for B2B companies: audit workflows, prioritize high-ROI use cases, build an AI roadmap and implement automation, agents and operational AI." />
+        <title>AI Consulting for Small Business & B2B | NLG</title>
+        <meta name="description" content="AI consulting for small and growing businesses: identify high-value use cases, map workflows, build a practical AI roadmap and implement automation and AI agents." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia" />
@@ -53,8 +53,8 @@ const AIConsulting = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/ai-consulting" />
-        <meta property="og:title" content="AI Consulting for Business | NLG Consulting" />
-        <meta property="og:description" content="Operator-led AI consulting: workflows, agentic systems, and operational AI for FinTech, PropTech & B2B." />
+        <meta property="og:title" content="AI Consulting for Small Business & B2B | NLG Consulting" />
+        <meta property="og:description" content="From AI audit to implementation: identify useful workflows, prioritise business value and deploy automation and AI agents with operator-led execution." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -67,10 +67,10 @@ const AIConsulting = () => {
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">AI Consulting</Badge>
             <h1 className="mb-6">
               AI Consulting for{" "}
-              <span className="text-gradient">Business Operations & Growth</span>
+              <span className="text-gradient">Small Businesses & Growing Teams</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Turn AI from experimentation into an operating advantage. We audit your processes, identify high-value use cases, build a practical roadmap, and implement AI workflows and agentic systems tied to measurable business outcomes.
+              Turn AI from experimentation into an operating advantage. We audit how your business works, identify the highest-value use cases, build a practical roadmap, and implement AI workflows and agents around real operational and commercial outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button asChild size="lg"><Link to="/book">Book an AI Audit <ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
@@ -85,13 +85,13 @@ const AIConsulting = () => {
             <h2 className="mb-6">From AI Experiments to Measurable Business Results</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                The AI ecosystem is moving fast — OpenAI, Anthropic's Claude, Google Gemini, and open-source models are creating capabilities that were impossible two years ago. But for most FinTech operators, PropTech companies, SaaS founders, and B2B service firms, the challenge isn't access to technology. It's knowing how to deploy AI in ways that actually improve commercial performance.
+                The AI ecosystem is moving fast, but most small and growing businesses do not need more tools. They need clarity about which workflows are worth changing, what should remain human, and where AI can increase capacity, speed, quality or revenue without creating unnecessary complexity. NLG brings specialist experience in FinTech, PropTech, SaaS and B2B when those sector constraints matter.
               </p>
               <p>
                 Without structured AI consulting, companies tend to experiment without direction: subscribing to tools they underuse, running isolated pilots with no integration plan, or delaying adoption while competitors build operational advantages. The cost isn't just wasted spend — it's the compounding opportunity cost of slower execution, higher manual overhead, and less pipeline visibility.
               </p>
               <p>
-                AI consulting for business connects technology to outcomes. It means designing <Link to="/ai-automation" className="text-primary hover:underline">AI workflows</Link> that reduce manual workload, building <Link to="/ai-agents-for-business" className="text-primary hover:underline">agentic AI systems</Link> that handle multi-step processes, and creating operational clarity around where AI adds leverage and where it doesn't. Start with our <Link to="/insights/ai-audit-checklist" className="text-primary hover:underline font-medium">AI audit checklist</Link> to see how we prioritize use cases before implementation.
+                AI consulting for business connects technology to outcomes. It means designing <Link to="/ai-automation" className="text-primary hover:underline">AI workflows</Link> that reduce manual workload, building <Link to="/ai-agents-for-business" className="text-primary hover:underline">agentic AI systems</Link> that handle multi-step processes, and creating operational clarity around where AI adds leverage and where it doesn't. Start with our <Link to="/insights/ai-audit-for-smes" className="text-primary hover:underline font-medium">AI audit for small businesses</Link> to see how we prioritize use cases before implementation.
               </p>
             </div>
           </div>

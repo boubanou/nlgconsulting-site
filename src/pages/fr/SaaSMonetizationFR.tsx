@@ -24,7 +24,7 @@ const SaaSMonetizationFR = () => {
     <>
       <Helmet>
         <title>Monétisation SaaS : Optimisez Vos Revenus | NLG</title>
-        <meta name="description" content="Arrêtez de laisser des revenus sur la table. Conseil expert en pricing et monétisation SaaS. ARPU +30-50%. Audit revenus gratuit." />
+        <meta name="description" content="Conseil en pricing et monétisation SaaS pour fondateurs et équipes growth : packaging, logique tarifaire, expansion revenue et métriques commerciales." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/monetisation-saas" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/saas-monetization" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/monetisation-saas" />
@@ -40,7 +40,7 @@ const SaaSMonetizationFR = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Vos prix vous coûtent des revenus</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">La plupart des entreprises SaaS sous-facturent de 30-50%. Nous corrigeons votre modèle de revenus — prix, packaging et métriques de valeur — pour maximiser la lifetime value de chaque client.</p>
             <Button asChild size="lg" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Obtenir votre audit revenus gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Obtenir votre revue de monétisation <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>
@@ -98,9 +98,9 @@ const SaaSMonetizationFR = () => {
           <div className="container mx-auto max-w-3xl text-center">
             <DollarSign className="w-12 h-12 mx-auto mb-6 opacity-80" />
             <h2 className="text-3xl font-bold mb-4">Arrêtez de laisser des revenus sur la table</h2>
-            <p className="text-lg opacity-90 mb-8">Réservez un audit revenus gratuit. Nous vous montrons exactement où vos prix vous coûtent de l'argent.</p>
+            <p className="text-lg opacity-90 mb-8">Réservez un revue de monétisation. Nous vous montrons exactement où vos prix vous coûtent de l'argent.</p>
             <Button asChild size="lg" variant="secondary" className="text-base px-8">
-              <Link to="/fr/rendez-vous">Audit revenus gratuit <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/fr/rendez-vous">Revue de monétisation <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </section>

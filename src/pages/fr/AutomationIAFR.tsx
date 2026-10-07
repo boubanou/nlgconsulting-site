@@ -16,7 +16,7 @@ const AutomationIAFR = () => {
         "@type": "Service",
         "name": "Automatisation IA des Workflows Business",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Automatisation de workflows avec l'IA pour les ventes, le marketing, les opérations et l'infrastructure de revenus. Systèmes d'automatisation avec Make, n8n et intégrations IA sur mesure pour FinTech, PropTech et B2B.",
+        "description": "Automatisation IA clé en main pour PME et équipes B2B : CRM, ventes, marketing, reporting et opérations, avec des workflows connectés aux outils existants.",
         "url": "https://www.nlgconsulting.co/fr/automation-ia",
         "areaServed": "Worldwide",
         "serviceType": "AI Workflow Automation"
@@ -27,7 +27,7 @@ const AutomationIAFR = () => {
           { "@type": "Question", "name": "Qu'est-ce que l'automatisation IA des workflows ?", "acceptedAnswer": { "@type": "Answer", "text": "L'automatisation IA des workflows combine des modèles IA avec des plateformes d'orchestration pour exécuter des processus business — de la qualification de leads à la création de contenu — avec un minimum d'intervention manuelle et une qualité supérieure à l'automatisation par règles seule." }},
           { "@type": "Question", "name": "Quels processus peuvent être automatisés avec l'IA ?", "acceptedAnswer": { "@type": "Answer", "text": "Prospection commerciale, production de contenu, qualification de leads, gestion CRM, reporting, traitement de documents, séquences email, réseaux sociaux et workflows opérationnels — tout processus avec des patterns répétitifs et des inputs définis." }},
           { "@type": "Question", "name": "Quels outils utilisez-vous ?", "acceptedAnswer": { "@type": "Answer", "text": "Nous construisons sur Make, n8n et des intégrations custom, combinés avec les modèles IA d'OpenAI et Anthropic (Claude). Le tout connecté à HubSpot, Salesforce, Clay, Notion, Airtable, Slack et APIs custom." }},
-          { "@type": "Question", "name": "Combien de temps prend l'implémentation ?", "acceptedAnswer": { "@type": "Answer", "text": "Les workflows simples se déploient en quelques jours. Les systèmes complets multi-départements prennent typiquement 2 à 6 semaines. Nous commençons par les workflows à fort impact et étendons progressivement." }}
+          { "@type": "Question", "name": "Combien de temps prend l'implémentation ?", "acceptedAnswer": { "@type": "Answer", "text": "Le délai dépend du workflow, des accès aux données, des intégrations et des contrôles nécessaires. NLG commence par un périmètre borné et mesurable, puis étend uniquement ce qui démontre sa valeur." }}
         ]
       },
       {
@@ -43,8 +43,8 @@ const AutomationIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Automatisation IA Entreprise | Workflows & Processus | NLG</title>
-        <meta name="description" content="Automatisation IA pour PME, indépendants et équipes en croissance. Gagnez du temps, réduisez les coûts et améliorez la performance avec des workflows mis en place pour vous. Sprint dès 1 250 € HT." />
+        <title>Agence Automatisation IA pour PME & B2B | NLG</title>
+        <meta name="description" content="Automatisation IA clé en main pour PME et équipes B2B : CRM, ventes, marketing, reporting et opérations, avec des workflows construits autour de vos outils existants." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
@@ -61,7 +61,7 @@ const AutomationIAFR = () => {
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">Automatisation IA</Badge>
             <h1 className="mb-6">
-              Automatisation IA{" "}<span className="text-gradient">des Processus & Workflows d'Entreprise</span>
+              Automatisation IA pour Entreprises —{" "}<span className="text-gradient">Sans la Complexité Technique</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Vous n'avez pas besoin de devenir expert en automatisation. Expliquez-nous comment fonctionne votre activité et ce que vous voulez améliorer. Nous identifions où l'automatisation crée le plus de valeur et construisons les workflows pour vous.
@@ -78,7 +78,7 @@ const AutomationIAFR = () => {
             <h2 className="mb-6">L'Automatisation ne Sert Pas Seulement à Corriger un Problème</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>Votre entreprise n'a pas besoin d'avoir un problème pour que l'automatisation ait du sens. Un processus peut déjà fonctionner et néanmoins devenir plus rapide, moins coûteux, plus régulier ou plus rentable. L'objectif n'est pas seulement de supprimer une difficulté — c'est de créer du levier.</p><p>Pour une PME ou une petite équipe, cela peut signifier économiser des heures de travail manuel, répondre plus vite aux prospects, améliorer les relances, augmenter la capacité sans recruter immédiatement ou offrir une meilleure expérience client.</p>
-              <p>L'automatisation IA des workflows change cette équation. En combinant des modèles IA avec des plateformes d'orchestration comme Make et n8n, connectées à vos outils existants, nous construisons des systèmes qui gèrent ces processus en continu. Notre guide sur le <Link to="/fr/ressources/roi-automatisation-ia" className="text-primary hover:underline font-medium">ROI de l'automatisation IA</Link> explique comment mesurer le processus avant et après déploiement.</p>
+              <p>L'automatisation IA des workflows change cette équation. En combinant des modèles IA avec des plateformes d'orchestration comme Make et n8n, connectées à vos outils existants, nous construisons des systèmes qui gèrent ces processus en continu. Notre <Link to="/fr/ressources/automatisation-ia-pme" className="text-primary hover:underline font-medium">guide de l'automatisation IA pour PME</Link> aide à choisir le premier workflow. Notre guide sur le <Link to="/fr/ressources/roi-automatisation-ia" className="text-primary hover:underline font-medium">ROI de l'automatisation IA</Link> explique ensuite comment mesurer le processus avant et après déploiement.</p>
               <p>La différence entre les entreprises qui scalent efficacement et les autres réside souvent dans la qualité de leur automatisation opérationnelle. Pas simplement avoir des outils, mais avoir des <Link to="/fr/conseil-ia" className="text-primary hover:underline">systèmes bien conçus</Link> qui connectent données, logique et IA dans des workflows qui tournent sans supervision constante.</p>
             </div>
           </div>
@@ -172,7 +172,7 @@ const AutomationIAFR = () => {
                 { q: "Quels processus peuvent être automatisés ?", a: "Prospection commerciale, production de contenu, qualification de leads, gestion CRM, reporting, traitement de documents, séquences email, réseaux sociaux et workflows opérationnels." },
                 { q: "Quels outils utilisez-vous ?", a: "Make, n8n et intégrations custom, combinés avec l'IA d'OpenAI et Anthropic (Claude). Le tout connecté à HubSpot, Salesforce, Clay, Notion, Airtable, Slack et APIs custom." },
                 { q: "En quoi l'automatisation IA diffère de l'automatisation traditionnelle ?", a: "L'automatisation traditionnelle suit des règles rigides. L'automatisation IA ajoute l'intelligence — comprendre le contexte, générer du contenu, prendre des décisions et gérer des tâches nécessitant du jugement." },
-                { q: "Combien de temps prend l'implémentation ?", a: "Les workflows simples se déploient en quelques jours. Les systèmes complets multi-départements prennent 2 à 6 semaines. Nous commençons par les workflows à fort impact et étendons progressivement." }
+                { q: "Combien de temps prend l'implémentation ?", a: "Le délai dépend du workflow, des accès, des intégrations et des contrôles nécessaires. Nous commençons par un périmètre borné, le mesurons, puis étendons ce qui crée de la valeur." }
               ].map((item, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>

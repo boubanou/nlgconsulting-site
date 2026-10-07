@@ -20,7 +20,7 @@ const AgenceLeadGenerationFR = () => {
         { "@type": "Question", "name": "Que fait une agence de lead generation B2B ?", "acceptedAnswer": { "@type": "Answer", "text": "Une agence de lead generation B2B conçoit et opère des systèmes qui identifient, qualifient et convertissent des prospects en rendez-vous qualifiés — via l'outbound structuré, la prospection IA et l'exécution multicanal." } },
         { "@type": "Question", "name": "En quoi NLG est différent des autres agences ?", "acceptedAnswer": { "@type": "Answer", "text": "Nous construisons des systèmes pipeline complets — pas juste des listes de contacts. Architecture ICP, prospection IA, séquences multicanal, intégration CRM et logique de qualification." } },
         { "@type": "Question", "name": "Quels secteurs servez-vous ?", "acceptedAnswer": { "@type": "Answer", "text": "SaaS, FinTech, PropTech et services professionnels — toute entreprise B2B avec des deals supérieurs à 5 000€ et des ICP définis." } },
-        { "@type": "Question", "name": "En combien de temps les résultats arrivent ?", "acceptedAnswer": { "@type": "Answer", "text": "Premiers rendez-vous qualifiés en 2-3 semaines. Pipeline constant et optimisé au mois 2-3." } }
+        { "@type": "Question", "name": "Comment mesurer une agence de génération de leads B2B ?", "acceptedAnswer": { "@type": "Answer", "text": "Au-delà du volume de contacts ou de messages, suivez le taux de réponse utile, la qualification, les rendez-vous tenus, les opportunités créées, la progression pipeline et les apprentissages sur l'ICP et le messaging." } }
       ]}
     ]
   };
@@ -59,8 +59,8 @@ const AgenceLeadGenerationFR = () => {
 
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Au-delà des listes de contacts : construire une infrastructure de lead generation</h2>
-            <p>La plupart des agences de lead generation vous vendent une base de contacts et considèrent le travail terminé. Le fossé entre "leads" et revenus reste entièrement votre problème. NLG Consulting adopte une approche fondamentalement différente.</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">Choisir une agence de génération de leads : au-delà des listes de contacts</h2>
+            <p>Une agence de génération de leads B2B doit être évaluée sur sa capacité à transformer ciblage, données, messages, relances et qualification en pipeline exploitable — pas seulement sur le nombre de contacts fournis. Beaucoup de prestataires s'arrêtent à la base de données ou au volume de messages. Le fossé entre "leads" et revenus reste alors à la charge de l'équipe commerciale. NLG Consulting traite la lead generation comme un système relié au CRM, aux rendez-vous et au suivi commercial.</p>
             <p>Nous construisons et opérons l'ensemble de votre infrastructure de lead generation — de l'architecture ICP et l'intelligence prospects à l'exécution outbound multicanal, aux workflows de qualification et à la gestion pipeline CRM. Notre <Link to="/fr/ressources/strategie-lead-generation-b2b" className="text-primary hover:underline font-medium">playbook de lead generation B2B</Link> détaille la logique de ce système.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Le système de lead generation</h3>
             <ul>

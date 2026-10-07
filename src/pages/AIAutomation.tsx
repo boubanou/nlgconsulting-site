@@ -14,7 +14,7 @@ const AIAutomation = () => {
     "@graph": [
       {
         "@type": "Service", "name": "AI Workflow Automation for Business", "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
-        "description": "AI-powered workflow automation for sales, marketing, operations, and revenue infrastructure. We design and deploy automation systems using Make, n8n, and custom AI integrations for FinTech, PropTech, and B2B companies.",
+        "description": "Done-for-you AI workflow automation for small businesses and growing B2B teams across CRM, sales, marketing, reporting and operations.",
         "url": "https://www.nlgconsulting.co/ai-automation", "areaServed": ["Europe", "North America", "Middle East"], "serviceType": "AI Workflow Automation"
       },
       {
@@ -23,7 +23,7 @@ const AIAutomation = () => {
           { "@type": "Question", "name": "Which business processes can be automated with AI?", "acceptedAnswer": { "@type": "Answer", "text": "Sales prospecting and outreach, content production, lead qualification, CRM management, reporting and analytics, document processing, email sequences, social media, and operational workflows — essentially any process with repeatable patterns and defined inputs." }},
           { "@type": "Question", "name": "What tools do you use for AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "We build on Make, n8n, and custom integrations, combined with AI models from OpenAI and Anthropic (Claude). These connect to your existing tools — HubSpot, Salesforce, Clay, Notion, Airtable, Slack, and custom APIs." }},
           { "@type": "Question", "name": "How is AI automation different from traditional automation?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional automation follows rigid if-then rules. AI automation adds intelligence — understanding context, generating content, making qualification decisions, and handling tasks that require judgment. For complex processes, AI agents go even further." }},
-          { "@type": "Question", "name": "How long does it take to implement AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "Simple workflows deploy in days. Comprehensive systems across multiple departments typically take 2–6 weeks. We start with high-impact workflows and expand progressively." }}
+          { "@type": "Question", "name": "How long does it take to implement AI automation?", "acceptedAnswer": { "@type": "Answer", "text": "Timing depends on the workflow, data access, integrations and control requirements. NLG starts with a bounded, measurable use case and expands only after the operating value is clear." }}
         ]
       },
       { "@type": "BreadcrumbList", "itemListElement": [
@@ -36,8 +36,8 @@ const AIAutomation = () => {
   return (
     <>
       <Helmet>
-        <title>AI Automation Agency | Workflow & Process Automation | NLG</title>
-        <meta name="description" content="AI automation for small businesses and growing teams. Save time, reduce costs and improve performance with practical workflows implemented for you. Automation Sprint from €1,250 excl. VAT." />
+        <title>AI Automation Agency for Small Business & B2B | NLG</title>
+        <meta name="description" content="Done-for-you AI automation for small businesses and B2B teams. Automate CRM, sales, marketing, reporting and operations with practical workflows built around your existing tools." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-automation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/automation-ia" />
@@ -45,8 +45,8 @@ const AIAutomation = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/ai-automation" />
-        <meta property="og:title" content="AI Workflow Automation for Business | NLG Consulting" />
-        <meta property="og:description" content="AI-powered workflow automation for sales, marketing, and operations. Reduce manual workload, improve output quality." />
+        <meta property="og:title" content="AI Automation Agency for Small Business & B2B | NLG" />
+        <meta property="og:description" content="Done-for-you AI automation for CRM, sales, marketing, reporting and operations — designed around the tools your business already uses." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -56,7 +56,7 @@ const AIAutomation = () => {
         <section className="pt-32 md:pt-40 pb-16 px-4">
           <div className="container-tight text-center">
             <Badge variant="outline" className="px-4 py-2 text-xs tracking-wide uppercase mb-6">AI Automation</Badge>
-            <h1 className="mb-6">AI Automation for{" "}<span className="text-gradient">Business Workflows & Operations</span></h1>
+            <h1 className="mb-6">AI Automation for{" "}<span className="text-gradient">Small Business & B2B Workflows</span></h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               You do not need to become an automation expert. Tell us how your business works and what you want to improve. We identify where automation creates real value and build the workflows for you — across sales, marketing, customer experience, administration and operations.
             </p>
@@ -72,7 +72,7 @@ const AIAutomation = () => {
             <h2 className="mb-6">Automation Is Not Only About Fixing Problems</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>Your business does not need to be broken before automation makes sense. A process can already work and still be made faster, cheaper, more consistent or more profitable. The goal is not simply to remove pain — it is to create leverage.</p><p>For small businesses and growing teams, that can mean saving hours of manual work, responding to leads faster, improving follow-up, increasing capacity without hiring immediately, or giving customers a better experience.</p>
-              <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously. Our guide to <Link to="/insights/ai-automation-roi" className="text-primary hover:underline font-medium">measuring AI automation ROI</Link> shows how to baseline a workflow before deployment and evaluate the operating result afterward.</p>
+              <p>AI workflow automation changes this equation. By combining AI models with orchestration platforms like Make and n8n, connected to your existing tools, we build systems that handle these processes continuously. Our <Link to="/insights/ai-automation-for-small-business" className="text-primary hover:underline font-medium">small-business AI automation guide</Link> shows what to automate first. Our guide to <Link to="/insights/ai-automation-roi" className="text-primary hover:underline font-medium">measuring AI automation ROI</Link> shows how to baseline a workflow before deployment and evaluate the operating result afterward.</p>
               <p>The difference between companies that scale efficiently and those that don't is often the quality of their operational automation. Not just having tools, but having <Link to="/ai-consulting" className="text-primary hover:underline">well-designed systems</Link> that connect data, logic, and AI into workflows that run without constant oversight.</p>
             </div>
           </div>
@@ -166,7 +166,7 @@ const AIAutomation = () => {
                 { q: "Which processes can be automated with AI?", a: "Sales prospecting, content production, lead qualification, CRM management, reporting, document processing, email sequences, social media, and operational workflows — any process with repeatable patterns and defined inputs." },
                 { q: "What tools do you use?", a: "We build on Make, n8n, and custom integrations, combined with AI from OpenAI and Anthropic (Claude). These connect to HubSpot, Salesforce, Clay, Notion, Airtable, Slack, and custom APIs." },
                 { q: "How is AI automation different from traditional automation?", a: "Traditional automation follows rigid rules. AI automation adds intelligence — understanding context, generating content, making decisions, and handling tasks requiring judgment. For complex processes, AI agents go even further." },
-                { q: "How long does implementation take?", a: "Simple workflows deploy in days. Comprehensive systems across multiple departments typically take 2–6 weeks. We start with high-impact workflows and expand progressively." }
+                { q: "How long does implementation take?", a: "Timing depends on the workflow, data access, integrations and control requirements. We start with a bounded use case, measure it and expand when the value is clear." }
               ].map((item, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>

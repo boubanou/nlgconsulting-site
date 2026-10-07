@@ -19,7 +19,8 @@ import {
   Calendar,
   Phone,
   Globe,
-  Target
+  Target,
+  Mic
 } from "lucide-react";
 import MainNavbar from "@/components/MainNavbar";
 import MainFooter from "@/components/MainFooter";
@@ -41,7 +42,7 @@ const Home = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "AI, automation and growth systems for small businesses, professionals and growing companies. NLG identifies where technology can save time, reduce costs, increase revenue and improve performance — then implements it for you.",
+        "description": "Done-for-you AI automation and consulting for small and growing businesses. NLG identifies where AI can improve operations, save time and grow revenue, then implements the systems.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
@@ -112,8 +113,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AI & Automation for Small Businesses, Professionals & Growing Companies | NLG</title>
-        <meta name="description" content="Use AI and automation to save time, reduce costs, increase revenue and improve performance. NLG identifies the opportunities and implements the systems for you." />
+        <title>AI Automation & Consulting for Small Business | NLG</title>
+        <meta name="description" content="Done-for-you AI automation and consulting for small and growing businesses. Save time, improve operations and grow revenue — or talk to the NLG website and let it guide you." />
         <link rel="canonical" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -121,12 +122,12 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/" />
-        <meta property="og:title" content="AI & Automation That Creates More Value for Your Business | NLG Consulting" />
-        <meta property="og:description" content="You do not need to become an AI expert. We identify where AI and automation can save time, reduce costs, increase revenue and improve performance — then build it for you." />
+        <meta property="og:title" content="AI Automation & Consulting for Small Business | NLG" />
+        <meta property="og:description" content="Tell us what your business needs — or talk directly to the website. NLG builds AI automation, workflows and growth systems around real business outcomes." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI & Automation That Creates Business Value | NLG Consulting" />
-        <meta name="twitter:description" content="Save time, reduce costs, increase revenue and improve performance with AI and automation implemented for you." />
+        <meta name="twitter:title" content="AI Automation & Consulting for Small Business | NLG" />
+        <meta name="twitter:description" content="Done-for-you AI automation and consulting — plus an NLG website you can talk to for instant guidance." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -170,6 +171,54 @@ const Home = () => {
               </div>
               <div className="mx-auto w-full max-w-[520px] lg:max-w-none">
                 <BusinessValueEngine lang="en" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Voice-first differentiator — visible content for people and search engines */}
+        <section className="border-y border-border/70 bg-background px-4 py-12 sm:py-14">
+          <div className="container mx-auto grid max-w-5xl items-center gap-6 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">A Website You Can Talk To</p>
+              <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Don’t search the site. Tell it what you need.</h2>
+              <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Describe your business and what you want to improve using your voice. NLG interprets the request and guides you directly to the most relevant AI consulting, automation, sales or growth page. Prefer not to speak? Type instead. <Link to="/insights/voice-ai-website-navigation" className="font-medium text-primary hover:underline">See how the voice-first navigation works</Link>.
+              </p>
+            </div>
+            <Button type="button" variant="outline" className="w-full md:w-auto" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
+              <Mic className="mr-2 h-4 w-4" /> Talk to the Website
+            </Button>
+          </div>
+        </section>
+
+        {/* Interactive AI Guide — visible, crawlable product proof */}
+        <section className="px-4 py-14 sm:py-16">
+          <div className="container mx-auto max-w-5xl">
+            <div className="grid gap-6 rounded-3xl border border-primary/10 bg-muted/25 p-6 sm:p-8 md:grid-cols-[1.3fr_0.7fr] md:items-center">
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Interactive AI Experience</p>
+                <h2 className="mb-3 text-2xl font-semibold sm:text-3xl">Don’t just browse the site. Talk to it.</h2>
+                <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Tell the NLG website what your business does and what you want to improve. Our voice-first guide interprets your request and takes you directly to the most relevant AI automation, consulting, sales or growth resource. Prefer not to speak? Type instead.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground sm:text-sm">
+                  <span className="inline-flex items-center gap-1.5"><Mic className="h-3.5 w-3.5 text-primary" /> Voice-first navigation</span>
+                  <span className="inline-flex items-center gap-1.5"><MessageSquareText className="h-3.5 w-3.5 text-primary" /> Text fallback</span>
+                  <span className="inline-flex items-center gap-1.5"><Target className="h-3.5 w-3.5 text-primary" /> Business-focused guidance</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Button
+                  size="lg"
+                  className="w-full"
+                  onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}
+                >
+                  <Mic className="mr-2 h-4 w-4" /> Talk to the Website
+                </Button>
+                <Button asChild variant="outline" className="w-full">
+                  <Link to="/ai-consulting">Explore AI Consulting <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ const FormationIAEntrepriseFR = () => {
     <>
       <Helmet>
         <title>Formation IA Entreprise | Enablement & Workshops | NLG</title>
-        <meta name="description" content="Formation IA pour équipes business. Prompt engineering, workflows agentic, Claude Code et automatisation. Programmes pratiques avec résultats dès la 1ère semaine." />
+        <meta name="description" content="Formation IA pour équipes business : prompt engineering, workflows IA, automatisation et pratiques opérationnelles avec ateliers concrets et exercices appliqués." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/formation-ia-entreprise" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-training-for-teams" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/formation-ia-entreprise" />

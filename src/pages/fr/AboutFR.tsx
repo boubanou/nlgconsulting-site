@@ -15,7 +15,7 @@ const AboutFR = () => {
       {
         "@type": "AboutPage",
         "name": "À propos de NLG Consulting",
-        "description": "Systèmes de croissance IA, revenue operations et conseil stratégique pour FinTech, PropTech, SaaS et B2B.",
+        "description": "Conseil IA, automatisation et systèmes de croissance pour PME, entreprises en développement et équipes B2B.",
         "url": "https://www.nlgconsulting.co/fr/a-propos"
       },
       {
@@ -37,8 +37,8 @@ const AboutFR = () => {
   return (
     <>
       <Helmet>
-        <title>À propos de NLG Consulting | Conseil IA & Architecture de Croissance</title>
-        <meta name="description" content="NLG Consulting construit des systèmes de croissance IA pour les entreprises FinTech, PropTech & B2B. Fondé par Gregory Brenig — opérateur, auteur et conseiller stratégique avec 15+ ans d'expérience." />
+        <title>À propos de NLG Consulting | Automatisation & Conseil IA</title>
+        <meta name="description" content="Découvrez NLG Consulting et son fondateur Gregory Brenig : conseil IA, automatisation et exécution business pour PME et entreprises B2B en croissance." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/a-propos" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/about" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/a-propos" />
@@ -63,7 +63,7 @@ const AboutFR = () => {
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">À propos de NLG</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Conseil IA & Architecture de Croissance, dirigé par un opérateur</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              NLG Consulting aide les entreprises FinTech, PropTech, SaaS et B2B à déployer des systèmes de croissance propulsés par l'IA, structurer les revenue operations et passer d'initiatives dispersées à une exécution commerciale mesurable.
+              NLG Consulting aide les PME et entreprises en croissance à identifier où l'IA et l'automatisation créent de la valeur, puis à concevoir et déployer les systèmes. Notre expertise sectorielle reste forte en FinTech, PropTech, SaaS et B2B.
             </p>
           </div>
         </section>

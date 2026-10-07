@@ -5,10 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CookieConsent } from "./components/CookieConsent";
-import GlobalVoiceGuide from "./components/GlobalVoiceGuide";
 import { LanguageRedirectHandler } from "./components/LanguageRedirectHandler";
 
-// Lazy load pages
+// Lazy load pages and non-critical interactive layers
+const GlobalVoiceGuide = lazy(() => import("./components/GlobalVoiceGuide"));
 const Home = lazy(() => import("./pages/Home"));
 const AboutNLG = lazy(() => import("./pages/AboutNLG"));
 const Ventures = lazy(() => import("./pages/Ventures"));
@@ -145,7 +145,7 @@ const App = () => (
     <Sonner />
     <BrowserRouter>
       <CookieConsent />
-      <GlobalVoiceGuide />
+      <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
       <ScrollToTop />
       <LanguageRedirectHandler />
       <Suspense fallback={<LoadingFallback />}>

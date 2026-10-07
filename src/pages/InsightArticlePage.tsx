@@ -32,18 +32,54 @@ const InsightArticlePage = ({ lang }: { lang: "en" | "fr" }) => {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.h1,
-    description: article.description,
-    datePublished: article.published,
-    dateModified: article.updated,
-    author: { "@type": "Person", name: "Gregory Brenig" },
-    publisher: {
-      "@type": "Organization",
-      name: "NLG Consulting",
-      url: "https://www.nlgconsulting.co"
-    },
-    mainEntityOfPage: `https://www.nlgconsulting.co${article.path}`
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: article.h1,
+        description: article.description,
+        datePublished: article.published,
+        dateModified: article.updated,
+        inLanguage: article.lang,
+        author: {
+          "@type": "Person",
+          name: "Gregory Brenig",
+          url: "https://www.nlgconsulting.co/about"
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "NLG Consulting",
+          url: "https://www.nlgconsulting.co",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.nlgconsulting.co/logo.svg"
+          }
+        },
+        mainEntityOfPage: `https://www.nlgconsulting.co${article.path}`
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: article.lang === "fr" ? "Accueil" : "Home",
+            item: article.lang === "fr" ? "https://www.nlgconsulting.co/fr" : "https://www.nlgconsulting.co/"
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: article.lang === "fr" ? "Ressources" : "Insights",
+            item: article.lang === "fr" ? "https://www.nlgconsulting.co/fr/ressources" : "https://www.nlgconsulting.co/insights"
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: article.h1,
+            item: `https://www.nlgconsulting.co${article.path}`
+          }
+        ]
+      }
+    ]
   };
 
   const canonical = `https://www.nlgconsulting.co${article.path}`;

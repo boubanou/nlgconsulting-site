@@ -18,7 +18,8 @@ import {
   Star,
   Calendar,
   Phone,
-  Target
+  Target,
+  Mic
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
 import MainFooterFR from "@/components/fr/MainFooterFR";
@@ -40,7 +41,7 @@ const HomeFR = () => {
         "alternateName": "N.L.G. Consulting Group",
         "url": "https://www.nlgconsulting.co/fr",
         "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "IA, automatisation et systèmes de croissance pour petites entreprises, indépendants et entreprises en développement. NLG identifie où la technologie peut faire gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance — puis la met en place.",
+        "description": "Automatisation IA et conseil IA clé en main pour PME et entreprises en croissance. NLG identifie où l’IA peut améliorer les opérations, gagner du temps et développer les revenus, puis met les systèmes en place.",
         "founder": {
           "@type": "Person",
           "name": "Gregory Brenig",
@@ -111,8 +112,8 @@ const HomeFR = () => {
   return (
     <>
       <Helmet>
-        <title>IA & Automatisation pour PME, Indépendants & Entreprises en Croissance | NLG</title>
-        <meta name="description" content="Utilisez l'IA et l'automatisation pour gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance. NLG identifie les opportunités et met les systèmes en place pour vous." />
+        <title>Automatisation IA & Conseil IA pour PME | NLG</title>
+        <meta name="description" content="Automatisation IA et conseil IA pour PME et entreprises en croissance. Gagnez du temps, améliorez vos opérations et vos revenus — ou parlez directement au site NLG." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr" />
@@ -120,14 +121,14 @@ const HomeFR = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr" />
-        <meta property="og:title" content="IA & Automatisation qui Créent Plus de Valeur pour Votre Entreprise | NLG" />
-        <meta property="og:description" content="Pas besoin de devenir expert en IA. Nous identifions où l'IA et l'automatisation peuvent faire gagner du temps, réduire les coûts, augmenter les revenus et améliorer la performance — puis nous les mettons en place." />
+        <meta property="og:title" content="Automatisation IA & Conseil IA pour PME | NLG" />
+        <meta property="og:description" content="Expliquez votre besoin — ou parlez directement au site. NLG construit automatisations IA, workflows et systèmes de croissance autour de résultats business réels." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="IA & Automatisation qui Créent de la Valeur | NLG Consulting" />
-        <meta name="twitter:description" content="Gagnez du temps, réduisez les coûts, augmentez les revenus et améliorez la performance avec une IA mise en place pour vous." />
+        <meta name="twitter:title" content="Automatisation IA & Conseil IA pour PME | NLG" />
+        <meta name="twitter:description" content="Automatisation IA et conseil clé en main — avec un site NLG auquel vous pouvez parler pour être guidé." />
         <meta name="twitter:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -172,6 +173,54 @@ const HomeFR = () => {
               </div>
               <div className="mx-auto w-full max-w-[520px] lg:max-w-none">
                 <BusinessValueEngine lang="fr" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Différenciateur vocal — contenu visible pour visiteurs et moteurs */}
+        <section className="border-y border-border/70 bg-background px-4 py-12 sm:py-14">
+          <div className="container mx-auto grid max-w-5xl items-center gap-6 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Un Site Auquel Vous Pouvez Parler</p>
+              <h2 className="mb-3 text-2xl font-semibold md:text-3xl">Ne cherchez plus dans le site. Expliquez-lui ce dont vous avez besoin.</h2>
+              <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Présentez votre activité et ce que vous voulez améliorer à voix haute. NLG comprend votre demande et vous guide directement vers la page de conseil IA, automatisation, vente ou croissance la plus pertinente. Vous préférez ne pas parler ? Écrivez. <Link to="/fr/ressources/site-web-vocal-ia" className="font-medium text-primary hover:underline">Découvrez comment fonctionne la navigation vocale IA</Link>.
+              </p>
+            </div>
+            <Button type="button" variant="outline" className="w-full md:w-auto" onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}>
+              <Mic className="mr-2 h-4 w-4" /> Parler au Site
+            </Button>
+          </div>
+        </section>
+
+        {/* Guide IA interactif — preuve produit visible et crawlable */}
+        <section className="px-4 py-14 sm:py-16">
+          <div className="container mx-auto max-w-5xl">
+            <div className="grid gap-6 rounded-3xl border border-primary/10 bg-muted/25 p-6 sm:p-8 md:grid-cols-[1.3fr_0.7fr] md:items-center">
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Expérience IA Interactive</p>
+                <h2 className="mb-3 text-2xl font-semibold sm:text-3xl">Ne cherchez pas dans le site. Parlez-lui.</h2>
+                <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Présentez votre activité et ce que vous voulez améliorer. Le guide vocal NLG comprend votre demande et vous emmène directement vers la ressource la plus pertinente en automatisation IA, conseil IA, vente ou croissance. Vous ne pouvez pas parler ? Écrivez simplement.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground sm:text-sm">
+                  <span className="inline-flex items-center gap-1.5"><Mic className="h-3.5 w-3.5 text-primary" /> Navigation vocale</span>
+                  <span className="inline-flex items-center gap-1.5"><MessageSquareText className="h-3.5 w-3.5 text-primary" /> Alternative écrite</span>
+                  <span className="inline-flex items-center gap-1.5"><Target className="h-3.5 w-3.5 text-primary" /> Guidage business</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Button
+                  size="lg"
+                  className="w-full"
+                  onClick={() => window.dispatchEvent(new Event("nlg:open-voice-guide"))}
+                >
+                  <Mic className="mr-2 h-4 w-4" /> Parler au Site
+                </Button>
+                <Button asChild variant="outline" className="w-full">
+                  <Link to="/fr/conseil-ia">Découvrir le Conseil IA <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
               </div>
             </div>
           </div>

@@ -23,6 +23,68 @@ function renderSeoContent(meta: SeoRouteMeta): string {
   return `<div data-seo-prerender="true"><main><h1>${escapeHtml(meta.h1)}</h1><p>${escapeHtml(meta.description)}</p>${clusterLinks(meta)}</main></div>`;
 }
 
+function routeStructuredData(meta: SeoRouteMeta) {
+  const homeUrl = meta.lang === "fr" ? `${BASE_URL}/fr` : `${BASE_URL}/`;
+  const breadcrumbName = meta.lang === "fr" ? "Accueil" : "Home";
+  const organization = {
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "NLG Consulting",
+    url: BASE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/logo.svg`
+    },
+    founder: {
+      "@type": "Person",
+      name: "Gregory Brenig",
+      jobTitle: "Founder & CEO",
+      sameAs: "https://www.linkedin.com/in/gregorybrenig/"
+    },
+    areaServed: ["Europe", "North America", "Middle East"],
+    knowsAbout: ["AI Consulting", "AI Automation", "Workflow Automation", "AI Agents", "Sales Automation", "Go-to-Market Strategy", "Revenue Operations"]
+  };
+
+  const graph: any[] = [
+    organization,
+    {
+      "@type": meta.path === "/" || meta.path === "/fr" ? "WebSite" : "WebPage",
+      "@id": `${meta.canonical}#webpage`,
+      url: meta.canonical,
+      name: meta.h1,
+      description: meta.description,
+      inLanguage: meta.lang,
+      isPartOf: { "@id": `${BASE_URL}/#website` },
+      about: { "@id": `${BASE_URL}/#organization` }
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: meta.path === "/" || meta.path === "/fr"
+        ? [{ "@type": "ListItem", position: 1, name: breadcrumbName, item: homeUrl }]
+        : [
+            { "@type": "ListItem", position: 1, name: breadcrumbName, item: homeUrl },
+            { "@type": "ListItem", position: 2, name: meta.h1, item: meta.canonical }
+          ]
+    }
+  ];
+
+  if (meta.path === "/" || meta.path === "/fr") {
+    graph[1]["@id"] = `${BASE_URL}/#website`;
+    graph[1].publisher = { "@id": `${BASE_URL}/#organization` };
+  } else if (meta.cluster !== "core" || meta.path.includes("services")) {
+    graph.push({
+      "@type": "Service",
+      name: meta.h1,
+      description: meta.description,
+      url: meta.canonical,
+      provider: { "@id": `${BASE_URL}/#organization` },
+      areaServed: ["Europe", "North America", "Middle East"]
+    });
+  }
+
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
 function applyMeta(template: string, meta: SeoRouteMeta): string {
   let html = template;
   html = html.replace(/<html lang="[^"]*">/, `<html lang="${meta.lang}">`);
@@ -44,6 +106,8 @@ function applyMeta(template: string, meta: SeoRouteMeta): string {
   html = html.replace(/<link rel="alternate" hreflang="en" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="en" href="${escapeAttr(enUrl)}">`);
   html = html.replace(/<link rel="alternate" hreflang="fr" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="fr" href="${escapeAttr(frUrl)}">`);
 
+  const schema = routeStructuredData(meta);
+  html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script></head>`);
   html = html.replace('<div id="root"></div>', `${renderSeoContent(meta)}<div id="root"></div>`);
   return html;
 }
@@ -83,15 +147,34 @@ function applyInsightMeta(template: string, article: InsightArticle): string {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.h1,
-    description: article.description,
-    datePublished: article.published,
-    dateModified: article.updated,
-    author: { "@type": "Person", name: "Gregory Brenig" },
-    publisher: { "@type": "Organization", name: "NLG Consulting", url: BASE_URL },
-    mainEntityOfPage: canonical
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: article.h1,
+        description: article.description,
+        datePublished: article.published,
+        dateModified: article.updated,
+        inLanguage: article.lang,
+        author: { "@type": "Person", name: "Gregory Brenig", url: `${BASE_URL}/about` },
+        publisher: {
+          "@type": "Organization",
+          name: "NLG Consulting",
+          url: BASE_URL,
+          logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.svg` }
+        },
+        mainEntityOfPage: canonical
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: article.lang === "fr" ? "Accueil" : "Home", item: article.lang === "fr" ? `${BASE_URL}/fr` : `${BASE_URL}/` },
+          { "@type": "ListItem", position: 2, name: article.lang === "fr" ? "Ressources" : "Insights", item: article.lang === "fr" ? `${BASE_URL}/fr/ressources` : `${BASE_URL}/insights` },
+          { "@type": "ListItem", position: 3, name: article.h1, item: canonical }
+        ]
+      }
+    ]
   };
+
   html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script></head>`);
   html = html.replace('<div id="root"></div>', `${renderInsightContent(article)}<div id="root"></div>`);
   return html;
@@ -136,6 +219,42 @@ type SitemapEntry = {
   alternates: Record<string, string>;
 };
 
+type DerivedRouteSeo = {
+  title?: string;
+  description?: string;
+};
+
+function readRouteComponentSeo(): Map<string, DerivedRouteSeo> {
+  const result = new Map<string, DerivedRouteSeo>();
+  const appSource = fs.readFileSync(path.resolve(process.cwd(), "src/App.tsx"), "utf8");
+  const componentImports = new Map<string, string>();
+
+  for (const match of appSource.matchAll(/const\s+(\w+)\s*=\s*lazy\(\(\)\s*=>\s*import\(["']([^"']+)["']\)\);/g)) {
+    componentImports.set(match[1], match[2]);
+  }
+
+  for (const match of appSource.matchAll(/<Route\s+path="([^"]+)"\s+element=\{<(\w+)/g)) {
+    const routePath = match[1];
+    const componentName = match[2];
+    if (routePath.includes(":") || routePath === "*") continue;
+
+    const importPath = componentImports.get(componentName);
+    if (!importPath) continue;
+
+    const relative = importPath.replace(/^\.\//, "");
+    const sourcePath = path.resolve(process.cwd(), "src", `${relative}.tsx`);
+    if (!fs.existsSync(sourcePath)) continue;
+
+    const source = fs.readFileSync(sourcePath, "utf8");
+    const title = source.match(/<title>([^<{]+)<\/title>/)?.[1]?.trim();
+    const description = source.match(/<meta\s+name="description"\s+content="([^"]+)"\s*\/?\s*>/)?.[1]?.trim();
+
+    if (title || description) result.set(routePath, { title, description });
+  }
+
+  return result;
+}
+
 function readSitemapEntries(): SitemapEntry[] {
   const xml = fs.readFileSync(path.resolve(process.cwd(), "public/sitemap.xml"), "utf8");
   const blocks = Array.from(xml.matchAll(/<url>([\s\S]*?)<\/url>/g)).map((m) => m[1]);
@@ -151,12 +270,22 @@ function readSitemapEntries(): SitemapEntry[] {
   }).filter(Boolean) as SitemapEntry[];
 }
 
-function applySitemapCanonical(template: string, entry: SitemapEntry): string {
+function applySitemapCanonical(template: string, entry: SitemapEntry, derived?: DerivedRouteSeo): string {
   let html = template;
   const lang = entry.path.startsWith("/fr") ? "fr" : "en";
   html = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
   html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?\s*>/, `<link rel="canonical" href="${escapeAttr(entry.canonical)}">`);
   html = html.replace(/<meta property="og:url" content="[^"]*"\s*\/?\s*>/, `<meta property="og:url" content="${escapeAttr(entry.canonical)}">`);
+  if (derived?.title) {
+    html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(derived.title)}</title>`);
+    html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/?\s*>/, `<meta property="og:title" content="${escapeAttr(derived.title)}">`);
+    html = html.replace(/<meta name="twitter:title" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:title" content="${escapeAttr(derived.title)}">`);
+  }
+  if (derived?.description) {
+    html = html.replace(/<meta name="description" content="[^"]*"\s*\/?\s*>/, `<meta name="description" content="${escapeAttr(derived.description)}">`);
+    html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?\s*>/, `<meta property="og:description" content="${escapeAttr(derived.description)}">`);
+    html = html.replace(/<meta name="twitter:description" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:description" content="${escapeAttr(derived.description)}">`);
+  }
   html = html.replace(/<meta property="og:locale" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale" content="${lang === "fr" ? "fr_FR" : "en_US"}">`);
   html = html.replace(/<meta property="og:locale:alternate" content="[^"]*"\s*\/?\s*>/, `<meta property="og:locale:alternate" content="${lang === "fr" ? "en_US" : "fr_FR"}">`);
   if (entry.alternates["x-default"]) {
@@ -219,13 +348,14 @@ export default function seoPrerender(): Plugin {
       ]);
 
       const sitemapEntries = readSitemapEntries();
+      const derivedRouteSeo = readRouteComponentSeo();
       let fallbackCount = 0;
       for (const sitemapEntry of sitemapEntries) {
         if (handled.has(sitemapEntry.path) || sitemapEntry.path === "/") continue;
         this.emitFile({
           type: "asset",
           fileName: sitemapEntry.path.replace(/^\//, "") + "/index.html",
-          source: applySitemapCanonical(template, sitemapEntry),
+          source: applySitemapCanonical(template, sitemapEntry, derivedRouteSeo.get(sitemapEntry.path)),
         });
         fallbackCount++;
       }

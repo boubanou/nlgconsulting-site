@@ -16,7 +16,7 @@ const ConseilIAFR = () => {
         "@type": "Service",
         "name": "Conseil en IA pour la Croissance & les Opérations Business",
         "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "Conseil en IA opérationnel pour FinTech, PropTech, SaaS et entreprises B2B. Nous aidons les dirigeants à adopter des workflows IA, des systèmes agentiques et de l'IA opérationnelle pour améliorer la performance commerciale.",
+        "description": "Conseil IA opérationnel pour PME, entreprises en croissance et équipes B2B. Nous identifions les cas d’usage à forte valeur, structurons la roadmap et déployons automatisations et agents IA reliés aux résultats business.",
         "url": "https://www.nlgconsulting.co/fr/conseil-ia",
         "areaServed": "Worldwide",
         "serviceType": "AI Consulting"
@@ -43,14 +43,14 @@ const ConseilIAFR = () => {
   return (
     <>
       <Helmet>
-        <title>Consultant IA Entreprise | Audit, Roadmap & Déploiement | NLG</title>
-        <meta name="description" content="Consultant IA pour PME et entreprises B2B : audit des processus, cas d’usage à fort ROI, roadmap IA, automatisation et déploiement de workflows et agents IA." />
+        <title>Consultant IA pour PME & Entreprises | NLG</title>
+        <meta name="description" content="Conseil IA pour PME et entreprises en croissance : identifier les cas d’usage à forte valeur, auditer les processus, construire une roadmap et déployer automatisations et agents IA." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/conseil-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-consulting" />
         <link rel="alternate" hrefLang="x-default" href="https://www.nlgconsulting.co/ai-consulting" />
-        <meta property="og:title" content="Conseil en IA | Workflows & Systèmes Agentiques | NLG" />
-        <meta property="og:description" content="Conseil en IA opérationnel : workflows, systèmes agentiques et IA opérationnelle pour FinTech, PropTech & B2B." />
+        <meta property="og:title" content="Consultant IA pour PME & Entreprises | NLG Consulting" />
+        <meta property="og:description" content="Audit, roadmap et déploiement IA : identifiez les workflows utiles et transformez l’IA en levier opérationnel concret." />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr/conseil-ia" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -80,7 +80,7 @@ const ConseilIAFR = () => {
             <h2 className="mb-6">De l'expérimentation IA à des résultats business mesurables</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                L'écosystème IA évolue rapidement — OpenAI, Claude d'Anthropic, Google Gemini et les modèles open source créent des capacités inédites. Mais pour la plupart des opérateurs FinTech, PropTech, fondateurs SaaS et entreprises B2B, le défi n'est pas l'accès à la technologie. C'est de savoir comment déployer l'IA de manière à réellement améliorer la performance commerciale.
+                L'écosystème IA évolue rapidement, mais la plupart des PME et entreprises en croissance n'ont pas besoin de davantage d'outils. Elles ont besoin de savoir quels workflows méritent d'être améliorés, ce qui doit rester humain et où l'IA peut augmenter capacité, vitesse, qualité ou revenus sans créer de complexité inutile. NLG conserve une expertise spécialisée en FinTech, PropTech, SaaS et B2B lorsque les contraintes sectorielles comptent.
               </p>
               <p>
                 Sans conseil en IA structuré, les entreprises expérimentent sans direction : elles s'abonnent à des outils sous-utilisés, lancent des pilotes isolés sans plan d'intégration, ou retardent l'adoption pendant que les concurrents construisent des avantages opérationnels.

@@ -15,24 +15,24 @@ const Services = () => {
     "@graph": [
       {
         "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co", "logo": "https://www.nlgconsulting.co/logo.svg",
-        "description": "AI-powered growth systems, revenue operations, and strategic advisory for FinTech, PropTech, SaaS, and B2B companies.",
+        "description": "AI automation, AI consulting, growth systems and strategic execution for small businesses, professional firms and growing B2B companies.",
         "founder": { "@type": "Person", "name": "Gregory Brenig", "jobTitle": "Founder & CEO" },
         "areaServed": ["Europe", "North America", "Middle East"]
       },
       {
-        "@type": "Service", "name": "AI-Powered Growth Systems & Revenue Operations", "provider": { "@type": "Organization", "name": "NLG Consulting" },
-        "description": "End-to-end AI consulting, workflow automation, outbound infrastructure, and strategic advisory for B2B growth.",
-        "url": "https://www.nlgconsulting.co/services", "serviceType": "AI Consulting & Growth Systems"
+        "@type": "Service", "name": "AI Automation, Consulting & Growth Services", "provider": { "@type": "Organization", "name": "NLG Consulting" },
+        "description": "AI consulting, workflow automation, sales systems and strategic execution for small businesses, professional firms and growing B2B companies.",
+        "url": "https://www.nlgconsulting.co/services", "serviceType": "AI Consulting, Automation & Growth Systems"
       },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nlgconsulting.co" },
         { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nlgconsulting.co/services" }
       ]},
       { "@type": "FAQPage", "mainEntity": [
-        { "@type": "Question", "name": "What does NLG Consulting do?", "acceptedAnswer": { "@type": "Answer", "text": "NLG Consulting builds AI-powered growth systems for FinTech, PropTech, SaaS, and B2B companies. We combine AI consulting, workflow automation, agentic systems, outbound infrastructure, RevOps, and strategic advisory into execution-focused engagements." }},
-        { "@type": "Question", "name": "Who are NLG's services for?", "acceptedAnswer": { "@type": "Answer", "text": "Founders, CEOs, and growth teams at FinTech, PropTech, SaaS, and B2B companies looking to deploy AI systems, structure revenue operations, improve commercial performance, and generate qualified meetings." }},
+        { "@type": "Question", "name": "What does NLG Consulting do?", "acceptedAnswer": { "@type": "Answer", "text": "NLG Consulting helps small and growing businesses identify and implement useful AI, automation, sales and growth systems. Engagements can include AI consulting, workflow automation, AI agents, CRM and revenue systems, outbound infrastructure and strategic advisory." }},
+        { "@type": "Question", "name": "Who are NLG's services for?", "acceptedAnswer": { "@type": "Answer", "text": "Small businesses, professional firms and growing B2B companies that want to use AI and automation to improve operations, increase capacity, strengthen sales or create more efficient growth systems. NLG also has specialist experience in FinTech, PropTech and SaaS." }},
         { "@type": "Question", "name": "How is NLG different from a traditional agency?", "acceptedAnswer": { "@type": "Answer", "text": "We are operator-led — we build and scale companies ourselves. Every engagement is tied to business outcomes, not deliverables. We combine strategy with execution: AI workflows, outbound systems, conversion websites, and revenue operations deployed end-to-end." }},
-        { "@type": "Question", "name": "How quickly can I expect results?", "acceptedAnswer": { "@type": "Answer", "text": "AI workflows and outbound systems can be operational within 2-3 weeks. Conversion websites deploy in days. Strategic advisory sessions produce actionable outputs in the first session. Full commercial systems mature over 60-90 days." }}
+        { "@type": "Question", "name": "How quickly can I expect results?", "acceptedAnswer": { "@type": "Answer", "text": "Timing depends on the workflow, data access and number of systems involved. NLG starts with a bounded, measurable scope so the business can validate value before expanding the implementation." }}
       ]}
     ]
   };
@@ -51,8 +51,8 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>AI, Automation & Growth Services for Small and Growing Businesses | NLG</title>
-        <meta name="description" content="Practical AI, automation, sales growth and strategic advisory for small businesses, professionals and growing companies. Start with the business outcome; we handle the technology." />
+        <title>AI Automation, Consulting & Growth Services | NLG</title>
+        <meta name="description" content="AI automation, AI consulting, sales systems and strategic execution for small and growing businesses. Start with the business outcome; NLG handles the technology and implementation." />
         <link rel="canonical" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/services" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/services" />
@@ -60,8 +60,8 @@ const Services = () => {
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/services" />
-        <meta property="og:title" content="AI Growth Systems & Revenue Operations | NLG Consulting" />
-        <meta property="og:description" content="AI consulting, workflow automation, AI agents, outbound infrastructure, and strategic advisory for B2B growth." />
+        <meta property="og:title" content="AI Automation, Consulting & Growth Services | NLG Consulting" />
+        <meta property="og:description" content="AI automation, consulting, sales systems and strategic execution for small and growing businesses." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -164,10 +164,10 @@ const Services = () => {
             <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {[
-                { q: "What does NLG Consulting do?", a: "We build AI-powered growth systems for FinTech, PropTech, SaaS, and B2B companies — combining AI consulting, workflow automation, agentic systems, outbound infrastructure, RevOps, and strategic advisory." },
-                { q: "Who are your services for?", a: "Founders, CEOs, and growth teams at companies looking to deploy AI systems, structure revenue operations, improve commercial performance, and generate qualified meetings." },
+                { q: "What does NLG Consulting do?", a: "We help small and growing businesses identify and implement useful AI, automation, sales and growth systems — from workflow automation and AI agents to CRM, outbound and strategic advisory." },
+                { q: "Who are your services for?", a: "Small businesses, professional firms and growing B2B companies that want to save time, improve operations, increase commercial capacity or structure growth. We also have specialist experience in FinTech, PropTech and SaaS." },
                 { q: "How is NLG different from a traditional agency?", a: "We're operator-led — we build and scale companies ourselves. Every engagement is tied to business outcomes. We combine strategy with execution: AI workflows, outbound systems, conversion websites, and RevOps deployed end-to-end." },
-                { q: "How quickly will I see results?", a: "AI workflows and outbound systems can be operational within 2-3 weeks. Conversion websites deploy in days. Full commercial systems mature over 60-90 days." }
+                { q: "How quickly will I see results?", a: "It depends on the workflow, integrations and data readiness. We start with a bounded scope and a measurable outcome so you can validate value before expanding." }
               ].map((item, i) => (
                 <div key={i} className="border-b border-border pb-6">
                   <h3 className="text-lg font-semibold mb-2">{item.q}</h3>
