@@ -1,15 +1,27 @@
+import { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./content/register-commercial-insights";
 import App from "./App.tsx";
+import RootErrorBoundary from "./components/RootErrorBoundary";
 import "./index.css";
 
-// Static SEO content is present in the initial HTML for crawlers and removed before React mounts.
-document.querySelector('[data-seo-prerender="true"]')?.remove();
-document.querySelector('[data-commercial-insights="true"]')?.remove();
+// Keep static prerender content visible until React has successfully committed once.
+// This prevents a blank page if the main bundle fails before React mounts.
+const ReactReady = () => {
+  useEffect(() => {
+    document.querySelectorAll('[data-seo-prerender="true"], [data-commercial-insights="true"]')
+      .forEach((node) => node.setAttribute("hidden", ""));
+  }, []);
+
+  return null;
+};
 
 createRoot(document.getElementById("root")!).render(
   <HelmetProvider>
-    <App />
+    <ReactReady />
+    <RootErrorBoundary>
+      <App />
+    </RootErrorBoundary>
   </HelmetProvider>
 );
