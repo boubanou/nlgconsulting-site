@@ -1,0 +1,61 @@
+# NLG Consulting
+
+> NLG Consulting is an operator-led AI automation, AI consulting and growth systems firm for small businesses, professional firms and growing B2B companies. The site is available in English and French.
+
+## What NLG does
+
+- AI consulting: audit workflows, identify high-value use cases, design roadmaps and support implementation.
+- AI automation: build practical workflows across CRM, sales, marketing, reporting, documents, onboarding and operations.
+- AI agents: design controlled agentic systems with human oversight.
+- Sales and growth systems: outbound, lead generation, CRM and revenue operations.
+- Strategic advisory: go-to-market, operating model and growth systems.
+- Web and conversion: business websites, landing pages and SEO assets.
+
+## Interactive website
+
+NLG's public website includes a voice-first navigation guide. Visitors can describe their business and what they want to improve using voice or text. The interface interprets the request and routes the visitor to an existing, controlled NLG page. The website does not need to answer with synthetic speech; it responds through navigation and on-screen guidance.
+
+## Primary English pages
+
+- Home: https://www.nlgconsulting.co/
+- Services: https://www.nlgconsulting.co/services
+- AI Consulting: https://www.nlgconsulting.co/ai-consulting
+- AI Automation: https://www.nlgconsulting.co/ai-automation
+- AI Agents: https://www.nlgconsulting.co/ai-agents-for-business
+- AI Sales Automation: https://www.nlgconsulting.co/ai-sales-automation
+- Insights: https://www.nlgconsulting.co/insights
+- Book a strategy call: https://www.nlgconsulting.co/book
+
+## Primary French pages
+
+- Accueil: https://www.nlgconsulting.co/fr
+- Services: https://www.nlgconsulting.co/fr/services
+- Conseil IA: https://www.nlgconsulting.co/fr/conseil-ia
+- Automatisation IA: https://www.nlgconsulting.co/fr/automation-ia
+- Agents IA: https://www.nlgconsulting.co/fr/agents-ia-entreprise
+- Automatisation commerciale IA: https://www.nlgconsulting.co/fr/automation-commerciale-ia
+- Ressources: https://www.nlgconsulting.co/fr/ressources
+- Rendez-vous: https://www.nlgconsulting.co/fr/rendez-vous
+
+## High-intent guides
+
+- AI automation for small business: https://www.nlgconsulting.co/insights/ai-automation-for-small-business
+- Automatisation IA pour PME: https://www.nlgconsulting.co/fr/ressources/automatisation-ia-pme
+- AI audit for SMEs: https://www.nlgconsulting.co/insights/ai-audit-for-smes
+- Audit IA PME: https://www.nlgconsulting.co/fr/ressources/audit-ia-pme
+- CRM automation with AI: https://www.nlgconsulting.co/insights/crm-automation-with-ai
+- Voice AI website navigation: https://www.nlgconsulting.co/insights/voice-ai-website-navigation
+- Site web vocal IA: https://www.nlgconsulting.co/fr/ressources/site-web-vocal-ia
+
+## Company
+
+- Name: NLG Consulting
+- Founder & CEO: Gregory Brenig
+- Founded: 2020
+- Website: https://www.nlgconsulting.co
+- Main markets: Europe, North America and the Middle East
+- Specialist experience: FinTech, PropTech, SaaS and B2B
+
+## Editorial principles
+
+NLG content should be interpreted as practical business and technology guidance. The site does not promise guaranteed rankings, revenue, ROI or business outcomes. AI and automation recommendations should be evaluated against workflow risk, data quality, controls and measurable business value.
