@@ -19,19 +19,19 @@ import {
 
 const solutionsData = {
   aiSystems: {
-    title: "Systèmes IA & Automatisation",
+    title: "Gagner du Temps & Automatiser",
     links: [
-      { label: "Conseil IA", to: "/fr/conseil-ia" },
+      { label: "Identifier les Opportunités IA", to: "/fr/conseil-ia" },
       { label: "Agents IA & Systèmes Agentiques", to: "/fr/agents-ia-entreprise" },
-      { label: "Automatisation de Workflows", to: "/fr/automation-ia" },
+      { label: "Automatiser le Travail Répétitif", to: "/fr/automation-ia" },
       { label: "Opérations IA Externalisées", to: "/fr/implementation-ia-externalisee" },
       { label: "Prompt Engineering", to: "/fr/conseil-prompt-engineering" },
     ],
   },
   growthRevOps: {
-    title: "Systèmes de Croissance & RevOps",
+    title: "Augmenter Revenus & Croissance",
     links: [
-      { label: "Vente & Pipeline", to: "/fr/vente" },
+      { label: "Augmenter Leads & Ventes", to: "/fr/vente" },
       { label: "SDR Externalisé", to: "/fr/sdr-externalise" },
       { label: "Génération de Leads IA", to: "/fr/generation-leads-ia" },
       { label: "Stratégie GTM & Exécution", to: "/fr/strategie-go-to-market" },
@@ -40,9 +40,9 @@ const solutionsData = {
     ],
   },
   advisory: {
-    title: "Advisory Stratégique",
+    title: "Optimiser & Scaler",
     links: [
-      { label: "Advisory Fondateur", to: "/fr/conseil" },
+      { label: "Optimiser l'Entreprise", to: "/fr/conseil" },
       { label: "Enablement IA Équipes", to: "/fr/formation-ia-entreprise" },
       { label: "Consultant IA Fractionnel", to: "/fr/consultant-ia-fractionnel" },
     ],
