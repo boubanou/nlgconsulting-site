@@ -30,7 +30,10 @@ export async function renderRoutes(urls: string[]): Promise<Map<string, string |
     server: { middlewareMode: true, hmr: false, watch: null },
     plugins: [react()],
     resolve: { alias: { "@": path.resolve(root, "src") }, dedupe: ["react", "react-dom"] },
-    ssr: { noExternal: ["react-helmet-async", "react-router-dom", "react-router"] },
+    ssr: {
+      noExternal: ["react-helmet-async", "react-router-dom", "react-router"],
+      resolve: { conditions: ["module-sync", "module", "import"], externalConditions: ["module-sync", "import"] },
+    },
     optimizeDeps: { noDiscovery: true, include: [] },
   });
   const results = new Map<string, string | Error>();
