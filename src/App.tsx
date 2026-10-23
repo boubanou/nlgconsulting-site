@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense, type ReactNode } from "react";
+import { BrowserRouter, StaticRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -139,16 +139,7 @@ const LoadingFallback = () => (
   </div>
 );
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <Toaster />
-    <Sonner />
-    <BrowserRouter>
-      <CookieConsent />
-      <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
-      <ScrollToTop />
-      <Suspense fallback={null}><LanguageRedirectHandler /></Suspense>
-      <Suspense fallback={<LoadingFallback />}>
+export const AppRoutes = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutNLG />} />
@@ -268,9 +259,28 @@ const App = () => (
 
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Suspense>
-    </BrowserRouter>
-  </QueryClientProvider>
 );
+
+const AppRouter = ({ ssrLocation, children }: { ssrLocation?: string; children: ReactNode }) =>
+  ssrLocation ? <StaticRouter location={ssrLocation}>{children}</StaticRouter> : <BrowserRouter>{children}</BrowserRouter>;
+
+// `ssrLocation` is only passed by the build-time prerender (src/entry-server.tsx).
+const App = ({ ssrLocation }: { ssrLocation?: string }) => {
+  return (
+  <QueryClientProvider client={queryClient}>
+    <Toaster />
+    <Sonner />
+    <AppRouter ssrLocation={ssrLocation}>
+      <CookieConsent />
+      <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
+      <ScrollToTop />
+      <Suspense fallback={null}><LanguageRedirectHandler /></Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <AppRoutes />
+      </Suspense>
+    </AppRouter>
+  </QueryClientProvider>
+  );
+};
 
 export default App;
