@@ -261,16 +261,16 @@ export const AppRoutes = () => (
         </Routes>
 );
 
+const AppRouter = ({ ssrLocation, children }: { ssrLocation?: string; children: ReactNode }) =>
+  ssrLocation ? <StaticRouter location={ssrLocation}>{children}</StaticRouter> : <BrowserRouter>{children}</BrowserRouter>;
+
 // `ssrLocation` is only passed by the build-time prerender (src/entry-server.tsx).
 const App = ({ ssrLocation }: { ssrLocation?: string }) => {
-  const Router = ssrLocation
-    ? ({ children }: { children: ReactNode }) => <StaticRouter location={ssrLocation}>{children}</StaticRouter>
-    : BrowserRouter;
   return (
   <QueryClientProvider client={queryClient}>
     <Toaster />
     <Sonner />
-    <Router>
+    <AppRouter ssrLocation={ssrLocation}>
       <CookieConsent />
       <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
       <ScrollToTop />
@@ -278,7 +278,7 @@ const App = ({ ssrLocation }: { ssrLocation?: string }) => {
       <Suspense fallback={<LoadingFallback />}>
         <AppRoutes />
       </Suspense>
-    </Router>
+    </AppRouter>
   </QueryClientProvider>
   );
 };
