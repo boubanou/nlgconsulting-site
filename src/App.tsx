@@ -139,16 +139,7 @@ const LoadingFallback = () => (
   </div>
 );
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <Toaster />
-    <Sonner />
-    <BrowserRouter>
-      <CookieConsent />
-      <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
-      <ScrollToTop />
-      <Suspense fallback={null}><LanguageRedirectHandler /></Suspense>
-      <Suspense fallback={<LoadingFallback />}>
+export const AppRoutes = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutNLG />} />
@@ -268,6 +259,19 @@ const App = () => (
 
           <Route path="*" element={<NotFound />} />
         </Routes>
+);
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <Toaster />
+    <Sonner />
+    <BrowserRouter>
+      <CookieConsent />
+      <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
+      <ScrollToTop />
+      <Suspense fallback={null}><LanguageRedirectHandler /></Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <AppRoutes />
       </Suspense>
     </BrowserRouter>
   </QueryClientProvider>
