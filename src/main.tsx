@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { createRoot, hydrateRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./content/register-commercial-insights";
 import App from "./App.tsx";
@@ -26,10 +26,10 @@ const tree = (
   </HelmetProvider>
 );
 
-// Pages prerendered at build time already contain the React markup: hydrate it in place
-// (no duplicate content, no blank flash). Otherwise render from scratch.
-if (container.hasChildNodes()) {
-  hydrateRoot(container, tree);
-} else {
-  createRoot(container).render(tree);
-}
+// The build emits the actual page HTML for crawlers and no-JS visitors.
+// Browser and server rendering environments are not yet identical for all
+// interactive widgets, especially the French home page. Hydrating this markup
+// leads to React 418/422/425 errors and a full client-render fallback.
+// Mount React normally rather than attempting unsafe hydration: createRoot
+// replaces the initial content on commit, and never leaves duplicate H1s.
+createRoot(container).render(tree);
