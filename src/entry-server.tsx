@@ -7,6 +7,9 @@ import "./content/register-commercial-insights";
 import App from "./App";
 import RootErrorBoundary from "./components/RootErrorBoundary";
 
+// Mirrors <ReactReady /> in main.tsx so hydration sees the same tree shape.
+const ReactReadyPlaceholder = () => null;
+
 export function renderRoute(url: string): Promise<string> {
   return new Promise((resolve, reject) => {
     let html = "";
@@ -24,6 +27,7 @@ export function renderRoute(url: string): Promise<string> {
     });
     const stream = renderToPipeableStream(
       <HelmetProvider context={{}}>
+        <ReactReadyPlaceholder />
         <RootErrorBoundary>
           <App ssrLocation={url} />
         </RootErrorBoundary>
