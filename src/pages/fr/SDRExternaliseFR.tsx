@@ -75,6 +75,18 @@ const SDRExternaliseFR = () => {
           </div>
         </section>
 
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl space-y-5">
+            <h2 className="text-3xl font-bold">Externalisation SDR : comment mesurer un dispositif efficace ?</h2>
+            <p className="text-muted-foreground">Un rendez-vous qualifié n'est pas simplement une case remplie dans l'agenda. Avant le lancement, définissez les critères d'acceptation : entreprise correspondant à l'ICP, interlocuteur concerné, besoin ou intérêt identifié, accord explicite pour échanger et informations transmises à l'équipe commerciale.</p>
+            <h3 className="text-xl font-semibold">Comparer une équipe SDR interne à une prestation externalisée</h3>
+            <p className="text-muted-foreground">Une équipe interne facilite la montée en expertise métier et le contrôle quotidien, mais nécessite recrutement, formation, outils et encadrement. L'externalisation facilite le test d'un canal et l'ajustement de la capacité, sous réserve de règles claires pour les données, la qualification et le reporting. Le choix dépend surtout du cycle de vente, du volume adressable et du niveau d'expertise nécessaire.</p>
+            <h3 className="text-xl font-semibold">Indicateurs à suivre dans le CRM</h3>
+            <p className="text-muted-foreground">Suivez les réponses pertinentes, rendez-vous acceptés puis effectivement tenus, opportunités créées, objections récurrentes et coût par opportunité qualifiée. Comparez les chiffres à un historique ou à une période pilote ; évitez d'interpréter le seul volume de messages comme un résultat commercial.</p>
+            <p>Pour approfondir : <Link className="text-primary underline" to="/fr/ressources/sdr-externalise-vs-interne">SDR externalisé vs SDR interne</Link> et <Link className="text-primary underline" to="/fr/agence-lead-generation-b2b">notre approche de génération de leads B2B</Link>.</p>
+          </div>
+        </section>
+
         <section className="py-12 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
