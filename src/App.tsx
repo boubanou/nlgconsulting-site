@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense, type ReactNode } from "react";
+import { BrowserRouter, StaticRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -261,11 +261,16 @@ export const AppRoutes = () => (
         </Routes>
 );
 
-const App = () => (
+// `ssrLocation` is only passed by the build-time prerender (src/entry-server.tsx).
+const App = ({ ssrLocation }: { ssrLocation?: string }) => {
+  const Router = ssrLocation
+    ? ({ children }: { children: ReactNode }) => <StaticRouter location={ssrLocation}>{children}</StaticRouter>
+    : BrowserRouter;
+  return (
   <QueryClientProvider client={queryClient}>
     <Toaster />
     <Sonner />
-    <BrowserRouter>
+    <Router>
       <CookieConsent />
       <Suspense fallback={null}><GlobalVoiceGuide /></Suspense>
       <ScrollToTop />
@@ -273,8 +278,9 @@ const App = () => (
       <Suspense fallback={<LoadingFallback />}>
         <AppRoutes />
       </Suspense>
-    </BrowserRouter>
+    </Router>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
