@@ -1,7 +1,6 @@
 // Loads src/entry-server.tsx through Vite's SSR pipeline (same aliases/plugins as the app)
 // and renders a list of routes to HTML strings. Used by the build plugin and tests.
 import { createServer } from "vite";
-import react from "@vitejs/plugin-react-swc";
 import path from "node:path";
 
 function installBrowserShims() {
@@ -28,7 +27,8 @@ export async function renderRoutes(urls: string[]): Promise<Map<string, string |
     logLevel: "error",
     appType: "custom",
     server: { middlewareMode: true, hmr: false, watch: null },
-    plugins: [react()],
+    plugins: [],
+    esbuild: { jsx: "automatic", jsxDev: false },
     resolve: { alias: { "@": path.resolve(root, "src") }, dedupe: ["react", "react-dom"] },
     ssr: {
       noExternal: ["react-helmet-async", "react-router-dom", "react-router"],
