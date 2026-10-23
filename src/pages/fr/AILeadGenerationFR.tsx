@@ -20,7 +20,7 @@ const AILeadGenerationFR = () => {
       { "@type": "FAQPage", "mainEntity": [
         { "@type": "Question", "name": "Comment fonctionne la génération de leads par IA ?", "acceptedAnswer": { "@type": "Answer", "text": "L'IA utilise le machine learning pour identifier les prospects idéaux, personnaliser l'outreach à grande échelle et optimiser les messages en fonction des données de réponse." } },
         { "@type": "Question", "name": "L'IA est-elle meilleure que les SDR humains ?", "acceptedAnswer": { "@type": "Answer", "text": "Ils sont complémentaires. L'IA excelle en volume et opère 24/7. Les humains excellent dans les conversations nuancées. Les meilleurs résultats viennent de la combinaison des deux." } },
-        { "@type": "Question", "name": "Quels résultats puis-je attendre ?", "acceptedAnswer": { "@type": "Answer", "text": "Nos clients voient typiquement 3x plus de pipeline à 50% de coût inférieur par rendez-vous comparé aux méthodes SDR traditionnelles." } }
+        { "@type": "Question", "name": "Quels résultats puis-je attendre ?", "acceptedAnswer": { "@type": "Answer", "text": "Les résultats dépendent du marché, de l'offre et de l'exécution. Nous suivons les échanges qualifiés, les rendez-vous tenus, les opportunités et le coût par opportunité." } }
       ]}
     ]
   };
@@ -29,7 +29,7 @@ const AILeadGenerationFR = () => {
     <>
       <Helmet>
         <title>Génération de Leads IA pour le B2B | NLG Consulting</title>
-        <meta name="description" content="Systèmes de prospection IA qui génèrent des rendez-vous B2B qualifiés en automatique. 3x plus de pipeline à -50% du coût. Découvrez comment." />
+        <meta name="description" content="Prospection B2B assistée par IA : recherche, messages personnalisés, qualification et suivi CRM avec supervision humaine." />
         <link rel="canonical" href="https://www.nlgconsulting.co/fr/generation-leads-ia" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-lead-generation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/generation-leads-ia" />
@@ -50,7 +50,7 @@ const AILeadGenerationFR = () => {
           <div className="container mx-auto max-w-4xl text-center">
             <Badge variant="outline" className="px-4 py-2 text-sm mb-6">Génération de Leads IA</Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Prospection IA qui génère des rendez-vous qualifiés</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">Arrêtez de gaspiller du budget en outreach manuel. Nos systèmes IA identifient, engagent et qualifient vos prospects idéaux à grande échelle — 3x plus de pipeline à 50% de coût en moins.</p>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">Combinez recherche de prospects assistée par IA, messages personnalisés et qualification humaine. Évaluez la performance sur la qualité des échanges et les opportunités créées.</p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/fr/rendez-vous">Découvrir comment l'IA peut scaler votre pipeline <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
@@ -61,8 +61,8 @@ const AILeadGenerationFR = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { metric: "3x", label: "Croissance du pipeline" },
-                { metric: "50%", label: "Coût inférieur par RDV" },
+                { metric: "ICP", label: "Ciblage des prospects" },
+                { metric: "CRM", label: "Qualification et suivi" },
                 { metric: "24/7", label: "Prospection continue" },
                 { metric: "1-2 sem.", label: "Temps de mise en place" }
               ].map((item, i) => (
@@ -78,7 +78,7 @@ const AILeadGenerationFR = () => {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl prose prose-lg text-muted-foreground max-w-none">
             <h2 className="text-3xl font-bold text-foreground mb-6">Pourquoi les entreprises B2B passent à la génération de leads IA</h2>
-            <p>Le modèle SDR traditionnel est cassé. Vous recrutez, formez pendant des mois, les regardez partir, et recommencez. Pendant ce temps, vos concurrents utilisent l'IA pour prospecter 24/7 à une fraction du coût.</p>
+            <p>Le recrutement d'une équipe SDR peut être pertinent, mais demande du temps de formation et de pilotage. L'IA peut soutenir la recherche, la personnalisation et les relances tout en conservant une validation humaine.</p>
             <p>NLG Consulting construit des systèmes de prospection IA qui combinent l'échelle de l'automatisation avec l'intelligence du machine learning. Nos systèmes analysent le comportement des prospects et personnalisent l'outreach en fonction de signaux réels.</p>
             <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">SDR IA vs SDR Humain : La Combinaison Intelligente</h3>
             <p>Les meilleurs résultats viennent de la combinaison IA + humain. L'IA gère le volume. Les humains gèrent les conversations complexes. Notre service de <Link to="/fr/vente" className="text-primary hover:underline font-medium">ventes B2B externalisées</Link> s'intègre parfaitement avec la génération de leads IA.</p>
@@ -92,7 +92,7 @@ const AILeadGenerationFR = () => {
               {[
                 { q: "Comment fonctionne la génération de leads IA ?", a: "L'IA utilise le machine learning pour identifier les prospects idéaux, personnaliser l'outreach à grande échelle et optimiser les messages automatiquement." },
                 { q: "L'IA est-elle meilleure que les SDR humains ?", a: "Ils sont complémentaires. L'IA excelle en volume et 24/7. Les humains en conversations nuancées. Les meilleurs résultats viennent de la combinaison." },
-                { q: "Quels résultats attendre ?", a: "3x plus de pipeline à 50% de coût inférieur par rendez-vous comparé aux méthodes SDR traditionnelles." },
+                { q: "Quels résultats attendre ?", a: "Les résultats varient selon le marché et l'offre : nous suivons les rendez-vous tenus et les opportunités qualifiées." },
                 { q: "Combien de temps pour la mise en place ?", a: "1-2 semaines. Le système commence à générer des résultats dès la première semaine et s'améliore continuellement." }
               ].map((item, i) => (
                 <div key={i} className="border-b border-border pb-6">
