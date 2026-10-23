@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { Plugin } from "vite";
+import { renderRoutes } from "./ssr-render";
 import { seoRoutes, BASE_URL, type SeoRouteMeta } from "../src/lib/seo-route-metadata";
 import { insightArticles, type InsightArticle } from "../src/content/insights";
 
@@ -306,11 +307,61 @@ function applySitemapCanonical(template: string, entry: SitemapEntry, derived?: 
   return html;
 }
 
+function listHtmlFiles(dir: string, base = ""): string[] {
+  const out: string[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const rel = path.join(base, entry.name);
+    if (entry.isDirectory()) out.push(...listHtmlFiles(path.join(dir, entry.name), rel));
+    else if (entry.name === "index.html") out.push(rel);
+  }
+  return out;
+}
+
+/** Swap the lightweight static fallback for the real React markup of the route. */
+export function injectSsrMarkup(html: string, markup: string): string {
+  const rootTag = '<div id="root"></div>';
+  const rootIdx = html.indexOf(rootTag);
+  if (rootIdx === -1) return html;
+  const bodyIdx = html.indexOf("<body");
+  const candidates = ['<div data-seo-prerender="true">', '<section data-commercial-insights="true">']
+    .map((marker) => html.indexOf(marker, bodyIdx))
+    .filter((idx) => idx !== -1 && idx < rootIdx);
+  const start = candidates.length ? Math.min(...candidates) : rootIdx;
+  return html.slice(0, start) + `<div id="root">${markup}</div>` + html.slice(rootIdx + rootTag.length);
+}
+
 export default function seoPrerender(): Plugin {
+  let outDir = "dist";
   return {
     name: "nlg-seo-prerender",
     apply: "build",
     enforce: "post",
+    configResolved(config) {
+      outDir = path.resolve(config.root, config.build.outDir);
+    },
+    async writeBundle() {
+      if (process.env.SKIP_SSR_PRERENDER === "1") return;
+      const files = listHtmlFiles(outDir).filter((f) => !f.startsWith("admin") && !f.startsWith("auth"));
+      const routeFor = (file: string) => {
+        const dir = path.dirname(file);
+        return dir === "." ? "/" : "/" + dir.split(path.sep).join("/");
+      };
+      const results = await renderRoutes(files.map(routeFor));
+      let ok = 0;
+      const failed: string[] = [];
+      for (const file of files) {
+        const result = results.get(routeFor(file));
+        if (!result || result instanceof Error || !result.includes("<h1")) {
+          failed.push(`${routeFor(file)}${result instanceof Error ? ` (${result.message})` : ""}`);
+          continue;
+        }
+        const full = path.join(outDir, file);
+        fs.writeFileSync(full, injectSsrMarkup(fs.readFileSync(full, "utf8"), result));
+        ok++;
+      }
+      console.log(`[nlg-seo-prerender] React-rendered HTML for ${ok}/${files.length} pages`);
+      if (failed.length) console.warn(`[nlg-seo-prerender] kept static fallback for: ${failed.join(", ")}`);
+    },
     generateBundle(_, bundle) {
       const entry = bundle["index.html"];
       if (!entry || entry.type !== "asset") {
