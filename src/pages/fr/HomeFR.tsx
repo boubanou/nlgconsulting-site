@@ -19,7 +19,7 @@ import {
   Calendar,
   Phone,
   Target,
-  Mic
+  Mic,
   MessageSquareText,
 } from "lucide-react";
 import MainNavbarFR from "@/components/fr/MainNavbarFR";
