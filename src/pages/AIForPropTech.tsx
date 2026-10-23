@@ -51,6 +51,18 @@ const AIForPropTech = () => {
           </div>
         </section>
 
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl space-y-5">
+            <h2 className="text-3xl font-bold">PropTech AI consulting: from workflow audit to practical delivery</h2>
+            <p className="text-muted-foreground">For property technology companies, a useful AI project begins with a real workflow: how listings enter the system, how prospects are qualified, how transactions are tracked and how investor or property data is reviewed. Map the current handoffs, data permissions and existing software before selecting automation tools.</p>
+            <h3 className="text-xl font-semibold">High-value use cases to assess first</h3>
+            <p className="text-muted-foreground">Candidate projects include CRM lead routing, listing-description drafts with human editorial review, document classification, pipeline reporting and internal knowledge retrieval. Investor communications and property information should retain appropriate approval and privacy controls.</p>
+            <h3 className="text-xl font-semibold">How to assess return on investment</h3>
+            <p className="text-muted-foreground">Define a baseline for staff time, errors and throughput, then pilot one limited process. Evaluate accuracy, exception handling, adoption and total ongoing cost. Not every workflow benefits from AI; simple integrations or business-rule automations may be safer and cheaper.</p>
+            <p>Explore <Link className="text-primary underline" to="/insights/ai-use-cases-proptech">our PropTech AI use-case guide</Link> or <Link className="text-primary underline" to="/ai-consulting">the AI consulting approach</Link>.</p>
+          </div>
+        </section>
+
         <section className="py-16 px-4 bg-muted/30">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl font-bold text-center mb-10">Where AI Creates Leverage in PropTech</h2>
