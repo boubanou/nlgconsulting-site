@@ -38,7 +38,7 @@ const AILeadGenerationFR = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/fr/generation-leads-ia" />
         <meta property="og:title" content="Génération de Leads IA pour le B2B | NLG Consulting" />
-        <meta property="og:description" content="Systèmes de prospection IA qui génèrent des rendez-vous B2B qualifiés en automatique. 3x plus de pipeline à -50% du coût." />
+        <meta property="og:description" content="Prospection B2B assistée par IA : ciblage, personnalisation, qualification et workflows CRM avec supervision humaine." />
         <meta property="og:image" content="https://www.nlgconsulting.co/logo.svg" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
