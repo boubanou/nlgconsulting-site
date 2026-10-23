@@ -2,7 +2,7 @@
 // receive the same content React shows. The client (main.tsx) replaces it with createRoot.
 import { Suspense } from "react";
 import { renderToPipeableStream } from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
+import { StaticRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Writable } from "node:stream";
