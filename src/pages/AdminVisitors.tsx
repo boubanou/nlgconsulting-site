@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { useUserRole } from "@/hooks/useUserRole";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,10 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Activity, Eye, Flame, Globe2, MousePointerClick, UserRound } from "lucide-react";
 
+// Visitor analytics tables are not present in the currently generated Supabase Database typings.
+// Use an explicitly untyped client for this admin-only reader until types are regenerated.
+// Database existence and row-level security still require verification in the backend.
+const visitorClient = supabase as unknown as SupabaseClient<any>;
 type SiteFilter = "all" | "nlg" | "blocktech" | "fph";
 type Profile = { visitor_id:string; first_seen_at:string; last_seen_at:string; first_site?:string|null; last_site?:string|null; first_referrer?:string|null; first_utm_source?:string|null; first_utm_campaign?:string|null; total_sessions:number; total_pageviews:number; intent_score:number; email?:string|null; name?:string|null; company?:string|null; phone?:string|null; last_path?:string|null };
 type Session = { session_id:string; visitor_id:string; site:string; started_at:string; last_seen_at:string; pageviews:number; score:number };
@@ -34,9 +39,9 @@ const AdminVisitors = () => {
     queryKey: ["visitor-admin"],
     queryFn: async () => {
       const [p, s, e] = await Promise.all([
-        supabase.from("visitor_profiles").select("*").order("last_seen_at", { ascending:false }).limit(200),
-        supabase.from("visitor_sessions").select("*").order("last_seen_at", { ascending:false }).limit(500),
-        supabase.from("visitor_events").select("*").order("created_at", { ascending:false }).limit(1000),
+        visitorClient.from("visitor_profiles").select("*").order("last_seen_at", { ascending:false }).limit(200),
+        visitorClient.from("visitor_sessions").select("*").order("last_seen_at", { ascending:false }).limit(500),
+        visitorClient.from("visitor_events").select("*").order("created_at", { ascending:false }).limit(1000),
       ]);
       if (p.error) throw p.error; if (s.error) throw s.error; if (e.error) throw e.error;
       return { profiles:(p.data||[]) as Profile[], sessions:(s.data||[]) as Session[], events:(e.data||[]) as Event[] };

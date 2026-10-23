@@ -14,6 +14,15 @@ export function renderRoute(url: string): Promise<string> {
   return new Promise((resolve, reject) => {
     let html = "";
     let failed: unknown = null;
+    let settled = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const finish = (error?: unknown) => {
+      if (settled) return;
+      settled = true;
+      if (timer) clearTimeout(timer);
+      if (error) reject(error);
+      else resolve(html);
+    };
     const sink = new Writable({
       write(chunk, _enc, cb) {
         html += chunk.toString();
@@ -21,8 +30,7 @@ export function renderRoute(url: string): Promise<string> {
       },
       final(cb) {
         cb();
-        if (failed) reject(failed);
-        else resolve(html);
+        finish(failed || undefined);
       },
     });
     const stream = renderToPipeableStream(
@@ -37,16 +45,16 @@ export function renderRoute(url: string): Promise<string> {
           stream.pipe(sink);
         },
         onShellError(err) {
-          reject(err);
+          finish(err);
         },
         onError(err) {
           failed = err;
         },
       },
     );
-    setTimeout(() => {
+    timer = setTimeout(() => {
       stream.abort();
-      reject(new Error(`SSR timeout for ${url}`));
+      finish(new Error(`SSR timeout for ${url}`));
     }, 15000);
   });
 }

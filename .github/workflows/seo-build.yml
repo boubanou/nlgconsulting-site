@@ -1,0 +1,46 @@
+name: NLG SEO and build validation
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seo-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build production HTML
+        run: npm run build
+      - name: Check critical SEO HTML and claims
+        run: node scripts/seo-smoke-check.mjs
+      - name: Install lightweight browser testing client
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 --no-audit --no-fund
+      - name: Check hydration in Chrome
+        run: node scripts/seo-browser-smoke.mjs
+
+  typecheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: TypeScript browser check
+        run: npx tsc -p tsconfig.app.json --noEmit

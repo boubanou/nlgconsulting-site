@@ -257,7 +257,7 @@ export const seoRoutes: SeoRouteMeta[] = [
     "lang": "en",
     "cluster": "sales",
     "title": "AI Lead Generation That Books Meetings | NLG Consulting",
-    "description": "AI-powered prospecting systems that generate qualified B2B meetings on autopilot. 3x pipeline at 50% lower cost. See how it works.",
+    "description": "AI-assisted prospecting for B2B teams: research, personalized outreach, qualification and CRM workflows with human oversight.",
     "canonical": "https://www.nlgconsulting.co/ai-lead-generation",
     "h1": "AI-Powered Prospecting That Books Qualified Meetings",
     "alternate": "/fr/generation-leads-ia"
@@ -267,7 +267,7 @@ export const seoRoutes: SeoRouteMeta[] = [
     "lang": "fr",
     "cluster": "sales",
     "title": "Génération de Leads IA pour le B2B | NLG Consulting",
-    "description": "Systèmes de prospection IA qui génèrent des rendez-vous B2B qualifiés en automatique. 3x plus de pipeline à -50% du coût. Découvrez comment.",
+    "description": "Prospection B2B assistée par IA : recherche, messages personnalisés, qualification et suivi CRM avec supervision humaine.",
     "canonical": "https://www.nlgconsulting.co/fr/generation-leads-ia",
     "h1": "Prospection IA qui génère des rendez-vous qualifiés",
     "alternate": "/ai-lead-generation"

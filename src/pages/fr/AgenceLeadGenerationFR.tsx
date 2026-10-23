@@ -74,6 +74,18 @@ const AgenceLeadGenerationFR = () => {
           </div>
         </section>
 
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl space-y-5">
+            <h2 className="text-3xl font-bold">Agence de génération de leads B2B : quels livrables attendre ?</h2>
+            <p className="text-muted-foreground">Avant de choisir un partenaire, demandez un profil client idéal documenté, des critères d'exclusion, une stratégie de contact par segment, un processus de vérification des données et des règles de qualification des rendez-vous. Ces éléments rendent la prospection contrôlable et comparable dans le temps.</p>
+            <h3 className="text-xl font-semibold">Mesurer les leads qui deviennent de vraies opportunités</h3>
+            <p className="text-muted-foreground">Le volume de leads générés ne suffit pas. Distinguez contacts identifiés, réponses positives, rendez-vous acceptés, rendez-vous tenus et opportunités validées par les commerciaux. Vérifiez dans le CRM la source, la date, le segment et les motifs de disqualification afin d'améliorer progressivement le ciblage.</p>
+            <h3 className="text-xl font-semibold">Quand privilégier une agence plutôt qu'un SDR externalisé ?</h3>
+            <p className="text-muted-foreground">Une agence de génération de leads prend en charge un système plus large : segmentation, données, canaux, contenus, qualification et reporting. Un SDR externalisé désigne davantage l'exécution de la fonction de prospection. Le choix dépend des ressources marketing et commerciales déjà disponibles.</p>
+            <p>Consultez le <Link className="text-primary underline" to="/fr/ressources/strategie-lead-generation-b2b">guide de stratégie de génération de leads B2B</Link> ou notre page <Link className="text-primary underline" to="/fr/sdr-externalise">SDR externalisé</Link>.</p>
+          </div>
+        </section>
+
         <section className="py-12 px-4 bg-primary text-primary-foreground">
           <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6">
             {[

@@ -39,13 +39,21 @@ export async function renderRoutes(urls: string[]): Promise<Map<string, string |
   const results = new Map<string, string | Error>();
   try {
     const mod = await server.ssrLoadModule("/src/entry-server.tsx");
-    for (const url of urls) {
-      try {
-        results.set(url, await mod.renderRoute(url));
-      } catch (err) {
-        results.set(url, err instanceof Error ? err : new Error(String(err)));
+    // React streaming can wait on lazy modules or browser-only components.
+    // Render a few pages concurrently so one slow route cannot block the full sitemap.
+    // Cap concurrency to limit server-side memory consumption.
+    let nextIndex = 0;
+    const worker = async () => {
+      while (nextIndex < urls.length) {
+        const url = urls[nextIndex++];
+        try {
+          results.set(url, await mod.renderRoute(url));
+        } catch (err) {
+          results.set(url, err instanceof Error ? err : new Error(String(err)));
+        }
       }
-    }
+    };
+    await Promise.all(Array.from({ length: Math.min(4, urls.length) }, worker));
   } finally {
     await server.close();
   }

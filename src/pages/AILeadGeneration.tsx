@@ -19,7 +19,7 @@ const AILeadGeneration = () => {
         "@type": "Service",
         "name": "AI Lead Generation Systems",
         "provider": { "@type": "Organization", "name": "NLG Consulting", "url": "https://www.nlgconsulting.co" },
-        "description": "AI-powered B2B prospecting systems that generate qualified meetings on autopilot. 3x pipeline at 50% lower cost than traditional SDR.",
+        "description": "AI-assisted B2B prospecting with human oversight, ICP research, multichannel outreach and qualified meeting workflows.",
         "url": "https://www.nlgconsulting.co/ai-lead-generation",
         "areaServed": ["Europe", "North America", "Middle East"]
       },
@@ -36,7 +36,7 @@ const AILeadGeneration = () => {
         "mainEntity": [
           { "@type": "Question", "name": "How does AI lead generation work?", "acceptedAnswer": { "@type": "Answer", "text": "AI lead generation uses machine learning algorithms to identify ideal prospects, personalize outreach at scale, and optimize messaging based on response data. It automates the repetitive parts of prospecting while maintaining personalization that drives responses." } },
           { "@type": "Question", "name": "Is AI lead generation better than human SDRs?", "acceptedAnswer": { "@type": "Answer", "text": "AI and human SDRs are complementary. AI excels at scale, data analysis, and 24/7 operation. Humans excel at nuanced conversations and relationship building. The best results come from combining both." } },
-          { "@type": "Question", "name": "What kind of results can I expect from AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "Clients typically see 3x pipeline generation at 50% lower cost per meeting compared to traditional SDR methods." } },
+          { "@type": "Question", "name": "What kind of results can I expect from AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "Results depend on offer, market and execution. We measure qualified conversations, meetings held, opportunities created and cost per qualified opportunity." } },
           { "@type": "Question", "name": "How long does it take to set up an AI lead generation system?", "acceptedAnswer": { "@type": "Answer", "text": "Initial setup takes 1-2 weeks including ICP definition, data integration, and sequence creation. The system begins generating results within the first week of deployment." } },
           { "@type": "Question", "name": "What AI tools and platforms do you use?", "acceptedAnswer": { "@type": "Answer", "text": "We use a stack of best-in-class AI tools for prospecting, enrichment, personalization, and sequencing. The specific tools are selected based on your market, ICP, and technical requirements." } }
         ]
@@ -48,7 +48,7 @@ const AILeadGeneration = () => {
     <>
       <Helmet>
         <title>AI Lead Generation That Books Meetings | NLG Consulting</title>
-        <meta name="description" content="AI-powered prospecting systems that generate qualified B2B meetings on autopilot. 3x pipeline at 50% lower cost. See how it works." />
+        <meta name="description" content="AI-assisted prospecting for B2B teams: research, personalized outreach, qualification and CRM workflows with human oversight." />
         <link rel="canonical" href="https://www.nlgconsulting.co/ai-lead-generation" />
         <link rel="alternate" hrefLang="en" href="https://www.nlgconsulting.co/ai-lead-generation" />
         <link rel="alternate" hrefLang="fr" href="https://www.nlgconsulting.co/fr/generation-leads-ia" />
@@ -57,7 +57,7 @@ const AILeadGeneration = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nlgconsulting.co/ai-lead-generation" />
         <meta property="og:title" content="AI Lead Generation That Books Meetings | NLG Consulting" />
-        <meta property="og:description" content="AI-powered prospecting systems. 3x pipeline at 50% lower cost. Qualified B2B meetings on autopilot." />
+        <meta property="og:description" content="AI-assisted B2B prospecting with research, outreach, qualification and CRM reporting." />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/OtJIlsq6BkarYyLF2hyTG0HPUvI2/social-images/social-1762862777432-NLG logo (1)@0.5x.png" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -73,7 +73,7 @@ const AILeadGeneration = () => {
               AI-Powered Prospecting That Books Qualified Meetings
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Stop burning budget on manual outreach. Our AI lead generation systems identify, engage, and qualify your ideal prospects at scale — delivering 3x more pipeline at 50% lower cost.
+              Build a more structured prospecting workflow with AI-assisted research, personalized outreach and human-led qualification. Track meetings held and qualified opportunities rather than relying on volume claims.
             </p>
             <Button asChild size="lg" className="text-base px-8">
               <Link to="/book">See How AI Can Scale Your Pipeline <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -86,8 +86,8 @@ const AILeadGeneration = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { metric: "3x", label: "Pipeline Growth" },
-                { metric: "50%", label: "Lower Cost Per Meeting" },
+                { metric: "ICP", label: "Audience Definition" },
+                { metric: "CRM", label: "Qualification & Tracking" },
                 { metric: "24/7", label: "Always Prospecting" },
                 { metric: "1-2 wks", label: "Setup Time" }
               ].map((item, i) => (
@@ -106,7 +106,7 @@ const AILeadGeneration = () => {
             <div className="prose prose-lg text-muted-foreground max-w-none">
               <h2 className="text-3xl font-bold text-foreground mb-6">Why B2B Companies Are Switching to AI Lead Generation</h2>
               <p>
-                The traditional SDR model is broken. You hire, train for months, watch them leave, and start over. Meanwhile, your competitors are using AI to prospect 24/7 at a fraction of the cost. The question isn't whether to adopt AI lead generation — it's how fast you can get started.
+                Hiring SDRs internally can be effective but requires recruitment, coaching and operational oversight. AI-assisted research and CRM automation can reduce repetitive work while experienced people handle qualification and relationships.
               </p>
               <p>
                 NLG Consulting builds AI-powered prospecting systems that combine the scale of automation with the intelligence of machine learning. Our systems don't just blast generic messages — they analyze prospect behavior, personalize outreach based on real signals, and continuously optimize for response rates.
@@ -164,7 +164,7 @@ const AILeadGeneration = () => {
               {[
                 { q: "How does AI lead generation work?", a: "AI uses machine learning to identify ideal prospects, personalize outreach at scale, and optimize messaging based on response data — automating the repetitive parts while maintaining personalization." },
                 { q: "Is AI better than human SDRs?", a: "They're complementary. AI excels at scale and 24/7 operation. Humans excel at nuanced conversations. The best results come from combining both." },
-                { q: "What results can I expect?", a: "Clients typically see 3x pipeline generation at 50% lower cost per meeting compared to traditional SDR methods." },
+                { q: "What results can I expect?", a: "Results depend on offer, market and execution. We measure qualified conversations, meetings held, opportunities created and cost per qualified opportunity." },
                 { q: "How long does setup take?", a: "Initial setup takes 1-2 weeks. The system begins generating results within the first week of deployment and continuously improves." },
                 { q: "What AI tools do you use?", a: "We use best-in-class AI tools for prospecting, enrichment, personalization, and sequencing — selected based on your specific needs. We stay vendor-agnostic." }
               ].map((item, i) => (
