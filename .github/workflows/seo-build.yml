@@ -25,6 +25,10 @@ jobs:
         run: npm run build
       - name: Check critical SEO HTML and claims
         run: node scripts/seo-smoke-check.mjs
+      - name: Install lightweight browser testing client
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 --no-audit --no-fund
+      - name: Check hydration in Chrome
+        run: node scripts/seo-browser-smoke.mjs
 
   typecheck:
     runs-on: ubuntu-latest
