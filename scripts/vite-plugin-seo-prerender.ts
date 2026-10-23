@@ -346,7 +346,14 @@ export default function seoPrerender(): Plugin {
         const dir = path.dirname(file);
         return dir === "." ? "/" : "/" + dir.split(path.sep).join("/");
       };
-      const results = await renderRoutes(files.map(routeFor));
+      let results: Map<string, string | Error>;
+      try {
+        results = await renderRoutes(files.map(routeFor));
+      } catch (err) {
+        // Never break the deploy: pages keep their static fallback.
+        console.warn("[nlg-seo-prerender] React prerender unavailable, keeping static fallback:", err);
+        return;
+      }
       let ok = 0;
       const failed: string[] = [];
       for (const file of files) {
