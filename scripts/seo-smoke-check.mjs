@@ -122,5 +122,42 @@ check("language-switch navigation imports only lightweight article route mapping
   }
 });
 
+
+check("GSC-reported legacy language slugs redirect to valid 200 sitemap targets", () => {
+  const origin = "https://www.nlgconsulting.co";
+  const xml = ["sitemap.xml", "sitemap-commercial.xml"]
+    .map(name => fs.readFileSync(path.join(dist, name), "utf8")).join("\n");
+  const listed = new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].slice(origin.length)));
+  const redirects = JSON.parse(fs.readFileSync("vercel.json", "utf8")).redirects;
+  const routeMapSource = fs.readFileSync("src/lib/insight-alternate-paths.ts", "utf8");
+  const entry = routeMapSource.match(/=\s*(\{[\s\S]*?\});/);
+  assert.ok(entry, "Cannot read translation route map");
+  const articleMap = JSON.parse(entry[1]);
+  const historicalRoutes = Object.entries(articleMap).map(([route, equivalent]) =>
+    route.startsWith("/insights/")
+      ? ["/fr" + route, equivalent]
+      : [route.replace(/^\/fr/, ""), route]
+  );
+  historicalRoutes.push(
+    ["/fr/ia-proptech", "/fr/ia-pour-proptech"],
+    ["/fr/fintech-lead-generation", "/fr/ia-pour-fintech"],
+    ["/fr/proptech-lead-generation", "/fr/ia-pour-proptech"]
+  );
+  const uniqueness = new Set();
+  for (const [legacy, destination] of historicalRoutes) {
+    assert.ok(!uniqueness.has(legacy), "Duplicate historical route " + legacy);
+    uniqueness.add(legacy);
+    assert.ok(!listed.has(legacy), "Redirect would shadow indexed page " + legacy);
+    assert.ok(listed.has(destination), "Legacy route points outside sitemap " + legacy);
+    assert.equal(redirects.find(r => r.source === legacy)?.destination, destination,
+      "Missing/wrong 301 for " + legacy);
+    assert.equal(redirects.find(r => r.source === legacy)?.permanent, true);
+    const html = read(destination);
+    assert.ok(html.includes('<link rel="canonical" href="' + origin + destination + '">'),
+      "Legacy destination is not self-canonical: " + destination);
+  }
+  console.log("PASS " + historicalRoutes.length + " legacy article and industry redirects");
+});
+
 if (failures) { console.error(failures + " SEO regression check(s) failed"); process.exit(1); }
 console.log("SEO smoke checks passed");
