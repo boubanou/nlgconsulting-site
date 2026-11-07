@@ -114,7 +114,7 @@ const VenturesFR = () => {
                 Contrairement aux cabinets de conseil traditionnels, NLG investit expertise opérationnelle, capital et systèmes dans la construction de son propre portefeuille d'entreprises. Chaque venture suit une méthodologie constante : identifier une inefficience de marché, construire avec la technologie en premier, lancer avec une infrastructure de revenus dès le premier jour, et itérer sur la base de la performance commerciale.
               </p>
               <p>
-                Cette approche crée une boucle de feedback directe entre notre pratique de <Link to="/fr/conseil" className="text-primary hover:underline font-medium">conseil stratégique</Link> et l'exécution réelle. Les enseignements du scaling de Block Tech informent notre accompagnement des clients PropTech. Les systèmes de revenus conçus pour FractionalPropertyHub façonnent les <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link> que nous déployons pour les entreprises B2B.
+                Cette approche crée une boucle de feedback directe entre notre pratique de <Link to="/fr/conseil" className="text-primary hover:underline font-medium">conseil stratégique</Link> et l'exécution réelle. Les enseignements du scaling de Block Tech informent notre accompagnement des clients PropTech. Les systèmes de revenus conçus pour FractionalPropertyHub façonnent les <Link to="/fr/automation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link> que nous déployons pour les entreprises B2B.
               </p>
             </div>
           </div>

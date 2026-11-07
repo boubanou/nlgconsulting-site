@@ -97,7 +97,7 @@ const GoToMarketFR = () => {
             <div className="prose prose-lg text-muted-foreground max-w-none">
               <h2 className="text-3xl font-bold text-foreground mb-6">De la Stratégie aux Revenus</h2>
               <p>
-                Nous ne nous arrêtons pas aux decks stratégiques. Les plans GTM se connectent directement à nos capacités d'exécution — <Link to="/fr/sdr-externalise" className="text-primary hover:underline font-medium">systèmes outbound SDR</Link>, <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link>, <Link to="/fr/site-web-en-72h" className="text-primary hover:underline font-medium">sites de conversion</Link> et <Link to="/fr/automatisation-marketing-ia" className="text-primary hover:underline font-medium">automatisation marketing</Link>.
+                Nous ne nous arrêtons pas aux decks stratégiques. Les plans GTM se connectent directement à nos capacités d'exécution — <Link to="/fr/sdr-externalise" className="text-primary hover:underline font-medium">systèmes outbound SDR</Link>, <Link to="/fr/automation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link>, <Link to="/fr/site-web-en-72h" className="text-primary hover:underline font-medium">sites de conversion</Link> et <Link to="/fr/automation-marketing-ia" className="text-primary hover:underline font-medium">automatisation marketing</Link>.
               </p>
             </div>
           </div>

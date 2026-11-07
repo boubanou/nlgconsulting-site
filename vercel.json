@@ -1,6 +1,36 @@
 {
   "redirects": [
     {
+      "source": "/fr/automatisation-ia",
+      "destination": "/fr/automation-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/automatisation-marketing-ia",
+      "destination": "/fr/automation-marketing-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/site-internet/conditions",
+      "destination": "/web/terms",
+      "permanent": true
+    },
+    {
+      "source": "/fr/politique-de-confidentialite",
+      "destination": "/fr/politique-confidentialite",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights",
+      "destination": "/fr/ressources",
+      "permanent": true
+    },
+    {
+      "source": "/ressources",
+      "destination": "/fr/ressources",
+      "permanent": true
+    },
+    {
       "source": "/terms",
       "destination": "/web/terms",
       "permanent": true

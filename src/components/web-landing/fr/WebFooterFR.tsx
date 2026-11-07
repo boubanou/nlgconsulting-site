@@ -64,10 +64,10 @@ const WebFooterFR = () => {
               <Link to="/fr" className="hover:text-primary transition-colors">
                 NLG Consulting
               </Link>
-              <Link to="/fr/site-internet/conditions" className="hover:text-primary transition-colors">
+              <Link to="/web/terms" className="hover:text-primary transition-colors">
                 Conditions Générales
               </Link>
-              <Link to="/fr/politique-de-confidentialite" className="hover:text-primary transition-colors">
+              <Link to="/fr/politique-confidentialite" className="hover:text-primary transition-colors">
                 Politique de Confidentialité
               </Link>
               <Link to="/fr/a-propos" className="hover:text-primary transition-colors">

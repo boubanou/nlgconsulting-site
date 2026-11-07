@@ -49,6 +49,22 @@ try {
     console.log("PASS browser " + route + ": 1 H1, " + h2Count + " H2s, no runtime/hydration errors");
     await page.close();
   }
+
+  const languageCases = [
+    ["/insights", "/fr/ressources"],
+    ["/fr/ressources", "/insights"],
+    ["/insights/ai-audit-checklist", "/fr/ressources/audit-ia-entreprise"],
+    ["/fr/ressources/prix-consultant-ia", "/insights/ai-consulting-cost"],
+    ["/fractional-ai-consultant", "/fr/consultant-ia-fractionnel"],
+    ["/proptech-lead-generation", "/fr/agence-lead-generation-b2b"],
+  ];
+  for (const [route, expected] of languageCases) {
+    const page = await browser.newPage();
+    await page.goto(base + route, { waitUntil: "domcontentloaded" });
+    await page.locator('a[href="' + expected + '"]').first().waitFor({ state: "attached", timeout: 15000 });
+    console.log("PASS language navigation " + route + " => " + expected);
+    await page.close();
+  }
 } finally {
   if (browser) await browser.close();
   server.kill("SIGTERM");

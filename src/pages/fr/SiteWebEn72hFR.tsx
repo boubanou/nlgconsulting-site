@@ -110,7 +110,7 @@ const SiteWebEn72hFR = () => {
                 <li><strong>Architecture SEO :</strong> Mapping de mots-clés, hiérarchie de contenu et stratégie de maillage interne pour une croissance organique durable.</li>
                 <li><strong>Design de Conversion :</strong> Chaque page structurée autour d'un objectif commercial clair — capture de leads, réservation ou qualification.</li>
                 <li><strong>Performance Technique :</strong> Temps de chargement rapides, design responsive mobile-first, accessibilité et conformité Core Web Vitals.</li>
-                <li><strong>Intégration :</strong> Connexions CRM, setup analytics, et alignement avec vos <Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link>.</li>
+                <li><strong>Intégration :</strong> Connexions CRM, setup analytics, et alignement avec vos <Link to="/fr/automation-ia" className="text-primary hover:underline font-medium">workflows d'automatisation IA</Link>.</li>
               </ul>
             </div>
           </div>
