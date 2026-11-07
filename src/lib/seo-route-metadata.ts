@@ -13,6 +13,17 @@ export const BASE_URL = "https://www.nlgconsulting.co";
 
 export const seoRoutes: SeoRouteMeta[] = [
   {
+    "path": "/web/terms",
+    "lang": "en",
+    "cluster": "core",
+    "title": "Terms and Conditions | NLG Consulting",
+    "description": "Terms and conditions for website creation services by NLG Consulting, including delivery, payments, revisions and ownership.",
+    "canonical": "https://www.nlgconsulting.co/web/terms",
+    "h1": "Terms and Conditions",
+    "alternate": "/web/terms"
+  },
+
+  {
     "path": "/",
     "lang": "en",
     "cluster": "core",
