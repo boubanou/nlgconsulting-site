@@ -105,5 +105,22 @@ check("all public sitemap pages have unique self-canonicals and one visible head
   assert.equal(publicPaths.size, urls.length, "duplicate public paths");
 });
 
+
+check("language-switch navigation imports only lightweight article route mapping", () => {
+  const hook = fs.readFileSync("src/hooks/useLanguage.ts", "utf8");
+  assert.ok(!hook.includes('from "@/content/insight-registry"'), "Navbar pulls in article bodies");
+  const map = fs.readFileSync("src/lib/insight-alternate-paths.ts", "utf8");
+  for (const file of [
+    "src/content/insights.ts", "src/content/commercial-insights.ts",
+    "src/content/acquisition-insights.ts",
+  ]) {
+    const source = fs.readFileSync(file, "utf8");
+    for (const [, route, alternate] of source.matchAll(/\bpath:\s*"([^"]+)"[\s\S]*?\balternatePath:\s*"([^"]+)"/g)) {
+      assert.ok(map.includes(JSON.stringify(route) + ": " + JSON.stringify(alternate)),
+        file + " locale mapping missing " + route);
+    }
+  }
+});
+
 if (failures) { console.error(failures + " SEO regression check(s) failed"); process.exit(1); }
 console.log("SEO smoke checks passed");

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { seoRouteByPath } from "@/lib/seo-route-metadata";
-import { allInsightByPath } from "@/content/insight-registry";
+import { insightAlternatePaths } from "@/lib/insight-alternate-paths";
 
 export type Language = "en" | "fr";
 
@@ -19,9 +19,9 @@ export function getAlternateLanguagePath(rawPath: string, targetLang: Language):
   const currentLang: Language = /^\/fr(?:\/|$)/.test(currentPath) ? "fr" : "en";
   if (targetLang === currentLang) return currentPath;
 
-  const insight = allInsightByPath[currentPath];
-  if (insight && allInsightByPath[insight.alternatePath]?.lang === targetLang) {
-    return insight.alternatePath;
+  const insight = insightAlternatePaths[currentPath];
+  if (insight && (/^\/fr(?:\/|$)/.test(insight) ? "fr" : "en") === targetLang) {
+    return insight;
   }
 
   const seoAlternate = seoRouteByPath[currentPath]?.alternate;
