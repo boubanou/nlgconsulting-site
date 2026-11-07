@@ -10,7 +10,7 @@ interface RelatedServicesFRProps {
 }
 
 const services: Record<string, { title: string; description: string; icon: React.ReactNode; link: string; cta: string }> = {
-  sales: { title: "Vente & BD", description: "15-30 rendez-vous B2B qualifiés par mois avec nos services SDR externalisés.", icon: <Target className="w-6 h-6" />, link: "/fr/vente", cta: "Découvrir les services SDR" },
+  sales: { title: "SDR externalisé B2B", description: "Prospection multicanal, qualification des échanges et suivi CRM avec une équipe SDR externalisée.", icon: <Target className="w-6 h-6" />, link: "/fr/sdr-externalise", cta: "Découvrir l’externalisation SDR" },
   web: { title: "Studio Web", description: "Sites web professionnels optimisés conversion livrés en 72 heures.", icon: <Globe className="w-6 h-6" />, link: "/fr/site-internet", cta: "Lancer votre site" },
   advisory: { title: "Conseil Stratégique", description: "Accompagnement expert en go-to-market, monétisation et scaling.", icon: <Lightbulb className="w-6 h-6" />, link: "/fr/conseil", cta: "Obtenir des conseils" },
   ventures: { title: "Nos Ventures", description: "Plateformes PropTech, FinTech & Média que nous avons construites.", icon: <Rocket className="w-6 h-6" />, link: "/fr/ventures", cta: "Explorer le portfolio" },
