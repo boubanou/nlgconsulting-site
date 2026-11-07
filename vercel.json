@@ -1,6 +1,161 @@
 {
   "redirects": [
     {
+      "source": "/fr/fintech-lead-generation",
+      "destination": "/fr/ia-pour-fintech",
+      "permanent": true
+    },
+    {
+      "source": "/fr/ia-proptech",
+      "destination": "/fr/ia-pour-proptech",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-audit-checklist",
+      "destination": "/fr/ressources/audit-ia-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-audit-for-smes",
+      "destination": "/fr/ressources/audit-ia-pme",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-automation-cost",
+      "destination": "/fr/ressources/prix-automatisation-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-automation-for-small-business",
+      "destination": "/fr/ressources/automatisation-ia-pme",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-automation-roi",
+      "destination": "/fr/ressources/roi-automatisation-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-consulting-cost",
+      "destination": "/fr/ressources/prix-consultant-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-use-cases-fintech",
+      "destination": "/fr/ressources/cas-usage-ia-fintech",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/ai-use-cases-proptech",
+      "destination": "/fr/ressources/cas-usage-ia-proptech",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/automate-sales-follow-up-with-ai",
+      "destination": "/fr/ressources/automatisation-relances-commerciales-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/b2b-lead-generation-playbook",
+      "destination": "/fr/ressources/strategie-lead-generation-b2b",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/crm-automation-with-ai",
+      "destination": "/fr/ressources/automatisation-crm-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/outsourced-sdr-cost",
+      "destination": "/fr/ressources/tarif-sdr-externalise",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/outsourced-sdr-vs-in-house",
+      "destination": "/fr/ressources/sdr-externalise-vs-interne",
+      "permanent": true
+    },
+    {
+      "source": "/fr/insights/voice-ai-website-navigation",
+      "destination": "/fr/ressources/site-web-vocal-ia",
+      "permanent": true
+    },
+    {
+      "source": "/fr/proptech-lead-generation",
+      "destination": "/fr/ia-pour-proptech",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/audit-ia-entreprise",
+      "destination": "/fr/ressources/audit-ia-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/audit-ia-pme",
+      "destination": "/fr/ressources/audit-ia-pme",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/automatisation-crm-ia",
+      "destination": "/fr/ressources/automatisation-crm-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/automatisation-ia-pme",
+      "destination": "/fr/ressources/automatisation-ia-pme",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/automatisation-relances-commerciales-ia",
+      "destination": "/fr/ressources/automatisation-relances-commerciales-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/cas-usage-ia-fintech",
+      "destination": "/fr/ressources/cas-usage-ia-fintech",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/cas-usage-ia-proptech",
+      "destination": "/fr/ressources/cas-usage-ia-proptech",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/prix-automatisation-ia",
+      "destination": "/fr/ressources/prix-automatisation-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/prix-consultant-ia",
+      "destination": "/fr/ressources/prix-consultant-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/roi-automatisation-ia",
+      "destination": "/fr/ressources/roi-automatisation-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/sdr-externalise-vs-interne",
+      "destination": "/fr/ressources/sdr-externalise-vs-interne",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/site-web-vocal-ia",
+      "destination": "/fr/ressources/site-web-vocal-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/strategie-lead-generation-b2b",
+      "destination": "/fr/ressources/strategie-lead-generation-b2b",
+      "permanent": true
+    },
+    {
+      "source": "/ressources/tarif-sdr-externalise",
+      "destination": "/fr/ressources/tarif-sdr-externalise",
+      "permanent": true
+    },
+    {
       "source": "/fr/automatisation-ia",
       "destination": "/fr/automation-ia",
       "permanent": true
