@@ -19,6 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
+import { hasVisitorAnalyticsConsent } from "@/lib/visitorIntent";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -50,22 +51,36 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
+    const locale = window.location.pathname.startsWith("/fr/") ? "fr" : "en";
+
     try {
-      const { error } = await supabase.functions.invoke("leads", {
+      const { data: result, error } = await supabase.functions.invoke("leads", {
         body: {
           name: data.name,
           email: data.email,
-          company: data.company || null,
+          company: data.company?.trim() || undefined,
           phone: data.phone || null,
-          message: data.message || null,
-          locale: "en",
+          message: data.message?.trim() || undefined,
+          locale,
           urgent: data.urgent || false,
         },
       });
 
-      if (error) {
-        throw new Error(error.message || "Failed to submit form");
+      if (error || result?.ok !== true) {
+        throw new Error(error?.message || "Failed to confirm lead submission");
+      }
+
+      // Record a GA4 conversion only after server-confirmed lead creation.
+      // Do not transmit personal or free-text form fields to analytics.
+      if (hasVisitorAnalyticsConsent() && typeof window.gtag === "function") {
+        try {
+          window.gtag("event", "generate_lead", {
+            lead_type: "contact_form",
+            form_language: locale,
+          });
+        } catch {
+          // Analytics must never turn a successfully stored lead into a form error.
+        }
       }
 
       toast.success("Thank You!", {
@@ -74,6 +89,16 @@ const ContactForm = () => {
 
       form.reset();
     } catch (error) {
+      if (hasVisitorAnalyticsConsent() && typeof window.gtag === "function") {
+        try {
+          window.gtag("event", "lead_submit_error", {
+            lead_type: "contact_form",
+            form_language: locale,
+          });
+        } catch {
+          // Never interfere with the error shown to the visitor.
+        }
+      }
       console.error("Error submitting form:", error);
       toast.error("Error", {
         description: "Failed to submit form. Please try again.",
