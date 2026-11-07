@@ -194,7 +194,7 @@ const AdvisoryFR = () => {
               </p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Stratégie connectée à l'exécution</h3>
               <p>
-                Contrairement aux consultants traditionnels, nous offrons un support d'implémentation direct. Besoin d'un <Link to="/fr/vente" className="text-primary hover:underline font-medium">système outbound</Link> ? Nous le construisons. Besoin d'<Link to="/fr/automatisation-ia" className="text-primary hover:underline font-medium">automatisation de workflows IA</Link> ? Nous le déployons. Besoin d'un <Link to="/fr/site-internet" className="text-primary hover:underline font-medium">site web de conversion</Link> ? Nous le livrons. Advisory et exécution dans une seule firme.
+                Contrairement aux consultants traditionnels, nous offrons un support d'implémentation direct. Besoin d'un <Link to="/fr/vente" className="text-primary hover:underline font-medium">système outbound</Link> ? Nous le construisons. Besoin d'<Link to="/fr/automation-ia" className="text-primary hover:underline font-medium">automatisation de workflows IA</Link> ? Nous le déployons. Besoin d'un <Link to="/fr/site-internet" className="text-primary hover:underline font-medium">site web de conversion</Link> ? Nous le livrons. Advisory et exécution dans une seule firme.
               </p>
               <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Perspective internationale</h3>
               <p>

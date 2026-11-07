@@ -97,7 +97,7 @@ const PriseRendezVousFR = () => {
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">
-              Intégration complète avec notre <Link to="/fr/sdr-externalise" className="text-primary hover:underline">infrastructure SDR externalisée</Link> et nos <Link to="/fr/automatisation-ia" className="text-primary hover:underline">workflows d'automatisation IA</Link>.
+              Intégration complète avec notre <Link to="/fr/sdr-externalise" className="text-primary hover:underline">infrastructure SDR externalisée</Link> et nos <Link to="/fr/automation-ia" className="text-primary hover:underline">workflows d'automatisation IA</Link>.
             </p>
           </div>
         </section>
