@@ -241,7 +241,7 @@ const MainNavbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden -mx-4 max-h-[calc(100dvh-4rem)] space-y-1 overflow-y-auto overscroll-contain border-t border-border bg-background/95 px-4 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] pt-3 shadow-xl backdrop-blur-xl">
+          <div className="lg:hidden -mx-4 max-h-[calc(100dvh-4rem)] space-y-1 overflow-y-auto overscroll-contain border-t border-border bg-background/95 px-4 pb-[calc(1.25rem_+_env(safe-area-inset-bottom,0px))] pt-3 shadow-xl backdrop-blur-xl">
             <Link to="/" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
               Home
             </Link>
