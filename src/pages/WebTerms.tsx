@@ -11,7 +11,8 @@ const WebTerms = () => {
           name="description" 
           content="Terms and conditions for website creation services by NLG Consulting. Delivery times, payments, source code ownership." 
         />
-        <link rel="canonical" href="https://web.nlgconsulting.co/terms" />
+        <link rel="canonical" href="https://www.nlgconsulting.co/web/terms" />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

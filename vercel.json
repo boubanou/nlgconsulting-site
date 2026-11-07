@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/terms",
+      "destination": "/web/terms",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/",
       "permanent": true
@@ -501,7 +506,7 @@
     },
     {
       "source": "/web/terms",
-      "destination": "/index.html"
+      "destination": "/web/terms/index.html"
     },
     {
       "source": "/web/thank-you",
