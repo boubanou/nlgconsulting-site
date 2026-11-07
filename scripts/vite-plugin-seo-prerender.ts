@@ -107,6 +107,13 @@ function applyMeta(template: string, meta: SeoRouteMeta): string {
   html = html.replace(/<link rel="alternate" hreflang="en" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="en" href="${escapeAttr(enUrl)}">`);
   html = html.replace(/<link rel="alternate" hreflang="fr" href="[^"]*"\s*\/?\s*>/, `<link rel="alternate" hreflang="fr" href="${escapeAttr(frUrl)}">`);
 
+  // Legal terms are a standalone document, not an alternate of a French service page.
+  // Keep the canonical self-referential and exclude the legal page from search results.
+  if (meta.path === "/web/terms") {
+    html = html.replace(/<meta name="robots" content="[^"]*"\\s*\\/?\\s*>/, '<meta name="robots" content="noindex, follow">');
+    html = html.replace(/\\s*<link rel="alternate" hreflang="(?:x-default|en|fr)" href="[^"]*"\\s*\\/?\\s*>/g, "");
+  }
+
   const schema = routeStructuredData(meta);
   html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script></head>`);
   html = html.replace('<div id="root"></div>', `${renderSeoContent(meta)}<div id="root"></div>`);
