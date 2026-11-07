@@ -88,7 +88,7 @@ const HomeFR = () => {
   ];
 
   const existingServices = [
-    { icon: <Users className="w-5 h-5" />, title: "Outbound & Lead Generation", description: "Systèmes outbound IA, infrastructure SDR externalisée et génération de rendez-vous B2B.", link: "/fr/vente" },
+    { icon: <Users className="w-5 h-5" />, title: "SDR Externalisé & Prospection B2B", description: "Systèmes outbound structurés, qualification et rendez-vous B2B avec une fonction SDR externalisée.", link: "/fr/sdr-externalise" },
     { icon: <Zap className="w-5 h-5" />, title: "Sites de Conversion & SEO", description: "Sites web orientés revenus, landing pages et actifs SEO — conçus comme des outils business.", link: "/fr/site-internet" },
     { icon: <Target className="w-5 h-5" />, title: "Conseil Stratégique", description: "Structure GTM, modèle commercial, planification IA et stratégie de systèmes de croissance pour fondateurs.", link: "/fr/conseil" },
     { icon: <Building2 className="w-5 h-5" />, title: "Ventures & Plateformes", description: "Plateformes construites, testées et opérées en PropTech, FinTech et Média — exécution d'abord.", link: "/fr/ventures" },
