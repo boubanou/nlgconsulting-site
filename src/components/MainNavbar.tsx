@@ -241,17 +241,17 @@ const MainNavbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden -mx-4 max-h-[calc(100dvh-4rem)] space-y-1 overflow-y-auto border-t border-border bg-background/95 px-4 pb-5 pt-3 shadow-xl backdrop-blur-xl">
-            <Link to="/" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+          <div className="lg:hidden -mx-4 max-h-[calc(100dvh-4rem)] space-y-1 overflow-y-auto overscroll-contain border-t border-border bg-background/95 px-4 pb-[calc(1.25rem_+_env(safe-area-inset-bottom,0px))] pt-3 shadow-xl backdrop-blur-xl">
+            <Link to="/" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link to="/about" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+            <Link to="/about" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
               About
             </Link>
 
             {/* Solutions Collapsible */}
             <Collapsible>
-              <CollapsibleTrigger className="flex min-h-11 w-full items-center justify-between rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary">
+              <CollapsibleTrigger className="flex min-h-11 w-full items-center justify-between rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary">
                 Solutions
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
@@ -260,7 +260,7 @@ const MainNavbar = () => {
                   {solutionsData.aiSystems.title}
                 </p>
                 {solutionsData.aiSystems.links.map((link) => (
-                  <Link key={link.to} to={link.to} className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link key={link.to} to={link.to} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
@@ -268,7 +268,7 @@ const MainNavbar = () => {
                   {solutionsData.growthRevOps.title}
                 </p>
                 {solutionsData.growthRevOps.links.map((link) => (
-                  <Link key={link.to} to={link.to} className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link key={link.to} to={link.to} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
@@ -276,11 +276,11 @@ const MainNavbar = () => {
                   {solutionsData.advisory.title}
                 </p>
                 {solutionsData.advisory.links.map((link) => (
-                  <Link key={link.to} to={link.to} className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link key={link.to} to={link.to} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
-                <Link to="/services" className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/5 hover:text-primary/80" onClick={() => setIsOpen(false)}>
+                <Link to="/services" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] font-medium text-primary transition-colors hover:bg-primary/5 hover:text-primary/80" onClick={() => setIsOpen(false)}>
                   View All Services →
                 </Link>
               </CollapsibleContent>
@@ -288,13 +288,13 @@ const MainNavbar = () => {
 
             {/* Industries Collapsible */}
             <Collapsible>
-              <CollapsibleTrigger className="flex min-h-11 w-full items-center justify-between rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary">
+              <CollapsibleTrigger className="flex min-h-11 w-full items-center justify-between rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary">
                 Industries
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="pl-4 space-y-0.5">
                 {industriesData.map((link) => (
-                  <Link key={link.to} to={link.to} className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link key={link.to} to={link.to} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
@@ -303,30 +303,30 @@ const MainNavbar = () => {
 
             {/* Resources Collapsible */}
             <Collapsible>
-              <CollapsibleTrigger className="flex min-h-11 w-full items-center justify-between rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary">
+              <CollapsibleTrigger className="flex min-h-11 w-full items-center justify-between rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary">
                 Resources
                 <ChevronDown className="w-4 h-4 transition-transform duration-200 [&[data-state=open]]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent className="pl-4 space-y-0.5">
                 {resourcesData.map((link) => (
-                  <Link key={link.to} to={link.to} className="flex min-h-10 items-center rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+                  <Link key={link.to} to={link.to} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>
                 ))}
               </CollapsibleContent>
             </Collapsible>
 
-            <Link to="/contact" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+            <Link to="/contact" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
 
             {hasAccess && (
-              <Link to="/admin" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+              <Link to="/admin" className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
                 BackOffice
               </Link>
             )}
 
-            <Link to={switchLanguageUrl} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
+            <Link to={switchLanguageUrl} className="flex min-h-11 items-center rounded-lg px-2 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-muted hover:text-primary" onClick={() => setIsOpen(false)}>
               🇫🇷 Français
             </Link>
 
