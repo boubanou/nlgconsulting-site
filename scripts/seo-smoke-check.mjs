@@ -58,12 +58,12 @@ check("sitemap and robots stay available", () => {
 check("legal terms have their own prerendered page and correct routing", () => {
   const html = read("/web/terms");
   const canonical = "https://www.nlgconsulting.co/web/terms";
-  assert.match(html, /<title>Terms and Conditions \\| NLG Consulting<\\/title>/);
+  assert.match(html, /<title>Terms and Conditions \| NLG Consulting<\/title>/);
   assert.ok(html.includes('<link rel="canonical" href="' + canonical + '">'), "terms canonical mismatch");
   assert.match(html, /<meta name="robots" content="noindex, follow">/);
   assert.ok(!/hreflang="fr"/.test(html), "no non-existent French terms alternate");
-  assert.match(html, /<div id="root">[\\s\\S]*?<h1\\b/i, "missing server-rendered terms content");
-  assert.equal(count(html, /<h1\\b/gi), 1, "terms have duplicate headings");
+  assert.match(html, /<div id="root">[\s\S]*?<h1\b/i, "missing server-rendered terms content");
+  assert.equal(count(html, /<h1\b/gi), 1, "terms have duplicate headings");
   const config = JSON.parse(fs.readFileSync("vercel.json", "utf8"));
   assert.equal(config.rewrites.find((r) => r.source === "/web/terms")?.destination, "/web/terms/index.html");
   assert.equal(config.redirects.find((r) => r.source === "/terms")?.destination, "/web/terms");
