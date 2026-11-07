@@ -20,24 +20,28 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
 import { hasVisitorAnalyticsConsent } from "@/lib/visitorIntent";
+import { useLocation } from "react-router-dom";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
+const createContactSchema = (isFrench: boolean) => z.object({
+  name: z.string().min(2, isFrench ? "Le nom doit contenir au moins 2 caractères." : "Name must be at least 2 characters"),
+  email: z.string().email(isFrench ? "Adresse e-mail invalide." : "Invalid email address"),
   company: z.string().optional(),
   phone: z.string().optional(),
-  message: z.string().max(2000).optional().or(z.literal("")),
+  message: z.string().max(2000, isFrench ? "Le message ne peut pas dépasser 2 000 caractères." : "Message must not exceed 2,000 characters").optional().or(z.literal("")),
   urgent: z.boolean().default(false),
-  consent: z.boolean().refine((val) => val === true, "You must accept the privacy policy"),
+  consent: z.boolean().refine((val) => val === true, isFrench ? "Vous devez accepter la politique de confidentialité." : "You must accept the privacy policy"),
 });
 
-type ContactFormValues = z.infer<typeof contactSchema>;
+type ContactFormValues = z.infer<ReturnType<typeof createContactSchema>>;
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { pathname } = useLocation();
+  const isFrench = pathname.startsWith("/fr/");
+  const locale = isFrench ? "fr" : "en";
 
   const form = useForm<ContactFormValues>({
-    resolver: zodResolver(contactSchema),
+    resolver: zodResolver(createContactSchema(isFrench)),
     defaultValues: {
       name: "",
       email: "",
@@ -51,7 +55,6 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    const locale = window.location.pathname.startsWith("/fr/") ? "fr" : "en";
 
     try {
       const { data: result, error } = await supabase.functions.invoke("leads", {
@@ -83,8 +86,8 @@ const ContactForm = () => {
         }
       }
 
-      toast.success("Thank You!", {
-        description: "Your request has been sent. We'll get back to you shortly.",
+      toast.success(isFrench ? "Merci !" : "Thank You!", {
+        description: isFrench ? "Votre demande a bien été envoyée. Nous vous répondrons rapidement." : "Your request has been sent. We'll get back to you shortly.",
       });
 
       form.reset();
@@ -100,8 +103,8 @@ const ContactForm = () => {
         }
       }
       console.error("Error submitting form:", error);
-      toast.error("Error", {
-        description: "Failed to submit form. Please try again.",
+      toast.error(isFrench ? "Erreur" : "Error", {
+        description: isFrench ? "Votre demande n'a pas pu être envoyée. Merci de réessayer." : "Failed to submit form. Please try again.",
       });
     } finally {
       setIsSubmitting(false);
@@ -118,7 +121,7 @@ const ContactForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{isFrench ? "Nom complet" : "Name"}</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -132,7 +135,7 @@ const ContactForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{isFrench ? "Adresse e-mail" : "Email"}</FormLabel>
                   <FormControl>
                     <Input type="email" {...field} />
                   </FormControl>
@@ -146,7 +149,7 @@ const ContactForm = () => {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company</FormLabel>
+                  <FormLabel>{isFrench ? "Entreprise" : "Company"}</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -160,7 +163,7 @@ const ContactForm = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone</FormLabel>
+                  <FormLabel>{isFrench ? "Téléphone" : "Phone"}</FormLabel>
                   <FormControl>
                     <PhoneInput
                       {...field}
@@ -179,7 +182,7 @@ const ContactForm = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message (optional)</FormLabel>
+                  <FormLabel>{isFrench ? "Message (facultatif)" : "Message (optional)"}</FormLabel>
                   <FormControl>
                     <Textarea {...field} rows={5} />
                   </FormControl>
@@ -197,7 +200,7 @@ const ContactForm = () => {
                     <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Request immediate callback</FormLabel>
+                    <FormLabel>{isFrench ? "Demander à être rappelé rapidement" : "Request immediate callback"}</FormLabel>
                   </div>
                 </FormItem>
               )}
@@ -212,7 +215,7 @@ const ContactForm = () => {
                     <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>I consent to the processing of my personal data for the purpose of responding to my inquiry, as described in the Privacy Policy.</FormLabel>
+                    <FormLabel>{isFrench ? "J’accepte le traitement de mes données personnelles afin de recevoir une réponse à ma demande, conformément à la politique de confidentialité." : "I consent to the processing of my personal data for the purpose of responding to my inquiry, as described in the Privacy Policy."}</FormLabel>
                     <FormMessage />
                   </div>
                 </FormItem>
@@ -220,7 +223,7 @@ const ContactForm = () => {
             />
 
             <Button type="submit" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : "Send"}
+              {isSubmitting ? (isFrench ? "Envoi en cours..." : "Sending...") : (isFrench ? "Envoyer ma demande" : "Send")}
             </Button>
           </form>
         </Form>
