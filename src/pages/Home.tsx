@@ -406,7 +406,7 @@ const Home = () => {
           <div className="container-tight">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
-                <img src="/images/gregory-brenig.jpg" alt="Gregory Brenig — Founder of NLG Consulting" className="w-full h-full object-cover" />
+                <img src="/images/gregory-brenig.jpg" alt="Gregory Brenig — Founder of NLG Consulting" className="w-full h-full object-cover" width={96} height={96} loading="lazy" decoding="async" fetchPriority="low" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Founded by</p>
