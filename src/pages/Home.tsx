@@ -34,6 +34,8 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const Home = () => {
+  // Keep the existing mobile loading behaviour; defer this offscreen asset on desktop only.
+  const deferFounderPhoto = typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -406,7 +408,7 @@ const Home = () => {
           <div className="container-tight">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-border flex-shrink-0">
-                <img src="/images/gregory-brenig.jpg" alt="Gregory Brenig — Founder of NLG Consulting" className="w-full h-full object-cover" width={96} height={96} loading="lazy" decoding="async" fetchPriority="low" />
+                <img src="/images/gregory-brenig.jpg" alt="Gregory Brenig — Founder of NLG Consulting" className="w-full h-full object-cover" width={96} height={96} loading={deferFounderPhoto ? "lazy" : undefined} decoding={deferFounderPhoto ? "async" : undefined} fetchPriority={deferFounderPhoto ? "low" : undefined} />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Founded by</p>
