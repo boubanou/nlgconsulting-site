@@ -90,6 +90,18 @@ const ServicesFR = () => {
                 </Link>
               ))}
             </div>
+            <nav aria-label="Prestations commerciales spécialisées" className="mt-12 rounded-xl border border-border bg-background p-6 md:p-8">
+              <h3 className="text-xl font-semibold mb-3">Choisir une prestation commerciale adaptée</h3>
+              <p className="text-sm text-muted-foreground mb-5">
+                Selon votre objectif, approfondissez la génération de prospects, la prise de rendez-vous, les workflows marketing ou les besoins spécifiques à la PropTech.
+              </p>
+              <ul className="grid gap-4 md:grid-cols-2">
+                <li><Link to="/fr/agence-lead-generation-b2b" className="font-medium text-primary hover:underline">Agence de génération de leads B2B</Link><p className="mt-1 text-sm text-muted-foreground">Ciblage des comptes, prospection multicanal et qualification du pipeline.</p></li>
+                <li><Link to="/fr/prise-de-rendez-vous-b2b" className="font-medium text-primary hover:underline">Prise de rendez-vous B2B</Link><p className="mt-1 text-sm text-muted-foreground">Qualification des contacts et organisation de rendez-vous avec les décideurs.</p></li>
+                <li><Link to="/fr/automation-marketing-ia" className="font-medium text-primary hover:underline">Automatisation marketing avec l'IA</Link><p className="mt-1 text-sm text-muted-foreground">Workflows de campagnes, contenu, suivi et reporting marketing.</p></li>
+                <li><Link to="/fr/ia-pour-proptech" className="font-medium text-primary hover:underline">IA pour entreprises PropTech</Link><p className="mt-1 text-sm text-muted-foreground">Applications opérationnelles pour qualification, données immobilières et croissance.</p></li>
+              </ul>
+            </nav>
           </div>
         </section>
 
