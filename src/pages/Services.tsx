@@ -115,6 +115,18 @@ const Services = () => {
                 </Link>
               ))}
             </div>
+            <nav aria-label="Specialised commercial services" className="mt-12 rounded-xl border border-border bg-background p-6 md:p-8">
+              <h3 className="text-xl font-semibold mb-3">Explore specialised commercial services</h3>
+              <p className="text-sm text-muted-foreground mb-5">
+                Find the right approach for prospecting, qualified meetings, go-to-market execution or sales automation.
+              </p>
+              <ul className="grid gap-4 md:grid-cols-2">
+                <li><Link to="/b2b-lead-generation-agency" className="font-medium text-primary hover:underline">B2B lead generation agency</Link><p className="mt-1 text-sm text-muted-foreground">Target accounts, coordinate outreach and build a measurable qualified pipeline.</p></li>
+                <li><Link to="/appointment-setting" className="font-medium text-primary hover:underline">B2B appointment setting</Link><p className="mt-1 text-sm text-muted-foreground">Qualify conversations and organise meetings with relevant decision-makers.</p></li>
+                <li><Link to="/go-to-market-consulting" className="font-medium text-primary hover:underline">Go-to-market consulting</Link><p className="mt-1 text-sm text-muted-foreground">Clarify positioning, market entry, channels and execution priorities.</p></li>
+                <li><Link to="/ai-sales-automation" className="font-medium text-primary hover:underline">AI sales automation</Link><p className="mt-1 text-sm text-muted-foreground">Connect prospecting, follow-up and CRM workflows around your sales process.</p></li>
+              </ul>
+            </nav>
           </div>
         </section>
 
