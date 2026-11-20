@@ -206,6 +206,18 @@ const Services = () => {
           </div>
         </section>
 
+        <section className="py-16 px-4 bg-muted/30" aria-label="International services and choosing the right engagement">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold mb-6">Choosing an AI or B2B Growth Partner</h2>
+            <p className="text-muted-foreground mb-6">NLG considers international project enquiries in English and French. Availability, time zones, integrations, data handling and jurisdiction-specific obligations are scoped before an engagement.</p>
+            <div className="space-y-5">
+              <div><h3 className="text-xl font-semibold mb-2">AI consulting or AI automation?</h3><p className="text-muted-foreground">Choose <Link to="/ai-consulting" className="text-primary underline">AI consulting</Link> for workflow diagnosis and a practical roadmap, or <Link to="/ai-automation" className="text-primary underline">AI automation</Link> to implement agreed operational workflows.</p></div>
+              <div><h3 className="text-xl font-semibold mb-2">Lead generation or appointment setting?</h3><p className="text-muted-foreground"><Link to="/b2b-lead-generation-agency" className="text-primary underline">B2B lead generation</Link> covers targeting, research and outreach. <Link to="/appointment-setting" className="text-primary underline">Appointment setting</Link> focuses on qualified conversations and scheduling relevant meetings.</p></div>
+              <div><h3 className="text-xl font-semibold mb-2">How can an international team get started?</h3><p className="text-muted-foreground">Share your business, market, current systems and objective through our <Link to="/contact" className="text-primary underline">project contact form</Link>, or <Link to="/book" className="text-primary underline">book an introductory call</Link>. Delivery terms are assessed case by case.</p></div>
+            </div>
+          </div>
+        </section>
+
         <MainFooter />
       </div>
     </>

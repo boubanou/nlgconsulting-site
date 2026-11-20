@@ -134,6 +134,18 @@ const ServicesFR = () => {
           </div>
         </section>
 
+        <section className="py-16 px-4 bg-muted/30" aria-label="Prestations internationales et choix de service">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold mb-6">Quel Partenaire IA ou Commercial Choisir ?</h2>
+            <p className="text-muted-foreground mb-6">NLG étudie les demandes de projets internationaux en français et en anglais. Disponibilité, fuseaux horaires, intégrations, données et obligations locales sont cadrés avant toute mission.</p>
+            <div className="space-y-5">
+              <div><h3 className="text-xl font-semibold mb-2">Conseil IA ou automatisation ?</h3><p className="text-muted-foreground">Le <Link to="/fr/conseil-ia" className="text-primary underline">conseil IA</Link> aide à diagnostiquer les processus et définir une feuille de route. L'<Link to="/fr/automation-ia" className="text-primary underline">automatisation IA</Link> concerne l'implémentation de workflows opérationnels définis.</p></div>
+              <div><h3 className="text-xl font-semibold mb-2">Génération de leads ou prise de rendez-vous ?</h3><p className="text-muted-foreground">La <Link to="/fr/agence-lead-generation-b2b" className="text-primary underline">génération de leads B2B</Link> structure ciblage, recherche et prospection. La <Link to="/fr/prise-de-rendez-vous-b2b" className="text-primary underline">prise de rendez-vous</Link> vise la qualification et l'organisation de conversations pertinentes. Un <Link to="/fr/sdr-externalise" className="text-primary underline">SDR externalisé</Link> peut intervenir sur ces activités.</p></div>
+              <div><h3 className="text-xl font-semibold mb-2">Comment démarrer un projet à l'international ?</h3><p className="text-muted-foreground">Précisez vos objectifs, votre pays et vos outils via <Link to="/fr/contact" className="text-primary underline">le formulaire de contact</Link> ou <Link to="/fr/rendez-vous" className="text-primary underline">un premier rendez-vous</Link>. Les conditions sont étudiées au cas par cas.</p></div>
+            </div>
+          </div>
+        </section>
+
         <MainFooterFR />
       </div>
     </>

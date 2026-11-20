@@ -1,12 +1,22 @@
-# NLG Consulting - AI Consulting, Automation & Growth
+# NLG Consulting — public services and research
 User-agent: *
 Allow: /
-
-# Sitemaps
-Sitemap: https://www.nlgconsulting.co/sitemap.xml
-Sitemap: https://www.nlgconsulting.co/sitemap-commercial.xml
-
-# Block admin pages
 Disallow: /admin
 Disallow: /auth
 Disallow: /access-denied
+
+# AI search crawlers (not an instruction about model training).
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /auth
+Disallow: /access-denied
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /auth
+Disallow: /access-denied
+
+Sitemap: https://www.nlgconsulting.co/sitemap.xml
+Sitemap: https://www.nlgconsulting.co/sitemap-commercial.xml
